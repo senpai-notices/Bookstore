@@ -19,7 +19,7 @@
 
 ## Back-end
 
-### If project not included in NetBean
+### If project not added in NetBean
 
 > File -> New Project -> Java EE -> Enterprise Application with Existing Sources -> next
 
