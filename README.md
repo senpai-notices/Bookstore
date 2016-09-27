@@ -10,7 +10,7 @@
 > sudo npm install npm -g
 
 #### Run front-end project:
-> Navigate to /Bookstore-Frontend
+> Navigate to Bookstore-Frontend/public_html
 
 > sudo -H npm start
 
