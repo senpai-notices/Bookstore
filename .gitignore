@@ -1,5 +1,7 @@
+###################################################################################
 ## JavaEE
 ## Source: https://github.com/javaee-samples/javaee7-samples/blob/master/.gitignore
+###################################################################################
 # Directories #
 build/
 bin/
@@ -104,8 +106,10 @@ derby.log
 
 .factorypath
 
+#########################################################################
 ## Node
 ## Source: https://github.com/github/gitignore/blob/master/Node.gitignore
+#########################################################################
 # Logs
 logs
 *.log
