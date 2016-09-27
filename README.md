@@ -20,7 +20,7 @@
 ## Back-end
 
 ### If project not added in NetBean
-
+Delete `build.xml` in the project root.
 > File -> New Project -> Java EE -> Enterprise Application with Existing Sources -> next
 
 >
