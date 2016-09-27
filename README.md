@@ -7,6 +7,8 @@
 
 > sudo apt-get install -y nodejs
 
+> sudo -H npm run typings install
+
 > sudo npm install npm -g
 
 #### Run front-end project:
