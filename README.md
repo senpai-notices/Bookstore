@@ -22,7 +22,7 @@
 ## Back-end
 
 ### If project not added in NetBean
-Delete `build.xml` in the project root.
+Delete `build.xml` in the project root. NetBeans may prevent an import if there is `build.xml`.
 > File -> New Project -> Java EE -> Enterprise Application with Existing Sources -> next
 
 >
