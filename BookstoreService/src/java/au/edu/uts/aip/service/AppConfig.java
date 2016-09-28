@@ -1,4 +1,4 @@
-package au.edu.uts.aip.services;
+package au.edu.uts.aip.service;
 
 import java.util.HashSet;
 import java.util.Set;

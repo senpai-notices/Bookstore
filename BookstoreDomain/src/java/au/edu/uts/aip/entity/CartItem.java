@@ -1,4 +1,4 @@
-package au.edu.uts.aip.DTO;
+package au.edu.uts.aip.entity;
 
 import java.io.Serializable;
 import javax.persistence.Entity;

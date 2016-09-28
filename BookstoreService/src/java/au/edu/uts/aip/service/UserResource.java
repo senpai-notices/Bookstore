@@ -1,7 +1,7 @@
-package au.edu.uts.aip.services;
+package au.edu.uts.aip.service;
 
-import au.edu.uts.aip.DTO.User;
-import au.edu.uts.aip.Domain.UserRemote;
+import au.edu.uts.aip.entity.User;
+import au.edu.uts.aip.domain.UserRemote;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.*;

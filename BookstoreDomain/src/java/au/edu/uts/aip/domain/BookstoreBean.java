@@ -1,4 +1,4 @@
-package au.edu.uts.aip.Domain;
+package au.edu.uts.aip.domain;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
