@@ -1,7 +1,7 @@
 # aip-a2
 
 ## Front-end
-#### Prerequisities: nodeJS & npm
+#### Prerequisities: nodeJS, npm, TypeScript
 
 > curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
@@ -13,6 +13,8 @@
 
 #### Run front-end project:
 > Navigate to Bookstore-Frontend/public_html
+
+> sudo -H npm install
 
 > sudo -H npm start
 
