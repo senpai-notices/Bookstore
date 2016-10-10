@@ -1,6 +1,6 @@
-package au.edu.uts.aip.Domain;
+package au.edu.uts.aip.domain;
 
-import au.edu.uts.aip.DTO.User;
+import au.edu.uts.aip.entity.User;
 import javax.ejb.Stateless;
 
 /**
