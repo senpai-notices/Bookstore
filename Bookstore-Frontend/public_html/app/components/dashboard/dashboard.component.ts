@@ -8,12 +8,8 @@ import { UserService } from '../../services/user.service';
   templateUrl: '/app/components/dashboard/dashboard.component.html',
 })
 
-
 export class DashboardComponent {
 
-  constructor(private userUservice: UserService, private router: Router){ 
-    if (this.userUservice.getLoggedUser() == null){
-      this.router.navigate(['/login']);
-    }
+  constructor(private userUservice: UserService){ 
   }
 }

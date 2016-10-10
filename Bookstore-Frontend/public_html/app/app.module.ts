@@ -13,15 +13,14 @@ import { DashboardAdminComponent } from './components/dashboard/dashboard-admin.
 import { DashboardUserComponent } from './components/dashboard/dashboard-user.component';
 import { LoginComponent }       from './components/login/login.component';
 
-import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
-
 import { UserService }          from './services/user.service';
+import { RequireLoginGuard }            from './auth-guard';
 
 const appRoutes: Routes = [
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [RequireLoginGuard],
   },
   {
     path: '',
@@ -40,9 +39,7 @@ export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing,
-
-    //InMemoryWebApiModule.forRoot(InMemoryDataService),
+    routing
   ],
   declarations: [
     MainComponent,
@@ -51,10 +48,11 @@ export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
     IndexComponent,
     LoginComponent,
     DashboardUserComponent,
-    DashboardAdminComponent,
+    DashboardAdminComponent
   ],
   providers: [
     UserService,
+    RequireLoginGuard,
   ],
   bootstrap: [ MainComponent ]
 })
