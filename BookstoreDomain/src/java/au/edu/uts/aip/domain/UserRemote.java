@@ -9,5 +9,5 @@ import javax.ejb.Remote;
  */
 @Remote
 public interface UserRemote {
-    public User getUser(String username, String password);
+    User getUser(String username);
 }
