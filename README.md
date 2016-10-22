@@ -1,13 +1,11 @@
 # aip-a2
 
 ## Front-end
-#### Prerequisities: nodeJS, npm, TypeScript
+#### Prerequisities: nodeJS, npm
 
 > curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
 > sudo apt-get install -y nodejs
-
-> sudo -H npm run typings install
 
 > sudo npm install npm -g
 
@@ -18,7 +16,7 @@
 
 > sudo -H npm start
 
-> If firefox does not open, run the front-end at localhost:3000
+> Access to front-end at localhost:3000
 
 
 ## Back-end
@@ -43,4 +41,10 @@ Delete `build.xml` in the project root. NetBeans may prevent an import if there 
   + Add BookstoreDomain as EJB module
   + Add BookstoreService as Web module
   
-  
+### Config Glassfish/Payara
+
+> Configure datasource name to "jdbc/aip" so that JPA can recognize
+
+> Setup JDBC realm:
+
+![alt tag](http://image.prntscr.com/image/f3f174d59c254a20888c11b6b11463ff.png)
