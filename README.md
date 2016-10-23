@@ -43,8 +43,8 @@ Delete `build.xml` in the project root. NetBeans may prevent an import if there 
   
 ### Config Glassfish/Payara
 
-> Configure datasource name to "jdbc/aip" so that JPA can recognize
+> Configure connection pool, and set datasource name to "jdbc/aip" so that JPA can recognize
 
 > Setup JDBC realm:
 
-![alt tag](http://image.prntscr.com/image/f3f174d59c254a20888c11b6b11463ff.png)
+![alt tag](http://image.prntscr.com/image/d19e1b021e154c408214ddcb77909d00.png)
