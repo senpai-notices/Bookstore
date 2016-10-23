@@ -17,6 +17,7 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "hi-base64": "^0.2.0",
     "react": "^0.14.6",
     "react-bootstrap": "^0.30.5",
     "react-dom": "^0.14.6",

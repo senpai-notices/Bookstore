@@ -5,8 +5,11 @@ var SRC_DIR = path.resolve(__dirname, 'src')
 
 module.exports = {
   devtool: 'eval',
+  devServer: {
+    headers: { "Access-Control-Allow-Origin": "*" }
+  },
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
+    'webpack-dev-server/client?http://localhost:3000/',
     'webpack/hot/only-dev-server',
     SRC_DIR + '/index.jsx'
   ],

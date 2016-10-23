@@ -5,10 +5,6 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-/**
- *
- * @author sondang
- */
 @Stateless
 public class UserBean implements UserRemote {
 

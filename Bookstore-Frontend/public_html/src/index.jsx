@@ -37,7 +37,6 @@ const rootElement = (
 		<Router history={browserHistory}>
 			<Route path="/" component={Template}>
 				<IndexRoute component={HomeView}/>
-				<Route path="/Home" component={HomeView}/>
 			</Route>
 		</Router>
 	</Provider>

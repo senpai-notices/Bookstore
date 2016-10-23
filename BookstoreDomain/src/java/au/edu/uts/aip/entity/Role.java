@@ -11,7 +11,6 @@ import javax.persistence.Table;
 public class Role implements Serializable {
     private int Id;
     private String roleName;
-    private String username;
     
     @Id
     @GeneratedValue
@@ -29,13 +28,5 @@ public class Role implements Serializable {
 
     public void setRoleName(String roleName) {
         this.roleName = roleName;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 }
