@@ -6,6 +6,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import Template from './template'
 import HomeView from 'views/home'
 import reqwest from 'reqwest'
+import { UserReducer as user } from 'reducers/user'
 
 const initialState = { 
 	shoppingCart:
@@ -16,52 +17,16 @@ const initialState = {
 		title : "title 2",
 		author: "author 2"
 	}],
-	user: 
-	{ 
-		username: "" ,
-		password: "",
-		isLoggedIn: false
-	}
+	user: null
 }
 
-const user = (state = null, action) => {
-	console.log("IN USER REDUCER")
-	console.log(action)
-	let newState = Object.assign({}, state)
-	console.log(action)
-	if (action.type == "SET_USER"){
-		return action.user
-	}
-	return state
-}
-
-const shoppingCart = (state = null, action) => {
-	return state
+const shoppingCart = (state, action) => {
+	return state === undefined ? null : state
 }
 
 const mainReducer = combineReducers({
 	user, shoppingCart
 })
-
-/*
-const mainReducer = (state=initialState, action) => {
-	if (action.type == "login"){
-		reqwest({
-			url: 'http://localhost:8080/BookstoreService/api/user/login',
-			method: 'post',
-			data: {username: "username1", password: "1234561"},
-			header: {
-				'Content-Type' : 'application/x-www-form-urlencoded'
-			}
-		}).then((resp) => {
-			console.log(resp)
-			let newState = Object.assign({}, state)
-			newState.user.isLoggedIn = true
-			return newState
-		})
-	}
-	return state
-}*/
 
 // redux store
 const store = createStore(mainReducer, initialState)

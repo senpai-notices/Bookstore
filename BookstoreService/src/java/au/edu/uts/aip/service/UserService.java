@@ -34,8 +34,16 @@ public class UserService {
     @Produces(MediaType.APPLICATION_JSON)
     public Response login(@FormParam("username") String username, @FormParam("password") String password) {
         try {
+            // login using container authentication
             request.login(username, password);
-            return Response.status(Response.Status.ACCEPTED).build();
+            
+            // retrive user detail
+            User user = userBean.getUser(username);
+            
+            // do not send password back
+            user.setPassword("");
+            
+            return Response.status(Response.Status.ACCEPTED).entity(user).build();
         } catch (ServletException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }

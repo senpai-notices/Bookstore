@@ -33,6 +33,7 @@ module.exports = {
     components: SRC_DIR + '/components',
     services: SRC_DIR + '/services',
     views: SRC_DIR + '/views',
+    reducers: SRC_DIR + '/reducers',
     extensions: ["", ".webpack.js", ".web.js", ".js", ".jsx"]
   }
 };

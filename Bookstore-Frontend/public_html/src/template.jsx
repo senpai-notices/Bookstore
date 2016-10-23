@@ -1,4 +1,4 @@
-import { Navbar, FormGroup, FormControl, InputGroup, Button, Glyphicon } from 'react-bootstrap'
+import { Nav, Navbar, NavDropdown, MenuItem, Form, FormGroup, FormControl, InputGroup, Button, Glyphicon } from 'react-bootstrap'
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { UserService } from 'services'
@@ -9,14 +9,29 @@ class Template extends Component{
 	constructor(props){
 		super(props)
 
+		this.state = {}
 		this.userService = new UserService()
 		this.login = this.login.bind(this)
+		this.logout = this.logout.bind(this)
+		this.handleChange = this.handleChange.bind(this)
 	}
 
-	login(username, password) {
-		this.userService.login(username, password).then((loggedUser) =>{
-			this.props.setUser(loggedUser)
+	handleChange(event) {
+		this.state[event.target.name] = event.target.value
+	    this.setState(this.state);
+	}
+
+
+	login(event) {
+		event.preventDefault()
+		this.userService.login(this.state.username, this.state.password).then((resp) =>{
+			this.props.setUser(resp)
 		})
+	}
+
+	logout() {
+		this.props.removeUser()
+		this.setState({password: ""})
 	}
 
 	render(){
@@ -45,27 +60,35 @@ class Template extends Component{
 		)
 
 		// if user is not logged in, display the quick login form
-		let userPanelContent = "";
-		if (user == undefined || user.isLoggedIn == false){
-			userPanelContent = (
+		let userPanel = "";
+		if (user === null){
+			userPanel = (
+			<Navbar.Form pullRight>
+				<Form onSubmit={this.login}>
 				<FormGroup>
-					<FormControl type="text" placeholder="Username"/>
+					<FormControl type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}/>
 					&nbsp;
-					<FormControl type="password" placeholder="Password" />
+					<FormControl type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
 					&nbsp;
-					<Button type="submit" bsStyle="success" onClick={() => this.login("sondang2412", "qwerty")}>Login</Button>
+					<Button type="submit" bsStyle="success">Login</Button>
 					&nbsp;
 					<Button bsStyle="primary">Register</Button>
 				</FormGroup>
-			)
-		} else { // if user is logged in, display user control panel
-		}
-
-		const userPanel = (
-			<Navbar.Form pullRight>
-				{userPanelContent}
+				</Form>
 			</Navbar.Form>
-		)
+			)	
+		} else { // if user is logged in, display user control panel
+			userPanel = (
+				<Nav pullRight>
+				<NavDropdown title={'Hello ' + user.fullname} id="user-panel">
+					<MenuItem>Some action</MenuItem>
+					<MenuItem>Some action 2</MenuItem>
+					<MenuItem divider/>
+					<MenuItem onClick={this.logout}>Logout</MenuItem>
+				</NavDropdown>
+				</Nav>
+			)
+		}
 
 		const header = (
 			<Navbar inverse> 
@@ -89,15 +112,18 @@ const mapStateToProps = (state, ownProps) => {
 	}
 }
 
-const mapDispatchToProps = (dispatch) => {
-	return {
-		setUser: (user) => {
-			dispatch({
-				type: "SET_USER",
-				user
-			})
-		}
+const mapDispatchToProps = (dispatch) => ({
+	setUser: (user) => {
+		dispatch({
+			type: "SET_USER",
+			user
+		})
+	},
+	removeUser: () => {
+		dispatch({
+			type: "REMOVE_USER"
+		})
 	}
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Template)
