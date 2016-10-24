@@ -1,10 +1,10 @@
 export const UserReducer = (state, action) => {
-
-	if (action.type == "SET_USER"){
-		return action.user
-	} else if (action.type == "REMOVE_USER"){
-		return null
+	switch (action.type){
+		case "SET_USER":
+			return action.user
+		case "REMOVE_USER":
+			return null
+		default:
+			return state === undefined ? null : state
 	}
-
-	return state === undefined ? null : state
 }

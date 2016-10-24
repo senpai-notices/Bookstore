@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { UserService } from 'services'
 import { connect } from 'react-redux'
+import { browserHistory, Link } from 'react-router'
 
 class Template extends Component{
 
@@ -14,36 +15,38 @@ class Template extends Component{
 		this.login = this.login.bind(this)
 		this.logout = this.logout.bind(this)
 		this.handleChange = this.handleChange.bind(this)
-
-		console.log(this.store)
 	}
 
 	handleChange(event) {
 		this.state[event.target.name] = event.target.value
-	    this.setState(this.state);
+	    this.setState(this.state)
 	}
 
 
 	login(event) {
 		event.preventDefault()
-		this.userService.login(this.state.username, this.state.password).then((resp) =>{
-			this.props.setUser(resp)
-		})
+		this.userService.login(this.state.username, this.state.password)
+			.then((resp) => {
+				this.props.setUser(resp)
+			})
+			.fail((err) => {
+				this.props.setLoginError("Your login details is not correct")
+				browserHistory.push('/login')
+			})
 	}
 
 	logout() {
 		this.props.removeUser()
-		this.setState({password: ""})
+		this.setState({})
 	}
 
 	render(){
-		let user = this.props.user
-		let shoppingCart = this.props.shoppingCart
+		const {user, shoppingCart} = this.props
 
 		const logo = (
 			<Navbar.Header>
 				<Navbar.Brand>
-					<a href="#">Bookstore</a>
+					<Link to="/">Bookstore</Link>
 				</Navbar.Brand>
 			</Navbar.Header>
 		)
@@ -74,7 +77,7 @@ class Template extends Component{
 					&nbsp;
 					<Button type="submit" bsStyle="success">Login</Button>
 					&nbsp;
-					<Button bsStyle="primary">Register</Button>
+					<Link to="/register"><Button bsStyle="primary">Register</Button></Link>
 				</FormGroup>
 				</Form>
 			</Navbar.Form>
@@ -124,6 +127,12 @@ const mapDispatchToProps = (dispatch) => ({
 	removeUser: () => {
 		dispatch({
 			type: "REMOVE_USER"
+		})
+	},
+	setLoginError: (error) => {
+		dispatch({
+			type: "ADD_ERROR_MESSAGE",
+			error
 		})
 	}
 })

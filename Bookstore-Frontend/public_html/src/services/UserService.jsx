@@ -1,17 +1,17 @@
 import reqwest from 'reqwest'
 import base64 from 'hi-base64'
-import { SERVER_ADDRESS, BASIC_AUTH, setAuthHeader } from 'config'
+import * as config from 'config'
+import {store} from 'index'
 
 class UserService {
 	login(username, password) {
-		setAuthHeader('Basic ' + base64.encode(username + ":" + password, true))
-
+		config.setAuthHeader('Basic ' + base64.encode(username + ":" + password, true))
 		return reqwest({
-			url: SERVER_ADDRESS + '/api/user',
+			url: config.getServerAddress() + '/api/user',
 			method: 'get',
 			headers: {
 				'Content-Type' : 'application/x-www-form-urlencoded',
-				'Authorization': BASIC_AUTH
+				'Authorization': config.getAuthHeader()
 			},
 			withCredentials: true,
 			crossOrigin: true
@@ -19,7 +19,7 @@ class UserService {
 	}
 
 	logout() {
-		setAuthHeader('Basic')
+		config.setAuthHeader('Basic')
 	}
 }
 
