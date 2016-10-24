@@ -42,7 +42,8 @@ public class AuthFilter implements ContainerRequestFilter {
 
     /**
      * Check resource method annotation and user privilege
-     * If user do not have enough privilege to access the resource method
+     * Prevent the resource method from being invoked if user do not have enough
+     * privilege to access the resource method
      * @param requestContext use to determine whether the request can reach the resource or not
      * @throws IOException 
      */
@@ -63,7 +64,7 @@ public class AuthFilter implements ContainerRequestFilter {
             return;
         }
         
-        // allow resource method to be invoked it does not have any security context filter
+        // allow resource method to be invoked it does not have any RolesAllowed filter
         RolesAllowed rolesAllowed = resourceMethod.getAnnotation(RolesAllowed.class);
         if (rolesAllowed == null){
             return;

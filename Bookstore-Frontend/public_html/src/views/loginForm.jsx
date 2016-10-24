@@ -1,15 +1,42 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import * as bs from 'react-bootstrap'
-import { Link } from 'react-router'
+import { Link, browserHistory } from 'react-router'
+import { UserService } from 'services'
 
 class LoginForm extends React.Component{
 
 	constructor(props){
 		super(props)
+
+		this.state = this.props.location.state
+		if (this.state == null){
+			this.state = { }
+		}
+		this.userService = new UserService()
+		this.login = this.login.bind(this)
+		this.handleChange = this.handleChange.bind(this)
+	}
+
+	login(event){
+		event.preventDefault()
+		console.log(this.state)
+		this.userService.login(this.state.username, this.state.password)
+			.then((loggedInUser) => {
+				this.props.setUser(loggedInUser)
+			})
+	}
+
+	handleChange(event) {
+		this.state[event.target.name] = event.target.value
+	    this.setState(this.state)
 	}
 
 	render(){
+		if (this.props.user !== null){
+			browserHistory.push("/")
+		}
+
 		const validationMessage = this.props.validationMessage
 
 		let errorDisplay = ""
@@ -34,7 +61,7 @@ class LoginForm extends React.Component{
 
 						{errorDisplay}
 
-						<bs.Form horizontal>
+						<bs.Form horizontal onSubmit={this.login}>
 
 							<bs.FormGroup bsSize="lg">
 								<bs.ControlLabel>Username</bs.ControlLabel>
@@ -42,7 +69,7 @@ class LoginForm extends React.Component{
 									<bs.InputGroup.Addon>
 										<bs.Glyphicon glyph="user"/>
 									</bs.InputGroup.Addon>
-									<bs.FormControl type="text" />
+									<bs.FormControl type="text" name="username" onChange={this.handleChange} value={this.state.username}/>
 								</bs.InputGroup>
 							</bs.FormGroup>
 
@@ -52,7 +79,7 @@ class LoginForm extends React.Component{
 									<bs.InputGroup.Addon>
 										<bs.Glyphicon glyph="lock"/>
 									</bs.InputGroup.Addon>
-									<bs.FormControl type="password" />
+									<bs.FormControl type="password" name="password" onChange={this.handleChange} value={this.state.password}/>
 								</bs.InputGroup>
 							</bs.FormGroup>
 
@@ -73,6 +100,10 @@ class LoginForm extends React.Component{
 			</bs.Col>
 		)
 	}
+
+	componentWillUnmount(){
+		this.props.removeValidationError()
+	}
 }
 
 const mapStateToProps = (state, ownProps) => {
@@ -87,7 +118,13 @@ const mapDispatchToProps = (dispatch) => ({
 		dispatch({ 
 			type: "REMOVE_VALIDATE_MESSAGE" 
 		})
-	}
+	},
+	setUser: (user) => {
+		dispatch({
+			type: "SET_USER",
+			user
+		})
+	},
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm)

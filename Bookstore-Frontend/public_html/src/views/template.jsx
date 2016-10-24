@@ -10,7 +10,7 @@ class Template extends Component{
 	constructor(props){
 		super(props)
 
-		this.state = {}
+		this.state = { }
 		this.userService = new UserService()
 		this.login = this.login.bind(this)
 		this.logout = this.logout.bind(this)
@@ -22,27 +22,26 @@ class Template extends Component{
 	    this.setState(this.state)
 	}
 
-
 	login(event) {
 		event.preventDefault()
 		this.userService.login(this.state.username, this.state.password)
-			.then((resp) => {
-				this.props.setUser(resp)
+			.then((loggedInUser) => {
+				this.props.setUser(loggedInUser)
 			})
 			.fail((err) => {
 				this.props.setLoginError("Your login details is not correct")
-				browserHistory.push('/login')
+				browserHistory.push({ pathname: "/login", state: this.state })
 			})
 	}
 
 	logout() {
 		this.props.removeUser()
-		this.setState({})
+		this.state = { }
+		this.setState(this.state)
 	}
 
 	render(){
 		const {user, shoppingCart} = this.props
-
 		const logo = (
 			<Navbar.Header>
 				<Navbar.Brand>
