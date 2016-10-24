@@ -14,6 +14,8 @@ class Template extends Component{
 		this.login = this.login.bind(this)
 		this.logout = this.logout.bind(this)
 		this.handleChange = this.handleChange.bind(this)
+
+		console.log(this.store)
 	}
 
 	handleChange(event) {

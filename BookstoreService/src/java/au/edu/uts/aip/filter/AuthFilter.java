@@ -20,6 +20,10 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.ws.rs.ext.Provider;
 
+/**
+ * Authentication filter for resource methods that have RoleAllowed,
+ * PermitAll, or DenyAll annotation
+ */
 @Provider
 @Priority(Priorities.AUTHENTICATION)
 public class AuthFilter implements ContainerRequestFilter {
@@ -36,26 +40,36 @@ public class AuthFilter implements ContainerRequestFilter {
     @Context
     private HttpServletResponse response;
 
+    /**
+     * Check resource method annotation and user privilege
+     * If user do not have enough privilege to access the resource method
+     * @param requestContext use to determine whether the request can reach the resource or not
+     * @throws IOException 
+     */
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
         Method resourceMethod = resourceInfo.getResourceMethod();
         
+        // allow resource method to be invoked if it is decorated with PermitAll annotation
         PermitAll permitAll = resourceMethod.getAnnotation(PermitAll.class);
         if (permitAll != null){
             return;
         }
         
+        // reject all request if resource method is decorated with DenyAll annotation
         DenyAll denyAll = resourceMethod.getAnnotation(DenyAll.class);
         if (denyAll != null){
             requestContext.abortWith(Response.status(Response.Status.FORBIDDEN).build());
             return;
         }
         
+        // allow resource method to be invoked it does not have any security context filter
         RolesAllowed rolesAllowed = resourceMethod.getAnnotation(RolesAllowed.class);
         if (rolesAllowed == null){
             return;
         }
         
+        // otherwise, check user privilege
         try {
             boolean authenticated = request.authenticate(response);
             if (!authenticated){

@@ -26,13 +26,10 @@ public class UserResource {
     private HttpServletResponse response;
 
     /**
-     * Login to the system using basic HTTP authentication
-     * @return HTTP status code ACCEPTED and user detail if authorization header
-     * is correct Otherwise, return HTTP status code UNAUTHORIZED
+     * Retrieve the current authenticated user
+     * @return HTTP status code ACCEPTED and user detail, without password attached
      */
-    @POST
-    @Path("/login")
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @GET
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed({"USER", "ADMIN"})
     public Response login() {

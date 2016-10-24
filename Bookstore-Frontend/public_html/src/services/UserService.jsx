@@ -1,15 +1,14 @@
 import reqwest from 'reqwest'
 import base64 from 'hi-base64'
-import { SERVER_ADDRESS, BASIC_AUTH } from 'config'
+import { SERVER_ADDRESS, BASIC_AUTH, setAuthHeader } from 'config'
 
 class UserService {
 	login(username, password) {
-		BASIC_AUTH = 'Basic ' + base64.encode(username + ":" + password, true)
+		setAuthHeader('Basic ' + base64.encode(username + ":" + password, true))
 
 		return reqwest({
-			url: SERVER_ADDRESS + '/api/user/login',
-			method: 'post',
-			data: {username: username, password: password},
+			url: SERVER_ADDRESS + '/api/user',
+			method: 'get',
 			headers: {
 				'Content-Type' : 'application/x-www-form-urlencoded',
 				'Authorization': BASIC_AUTH
@@ -20,7 +19,7 @@ class UserService {
 	}
 
 	logout() {
-		BASIC_AUTH = 'Basic'
+		setAuthHeader('Basic')
 	}
 }
 
