@@ -29,7 +29,7 @@ class Template extends Component{
 				this.props.setUser(loggedInUser)
 			})
 			.fail((err) => {
-				this.props.setLoginError("Your login details is not correct")
+				this.props.setLoginError("Your login details is not correct, please try again")
 				browserHistory.push({ pathname: "/login", state: this.state })
 			})
 	}

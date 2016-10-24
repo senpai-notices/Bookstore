@@ -6,6 +6,8 @@ import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
+import javax.json.Json;
+import javax.json.JsonArray;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.*;
@@ -32,9 +34,23 @@ public class UserResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed({"USER", "ADMIN"})
-    public Response login() {
+    public Response get() {
         User user = userBean.getUser(request.getUserPrincipal().getName());
         user.setPassword("");
         return Response.status(Response.Status.ACCEPTED).entity(user).build();
+    }
+    
+    /**
+     * Create a new user
+     * @return 
+     */
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response post(@FormParam("username") String username, 
+                        @FormParam("password") String password,
+                        @FormParam("email") String email,
+                        @FormParam("fullname") String fullname) {
+        return null;
     }
 }

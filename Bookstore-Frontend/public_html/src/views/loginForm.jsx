@@ -25,6 +25,9 @@ class LoginForm extends React.Component{
 			.then((loggedInUser) => {
 				this.props.setUser(loggedInUser)
 			})
+			.fail((err) => {
+				this.props.setLoginError("Your login details is not correct, please try again")
+			})
 	}
 
 	handleChange(event) {
@@ -69,7 +72,7 @@ class LoginForm extends React.Component{
 									<bs.InputGroup.Addon>
 										<bs.Glyphicon glyph="user"/>
 									</bs.InputGroup.Addon>
-									<bs.FormControl type="text" name="username" onChange={this.handleChange} value={this.state.username}/>
+									<bs.FormControl type="text" name="username" placeholder="Username" onChange={this.handleChange} value={this.state.username}/>
 								</bs.InputGroup>
 							</bs.FormGroup>
 
@@ -79,7 +82,7 @@ class LoginForm extends React.Component{
 									<bs.InputGroup.Addon>
 										<bs.Glyphicon glyph="lock"/>
 									</bs.InputGroup.Addon>
-									<bs.FormControl type="password" name="password" onChange={this.handleChange} value={this.state.password}/>
+									<bs.FormControl type="password" name="password" placeholder="Password" onChange={this.handleChange} value={this.state.password}/>
 								</bs.InputGroup>
 							</bs.FormGroup>
 
@@ -117,6 +120,12 @@ const mapDispatchToProps = (dispatch) => ({
 	removeValidationError: () => {
 		dispatch({ 
 			type: "REMOVE_VALIDATE_MESSAGE" 
+		})
+	},
+	setLoginError: (error) => {
+		dispatch({
+			type: "ADD_ERROR_MESSAGE",
+			error
 		})
 	},
 	setUser: (user) => {
