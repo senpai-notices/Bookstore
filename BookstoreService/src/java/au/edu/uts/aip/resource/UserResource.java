@@ -2,6 +2,7 @@ package au.edu.uts.aip.resource;
 
 import au.edu.uts.aip.entity.User;
 import au.edu.uts.aip.domain.UserRemote;
+import au.edu.uts.aip.validation.ValidationResult;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
@@ -29,7 +30,7 @@ public class UserResource {
 
     /**
      * Retrieve the current authenticated user
-     * @return HTTP status code ACCEPTED and user detail, without password attached
+     * @return HTTP status code OK and user detail, without password attached
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -37,11 +38,15 @@ public class UserResource {
     public Response get() {
         User user = userBean.getUser(request.getUserPrincipal().getName());
         user.setPassword("");
-        return Response.status(Response.Status.ACCEPTED).entity(user).build();
+        return Response.status(Response.Status.OK).entity(user).build();
     }
     
     /**
      * Create a new user
+     * @param username
+     * @param password
+     * @param email
+     * @param fullname
      * @return 
      */
     @POST
@@ -51,6 +56,22 @@ public class UserResource {
                         @FormParam("password") String password,
                         @FormParam("email") String email,
                         @FormParam("fullname") String fullname) {
-        return null;
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setEmail(email);
+        user.setFullname(fullname);
+        
+        try{
+            ValidationResult result = userBean.createUser(user);
+            if (result == null){
+                return Response.status(Response.Status.ACCEPTED).build();
+            } else {
+                return Response.status(Response.Status.CONFLICT).entity(result.toJson()).build();
+            }
+        } catch (Exception ex){
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+        
     }
 }
