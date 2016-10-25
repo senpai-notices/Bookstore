@@ -3,12 +3,13 @@ package au.edu.uts.aip.resource;
 import au.edu.uts.aip.entity.User;
 import au.edu.uts.aip.domain.UserRemote;
 import au.edu.uts.aip.validation.ValidationResult;
+import java.math.BigDecimal;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
-import javax.inject.Named;
 import javax.json.Json;
 import javax.json.JsonArray;
+import javax.json.JsonObjectBuilder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.*;
@@ -16,7 +17,6 @@ import javax.ws.rs.core.*;
 
 @Path("/user")
 @RequestScoped
-@Named
 public class UserResource {
 
     @EJB
@@ -37,8 +37,13 @@ public class UserResource {
     @RolesAllowed({"USER", "ADMIN"})
     public Response get() {
         User user = userBean.getUser(request.getUserPrincipal().getName());
-        user.setPassword("");
-        return Response.status(Response.Status.OK).entity(user).build();
+        JsonObjectBuilder jsonBuider = Json.createObjectBuilder();
+        jsonBuider.add("username", user.getUsername());
+        jsonBuider.add("fullname", user.getFullname());
+        jsonBuider.add("email", user.getEmail());
+        jsonBuider.add("role", user.getRole().getRoleName());
+        
+        return Response.status(Response.Status.OK).entity(jsonBuider.build()).build();
     }
     
     /**
