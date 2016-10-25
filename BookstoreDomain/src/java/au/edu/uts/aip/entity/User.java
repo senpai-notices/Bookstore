@@ -28,6 +28,7 @@ public class User implements Serializable {
     private String password;
     
     @NotNull
+    @Pattern(regexp = "^[^ ]+@[^ ]+\\.[^ ]+$")
     private String email;
     
     private Role role;

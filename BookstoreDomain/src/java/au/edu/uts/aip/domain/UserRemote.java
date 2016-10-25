@@ -3,6 +3,7 @@ package au.edu.uts.aip.domain;
 import au.edu.uts.aip.entity.User;
 import au.edu.uts.aip.validation.ValidationResult;
 import javax.ejb.Remote;
+import javax.mail.MessagingException;
 
 /**
  *
@@ -11,5 +12,5 @@ import javax.ejb.Remote;
 @Remote
 public interface UserRemote {
     User getUser(String username);
-    ValidationResult createUser(User user);
+    ValidationResult createUser(User user) throws MessagingException;
 }

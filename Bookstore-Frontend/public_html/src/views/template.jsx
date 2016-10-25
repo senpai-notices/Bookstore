@@ -1,41 +1,32 @@
 import { Nav, Navbar, NavDropdown, MenuItem, Form, FormGroup, FormControl, InputGroup, Button, Glyphicon } from 'react-bootstrap'
 import React, { Component } from 'react'
-import { bindActionCreators } from 'redux'
-import { UserService } from 'services'
 import { connect } from 'react-redux'
 import { browserHistory, Link } from 'react-router'
+import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
 
-class Template extends Component{
+class Template extends BaseView{
 
 	constructor(props){
 		super(props)
 
-		this.state = { }
-		this.userService = new UserService()
 		this.login = this.login.bind(this)
 		this.logout = this.logout.bind(this)
-		this.handleChange = this.handleChange.bind(this)
-	}
-
-	handleChange(event) {
-		this.state[event.target.name] = event.target.value
-	    this.setState(this.state)
 	}
 
 	login(event) {
 		event.preventDefault()
 		this.userService.login(this.state.username, this.state.password)
 			.then((loggedInUser) => {
-				this.props.setUser(loggedInUser)
+				this.props.dispatch.setUser(loggedInUser)
 			})
 			.fail((err) => {
-				this.props.setLoginError("Your login details is not correct, please try again")
+				this.props.dispatch.addErrorMessage("Cannot login, please try again")
 				browserHistory.push({ pathname: "/login", state: this.state })
 			})
 	}
 
 	logout() {
-		this.props.removeUser()
+		this.props.dispatch.removeUser()
 		this.state = { }
 		this.setState(this.state)
 	}
@@ -108,32 +99,5 @@ class Template extends Component{
 		)
 	}
 }
-
-const mapStateToProps = (state, ownProps) => {
-	return {
-		user: state.user,
-		shoppingCart: state.shoppingCart
-	}
-}
-
-const mapDispatchToProps = (dispatch) => ({
-	setUser: (user) => {
-		dispatch({
-			type: "SET_USER",
-			user
-		})
-	},
-	removeUser: () => {
-		dispatch({
-			type: "REMOVE_USER"
-		})
-	},
-	setLoginError: (error) => {
-		dispatch({
-			type: "ADD_ERROR_MESSAGE",
-			error
-		})
-	}
-})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Template)

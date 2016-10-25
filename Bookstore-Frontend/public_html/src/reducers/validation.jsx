@@ -14,19 +14,19 @@ const defaultValidationState = {
 
 export const ValidationReducer = (state, action) => {
 	let newState = Object.assign({}, state)
-
+	
 	switch (action.type){
-		case "SET_VALIDATE_MESSAGE":
-			return action.validateMessage
-		case "REMOVE_VALIDATE_MESSAGE":
+		case "SET_VALIDATION_MESSAGE":
+			return action.validationMessage
+		case "REMOVE_VALIDATION_MESSAGE":
 			newState.errors = Array()
 			newState.form_errors = {}
 			return newState
 		case "ADD_ERROR_MESSAGE":		
-			newState.errors = [...state.errors, action.error]
+			newState.errors = [...state.errors, action.errorMessage]
 			return newState
-		case "ADD_FORM_ERROR":
-			newState.form_errors[action.formName] = action.formError
+		case "SET_FORM_ERROR_MESSAGE":
+			newState.form_errors[action.formName] = action.errorMessage
 			return newState
 		default:
 			return state === undefined ? defaultValidationState : state		

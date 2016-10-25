@@ -3,12 +3,18 @@ package au.edu.uts.aip.domain;
 import au.edu.uts.aip.entity.Role;
 import au.edu.uts.aip.entity.User;
 import au.edu.uts.aip.utility.SHA;
+import au.edu.uts.aip.utility.SendEmail;
 import au.edu.uts.aip.validation.ValidationResult;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
+import javax.mail.MessagingException;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -34,8 +40,14 @@ public class UserBean implements UserRemote {
         return em.find(User.class, username);
     }
     
+    /**
+     * 
+     * @param user
+     * @return
+     * @throws MessagingException: when activation email cannot be sent
+     */
     @Override
-    public ValidationResult createUser(User user){
+    public ValidationResult createUser(User user) throws MessagingException {
         try{
             em.persist(user);
             
@@ -49,6 +61,15 @@ public class UserBean implements UserRemote {
             typedQuery.setParameter("name", "INACTIVATED");
             Role inactivatedRole = typedQuery.getSingleResult();
             user.setRole(inactivatedRole);
+            
+            // generate token for email activation
+            Date now = new Date();
+            Date expirationDate = new Date();
+            expirationDate.setTime(now.getTime() + 1000 * 60 * 24);
+            String activateToken = Jwts.builder().setSubject(user.getUsername())
+                                    .signWith(SignatureAlgorithm.HS512, hashsedPassword)
+                                    .setIssuedAt(now).setExpiration(expirationDate).compact();
+            SendEmail.SendActivationEmail(user, activateToken);
             
             return null;
         } catch (ConstraintViolationException ex) {

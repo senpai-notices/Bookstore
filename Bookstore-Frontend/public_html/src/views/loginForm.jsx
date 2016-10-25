@@ -2,37 +2,25 @@ import React from 'react'
 import { connect } from 'react-redux'
 import * as bs from 'react-bootstrap'
 import { Link, browserHistory } from 'react-router'
-import { UserService } from 'services'
+import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
 
-class LoginForm extends React.Component{
+class LoginForm extends BaseView{
 
 	constructor(props){
 		super(props)
 
-		this.state = this.props.location.state
-		if (this.state == null){
-			this.state = { }
-		}
-		this.userService = new UserService()
 		this.login = this.login.bind(this)
-		this.handleChange = this.handleChange.bind(this)
 	}
 
 	login(event){
 		event.preventDefault()
-		console.log(this.state)
 		this.userService.login(this.state.username, this.state.password)
 			.then((loggedInUser) => {
-				this.props.setUser(loggedInUser)
+				this.props.dispatch.setUser(loggedInUser)
 			})
 			.fail((err) => {
-				this.props.setLoginError("Your login details is not correct, please try again")
+				this.props.dispatch.addErrorMessage("Cannot login, please try again")
 			})
-	}
-
-	handleChange(event) {
-		this.state[event.target.name] = event.target.value
-	    this.setState(this.state)
 	}
 
 	render(){
@@ -103,37 +91,6 @@ class LoginForm extends React.Component{
 			</bs.Col>
 		)
 	}
-
-	componentWillUnmount(){
-		this.props.removeValidationError()
-	}
 }
-
-const mapStateToProps = (state, ownProps) => {
-	return {
-		user: state.user,
-		validationMessage: state.validationMessage
-	}
-}
-
-const mapDispatchToProps = (dispatch) => ({
-	removeValidationError: () => {
-		dispatch({ 
-			type: "REMOVE_VALIDATE_MESSAGE" 
-		})
-	},
-	setLoginError: (error) => {
-		dispatch({
-			type: "ADD_ERROR_MESSAGE",
-			error
-		})
-	},
-	setUser: (user) => {
-		dispatch({
-			type: "SET_USER",
-			user
-		})
-	},
-})
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm)

@@ -1,26 +1,57 @@
 import React from 'react'
 import * as bs from 'react-bootstrap'
-import { UserService } from 'services'
+import { Glyphicon } from 'react-bootstrap'
+import { connect } from 'react-redux'
+import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
+import { FormInputText } from 'components'
 
-class RegisterForm extends React.Component{
+class RegisterForm extends BaseView {
 
 	constructor(props){
 		super(props)
 
-		this.state = { }
-		this.userService = new UserService()
+		this.register = this.register.bind(this)
 	}
 
 	register(event){
 		event.preventDefault()
-	}
-
-	handleChange(event) {
-		this.state[event.target.name] = event.target.value
-	    this.setState(this.state)
+		this.userService.createAccount(this.state)
+			.then((resp) => {
+				this.state.registerSuccess = true
+				this.setState(this.state)
+			})
+			.fail((err) => {
+				if (err.status === 409){ // conflict
+					let validateResult = JSON.parse(err.response)
+					this.props.dispatch.setValidationMessage(validateResult)
+				} else if (err.status === 500) { // internal server error
+					this.props.dispatch.addErrorMessage("Some unexpected error has occured, please try again or contact us for support")
+				}
+			})
 	}
 
 	render(){
+
+		if (this.state.registerSuccess){
+			return (
+				<bs.Col xs={12} md={6} mdOffset={3}>
+
+					<bs.Alert>
+						<h2>
+							Account created
+						</h2>
+
+						<h3>
+						Dear <strong>{this.state.fullname}</strong>, thank you for joining us.<br/>
+						Please check your email inbox at {this.state.email} and activate your account.
+						</h3>
+					</bs.Alert>
+				</bs.Col>
+			)
+		}
+
+		const {errors, form_errors} = this.props.validationMessage
+
 		return (
 			<bs.Col xs={12}  md={6} mdOffset={3}>
 				<div className='text-center'>
@@ -29,60 +60,37 @@ class RegisterForm extends React.Component{
 				</div>
 
 				<bs.Col xsOffset={1} xs={10}>
-					<bs.Form horizontal onSubmit={this.login}>
+					<bs.Form horizontal onSubmit={this.register}>
 
-						<bs.FormGroup bsSize="lg">
-							<bs.ControlLabel>Fullname</bs.ControlLabel>
-							<bs.InputGroup>
-								<bs.InputGroup.Addon>
-									<bs.Glyphicon glyph="user"/>
-								</bs.InputGroup.Addon>
-								<bs.FormControl type="text" name="fullname" placeholder="Please enter your fullname" 
-												onChange={this.handleChange} value={this.state.fullname}/>
-							</bs.InputGroup>
-						</bs.FormGroup>
+						<FormInputText label="Fullname" addonBefore="glyph-user" 
+										name="fullname" placeholder="Please enter your fullname"
+										value={this.state.fullname} errorMessage={form_errors.fullname}
+										onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("fullname")}
+										required/>
 
-						<bs.FormGroup bsSize="lg">
-							<bs.ControlLabel>Username</bs.ControlLabel>
-							<bs.InputGroup>
-								<bs.InputGroup.Addon>
-									<bs.Glyphicon glyph="user"/>
-								</bs.InputGroup.Addon>
-								<bs.FormControl type="text" name="username" placeholder="Please select your username" 
-												onChange={this.handleChange} value={this.state.username}/>
-							</bs.InputGroup>
-						</bs.FormGroup>
+						<FormInputText label="Username" addonBefore="glyph-user" 
+										name="username" placeholder="Please enter your username"
+										value={this.state.username} errorMessage={form_errors.username}
+										onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("username")}
+										required/>
 
-						<bs.FormGroup bsSize="lg">
-							<bs.ControlLabel>Email</bs.ControlLabel>
-							<bs.InputGroup>
-								<bs.InputGroup.Addon><strong>@</strong></bs.InputGroup.Addon>
-								<bs.FormControl type="text" name="email" placeholder="Please enter your email address" 
-												onChange={this.handleChange} value={this.state.email}/>
-							</bs.InputGroup>
-						</bs.FormGroup>
+						<FormInputText label="Email" addonBefore="strong-@" type="email"
+										name="email" placeholder="Please enter your email address"
+										value={this.state.email} errorMessage={form_errors.email}
+										onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("email")}
+										required/>
 
-						<bs.FormGroup bsSize="lg">
-							<bs.ControlLabel>Password</bs.ControlLabel>
-							<bs.InputGroup>
-								<bs.InputGroup.Addon>
-									<bs.Glyphicon glyph="lock"/>
-								</bs.InputGroup.Addon>
-								<bs.FormControl type="password" name="password" placeholder="Please select a password" 
-												onChange={this.handleChange} value={this.state.password}/>
-							</bs.InputGroup>
-						</bs.FormGroup>
+						<FormInputText label="Password" addonBefore="glyph-lock" type="password"
+										name="password" placeholder="Please select a password for your account"
+										value={this.state.password} errorMessage={form_errors.password}
+										onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("password")}
+										required/>
 
-						<bs.FormGroup bsSize="lg">
-							<bs.ControlLabel>Confirm Password</bs.ControlLabel>
-							<bs.InputGroup>
-								<bs.InputGroup.Addon>
-									<bs.Glyphicon glyph="lock"/>
-								</bs.InputGroup.Addon>
-								<bs.FormControl type="text" name="password_confirm" placeholder="Please re-type your password" 
-												onChange={this.handleChange} value={this.state.password_confirm}/>
-							</bs.InputGroup>
-						</bs.FormGroup>
+						<FormInputText label="Confirm password" addonBefore="glyph-lock" type="password"
+										name="password_confirm" placeholder="Please retype your password"
+										value={this.state.password_confirm} errorMessage={form_errors.password_confirm}
+										onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("password_confirm")}
+										required/>
 
 						<bs.FormGroup bsSize="lg">
 							<bs.Button type="submit" bsStyle="primary" bsSize="lg" block>
@@ -98,4 +106,4 @@ class RegisterForm extends React.Component{
 	}
 }
 
-export default RegisterForm
+export default connect(mapStateToProps, mapDispatchToProps)(RegisterForm)

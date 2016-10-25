@@ -10,7 +10,6 @@ class UserService {
 			url: config.getServerAddress() + '/api/user',
 			method: 'get',
 			headers: {
-				'Content-Type' : 'application/x-www-form-urlencoded',
 				'Authorization': config.getAuthHeader()
 			},
 			withCredentials: true,
@@ -20,6 +19,23 @@ class UserService {
 
 	logout() {
 		config.setAuthHeader('Basic')
+	}
+
+	createAccount(account) {
+		return reqwest({
+			url: config.getServerAddress() + '/api/user',
+			method: 'post',
+			headers: {
+				'Content-Type' : 'application/x-www-form-urlencoded'
+			},
+			data: {
+				username: account.username,
+				password: account.password,
+				email: account.email,
+				fullname: account.fullname
+			},
+			crossOrigin: true
+		})
 	}
 }
 
