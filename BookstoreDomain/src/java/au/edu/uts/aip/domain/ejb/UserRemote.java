@@ -1,7 +1,7 @@
-package au.edu.uts.aip.domain;
+package au.edu.uts.aip.domain.ejb;
 
-import au.edu.uts.aip.entity.User;
-import au.edu.uts.aip.validation.ValidationResult;
+import au.edu.uts.aip.domain.entity.User;
+import au.edu.uts.aip.domain.validation.ValidationResult;
 import javax.ejb.Remote;
 import javax.mail.MessagingException;
 

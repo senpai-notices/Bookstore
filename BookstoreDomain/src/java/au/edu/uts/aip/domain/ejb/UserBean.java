@@ -1,10 +1,10 @@
-package au.edu.uts.aip.domain;
+package au.edu.uts.aip.domain.ejb;
 
-import au.edu.uts.aip.entity.Role;
-import au.edu.uts.aip.entity.User;
-import au.edu.uts.aip.utility.SHA;
-import au.edu.uts.aip.utility.SendEmail;
-import au.edu.uts.aip.validation.ValidationResult;
+import au.edu.uts.aip.domain.entity.Role;
+import au.edu.uts.aip.domain.entity.User;
+import au.edu.uts.aip.domain.utility.SHA;
+import au.edu.uts.aip.domain.utility.SendEmail;
+import au.edu.uts.aip.domain.validation.ValidationResult;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import java.util.Date;

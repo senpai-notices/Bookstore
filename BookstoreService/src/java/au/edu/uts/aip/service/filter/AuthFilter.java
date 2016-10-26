@@ -1,4 +1,4 @@
-package au.edu.uts.aip.filter;
+package au.edu.uts.aip.service.filter;
 
 import java.io.IOException;
 import java.lang.reflect.Method;

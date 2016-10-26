@@ -1,4 +1,4 @@
-package au.edu.uts.aip.dto;
+package au.edu.uts.aip.service.dto;
 
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;

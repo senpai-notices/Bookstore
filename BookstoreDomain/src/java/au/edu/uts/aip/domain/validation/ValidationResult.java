@@ -1,4 +1,4 @@
-package au.edu.uts.aip.validation;
+package au.edu.uts.aip.domain.validation;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

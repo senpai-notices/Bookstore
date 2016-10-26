@@ -1,7 +1,7 @@
-package au.edu.uts.aip.utility;
+package au.edu.uts.aip.domain.utility;
 
-import au.edu.uts.aip.domain.UserBean;
-import au.edu.uts.aip.entity.User;
+import au.edu.uts.aip.domain.ejb.UserBean;
+import au.edu.uts.aip.domain.entity.User;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
