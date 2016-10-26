@@ -1,4 +1,4 @@
-package au.edu.uts.aip.resource;
+package au.edu.uts.aip.service.resource;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package au.edu.uts.aip.filter;
+package au.edu.uts.aip.service.filter;
 
 import java.io.IOException;
 import javax.ws.rs.container.*;

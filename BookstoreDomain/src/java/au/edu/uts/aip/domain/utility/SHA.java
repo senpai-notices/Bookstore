@@ -1,4 +1,4 @@
-package au.edu.uts.aip.utility;
+package au.edu.uts.aip.domain.utility;
 
 import java.security.*;
 import java.util.logging.Level;

@@ -1,9 +1,9 @@
-package au.edu.uts.aip.resource;
+package au.edu.uts.aip.service.resource;
 
-import au.edu.uts.aip.filter.BasicAuthFilter;
-import au.edu.uts.aip.dto.PinCardCreate;
-import au.edu.uts.aip.dto.PinCharge;
-import au.edu.uts.aip.dto.PinCustomerCreate;
+import au.edu.uts.aip.service.filter.BasicAuthFilter;
+import au.edu.uts.aip.service.dto.PinCardCreate;
+import au.edu.uts.aip.service.dto.PinCharge;
+import au.edu.uts.aip.service.dto.PinCustomerCreate;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;

@@ -1,4 +1,4 @@
-package au.edu.uts.aip.entity;
+package au.edu.uts.aip.domain.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
