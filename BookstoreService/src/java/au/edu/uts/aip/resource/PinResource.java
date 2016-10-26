@@ -5,8 +5,10 @@ import au.edu.uts.aip.dto.PinCardCreate;
 import au.edu.uts.aip.dto.PinCharge;
 import au.edu.uts.aip.dto.PinCustomerCreate;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -28,10 +30,12 @@ public class PinResource {
     @Path("card/create")
     public Response createCard(PinCardCreate pinCardCreate) {
         
-        Client client = ClientBuilder.newClient().register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+        Client client = ClientBuilder.newClient()
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
                
         Response response = client.target(BASE_URL + "/cards")
-                .request(MediaType.APPLICATION_JSON).post(Entity.entity(pinCardCreate, MediaType.APPLICATION_JSON_TYPE));               
+                .request(MediaType.APPLICATION_JSON)
+                .post(Entity.entity(pinCardCreate, MediaType.APPLICATION_JSON_TYPE));               
     
         client.close();
         return response;
@@ -44,10 +48,12 @@ public class PinResource {
     @Path("customer/create")
     public Response createCustomer(PinCustomerCreate pinCustomerCreate) {
         
-        Client client = ClientBuilder.newClient().register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+        Client client = ClientBuilder.newClient()
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
                
         Response response = client.target(BASE_URL + "/customers")
-                .request(MediaType.APPLICATION_JSON).post(Entity.entity(pinCustomerCreate, MediaType.APPLICATION_JSON_TYPE));               
+                .request(MediaType.APPLICATION_JSON)
+                .post(Entity.entity(pinCustomerCreate, MediaType.APPLICATION_JSON_TYPE));               
     
         client.close();
         return response;
@@ -60,10 +66,50 @@ public class PinResource {
     @Path("charge")
     public Response charge(PinCharge pinCharge) {
         
-        Client client = ClientBuilder.newClient().register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+        Client client = ClientBuilder.newClient()
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
                
         Response response = client.target(BASE_URL + "/charges")
-                .request(MediaType.APPLICATION_JSON).post(Entity.entity(pinCharge, MediaType.APPLICATION_JSON_TYPE));               
+                .request(MediaType.APPLICATION_JSON)
+                .post(Entity.entity(pinCharge, MediaType.APPLICATION_JSON_TYPE));               
+    
+        client.close();
+        return response;
+    }
+    
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("customer/{customer_token}")
+    public Response fetchCustomerDetails(@PathParam("customer_token") String customerToken) {
+        
+        Client client = ClientBuilder.newClient()
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+               
+        Response response = client.target(BASE_URL + "/customers")
+                .path("{customer_token}")
+                .resolveTemplate("customer_token", customerToken)
+                .request()
+                .get();               
+    
+        client.close();
+        return response;
+    }
+    
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("customer/{customer_token}/charges")
+    public Response listCharges(@PathParam("customer_token") String customerToken) {
+        
+        Client client = ClientBuilder.newClient()
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+               
+        Response response = client.target(BASE_URL + "/customers")
+                .path("{customer_token}/charges")
+                .resolveTemplate("customer_token", customerToken)
+                .request()
+                .get();               
     
         client.close();
         return response;
