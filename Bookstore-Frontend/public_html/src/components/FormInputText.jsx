@@ -77,6 +77,7 @@ class FormInputText extends React.Component {
 									name={this.props.name} 
 									placeholder={this.props.placeholder} 
 									value={this.props.value}
+									disabled={this.props.disabled}
 									onChange={this.props.onChange}
 									onFocus={this.props.onFocus}
 									onBlur={this.props.onBlur}/>

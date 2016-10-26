@@ -15,6 +15,8 @@ class RegisterForm extends BaseView {
 
 	register(event){
 		event.preventDefault()
+		this.state.submitting = true
+		this.setState(this.state)
 		this.userService.createAccount(this.state)
 			.then((resp) => {
 				this.state.registerSuccess = true
@@ -27,6 +29,10 @@ class RegisterForm extends BaseView {
 				} else if (err.status === 500) { // internal server error
 					this.props.dispatch.addErrorMessage("Some unexpected error has occured, please try again or contact us for support")
 				}
+			})
+			.always((resp) => {
+				this.state.submitting = false
+				this.setState(this.state)
 			})
 	}
 
@@ -93,8 +99,8 @@ class RegisterForm extends BaseView {
 										required/>
 
 						<bs.FormGroup bsSize="lg">
-							<bs.Button type="submit" bsStyle="primary" bsSize="lg" block>
-								Create account
+							<bs.Button type="submit" bsStyle="primary" bsSize="lg" block disabled={this.state.submitting}>
+								{this.state.submitting && 'Creating' || 'Create account'}
 							</bs.Button>
 						</bs.FormGroup>
 
