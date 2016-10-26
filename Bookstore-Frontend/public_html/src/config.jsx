@@ -2,7 +2,7 @@ import { createStore, combineReducers } from 'redux'
 import { UserReducer as user } from 'reducers/user'
 import { ValidationReducer as validationMessage } from 'reducers/validation'
 
-const SERVER_ADDRESS = 'http://localhost:8080/BookstoreService';
+const SERVER_ADDRESS = 'http://localhost:8080/BookstoreService/api';
 export const getServerAddress = () => {
 	return SERVER_ADDRESS
 }
