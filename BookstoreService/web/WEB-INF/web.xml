@@ -15,8 +15,16 @@
         <role-name>USER</role-name>
     </security-role>
     <security-role>
-        <description>Logged in Users</description>
+        <description>Administrators</description>
         <role-name>ADMIN</role-name>
+    </security-role>
+    <security-role>
+        <description>User with inactivated account</description>
+        <role-name>INACTIVATED</role-name>
+    </security-role>
+    <security-role>
+        <description>Banned users</description>
+        <role-name>BANNED</role-name>
     </security-role>
     
     <welcome-file-list>

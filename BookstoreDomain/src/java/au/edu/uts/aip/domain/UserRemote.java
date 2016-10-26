@@ -12,5 +12,6 @@ import javax.mail.MessagingException;
 @Remote
 public interface UserRemote {
     User getUser(String username);
-    ValidationResult createUser(User user) throws MessagingException;
+    ValidationResult createUser(User user);
+    void sendActivateEmail(String username) throws MessagingException;
 }

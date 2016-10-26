@@ -10,6 +10,14 @@
         <role-name>ADMIN</role-name>
         <group-name>ADMIN</group-name>
     </security-role-mapping>
+    <security-role-mapping>
+        <role-name>INACTIVATED</role-name>
+        <group-name>INACTIVATED</group-name>
+    </security-role-mapping>
+    <security-role-mapping>
+        <role-name>BANNED</role-name>
+        <group-name>BANNED</group-name>
+    </security-role-mapping>
     <jsp-config>
         <property name="keepgenerated" value="true">
             <description>Keep a copy of the generated servlet class' java code.</description>

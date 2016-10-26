@@ -4,6 +4,8 @@ import au.edu.uts.aip.entity.User;
 import au.edu.uts.aip.domain.UserRemote;
 import au.edu.uts.aip.validation.ValidationResult;
 import java.math.BigDecimal;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.ejb.EJBException;
@@ -28,7 +30,7 @@ public class UserResource {
     private HttpServletRequest request;
 
     @Context
-    private HttpServletResponse response;
+    private SecurityContext securityContext;
 
     /**
      * Retrieve the current authenticated user
@@ -83,5 +85,22 @@ public class UserResource {
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
 
+    }
+    
+    /**
+     * Send an email to activate user's account
+     * @param username
+     * @return 
+     */
+    @POST
+    @Path("activate")
+    @RolesAllowed({"ADMIN", "INACTIVATED"})
+    public Response activateAccount(@FormParam("username") String username){
+        try {
+            userBean.sendActivateEmail(username);
+            return Response.ok().build();
+        } catch (MessagingException ex) {
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
     }
 }

@@ -11,6 +11,7 @@ class RegisterForm extends BaseView {
 		super(props)
 
 		this.register = this.register.bind(this)
+		this.sendActivateEmail = this.sendActivateEmail.bind(this)
 	}
 
 	register(event){
@@ -21,6 +22,7 @@ class RegisterForm extends BaseView {
 			.then((resp) => {
 				this.state.registerSuccess = true
 				this.setState(this.state)
+				this.sendActivateEmail(null)
 			})
 			.fail((err) => {
 				if (err.status === 409){ // conflict
@@ -36,21 +38,31 @@ class RegisterForm extends BaseView {
 			})
 	}
 
+	sendActivateEmail(event){
+		if (event != null){
+			event.preventDefault()
+		}
+		this.userService.sendActivateEmail(this.state.username, this.state.password)
+	}
+
 	render(){
 
 		if (this.state.registerSuccess){
 			return (
 				<bs.Col xs={12} md={6} mdOffset={3}>
 
-					<bs.Alert>
+					<bs.Alert bsStyle="success">
 						<h2>
 							Account created
 						</h2>
 
-						<h3>
-						Dear <strong>{this.state.fullname}</strong>, thank you for joining us.<br/>
-						Please check your email inbox at {this.state.email} and activate your account.
-						</h3>
+						<h4>
+						<p>Dear <strong>{this.state.fullname}</strong>, thank you for joining us.</p>
+						<p>An email with the activation link has been sent to your email address at <a>{this.state.email}</a> </p>
+						<p>Please check your email inbox at and activate your account </p>
+						<p>If you cannot receive the email, please check the spam-box or&nbsp; 
+							<a href="" onClick={this.sendActivateEmail}>click here</a> to get another confirmation email </p>
+						</h4>
 					</bs.Alert>
 				</bs.Col>
 			)

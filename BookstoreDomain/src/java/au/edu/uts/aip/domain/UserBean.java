@@ -47,7 +47,7 @@ public class UserBean implements UserRemote {
      * @throws MessagingException: when activation email cannot be sent
      */
     @Override
-    public ValidationResult createUser(User user) throws MessagingException {
+    public ValidationResult createUser(User user) {
         try{
             em.persist(user);
             
@@ -62,15 +62,6 @@ public class UserBean implements UserRemote {
             Role inactivatedRole = typedQuery.getSingleResult();
             user.setRole(inactivatedRole);
             
-            // generate token for email activation
-            Date now = new Date();
-            Date expirationDate = new Date();
-            expirationDate.setTime(now.getTime() + 1000 * 60 * 24);
-            String activateToken = Jwts.builder().setSubject(user.getUsername())
-                                    .signWith(SignatureAlgorithm.HS512, hashsedPassword)
-                                    .setIssuedAt(now).setExpiration(expirationDate).compact();
-            SendEmail.SendActivationEmail(user, activateToken);
-            
             return null;
         } catch (ConstraintViolationException ex) {
             Logger.getLogger(UserBean.class.getName()).log(Level.SEVERE, null, ex);
@@ -82,5 +73,21 @@ public class UserBean implements UserRemote {
             }
             return result;
         }
+    }
+
+    @Override
+    public void sendActivateEmail(String username) throws MessagingException{
+        User user = getUser(username);
+        
+        // generate token for email activation
+        Date now = new Date();
+        Date expirationDate = new Date();
+        expirationDate.setTime(now.getTime() + 1000 * 60 * 24);
+        String activateToken = Jwts.builder().setSubject(user.getUsername())
+                                .signWith(SignatureAlgorithm.HS512, user.getPassword())
+                                .setIssuedAt(now).setExpiration(expirationDate).compact();
+        
+        // send email
+        SendEmail.SendActivationEmail(user, activateToken);
     }
 }
