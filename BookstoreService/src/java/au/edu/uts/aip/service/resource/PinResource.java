@@ -5,6 +5,7 @@ import au.edu.uts.aip.service.dto.PinCardCreate;
 import au.edu.uts.aip.service.dto.PinCharge;
 import au.edu.uts.aip.service.dto.PinCustomerCreate;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -80,6 +81,25 @@ public class PinResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
+    @Path("charge/{charge_token}")
+    public Response fetchChargeDetail(@PathParam("charge_token") String chargeToken) {
+        
+        Client client = ClientBuilder.newClient()
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+               
+        Response response = client.target(BASE_URL + "/charges")
+                .path("{charge_token}")
+                .resolveTemplate("charge_token", chargeToken)
+                .request()
+                .get();               
+    
+        client.close();
+        return response;
+    }
+    
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
     @Path("customer/{customer_token}")
     public Response fetchCustomerDetails(@PathParam("customer_token") String customerToken) {
         
@@ -110,6 +130,44 @@ public class PinResource {
                 .resolveTemplate("customer_token", customerToken)
                 .request()
                 .get();               
+    
+        client.close();
+        return response;
+    }
+    
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("customer/{customer_token}/cards")
+    public Response listCards(@PathParam("customer_token") String customerToken) {
+        
+        Client client = ClientBuilder.newClient()
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+               
+        Response response = client.target(BASE_URL + "/customers")
+                .path("{customer_token}/cards")
+                .resolveTemplate("customer_token", customerToken)
+                .request()
+                .get();               
+    
+        client.close();
+        return response;
+    }
+    
+    @DELETE
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"ADMIN"})
+    @Path("customer/{customer_token}")
+    public Response removeCustomer(@PathParam("customer_token") String customerToken) {
+        
+        Client client = ClientBuilder.newClient()
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+               
+        Response response = client.target(BASE_URL + "/customers")
+                .path("{customer_token}")
+                .resolveTemplate("customer_token", customerToken)
+                .request()
+                .delete();               
     
         client.close();
         return response;
