@@ -42,13 +42,13 @@ public class UserResource {
     @RolesAllowed({"USER", "ADMIN"})
     public Response get() {
         User user = userBean.getUser(request.getUserPrincipal().getName());
-        JsonObjectBuilder jsonBuider = Json.createObjectBuilder();
-        jsonBuider.add("username", user.getUsername());
-        jsonBuider.add("fullname", user.getFullname());
-        jsonBuider.add("email", user.getEmail());
-        jsonBuider.add("role", user.getRole().getRoleName());
+        JsonObjectBuilder jsonBuilder = Json.createObjectBuilder();
+        jsonBuilder.add("username", user.getUsername());
+        jsonBuilder.add("fullname", user.getFullname());
+        jsonBuilder.add("email", user.getEmail());
+        jsonBuilder.add("role", user.getRole().getRoleName());
 
-        return Response.status(Response.Status.OK).entity(jsonBuider.build()).build();
+        return Response.status(Response.Status.OK).entity(jsonBuilder.build()).build();
     }
 
     /**
