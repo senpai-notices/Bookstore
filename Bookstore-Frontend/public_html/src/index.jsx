@@ -6,14 +6,25 @@ import * as views from 'views'
 import { store } from 'config'
 
 // setup router
+
+const checkToken = (nextState, replaceState) => {
+	const queries = nextState.location.query
+	if ('token' in queries && 'username' in queries){
+		replaceState(`/account/activation?token=${queries.token}&username=${queries.username}`)
+	}
+}
+
 const routerKey = Math.random()
 const rootElement = (
 	<Provider store={store}>
 		<Router history={browserHistory} key={routerKey}>
 			<Route path="/" component={views.Template}>
-				<Route path="/login" component= {views.LoginForm}/>
-				<Route path="/register" component = {views.RegisterForm}/>
-				<IndexRoute component={views.HomeView}/>
+				<IndexRoute component={views.HomeView} onEnter={checkToken}/>
+				<Route path="login" component={views.LoginForm}/>
+				<Route path="register" component={views.RegisterForm}/>
+				<Route path="account">
+					<Route path="activation" component={views.AccountActivationView}/>
+				</Route>
 			</Route>
 		</Router>
 	</Provider>

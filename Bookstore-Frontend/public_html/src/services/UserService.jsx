@@ -39,11 +39,10 @@ class UserService {
 	}
 
 	sendActivateEmail(username, password) {
-		console.log(username, password)
 		let authHeader = 'Basic ' + base64.encode(username + ":" + password, true)
 		return reqwest({
-			url: config.getServerAddress() + '/user/activate',
-			method: 'post',
+			url: config.getServerAddress() + '/activation',
+			method: 'get',
 			headers: {
 				'Content-Type' : 'application/x-www-form-urlencoded',
 				'Authorization': authHeader
@@ -52,6 +51,21 @@ class UserService {
 				username: username
 			},
 			withCredentials: true,
+			crossOrigin: true
+		})
+	}
+
+	activateAccount(token, username){
+		return reqwest({
+			url: config.getServerAddress() + '/activation',
+			method: 'post',
+			headers: {
+				'Content-Type' : 'application/x-www-form-urlencoded'
+			},
+			data: {
+				token: token,
+				username: username
+			},
 			crossOrigin: true
 		})
 	}

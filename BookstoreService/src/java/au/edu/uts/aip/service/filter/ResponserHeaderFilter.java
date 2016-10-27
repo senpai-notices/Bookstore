@@ -6,7 +6,9 @@
 package au.edu.uts.aip.service.filter;
 
 import java.io.IOException;
+import javax.servlet.ServletContext;
 import javax.ws.rs.container.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.ext.Provider;
 
 /**
@@ -16,10 +18,13 @@ import javax.ws.rs.ext.Provider;
 @Provider
 public class ResponserHeaderFilter implements ContainerResponseFilter {
 
+    @Context
+    private ServletContext servletContext;
+    
    @Override
    public void filter(final ContainerRequestContext requestContext,
                       final ContainerResponseContext cres) throws IOException {
-      cres.getHeaders().add("Access-Control-Allow-Origin", "http://localhost:3000");
+      cres.getHeaders().add("Access-Control-Allow-Origin", servletContext.getInitParameter("clientURL"));
       cres.getHeaders().add("Access-Control-Allow-Headers", "origin, content-type, accept, authorization, X-Requested-With");
       cres.getHeaders().add("Access-Control-Allow-Credentials", "true");
       cres.getHeaders().add("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD");

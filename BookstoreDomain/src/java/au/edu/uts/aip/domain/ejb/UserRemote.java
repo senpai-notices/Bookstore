@@ -1,9 +1,10 @@
 package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.entity.User;
+import au.edu.uts.aip.domain.exception.ActivationException;
+import au.edu.uts.aip.domain.exception.InvalidTokenException;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import javax.ejb.Remote;
-import javax.mail.MessagingException;
 
 /**
  *
@@ -13,5 +14,6 @@ import javax.mail.MessagingException;
 public interface UserRemote {
     User getUser(String username);
     ValidationResult createUser(User user);
-    void sendActivateEmail(String username) throws MessagingException;
+    String generateActivationToken(User user);
+    void activateAccount(String token, String username) throws ActivationException, InvalidTokenException;
 }

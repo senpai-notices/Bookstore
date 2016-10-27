@@ -95,7 +95,4 @@ public class AuthFilter implements ContainerRequestFilter {
         
         requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
     }
-    
-    
-    
 }

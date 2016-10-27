@@ -30,4 +30,9 @@
     <welcome-file-list>
         <welcome-file>index.xhtml</welcome-file>
     </welcome-file-list>
+    
+    <context-param>
+        <param-name>clientURL</param-name>
+        <param-value>http://localhost:3000</param-value>
+    </context-param>
 </web-app>
