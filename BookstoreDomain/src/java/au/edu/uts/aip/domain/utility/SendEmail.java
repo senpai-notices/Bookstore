@@ -20,7 +20,7 @@ import javax.mail.internet.MimeMessage;
  */
 public class SendEmail {
 
-    public static void SendActivationEmail(User user, String activateToken) throws MessagingException {
+    public static void SendActivationEmail(User user, String activateToken, String baseURL) throws MessagingException {
         final String username = "***REMOVED***";
         final String password = "***REMOVED***";
 
@@ -35,6 +35,7 @@ public class SendEmail {
 
         Session session = Session.getInstance(properties,
                 new javax.mail.Authenticator() {
+            @Override
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(username, password);
             }
@@ -45,7 +46,7 @@ public class SendEmail {
             //message.setFrom(new InternetAddress(from));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
             message.setSubject("Account activation");
-            message.setText(activateToken);
+            message.setText(baseURL + "/?token=" + activateToken + "&username=" + user.getUsername());
 
             Transport.send(message);
         } catch (MessagingException ex) {

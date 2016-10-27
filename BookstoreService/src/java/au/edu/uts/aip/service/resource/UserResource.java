@@ -3,19 +3,13 @@ package au.edu.uts.aip.service.resource;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.ejb.UserRemote;
 import au.edu.uts.aip.domain.validation.ValidationResult;
-import java.math.BigDecimal;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
-import javax.ejb.EJBException;
 import javax.enterprise.context.RequestScoped;
 import javax.json.Json;
-import javax.json.JsonArray;
 import javax.json.JsonObjectBuilder;
-import javax.mail.MessagingException;
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 
@@ -28,9 +22,6 @@ public class UserResource {
 
     @Context
     private HttpServletRequest request;
-
-    @Context
-    private SecurityContext securityContext;
 
     /**
      * Retrieve the current authenticated user
@@ -85,22 +76,5 @@ public class UserResource {
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
 
-    }
-    
-    /**
-     * Send an email to activate user's account
-     * @param username
-     * @return 
-     */
-    @POST
-    @Path("activate")
-    @RolesAllowed({"ADMIN", "INACTIVATED"})
-    public Response activateAccount(@FormParam("username") String username){
-        try {
-            userBean.sendActivateEmail(username);
-            return Response.ok().build();
-        } catch (MessagingException ex) {
-            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-        }
     }
 }
