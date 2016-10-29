@@ -1,8 +1,9 @@
-import { Nav, Navbar, NavDropdown, MenuItem, Form, FormGroup, FormControl, InputGroup, Button, Glyphicon } from 'react-bootstrap'
+import { Nav, Navbar, NavDropdown, MenuItem, Form, FormGroup, FormControl, InputGroup, Button, Glyphicon, Badge, Collapse } from 'react-bootstrap'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { browserHistory, Link } from 'react-router'
 import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
+import ShoppingCartView from 'views/shoppingCart'
 
 class Template extends BaseView{
 
@@ -11,6 +12,7 @@ class Template extends BaseView{
 
 		this.login = this.login.bind(this)
 		this.logout = this.logout.bind(this)
+		this.toggleShoppingCart = this.toggleShoppingCart.bind(this)
 	}
 
 	login(event) {
@@ -27,7 +29,17 @@ class Template extends BaseView{
 
 	logout() {
 		this.props.dispatch.removeUser()
-		this.state = { }
+		this.state.username = ""
+		this.state.password = ""
+		this.setState(this.state)
+	}
+
+	toggleShoppingCart(event) {
+		if (event){
+			event.preventDefault()
+		}
+
+		this.state.showShoppingCart = !this.state.showShoppingCart;
 		this.setState(this.state)
 	}
 
@@ -85,16 +97,34 @@ class Template extends BaseView{
 			)
 		}
 
+		const shoppingCartIcon = (
+			<Nav pullRight>
+				<a href="#" onClick={this.toggleShoppingCart}>
+				<Glyphicon glyph="shopping-cart" style={ {color: "#FFF", fontSize: "50px"} }/>
+				<Badge pullRight>{shoppingCart.items.length}</Badge>
+				</a>
+			</Nav>
+		)
+
+		let shoppingCartView = "";
+		if (this.state.showShoppingCart){
+			shoppingCartView = (<ShoppingCartView show={this.state.showShoppingCart} onHide={this.toggleShoppingCart}/>)
+		}
+
 		const header = (
-			<Navbar inverse> 
-				{logo} {searchBar} {userPanel} 
+			<Navbar inverse fixedTop> 
+				{logo} {searchBar} {shoppingCartIcon} {userPanel}
 			</Navbar>
 		)
 
 		return (
 			<div>
 				{header}
-				{this.props.children}
+				<div className="container" style={{marginTop: "70px"}}>
+					{this.props.children}
+					
+				</div>
+				{shoppingCartView}
 			</div>
 		)
 	}

@@ -39,7 +39,7 @@ class RegisterForm extends BaseView {
 	}
 
 	sendActivateEmail(event){
-		if (event != null){
+		if (event){
 			event.preventDefault()
 		}
 		this.state.requestingToken = true;
