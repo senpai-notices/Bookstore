@@ -103,7 +103,7 @@ public class UserBean implements UserRemote {
     @Override
     public void activateAccount(String token, String username) throws ActivationException, InvalidTokenException{
         try {
-            User user = em.find(User.class, username);
+            User user = getUser(username);
             
             if (!user.getRole().getRoleName().equals("INACTIVATED")) {
                 throw new ActivationException();
