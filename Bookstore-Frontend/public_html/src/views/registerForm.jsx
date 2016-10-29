@@ -42,12 +42,34 @@ class RegisterForm extends BaseView {
 		if (event != null){
 			event.preventDefault()
 		}
+		this.state.requestingToken = true;
+		this.setState(this.state)
 		this.userService.sendActivateEmail(this.state.username, this.state.password)
+						.always((resp) => {
+							this.state.requestingToken = false;
+							this.setState(this.state)
+						})
 	}
 
 	render(){
 
 		if (this.state.registerSuccess){
+
+			let requestTokenButton = ""
+			if (this.state.requestingToken){
+				requestTokenButton = (
+					<bs.Button bsStyle="primary" disabled>
+						Please wait a few seconds before requesting another email
+					</bs.Button>
+				)
+			} else {
+				requestTokenButton = (
+					<bs.Button bsStyle="primary" onClick={this.sendActivateEmail}>
+						Resend activation email
+					</bs.Button>
+				)
+			}
+
 			return (
 				<bs.Col xs={12} md={6} mdOffset={3}>
 
@@ -60,10 +82,10 @@ class RegisterForm extends BaseView {
 						<p>Dear <strong>{this.state.fullname}</strong>, thank you for joining us.</p>
 						<p>An email with the activation link has been sent to your email address at <a>{this.state.email}</a> </p>
 						<p>Please check your email inbox at and activate your account </p>
-						<p>If you cannot receive the email, please check the spam-box or&nbsp; 
-							<a href="" onClick={this.sendActivateEmail}>click here</a> to get another confirmation email </p>
+						<p>If you cannot receive the email, please check the spam-box or request another confirmation email </p>
 						</h4>
 					</bs.Alert>
+					{requestTokenButton}
 				</bs.Col>
 			)
 		}

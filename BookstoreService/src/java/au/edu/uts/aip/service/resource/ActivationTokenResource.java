@@ -15,6 +15,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
@@ -60,9 +61,9 @@ public class ActivationTokenResource {
             userBean.activateAccount(token, username);
             return Response.status(Response.Status.OK).build();
         } catch (InvalidTokenException ex){
-            return Response.status(Response.Status.BAD_REQUEST).build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid token").build();
         } catch (ActivationException ex){
-            return Response.status(Response.Status.UNAUTHORIZED).build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Cannot activate account").build();
         }
     }
 }

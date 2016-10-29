@@ -8,8 +8,10 @@ class BaseView extends React.Component {
 	constructor(props){
 		super(props)
 
-		this.state = this.props.location.state
-		if (this.state == null){
+		if (this.props.location){
+			this.state = this.props.location.state
+		}
+		if (!this.state){
 			this.state = { }
 		}
 

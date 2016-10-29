@@ -10,6 +10,9 @@ class LoginForm extends BaseView{
 		super(props)
 
 		this.login = this.login.bind(this)
+		if (this.props.username){
+			this.state.username = this.props.username
+		}
 	}
 
 	login(event){
@@ -33,7 +36,7 @@ class LoginForm extends BaseView{
 		let errorDisplay = ""
 		if (validationMessage.errors[0] !== undefined){
 			errorDisplay = (
-				<bs.Alert bsStyle="danger" onDismiss={this.props.removeValidationError}>
+				<bs.Alert bsStyle="danger" onDismiss={this.props.dispatch.removeValidationMessage}>
 					{validationMessage.errors[0]}
 				</bs.Alert>
 			)
