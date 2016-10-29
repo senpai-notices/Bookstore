@@ -1,37 +1,32 @@
 package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.entity.Role;
+import au.edu.uts.aip.domain.entity.Role.RoleType;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.ActivationException;
 import au.edu.uts.aip.domain.exception.InvalidTokenException;
 import au.edu.uts.aip.domain.utility.SHA;
-import au.edu.uts.aip.domain.utility.SendEmail;
 import au.edu.uts.aip.domain.validation.ValidationResult;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.SignatureException;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
+import javax.inject.Named;
 import javax.mail.MessagingException;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.ParameterExpression;
-import javax.persistence.criteria.Root;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import javax.validation.Validator;
 
 @Stateless
+@Named
 public class UserBean implements UserRemote {
 
     @PersistenceContext
@@ -42,7 +37,13 @@ public class UserBean implements UserRemote {
 
     @Override
     public User getUser(String username) {
-        return em.find(User.class, username);
+        try{
+            TypedQuery<User> typedQuery = em.createNamedQuery("User.find", User.class);
+            typedQuery.setParameter("username", username);
+            return typedQuery.getSingleResult();
+        } catch (Exception ex){
+            return null;
+        }
     }
 
     /**
@@ -54,15 +55,24 @@ public class UserBean implements UserRemote {
     @Override
     public ValidationResult createUser(User user) {
         try {
+            User existingUser = getUser(user.getUsername());
+            
+            if (existingUser != null){
+                ValidationResult result = new ValidationResult();
+                String errorMessage = "Username " + user.getUsername() + " already exists";
+                result.addFormError("username", errorMessage);
+                return result;
+            }
+            
             em.persist(user);
-
+            
             // hash password
             String unhashedPassword = user.getPassword();
             String hashsedPassword = SHA.hash256(unhashedPassword);
             user.setPassword(hashsedPassword);
 
             // add user to INACTIVATED group
-            Role inactivatedRole = getRole("INACTIVATED");
+            Role inactivatedRole = getRole(RoleType.INACTIVATED);
             user.setRole(inactivatedRole);
 
             // no validation error
@@ -102,7 +112,7 @@ public class UserBean implements UserRemote {
             Jwts.parser().setSigningKey(user.getPassword())
                 .requireSubject(user.getUsername()).parseClaimsJws(token);
             
-            Role userRole = getRole("USER");
+            Role userRole = getRole(RoleType.USER);
             user.setRole(userRole);
             em.persist(user);
             
@@ -111,9 +121,9 @@ public class UserBean implements UserRemote {
         }
     }
     
-    private Role getRole(String roleName){
+    private Role getRole(RoleType roleType){
         TypedQuery<Role> typedQuery = em.createNamedQuery("Role.find", Role.class);
-        typedQuery.setParameter("name", roleName);
+        typedQuery.setParameter("name", roleType.toString());
         return typedQuery.getSingleResult();
     }
 }

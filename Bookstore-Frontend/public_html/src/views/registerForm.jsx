@@ -29,7 +29,7 @@ class RegisterForm extends BaseView {
 					let validateResult = JSON.parse(err.response)
 					this.props.dispatch.setValidationMessage(validateResult)
 				} else if (err.status === 500) { // internal server error
-					this.props.dispatch.addErrorMessage("Some unexpected error has occured, please try again or contact us for support")
+					this.props.dispatch.addErrorMessage("Cannot create account, please try again")
 				}
 			})
 			.always((resp) => {
@@ -91,6 +91,15 @@ class RegisterForm extends BaseView {
 		}
 
 		const {errors, form_errors} = this.props.validationMessage
+
+		let errorDisplay = ""
+		if (errors.length > 0){
+			errorDisplay = (
+				<bs.Alert bsStyle="danger" onDismiss={this.props.dispatch.removeValidationMessage}>
+
+				</bs.Alert>
+			)
+		}
 
 		return (
 			<bs.Col xs={12}  md={6} mdOffset={3}>

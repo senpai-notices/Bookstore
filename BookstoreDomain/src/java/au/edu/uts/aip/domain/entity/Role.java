@@ -17,6 +17,21 @@ public class Role implements Serializable {
     private int Id;
     private String roleName;
     
+    public enum RoleType{
+        ADMIN("ADMIN"), USER("USER"), INACTIVATED("INACTIVATED"), BANNED("BANNED");
+        
+        private final String type;
+        
+        private RoleType(String type){
+            this.type = type;
+        }
+
+        @Override
+        public String toString() {
+            return type;
+        }
+    }
+    
     @Id
     @GeneratedValue
     public int getId() {

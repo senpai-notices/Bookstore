@@ -9,7 +9,6 @@
         <auth-method>BASIC</auth-method>
         <realm-name>aipRealm</realm-name>
     </login-config>
-
     <security-role>
         <description>Logged in Users</description>
         <role-name>USER</role-name>
