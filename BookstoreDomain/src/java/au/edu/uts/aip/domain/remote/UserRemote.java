@@ -1,4 +1,4 @@
-package au.edu.uts.aip.domain.ejb;
+package au.edu.uts.aip.domain.remote;
 
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.ActivationException;
@@ -6,10 +6,6 @@ import au.edu.uts.aip.domain.exception.InvalidTokenException;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import javax.ejb.Remote;
 
-/**
- *
- * @author sondang
- */
 @Remote
 public interface UserRemote {
     User getUser(String username);

@@ -2,7 +2,9 @@ package au.edu.uts.aip.domain.entity;
 
 /*import the needed libraries*/
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,8 +12,10 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -27,7 +31,7 @@ import javax.validation.constraints.Size;
  * @author 
  */
 @Entity
-@Table(name = "BookstoreUser")
+@Table(name = "Bookstore_User")
 @NamedQueries({
     @NamedQuery(name="User.find", query="SELECT u from User u where u.username=:username")
 })
@@ -58,6 +62,8 @@ public class User implements Serializable {
     @Pattern(regexp = "^[^ ]+@[^ ]+\\.[^ ]+$")
     private String email;
     
+    private List<BookSeller> sellingBooks;
+    
     private Role role;
      /**
      * The username of the web site user in Bookstoreuser table
@@ -75,6 +81,7 @@ public class User implements Serializable {
         this.Id = Id;
     }
     
+    @Column(unique = true)
     public String getUsername() {
         return username;
     }
@@ -138,5 +145,14 @@ public class User implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @OneToMany(mappedBy = "seller")
+    public List<BookSeller> getSellingBooks() {
+        return sellingBooks;
+    }
+
+    public void setSellingBooks(List<BookSeller> sellingBooks) {
+        this.sellingBooks = sellingBooks;
     }
 }

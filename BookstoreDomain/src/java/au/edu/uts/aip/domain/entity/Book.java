@@ -2,10 +2,12 @@ package au.edu.uts.aip.domain.entity;
 
 /*the needed libraries imported here*/
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 /**
@@ -33,7 +35,19 @@ public class Book implements Serializable {
     private String name;
     private String title;
     private double price;
+    private List<BookSeller> sellers;
+    private String isbn;
+    private int publishYear;
+    private String publisher;
+    private String imgPath;
+    
+    public String getPublisher() {
+        return publisher;
+    }
 
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
     
     
     /**
@@ -101,6 +115,37 @@ public class Book implements Serializable {
     public void setPrice(double price) {
         this.price = price;
     }
-
     
+    @OneToMany(mappedBy = "book")
+    public List<BookSeller> getSellers() {
+        return sellers;
+    }
+
+    public void setSellers(List<BookSeller> sellers) {
+        this.sellers = sellers;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public int getPublishYear() {
+        return publishYear;
+    }
+
+    public void setPublishYear(int publishYear) {
+        this.publishYear = publishYear;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
 }

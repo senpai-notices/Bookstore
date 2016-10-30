@@ -1,39 +1,23 @@
 package au.edu.uts.aip.domain.ejb;
 
-import au.edu.uts.aip.domain.entity.Role;
+import au.edu.uts.aip.domain.remote.UserRemote;
+import au.edu.uts.aip.domain.entity.*;
 import au.edu.uts.aip.domain.entity.Role.RoleType;
-import au.edu.uts.aip.domain.entity.User;
-import au.edu.uts.aip.domain.exception.ActivationException;
-import au.edu.uts.aip.domain.exception.InvalidTokenException;
+import au.edu.uts.aip.domain.exception.*;
 import au.edu.uts.aip.domain.utility.SHA;
 import au.edu.uts.aip.domain.validation.ValidationResult;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.SignatureException;
-import java.util.Date;
-import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.annotation.Resource;
+import io.jsonwebtoken.*;
+import java.util.*;
+import java.util.logging.*;
 import javax.ejb.Stateless;
-import javax.inject.Named;
-import javax.mail.MessagingException;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-import javax.validation.ConstraintViolation;
-import javax.validation.ConstraintViolationException;
-import javax.validation.Validator;
+import javax.persistence.*;
+import javax.validation.*;
 
 @Stateless
-@Named
 public class UserBean implements UserRemote {
 
     @PersistenceContext
     private EntityManager em;
-
-    @Resource
-    Validator validator;
 
     @Override
     public User getUser(String username) {
@@ -50,7 +34,6 @@ public class UserBean implements UserRemote {
      *
      * @param user
      * @return
-     * @throws MessagingException: when activation email cannot be sent
      */
     @Override
     public ValidationResult createUser(User user) {

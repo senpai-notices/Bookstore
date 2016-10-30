@@ -9,7 +9,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "BookstoreRole")
+@Table(name = "Bookstore_Role")
 @NamedQueries({
     @NamedQuery(name="Role.find", query="SELECT r from Role r where r.roleName=:name")
 })

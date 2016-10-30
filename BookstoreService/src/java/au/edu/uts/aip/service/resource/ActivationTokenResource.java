@@ -1,6 +1,6 @@
 package au.edu.uts.aip.service.resource;
 
-import au.edu.uts.aip.domain.ejb.UserRemote;
+import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.ActivationException;
 import au.edu.uts.aip.domain.exception.InvalidTokenException;
