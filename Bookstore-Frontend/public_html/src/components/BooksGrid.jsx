@@ -16,7 +16,7 @@ class BooksGrid extends React.Component {
 		for (i =0; i<books.length; i+=4){
 			const booksRow = books.slice(i, i+4)
 			let booksRowView = (
-				<BooksRow books={booksRow} />
+				<BooksRow books={booksRow} key={i} onItemClick={this.props.onItemClick} />
 			)
 			booksGridView.push(booksRowView)
 		}

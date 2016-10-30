@@ -11,10 +11,12 @@ class BookItemThumbnail extends React.Component {
 	render() {
 		const book = this.props.book
 		return (
-			<bs.Thumbnail src={book.imgPath}>
-				<h3>{book.title}</h3>
-				<p>{book.author} ({book.publishYear})</p>
-			</bs.Thumbnail>
+			<a href="#" onClick={this.props.onClick.bind(null, book)}>
+				<bs.Thumbnail src={book.imgPath}>
+					<h3>{book.title}</h3>
+					<p>{book.author} ({book.publishYear})</p>
+				</bs.Thumbnail>
+			</a>
 		)
 	}
 }

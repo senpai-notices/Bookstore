@@ -44,7 +44,7 @@ class RegisterForm extends BaseView {
 		}
 		this.state.requestingToken = true;
 		this.setState(this.state)
-		this.userService.sendActivateEmail(this.state.username, this.state.password)
+		this.userService.sendActivateEmailAfterRegister(this.state.username, this.state.password)
 						.always((resp) => {
 							this.state.requestingToken = false;
 							this.setState(this.state)

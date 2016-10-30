@@ -14,6 +14,7 @@ class HomeView extends BaseView {
 		this.state.books = []
 		this.state.hasMore = true
 		this.loadMoreBooks = this.loadMoreBooks.bind(this)
+		this.viewBookDetail = this.viewBookDetail.bind(this)
 	}
 
 	loadMoreBooks(){
@@ -25,6 +26,11 @@ class HomeView extends BaseView {
 				}
 				this.setState(this.state)
 			})
+	}
+
+	viewBookDetail(book, event){
+		event.preventDefault();
+		
 	}
 
 	render(){
@@ -45,7 +51,7 @@ class HomeView extends BaseView {
 
 		return (
 			<InfiniteScroll pageStart={0} loadMore={this.loadMoreBooks} hasMore={this.state.hasMore} loader={loading}>
-				<BooksGrid books={this.state.books}/>
+				<BooksGrid books={this.state.books} onItemClick={this.viewBookDetail}/>
 			</InfiniteScroll>
 		)
 	}

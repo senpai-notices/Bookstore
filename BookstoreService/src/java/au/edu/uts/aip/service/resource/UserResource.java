@@ -31,7 +31,7 @@ public class UserResource {
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @RolesAllowed({"USER", "ADMIN", "INACTIVATED"})
+    @RolesAllowed({"USER", "ADMIN", "VERIFIED USER", "INACTIVATED"})
     public Response get() {
         User userEntity = userBean.getUser(request.getUserPrincipal().getName());
         UserDTO userDTO = new UserDTO(userEntity);

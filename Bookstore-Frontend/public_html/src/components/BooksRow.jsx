@@ -14,8 +14,8 @@ class BooksRow extends React.Component {
 		let booksRowView = []
 		books.forEach((book) => {
 			let bookItemView = (
-				<bs.Col sm={12} md={6} lg={3}>
-					<BookItemThumbnail book={book}/>
+				<bs.Col sm={12} md={6} lg={3} key={book.id}>
+					<BookItemThumbnail book={book} onClick={this.props.onItemClick}/>
 				</bs.Col>
 			)
 			booksRowView.push(bookItemView)

@@ -18,8 +18,12 @@
         <role-name>ADMIN</role-name>
     </security-role>
     <security-role>
-        <description>User with inactivated account</description>
+        <description>Users with inactivated account</description>
         <role-name>INACTIVATED</role-name>
+    </security-role>
+    <security-role>
+        <description>User that have their id verified</description>
+        <role-name>VERIFIED USER</role-name>
     </security-role>
     <security-role>
         <description>Banned users</description>

@@ -10,10 +10,6 @@ class LoginForm extends BaseView{
 		super(props)
 
 		this.login = this.login.bind(this)
-
-		if (this.props.user.status === "loggedIn"){
-			browserHistory.push({ pathname: "/"})
-		}
 	}
 
 	login(event){
@@ -32,7 +28,7 @@ class LoginForm extends BaseView{
 
 	componentWillReceiveProps(nextProps){
 		if (nextProps.user.status === "loggedIn") {
-			browserHistory.push({ pathname: "/"})
+			browserHistory.replace({ pathname: "/"})
 		}
 	}
 

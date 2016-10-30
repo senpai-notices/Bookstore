@@ -18,7 +18,8 @@ public class Role implements Serializable {
     private String roleName;
     
     public enum RoleType{
-        ADMIN("ADMIN"), USER("USER"), INACTIVATED("INACTIVATED"), BANNED("BANNED");
+        ADMIN("ADMIN"), USER("USER"), INACTIVATED("INACTIVATED"), 
+        VERIFIED("VERIFIED USER"), BANNED("BANNED");
         
         private final String type;
         

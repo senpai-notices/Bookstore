@@ -14,6 +14,29 @@ const checkToken = (nextState, replaceState) => {
 	}
 }
 
+
+const checkAdmin = (nextState, replaceState) => {
+	const user = store.getState().user
+	if (user.role !== "ADMIN"){
+		replaceState("/")
+	}
+}
+
+const checkUser = (nextState, replaceState) => {
+	if (nextState.location.pathname.startsWith("/account/activation")){
+		return;
+	}
+
+	const user = store.getState().user
+	if (user.role !== "USER" && user.role !== "VERIFIED USER"){
+		replaceState("/")
+	}
+}
+
+const redirectToHome = () => {
+	browserHistory.replace("/")
+}
+
 const routerKey = Math.random()
 const rootElement = (
 	<Provider store={store}>
@@ -24,6 +47,13 @@ const rootElement = (
 				<Route path="register" component={views.RegisterForm}/>
 				<Route path="account">
 					<Route path="activation" component={views.AccountActivationView}/>
+				</Route>
+				<Route path="user" onEnter={checkUser} onLogout={redirectToHome}>
+					<Route path="dashboard" component={views.UserDashboardView}/>
+				</Route>
+				<Route path="admin" onEnter={checkAdmin} onLogout={redirectToHome}>
+					<Route path="users" component={views.ManageUsersView}/>
+					<Route path="books" component={views.ManageBooksView}/>
 				</Route>
 			</Route>
 		</Router>
