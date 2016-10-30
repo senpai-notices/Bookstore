@@ -91,7 +91,7 @@ public class DatabaseInitBean {
                     data[3] = data[3].replaceAll("\"", "");
                     book.setPublishYear(Integer.parseInt(data[3]));
                     book.setPublisher(data[4]);
-                    book.setImgPath(data[7]);
+                    book.setImgPath(data[data.length - 1]);
 
                     List<BookSeller> sellers = new ArrayList<>();
                     BookSeller adminSeller = new BookSeller();

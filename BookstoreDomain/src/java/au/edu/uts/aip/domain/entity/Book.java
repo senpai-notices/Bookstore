@@ -7,7 +7,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlRootElement;
 
 
 /**
@@ -19,6 +22,9 @@ import javax.persistence.OneToMany;
  * 
  * @author 
  */
+@NamedQueries({
+    @NamedQuery(name="Book.getLatest", query="SELECT b FROM Book b ORDER BY b.publishYear DESC")
+})
 @Entity
 public class Book implements Serializable {
 
