@@ -50,6 +50,11 @@ public class AuthFilter implements ContainerRequestFilter {
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
         Method resourceMethod = resourceInfo.getResourceMethod();
+        try {
+            Thread.sleep(2000l);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(AuthFilter.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         // allow resource method to be invoked if it is decorated with PermitAll annotation
         PermitAll permitAll = resourceMethod.getAnnotation(PermitAll.class);

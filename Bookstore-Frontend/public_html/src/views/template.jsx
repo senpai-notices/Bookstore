@@ -17,21 +17,20 @@ class Template extends BaseView{
 
 	login(event) {
 		event.preventDefault()
-		this.userService.login(this.state.username, this.state.password)
+		this.props.dispatch.loggingIn()
+		this.userService.login(this.props.user.username, this.props.user.password)
 			.then((loggedInUser) => {
-				this.props.dispatch.setUser(loggedInUser)
+				this.props.dispatch.login(loggedInUser)
 			})
 			.fail((err) => {
 				this.props.dispatch.addErrorMessage("Cannot login, please try again")
-				browserHistory.push({ pathname: "/login", props: { username: "TEST" } })
+				this.props.dispatch.logout()
+				browserHistory.push({ pathname: "/login"})
 			})
 	}
 
 	logout() {
-		this.props.dispatch.removeUser()
-		this.state.username = ""
-		this.state.password = ""
-		this.setState(this.state)
+		this.props.dispatch.logout()
 	}
 
 	toggleShoppingCart(event) {
@@ -65,21 +64,27 @@ class Template extends BaseView{
 		        </FormGroup>
 			</Navbar.Form>
 		)
-
+		
 		// if user is not logged in, display the quick login form
 		let userPanel = "";
-		if (user === null){
+		if (user.status !== "loggedIn"){
 			userPanel = (
 			<Navbar.Form pullRight>
 				<Form onSubmit={this.login}>
 				<FormGroup>
-					<FormControl type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}/>
+					<FormControl type="text" name="username" placeholder="Username" 
+								value={user.username} onChange={this.props.dispatch.setUser}
+								disabled={user.status === "loggingIn"}/>
 					&nbsp;
-					<FormControl type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
+					<FormControl type="password" name="password" placeholder="Password" 
+								value={user.password} onChange={this.props.dispatch.setUser}
+								disabled={user.status === "loggingIn"}/>
 					&nbsp;
-					<Button type="submit" bsStyle="success">Login</Button>
+					<Button type="submit" bsStyle="success" disabled={user.status === "loggingIn"}>
+						{ (user.status === "loggingIn") && "Logging in" || "Login" }
+					</Button>
 					&nbsp;
-					<Link to="/register"><Button bsStyle="primary">Register</Button></Link>
+					<Link to="/register"><Button bsStyle="primary" disabled={user.status === "loggingIn"}>Register</Button></Link>
 				</FormGroup>
 				</Form>
 			</Navbar.Form>

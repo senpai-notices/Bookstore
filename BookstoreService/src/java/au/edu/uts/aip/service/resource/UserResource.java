@@ -3,6 +3,7 @@ package au.edu.uts.aip.service.resource;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.validation.ValidationResult;
+import au.edu.uts.aip.service.dto.UserDTO;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
@@ -30,16 +31,12 @@ public class UserResource {
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @RolesAllowed({"USER", "ADMIN"})
+    @RolesAllowed({"USER", "ADMIN", "INACTIVATED"})
     public Response get() {
-        User user = userBean.getUser(request.getUserPrincipal().getName());
-        JsonObjectBuilder jsonBuilder = Json.createObjectBuilder();
-        jsonBuilder.add("username", user.getUsername());
-        jsonBuilder.add("fullname", user.getFullname());
-        jsonBuilder.add("email", user.getEmail());
-        jsonBuilder.add("role", user.getRole().getRoleName());
+        User userEntity = userBean.getUser(request.getUserPrincipal().getName());
+        UserDTO userDTO = new UserDTO(userEntity);
 
-        return Response.status(Response.Status.OK).entity(jsonBuilder.build()).build();
+        return Response.status(Response.Status.OK).entity(userDTO).build();
     }
 
     /**

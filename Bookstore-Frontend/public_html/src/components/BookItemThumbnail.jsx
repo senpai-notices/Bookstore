@@ -13,7 +13,7 @@ class BookItemThumbnail extends React.Component {
 		return (
 			<bs.Thumbnail src={book.imgPath}>
 				<h3>{book.title}</h3>
-				<p>{book.author}</p>
+				<p>{book.author} ({book.publishYear})</p>
 			</bs.Thumbnail>
 		)
 	}

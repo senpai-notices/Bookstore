@@ -10,29 +10,35 @@ class LoginForm extends BaseView{
 		super(props)
 
 		this.login = this.login.bind(this)
-		if (this.props.username){
-			this.state.username = this.props.username
+
+		if (this.props.user.status === "loggedIn"){
+			browserHistory.push({ pathname: "/"})
 		}
 	}
 
 	login(event){
 		event.preventDefault()
-		this.userService.login(this.state.username, this.state.password)
+
+		this.props.dispatch.loggingIn()
+		this.userService.login(this.props.user.username, this.props.user.password)
 			.then((loggedInUser) => {
-				this.props.dispatch.setUser(loggedInUser)
+				this.props.dispatch.login(loggedInUser)
 			})
 			.fail((err) => {
+				this.props.dispatch.logout()
 				this.props.dispatch.addErrorMessage("Cannot login, please try again")
 			})
 	}
 
-	render(){
-		if (this.props.user !== null){
-			browserHistory.push("/")
+	componentWillReceiveProps(nextProps){
+		if (nextProps.user.status === "loggedIn") {
+			browserHistory.push({ pathname: "/"})
 		}
+	}
 
+	render(){
 		const validationMessage = this.props.validationMessage
-
+		const user = this.props.user
 		let errorDisplay = ""
 		if (validationMessage.errors[0] !== undefined){
 			errorDisplay = (
@@ -63,7 +69,9 @@ class LoginForm extends BaseView{
 									<bs.InputGroup.Addon>
 										<bs.Glyphicon glyph="user"/>
 									</bs.InputGroup.Addon>
-									<bs.FormControl type="text" name="username" placeholder="Username" onChange={this.handleChange} value={this.state.username}/>
+									<bs.FormControl type="text" name="username" placeholder="Username" 
+													onChange={this.props.dispatch.setUser} value={user.username}
+													disabled={user.status === "loggingIn"}/>
 								</bs.InputGroup>
 							</bs.FormGroup>
 
@@ -73,13 +81,15 @@ class LoginForm extends BaseView{
 									<bs.InputGroup.Addon>
 										<bs.Glyphicon glyph="lock"/>
 									</bs.InputGroup.Addon>
-									<bs.FormControl type="password" name="password" placeholder="Password" onChange={this.handleChange} value={this.state.password}/>
+									<bs.FormControl type="password" name="password" placeholder="Password" 
+													onChange={this.props.dispatch.setUser} value={user.password}
+													disabled={user.status === "loggingIn"}/>
 								</bs.InputGroup>
 							</bs.FormGroup>
 
 							<bs.FormGroup bsSize="lg">
-								<bs.Button type="submit" bsStyle="success" bsSize="lg" block>
-									Login
+								<bs.Button type="submit" bsStyle="success" bsSize="lg" block disabled={user.status === "loggingIn"}>
+									{ (user.status === "loggingIn") && "Logging in" || "Login" }
 								</bs.Button>
 								<br/>
 								<div className='text-center'>

@@ -11,12 +11,10 @@ class BooksGrid extends React.Component {
 
 	render() {
 		const books = this.props.books
-		const itemsPerRow = this.props.itemsPerRow
-
 		let booksGridView = []
 		let i = 0
-		for (i =0; i<books.length; i+=itemsPerRow){
-			const booksRow = books.slice(i, i+itemsPerRow)
+		for (i =0; i<books.length; i+=4){
+			const booksRow = books.slice(i, i+4)
 			let booksRowView = (
 				<BooksRow books={booksRow} />
 			)
@@ -24,7 +22,7 @@ class BooksGrid extends React.Component {
 		}
 
 		return (
-			<bs.Grid>
+			<bs.Grid fluid>
 				{booksGridView}
 			</bs.Grid>
 		)

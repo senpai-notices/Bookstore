@@ -1,11 +1,20 @@
 // user actions
-export const setUser = (user) => ({
+export const setUser = (event) => ({
 	type: "SET_USER",
-	user
+	event
 })
 
-export const removeUser = () => ({
-	type: "REMOVE_USER"
+export const logout = () => ({
+	type: "LOGOUT"
+})
+
+export const loggingIn = () => ({
+	type: "LOGGING_IN"
+})
+
+export const login = (user) => ({
+	type: "LOGIN",
+	user
 })
 
 // validation actions

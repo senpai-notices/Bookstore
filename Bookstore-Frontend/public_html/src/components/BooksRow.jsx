@@ -14,7 +14,7 @@ class BooksRow extends React.Component {
 		let booksRowView = []
 		books.forEach((book) => {
 			let bookItemView = (
-				<bs.Col xs={12 / books.length}>
+				<bs.Col sm={12} md={6} lg={3}>
 					<BookItemThumbnail book={book}/>
 				</bs.Col>
 			)

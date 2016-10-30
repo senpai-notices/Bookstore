@@ -3,13 +3,13 @@ import * as config from 'config'
 import {store} from 'index'
 
 class BookService {
-	getLatestBook(offSet, limit){
+	getLatestBook(offset, limit){
 		return reqwest({
 			url: config.getServerAddress() + '/book/latest',
 			method: 'get',
 			crossOrigin: true,
 			data: {
-				offSet: offSet,
+				offset: offset,
 				limit: limit
 			}
 		})
