@@ -78,6 +78,10 @@ public class PinResource {
         return response;
     }
     
+    // ------------------------------------
+    // TODO: Below methods may not be used.
+    // ------------------------------------
+    
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
