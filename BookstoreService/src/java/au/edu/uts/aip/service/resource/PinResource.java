@@ -55,8 +55,10 @@ public class PinResource {
         Response response = client.target(BASE_URL + "/customers")
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(pinCustomerCreate, MediaType.APPLICATION_JSON_TYPE));               
-    
+        // TODO: convert response to String
         client.close();
+        // TODO: check response status code.
+        // If != 201, then check if error array exists. If so, add it to the validation message stack.
         return response;
     }
     
