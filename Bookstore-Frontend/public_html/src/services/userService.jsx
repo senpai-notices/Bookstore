@@ -18,7 +18,7 @@ class UserService {
 		})
 	}
 
-	getAccount() {
+	fetchAccount() {
 		return reqwest({
 			url: config.getServerAddress() + '/user',
 			method: 'get',
@@ -102,8 +102,38 @@ class UserService {
 				'Content-Type': contentType,
 				'Authorization': config.getAuthHeader()
 			},
-			data: fileStream
+			data: fileStream,
+			crossOrigin: true
 		})
+	}
+
+	getDocument(documentType, username){
+		return new Promise(function (resolve, reject) {
+			var xhr = new XMLHttpRequest();
+		    xhr.open("GET", config.getServerAddress() + `/document/${username}/${documentType}`)
+		    xhr.setRequestHeader("Authorization", config.getAuthHeader()) 
+		    xhr.responseType = "blob"
+		    xhr.onload = function (e) {
+		    	if (this.status >= 200 && this.status < 300) {
+		    		console.log(e)
+		    		resolve(xhr.response)
+		    	} else {
+		    		reject({
+		    			status: this.status,
+		    			statusText: xhr.statusText
+		    		});
+		    	}
+		    };
+		    xhr.onerror = function () {
+		    	reject({
+		    		status: this.status,
+		    		statusText: xhr.statusText
+		    	});
+		    };
+
+		    
+		    xhr.send()
+		});
 	}
 
 	findUsers(roles, username, fullname, email, offset, limit){

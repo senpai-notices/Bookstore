@@ -15,4 +15,5 @@ public interface UserRemote {
     void activateAccount(String token, String username) throws ActivationException, InvalidTokenException;
     void verifyAccount(String username);
     List<User> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit);
+    void updateVerificationDocuments(String username, String documentType, String filePath);
 }

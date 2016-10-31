@@ -7,9 +7,6 @@ import au.edu.uts.aip.domain.exception.*;
 import au.edu.uts.aip.domain.utility.SHA;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import io.jsonwebtoken.*;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.*;
 import java.util.logging.*;
 import javax.ejb.Stateless;
@@ -21,7 +18,7 @@ public class UserBean implements UserRemote {
 
     @PersistenceContext
     private EntityManager em;
-
+    
     @Override
     public User getUser(String username) {
         try{
@@ -107,7 +104,7 @@ public class UserBean implements UserRemote {
         }
     }
     
-    private Role getRole(String roleName){
+    public Role getRole(String roleName){
         TypedQuery<Role> typedQuery = em.createNamedQuery("Role.find", Role.class);
         typedQuery.setParameter("name", roleName);
         return typedQuery.getSingleResult();
@@ -133,5 +130,22 @@ public class UserBean implements UserRemote {
         typedQuery.setFirstResult(offset);
         typedQuery.setMaxResults(limit);
         return typedQuery.getResultList();
+    }
+    
+    @Override
+    public void updateVerificationDocuments(String username, String documentType, String filePath){
+        User user = getUser(username);
+        if (documentType.equals("id")){
+            user.setIdVerificationPath(filePath);
+        } else if (documentType.equals("residental")){
+            user.setResidentalVerificationPath(filePath);
+        }
+
+        if (user.getIdVerificationPath() != null && user.getResidentalVerificationPath() != null){
+            Role verifyingRole = getRole(RoleType.VERIFYING.toString());
+            user.setRole(verifyingRole);
+        }
+
+        em.persist(user);
     }
 }

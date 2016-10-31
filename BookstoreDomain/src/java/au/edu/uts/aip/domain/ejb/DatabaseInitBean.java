@@ -67,7 +67,7 @@ public class DatabaseInitBean {
         System.out.println("Creating admin account...Done");
         
         System.out.println("Creating sample user account");
-        RoleType[] randomRoleList = {RoleType.INACTIVATED, RoleType.USER, RoleType.BANNED, RoleType.VERIFYING};
+        RoleType[] randomRoleList = {RoleType.INACTIVATED, RoleType.USER, RoleType.BANNED};
         Random r = new Random();
         for (int i=0 ;i<80; i++){
             User normalUser = new User();
@@ -94,6 +94,16 @@ public class DatabaseInitBean {
             em.persist(verifiedUser);
             verifiedUsers[i] = verifiedUser;
         }
+//        User myUser = new User();
+//        myUser.setUsername("sondang241212");
+//        myUser.setFullname("Dang Cuu Son");
+//        myUser.setEmail("sondang2412@gmail.com");
+//        myUser.setPassword(SHA.hash256("123123123"));
+//        myUser.setIdVerificationPath("/home/sondang/NetBeansProjects/aip-a2-local/dist/gfdeploy/aip-a2/BookstoreService_war/../../../../sondang241212/id.jpeg");
+//        myUser.setResidentalVerificationPath("/home/sondang/NetBeansProjects/aip-a2-local/dist/gfdeploy/aip-a2/BookstoreService_war/../../../../sondang241212/residental.jpeg");
+//        myUser.setRole(roleMap.get(RoleType.VERIFYING));
+//        em.persist(myUser);
+        
         System.out.println("Creating sample user account...Done");
         
         System.out.println("Importing sample books data");

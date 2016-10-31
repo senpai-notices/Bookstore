@@ -65,6 +65,11 @@ public class User implements Serializable {
     private List<BookSeller> sellingBooks;
     
     private Role role;
+    
+    private String idVerificationPath;
+    
+    private String residentalVerificationPath;
+    
      /**
      * The username of the web site user in Bookstoreuser table
      * Not null value
@@ -154,5 +159,21 @@ public class User implements Serializable {
 
     public void setSellingBooks(List<BookSeller> sellingBooks) {
         this.sellingBooks = sellingBooks;
+    }
+
+    public String getIdVerificationPath() {
+        return idVerificationPath;
+    }
+
+    public void setIdVerificationPath(String idVerificationPath) {
+        this.idVerificationPath = idVerificationPath;
+    }
+
+    public String getResidentalVerificationPath() {
+        return residentalVerificationPath;
+    }
+
+    public void setResidentalVerificationPath(String residentalVerificationPath) {
+        this.residentalVerificationPath = residentalVerificationPath;
     }
 }

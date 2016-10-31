@@ -36,34 +36,20 @@ public class FileUtility {
         }
     }
     
-    public static void decode64AndCopy(InputStream input, String path) throws IOException, Base64DecodingException {
-        try (OutputStream os = new FileOutputStream(path)){
-            Base64.decode(input, os);
-        }
-    }
-
     /**
-     * @author Adamski (http://stackoverflow.com/questions/1264709/)
-     * @param input
-     * @return
-     * @throws IOException
+     * Get the extension of a file, based on its path.
+     * @author Sylvain Leroux (http://stackoverflow.com/questions/3571223/)
+     * @param path the path to the file, it can be either relative path or absolute path
+     * @return the file extension, or an empty string if the path is a directory, or the file does not have extension part
      */
-    public static byte[] copyToBuffer(InputStream input) throws IOException {
-        try (ByteArrayOutputStream buffer = new ByteArrayOutputStream()) {
-            int nRead;
-            byte[] data = new byte[16384];
+    public static String getExtension(String path){
+        String extension = "";
 
-            while ((nRead = input.read(data, 0, data.length)) != -1) {
-                buffer.write(data, 0, nRead);
-            }
-
-            buffer.flush();
-
-            return buffer.toByteArray();
-
-        } catch (IOException ex) {
-            Logger.getLogger(FileUtility.class.getName()).log(Level.SEVERE, null, ex);
-            throw ex;
+        int i = path.lastIndexOf('.');
+        if (i > 0) {
+            extension = path.substring(i+1);
         }
+        
+        return extension;
     }
 }

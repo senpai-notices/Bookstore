@@ -1,8 +1,10 @@
 package au.edu.uts.aip.service.resource;
 
+import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.utility.FileUtility;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Base64;
@@ -35,6 +37,8 @@ public class VerificationDocumentResource {
     @EJB
     private UserRemote userBean;
     
+    private static final Object syncRoot = new Object();
+    
     @POST
     @RolesAllowed({"USER"})
     @Path("{documentType}")
@@ -53,7 +57,8 @@ public class VerificationDocumentResource {
         if (!uploadDirectory.exists()){
             uploadDirectory.mkdir();
         }
-        File pngFile = new File(uploadDirectory + File.separator + documentType + ".pgn");
+        // delete old files before uploading new file
+        File pngFile = new File(uploadDirectory + File.separator + documentType + ".png");
         File jpegFile = new File(uploadDirectory + File.separator + documentType + ".jpeg");
         File pdfFile = new File(uploadDirectory + File.separator + documentType + ".pdf");
         pngFile.delete();
@@ -64,6 +69,9 @@ public class VerificationDocumentResource {
         try {
             InputStream decodedStream = Base64.getMimeDecoder().wrap(request.getInputStream());
             FileUtility.copy(decodedStream, filePath);
+            synchronized(syncRoot){
+                userBean.updateVerificationDocuments(username, documentType, filePath);
+            }
         } catch (IOException ex) {
             Logger.getLogger(VerificationDocumentResource.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -73,10 +81,34 @@ public class VerificationDocumentResource {
     
     @GET
     @RolesAllowed({"ADMIN"})
-    @Produces(MediaType.APPLICATION_OCTET_STREAM)
-    public Response get(@QueryParam("username") String username,
-                        @QueryParam("documentType") String documentType){
+    @Path("{username}/{documentType}")
+    @Produces({"application/pdf", "image/png", "image/jpeg"})
+    public Response get(@PathParam("username") String username,
+                        @PathParam("documentType") String documentType){
+        User user = userBean.getUser(username);
+        File returnFile;
+        switch (documentType) {
+            case "id":
+                returnFile = new File(user.getIdVerificationPath());
+                break;
+            case "residental":
+                returnFile = new File(user.getResidentalVerificationPath());
+                break;
+            default:
+                return Response.status(Response.Status.BAD_REQUEST).build();
+        }
         
-        return Response.status(Response.Status.OK).build();
+        String fileExtension = FileUtility.getExtension(returnFile.getPath());
+        String type = null;
+        if (fileExtension.endsWith("jpeg")){
+            type = "image/jpeg";
+        } else if (fileExtension.endsWith("png")){
+            type = "image/png";
+        } else if (fileExtension.endsWith("pdf")){
+            type = "application/pdf";
+        }
+        
+        return Response.ok((Object)returnFile, type)
+                .header("Content-Disposition", "attachment; filename=\"" + returnFile.getName() + "\"").build();
     }
 }

@@ -38,6 +38,10 @@ class UserDashboardView extends BaseView {
 
 			return Promise.all(uploadFilePromises)
 		}).then((resp) => {
+			return this.userService.fetchAccount()
+		}).then((resp) => {
+			this.props.dispatch.login(resp)
+
 			alert("Your documents have been upladed successfully")
 			this.state.uploading = false
 			this.setState(this.state)
@@ -60,39 +64,58 @@ class UserDashboardView extends BaseView {
 	render(){
 		const {errors, form_errors} = this.props.validationMessage
 		const user = this.props.user
-
+		console.log(user)
 		const addressInput = (<FormAddressInput label="Your Address" name="address" value={this.state.address} errorMessage={form_errors.address}
 									onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("address")} required />)
 
-		const verifyAccountSection = (
-			<div>
-				<h2>Verify Account</h2>
-				<hr/>
+		let verifyAccountSection = "";
+		
+		if (user.role === "USER"){
+			verifyAccountSection = (
+				<div>
+					<h2>Verify Account</h2>
+					<hr/>
 
-				<p>In order to sell your used books on our platform, you must have your account verified first</p>
-				<p>Please upload your ID (passpord, driver license, photo ID, etc), and upload evidence of resident status in Australia</p>
+					<p>In order to sell your used books on our platform, you must have your account verified first</p>
+					<p>Please upload your ID (passpord, driver license, photo ID, etc), and upload evidence of resident status in Australia</p>
+					<p>An email will be sent to your account's email once the verification is completed</p>
+					<br/>
+
+					<bs.Form horizontal onSubmit={this.uploadDocuments} encType="multipart/form-data">
+						
+						<FormInputText label="Your ID" type="file" name="verification_id" errorMessage={form_errors.verification_id} 
+										onChange={(event) => this.handleFileChange(event, "verification_id")} 
+										onFocus={() => this.props.dispatch.setFormErrorMessage("verification_id")} required disabled={this.state.uploading}/>
+
+						<FormInputText label="Your proof of address" type="file" name="address_proof" 
+										errorMessage={form_errors.address_proof} onChange={(event) => this.handleFileChange(event, "address_proof")} 
+										onFocus={() => this.props.dispatch.setFormErrorMessage("address_proof")} required disabled={this.state.uploading}/>
+
+						<bs.FormGroup bsSize="lg">
+							<bs.Button type="submit" bsStyle="primary" bsSize="lg" block disabled={this.state.uploading}>
+								{this.state.uploading && 'Uploading files' || 'Upload documents'}
+							</bs.Button>
+						</bs.FormGroup>
+
+					</bs.Form>
+				</div>
+			)
+		} else if (user.role === "VERIFYING USER"){
+			verifyAccountSection =(
+				<div>
+				<h2>Your verify documents have been uploaded successfully</h2>
+				<p>We are undergoing the verification process, please be patient</p>
 				<p>An email will be sent to your account's email once the verification is completed</p>
-				<br/>
-
-				<bs.Form horizontal onSubmit={this.uploadDocuments} encType="multipart/form-data">
-					
-					<FormInputText label="Your ID" type="file" name="verification_id" errorMessage={form_errors.verification_id} 
-									onChange={(event) => this.handleFileChange(event, "verification_id")} 
-									onFocus={() => this.props.dispatch.setFormErrorMessage("verification_id")} required disabled={this.state.uploading}/>
-
-					<FormInputText label="Your proof of address" type="file" name="address_proof" 
-									errorMessage={form_errors.address_proof} onChange={(event) => this.handleFileChange(event, "address_proof")} 
-									onFocus={() => this.props.dispatch.setFormErrorMessage("address_proof")} required disabled={this.state.uploading}/>
-
-					<bs.FormGroup bsSize="lg">
-						<bs.Button type="submit" bsStyle="primary" bsSize="lg" block disabled={this.state.uploading}>
-							{this.state.uploading && 'Uploading files' || 'Upload documents'}
-						</bs.Button>
-					</bs.FormGroup>
-
-				</bs.Form>
-			</div>
-		)
+				</div>
+			)
+		} else if (user.role === "VERIFIED USER"){
+			verifyAccountSection = (
+				<div>
+					<h2>Your account is verified</h2>
+					<p>You can start selling your books on our platform</p>
+				</div>
+			)
+		}
 
 		const changePasswordSection = (
 			<div>
