@@ -123,7 +123,7 @@ class Template extends BaseView{
 			let actions = []
 			if (user.role === "ADMIN") {
 				actions = adminActions;
-			} else if (user.role === "USER" || user.role === "VERIFIED USER") {
+			} else if (user.role.indexOf("USER") !== -1) {
 				actions = userActions
 			}  else if (user.role === "INACTIVATED") {
 

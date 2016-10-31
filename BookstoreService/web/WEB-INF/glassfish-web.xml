@@ -19,6 +19,10 @@
     <group-name>VERIFIED USER</group-name>
   </security-role-mapping>
   <security-role-mapping>
+    <role-name>VERIFYING USER</role-name>
+    <group-name>VERIFYING USER</group-name>
+  </security-role-mapping>
+  <security-role-mapping>
     <role-name>BANNED</role-name>
     <group-name>BANNED</group-name>
   </security-role-mapping>

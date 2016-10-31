@@ -7,6 +7,9 @@ import au.edu.uts.aip.domain.exception.*;
 import au.edu.uts.aip.domain.utility.SHA;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import io.jsonwebtoken.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.*;
 import java.util.logging.*;
 import javax.ejb.Stateless;
@@ -55,7 +58,7 @@ public class UserBean implements UserRemote {
             user.setPassword(hashsedPassword);
 
             // add user to INACTIVATED group
-            Role inactivatedRole = getRole(RoleType.INACTIVATED);
+            Role inactivatedRole = getRole(RoleType.INACTIVATED.toString());
             user.setRole(inactivatedRole);
 
             // no validation error
@@ -95,7 +98,7 @@ public class UserBean implements UserRemote {
             Jwts.parser().setSigningKey(user.getPassword())
                 .requireSubject(user.getUsername()).parseClaimsJws(token);
             
-            Role userRole = getRole(RoleType.USER);
+            Role userRole = getRole(RoleType.USER.toString());
             user.setRole(userRole);
             em.persist(user);
             
@@ -104,9 +107,31 @@ public class UserBean implements UserRemote {
         }
     }
     
-    private Role getRole(RoleType roleType){
+    private Role getRole(String roleName){
         TypedQuery<Role> typedQuery = em.createNamedQuery("Role.find", Role.class);
-        typedQuery.setParameter("name", roleType.toString());
+        typedQuery.setParameter("name", roleName);
         return typedQuery.getSingleResult();
+    }
+    
+    @Override
+    public void verifyAccount(String username){
+        
+    }
+    
+    @Override
+    public List<User> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit){
+        List<Role> roles = new ArrayList<>();
+        for(String roleName: rolesName){
+            roles.add(getRole(roleName));
+        }
+        
+        TypedQuery<User> typedQuery = em.createNamedQuery("User.findUsers", User.class);
+        typedQuery.setParameter("roles", roles);
+        typedQuery.setParameter("username", "%" + username + "%");
+        typedQuery.setParameter("fullname", "%" + fullname + "%");
+        typedQuery.setParameter("email", "%" + email + "%");
+        typedQuery.setFirstResult(offset);
+        typedQuery.setMaxResults(limit);
+        return typedQuery.getResultList();
     }
 }

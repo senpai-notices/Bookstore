@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
@@ -66,13 +67,33 @@ public class DatabaseInitBean {
         System.out.println("Creating admin account...Done");
         
         System.out.println("Creating sample user account");
-        User normalUser = new User();
-        normalUser.setFullname("Cuu Son Dang");
-        normalUser.setUsername("sondang2412");
-        normalUser.setPassword(SHA.hash256("qwerty"));
-        normalUser.setEmail("sondang2412@gmail.com");
-        normalUser.setRole(roleMap.get(RoleType.VERIFIED));
-        em.persist(normalUser);
+        RoleType[] randomRoleList = {RoleType.INACTIVATED, RoleType.USER, RoleType.BANNED, RoleType.VERIFYING};
+        Random r = new Random();
+        for (int i=0 ;i<80; i++){
+            User normalUser = new User();
+            normalUser.setFullname("Full name Here");
+            normalUser.setUsername("username" + i);
+            normalUser.setPassword(SHA.hash256("123123"));
+            normalUser.setEmail("sondang2412@gmail.com");
+            
+            RoleType randomRole = randomRoleList[r.nextInt(randomRoleList.length)];
+            normalUser.setRole(roleMap.get(randomRole));
+            
+            em.persist(normalUser);
+        }
+        
+        User[] verifiedUsers = new User[20];
+        for (int i=0; i<20; i++){
+            User verifiedUser = new User();
+            verifiedUser.setFullname("Full name here");
+            verifiedUser.setUsername("username" + (i+80));
+            verifiedUser.setPassword(SHA.hash256("123123"));
+            verifiedUser.setEmail("sondang2412@gmail.com");
+            verifiedUser.setRole(roleMap.get(RoleType.VERIFIED));
+            
+            em.persist(verifiedUser);
+            verifiedUsers[i] = verifiedUser;
+        }
         System.out.println("Creating sample user account...Done");
         
         System.out.println("Importing sample books data");
@@ -103,7 +124,8 @@ public class DatabaseInitBean {
 
                     BookSeller userSeller = new BookSeller();
                     userSeller.setBook(book);
-                    userSeller.setSeller(normalUser);
+                    User seller = verifiedUsers[r.nextInt(20)];
+                    userSeller.setSeller(seller);
                     double usedPrice = Math.random() * brandNewPrice;
                     userSeller.setPrice(usedPrice);
                     userSeller.setCondition("Used");

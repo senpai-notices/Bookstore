@@ -18,6 +18,18 @@ class UserService {
 		})
 	}
 
+	getAccount() {
+		return reqwest({
+			url: config.getServerAddress() + '/user',
+			method: 'get',
+			headers: {
+				'Authorization': config.getAuthHeader()
+			},
+			withCredentials: true,
+			crossOrigin: true
+		})	
+	}
+
 	logout() {
 		config.setAuthHeader('Basic')
 	}
@@ -76,6 +88,36 @@ class UserService {
 				username: username
 			},
 			crossOrigin: true
+		})
+	}
+
+	// upload id and Australia address evidence
+	// documentType: id or residental
+	// contentType: application/pdf, img/png, or img/jpeg
+	uploadDocument(documentType, contentType, fileStream){
+		return reqwest({
+			url: config.getServerAddress() + '/document/' + documentType,
+			method: 'post',
+			headers: {
+				'Content-Type': contentType,
+				'Authorization': config.getAuthHeader()
+			},
+			data: fileStream
+		})
+	}
+
+	findUsers(roles, username, fullname, email, offset, limit){
+		return reqwest({
+			url: config.getServerAddress() + '/user/list/',
+			method: 'get',
+			headers: {
+				'Authorization': config.getAuthHeader()
+			},
+			data: {
+				roles: roles,
+				offset: offset,
+				limit: limit
+			}
 		})
 	}
 }

@@ -18,11 +18,17 @@ class BaseView extends React.Component {
 		this.userService = new UserService()
 		this.bookService = new BookService()
 		this.handleChange = this.handleChange.bind(this)
+		this.handleFileChange = this.handleFileChange.bind(this)
 	}
 
 	handleChange(event) {
 		this.state[event.target.name] = event.target.value
 	    this.setState(this.state)
+	}
+
+	handleFileChange(event, name){
+		this.state[name] = event.target.files[0]
+		this.setState(this.state)
 	}
 
 	componentWillUnmount(){

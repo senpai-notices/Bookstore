@@ -22,7 +22,11 @@
         <role-name>INACTIVATED</role-name>
     </security-role>
     <security-role>
-        <description>User that have their id verified</description>
+        <description>Users that are waiting for account verification</description>
+        <role-name>VERIFYING USER</role-name>
+    </security-role>
+    <security-role>
+        <description>Users that have their id verified</description>
         <role-name>VERIFIED USER</role-name>
     </security-role>
     <security-role>

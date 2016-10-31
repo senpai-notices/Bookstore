@@ -84,6 +84,7 @@ public class AuthFilter implements ContainerRequestFilter {
         }
         if (securityContext.getUserPrincipal() == null){
             requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
+            return;
         }
         
         String[] roles = rolesAllowed.value();

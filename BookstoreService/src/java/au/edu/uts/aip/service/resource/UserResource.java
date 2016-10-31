@@ -4,12 +4,11 @@ import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import au.edu.uts.aip.service.dto.UserDTO;
+import java.util.ArrayList;
+import java.util.List;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
-import javax.json.Json;
-import javax.json.JsonObjectBuilder;
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
@@ -26,12 +25,14 @@ public class UserResource {
 
     /**
      * Retrieve the current authenticated user
+     * Only banned accounts or not logged in user will not be able to retrieve 
+     * their account detail
      *
      * @return HTTP status code OK and user detail, without password attached
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @RolesAllowed({"USER", "ADMIN", "VERIFIED USER", "INACTIVATED"})
+    @RolesAllowed({"USER", "ADMIN", "VERIFYING USER", "VERIFIED USER", "INACTIVATED"})
     public Response get() {
         User userEntity = userBean.getUser(request.getUserPrincipal().getName());
         UserDTO userDTO = new UserDTO(userEntity);
@@ -72,5 +73,36 @@ public class UserResource {
         catch (Exception ex) {
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
+    }
+    
+    /**
+     * Retrieve a list of user accounts, filtered by a list of roles represented
+     * as a comma separated list. Only administrators can access this resource
+     * @param roles
+     * @param username
+     * @param fullname
+     * @param email
+     * @param offset
+     * @param limit
+     * @return 
+     */
+    @GET
+    @Path("/list")
+    @RolesAllowed({"ADMIN"})
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAccounts(@QueryParam("roles") String roles,
+                                @QueryParam("username") String username,
+                                @QueryParam("fullname") String fullname,
+                                @QueryParam("email") String email,
+                                @QueryParam("offset") int offset,
+                                @QueryParam("limit") int limit){
+        String[] rolesName = roles.split(",");
+        List<User> usersEntity = userBean.findUsers(rolesName, username, fullname, email, offset, limit);
+        ArrayList<UserDTO> usersDTO = new ArrayList<>();
+        for(User userEntity : usersEntity){
+            usersDTO.add(new UserDTO(userEntity));
+        }
+
+        return Response.status(Response.Status.OK).entity(usersDTO.toArray(new UserDTO[0])).build();
     }
 }

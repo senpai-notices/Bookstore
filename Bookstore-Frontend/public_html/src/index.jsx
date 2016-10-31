@@ -28,7 +28,7 @@ const checkUser = (nextState, replaceState) => {
 	}
 
 	const user = store.getState().user
-	if (user.role !== "USER" && user.role !== "VERIFIED USER"){
+	if (user.role.indexOf("USER") === -1){
 		replaceState("/")
 	}
 }
