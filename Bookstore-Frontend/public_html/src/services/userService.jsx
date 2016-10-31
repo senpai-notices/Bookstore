@@ -115,9 +115,14 @@ class UserService {
 			},
 			data: {
 				roles: roles,
+				username: username,
+				fullname: fullname,
+				email: email,
 				offset: offset,
 				limit: limit
-			}
+			},
+			withCredentials: true,
+			crossOrigin: true
 		})
 	}
 }
