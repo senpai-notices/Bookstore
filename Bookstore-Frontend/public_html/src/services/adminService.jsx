@@ -55,6 +55,54 @@ class AdminService {
 		})
 	}
 
+	banAccount(username) {
+		return reqwest({
+			url: config.getServerAddress() + `/user/ban/${username}`,
+			method: 'post',
+			headers: {
+				'Authorization': config.getAuthHeader()
+			},
+			withCredentials: true,
+			crossOrigin: true
+		})
+	}
+
+	sendBanEmail(username) {
+		return reqwest({
+			url: config.getServerAddress() + `/email/ban/${username}`,
+			method: 'post',
+			headers: {
+				'Authorization': config.getAuthHeader()
+			},
+			withCredentials: true,
+			crossOrigin: true
+		})
+	}
+
+	unbanAccount(username) {
+		return reqwest({
+			url: config.getServerAddress() + `/user/unban/${username}`,
+			method: 'post',
+			headers: {
+				'Authorization': config.getAuthHeader()
+			},
+			withCredentials: true,
+			crossOrigin: true
+		})
+	}
+
+	sendUnbanEmail(username) {
+		return reqwest({
+			url: config.getServerAddress() + `/email/unban/${username}`,
+			method: 'post',
+			headers: {
+				'Authorization': config.getAuthHeader()
+			},
+			withCredentials: true,
+			crossOrigin: true
+		})
+	}
+
 	getDocument(documentType, username){
 		return new Promise(function (resolve, reject) {
 			var xhr = new XMLHttpRequest();

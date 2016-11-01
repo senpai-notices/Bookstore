@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 
-@Path("/user")
+@Path("user")
 @RequestScoped
 public class UserResource {
 
@@ -108,7 +108,7 @@ public class UserResource {
      * @return 
      */
     @GET
-    @Path("/list")
+    @Path("list")
     @RolesAllowed({"ADMIN"})
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAccounts(@QueryParam("roles") String roles,
@@ -125,5 +125,21 @@ public class UserResource {
         }
 
         return Response.status(Response.Status.OK).entity(usersDTO.toArray(new UserDTO[0])).build();
+    }
+    
+    @POST
+    @Path("ban/{username}")
+    @RolesAllowed({"ADMIN"})
+    public Response banAccount(@PathParam("username") String username){
+        userBean.banAccount(username);
+        return Response.ok().build();
+    }
+    
+    @POST
+    @Path("unban/{username}")
+    @RolesAllowed({"ADMIN"})
+    public Response unbanAccount(@PathParam("username") String username){
+        userBean.unbanAccount(username);
+        return Response.ok().build();
     }
 }

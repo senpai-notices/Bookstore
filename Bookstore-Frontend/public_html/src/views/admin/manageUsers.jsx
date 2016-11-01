@@ -24,6 +24,9 @@ class ManageUsersView extends BaseView {
 		this.rejectVerification = this.rejectVerification.bind(this)
 		this.approveVerification = this.approveVerification.bind(this)
 
+		this.banAccount = this.banAccount.bind(this)
+		this.unbanAccount = this.unbanAccount.bind(this)
+
 		this.state.roleOptions = [
 			{value: "INACTIVATED", label: "Inactivated"},
 			{value: "USER", label: "Normal account"},
@@ -139,6 +142,34 @@ class ManageUsersView extends BaseView {
 			})
 	}
 
+	banAccount(event){
+		event.preventDefault()
+		
+		this.setState({ banning: true})
+		this.adminService.banAccount(this.state.banUser)
+			.then((resp) => {
+				this.adminService.sendBanEmail(this.state.banUser)
+				this.getUserList()
+			})
+			.always(() => {
+				this.setState({banning: false, showConfirmBanDialog: false})
+			})
+	}
+
+	unbanAccount(event){
+		event.preventDefault()
+
+		this.setState({ unbanning: true})
+		this.adminService.unbanAccount(this.state.unbanUser)
+			.then((resp) => {
+				this.adminService.sendUnbanEmail(this.state.unbanUser)
+				this.getUserList()
+			})
+			.always(() => {
+				this.setState({unbanning: false, showConfirmUnbanDialog: false})
+			})
+	}
+
 	render(){
 		
 		let rejectReasonForm = ""
@@ -177,18 +208,66 @@ class ManageUsersView extends BaseView {
 			)
 			let confirmFooter = (
 				<div>
-					<bs.Button bsStyle="success" bsSize="lg" onClick={this.approveVerification}>
+					<bs.Button bsStyle="success" bsSize="lg" disabled={this.state.approving}
+						onClick={this.approveVerification}>
 						Yes
 					</bs.Button>
 					&nbsp;
-					<bs.Button bsStyle="warning" bsSize="lg" onClick={() => this.setState({showConfirmApproveDialog: false})}>
+					<bs.Button bsStyle="warning" bsSize="lg" disabled={this.state.approving}
+						onClick={() => this.setState({showConfirmApproveDialog: false})}>
 						No
 					</bs.Button> 
 				</div>
 			)
 			confirmApproveDialog = (
-				<ModalDialog body={confirmBody} footer={confirmFooter}
+				<ModalDialog body={confirmBody} footer={confirmFooter} staticBackdrop={this.state.approving}
 					onHide={() => this.setState({showConfirmApproveDialog: false})}/>
+			)
+		}
+
+		let confirmBanDialog = ""
+		if (this.state.showConfirmBanDialog){
+			let confirmBody = (
+				<h3>Ban account <strong>{this.state.banUser}</strong>?</h3>
+			)
+			let confirmFooter = (
+				<div>
+					<bs.Button bsStyle="danger" bsSize="lg" onClick={this.banAccount} disabled={this.state.banning}>
+						Yes
+					</bs.Button>
+					&nbsp;
+					<bs.Button bsStyle="success" bsSize="lg" disabled={this.state.banning}
+						onClick={() => this.setState({showConfirmBanDialog: false})}>
+						No
+					</bs.Button> 
+				</div>
+			)
+			confirmBanDialog = (
+				<ModalDialog body={confirmBody} footer={confirmFooter} staticBackdrop={this.state.banning}
+					onHide={() => this.setState({showConfirmBanDialog: false})}/>
+			)
+		}
+
+		let confirmUnbanDialog = ""
+		if (this.state.showConfirmUnbanDialog){
+			let confirmBody = (
+				<h3>Unban account <strong>{this.state.unbanUser}</strong>?</h3>
+			)
+			let confirmFooter = (
+				<div>
+					<bs.Button bsStyle="success" bsSize="lg" onClick={this.unbanAccount} disabled={this.state.ubbanning}>
+						Yes
+					</bs.Button>
+					&nbsp;
+					<bs.Button bsStyle="warning" bsSize="lg" disabled={this.state.ubbanning}
+						onClick={() => this.setState({showConfirmUnbanDialog: false})}>
+						No
+					</bs.Button> 
+				</div>
+			)
+			confirmUnbanDialog = (
+				<ModalDialog body={confirmBody} footer={confirmFooter} staticBackdrop={this.state.unbanning}
+					onHide={() => this.setState({showConfirmUnbanDialog: false})}/>
 			)
 		}
 
@@ -256,6 +335,28 @@ class ManageUsersView extends BaseView {
 				)
 			}
 
+			if (user.role !== "BANNED"){
+				actions.push(
+					<span key={5}>
+						<bs.Button bsStyle="danger" 
+							onClick={() => this.setState({showConfirmBanDialog: true, banUser: user.username})}>
+							Ban
+						</bs.Button>
+						&nbsp;
+					</span>
+				)
+			} else {
+				actions.push(
+					<span key={5}>
+						<bs.Button bsStyle="success" 
+							onClick={() => this.setState({showConfirmUnbanDialog: true, unbanUser: user.username})}>
+							Unban
+						</bs.Button>
+						&nbsp;
+					</span>
+				)
+			}
+
 			userListView.push(
 				<tr key={key}>
 					<td style={tdStyle}>{user.username}</td>
@@ -272,6 +373,8 @@ class ManageUsersView extends BaseView {
 			<div>
 				{rejectReasonForm}
 				{confirmApproveDialog}
+				{confirmBanDialog}
+				{confirmUnbanDialog}
 
 				<h3>Filter accounts by</h3>
 				<bs.Form horizontal onSubmit={this.getUserList}>

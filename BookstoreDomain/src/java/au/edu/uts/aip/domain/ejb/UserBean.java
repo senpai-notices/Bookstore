@@ -21,6 +21,13 @@ public class UserBean implements UserRemote {
     @PersistenceContext
     private EntityManager em;
     
+    
+    public Role getRole(String roleName){
+        TypedQuery<Role> typedQuery = em.createNamedQuery("Role.find", Role.class);
+        typedQuery.setParameter("name", roleName);
+        return typedQuery.getSingleResult();
+    }
+    
     @Override
     public User getUser(String username) {
         try{
@@ -106,17 +113,6 @@ public class UserBean implements UserRemote {
         }
     }
     
-    public Role getRole(String roleName){
-        TypedQuery<Role> typedQuery = em.createNamedQuery("Role.find", Role.class);
-        typedQuery.setParameter("name", roleName);
-        return typedQuery.getSingleResult();
-    }
-    
-    @Override
-    public void verifyAccount(String username){
-        
-    }
-    
     @Override
     public List<User> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit){
         List<Role> roles = new ArrayList<>();
@@ -144,12 +140,44 @@ public class UserBean implements UserRemote {
         } else {
             throw new RuntimeException("Invalid document type");
         }
+        
+        if (user.getRole().getRoleName().equals(RoleType.ADMIN.toString())){
+            throw new RuntimeException("Verification on administrator account");
+        }
 
         if (user.getIdVerificationPath() != null && user.getResidentialVerificationPath() != null){
             Role verifyingRole = getRole(RoleType.VERIFYING.toString());
             user.setRole(verifyingRole);
         }
 
+        em.persist(user);
+    }
+    
+    @Override
+    public void banAccount(String username){
+        User user = getUser(username);
+        
+        if (user.getRole().getRoleName().equals(RoleType.ADMIN.toString())){
+            throw new RuntimeException("Cannot ban administrator account");
+        }
+        
+        Role bannedRole = getRole(RoleType.BANNED.toString());
+        user.setRole(bannedRole);
+        
+        em.persist(user);
+    }
+    
+    @Override
+    public void unbanAccount(String username){
+        User user = getUser(username);
+        
+        if (!user.getRole().getRoleName().equals(RoleType.BANNED.toString())){
+            throw new RuntimeException("The account is no banned");
+        }
+        
+        Role userRole = getRole(RoleType.USER.toString());
+        user.setRole(userRole);
+        
         em.persist(user);
     }
 }

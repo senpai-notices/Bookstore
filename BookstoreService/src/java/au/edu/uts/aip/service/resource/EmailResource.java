@@ -8,7 +8,6 @@ import javax.ejb.EJB;
 import javax.mail.MessagingException;
 import javax.servlet.ServletContext;
 import javax.ws.rs.FormParam;
-import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -77,9 +76,37 @@ public class EmailResource {
         
         try {
             User user = userBean.getUser(username);
-            String body = "Dear" + user.getEmail() + ", your verification request has been approved\n\n";
+            String body = "Dear" + user.getFullname() + ", your verification request has been approved\n\n";
             
             SendEmail.SendEmail(user.getEmail(), "Account verification status", body);
+            return Response.ok().build();
+        } catch (MessagingException ex){
+            return Response.serverError().build();
+        }
+    }
+    
+    @POST
+    @RolesAllowed({"ADMIN"})
+    @Path("/ban/{username}")
+    public Response banAccount(@PathParam("username") String username){
+        try {
+            User user = userBean.getUser(username);
+            String body = "Dear " + user.getFullname() + ", your account has been banned\n\n";
+            SendEmail.SendEmail(user.getEmail(), "Account banned", body);
+            return Response.ok().build();
+        } catch (MessagingException ex){
+            return Response.serverError().build();
+        }
+    }
+    
+    @POST
+    @RolesAllowed({"ADMIN"})
+    @Path("/unban/{username}")
+    public Response unbanAccount(@PathParam("username")String username){
+        try {
+            User user = userBean.getUser(username);
+            String body = "Dear " + user.getFullname()+ ", your account has been unbanned\n\n";
+            SendEmail.SendEmail(user.getEmail(), "Ban lifted", body);
             return Response.ok().build();
         } catch (MessagingException ex){
             return Response.serverError().build();

@@ -47,44 +47,6 @@ public class SendEmail {
         return emailSession;
     }
     
-    public static void SendActivationEmail(User user, String activateToken, String baseURL) throws MessagingException {
-        
-        Session session = getEmailSession();
-        try {
-            String to = user.getEmail();
-            MimeMessage message = new MimeMessage(session);
-            //message.setFrom(new InternetAddress(from));
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-            message.setSubject("Account activation");
-            message.setText(baseURL + "/?token=" + activateToken + "&username=" + user.getUsername());
-
-            Transport.send(message);
-        } catch (MessagingException ex) {
-            Logger.getLogger(SendEmail.class.getName()).log(Level.SEVERE, null, ex);
-            throw ex;
-        }
-    }
-    
-    public static void SendVerificationDeniedEmail(User user, String reason) throws MessagingException {
-        Session session = getEmailSession();
-        
-        try{
-            String to = user.getEmail();
-            MimeMessage message = new MimeMessage(session);
-            //message.setFrom(new InternetAddress(from));
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-            message.setSubject("Account verification status");
-            message.setText("Dear " + user.getFullname() + ", we are sorry that your "
-                    + "account verification request cannot be proceeded.\n\n"
-                    + "Reason: " + reason);
-
-            Transport.send(message);
-        } catch (MessagingException ex) {
-            Logger.getLogger(SendEmail.class.getName()).log(Level.SEVERE, null, ex);
-            throw ex;
-        }
-    }
-    
     public static void SendEmail(String to, String subject, String body) throws MessagingException {
         Session session = getEmailSession();
         
