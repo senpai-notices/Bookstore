@@ -13,6 +13,22 @@ class BookService {
 			}
 		})
 	}
+
+	findFromGoogleAPI(isbn, title){
+		let queries = []
+		if (isbn) {
+			queries.push(`isbn:${isbn}`)
+		}
+		if (title){
+			queries.push(`title:${title}`)
+		}
+		const queryString = queries.join("&")
+		return reqwest({
+			url: `https://www.googleapis.com/books/v1/volumes?q=${queryString}`,
+			method: 'get',
+			crossOrigin: true
+		})
+	}
 }
 
 export default BookService

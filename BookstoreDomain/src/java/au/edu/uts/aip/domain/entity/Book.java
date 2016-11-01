@@ -40,7 +40,6 @@ public class Book implements Serializable {
     private Long id;
     private String name;
     private String title;
-    private double price;
     private List<BookSeller> sellers;
     private String isbn;
     private int publishYear;
@@ -104,22 +103,6 @@ public class Book implements Serializable {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    
-     /**
-     * The price of the book entity in Book table
-     * Not null value
-     * The type : double
-     * @return a double value
-     */
-    @Column(nullable = false)
-    public double getPrice() {
-        return this.price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
     
     @OneToMany(mappedBy = "book")

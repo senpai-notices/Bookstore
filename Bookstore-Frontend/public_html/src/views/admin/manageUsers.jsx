@@ -3,11 +3,9 @@ import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
 import { connect } from 'react-redux'
 import * as bs from 'react-bootstrap'
 import Select from 'react-select'
-import { FormInputText, ModalDialog } from 'components'
-import Halogen from 'halogen'
+import { FormInputText, ModalDialog, LoadingSpinner } from 'components'
 import InfiniteScroll from 'react-infinite-scroller'
 import { saveAs } from 'file-saver'
-import * as config from 'config'
 
 class ManageUsersView extends BaseView {
 
@@ -67,17 +65,17 @@ class ManageUsersView extends BaseView {
 			event.preventDefault()
 		}
 
-		let offset = 0
-		let limit = 20
-		this.state.hasMore = true;
-		this.setState(this.state)
-
 		let roles = this.state.selectedRoles
 		if (!roles){
 			roles = "USER,VERIFYING USER,VERIFIED USER,BANNED,INACTIVATED"
 		}
-		
-		this.state.gettingUser = true;
+
+		let offset = 0
+		let limit = 20
+		this.state.hasMore = true
+		this.state.gettingUser = true
+		this.state.userList = []
+		this.state.initializedSearch = true
 		this.setState(this.state)
 		this.adminService.findUsers(roles, this.state.username, 
 					this.state.fullname, this.state.email, offset, limit)
@@ -87,7 +85,7 @@ class ManageUsersView extends BaseView {
 					this.state.hasMore = false
 				}
 			}).always(() => {
-				this.state.gettingUser = false;
+				this.state.gettingUser = false
 				this.setState(this.state)
 			})
 	}
@@ -271,20 +269,7 @@ class ManageUsersView extends BaseView {
 			)
 		}
 
-		const loading = (
-			<div>
-				<bs.Row>
-					<bs.Col xs={2} xsOffset={5}>
-						<Halogen.RingLoader color="#000" size="100%"/>
-					</bs.Col>
-				</bs.Row>
-				<bs.Row>
-					<bs.Col className={'text-center'}>
-						<h2>Loading...</h2>
-					</bs.Col>
-				</bs.Row>
-			</div>
-		)
+		const loading = (<LoadingSpinner visible/>)
 
 		let userListView = []
 		let key = 0;
@@ -368,6 +353,32 @@ class ManageUsersView extends BaseView {
 			)
 		})
 
+		const initialLoading = (<LoadingSpinner visible={this.state.gettingUser}/>)
+		let userListTable = ""
+		if (this.state.userList.length > 0){
+			userListTable = (
+				<bs.Table striped bordered condensed hover>
+					<thead>
+						<tr>
+							<th className={"col-md-1"}>Username</th>
+							<th className={"col-md-1"}>Fullname</th>
+							<th className={"col-md-1"}>Email</th>
+							<th className={"col-md-1"}>Role</th>
+							<th className={"col-md-8"}>Actions</th>
+						</tr>
+					</thead>
+					<tbody>		
+						{userListView}
+					</tbody>
+				</bs.Table>
+			)
+		} else {
+			if (this.state.initializedSearch && !this.state.gettingUser){
+				userListTable = (
+					<h3>No result found</h3>
+				)
+			}
+		}
 
 		return(
 			<div>
@@ -406,22 +417,8 @@ class ManageUsersView extends BaseView {
 
 				<br/>
 				<InfiniteScroll inita pageStart={0} loadMore={this.loadMoreUser} hasMore={this.state.hasMore && !this.state.gettingUser} loader={loading}>
-				<bs.Table striped bordered condensed hover>
-					<thead>
-						<tr>
-							<th className={"col-md-1"}>Username</th>
-							<th className={"col-md-1"}>Fullname</th>
-							<th className={"col-md-1"}>Email</th>
-							<th className={"col-md-1"}>Role</th>
-							<th className={"col-md-8"}>Actions</th>
-						</tr>
-					</thead>
-					<tbody>
-						
-						{userListView}
-						
-					</tbody>
-				</bs.Table>
+				{userListTable}
+				{initialLoading}
 				</InfiniteScroll>
 			</div>
 		)

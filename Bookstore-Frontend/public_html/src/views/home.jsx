@@ -2,9 +2,8 @@ import React from 'react'
 import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
 import { connect } from 'react-redux'
 import * as bs from 'react-bootstrap'
-import { BooksGrid } from 'components'
+import { BooksGrid, LoadingSpinner } from 'components'
 import InfiniteScroll from 'react-infinite-scroller'
-import Halogen from 'halogen'
 
 class HomeView extends BaseView {
 
@@ -34,20 +33,7 @@ class HomeView extends BaseView {
 	}
 
 	render(){
-		const loading = (
-			<div>
-				<bs.Row>
-					<bs.Col xs={2} xsOffset={5}>
-						<Halogen.RingLoader color="#000" size="100%"/>
-					</bs.Col>
-				</bs.Row>
-				<bs.Row>
-					<bs.Col className={'text-center'}>
-						<h2>Loading...</h2>
-					</bs.Col>
-				</bs.Row>
-			</div>
-		)
+		const loading = <LoadingSpinner visible/>
 
 		return (
 			<InfiniteScroll pageStart={0} loadMore={this.loadMoreBooks} hasMore={this.state.hasMore} loader={loading}>

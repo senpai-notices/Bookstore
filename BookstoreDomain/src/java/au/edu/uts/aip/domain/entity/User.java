@@ -70,12 +70,6 @@ public class User implements Serializable {
     
     private String residentialVerificationPath;
     
-     /**
-     * The username of the web site user in Bookstoreuser table
-     * Not null value
-     * the length of the string of username is >=6 && <=32
-     * @return a string
-     */
     @Id
     @GeneratedValue
     public long getId() {
@@ -86,6 +80,12 @@ public class User implements Serializable {
         this.Id = Id;
     }
     
+     /**
+     * The username of the web site user in Bookstoreuser table
+     * Not null value
+     * the length of the string of username is >=6 && <=32
+     * @return a string
+     */
     @Column(unique = true)
     public String getUsername() {
         return username;
