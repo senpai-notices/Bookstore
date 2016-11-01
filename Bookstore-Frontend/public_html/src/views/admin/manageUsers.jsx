@@ -3,7 +3,7 @@ import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
 import { connect } from 'react-redux'
 import * as bs from 'react-bootstrap'
 import Select from 'react-select'
-import { FormInputText } from 'components'
+import { FormInputText, ModalDialog } from 'components'
 import Halogen from 'halogen'
 import InfiniteScroll from 'react-infinite-scroller'
 import { saveAs } from 'file-saver'
@@ -17,8 +17,12 @@ class ManageUsersView extends BaseView {
 		this.onRoleChange = this.onRoleChange.bind(this)
 		this.getUserList = this.getUserList.bind(this)
 		this.loadMoreUser = this.loadMoreUser.bind(this)
+		
 		this.viewIDDocument = this.viewIDDocument.bind(this)
-		this.viewResidentalDocument = this.viewResidentalDocument.bind(this)
+		this.viewResidentialDocument = this.viewResidentialDocument.bind(this)
+		
+		this.rejectVerification = this.rejectVerification.bind(this)
+		this.approveVerification = this.approveVerification.bind(this)
 
 		this.state.roleOptions = [
 			{value: "INACTIVATED", label: "Inactivated"},
@@ -43,7 +47,7 @@ class ManageUsersView extends BaseView {
 			roles = "USER,VERIFYING USER,VERIFIED USER,BANNED,INACTIVATED"
 		}
 		
-		this.userService.findUsers(roles, this.state.username, 
+		this.adminService.findUsers(roles, this.state.username, 
 					this.state.fullname, this.state.email, offset, limit)
 			.then((resp) => {
 				this.state.userList = this.state.userList.concat(resp)
@@ -56,7 +60,9 @@ class ManageUsersView extends BaseView {
 	}
 
 	getUserList(event){
-		event.preventDefault()
+		if (event){
+			event.preventDefault()
+		}
 
 		let offset = 0
 		let limit = 20
@@ -70,7 +76,7 @@ class ManageUsersView extends BaseView {
 		
 		this.state.gettingUser = true;
 		this.setState(this.state)
-		this.userService.findUsers(roles, this.state.username, 
+		this.adminService.findUsers(roles, this.state.username, 
 					this.state.fullname, this.state.email, offset, limit)
 			.then((resp) => {
 				this.state.userList = resp
@@ -84,7 +90,7 @@ class ManageUsersView extends BaseView {
 	}
 
 	viewIDDocument(username){
-		this.userService.getDocument("id", username)
+		this.adminService.getDocument("id", username)
 			.then((resp) => {
 				let fileType = resp.type.split("/")[1];
 				saveAs(resp, username +"_id." + fileType);
@@ -94,18 +100,97 @@ class ManageUsersView extends BaseView {
 			})
 	}
 
-	viewResidentalDocument(username){
-		this.userService.getDocument("residental", username)
+	viewResidentialDocument(username){
+		this.adminService.getDocument("residential", username)
 			.then((resp) => {
 				let fileType = resp.type.split("/")[1];
-				saveAs(resp, username +"_residental." + fileType);
+				saveAs(resp, username +"_residential." + fileType);
 			})
 			.catch((err) =>{
 				console.log(err)
 			})
 	}
 
+	rejectVerification(event){
+		event.preventDefault()
+
+		this.setState({ rejecting: true })
+		this.adminService.rejectAccountVerification(this.state.rejectUser, this.state.reject_reason)
+			.then((resp) => {
+				this.adminService.sendRejectEmail(this.state.rejectUser, this.state.reject_reason)
+				this.getUserList()
+			})
+			.always(() => {
+				this.setState({ rejecting: false , showRejectReasonForm: false})
+			})
+	}
+
+	approveVerification(event){
+		event.preventDefault()
+
+		this.setState({ approving: true})
+		this.adminService.approveAccountVerification(this.state.approveUser)
+			.then((resp) => {
+				this.adminService.sendApproveEmail(this.state.approveUser)
+				this.getUserList()
+			})
+			.always(() =>{
+				this.setState({approving: false, showConfirmApproveDialog: false})
+			})
+	}
+
 	render(){
+		
+		let rejectReasonForm = ""
+		if (this.state.showRejectReasonForm){
+			let rejectHeader = (
+				<h3>Reject verification request from account <strong>{this.state.rejectUser}</strong></h3>
+			)
+			let rejectBody = (
+				<bs.Form horizontal onSubmit={this.rejectVerification}>
+					<h4><strong>Please specify the reason why the verification request is denied</strong></h4>
+					<textarea required name="reject_reason" disabled={this.state.rejecting}
+								value={this.state.reject_reason} onChange={this.handleChange}
+								style={{width: "100%", minHeight: "300px"}}>
+					</textarea>
+					<bs.Button type="submit" bsStyle="danger" disabled={this.state.rejecting}>
+						{(this.state.rejecting && "Rejecting") || "Reject the documents"} 
+					</bs.Button>
+					&nbsp;
+					<bs.Button bsStyle="success" disabled={this.state.rejecting}
+						onClick={() => this.setState({showRejectReasonForm: false})}>
+						Return
+					</bs.Button>
+				</bs.Form>
+			)
+
+			rejectReasonForm = (
+				<ModalDialog header={rejectHeader} body={rejectBody} staticBackdrop={this.state.rejecting}
+							onHide={() => this.setState({showRejectReasonForm: false})}/>
+			)
+		}
+
+		let confirmApproveDialog = ""
+		if (this.state.showConfirmApproveDialog){
+			let confirmBody = (
+				<h3>Approve verification request of account <strong>{this.state.approveUser}</strong>?</h3>
+			)
+			let confirmFooter = (
+				<div>
+					<bs.Button bsStyle="success" bsSize="lg" onClick={this.approveVerification}>
+						Yes
+					</bs.Button>
+					&nbsp;
+					<bs.Button bsStyle="warning" bsSize="lg" onClick={() => this.setState({showConfirmApproveDialog: false})}>
+						No
+					</bs.Button> 
+				</div>
+			)
+			confirmApproveDialog = (
+				<ModalDialog body={confirmBody} footer={confirmFooter}
+					onHide={() => this.setState({showConfirmApproveDialog: false})}/>
+			)
+		}
 
 		const loading = (
 			<div>
@@ -130,26 +215,44 @@ class ManageUsersView extends BaseView {
 		this.state.userList.forEach((user) =>{
 			key++
 
-			let actions=""
+			let actions=[]
 			if (user.role === "VERIFYING USER"){
-				actions = (
-					<div>
+
+				actions.push(
+					<span key={1}>
 						<bs.Button bsStyle="primary" onClick={() => this.viewIDDocument(user.username)}>
 							View ID
 						</bs.Button>
 						&nbsp;
-						<bs.Button bsStyle="primary" onClick={() => this.viewResidentalDocument(user.username)}>
-							View Residental Evidence
+					</span>
+				)
+
+				actions.push(
+					<span key={2}>
+						<bs.Button bsStyle="primary" onClick={() => this.viewResidentialDocument(user.username)}>
+							View Residential Evidence
 						</bs.Button>
 						&nbsp;
-						<bs.Button bsStyle="success">
+					</span>
+				)
+
+				actions.push(
+					<span key={3}>
+						<bs.Button bsStyle="success"
+							onClick={() => this.setState({showConfirmApproveDialog: true, approveUser: user.username})}>
 							Approve
 						</bs.Button>
 						&nbsp;
-						<bs.Button bsStyle="warning">
+					</span>
+				)
+
+				actions.push(
+					<span key={4}>
+					<bs.Button bsStyle="warning" 
+							onClick={() => this.setState({showRejectReasonForm: true, rejectUser: user.username, reject_reason: ""})}>
 							Reject
 						</bs.Button>
-					</div>
+					</span>
 				)
 			}
 
@@ -167,7 +270,9 @@ class ManageUsersView extends BaseView {
 
 		return(
 			<div>
-				{this.state.test}
+				{rejectReasonForm}
+				{confirmApproveDialog}
+
 				<h3>Filter accounts by</h3>
 				<bs.Form horizontal onSubmit={this.getUserList}>
 				<bs.Row>

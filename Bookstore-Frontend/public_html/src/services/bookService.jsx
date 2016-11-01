@@ -1,6 +1,5 @@
 import reqwest from 'reqwest'
 import * as config from 'config'
-import {store} from 'index'
 
 class BookService {
 	getLatestBook(offset, limit){

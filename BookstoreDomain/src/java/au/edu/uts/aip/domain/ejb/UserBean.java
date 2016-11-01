@@ -9,11 +9,13 @@ import au.edu.uts.aip.domain.validation.ValidationResult;
 import io.jsonwebtoken.*;
 import java.util.*;
 import java.util.logging.*;
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.*;
 import javax.validation.*;
 
 @Stateless
+@LocalBean
 public class UserBean implements UserRemote {
 
     @PersistenceContext
@@ -137,11 +139,13 @@ public class UserBean implements UserRemote {
         User user = getUser(username);
         if (documentType.equals("id")){
             user.setIdVerificationPath(filePath);
-        } else if (documentType.equals("residental")){
-            user.setResidentalVerificationPath(filePath);
+        } else if (documentType.equals("residential")){
+            user.setResidentialVerificationPath(filePath);
+        } else {
+            throw new RuntimeException("Invalid document type");
         }
 
-        if (user.getIdVerificationPath() != null && user.getResidentalVerificationPath() != null){
+        if (user.getIdVerificationPath() != null && user.getResidentialVerificationPath() != null){
             Role verifyingRole = getRole(RoleType.VERIFYING.toString());
             user.setRole(verifyingRole);
         }

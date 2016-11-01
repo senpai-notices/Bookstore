@@ -24,7 +24,7 @@ class UserDashboardView extends BaseView {
 		this.setState(this.state)
 		const readFilePromises = []
 		readFilePromises.push(this.readFile("id", this.state.verification_id))
-		readFilePromises.push(this.readFile("residental", this.state.address_proof))
+		readFilePromises.push(this.readFile("residential", this.state.address_proof))
 
 		Promise.all(readFilePromises).then((results) =>{
 			const uploadFilePromises = []
@@ -64,7 +64,6 @@ class UserDashboardView extends BaseView {
 	render(){
 		const {errors, form_errors} = this.props.validationMessage
 		const user = this.props.user
-		console.log(user)
 		const addressInput = (<FormAddressInput label="Your Address" name="address" value={this.state.address} errorMessage={form_errors.address}
 									onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("address")} required />)
 

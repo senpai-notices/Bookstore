@@ -1,7 +1,7 @@
 import React from 'react'
 import * as Actions from 'actions'
 import { connect } from 'react-redux'
-import { UserService, BookService } from 'services'
+import { UserService, BookService, AdminService } from 'services'
 import { bindActionCreators } from 'redux'
 
 class BaseView extends React.Component {
@@ -17,6 +17,7 @@ class BaseView extends React.Component {
 
 		this.userService = new UserService()
 		this.bookService = new BookService()
+		this.adminService = new AdminService()
 		this.handleChange = this.handleChange.bind(this)
 		this.handleFileChange = this.handleFileChange.bind(this)
 	}

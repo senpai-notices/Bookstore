@@ -16,6 +16,12 @@ class RegisterForm extends BaseView {
 
 	register(event){
 		event.preventDefault()
+
+		if (this.state.password != this.state.password_confirm){
+			this.props.dispatch.setFormErrorMessage("password_confirm", "Password confirm does not match")
+			return
+		}
+
 		this.state.submitting = true
 		this.setState(this.state)
 		this.userService.createAccount(this.state)

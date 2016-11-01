@@ -1,6 +1,8 @@
 package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.entity.User;
+import au.edu.uts.aip.domain.exception.ActivationException;
+import au.edu.uts.aip.domain.exception.InvalidTokenException;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import au.edu.uts.aip.service.dto.UserDTO;
@@ -25,7 +27,7 @@ public class UserResource {
 
     /**
      * Retrieve the current authenticated user
-     * Only banned accounts or not logged in user will not be able to retrieve 
+     * Banned accounts or not logged in user will not be able to retrieve 
      * their account detail
      *
      * @return HTTP status code OK and user detail, without password attached
@@ -76,8 +78,27 @@ public class UserResource {
     }
     
     /**
-     * Retrieve a list of user accounts, filtered by a list of roles represented
-     * as a comma separated list. Only administrators can access this resource
+     * Activate user's account
+     * @param token
+     * @param username
+     * @return 
+     */
+    @POST
+    @Path("activate")
+    public Response acvitateAccount(@FormParam("token") String token, @FormParam("username") String username) {
+        try {
+            userBean.activateAccount(token, username);
+            return Response.status(Response.Status.OK).build();
+        } catch (InvalidTokenException ex){
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid token").build();
+        } catch (ActivationException ex){
+            return Response.status(Response.Status.BAD_REQUEST).entity("Cannot activate account").build();
+        }
+    }
+    
+    /**
+     * Retrieve a list of user accounts with filter
+     * Only administrators can access this resource
      * @param roles
      * @param username
      * @param fullname

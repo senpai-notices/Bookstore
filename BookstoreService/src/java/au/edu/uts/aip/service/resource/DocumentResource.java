@@ -1,10 +1,11 @@
 package au.edu.uts.aip.service.resource;
 
+import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.User;
+import au.edu.uts.aip.domain.remote.AdminRemote;
 import au.edu.uts.aip.domain.utility.FileUtility;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Base64;
@@ -14,19 +15,12 @@ import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/document")
-public class VerificationDocumentResource {
+public class DocumentResource {
     
     @Context
     private HttpServletRequest request;
@@ -37,6 +31,9 @@ public class VerificationDocumentResource {
     @EJB
     private UserRemote userBean;
     
+    @EJB
+    private AdminRemote adminBean;
+    
     private static final Object syncRoot = new Object();
     
     @POST
@@ -44,7 +41,7 @@ public class VerificationDocumentResource {
     @Path("{documentType}")
     @Consumes({"application/pdf", "image/jpeg", "image/png"})
     public Response post(@PathParam("documentType") String documentType){
-        if (!documentType.equals("id") && !documentType.equals("residental")){
+        if (!documentType.equals("id") && !documentType.equals("residential")){
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
         
@@ -73,7 +70,7 @@ public class VerificationDocumentResource {
                 userBean.updateVerificationDocuments(username, documentType, filePath);
             }
         } catch (IOException ex) {
-            Logger.getLogger(VerificationDocumentResource.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DocumentResource.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         return Response.status(Response.Status.OK).build();
@@ -91,8 +88,8 @@ public class VerificationDocumentResource {
             case "id":
                 returnFile = new File(user.getIdVerificationPath());
                 break;
-            case "residental":
-                returnFile = new File(user.getResidentalVerificationPath());
+            case "residential":
+                returnFile = new File(user.getResidentialVerificationPath());
                 break;
             default:
                 return Response.status(Response.Status.BAD_REQUEST).build();
@@ -108,7 +105,40 @@ public class VerificationDocumentResource {
             type = "application/pdf";
         }
         
-        return Response.ok((Object)returnFile, type)
-                .header("Content-Disposition", "attachment; filename=\"" + returnFile.getName() + "\"").build();
+        return Response.ok((Object)returnFile, type).build();
+    }
+    
+    @POST
+    @RolesAllowed({"ADMIN"})
+    @Path("reject/{username}")
+    public Response reject(@PathParam("username") String username){
+        User user = userBean.getUser(username);
+        if (!Role.RoleType.VERIFYING.toString().equals(user.getRole().getRoleName())){
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .entity("The user does not have any verification request").build();
+        }
+        
+        File idFile = new File(user.getIdVerificationPath());
+        File residentialFile = new File(user.getResidentialVerificationPath());
+        idFile.delete();
+        residentialFile.delete();
+        
+        adminBean.rejectVerificationRequest(username);
+        
+        return Response.ok().build();
+    }
+    
+    @POST
+    @RolesAllowed({"ADMIN"})
+    @Path("approve/{username}")
+    public Response approve(@PathParam("username") String username){
+        User user = userBean.getUser(username);
+        if (!Role.RoleType.VERIFYING.toString().equals(user.getRole().getRoleName())){
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .entity("The user does not have any verification request").build();
+        }
+        
+        adminBean.approveVerificationRequest(username);
+        return Response.ok().build();
     }
 }

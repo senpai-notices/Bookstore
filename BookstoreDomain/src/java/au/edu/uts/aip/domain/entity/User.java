@@ -68,7 +68,7 @@ public class User implements Serializable {
     
     private String idVerificationPath;
     
-    private String residentalVerificationPath;
+    private String residentialVerificationPath;
     
      /**
      * The username of the web site user in Bookstoreuser table
@@ -169,11 +169,11 @@ public class User implements Serializable {
         this.idVerificationPath = idVerificationPath;
     }
 
-    public String getResidentalVerificationPath() {
-        return residentalVerificationPath;
+    public String getResidentialVerificationPath() {
+        return residentialVerificationPath;
     }
 
-    public void setResidentalVerificationPath(String residentalVerificationPath) {
-        this.residentalVerificationPath = residentalVerificationPath;
+    public void setResidentialVerificationPath(String residentialVerificationPath) {
+        this.residentialVerificationPath = residentialVerificationPath;
     }
 }

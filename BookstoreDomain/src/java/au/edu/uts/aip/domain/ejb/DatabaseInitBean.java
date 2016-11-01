@@ -100,7 +100,7 @@ public class DatabaseInitBean {
 //        myUser.setEmail("sondang2412@gmail.com");
 //        myUser.setPassword(SHA.hash256("123123123"));
 //        myUser.setIdVerificationPath("/home/sondang/NetBeansProjects/aip-a2-local/dist/gfdeploy/aip-a2/BookstoreService_war/../../../../sondang241212/id.jpeg");
-//        myUser.setResidentalVerificationPath("/home/sondang/NetBeansProjects/aip-a2-local/dist/gfdeploy/aip-a2/BookstoreService_war/../../../../sondang241212/residental.jpeg");
+//        myUser.setResidentialVerificationPath("/home/sondang/NetBeansProjects/aip-a2-local/dist/gfdeploy/aip-a2/BookstoreService_war/../../../../sondang241212/residental.jpeg");
 //        myUser.setRole(roleMap.get(RoleType.VERIFYING));
 //        em.persist(myUser);
         

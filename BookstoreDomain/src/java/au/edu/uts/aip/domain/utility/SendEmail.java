@@ -15,16 +15,19 @@ import javax.mail.internet.MimeMessage;
 
 /**
  *
- * @author
- * https://www.mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/
+ * @author https://www.mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/
  */
 public class SendEmail {
 
-    public static void SendActivationEmail(User user, String activateToken, String baseURL) throws MessagingException {
+    private static Session emailSession = null;
+    
+    private static Session getEmailSession(){
+        if (emailSession != null){
+            return emailSession;
+        }
+        
         final String username = "***REMOVED***";
         final String password = "***REMOVED***";
-
-        String to = user.getEmail();
         //String from = "USNWGroup@aip.uts.edu.au";
 
         Properties properties = System.getProperties();
@@ -33,15 +36,22 @@ public class SendEmail {
         properties.put("mail.smtp.host", "***REMOVED***");
         properties.put("mail.smtp.port", "587");
 
-        Session session = Session.getInstance(properties,
+        emailSession = Session.getInstance(properties,
                 new javax.mail.Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(username, password);
             }
         });
-
+        
+        return emailSession;
+    }
+    
+    public static void SendActivationEmail(User user, String activateToken, String baseURL) throws MessagingException {
+        
+        Session session = getEmailSession();
         try {
+            String to = user.getEmail();
             MimeMessage message = new MimeMessage(session);
             //message.setFrom(new InternetAddress(from));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
@@ -50,6 +60,41 @@ public class SendEmail {
 
             Transport.send(message);
         } catch (MessagingException ex) {
+            Logger.getLogger(SendEmail.class.getName()).log(Level.SEVERE, null, ex);
+            throw ex;
+        }
+    }
+    
+    public static void SendVerificationDeniedEmail(User user, String reason) throws MessagingException {
+        Session session = getEmailSession();
+        
+        try{
+            String to = user.getEmail();
+            MimeMessage message = new MimeMessage(session);
+            //message.setFrom(new InternetAddress(from));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+            message.setSubject("Account verification status");
+            message.setText("Dear " + user.getFullname() + ", we are sorry that your "
+                    + "account verification request cannot be proceeded.\n\n"
+                    + "Reason: " + reason);
+
+            Transport.send(message);
+        } catch (MessagingException ex) {
+            Logger.getLogger(SendEmail.class.getName()).log(Level.SEVERE, null, ex);
+            throw ex;
+        }
+    }
+    
+    public static void SendEmail(String to, String subject, String body) throws MessagingException {
+        Session session = getEmailSession();
+        
+        try{
+            MimeMessage message = new MimeMessage(session);
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+            message.setSubject(subject);
+            message.setText(body);
+            Transport.send(message);
+        } catch (MessagingException ex){
             Logger.getLogger(SendEmail.class.getName()).log(Level.SEVERE, null, ex);
             throw ex;
         }
