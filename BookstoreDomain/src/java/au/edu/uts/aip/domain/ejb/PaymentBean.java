@@ -7,6 +7,7 @@ import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
 import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
 import au.edu.uts.aip.domain.pin.filter.BasicAuthFilter;
+import au.edu.uts.aip.domain.pin.filter.ClientResponseLoggingFilter;
 import javax.ejb.Stateless;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -25,13 +26,18 @@ public class PaymentBean implements PaymentRemote {
     public Response createCard(PinCardPost pinCardPost) {
 
         Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new ClientResponseLoggingFilter());
 
         Response response = client.target(BASE_URL + "/cards")
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(pinCardPost, MediaType.APPLICATION_JSON_TYPE));
+        
+        // Convert a Response to a String
+        //String responseString = response.readEntity(String.class);
 
         client.close();
+        
         return response;
     }
 
@@ -39,7 +45,8 @@ public class PaymentBean implements PaymentRemote {
     public Response createCustomer(PinCustomerPost pinCustomerPost) {
 
         Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new ClientResponseLoggingFilter());;
 
         Response response = client.target(BASE_URL + "/customers")
                 .request(MediaType.APPLICATION_JSON)
@@ -53,7 +60,8 @@ public class PaymentBean implements PaymentRemote {
     public Response charge(PinChargePost pinChargePost) {
 
         Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new ClientResponseLoggingFilter());;
 
         Response response = client.target(BASE_URL + "/charges")
                 .request(MediaType.APPLICATION_JSON)
@@ -66,7 +74,8 @@ public class PaymentBean implements PaymentRemote {
     @Override
     public Response createRecipient(PinRecipientPost pinRecipientPost) {
         Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new ClientResponseLoggingFilter());;
 
         Response response = client.target(BASE_URL + "/recipients")
                 .request(MediaType.APPLICATION_JSON)
@@ -79,7 +88,8 @@ public class PaymentBean implements PaymentRemote {
     @Override
     public Response transfer(PinTransferPost pinTransferPost) {
         Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new ClientResponseLoggingFilter());;
 
         Response response = client.target(BASE_URL + "/transfers")
                 .request(MediaType.APPLICATION_JSON)

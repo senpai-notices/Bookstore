@@ -9,11 +9,11 @@ import javax.ws.rs.core.Response;
 
 public interface PaymentRemote {
 
-    Response charge(PinChargePost pinChargePost);
-
     Response createCard(PinCardPost pinCardPost);
 
     Response createCustomer(PinCustomerPost pinCustomerPost);
+
+    Response charge(PinChargePost pinChargePost);
     
     Response createRecipient(PinRecipientPost pinRecipientPost);
     
