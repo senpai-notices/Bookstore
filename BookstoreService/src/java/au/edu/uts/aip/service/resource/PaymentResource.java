@@ -1,8 +1,10 @@
 package au.edu.uts.aip.service.resource;
 
-import au.edu.uts.aip.domain.pin.dto.PinCardCreate;
-import au.edu.uts.aip.domain.pin.dto.PinCharge;
-import au.edu.uts.aip.domain.pin.dto.PinCustomerCreate;
+import au.edu.uts.aip.domain.pin.dto.PinCardPost;
+import au.edu.uts.aip.domain.pin.dto.PinChargePost;
+import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
+import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
+import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
 import au.edu.uts.aip.domain.remote.PaymentRemote;
 
 import javax.ejb.EJB;
@@ -24,7 +26,7 @@ public class PaymentResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("card/create")
-    public Response createCard(PinCardCreate pinCardCreate) {
+    public Response createCard(PinCardPost pinCardCreate) {
 
         Response response = paymentBean.createCard(pinCardCreate);
 
@@ -36,7 +38,7 @@ public class PaymentResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("customer/create")
-    public Response createCustomer(PinCustomerCreate pinCustomerCreate) {
+    public Response createCustomer(PinCustomerPost pinCustomerCreate) {
 
         Response response = paymentBean.createCustomer(pinCustomerCreate);
         // TODO: convert response to String
@@ -50,9 +52,39 @@ public class PaymentResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("charge")
-    public Response charge(PinCharge pinCharge) {
+    public Response charge(PinChargePost pinCharge) {
 
         Response response = paymentBean.charge(pinCharge);
+
+        return response;
+    }
+    
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("recipient/create")
+    public Response createRecipient(PinRecipientPost pinRecipientCreate) {
+
+        Response response = paymentBean.createRecipient(pinRecipientCreate);
+
+        return response;
+    }
+    
+    /**
+     * Only for testing, unless there is a need to manually perform
+     * transfers from the frontend.
+     * @param pinTransferPost
+     * @return 
+     */
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("transfer")
+    public Response transfer(PinTransferPost pinTransferPost) {
+
+        Response response = paymentBean.transfer(pinTransferPost);
 
         return response;
     }

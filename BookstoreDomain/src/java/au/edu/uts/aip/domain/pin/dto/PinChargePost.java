@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class PinCharge implements Serializable {
+public class PinChargePost implements Serializable {
     private String email;
     private String description;
     private String customerToken;

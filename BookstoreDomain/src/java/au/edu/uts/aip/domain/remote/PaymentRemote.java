@@ -1,18 +1,21 @@
 package au.edu.uts.aip.domain.remote;
 
-import au.edu.uts.aip.domain.pin.dto.PinCardCreate;
-import au.edu.uts.aip.domain.pin.dto.PinCharge;
-import au.edu.uts.aip.domain.pin.dto.PinCustomerCreate;
-import javax.ejb.Remote;
+import au.edu.uts.aip.domain.pin.dto.PinCardPost;
+import au.edu.uts.aip.domain.pin.dto.PinChargePost;
+import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
+import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
+import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
 import javax.ws.rs.core.Response;
 
-@Remote
 public interface PaymentRemote {
 
-    Response charge(PinCharge pinCharge);
+    Response charge(PinChargePost pinChargePost);
 
-    Response createCard(PinCardCreate pinCardCreate);
+    Response createCard(PinCardPost pinCardPost);
 
-    Response createCustomer(PinCustomerCreate pinCustomerCreate);
+    Response createCustomer(PinCustomerPost pinCustomerPost);
     
+    Response createRecipient(PinRecipientPost pinRecipientPost);
+    
+    Response transfer(PinTransferPost pinTransferPost);
 }
