@@ -85,7 +85,7 @@ public class UserResource {
      */
     @POST
     @Path("activate")
-    public Response acvitateAccount(@FormParam("token") String token, @FormParam("username") String username) {
+    public Response activateAccount(@FormParam("token") String token, @FormParam("username") String username) {
         try {
             userBean.activateAccount(token, username);
             return Response.status(Response.Status.OK).build();
