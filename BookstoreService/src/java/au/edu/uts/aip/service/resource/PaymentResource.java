@@ -26,9 +26,9 @@ public class PaymentResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("card/create")
-    public Response createCard(PinCardPost pinCardCreate) {
+    public Response createCard(PinCardPost pinCardPost) {
 
-        Response response = paymentBean.createCard(pinCardCreate);
+        Response response = paymentBean.createCard(pinCardPost);
 
         return response;
     }
@@ -38,9 +38,9 @@ public class PaymentResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("customer/create")
-    public Response createCustomer(PinCustomerPost pinCustomerCreate) {
+    public Response createCustomer(PinCustomerPost pinCustomerPost) {
 
-        Response response = paymentBean.createCustomer(pinCustomerCreate);
+        Response response = paymentBean.createCustomer(pinCustomerPost);
         // TODO: convert response to String
         // TODO: check response status code.
         // If != 201, then check if error array exists. If so, add it to the validation message stack.
@@ -52,9 +52,9 @@ public class PaymentResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("charge")
-    public Response charge(PinChargePost pinCharge) {
+    public Response charge(PinChargePost pinChargePost) {
 
-        Response response = paymentBean.charge(pinCharge);
+        Response response = paymentBean.charge(pinChargePost);
 
         return response;
     }
@@ -64,9 +64,9 @@ public class PaymentResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("recipient/create")
-    public Response createRecipient(PinRecipientPost pinRecipientCreate) {
+    public Response createRecipient(PinRecipientPost pinRecipientPost) {
 
-        Response response = paymentBean.createRecipient(pinRecipientCreate);
+        Response response = paymentBean.createRecipient(pinRecipientPost);
 
         return response;
     }
