@@ -21,4 +21,13 @@ public class BookstoreBean implements BookstoreRemote {
         List<Book> result = typedQuery.getResultList();
         return result;
     }
+    
+    @Override
+    public Book getSingleBook(String isbn10, String isbn13, String title){
+        TypedQuery<Book> typedQuery = em.createNamedQuery("Book.getSingle", Book.class);
+        typedQuery.setParameter("isbn10", "%" + isbn10 + "%");
+        typedQuery.setParameter("isbn13", "%" + isbn13 + "%");
+        typedQuery.setParameter("title", title);
+        return typedQuery.getSingleResult();
+    }
 }

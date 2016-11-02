@@ -29,6 +29,19 @@ class BookService {
 			crossOrigin: true
 		})
 	}
+
+	getBookDetail(isbn10, isbn13, title){
+		return reqwest({
+			url: config.getServerAddress() + '/book/',
+			method: 'get',
+			crossOrigin: true,
+			data: {
+				isbn10: isbn10,
+				isbn13: isbn13,
+				title: title
+			}
+		})
+	}
 }
 
 export default BookService

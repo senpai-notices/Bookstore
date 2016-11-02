@@ -32,4 +32,15 @@ public class BookResource {
         
         return Response.status(Response.Status.OK).entity(booksDTO.toArray(new BookDTO[0])).build();
     }
+    
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getBook(@QueryParam("isbn10") String isbn10,
+            @QueryParam("isbn13") String isbn13,
+            @QueryParam("title") String title){
+        Book bookEntity = bookstoreBean.getSingleBook(isbn10, isbn13, title);
+        BookDTO bookDTO = new BookDTO(bookEntity);
+        
+        return Response.ok(bookDTO).build();
+    }
 }

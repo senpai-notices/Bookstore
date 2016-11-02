@@ -2,14 +2,31 @@ import React from 'react'
 import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
 import { connect } from 'react-redux'
 import * as bs from 'react-bootstrap'
-import { LoadingSpinner } from 'components'
+import { LoadingSpinner, BookItemThumbnail } from 'components'
 
 class ManageBooksView extends BaseView {
 	constructor(props){
 		super(props)
 
 		this.searchBook = this.searchBook.bind(this)
+		this.getBookDetail = this.getBookDetail.bind(this)
 		this.state.bookList = []
+	}
+
+	getBookDetail(book){
+
+		this.setState({loadingBookDetail: true})
+		this.bookService.getBookDetail(book.isbn10, book.isbn13, book.title)
+			.then((bookDetail) => {
+				this.state.selectedBook = bookDetail
+			})
+			.fail((err) => {
+				this.state.selectedBook = book
+			})
+			.always(() =>{
+				this.state.loadingBookDetail = false;
+				this.setState(this.state)
+			})
 	}
 
 	searchBook(event){
@@ -27,14 +44,18 @@ class ManageBooksView extends BaseView {
 
 						// check duplicate books based on isbn
 						let matched = false
+						let currentIsbn10 = ''
+						let currentIsbn13 = ''
 						if (item.volumeInfo.industryIdentifiers){
 							item.volumeInfo.industryIdentifiers.forEach((isbn) => {
 								if (isbn.type === "ISBN_10"){
 									matched = matched || isbn10[isbn.identifier]
 									isbn10[isbn.identifier] = true
+									currentIsbn10 = isbn.identifier
 								} else if (isbn.type === "ISBN_13"){
 									matched = matched || isbn13[isbn.identifier]
 									isbn13[isbn.identifier] = true
+									currentIsbn13 = isbn.identifier
 								}
 							})
 
@@ -53,14 +74,29 @@ class ManageBooksView extends BaseView {
 							isbn.push(item.volumeInfo.industryIdentifiers[1].identifier.match(/\d+X?/)[0])
 						}
 
+						let author = ''
+						if (item.volumeInfo.authors){
+							author = item.volumeInfo.authors[0]
+						}
+
+						let imgPath = ''
+						if (item.volumeInfo.imageLinks){
+							imgPath = item.volumeInfo.imageLinks.thumbnail
+						}
+
+						let publishYear = ''
+						if (item.volumeInfo.publishedDate){
+							publishYear = item.volumeInfo.publishedDate.substring(0, 4)
+						}
+
 						let book = {
 							title: item.volumeInfo.title,
-							authors: item.volumeInfo.authors,
-							categories: item.volumeInfo.categories,
-							imgLinks: item.volumeInfo.imageLinks,
-							isbn: item.volumeInfo.industryIdentifiers,
+							author: author,
+							imgPath: imgPath,
+							isbn10: currentIsbn10,
+							isbn13: currentIsbn13,
 							publisher: item.volumeInfo.publisher,
-							publishYear: item.volumeInfo.publishYear
+							publishYear: publishYear
 						}
 
 						this.state.bookList.push(book)
@@ -74,7 +110,6 @@ class ManageBooksView extends BaseView {
 	}
 
 	render(){
-
 		let searchResult = ""
 		const tdStyle = {
 			verticalAlign: "middle"
@@ -85,19 +120,19 @@ class ManageBooksView extends BaseView {
 			this.state.bookList.forEach((book) => {
 				key++
 				let isbn = []
-				if (book.isbn[0]) {
-					isbn.push(<div>{book.isbn[0].identifier.match(/\d+X?/)[0]}</div>)
+				if (book.isbn10) {
+					isbn.push(<div>{book.isbn10}</div>)
 				}
-				if (book.isbn[1]) {
-					isbn.push(<div>{book.isbn[1].identifier.match(/\d+X?/)[0]}</div>)	
+				if (book.isbn13) {
+					isbn.push(<div>{book.isbn13}</div>)	
 				}
 
-				let author = book.authors?book.authors.join("; ") : "Unknown"
 				bookListView.push(
-					<tr key={key} onClick={() => this.state.selectedBook = book}>
+					<tr key={key} style={{cursor: "pointer"}}
+						onClick={() => this.getBookDetail(book)}>
 						<td style={tdStyle}>{isbn}</td>
 						<td style={tdStyle}>{book.title}</td>
-						<td style={tdStyle}>{author}</td>
+						<td style={tdStyle}>{book.author}</td>
 					</tr>
 				)
 			})
@@ -118,8 +153,15 @@ class ManageBooksView extends BaseView {
 			)
 		}
 
-		const searchLoading = <LoadingSpinner visible={this.state.searching}/>
-		let bookDetail = (<h3>Book detail here</h3>)
+		const searchLoader = <LoadingSpinner visible={this.state.searching}/>
+
+		const detailLoader = <LoadingSpinner visible={this.state.loadingBookDetail}/>
+		let bookDetail = ""
+		if (this.state.selectedBook && !this.state.loadingBookDetail){
+			bookDetail = (
+				<BookItemThumbnail book={this.state.selectedBook} onClick={(book) => {console.log(book)}} />
+			)
+		}
 
 		return(
 			<div>
@@ -153,10 +195,11 @@ class ManageBooksView extends BaseView {
 
 				<bs.Row>
 					<bs.Col xs={6}>
-						{searchLoading}
+						{searchLoader}
 						{searchResult}
 					</bs.Col>
 					<bs.Col xs={6}>
+						{detailLoader}
 						{bookDetail}
 					</bs.Col>
 				</bs.Row>

@@ -119,8 +119,8 @@ public class DatabaseInitBean {
                     String[] data = line.split(",");
                 
                     Book book = new Book();
-                    book.setIsbn10(data[0].substring(1, data[0].length() - 2));
-                    book.setIsbn13(data[1].substring(1, data[0].length() - 2));
+                    book.setIsbn10(data[0].substring(1, data[0].length() - 1));
+                    book.setIsbn13(data[1].substring(1, data[1].length() - 1));
                     book.setTitle(data[2]);
                     
                     book.setAuthor(data[3]);

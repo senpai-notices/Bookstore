@@ -7,6 +7,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -23,7 +25,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author 
  */
 @NamedQueries({
-    @NamedQuery(name="Book.getLatest", query="SELECT b FROM Book b ORDER BY b.publishYear DESC")
+    @NamedQuery(name="Book.getLatest", query="SELECT b FROM Book b ORDER BY b.publishYear DESC"),
+    @NamedQuery(name="Book.getSingle", query="SELECT b FROM Book b where b.isbn10 like :isbn10 AND b.isbn13 like :isbn13 AND b.title like :title")
 })
 @Entity
 public class Book implements Serializable {
@@ -132,7 +135,7 @@ public class Book implements Serializable {
     public void setImgPath(String imgPath) {
         this.imgPath = imgPath;
     }
-
+    
     public String getIsbn10() {
         return isbn10;
     }
@@ -140,7 +143,7 @@ public class Book implements Serializable {
     public void setIsbn10(String isbn10) {
         this.isbn10 = isbn10;
     }
-
+    
     public String getIsbn13() {
         return isbn13;
     }
@@ -157,6 +160,7 @@ public class Book implements Serializable {
         this.pageCount = pageCount;
     }
 
+    @ManyToOne
     public Category getCategory() {
         return category;
     }
