@@ -85,7 +85,7 @@ public class UserBean implements UserRemote {
     public String generateActivationToken(User user) {
         Date now = new Date();
         Date expirationDate = new Date();
-        expirationDate.setTime(now.getTime() + 1000 * 60 * 24);
+        expirationDate.setTime(now.getTime() + 1000 * 60 * 60 * 24);
         String activateToken = Jwts.builder().setSubject(user.getUsername())
                 .signWith(SignatureAlgorithm.HS512, user.getPassword())
                 .setIssuedAt(now).setExpiration(expirationDate).compact();
