@@ -1,4 +1,4 @@
-package au.edu.uts.aip.service.dto;
+package au.edu.uts.aip.domain.pin.dto;
 
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
@@ -27,11 +27,11 @@ public class PinCharge implements Serializable {
         this.description = description;
     }
 
+    @XmlElement(name="customer_token")
     public String getCustomerToken() {
         return customerToken;
     }
 
-    @XmlElement(name="customer_token")
     public void setCustomerToken(String customerToken) {
         this.customerToken = customerToken;
     }
@@ -43,6 +43,4 @@ public class PinCharge implements Serializable {
     public void setAmount(String amount) {
         this.amount = amount;
     }
-    
-    
 }
