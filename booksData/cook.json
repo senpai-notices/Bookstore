@@ -1,0 +1,62 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 1,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "jZzlZwEACAAJ",
+   "etag": "7Fwqmrbk66I",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/jZzlZwEACAAJ",
+   "volumeInfo": {
+    "title": "Cook Sesquicentennial Celebrations, Hawian Islands, August 1928",
+    "subtitle": "Subtitle",
+    "authors": [
+     "Joseph Carruthers"
+    ],
+    "publishedDate": "1928",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "OCLC:709636230"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "printType": "BOOK",
+    "categories": [
+     "Cook"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=jZzlZwEACAAJ&dq=subject:cook&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=jZzlZwEACAAJ&dq=subject:cook&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Cook_Sesquicentennial_Celebrations_Hawia.html?hl=&id=jZzlZwEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=jZzlZwEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  }
+ ]
+}

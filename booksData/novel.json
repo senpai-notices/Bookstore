@@ -1,0 +1,2652 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 227,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "CmxPC3YP7SEC",
+   "etag": "oQQ2SGhT/KI",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/CmxPC3YP7SEC",
+   "volumeInfo": {
+    "title": "Malcolm",
+    "authors": [
+     "James Purdy"
+    ],
+    "publisher": "Dramatists Play Service Inc",
+    "publishedDate": "1966",
+    "description": "THE STORY: In the words of Stanley Kauffmann, the play, ...which is a fantasy of the corruption of innocence, concerns a fourteen- or fifteen-year-old boy, well-dressed and well-spoken, who--when we meet him--has been sitting daily on a bench in front",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0822207192"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780822207191"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 201,
+    "printType": "BOOK",
+    "categories": [
+     "Drama"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=CmxPC3YP7SEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=CmxPC3YP7SEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=CmxPC3YP7SEC&printsec=frontcover&dq=subject:novel&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=CmxPC3YP7SEC&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Malcolm.html?hl=&id=CmxPC3YP7SEC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=CmxPC3YP7SEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "svdEPQAACAAJ",
+   "etag": "FuW3mrJPb/A",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/svdEPQAACAAJ",
+   "volumeInfo": {
+    "title": "Le avventure di Pinocchio",
+    "subtitle": "storia di un burattino",
+    "authors": [
+     "Carlo Collodi"
+    ],
+    "publishedDate": "2006",
+    "description": "Le famosissime avventure del burattino creato da Collodi vengono riproposte in una nuova edizione Einaudi, dopo la prima edizione del 1943 nella collana \"Universale Einaudi\". Il testo è accompagnato da un'introduzione di Stefano Bartezzaghi dal titolo \"Il paese senza balocchi\", una prefazione firmata da Giovanni Jervis, una cronologia della vita e delle opere di Carlo Collodi, un testo di Italo Calvino intitolato \"Ma Collodi non esiste\", pubblicato nel 1981 su \"La Repubblica\", e da \"Play it again, Pinocchio\", firmato da Luciano Curreri.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "8806181440"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9788806181444"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 208,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=svdEPQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=svdEPQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "it",
+    "previewLink": "http://books.google.com.au/books?id=svdEPQAACAAJ&dq=subject:novel&hl=&cd=2&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=svdEPQAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Le_avventure_di_Pinocchio.html?hl=&id=svdEPQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=svdEPQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "4gCsaN63f8UC",
+   "etag": "yjHTMDE+Fmw",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/4gCsaN63f8UC",
+   "volumeInfo": {
+    "title": "Paris mon bled",
+    "subtitle": "roman",
+    "authors": [
+     "Youssouf Amine Elalamy"
+    ],
+    "publisher": "Eddif",
+    "publishedDate": "2002",
+    "description": "Le dernier ouvrage de Youssouf Amine Alalamy une histoire qui parle de et au nom de la troisième génération d'immigrés marocains en France. L'auteur qui nous a habitués à puiser ses thèmes dans l'actualité n'aurait pas pu mieux tomber d'ailleurs, avec la question de l'immigration qui revient aux devants de la scène après le premier tour des élections présidentielles en France. Ce qui fait la particularité, voire l'originalité de ce roman c'est bien l'architecture textuelle de celui-ci. En effet, d'abord Y.A. Elalamy propose une manière originale de dispatching des chapitres, enrichie ceux-là avec des petites introductions écrites en gras, et couronne le tout par des textes écrits en rap. Y.A. Elalamy raconte dans son ouvrage comment un jeune Français d'origine marocaine vit à Paris, dans le cadre du ghetto des cités, avec son monde, ses amis et sa relation avec son pays d'origine. Mais, fidèle à lui-même, l'écrivain n'essaye à aucun moment de faire passer un message ou encore moins de donner son avis sur les événements. Certes, plusieurs sujets sensibles de l'actualité y figurent, mais il s'agit plus de faire un état des lieux et de porter à la connaissance du lecteur marocain, un regard sur la vie de ces jeunes Marocains qui vivent à l'étranger que de faire une critique quelconque sur la ou les questions abordées.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "9981090816"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9789981090811"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 176,
+    "printType": "BOOK",
+    "categories": [
+     "Moroccan fiction (French)"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=4gCsaN63f8UC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=4gCsaN63f8UC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=4gCsaN63f8UC&printsec=frontcover&dq=subject:novel&hl=&cd=3&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=4gCsaN63f8UC&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Paris_mon_bled.html?hl=&id=4gCsaN63f8UC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=4gCsaN63f8UC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "cFUVm87A8DQC",
+   "etag": "6YY+hHEvpA0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/cFUVm87A8DQC",
+   "volumeInfo": {
+    "title": "Beat Not the Bones",
+    "authors": [
+     "Charlotte Jay",
+     "Geraldine Halls"
+    ],
+    "publisher": "Wakefield Press",
+    "publishedDate": "1952",
+    "description": "Newly arrived in Papua, where even the vegetation conspires with the bureaucrats to bewilder her, Stella Warwick is determined to prove her husband did not take his own life. Defying the concern of officials, she ventures into the jungle, striding ever closer to the horrifying heart of the mystery.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1862542872"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781862542877"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 250,
+    "printType": "BOOK",
+    "categories": [
+     "Anthropologists"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.2.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=cFUVm87A8DQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=cFUVm87A8DQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=cFUVm87A8DQC&printsec=frontcover&dq=subject:novel&hl=&cd=4&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=cFUVm87A8DQC&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Beat_Not_the_Bones.html?hl=&id=cFUVm87A8DQC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Beat_Not_the_Bones-sample-pdf.acsm?id=cFUVm87A8DQC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=cFUVm87A8DQC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "DfnvLGnLWjEC",
+   "etag": "QKGR9H8zHLk",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/DfnvLGnLWjEC",
+   "volumeInfo": {
+    "title": "Black Mirror",
+    "authors": [
+     "Gail Jones"
+    ],
+    "publisher": "Random House Australia",
+    "publishedDate": "2009",
+    "description": "'I am waiting for this visitor so that I can tell my story and die.' The award-winning novel from Gail Jones Victoria Morrell was once a great artist. She led the high life - living and working in Paris, mixing with the artists of the Surrealist movement. Her work was largely forgotten in the fifties and sixties, but was rediscovered in the seventies when she became something of a cult figure on the London art scene. She now lives as a recluse in Hampstead, London. And she is dying. Anna Griffin is the young woman commissioned to write a biography of Victoria's life. In many ways their lives strangely intersect, since they grew up in the same mining town and share preoccupations with underground spaces, deserts and the many forms of grief. In a compelling double narrative, Gail Jones tracks Victoria's past as it intertwines with Anna's life. The stories Victoria tells enable both women to enter into new forms of sympathy and understanding. Elegant, enthralling, and emotionally charged, Black Mirror is both a novel of love and family mystery, and a meditation on the nature of artistic vision and obsession.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781741668544"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1741668549"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 320,
+    "printType": "BOOK",
+    "categories": [
+     "Biographers"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.3.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=DfnvLGnLWjEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=DfnvLGnLWjEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=DfnvLGnLWjEC&printsec=frontcover&dq=subject:novel&hl=&cd=5&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=DfnvLGnLWjEC&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Black_Mirror.html?hl=&id=DfnvLGnLWjEC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=DfnvLGnLWjEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "_yqlyty0_koC",
+   "etag": "JhTRzv3IqQM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/_yqlyty0_koC",
+   "volumeInfo": {
+    "title": "Un Marocain à New York",
+    "authors": [
+     "Youssouf Amine Elalamy"
+    ],
+    "publisher": "Eddif",
+    "publishedDate": "1998",
+    "description": "Ainsi, vous êtes du Maroc, me dit-elle, entre deux bouchées de caviar et une tranche de saumon. Ce doit être un de ces pays où l'on n'a rien à se mettre sous la dent. Ne sachant quoi répondre, je lui rappelai seulement la grande misère que j'avais pu rencontrer du South Bronx au nord de Harlem. Les boutiques éventrées, les immeubles calcinés, les innombrables ghettos sas eau ni électricité, où des populations entières s'entassent, rongées par la faim, la peur et le désespoir ; les centaines de mendiants et de sans abri qui, chaque jour, sillonnent les artères de New York et investissent les stations de métro, les hordes d'enfants qui, las de jouer dans des restes de voitures abandonnées, se blottissent les uns contre les autres pour chasser le grand froid. Imperturbable, la dame parcourait du regard le magnifique buffet. Comme je ne disais plus rien, elle leva vers moi ses yeux de poisson frit et me susurra à l'oreille, comme si elle trahissait un secret : -Sachez, jeune homme, qu'il n'y a pas de pauvres à New York ; il n'y a que des fainéants. Ainsi donc, j'avais oublié que nous étions dans une démocratie, où l'on pouvait choisir d'être pauvre ou riche, malade ou bien portant. Entre le saumon et la faim, la fourrure et le froid, le luxe et la misère, les pauvres ont fait leur choix. Après tout, Henry Miller a peut-être raison, \" Si un jour la merde prend de la valeur, les pauvres naîtront sans cul. \"",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "9981090131"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9789981090132"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 164,
+    "printType": "BOOK",
+    "categories": [
+     "Moroccans"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.0.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=_yqlyty0_koC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=_yqlyty0_koC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=_yqlyty0_koC&printsec=frontcover&dq=subject:novel&hl=&cd=6&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=_yqlyty0_koC&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Un_Marocain_%C3%A0_New_York.html?hl=&id=_yqlyty0_koC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=_yqlyty0_koC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "tzaNc1qJzqMC",
+   "etag": "U/UhJswInCY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/tzaNc1qJzqMC",
+   "volumeInfo": {
+    "title": "Sleepwalking Land",
+    "authors": [
+     "Mia Couto",
+     "David Brookshaw"
+    ],
+    "publisher": "Profile Books",
+    "publishedDate": "2006",
+    "description": "Mia Couto's first novel, judged one of the twelve best African books of the 20th century",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781852428976"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "185242897X"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 213,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.0.2.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=tzaNc1qJzqMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=tzaNc1qJzqMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=tzaNc1qJzqMC&printsec=frontcover&dq=subject:novel&hl=&cd=7&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=tzaNc1qJzqMC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-tzaNc1qJzqMC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 23.96,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 14.4,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=tzaNc1qJzqMC&rdid=book-tzaNc1qJzqMC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 2.396E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.44E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Sleepwalking_Land-sample-pdf.acsm?id=tzaNc1qJzqMC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=tzaNc1qJzqMC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "bN5lAAAAMAAJ",
+   "etag": "n5vHplpkXPc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/bN5lAAAAMAAJ",
+   "volumeInfo": {
+    "title": "The Inhabited World",
+    "authors": [
+     "David Long"
+    ],
+    "publishedDate": "2006",
+    "description": "Stuck in a state of purgatory in the Washington State house in which he lived and died, Evan Molloy, who had shot himself to death for a reason he cannot recall, now must deal with the home's new inhabitant, Maureen Keniston.",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "UOM:39015064741104"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 277,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 3.5,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=bN5lAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=bN5lAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=bN5lAAAAMAAJ&dq=subject:novel&hl=&cd=8&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=bN5lAAAAMAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/The_Inhabited_World.html?hl=&id=bN5lAAAAMAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=bN5lAAAAMAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Hm8dAQAAIAAJ",
+   "etag": "3PKsd497prw",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Hm8dAQAAIAAJ",
+   "volumeInfo": {
+    "title": "L'impasse",
+    "subtitle": "roman",
+    "authors": [
+     "Daniel Biyaoula"
+    ],
+    "publisher": "Editions Présence Africaine",
+    "publishedDate": "1996",
+    "description": "Avec L'Impasse, Daniel BIYAOULA enrichit la littérature négro-africaine d'un excellent ouvrage. Ce roman se situe successivement dans l'Afrique et la France contemporaines, lieux symboliques d'un combat, chez l'Africain moderne, entre nostalgie et désir, entre ses racines culturelles et un modèle de société qui assoit sa supériorité triomphante sur le monde. Dans un style original de \" langage verbal \" devenu \" écriture \", l'auteur nettoie de son regard décapant, avec lucidité, humour et sans concession, une certaine hypocrisie ambiante. Il nous révèle \" l'impasse \" dans laquelle se trouve l'Africain, l'Homme, qui, entraîné dans un tourbillon de maux, de contraintes, se doit, au risque d'être broyé, d'inventer les portes qui lui sont fermées.",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "STANFORD:36105029485369"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 327,
+    "printType": "BOOK",
+    "categories": [
+     "Novel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.0.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Hm8dAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Hm8dAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=Hm8dAQAAIAAJ&dq=subject:novel&hl=&cd=9&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=Hm8dAQAAIAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/L_impasse.html?hl=&id=Hm8dAQAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=Hm8dAQAAIAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "_eBWAAAAYAAJ",
+   "etag": "3Lal1EOLhk8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/_eBWAAAAYAAJ",
+   "volumeInfo": {
+    "title": "Le goût des jeunes filles",
+    "authors": [
+     "Dany Laferrière"
+    ],
+    "publisher": "Editions Gallimard",
+    "publishedDate": "2007",
+    "description": "Haïti, 1968. Un jeune adolescent regarde par la fenêtre de la maison familiale. De l'autre côté de la rue, c'est la maison de Miki, toujours pleine de filles, paresseuses, moqueuses, prostituées à l'occasion, des \" fraîcheurs \", comme il dit. Elles éclatent de vie dans la misère ambiante. Le tyran Duvalier est au pouvoir, les tontons macoutes rôdent comme des requins dans les rues de Port-au-Prince. Un week-end dangereux attend notre héros. En compagnie d'un ami impliqué dans un incident tragique, il se réfugie en face. Histoire de la conquête de la sensualité par un adolescent, Le goût des jeunes filles est aussi une chronique haïtienne. Ces jeunes filles insolentes, qui n'ont peur de rien et vivent selon leurs propres lois, montrent ainsi, en creux, l'horreur de la dictature. Et c'est elles qui, pour finir, donneront à Fanfan le goût de l'amour, de la poésie et de la révolte. Plus encore qu'un roman d'initiation, Le goût des jeunes filles est un roman de libération.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2070320936"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782070320936"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 392,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=_eBWAAAAYAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=_eBWAAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=_eBWAAAAYAAJ&dq=subject:novel&hl=&cd=10&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=_eBWAAAAYAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Le_go%C3%BBt_des_jeunes_filles.html?hl=&id=_eBWAAAAYAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=_eBWAAAAYAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "ICNlAAAAMAAJ",
+   "etag": "0puT0po4dYg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/ICNlAAAAMAAJ",
+   "volumeInfo": {
+    "title": "Asiles de fous",
+    "subtitle": "roman",
+    "authors": [
+     "Régis Jauffret"
+    ],
+    "publisher": "Editions Gallimard",
+    "publishedDate": "2005",
+    "description": "Quatre personnages : un père, une mère, leur fils et la femme de celui-ci. Le père, sous le prétexte de changer un robinet qui fuit, vient annoncer à sa belle-fille que son fils a pris la décision de la quitter. Le lecteur va alors se trouver dans la tête des quatre protagonistes qui vont être, tour à tour, les quatre narrateurs du roman.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2070775348"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782070775347"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 211,
+    "printType": "BOOK",
+    "categories": [
+     "Domestic fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=ICNlAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=ICNlAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=ICNlAAAAMAAJ&dq=subject:novel&hl=&cd=11&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=ICNlAAAAMAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Asiles_de_fous.html?hl=&id=ICNlAAAAMAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=ICNlAAAAMAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "JYFlAAAAMAAJ",
+   "etag": "XN4ipgao2qg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/JYFlAAAAMAAJ",
+   "volumeInfo": {
+    "title": "Gathering the Water",
+    "authors": [
+     "Robert Edric"
+    ],
+    "publisher": "Doubleday UK",
+    "publishedDate": "2006",
+    "description": "It is 1847, northern England, and Charles Weightman has been given the unenviable task of overseeing the flooding of the Forge Valley and evicting its lingering inhabitants. Weightman is heartily resented by these locals, and he himself is increasingly unconvinced both of the wisdom of his appointment and of the integrity and motives of the company men who posted him there. He finds some solace, however, in his enigmatic neighbour, Mary Latimer. Caring for her mad sister, Mary is also an outsider, and a companionship develops between the two of them which offers them both some comfort and support in their mutual isolation. As winter closes steadily in and as the waters begin to rise in the Forge Valley, it becomes increasingly evident that the man-made deluge cannot be avoided; not by the locals desperate to save their homes, nor by the reluctant agent of their destruction, Weightman himself. In a masterful new novel, Edric captures powerful human emotions with grace and precision. The hauntingly resonant backdrop to this story of David and Goliath marks Edric's dramatic return to historical literary fiction.",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "UOM:39015064707931"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 250,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 3.0,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=JYFlAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=JYFlAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=JYFlAAAAMAAJ&dq=subject:novel&hl=&cd=12&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=JYFlAAAAMAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Gathering_the_Water.html?hl=&id=JYFlAAAAMAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=JYFlAAAAMAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "y0TzAAAAMAAJ",
+   "etag": "sJ74IvUO7no",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/y0TzAAAAMAAJ",
+   "volumeInfo": {
+    "title": "Bab-Errih",
+    "authors": [
+     "Ghania Hammadou"
+    ],
+    "publishedDate": "2004",
+    "description": "\" Qui ne connaît ta ville la Porte du Vent, passage obligé pour tous les égarés, les paumés ? Ouverte aux vents marins, aux vents de pluie, aujourd'hui fermée à l'avenir. Accueillante aux brises, elle l'était jadis également aux hommes. Au voyageur arrivé par l'Ouest, elle offrait en prélude un lacis de ruelles étourdissantes ; en titubant, le nouveau venu se mettait sous la protection de son marabout ; il pouvait se désaltérer à la fontaine de la cour intérieure de sa vieille mosquée et y reprendre son souffle. Neuf siècles inscrits dans la chaux et la pierre. Tant d'étrangers sont entrés par là, qui ne sont plus jamais repartis. \" Du regard croisé de deux femmes à la fois différentes et très proches, l'une, Selma, rivée à sa ville, à l'emprise de laquelle elle rêve d'échapper, l'autre, Hélène, revenue recoller les \" morceaux de sa vie \" dans son pays natal dévasté par une guerre sournoise, et d'un narrateur qui prend leur relais pour s'adresser à elles, émerge l'histoire de Bab-Errih - dont on ne saura jamais si elle réelle et transfigurée ou lieu métaphorique - et des destins chaotiques de ceux qui la peuplent...",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2842721942"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782842721947"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 199,
+    "printType": "BOOK",
+    "categories": [
+     "Novel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=y0TzAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=y0TzAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=y0TzAAAAMAAJ&dq=subject:novel&hl=&cd=13&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=y0TzAAAAMAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Bab_Errih.html?hl=&id=y0TzAAAAMAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=y0TzAAAAMAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Pj4sAQAAIAAJ",
+   "etag": "uIj+SZ1salM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Pj4sAQAAIAAJ",
+   "volumeInfo": {
+    "title": "Marrakech, lumière d'exil",
+    "subtitle": "roman",
+    "authors": [
+     "Rajae Benchemsi"
+    ],
+    "publisher": "Sabine Wespieser",
+    "publishedDate": "2002",
+    "description": "Marrakech, Lumière d'exil. Place Jemaa-el-Fna. Bahia tatoue au henné les mains des touristes. Plongée dans la contemplation de ce geste ancestral, la narratrice se laisse envahir par la magie des lieux et le mystère de ses origines féodales. Revenue depuis peu à Marrakech, elle tente de faire sortir la fille de Bahia de l'asile psychiatrique où elle survit aux confins de l'hébétude. Dans un récit qui superpose ses interrogations propres au traumatisme de la jeune autiste, elle convoque la lignée des femmes dont elle est issue. Fascinée par le destin de sa grand-tante Bradia, elle s'identifie à cette figure de la sensualité et de la liberté dans un milieu supposé très strict. Et c'est ainsi qu'elle trouvera l'apaisement et la sagesse. Par-delà l'image convenue de la femme sacrifiée, Rajae Benchemsi découvre, en évoquant de l'intérieur le destin de ses aïeules musulmanes, le visage d'un autre Islam, de générosité, de raffinement arabo-andalou et de beauté. C'est donc un véritable roman d'initiation que cette quête d'identité entre Occident et Orient, entre modernité et féodalité, servie par une langue puissante et lyrique, riche des deux imaginaires qu'elle porte.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2848050063"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782848050065"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 197,
+    "printType": "BOOK",
+    "categories": [
+     "Novel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Pj4sAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Pj4sAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=Pj4sAQAAIAAJ&dq=subject:novel&hl=&cd=14&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=Pj4sAQAAIAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Marrakech_lumi%C3%A8re_d_exil.html?hl=&id=Pj4sAQAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=Pj4sAQAAIAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "qJ0bAQAAIAAJ",
+   "etag": "axb/OrVH77k",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/qJ0bAQAAIAAJ",
+   "volumeInfo": {
+    "title": "Les Obscures",
+    "authors": [
+     "Chantal Chawaf"
+    ],
+    "publisher": "Des Femmes",
+    "publishedDate": "2008",
+    "description": "Lise, née d'un amour clandestin, a été reconnue par son vrai père mais sa famille a détruit les preuves. Décidée à rompre avec son origine, elle se marie avec Justinien, étrange et absent. Ils vivent en banlieue près d'un marais mais leur relation s'épuise dans la stérilité et le désamour. Elle se retrouve seule avec Yashar, la fille de Justinien, qui se révolte contre l'isolement affectif.",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "STANFORD:36105132305694"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 195,
+    "printType": "BOOK",
+    "categories": [
+     "Novel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=qJ0bAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=qJ0bAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=qJ0bAQAAIAAJ&dq=subject:novel&hl=&cd=15&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=qJ0bAQAAIAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Les_Obscures.html?hl=&id=qJ0bAQAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=qJ0bAQAAIAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "XSEnHQAACAAJ",
+   "etag": "KEm0hadxeJU",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/XSEnHQAACAAJ",
+   "volumeInfo": {
+    "title": "La reine du silence",
+    "authors": [
+     "Marie Nimier"
+    ],
+    "publisher": "Gallimard Education",
+    "publishedDate": "2006-01",
+    "description": "Mon père a trouvé la mort un vendredi soir. Son Aston Martin s'est écrasée contre le parapet d'un pont. Je n'étais pas dans la voiture. J'avais 5 ans. De lui, il me reste peu de souvenirs, et quelques trésors : une montre qui sonne les heures, un stylo dont la plume penche à droite et cette carte postale, où il me demandait en lettres capitales : que dit la reine du silence ? Cette phrase posait une énigme impossible à résoudre pour la petite fille que j'étais, énigme cruelle et envoûtante qui résume toute la difficulté du métier d'enfant. Enigme qui, à l'époque, se formulait ainsi : Que pourrait bien dire la Reine du silence sans y perdre son titre, et l'affection de son papa ? Ou encore : comment, à la fois, parler, et ne pas parler ? J'étais coincée. Prise au piège de l'intelligence paternelle. M. N. Marie Nimier ose avec ce nouveau livre s'attacher à la figure de son père, Roger Nimier. Elle explore l'amas de tôles froissées, interrogeant avec gravité le destin de cet écrivain que ses amis décrivent tour à tour, et parfois simultanément, comme un être désinvolte, sérieux, menteur, loyal, tendre, indifférent et malhabile de ses sentiments comme on est maladroit de ses mains.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2070320847"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782070320844"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 202,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=XSEnHQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=XSEnHQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=XSEnHQAACAAJ&dq=subject:novel&hl=&cd=16&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=XSEnHQAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/La_reine_du_silence.html?hl=&id=XSEnHQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=XSEnHQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "l9b7oQEACAAJ",
+   "etag": "xWNiOFOBYhw",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/l9b7oQEACAAJ",
+   "volumeInfo": {
+    "title": "Half Girlfriend",
+    "authors": [
+     "Chetan Bhagat"
+    ],
+    "publishedDate": "2014-10-01",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "8129135728"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9788129135728"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 280,
+    "printType": "BOOK",
+    "categories": [
+     "Man-woman relationships"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 20,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=l9b7oQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=l9b7oQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=l9b7oQEACAAJ&dq=subject:novel&hl=&cd=17&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=l9b7oQEACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Half_Girlfriend.html?hl=&id=l9b7oQEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=l9b7oQEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "QbmiSgAACAAJ",
+   "etag": "vpzsnSCwmb0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/QbmiSgAACAAJ",
+   "volumeInfo": {
+    "title": "Tous les matins du monde",
+    "authors": [
+     "Pascal Quignard"
+    ],
+    "publisher": "Gallimard Education",
+    "publishedDate": "2010",
+    "description": "«Il poussa la porte qui donnait sur la balustrade et le jardin de derrière et il vit soudain l'ombre de sa femme morte qui se tenait à ses côtés. Ils marchèrent sur la pelouse. Il se prit de nouveau à pleurer doucement. Ils allèrent jusqu'à la barque. L'ombre de Madame de Sainte Colombe monta dans la barque blanche tandis qu'il en retenait le bord et la maintenait près de la rive. Elle avait retroussé sa robe pour poser le pied sur le plancher humide de la barque. Il se redressa. Les larmes glissaient sur ses joues. Il murmura : - Je ne sais comme dire : Douze ans ont passé mais les draps de notre lit ne sont pas encore froids» Jean-Claude Drouot interprète Tous les matins du monde avec toute la force, la gravité et la violence qui sied à ce texte, une très belle réalisation sonore servie par les musiques de Sainte Colombe et de Marin Marais. L'écoute en classe de ces CD est autorisée par l'éditeur.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2070438805"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782070438808"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 175,
+    "printType": "BOOK",
+    "categories": [
+     "Novel / 20th century / Critical edition"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=QbmiSgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=QbmiSgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=QbmiSgAACAAJ&dq=subject:novel&hl=&cd=18&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=QbmiSgAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Tous_les_matins_du_monde.html?hl=&id=QbmiSgAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=QbmiSgAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "nzUsAQAAIAAJ",
+   "etag": "K9A8wDoq+xs",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/nzUsAQAAIAAJ",
+   "volumeInfo": {
+    "title": "Un moment d'oubli",
+    "subtitle": "roman",
+    "authors": [
+     "Abdelkader Djemaï"
+    ],
+    "publishedDate": "2009",
+    "description": "\"Personne ne sait ton nom ni d'où tu viens. Tu n'as même pas un sobriquet, méchant ou sympathique. Ni de chien ou de chat pour te tenir compagnie. Tu n'es qu'un fantôme, une silhouette morte, une ombre creuse qui se traîne sur les trottoirs de S...\" Un homme, la cinquantaine cassée, arrive, un soir de pluie, dans une ville qu'il ne connaît pas. Sac au dos et jambes usées, Jean-Jacques Serrano va errer dans ses rues, ses avenues. Il n'a plus de papiers, de montre, de but, sinon celui de se fuir et de se séparer de tout. De tout, sauf de son chagrin.",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "STANFORD:36105132838769"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 85,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=nzUsAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=nzUsAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=nzUsAQAAIAAJ&dq=subject:novel&hl=&cd=19&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=nzUsAQAAIAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Un_moment_d_oubli.html?hl=&id=nzUsAQAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=nzUsAQAAIAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "qeZHGwAACAAJ",
+   "etag": "MIgttidj82o",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/qeZHGwAACAAJ",
+   "volumeInfo": {
+    "title": "La chambre",
+    "authors": [
+     "Françoise Chandernagor"
+    ],
+    "publisher": "Gallimard Education",
+    "publishedDate": "2004",
+    "description": "Dans une chambre fermée, un enfant seul. Dans une chambre fermée à clé, un enfant silencieux, sans jouets, sans livres. La chambre est vaste : il peut marcher. Il marche du grand lit double au petit lit de camp, de la chaise rouge au tabouret de paille, de la belle commode jusqu'à la haute fenêtre. Mais par la fenêtre, on ne voit rien. Rien que des planches et des barreaux. Alors, l'enfant s'assied près du poêle, il se recouche dans le lit défait, serre contre lui son oreiller, il dort, il rêve... Dans la chambre jaune aux rideaux lourds, un petit garçon de huit ans attend qu'on vienne le chercher. Qui ? Il ne sait pas, il attend. Il attend sans faire de bruit. Les jours, les mois passent. Il est le roi de la chambre au papier fleuri : les dalles de pierre sont sa géographie, les mouches et les fourmis, ses amies, les gravures au mur, ses livres d'histoire. Il est sage. On l'a puni. Pourquoi ? Il ne sait pas. Il attend...",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2070314200"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782070314201"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 457,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=qeZHGwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=qeZHGwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=qeZHGwAACAAJ&dq=subject:novel&hl=&cd=20&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=qeZHGwAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/La_chambre.html?hl=&id=qeZHGwAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=qeZHGwAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "3gTlAAAAMAAJ",
+   "etag": "bi9f1eEXh/4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/3gTlAAAAMAAJ",
+   "volumeInfo": {
+    "title": "Nada exist",
+    "subtitle": "roman",
+    "authors": [
+     "Simon Liberati"
+    ],
+    "publishedDate": "2007",
+    "description": "\" Quand il entra dans la chambre, l'obscurité exhalait l'odeur du lit défait. Tirant les grands rideaux de velours dont la doublure avait pris la couleur du ciment à force de brûler au soleil, il entrouvrit une porte-fenêtre pour laisser pénétrer l'air de la campagne. Il s'arrêta sur le miroir de la cheminée. Une image était scotchée au milieu : une reproduction de la gravure de Dürer, Le Chevalier, la Mort et le Diable. Son visage, défiguré par la lèpre du verre au mercure, se réfugiait derrière l'allégorie. Il bougea pour se cacher. Parut alors dans la glace, encadré par la fenêtre. le bois noirci d'un marronnier. Des branchettes séchées par l'hiver zébraient le ciel comme des griffes. De la chambre voisine, de l'autre côté de la salle de bains lui parvint, à la manière d'une plainte, le souffle d'une femme. \"Le travail du Diable est presque terminé\", chuchota-t-il au monstre de la gravure, sans que son sourire soit révélé par le miroir. \" Cinq heures dans la vie d'un photographe de mode en décadence. Une étude de mœurs d'un lyrisme cruel et drôle, portrait d'une âme perdue jusqu'au sortilège final, au 29e étage de l'ex-hôtel Nikko.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2080688618"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782080688613"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 419,
+    "printType": "BOOK",
+    "categories": [
+     "Novel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=3gTlAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=3gTlAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=3gTlAAAAMAAJ&dq=subject:novel&hl=&cd=21&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=3gTlAAAAMAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Nada_exist.html?hl=&id=3gTlAAAAMAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=3gTlAAAAMAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "SpZMPQAACAAJ",
+   "etag": "9oBszLIiaLg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/SpZMPQAACAAJ",
+   "volumeInfo": {
+    "title": "Vous Plaisantez, Monsieur Tanner",
+    "authors": [
+     "Jean-Paul Dubois"
+    ],
+    "publisher": "Contemporary French Fiction",
+    "publishedDate": "2007",
+    "description": "Avant d'hériter de la maison familiale, Paul Tanner menait une existence paisible. Mais depuis qu'il a décidé de la restaurer, rien ne va plus! Maçons déments, couvreurs délinquants, électriciens fous, tous semblent s'être donné le mot pour lui rendre la vie impossible. Chronique d'un douloureux combat, galerie de portraits terriblement humains : le récit véridique d'un chantier infernal, coloré d'une bonne dose d'humour...noir !",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "275780474X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782757804742"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 199,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 3.0,
+    "ratingsCount": 4,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=SpZMPQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=SpZMPQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=SpZMPQAACAAJ&dq=subject:novel&hl=&cd=22&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=SpZMPQAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Vous_Plaisantez_Monsieur_Tanner.html?hl=&id=SpZMPQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=SpZMPQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "BcEbAQAAIAAJ",
+   "etag": "BU0cGBPgVl8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/BcEbAQAAIAAJ",
+   "volumeInfo": {
+    "title": "Alaska",
+    "authors": [
+     "Eugène Nicole"
+    ],
+    "publisher": "Editions de l'Olivier",
+    "publishedDate": "2007",
+    "description": "Neuf mois en Alaska, trois saisons, le temps d'une gestation et d'une transfiguration : c'est le remède choisi par le narrateur pour oublier la femme qui vient de le quitter. Mais à l'université de Fairbanks, réputée pour son département de sismologie et ses études des langues athabaskanes, son séjour se transforme en une aventure aux multiples facettes où se croisent de jeunes marginaux, des universitaires extravagants et les dernières survivantes du peuple eyak.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2879295521"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782879295527"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 244,
+    "printType": "BOOK",
+    "categories": [
+     "Alaska"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=BcEbAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=BcEbAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=BcEbAQAAIAAJ&dq=subject:novel&hl=&cd=23&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=BcEbAQAAIAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Alaska.html?hl=&id=BcEbAQAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=BcEbAQAAIAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "VdWJPAAACAAJ",
+   "etag": "3A26N9RdRT4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/VdWJPAAACAAJ",
+   "volumeInfo": {
+    "title": "Vendredi soir",
+    "authors": [
+     "Emmanuèle Bernheim"
+    ],
+    "publisher": "Gallimard Education",
+    "publishedDate": "1999",
+    "description": "\" Laure alluma l'autoradio. Elle respira profondément. Les portières étaient verrouillées. Elle ne risquait rien. Il faisait bien chaud. Elle écoutait de la musique. C'était vendredi et elle allait dîner chez des amis. Et demain, pour la première fois de sa vie, elle vivrait avec quelqu'un. \"",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2070410668"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782070410668"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 109,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=VdWJPAAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=VdWJPAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=VdWJPAAACAAJ&dq=subject:novel&hl=&cd=24&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=VdWJPAAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Vendredi_soir.html?hl=&id=VdWJPAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=VdWJPAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "R6ZEPgAACAAJ",
+   "etag": "VHnXi9lzPZQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/R6ZEPgAACAAJ",
+   "volumeInfo": {
+    "title": "Rouge Brésil",
+    "authors": [
+     "Jean-Christophe Rufin"
+    ],
+    "publisher": "Editions Gallimard",
+    "publishedDate": "2003",
+    "description": "Analyse : Roman historique. Roman philosophique.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2070301672"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782070301676"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 601,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=R6ZEPgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=R6ZEPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=R6ZEPgAACAAJ&dq=subject:novel&hl=&cd=25&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=R6ZEPgAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Rouge_Br%C3%A9sil.html?hl=&id=R6ZEPgAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=R6ZEPgAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "JrkUswEACAAJ",
+   "etag": "/xPy0OuK8nE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/JrkUswEACAAJ",
+   "volumeInfo": {
+    "title": "Tierra de brumas",
+    "authors": [
+     "Cristina Lopez Barrio"
+    ],
+    "publisher": "Plaza y Janes",
+    "publishedDate": "2015-09-02",
+    "description": "Cuando Valentina se queda huérfana a los once años, se ve obligada a atravesar el océano desde su Habana natal a la Galicia de sus antepasados para quedar al cargo de su abuela, Bruna Mencía, marquesa de Novoa. La matriarca la recibe en su solitario, decadente y majestuoso pazo y comienza a educarla para convertirla en la heredera de la dinastía. Una prodigiosa historia de tradición y modernidad, de civilización y barbarie, de espíritus y profecías, de grelos y camelias, de reinas y santas, de meigas y lobas, en la que los personajes se debaten entre tomar los caminos escogidos para ellos o elegir libremente su propio destino. Una maravillosa novela que recoge toda la magia y el misterio de una tierra de leyenda. ENGLISH DESCRIPTION When Valentina is orphaned at the age of eleven, she finds herself obliged to cross the ocean from her native Havana to the Galicia of her ancestors to be cared for by her grandmother, Bruna Mencía, Marchioness of Novoa. The matriarch welcomes her into her solitary, decadent, and majestic country house and begins to educate her to someday be the heir of the dynasty. Through Bruna, Valentina learns the tumultuous history of her family and how the wild lineage of the Mencía women, raised among nature in the depths of the Galician forests, joined the aristocratic dynasty of the Novoa, the richest family in the region. The stories of love and power between the two families, which have endured for many years, mark Valentina’s destiny as she decides if she will continue this lineage, which seems strange and riddled with mysteries and secret blame. A prodigious story of tradition and modernity, of civilization and barbarity, of spirits and prophecies, of turnip greens and camellias, of queens and saints, of witches and wolves, in which the characters debate between taking the paths chosen for them or freely chosing their own destiny. A marvelous novel that consolidates all the magic and mystery of a legendary land.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "8401015375"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9788401015373"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 400,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=JrkUswEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=JrkUswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "es",
+    "previewLink": "http://books.google.com.au/books?id=JrkUswEACAAJ&dq=subject:novel&hl=&cd=26&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=JrkUswEACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Tierra_de_brumas.html?hl=&id=JrkUswEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=JrkUswEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "dq65MgEACAAJ",
+   "etag": "0uiwnxae5t8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/dq65MgEACAAJ",
+   "volumeInfo": {
+    "title": "العصفورية",
+    "authors": [
+     "Ghāzī ʻAbd al-Raḥmān Quṣaybī"
+    ],
+    "publisher": "Dar Al-Saqi",
+    "publishedDate": "1996-01-01",
+    "description": "Satirisk roman, der gengiver en overlæge og patientens samtaler på et psykiatrisk hospital",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1855163837"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781855163836"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 303,
+    "printType": "BOOK",
+    "categories": [
+     "Arabic fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=dq65MgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=dq65MgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=dq65MgEACAAJ&dq=subject:novel&hl=&cd=27&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=dq65MgEACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/%D8%A7%D9%84%D8%B9%D8%B5%D9%81%D9%88%D8%B1%D9%8A%D8%A9.html?hl=&id=dq65MgEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=dq65MgEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "w9mGGwAACAAJ",
+   "etag": "UNPy6czWibg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/w9mGGwAACAAJ",
+   "volumeInfo": {
+    "title": "La princesse de Mantoue",
+    "authors": [
+     "Marie Ferranti"
+    ],
+    "publisher": "Gallimard Education",
+    "publishedDate": "2004",
+    "description": "Barbara de Brandebourg, princesse mantouane \" aux yeux las et jaunes, étirés vers les tempes comme ceux des chats \", ainsi qu'elle l'écrit elle-même au sujet de son portrait par Mantegna, est une femme mystérieuse. Je ne puis ni ne veux raconter ici - et encore moins resumer - l'histoire de sa vie. Le lecteur est condamné à passer son chemin, ou à lire ce livre pour assouvir sa curiosité. je peux seulement lui promettre qu'il sera étonné, sans en dévoiler la cause. M. F.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2070313875"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782070313877"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 136,
+    "printType": "BOOK",
+    "categories": [
+     "Novel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=w9mGGwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=w9mGGwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=w9mGGwAACAAJ&dq=subject:novel&hl=&cd=28&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=w9mGGwAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/La_princesse_de_Mantoue.html?hl=&id=w9mGGwAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=w9mGGwAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "I1HzGgAACAAJ",
+   "etag": "2I9rTYV2cAU",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/I1HzGgAACAAJ",
+   "volumeInfo": {
+    "title": "Naboo",
+    "authors": [
+     "Roger Caratini",
+     "Thierry Ardisson"
+    ],
+    "publisher": "Hachette",
+    "publishedDate": "1999-01-01",
+    "description": "\" Le jeudi 18 juin 1998, vers 6 heures p.m., les 1142 journaux du soir des Etats-Unis, les 5 chaînes nationales de télévision, 53 réseaux câblés et les innombrables stations de radio, apprirent à quelques 300 millions de neveux et nièces de l'Oncle Sam cette nouvelle stupéfiante : \"ON \" avait enlevé Nathanaël Buenaventura. \" L'homme le plus puissant mais aussi le plus haï de New York, venait de disparaître. Comment ce petit émigré portoricain, ancien apprenti armurier, était-il devenu le caïd d'un royaume du crime, le maître incontesté de la Cosa Nostra new yorkaise, et l'empereur de Wall Street ? Roger Caratini nous raconte avec une verve étonnante et beaucoup d'humour l'ascension extraordinaire de \" Naboo \" dans le milieu de la mafia. Des personnages pittoresques (Fina Fina l'arrogante danseuse hawaïenne, Charlie le Boiteux, Joe le Boucher,... ), des péripéties tumultueuses (du trafic d'héroïne en Orient à la \" campagne de Harlem \") composent un tableau savoureux du New York des années 50 à nos jours, celui du jazz, des noctambules et des machines à sous.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2012355323"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782012355323"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 238,
+    "printType": "BOOK",
+    "categories": [
+     "Novel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=I1HzGgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=I1HzGgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=I1HzGgAACAAJ&dq=subject:novel&hl=&cd=29&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=I1HzGgAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Naboo.html?hl=&id=I1HzGgAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=I1HzGgAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "oZXrPAAACAAJ",
+   "etag": "eWgCknDw5bw",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/oZXrPAAACAAJ",
+   "volumeInfo": {
+    "title": "Miette",
+    "authors": [
+     "Pierre Bergounioux"
+    ],
+    "publisher": "Gallimard Education",
+    "publishedDate": "1996",
+    "description": "Le haut plateau granitique du Limousin fut l'un des derniers refuges de l'éternité. Des êtres en petit nombre y répétaient le rôle immémorial que leur dictaient le sang, le sol et le rang. Puis le souffle du temps a touché ces hauteurs. Ce grand mouvement a emporté les personnages et changé le décor. On a tâché de fixer les dernières paroles, les gestes désormais perdus de ce monde enfui.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2070400786"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782070400782"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 148,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=oZXrPAAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=oZXrPAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=oZXrPAAACAAJ&dq=subject:novel&hl=&cd=30&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=oZXrPAAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Miette.html?hl=&id=oZXrPAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=oZXrPAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "fWNqQgAACAAJ",
+   "etag": "C2AWY4DZfLY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/fWNqQgAACAAJ",
+   "volumeInfo": {
+    "title": "كابتن مصر",
+    "subtitle": "البوم ساخر للمراهقين",
+    "authors": [
+     "عمر طاهر"
+    ],
+    "publishedDate": "2007",
+    "description": "Humorous writings.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "9773990915"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9789773990916"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 222,
+    "printType": "BOOK",
+    "categories": [
+     "Novel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=fWNqQgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=fWNqQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "da",
+    "previewLink": "http://books.google.com.au/books?id=fWNqQgAACAAJ&dq=subject:novel&hl=&cd=31&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=fWNqQgAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/%D9%83%D8%A7%D8%A8%D8%AA%D9%86_%D9%85%D8%B5%D8%B1.html?hl=&id=fWNqQgAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=fWNqQgAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "nPx-JFLRFVoC",
+   "etag": "mva7CnX4XSE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/nPx-JFLRFVoC",
+   "volumeInfo": {
+    "title": "I Wish Someone Were Waiting for Me Somewhere",
+    "authors": [
+     "Anna Gavalda",
+     "Karen L. Marker"
+    ],
+    "publisher": "Penguin",
+    "publishedDate": "2003",
+    "description": "Collects eleven short stories about individuals longing to connect with others.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1573223557"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781573223553"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 193,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 3.5,
+    "ratingsCount": 5,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=nPx-JFLRFVoC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=nPx-JFLRFVoC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=nPx-JFLRFVoC&dq=subject:novel&hl=&cd=32&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=nPx-JFLRFVoC&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/I_Wish_Someone_Were_Waiting_for_Me_Somew.html?hl=&id=nPx-JFLRFVoC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=nPx-JFLRFVoC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "kS9dAAAAMAAJ",
+   "etag": "nIbo0AC3ORA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/kS9dAAAAMAAJ",
+   "volumeInfo": {
+    "title": "Tasharej",
+    "subtitle": "roman",
+    "authors": [
+     "Emna Belhaj Yahia"
+    ],
+    "publisher": "Jacob Duvernet (Editions)",
+    "publishedDate": "2000",
+    "description": "Dans la Tunisie d'aujourd'hui, Tasharej est une femme singulière, émancipée, indépendante financièrement et intellectuellement. Sociologue et mère de famille, elle entretient avec ses enfants - particulièrement avec sa fille, la narratrice des relations difficiles : est-elle guettée sur le tard par un retour aux traditions musulmanes ? S'agit-il des tourments amoureux de sa fille ? Est-elle menacée par autre chose ?",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2715812981"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782715812987"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 139,
+    "printType": "BOOK",
+    "categories": [
+     "Novel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=kS9dAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=kS9dAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=kS9dAAAAMAAJ&dq=subject:novel&hl=&cd=33&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=kS9dAAAAMAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Tasharej.html?hl=&id=kS9dAAAAMAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=kS9dAAAAMAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "LUx-PQAACAAJ",
+   "etag": "6INxoPUTCkg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/LUx-PQAACAAJ",
+   "volumeInfo": {
+    "title": "Le mort qu'il faut",
+    "authors": [
+     "Jorge Semprún"
+    ],
+    "publisher": "Gallimard Education",
+    "publishedDate": "2002",
+    "description": "\" Dans le brouhaha de la boîte de jazz, dans la fumée des cigarettes, nous avions levé nos verres et trinqué à la santé de Walter Bartel. - Rotfront ! s'était écrié Jiri Zak. Et je lui avais répondu - Rotfront ! Front rouge ! C'était le salut des communistes allemands, autrefois, à l'époque sectaire et exaltante, misérable et glorieuse, de la lutte finale et du mot d'ordre apocalyptique classe contre classe ! Beaucoup plus tard, alors que nous commencions à devenir pâteux - mais la musique était à chaque instant meilleure, plus maîtrisée et plus sauvage à la fois -, Jiri Zak s'était penché vers moi, compagnon de mémoire et de beuverie. - Toi qui écris, tu devrais donner une suite au Grand voyage... Il avait dit Grosse Reise, bien sûr: nous parlions en allemand. Il avait lu mon livre en allemand. - Tu devrais raconter la nuit au Revier, à côté de ton Musulman. Tout ce qui va avec... \"",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2070424545"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782070424542"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 247,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=LUx-PQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=LUx-PQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=LUx-PQAACAAJ&dq=subject:novel&hl=&cd=34&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=LUx-PQAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Le_mort_qu_il_faut.html?hl=&id=LUx-PQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=LUx-PQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "E6JKPQAACAAJ",
+   "etag": "YT/GeM/OmL4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/E6JKPQAACAAJ",
+   "volumeInfo": {
+    "title": "Harraga",
+    "authors": [
+     "Boualem Sansal"
+    ],
+    "publisher": "Gallimard Education",
+    "publishedDate": "2007",
+    "description": "Une maison que le temps ronge comme à regret. Des fantômes et de vieux souvenirs que l'on voit apparaître et disparaître. Une ville erratique qui se déglingue par ennui, par laisser-aller, par peur de la vie. Un quartier, Rampe Valée, qui semble ne plus avoir de raison d'être. Et partout dans les rues houleuses d'Alger des islamistes, des gouvernants prêts à tout, et des lâches qui les soutiennent au péril de leur âme. Des hommes surtout, les femmes n'ayant pas le droit d'avoir de sentiment ni de se promener. Des jeunes, absents jusqu'à l'insolence, qui rêvent, dos aux murs, de la Terre promise. C'est l'univers excessif et affreusement banal dans lequel vit Lamia, avec pour quotidien solitude et folie douce. Mais voilà qu'une jeune écervelée, arrivée d'un autre monde, vient frapper à sa porte. Elle dit s'appeler Chérifa, s'installe, sème la pagaille et bon gré mal gré va lui donner à penser, à se rebeller, à aimer, à croire en cette vie que Lamia avait fini par oublier et haïr.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2070343294"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782070343294"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 316,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=E6JKPQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=E6JKPQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=E6JKPQAACAAJ&dq=subject:novel&hl=&cd=35&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=E6JKPQAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Harraga.html?hl=&id=E6JKPQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=E6JKPQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "P74UAAAACAAJ",
+   "etag": "B2zaNGq0xpM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/P74UAAAACAAJ",
+   "volumeInfo": {
+    "title": "Lucy comme les chiens",
+    "subtitle": "roman",
+    "authors": [
+     "Catherine Rey"
+    ],
+    "publishedDate": "2001",
+    "description": "On est revenus vers le chemin qu'était pas très loin de là où on avait passé la nuit. Il marchait devant et je suivais. Je suivais comme les chiens suivent qui savent pas où aller. Parce qu'un jour on leur a donné quelque chose, ou parce qu'on leur a gratté la tête, ils se mettent à vous suivre n'importe où et même si on les bat, ils reviennent quand même. Dans mon dos, y avait la maison de Nane. J'ai tourné la tête à moitié, mais j'ai pas voulu tourner la tête tout à fait parce que ça faisait trop mal d'être là sur ce chemin que j'aurais préféré être six pieds sous terre parce qu'en plus du chagrin de revoir le soleil et la plaine que j'aimais pourtant mais que je supportais plus, y avait l'autre de savoir que j'étais comme un chien qui suivait le vieux pour la pitance et pas d'autre toit où aller...",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "2868533426"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9782868533425"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 120,
+    "printType": "BOOK",
+    "categories": [
+     "Novel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=P74UAAAACAAJ&dq=subject:novel&hl=&cd=36&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=P74UAAAACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Lucy_comme_les_chiens.html?hl=&id=P74UAAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=P74UAAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "XBLOouAaNpMC",
+   "etag": "nM3pGXx4atk",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/XBLOouAaNpMC",
+   "volumeInfo": {
+    "title": "Inheritance",
+    "authors": [
+     "Christopher Paolini"
+    ],
+    "publisher": "Random House",
+    "publishedDate": "2012",
+    "description": "It began with Eragon . . . It ends with Inheritance. Not so very long ago, Eragon - Shadeslayer, Dragon Rider - was nothing more than a poor farm boy, and his dragon, Saphira, only a blue stone in the forest. Now, the fate of an entire civilization rests on their shoulders. Long months of training and battle have brought victories and hope, but they have also brought heartbreaking loss. And still the real battle lies ahead: they must confront Galbatorix. When they do, they will have to be strong enough to defeat him. And if they cannot, no one can. There will be no second chances. The Rider and his dragon have come farther than anyone dared to hope. But can they topple the evil king and restore justice to Alagaësia? And if so, at what cost? Featuring spectacular artwork by cult artist John Jude Palencar, this stunning book brings the bestselling Inheritance cycle to a breathtaking conclusion.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780552560245"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0552560243"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 860,
+    "printType": "BOOK",
+    "categories": [
+     "Children's stories"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 42,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.6.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=XBLOouAaNpMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=XBLOouAaNpMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=XBLOouAaNpMC&printsec=frontcover&dq=subject:novel&hl=&cd=37&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=XBLOouAaNpMC&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Inheritance.html?hl=&id=XBLOouAaNpMC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=XBLOouAaNpMC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "aD28ZwEACAAJ",
+   "etag": "pBxBndDjdEI",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/aD28ZwEACAAJ",
+   "volumeInfo": {
+    "title": "İstanbul yüzlü kadın",
+    "authors": [
+     "Ahmet Günbay Yıldız"
+    ],
+    "publishedDate": "2010",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "6051142665"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9786051142661"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 288,
+    "printType": "BOOK",
+    "categories": [
+     "Novel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=aD28ZwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=aD28ZwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=aD28ZwEACAAJ&dq=subject:novel&hl=&cd=38&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=aD28ZwEACAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/%C4%B0stanbul_y%C3%BCzl%C3%BC_kad%C4%B1n.html?hl=&id=aD28ZwEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=aD28ZwEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "gFNAAAAAIAAJ",
+   "etag": "lCe8j8IqYT8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/gFNAAAAAIAAJ",
+   "volumeInfo": {
+    "title": "Babes in the Bush",
+    "authors": [
+     "Rolf Boldrewood"
+    ],
+    "publishedDate": "1900",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "UCAL:$B112608"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 420,
+    "printType": "BOOK",
+    "categories": [
+     "Novel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.0.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=gFNAAAAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=gFNAAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=gFNAAAAAIAAJ&dq=subject:novel&hl=&cd=39&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=gFNAAAAAIAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Babes_in_the_Bush.html?hl=&id=gFNAAAAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=gFNAAAAAIAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "n7QlAAAAMAAJ",
+   "etag": "1RIaA17CLdo",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/n7QlAAAAMAAJ",
+   "volumeInfo": {
+    "title": "A Bid for Fortune",
+    "subtitle": "Or, Dr. Nikola's Vendetta",
+    "authors": [
+     "Guy Newell Boothby"
+    ],
+    "publishedDate": "1895",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "NYPL:33433074940135"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 344,
+    "printType": "BOOK",
+    "categories": [
+     "English fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=n7QlAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=n7QlAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=n7QlAAAAMAAJ&dq=subject:novel&hl=&cd=40&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=n7QlAAAAMAAJ&dq=subject:novel&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/A_Bid_for_Fortune.html?hl=&id=n7QlAAAAMAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=n7QlAAAAMAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,3245 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 633,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "kEnYhlkbbR0C",
+   "etag": "Tuzgq8t8iTk",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/kEnYhlkbbR0C",
+   "volumeInfo": {
+    "title": "Die Rosenburg",
+    "subtitle": "Das Bundesministerium der Justiz und die NS-Vergangenheit – eine Bestandsaufnahme",
+    "authors": [
+     "Manfred Görtemaker",
+     "Christoph Safferling"
+    ],
+    "publisher": "Vandenhoeck & Ruprecht",
+    "publishedDate": "2013-05-15",
+    "description": "Die Frage, wie die deutschen Ministerien und Behörden in der Nachkriegszeit mit der NS-Vergangenheit umgegangen sind, ist in jüngster Zeit ein vieldiskutiertes Thema. Dies gilt für die personellen und institutionellen Kontinuitäten und Brüche ebenso wie für die inhaltlichen Aspekte der Politik. Zahlreiche Ministerien und Behörden haben dazu Kommissionen eingesetzt, um die eigene Geschichte von unabhängigen Wissenschaftlern erforschen zu lassen. Dies gilt auch für das Bundesministerium der Justiz. Die Beiträge in diesem Band zeichnen den Weg von der NS-Justiz zur Justiz in der Nachkriegszeit nach und untersuchen dabei insbesondere die Entwicklung in der »Rosenburg«, dem ersten Dienstsitz des Bundesjustizministeriums im Bonner Ortsteil Kessenich von 1950 bis 1973. Angesprochen werden nicht nur Fragen, die den Personenkreis im BMJ betreffen – etwa die Kriterien und Maßstäbe bei Einstellung und Beförderungen -, sondern auch zentrale Themen der Rechtspolitik: die Verfassungsentwicklung nach 1948/49, die Gesetzgebung vom »Dritten Reich« zur Bundesrepublik, die strafrechtliche Aufarbeitung der Justizverbrechen in der Nachkriegszeit, die Anfänge der Abteilung Strafrecht im BMJ sowie Entwicklungen im Gesellschafts- und Familienrecht.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9783525300466"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "3525300468"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 373,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.0.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=kEnYhlkbbR0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=kEnYhlkbbR0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "de",
+    "previewLink": "http://books.google.com.au/books?id=kEnYhlkbbR0C&printsec=frontcover&dq=subject:history&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=kEnYhlkbbR0C&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Die_Rosenburg.html?hl=&id=kEnYhlkbbR0C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=kEnYhlkbbR0C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "WF4JJxywdbEC",
+   "etag": "Qu+LPTS7liQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/WF4JJxywdbEC",
+   "volumeInfo": {
+    "title": "The Vietnam War",
+    "subtitle": "A Concise International History",
+    "authors": [
+     "Mark Atwood Lawrence"
+    ],
+    "publisher": "Oxford University Press",
+    "publishedDate": "2010-08-27",
+    "description": "The Vietnam War remains a topic of extraordinary interest, not least because of striking parallels between that conflict and more recent fighting in the Middle East. In The Vietnam War, Mark Atwood Lawrence draws upon the latest research in archives around the world to offer readers a superb account of a key moment in U.S. as well as global history. While focusing on American involvement between 1965 and 1975, Lawrence offers an unprecedentedly complete picture of all sides of the war, notably by examining the motives that drove the Vietnamese communists and their foreign allies. Moreover, the book carefully considers both the long- and short-term origins of the war. Lawrence examines the rise of Vietnamese communism in the early twentieth century and reveals how Cold War anxieties of the 1940s and 1950s set the United States on the road to intervention. Of course, the heart of the book covers the \"American war,\" ranging from the overthrow of South Vietnamese President Ngo Dinh Diem to the impact of the Tet Offensive on American public opinion, Lyndon Johnson's withdrawal from the 1968 presidential race, Richard Nixon's expansion of the war into Cambodia and Laos, and the problematic peace agreement of 1973, which ended American military involvement. Finally, the book explores the complex aftermath of the war--its enduring legacy in American books, film, and political debate, as well as Vietnam's struggles with severe social and economic problems. A compact and authoritative primer on an intensely relevant topic, this well-researched and engaging volume offers an invaluable overview of the Vietnam War.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0199793158"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780199793150"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 224,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.5.3.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=WF4JJxywdbEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=WF4JJxywdbEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=WF4JJxywdbEC&printsec=frontcover&dq=subject:history&hl=&cd=2&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=WF4JJxywdbEC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-WF4JJxywdbEC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 16.33,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 11.56,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=WF4JJxywdbEC&rdid=book-WF4JJxywdbEC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.633E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.156E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Vietnam_War-sample-epub.acsm?id=WF4JJxywdbEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Vietnam_War-sample-pdf.acsm?id=WF4JJxywdbEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=WF4JJxywdbEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "oQi7KqK6efQC",
+   "etag": "lTsajCg36nQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/oQi7KqK6efQC",
+   "volumeInfo": {
+    "title": "Ghosts of Empire",
+    "subtitle": "Britain's Legacies in the Modern World",
+    "authors": [
+     "Kwasi Kwarteng"
+    ],
+    "publisher": "A&C Black",
+    "publishedDate": "2011-08-15",
+    "description": "This fascinating book shows how the later years of the British Empire were characterised by accidental oversights, irresponsible opportunism and uncertain pragmatism",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780747599418"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0747599416"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 465,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.3.3.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=oQi7KqK6efQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=oQi7KqK6efQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=oQi7KqK6efQC&printsec=frontcover&dq=subject:history&hl=&cd=3&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=oQi7KqK6efQC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Ghosts_of_Empire.html?hl=&id=oQi7KqK6efQC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Ghosts_of_Empire-sample-epub.acsm?id=oQi7KqK6efQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Ghosts_of_Empire-sample-pdf.acsm?id=oQi7KqK6efQC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=oQi7KqK6efQC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "1Hfp25GyP0UC",
+   "etag": "BoeTXSTh/Kk",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/1Hfp25GyP0UC",
+   "volumeInfo": {
+    "title": "The Few",
+    "subtitle": "The American Knights of the Air Who Risked Everything to Save Britain in the Summer Of 1940",
+    "authors": [
+     "Alex Kershaw"
+    ],
+    "publisher": "Da Capo Press",
+    "publishedDate": "2007-08-28",
+    "description": "The Few tells the dramatic and unforgettable story of eight young Americans who joined Britain's Royal Air Force, defying their country's neutrality laws and risking their U.S. citizenship to fight side-by-side with England's finest pilots in the summer of 1940-over a year before America entered the war. Flying the lethal and elegant Spitfire, they became \"knights of the air\" and with minimal training but plenty of guts, they dueled the skilled and fearsome pilots of Germany's Luftwaffe. By October 1940, they had helped England win the greatest air battle in the history of aviation. Winston Churchill once said of all those who fought in the Battle of Britain, \"Never in the field of human conflict was so much owed by so many to so few.\" These daring Americans were the few among the \"few.\" Now, with the narrative drive and human drama that made The Bedford Boys and The Longest Winter national bestsellers, Alex Kershaw tells their story for the first time.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0306815907"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780306815904"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 329,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "2.2.2.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=1Hfp25GyP0UC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=1Hfp25GyP0UC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=1Hfp25GyP0UC&printsec=frontcover&dq=subject:history&hl=&cd=4&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=1Hfp25GyP0UC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-1Hfp25GyP0UC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 16.73,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 10.05,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=1Hfp25GyP0UC&rdid=book-1Hfp25GyP0UC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.673E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.005E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Few-sample-epub.acsm?id=1Hfp25GyP0UC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=1Hfp25GyP0UC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "lP9PmuNHbIAC",
+   "etag": "0QGTlJkXyzo",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/lP9PmuNHbIAC",
+   "volumeInfo": {
+    "title": "The Lamp, the Ice, and the Boat Called Fish",
+    "subtitle": "Based on a True Story",
+    "authors": [
+     "Jacqueline Briggs Martin"
+    ],
+    "publisher": "Houghton Mifflin Harcourt",
+    "publishedDate": "2005-11-28",
+    "description": "The Lamp, the Ice, and the Boat Called Fish tells the dramatic story of the Canadian Arctic expedition that set off in 1913 to explore the high north.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "054756225X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780547562254"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 48,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Fiction"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "2.5.3.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=lP9PmuNHbIAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=lP9PmuNHbIAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=lP9PmuNHbIAC&printsec=frontcover&dq=subject:history&hl=&cd=5&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=lP9PmuNHbIAC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-lP9PmuNHbIAC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 9.46,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 6.13,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=lP9PmuNHbIAC&rdid=book-lP9PmuNHbIAC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 9460000.0,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 6130000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Lamp_the_Ice_and_the_Boat_Called_Fis-sample-epub.acsm?id=lP9PmuNHbIAC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Lamp_the_Ice_and_the_Boat_Called_Fis-sample-pdf.acsm?id=lP9PmuNHbIAC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=lP9PmuNHbIAC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "THdJFVNCOF4C",
+   "etag": "D4hDqBvOs2c",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/THdJFVNCOF4C",
+   "volumeInfo": {
+    "title": "All Hands Down",
+    "subtitle": "The True Story of the Soviet Attack on the USS Scorpion",
+    "authors": [
+     "Kenneth Sewell",
+     "Jerome Preisler"
+    ],
+    "publisher": "Simon and Schuster",
+    "publishedDate": "2008-04-15",
+    "description": "Forty years ago, in May 1968, the submarine USS Scorpion sank in mysterious circumstances with a loss of ninety-nine lives. The tragedy occurred during the height of the Cold War between the United States and the Soviet Union, and it followed by only weeks the sinking of a Soviet sub near Hawaii. Now in All Hands Down, drawing on hundreds of hours of interviews, many with exclusive sources in the naval and intelligence communities, as well as recently declassified United States and Soviet intelligence files, Kenneth Sewell and Jerome Preisler explain what really happened to Scorpion. In January 1968, a U.S. intelligence ship, USS Pueblo, was seized by North Korea. Among other items, the North Koreans confiscated a valuable cryptographic unit that was capable of deciphering the Navy's top-secret codes. Unknown to the Navy, a traitor named John Walker had begun supplying the Navy's codes to the KGB. Once the KGB acquired the crypto unit from the North Koreans, the Russians were able to read highly classified naval communications. In March, a Soviet sub, K-129, mysteriously sank near Hawaii, hundreds of miles from its normal station in the Pacific. Soviet naval leaders mistakenly believed that a U.S. submarine was to blame for the loss, and they planned revenge. A trap was set: several Soviet vessels were gathered in the Atlantic, acting suspiciously. It would be only a matter of time before a U.S. sub was sent to investigate. That sub was Scorpion. Using the top-secret codes and the deciphering machine, the Soviets could intercept and decode communication between the Navy and Scorpion, the final element in carrying out the planned attack. All Hands Down shows how the Soviet plan was executed and explains why the truth of the attack has been officially denied for forty years. Sewell and Preisler debunk various official explanations for the tragedy and bring to life the personal stories of some of the men who were lost when Scorpion went to the bottom. This true story, finally told after exhaustive research, is more exciting than any novel.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781416564348"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1416564349"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 320,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.1.3.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=THdJFVNCOF4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=THdJFVNCOF4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=THdJFVNCOF4C&printsec=frontcover&dq=subject:history&hl=&cd=6&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=THdJFVNCOF4C&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-THdJFVNCOF4C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 6.99,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 6.99,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=THdJFVNCOF4C&rdid=book-THdJFVNCOF4C&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 6990000.0,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 6990000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/All_Hands_Down-sample-epub.acsm?id=THdJFVNCOF4C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=THdJFVNCOF4C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "V6TDAgAAQBAJ",
+   "etag": "ABbJjg4AowQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/V6TDAgAAQBAJ",
+   "volumeInfo": {
+    "title": "The Happy Prince and Other Fairy Tales",
+    "authors": [
+     "Oscar Wilde"
+    ],
+    "publisher": "Courier Corporation",
+    "publishedDate": "2012-04-26",
+    "description": "Nine charming, sensitive stories: \"The Happy Prince,\" \"The Selfish Giant,\" \"The Star-Child,\" \"The Nightingale and the Rose,\" \"The Birthday of the Infanta,\" \"The Remarkable Rocket,\" \"The Devoted Friend,\" more.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780486145969"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0486145964"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 160,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "2.3.3.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=V6TDAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=V6TDAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=V6TDAgAAQBAJ&printsec=frontcover&dq=subject:history&hl=&cd=7&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=V6TDAgAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-V6TDAgAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 5.26,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 4.18,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=V6TDAgAAQBAJ&rdid=book-V6TDAgAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 5260000.0,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 4180000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Happy_Prince_and_Other_Fairy_Tales-sample-epub.acsm?id=V6TDAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Happy_Prince_and_Other_Fairy_Tales-sample-pdf.acsm?id=V6TDAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=V6TDAgAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "FfvGevp3aSkC",
+   "etag": "+orW0Q+WObs",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/FfvGevp3aSkC",
+   "volumeInfo": {
+    "title": "The Oxford Handbook of the History of International Law",
+    "authors": [
+     "Bardo Fassbender",
+     "Anne Peters",
+     "Simone Peter"
+    ],
+    "publisher": "OUP Oxford",
+    "publishedDate": "2012-11-01",
+    "description": "The Oxford Handbook of the History of International Law provides an authoritative and original overview of the origins, concepts, and core issues of international law. The first comprehensive Handbook on the history of international law, it is a truly unique contribution to the literature of international law and relations. Pursuing both a global and an interdisciplinary approach, the Handbook brings together some sixty eminent scholars of international law, legal history, and global history from all parts of the world. Covering international legal developments from the 15th century until the end of World War II, the Handbook consists of over sixty individual chapters which are arranged in six parts. The book opens with an analysis of the principal actors in the history of international law, namely states, peoples and nations, international organisations and courts, and civil society actors. Part Two is devoted to a number of key themes of the history of international law, such as peace and war, the sovereignty of states, hegemony, religion, and the protection of the individual person. Part Three addresses the history of international law in the different regions of the world (Africa and Arabia, Asia, the Americas and the Caribbean, Europe), as well as 'encounters' between non-European legal cultures (like those of China, Japan, and India) and Europe which had a lasting impact on the body of international law. Part Four examines certain forms of 'interaction or imposition' in international law, such as diplomacy (as an example of interaction) or colonization and domination (as an example of imposition of law). The classical juxtaposition of the civilized and the uncivilized is also critically studied. Part Five is concerned with problems of the method and theory of history writing in international law, for instance the periodisation of international law, or Eurocentrism in the traditional historiography of international law. The Handbook concludes with a Part Six, entitled \"People in Portrait\", which explores the life and work of twenty prominent scholars and thinkers of international law, ranging from Muhammad al-Shaybani to Sir Hersch Lauterpacht. The Handbook will be an invaluable resource for students and scholars of international law. It provides historians with new perspectives on international law, and increases the historical and cultural awareness of scholars of international law. It is the standard reference work for the global history of international law.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780191632525"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "019163252X"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 1272,
+    "printType": "BOOK",
+    "categories": [
+     "Law"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "3.7.7.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=FfvGevp3aSkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=FfvGevp3aSkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=FfvGevp3aSkC&printsec=frontcover&dq=subject:history&hl=&cd=8&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=FfvGevp3aSkC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-FfvGevp3aSkC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 66.84,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 46.39,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=FfvGevp3aSkC&rdid=book-FfvGevp3aSkC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 6.684E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 4.639E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Oxford_Handbook_of_the_History_of_In-sample-epub.acsm?id=FfvGevp3aSkC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Oxford_Handbook_of_the_History_of_In-sample-pdf.acsm?id=FfvGevp3aSkC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=FfvGevp3aSkC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Hzd3NrTYG0oC",
+   "etag": "DmH/grHIxDg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Hzd3NrTYG0oC",
+   "volumeInfo": {
+    "title": "1788: Text Classics",
+    "authors": [
+     "Watkin Tench"
+    ],
+    "publisher": "Text Publishing",
+    "publishedDate": "2012-04-26",
+    "description": "'I do not hesitate to declare that the natives of New South Wales possess a considerable portion of that acumen, or sharpness of intellect, which bespeaks genius.' In 1788 Watkin Tench stepped ashore at Botany Bay with the First Fleet. This curious young captain of the marines was an effortless storyteller. His account of the infant colony, introduced by Tim Flannery, is the first classic of Australian literature. On leaving England, Tench was commissioned by the publisher John Debrett of Piccadilly to write a book about his adventures. In fact he wrote two. A Narrative of the Expedition to Botany Bay was published in 1789, and A Complete Account of the Settlement at Port Jackson in 1793. They are both included in full in this edition of 1788. Watkin Tench was born around 1758 in Chester, England. He joined the marine corps in 1776 and served in the American War of Independence before sailing to Botany Bay with the First Fleet. Tench returned to England in 1792. He stayed with the marine corps before retiring as a lieutenant-general in 1821. Tench died in 1833. Tim Flannery is a bestselling writer, scientist and explorer. He has published over a dozen books, most recently Among the Islands: Adventures in the Pacific. In 2011 he was appointed chief commissioner of the Australian Climate Commission. textclassics.com.au 'Tench will always remain the classic contemporary witness of our beginnings.' Les Murray 'Don't for a minute believe that Australian history is a bore. This is a marvellous read.' Sun Herald 'Tench's work is a stunning time machine: he takes us back to the promise and disaster at the beginning of our nation's story; and we stand at the edge of history, laughing and crying.' Chloe Hooper 'Tench is a most charming man of the Enlightenment, and his journal is similarly by far the most disarming and enthusiastic of the First Fleet journals. Where others damned the place, he showed curiosity.' Thomas Keneally 'I fell in love with Tench, as most of his readers do. He is a Boswell on the page: curious, ardent, gleefully self-mocking. He didn't fit my image of a stiff-lipped British imperialist at all.' Inga Clendinnen 'His record sparkles with precision, each word so apt.' Marcia Langton",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781921921919"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1921921919"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 320,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "averageRating": 1.5,
+    "ratingsCount": 4,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.1.4.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Hzd3NrTYG0oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Hzd3NrTYG0oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=Hzd3NrTYG0oC&printsec=frontcover&dq=subject:history&hl=&cd=9&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=Hzd3NrTYG0oC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-Hzd3NrTYG0oC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 3.99,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 3.99,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=Hzd3NrTYG0oC&rdid=book-Hzd3NrTYG0oC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 3990000.0,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 3990000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/1788_Text_Classics-sample-epub.acsm?id=Hzd3NrTYG0oC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/1788_Text_Classics-sample-pdf.acsm?id=Hzd3NrTYG0oC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=Hzd3NrTYG0oC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "sUalqlzbAbcC",
+   "etag": "y9eFU0A/PKQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/sUalqlzbAbcC",
+   "volumeInfo": {
+    "title": "Dreaming of Cockaigne",
+    "subtitle": "Medieval Fantasies of the Perfect Life",
+    "authors": [
+     "Herman Pleij"
+    ],
+    "publisher": "Columbia University Press",
+    "publishedDate": "2013-08-13",
+    "description": "Few aspects of American military history have been as vigorously debated as Harry Truman's decision to use atomic bombs against Japan. In this carefully crafted volume, Michael Kort describes the wartime circumstances and thinking that form the context for the decision to use these weapons, surveys the major debates related to that decision, and provides a comprehensive collection of key primary source documents that illuminate the behavior of the United States and Japan during the closing days of World War II. Kort opens with a summary of the debate over Hiroshima as it has evolved since 1945. He then provides a historical overview of thye events in question, beginning with the decision and program to build the atomic bomb. Detailing the sequence of events leading to Japan's surrender, he revisits the decisive battles of the Pacific War and the motivations of American and Japanese leaders. Finally, Kort examines ten key issues in the discussion of Hiroshima and guides readers to relevant primary source documents, scholarly books, and articles.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780231529211"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "023152921X"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 544,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "2.4.3.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=sUalqlzbAbcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=sUalqlzbAbcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=sUalqlzbAbcC&printsec=frontcover&dq=subject:history&hl=&cd=10&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=sUalqlzbAbcC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Dreaming_of_Cockaigne.html?hl=&id=sUalqlzbAbcC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Dreaming_of_Cockaigne-sample-epub.acsm?id=sUalqlzbAbcC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Dreaming_of_Cockaigne-sample-pdf.acsm?id=sUalqlzbAbcC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=sUalqlzbAbcC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "PbSBidz5qUMC",
+   "etag": "CP+n0eYzf9k",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/PbSBidz5qUMC",
+   "volumeInfo": {
+    "title": "An Unwinnable War",
+    "subtitle": "Australia in Afghanistan",
+    "authors": [
+     "Karen Middleton"
+    ],
+    "publisher": "Melbourne Univ. Publishing",
+    "publishedDate": "2011",
+    "description": "A decade on from the 2001 terrorist attacks on the United States, Australians are embroiled in one of the nation's longest military conflict-the war in Afghanistan. An Unwinnable War charts the motives, ambitions and negotiations that carried Australia into Afghanistan: from the then Prime Minister John Howard's presence in Washington DC on September 11, 2001 to the 'transition' plan to hand security to Afghan forces - all played out in the wake of increasing casualties. Based on interviews with key political and military figures in Australia and abroad, An Unwinnable War lays bare the tensions between political and military decision-making, the nature and potency of the US alliance and the influence of individual personalities in charting Australia's course in what was once dubbed the 'good war'.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780522857665"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0522857663"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 382,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=PbSBidz5qUMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=PbSBidz5qUMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=PbSBidz5qUMC&printsec=frontcover&dq=subject:history&hl=&cd=11&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=PbSBidz5qUMC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/An_Unwinnable_War.html?hl=&id=PbSBidz5qUMC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=PbSBidz5qUMC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "HYp15odnxCUC",
+   "etag": "H+geJwuzfAs",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/HYp15odnxCUC",
+   "volumeInfo": {
+    "title": "The Woman Who Loved Mankind",
+    "subtitle": "The Life of a Twentieth-Century Crow Elder",
+    "authors": [
+     "Lillian Bullshows Hogan"
+    ],
+    "publisher": "U of Nebraska Press",
+    "publishedDate": "2012-07-01",
+    "description": "The oldest living Crow at the dawn of the twenty-first century, Lillian Bullshows Hogan (1905–2003) grew up on the Crow reservation in rural Montana. In The Woman Who Loved Mankind she enthralls readers with her own long and remarkable life and the stories of her parents, part of the last generation of Crow born to nomadic ways. As a child Hogan had a miniature teepee, a fast horse, and a medicine necklace of green beads; she learned traditional arts and food gathering from her mother and experienced the bitterness of Indian boarding school. She grew up to be a complex, hard-working Native woman who drove a car, maintained a bank account, and read the local English paper but spoke Crow as her first language, practiced beadwork, tanned hides, honored clan relatives in generous giveaways, and often visited the last of the old chiefs and berdaches with her family. She married in the traditional Crow way and was a proud member of the Tobacco and Sacred Pipe societies but was also a devoted Christian who helped establish the Church of God on her reservation. Warm, funny, heartbreaking, and filled with information on Crow life, Hogan’s story was told to her daughter, Mardell Hogan Plainfeather, and to Barbara Loeb, a scholar and longtime friend of the family who recorded her words, staying true to Hogan’s expressive speaking rhythms with its echoes of traditional Crow storytelling.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780803243309"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0803243308"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 568,
+    "printType": "BOOK",
+    "categories": [
+     "Social Science"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.4.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=HYp15odnxCUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=HYp15odnxCUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=HYp15odnxCUC&printsec=frontcover&dq=subject:history&hl=&cd=12&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=HYp15odnxCUC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-HYp15odnxCUC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 62.11,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 43.1,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=HYp15odnxCUC&rdid=book-HYp15odnxCUC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 6.211E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 4.31E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Woman_Who_Loved_Mankind-sample-pdf.acsm?id=HYp15odnxCUC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=HYp15odnxCUC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "rRjNcX5jNtEC",
+   "etag": "ugNYCJ3ARz4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/rRjNcX5jNtEC",
+   "volumeInfo": {
+    "title": "Black Music",
+    "authors": [
+     "LeRoi Jones (Amiri Baraka)"
+    ],
+    "publisher": "Akashic Books",
+    "publishedDate": "2010-01-01",
+    "description": "Discusses modern jazz movements and musicians, including Ornette Coleman, John Coltrane, Sonny Rollins, Cecil Taylor, Eric Dolphy, Archie Shepp, and Sun-Ra.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781933354934"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1933354933"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 240,
+    "printType": "BOOK",
+    "categories": [
+     "Music"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.0.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=rRjNcX5jNtEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=rRjNcX5jNtEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=rRjNcX5jNtEC&printsec=frontcover&dq=subject:history&hl=&cd=13&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=rRjNcX5jNtEC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Black_Music.html?hl=&id=rRjNcX5jNtEC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Black_Music-sample-epub.acsm?id=rRjNcX5jNtEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Black_Music-sample-pdf.acsm?id=rRjNcX5jNtEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=rRjNcX5jNtEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "uM1Fx9og0B4C",
+   "etag": "mNdLiPk4aOY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/uM1Fx9og0B4C",
+   "volumeInfo": {
+    "title": "100 of the World's Greatest Mysteries",
+    "authors": [
+     "E. Randall Floyd"
+    ],
+    "publisher": "Harbor House",
+    "publishedDate": "2000",
+    "description": "Comprehensive collection of unexplained phenomena, science mysteries and historical oddities ranging from Big Bang and Killer comets to poltergeist and alien abductions.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1891799053"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781891799051"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 305,
+    "printType": "BOOK",
+    "categories": [
+     "Body, Mind & Spirit"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=uM1Fx9og0B4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=uM1Fx9og0B4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=uM1Fx9og0B4C&printsec=frontcover&dq=subject:history&hl=&cd=14&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=uM1Fx9og0B4C&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/100_of_the_World_s_Greatest_Mysteries.html?hl=&id=uM1Fx9og0B4C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=uM1Fx9og0B4C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "XOeCYCqdf0EC",
+   "etag": "MCgQbyJKqzA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/XOeCYCqdf0EC",
+   "volumeInfo": {
+    "title": "The Renaissance of the Twelfth Century",
+    "authors": [
+     "Charles Homer Haskins"
+    ],
+    "publisher": "Harvard University Press",
+    "publishedDate": "1957",
+    "description": "Examines the historical background and major cultural developments of the Mediaeval Renaissance.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0674760751"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780674760752"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 437,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=XOeCYCqdf0EC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=XOeCYCqdf0EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=XOeCYCqdf0EC&printsec=frontcover&dq=subject:history&hl=&cd=15&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=XOeCYCqdf0EC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/The_Renaissance_of_the_Twelfth_Century.html?hl=&id=XOeCYCqdf0EC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=XOeCYCqdf0EC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "3mGwudrSqjAC",
+   "etag": "p7KwOJazQo0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/3mGwudrSqjAC",
+   "volumeInfo": {
+    "title": "Humbug",
+    "subtitle": "The Art of P. T. Barnum",
+    "authors": [
+     "Neil Harris"
+    ],
+    "publisher": "University of Chicago Press",
+    "publishedDate": "1981-05-15",
+    "description": "A biography of the famous American circus owner provides a detailed look at nineteenth-century popular culture",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0226317528"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780226317526"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 337,
+    "printType": "BOOK",
+    "categories": [
+     "Biography & Autobiography"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.0.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=3mGwudrSqjAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=3mGwudrSqjAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=3mGwudrSqjAC&printsec=frontcover&dq=subject:history&hl=&cd=16&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=3mGwudrSqjAC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Humbug.html?hl=&id=3mGwudrSqjAC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Humbug-sample-epub.acsm?id=3mGwudrSqjAC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=3mGwudrSqjAC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "t7pEmb3nQ2cC",
+   "etag": "1DUhPs+aT7s",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/t7pEmb3nQ2cC",
+   "volumeInfo": {
+    "title": "A Terrible Splendor",
+    "subtitle": "Three Extraordinary Men, a World Poised for War, and the Greatest Tennis Match Ever Played",
+    "authors": [
+     "Marshall Jon Fisher"
+    ],
+    "publisher": "Broadway Books",
+    "publishedDate": "2009-04-14",
+    "description": "Before Federer versus Nadal, before Borg versus McEnroe, the greatest tennis match ever played pitted the dominant Don Budge against the seductively handsome Baron Gottfried von Cramm. This deciding 1937 Davis Cup match, played on the hallowed grounds of Wimbledon, was a battle of titans: the world's number one tennis player against the number two; America against Germany; democracy against fascism. For five superhuman sets, the duo’s brilliant shotmaking kept the Centre Court crowd–and the world–spellbound. But the match’s significance extended well beyond the immaculate grass courts of Wimbledon. Against the backdrop of the Great Depression and the brink of World War II, one man played for the pride of his country while the other played for his life. Budge, the humble hard-working American who would soon become the first man to win all four Grand Slam titles in the same year, vied to keep the Davis Cup out of the hands of the Nazi regime. On the other side of the net, the immensely popular and elegant von Cramm fought Budge point for point knowing that a loss might precipitate his descent into the living hell being constructed behind barbed wire back home. Born into an aristocratic family, von Cramm was admired for his devastating good looks as well as his unparalleled sportsmanship. But he harbored a dark secret, one that put him under increasing Gestapo surveillance. And his situation was made even more perilous by his refusal to join the Nazi Party or defend Hitler. Desperately relying on his athletic achievements and the global spotlight to keep him out of the Gestapo’s clutches, his strategy was to keep traveling and keep winning. A Davis Cup victory would make him the toast of Germany. A loss might be catastrophic. Watching the mesmerizingly intense match from the stands was von Cramm’s mentor and all-time tennis superstar Bill Tilden–a consummate showman whose double life would run in ironic counterpoint to that of his German pupil. Set at a time when sports and politics were inextricably linked, A Terrible Splendor gives readers a courtside seat on that fateful day, moving gracefully between the tennis match for the ages and the dramatic events leading Germany, Britain, and America into global war. A book like no other in its weaving of social significance and athletic spectacle, this soul-stirring account is ultimately a tribute to the strength of the human spirit. From the Hardcover edition.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780307452146"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "030745214X"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 336,
+    "printType": "BOOK",
+    "categories": [
+     "Sports & Recreation"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 7,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.3.3.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=t7pEmb3nQ2cC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=t7pEmb3nQ2cC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=t7pEmb3nQ2cC&printsec=frontcover&dq=subject:history&hl=&cd=17&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=t7pEmb3nQ2cC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-t7pEmb3nQ2cC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 20.98,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 12.61,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=t7pEmb3nQ2cC&rdid=book-t7pEmb3nQ2cC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 2.098E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.261E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/A_Terrible_Splendor-sample-epub.acsm?id=t7pEmb3nQ2cC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/A_Terrible_Splendor-sample-pdf.acsm?id=t7pEmb3nQ2cC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=t7pEmb3nQ2cC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "ogjkeCd7RGoC",
+   "etag": "iZokpQmUDqg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/ogjkeCd7RGoC",
+   "volumeInfo": {
+    "title": "Mexico",
+    "subtitle": "Narco-Violence and a Failed State?",
+    "authors": [
+     "George W. Grayson"
+    ],
+    "publisher": "Transaction Publishers",
+    "publishedDate": "2011-12-31",
+    "description": "* Mexico was named an Outstanding Academic Title of 2010 by Choice Magazine. Bloodshed connected with Mexican drug cartels, how they emerged, and their impact on the United States is the subject of this frightening book. Savage narcotics-related decapitations, castrations, and other murders have destroyed tourism in many Mexican communities and such savagery is now cascading across the border into the United States. Grayson explores how this spiral of violence emerged in Mexico, its impact on the country and its northern neighbor, and the prospects for managing it. Mexico's Institutional Revolutionary Party (PRI) ruled in Tammany Hall fashion for seventy-nine years before losing the presidency in 2000 to the center-right National Action Party (PAN). Grayson focuses on drug wars, prohibition, corruption, and other antecedents that occurred during the PRI's hegemony. He illuminates the diaspora of drug cartels and their fragmentation, analyzes the emergence of new gangs, sets forth President Felipe Calderï¿½n's strategy against vicious criminal organizations, and assesses its relative success. Grayson reviews the effect of narcotics-focused issues in U.S.-Mexican relations. He considers the possibility that Mexico may become a failed state, as feared by opinion-leaders, even as it pursues an aggressive but thus far unsuccessful crusade against the importation, processing, and sale of illegal substances. Becoming a \"failed state\" involves two dimensions of state power: its scope, or the different functions and goals taken on by governments, and its strength, or the government's ability to plan and execute policies. The Mexican state boasts an extensive scope evidenced by its monopoly over the petroleum industry, its role as the major supplier of electricity, its financing of public education, its numerous retirement and health-care programs, its control of public universities, and its dominance over the armed forces. The state has not yet taken control of drug trafficking, and its strength is steadily diminishing. This explosive book is thus a study of drug cartels, but also state disintegration.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1412815517"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781412815512"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 275,
+    "printType": "BOOK",
+    "categories": [
+     "Political Science"
+    ],
+    "averageRating": 2.0,
+    "ratingsCount": 7,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.3.4.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=ogjkeCd7RGoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=ogjkeCd7RGoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=ogjkeCd7RGoC&printsec=frontcover&dq=subject:history&hl=&cd=18&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=ogjkeCd7RGoC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-ogjkeCd7RGoC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 56.26,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 37.47,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=ogjkeCd7RGoC&rdid=book-ogjkeCd7RGoC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 5.626E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 3.747E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Mexico-sample-epub.acsm?id=ogjkeCd7RGoC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Mexico-sample-pdf.acsm?id=ogjkeCd7RGoC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=ogjkeCd7RGoC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "hxjbvn6uARcC",
+   "etag": "6+Njgq/9A2A",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/hxjbvn6uARcC",
+   "volumeInfo": {
+    "title": "How War Began",
+    "authors": [
+     "Keith F. Otterbein"
+    ],
+    "publisher": "Texas A&M University Press",
+    "publishedDate": "2004",
+    "description": "Have humans always fought and killed each other, or did they peacefully coexist until organized states developed? Is war an expression of human nature or an artifact of civilization? Questions about the origins and inherent motivations of warfare have long engaged philosophers, ethicists, and anthropologists as they speculate on the nature of human existence. In How War Began, author Keith F. Otterbein draws on primate behavior research, archaeological research, and data gathered from the Human Relations Area Files to argue for two separate origins. He identifies two types of military organization: one that developed two million years ago at the dawn of humankind, wherever groups of hunters met, and a second that developed some five thousand years ago, in four identifiable regions, when the first states arose and proceeded to embark upon military conquests. In careful detail, Otterbein marshals evidence for his case that warfare was possible and likely among early Homo sapiens. He argues from comparison with other primates, from Paleolithic rock art depicting wounded humans, and from rare skeletal remains embedded with weapon points to conclude that warfare existed and reached a peak in big game hunting societies. As the big game disappeared, so did warfare--only to reemerge once agricultural societies achieved a degree of political complexity that allowed the development of professional military organizations. Otterbein concludes his survey with an analysis of how despotism in both ancient and modern states spawns warfare. A definitive resource for anthropologists, social scientists, and historians, How War Began is written for all who areinterested in warfare, whether they be military buffs or those seeking to understand the past and the present of humankind. --Publlisher.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781603446372"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1603446370"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 309,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.1.3.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=hxjbvn6uARcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=hxjbvn6uARcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=hxjbvn6uARcC&printsec=frontcover&dq=subject:history&hl=&cd=19&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=hxjbvn6uARcC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-hxjbvn6uARcC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE_AND_RENTAL",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 24.28,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 14.59,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=hxjbvn6uARcC&rdid=book-hxjbvn6uARcC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 2.428E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.459E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     },
+     {
+      "finskyOfferType": 3,
+      "listPrice": {
+       "amountInMicros": 1.942E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.313E7,
+       "currencyCode": "AUD"
+      },
+      "rentalDuration": {
+       "unit": "DAY",
+       "count": 180.0
+      }
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/How_War_Began-sample-epub.acsm?id=hxjbvn6uARcC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/How_War_Began-sample-pdf.acsm?id=hxjbvn6uARcC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=hxjbvn6uARcC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "AKDfiWrXAx8C",
+   "etag": "zT7MoG4juCM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/AKDfiWrXAx8C",
+   "volumeInfo": {
+    "title": "Homer's Odyssey and the Near East",
+    "authors": [
+     "Bruce Louden"
+    ],
+    "publisher": "Cambridge University Press",
+    "publishedDate": "2011-01-06",
+    "description": "The Odyssey's larger plot is composed of a number of distinct genres of myth, all of which are extant in various Near Eastern cultures (Mesopotamian, West Semitic, Egyptian). Unexpectedly, the Near Eastern culture with which the Odyssey has the most parallels is the Old Testament. Consideration of how much of the Odyssey focuses on non-heroic episodes - hosts receiving guests, a king disguised as a beggar, recognition scenes between long-separated family members - reaffirms the Odyssey's parallels with the Bible. In particular the book argues that the Odyssey is in a dialogic relationship with Genesis, which features the same three types of myth that comprise the majority of the Odyssey: theoxeny, romance (Joseph in Egypt), and Argonautic myth (Jacob winning Rachel from Laban). The Odyssey also offers intriguing parallels to the Book of Jonah, and Odysseus' treatment by the suitors offers close parallels to the Gospels' depiction of Christ in Jerusalem.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781139494908"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1139494902"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=AKDfiWrXAx8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=AKDfiWrXAx8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=AKDfiWrXAx8C&printsec=frontcover&dq=subject:history&hl=&cd=20&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=AKDfiWrXAx8C&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-AKDfiWrXAx8C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 109.0,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 75.65,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=AKDfiWrXAx8C&rdid=book-AKDfiWrXAx8C&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.09E8,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 7.565E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Homer_s_Odyssey_and_the_Near_East-sample-epub.acsm?id=AKDfiWrXAx8C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Homer_s_Odyssey_and_the_Near_East-sample-pdf.acsm?id=AKDfiWrXAx8C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=AKDfiWrXAx8C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "yKo1PzexFzsC",
+   "etag": "covqvbZGVcY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/yKo1PzexFzsC",
+   "volumeInfo": {
+    "title": "A History of History",
+    "authors": [
+     "Alun Munslow"
+    ],
+    "publisher": "Routledge",
+    "publishedDate": "2012-12-20",
+    "description": "In a provocative analysis of European and American historical thinking and practice since the early 18th century, A History of History confronts several basic assumptions about the nature of history. Among these are the concept of historical realism, the belief in representationalism and the idea that the past possesses its own narrative. What is offered in this book is a far-reaching and fundamental rethinking of realist and representationalist ‘history of a particular kind’ by addressing and explaining the ideas of major philosophers of history over the past three hundred years and those of the key theorists of today. In pursuing this radical analysis, the understanding of history as a narrative is evaluated along with contemporary notions such as the continuing presence of the past and the idea of ‘its lessons’. Written by one of the leading thinkers on the subject, A History of History provides an accessible and radical history of history while offering new insights into the pressing questions of the nature, purpose and function of history. This book is an essential text for all students, teachers and consumers of history.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781136240591"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1136240594"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 232,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.2.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=yKo1PzexFzsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=yKo1PzexFzsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=yKo1PzexFzsC&printsec=frontcover&dq=subject:history&hl=&cd=21&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=yKo1PzexFzsC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-yKo1PzexFzsC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 46.11,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 33.89,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=yKo1PzexFzsC&rdid=book-yKo1PzexFzsC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 4.611E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 3.389E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/A_History_of_History-sample-epub.acsm?id=yKo1PzexFzsC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/A_History_of_History-sample-pdf.acsm?id=yKo1PzexFzsC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=yKo1PzexFzsC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "veneMNcOTt8C",
+   "etag": "0vvDdoAkBEE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/veneMNcOTt8C",
+   "volumeInfo": {
+    "title": "История государства Российского",
+    "authors": [
+     "Карамзин Николай Михайлович"
+    ],
+    "publisher": "ОЛМА Медиа Групп",
+    "publishedDate": "2012-08-10",
+    "description": "«И какая эпоха для русского — появление этой Истории! Какое сокровище для языка, для поэзии, не говоря уже о той деятельности, которая должна родиться в умах. Эту Историю можно назвать воскресителем прошедших веков бытия нашего народа, — восторженно писал поэт В. А. Жуковский по поводу труда Н. М. Карамзина. «История Государского Российского» — настоящая эпопея русской жизни. Сам автор назвал свою книгу «исторической поэмой», посвятив ей более 20 лет жизни. Мы включили в это издание и малознакомую массовому читателю Записку Карамзина «О древней и новой России в ее политическом и гражданском отношениях», написанную в 1811 году, где на основе анализа исторических фактов автор оценивает результаты десятилетнего правления Александра I.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9785373046657"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "5373046655"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 448,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.4.4.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=veneMNcOTt8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=veneMNcOTt8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "ru",
+    "previewLink": "http://books.google.com.au/books?id=veneMNcOTt8C&printsec=frontcover&dq=subject:history&hl=&cd=22&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=veneMNcOTt8C&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B0_%D0%A0.html?hl=&id=veneMNcOTt8C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B0_%D0%A0-sample-epub.acsm?id=veneMNcOTt8C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B0_%D0%A0-sample-pdf.acsm?id=veneMNcOTt8C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=veneMNcOTt8C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "aDbaqpwVflIC",
+   "etag": "wEfUOTpt+98",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/aDbaqpwVflIC",
+   "volumeInfo": {
+    "title": "Paul: A Critical Life",
+    "authors": [
+     "Jerome Murphy-O'Connor"
+    ],
+    "publisher": "OUP Oxford",
+    "publishedDate": "1996-06-27",
+    "description": "Here Jerome Murphy-O'Connor presents a completely new, and much more vivid and dramatic account of the life of Paul than has ever previously been attempted. From his childhood in Tarsus and his years as a student in Jerusalem to the successes and failures of his ministry, this biography has no peer in terms of its detailed reconstructions of Paul's movements and motives. Traditionally, the Acts of the Apostles has provided the framework for the lives of Paul. In recent years, however, the historical value of the Acts has been called into question. Despite the accuracy of many details, they have been linked in ways which reflect the interests of Luke rather than objective reality. Critical assessment is called for if they are to be incorporated into a life of Paul. The prime source for a reconstruction of the Apostle's life must be his own writings. Recent advances in the study of the letters have brought to light new depths which enables them to be used for biographical purposes. The originality of this book lies in the combination of these two approaches, which are reinforced by close attention to the social and cultural aspects of Paul's ministry as revealed by archaeology and contemporary texts—and it transforms a fountain of theological ideas into a human being.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780191500954"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "019150095X"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 432,
+    "printType": "BOOK",
+    "categories": [
+     "Religion"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.2.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=aDbaqpwVflIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=aDbaqpwVflIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=aDbaqpwVflIC&printsec=frontcover&dq=subject:history&hl=&cd=23&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=aDbaqpwVflIC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-aDbaqpwVflIC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 43.81,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 28.39,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=aDbaqpwVflIC&rdid=book-aDbaqpwVflIC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 4.381E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 2.839E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Paul_A_Critical_Life-sample-epub.acsm?id=aDbaqpwVflIC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Paul_A_Critical_Life-sample-pdf.acsm?id=aDbaqpwVflIC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=aDbaqpwVflIC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "TLbCAgAAQBAJ",
+   "etag": "qC1j2VU9l8U",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/TLbCAgAAQBAJ",
+   "volumeInfo": {
+    "title": "A General History of the Pyrates",
+    "authors": [
+     "Daniel Defoe"
+    ],
+    "publisher": "Courier Corporation",
+    "publishedDate": "2012-05-11",
+    "description": "Considered the major source of information about piracy in the early 18th century, this fascinating history by the author of Robinson Crusoe profiles the deeds of Edward (Blackbeard) Teach, Captain Kidd, Anne Bonny, others.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780486131948"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0486131947"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 800,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.1.1.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=TLbCAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=TLbCAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=TLbCAgAAQBAJ&printsec=frontcover&dq=subject:history&hl=&cd=24&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=TLbCAgAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-TLbCAgAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 30.15,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 15.89,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=TLbCAgAAQBAJ&rdid=book-TLbCAgAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 3.015E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.589E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/A_General_History_of_the_Pyrates-sample-epub.acsm?id=TLbCAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/A_General_History_of_the_Pyrates-sample-pdf.acsm?id=TLbCAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=TLbCAgAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "zcWiK755EnwC",
+   "etag": "sPo8fkeBqZo",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/zcWiK755EnwC",
+   "volumeInfo": {
+    "title": "The Fated Sky",
+    "subtitle": "Astrology in History",
+    "authors": [
+     "Benson Bobrick"
+    ],
+    "publisher": "Simon and Schuster",
+    "publishedDate": "2006-11-14",
+    "description": "An exploration of astrology's impact on history considers such topics as the fervent observance of astrology by notable Greeks and Romans, St. Thomas Aquinas's belief that astrology was compatible with Christianity, and the astrological consultations of such modern figures as Winston Churchill and Ronald Reagan. Reprint. 35,000 first printing.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780743268950"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0743268954"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 384,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=zcWiK755EnwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=zcWiK755EnwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=zcWiK755EnwC&printsec=frontcover&dq=subject:history&hl=&cd=25&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=zcWiK755EnwC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/The_Fated_Sky.html?hl=&id=zcWiK755EnwC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=zcWiK755EnwC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "owE8L_8s21EC",
+   "etag": "FXPsf3hgi4I",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/owE8L_8s21EC",
+   "volumeInfo": {
+    "title": "Cold North Killers",
+    "subtitle": "Canadian Serial Murder",
+    "authors": [
+     "Lee Mellor"
+    ],
+    "publisher": "Dundurn",
+    "publishedDate": "2012-03-03",
+    "description": "Profiles Canadian serial killers, including analyzing their crimes, childhoods and inevitable downfalls.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781459701243"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1459701240"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 470,
+    "printType": "BOOK",
+    "categories": [
+     "True Crime"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=owE8L_8s21EC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=owE8L_8s21EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=owE8L_8s21EC&printsec=frontcover&dq=subject:history&hl=&cd=26&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=owE8L_8s21EC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-owE8L_8s21EC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 26.99,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 16.22,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=owE8L_8s21EC&rdid=book-owE8L_8s21EC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 2.699E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.622E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=owE8L_8s21EC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "p2H121rsH7cC",
+   "etag": "2g4CNs3QOqI",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/p2H121rsH7cC",
+   "volumeInfo": {
+    "title": "Africa's Winds of Change",
+    "subtitle": "Memoirs of an International Tanzanian",
+    "authors": [
+     "Al Noor Kassum"
+    ],
+    "publisher": "I.B.Tauris",
+    "publishedDate": "2007-10-15",
+    "description": "The 1960s were a tumultuous period in the history of Africa as one country after another won independence from the colonial powers. This was particularly true of Tanzania as it sought to carve out a role for itself between conflicting European and inter-African interests. It was in these extraordinary times that Al Noor Kassum rose to become a prominent political figure in newly independent Tanzania. Hand-picked by Julius Nyerere - later to become the country's first President - to run for elections on a Tanganyika African National Union ticket, he embarked on a career that brought him to prominence nationally and internationally. Africa's Winds of Change documents the changes that have taken place in Tanzania from the middle of the 20th century to the present day, through the prism of an East African Asian experience. The author sheds new light on the character and legacy of Julius Nyerere, who emerges as radically different from the stereotypical anti-Western firebrand which became his image in the West. Africa's Winds of Change offers a fascinating personal history of a unique African nation at a critical stage in its development.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "184511583X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781845115838"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 163,
+    "printType": "BOOK",
+    "categories": [
+     "Biography & Autobiography"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=p2H121rsH7cC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=p2H121rsH7cC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=p2H121rsH7cC&printsec=frontcover&dq=subject:history&hl=&cd=27&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=p2H121rsH7cC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Africa_s_Winds_of_Change.html?hl=&id=p2H121rsH7cC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=p2H121rsH7cC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "GxXCAwAAQBAJ",
+   "etag": "ZrwyIq7CkWc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/GxXCAwAAQBAJ",
+   "volumeInfo": {
+    "title": "Indian Home Rule",
+    "authors": [
+     "Mahatma Gandhi"
+    ],
+    "publisher": "The Floating Press",
+    "publishedDate": "2014-05-01",
+    "description": "Activist Mahatma Gandhi is best remembered as the freedom fighter who brought the concepts of passive resistance and civil disobedience to the world's attention in his quest for Indian independence from British rule. In the volume Indian Home Rule, Gandhi sets forth a compelling series of arguments against British colonialism in India, giving voice to the viewpoints that fueled his decades-long campaign.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781776535552"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1776535553"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 101,
+    "printType": "BOOK",
+    "categories": [
+     "Philosophy"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=GxXCAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=GxXCAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=GxXCAwAAQBAJ&printsec=frontcover&dq=subject:history&hl=&cd=28&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=GxXCAwAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-GxXCAwAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 3.79,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 3.79,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=GxXCAwAAQBAJ&rdid=book-GxXCAwAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 3790000.0,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 3790000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Indian_Home_Rule-sample-epub.acsm?id=GxXCAwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=GxXCAwAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "OFN3amLGgccC",
+   "etag": "Qzt+8b/ajn0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/OFN3amLGgccC",
+   "volumeInfo": {
+    "title": "How Do I Save My Honor?",
+    "subtitle": "War, Moral Integrity, and Principled Resignation",
+    "authors": [
+     "William F. Felice"
+    ],
+    "publisher": "Rowman & Littlefield",
+    "publishedDate": "2009",
+    "description": "How Do I Save My Honor? is a powerful exploration of individual moral responsibility in a time of war. When individuals conclude that their leaders have violated fundamental ethical principles, what are they to do? Through the compelling personal stories of those in the U.S. and British government and military who struggled with these thorny issues during the war in Iraq, William F. Felice analyzes the degrees of moral responsibility that public officials, soldiers, and private citizens bear for the actions of their governments. Examining the struggles of these contemporary men and women, as well as of historical figures facing similar dilemmas, the author weighs the profound difficulties of overcoming the intense pressures of misguided loyalty, patriotism, and groupthink that predominate during war.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0742566668"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780742566668"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 223,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=OFN3amLGgccC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=OFN3amLGgccC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=OFN3amLGgccC&printsec=frontcover&dq=subject:history&hl=&cd=29&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=OFN3amLGgccC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/How_Do_I_Save_My_Honor.html?hl=&id=OFN3amLGgccC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/How_Do_I_Save_My_Honor-sample-epub.acsm?id=OFN3amLGgccC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/How_Do_I_Save_My_Honor-sample-pdf.acsm?id=OFN3amLGgccC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=OFN3amLGgccC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "2frKoqrwCYsC",
+   "etag": "ytMAO9CTofE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/2frKoqrwCYsC",
+   "volumeInfo": {
+    "title": "Dawn Over Suez",
+    "subtitle": "The Rise of American Power in the Middle East, 1953-1957",
+    "authors": [
+     "Steven Z. Freiberger"
+    ],
+    "publisher": "Ivan R. Dee",
+    "publishedDate": "2007-02-12",
+    "description": "The most definitive account of the Suez affair to date, based on newly opened archives. Mr. Freiberger argues that the crisis was only the culmination of long American irritation with British imperialism in the Middle East. Commendable...this book breaks new ground. —William B. Quandt, Foreign Affairs",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781461730323"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1461730325"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 287,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.3.1.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=2frKoqrwCYsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=2frKoqrwCYsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=2frKoqrwCYsC&printsec=frontcover&dq=subject:history&hl=&cd=30&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=2frKoqrwCYsC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-2frKoqrwCYsC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 20.51,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 12.33,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=2frKoqrwCYsC&rdid=book-2frKoqrwCYsC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 2.051E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.233E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Dawn_Over_Suez-sample-epub.acsm?id=2frKoqrwCYsC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Dawn_Over_Suez-sample-pdf.acsm?id=2frKoqrwCYsC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=2frKoqrwCYsC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "8duCpxbqUp4C",
+   "etag": "tIzQFMYtU6M",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/8duCpxbqUp4C",
+   "volumeInfo": {
+    "title": "The Civilization of the Italian Renaissance",
+    "subtitle": "A Sourcebook",
+    "authors": [
+     "Kenneth R. Bartlett"
+    ],
+    "publisher": "University of Toronto Press",
+    "publishedDate": "2011",
+    "description": "The Civilization of the Italian Renaissance brings together a selection of primary source documents designed to introduce students to the richness of the period. For this edition, a new chapter on Dante and his time provides a useful transition to the Renaissance from the culture of the Middle Ages. There are also new selections on warfare, education, Florence, humanism, the Church, and the later Renaissance. The introductions to the readings are revised, and an essay on how to read historical documents is included.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781442604858"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1442604859"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 312,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.3.0.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=8duCpxbqUp4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=8duCpxbqUp4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=8duCpxbqUp4C&printsec=frontcover&dq=subject:history&hl=&cd=31&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=8duCpxbqUp4C&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/The_Civilization_of_the_Italian_Renaissa.html?hl=&id=8duCpxbqUp4C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=8duCpxbqUp4C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "t2qgiCWI0T4C",
+   "etag": "+PY9+/vf2Fs",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/t2qgiCWI0T4C",
+   "volumeInfo": {
+    "title": "Erotic Nihilism in Late Imperial Russia",
+    "subtitle": "The Case of Mikhail Artsybashev's Sanin",
+    "authors": [
+     "Otto Boele"
+    ],
+    "publisher": "Univ of Wisconsin Press",
+    "publishedDate": "2009-11-24",
+    "description": "Banned shortly after its publication in 1907, the Russian novel Sanin scandalized readers with the sexual exploits of its eponymous hero. Wreaking havoc on the fictional town he visits in Mikhail Artsybashev’s story, the character Sanin left an even deeper imprint on the psyche of the real-life Russian public. Soon “Saninism” became the buzzword for the perceived faults of the nation. Seen as promoting a wave of hedonistic, decadent behavior, the novel was suppressed for decades, leaving behind only the rumor of its supposedly epidemic effect on a vulnerable generation of youth. Who were the Saninists, and what was their “teaching” all about? Delving into police reports, newspaper clippings, and amateur plays, Otto Boele finds that Russian youth were not at all swept away by the self-indulgent lifestyle of the novel’s hero. In fact, Saninism was more smoke than fire—a figment of the public imagination triggered by anxieties about the revolution of 1905 and the twilight of the Russian empire. The reception of the novel, Boele shows, reflected much deeper worries caused by economic reforms, an increase in social mobility, and changing attitudes toward sexuality. Showing how literary criticism interacts with the age-old medium of rumor, Erotic Nihilism in Late Imperial Russia offers a meticulous analysis of the scandal’s coverage in the provincial press and the reactions of young people who appealed to their peers to resist the novel’s nihilistic message. By examining the complex dialogue between readers and writers, children and parents, this study provides fascinating insights into Russian culture on the eve of World War I.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0299232735"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780299232733"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 255,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=t2qgiCWI0T4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=t2qgiCWI0T4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=t2qgiCWI0T4C&printsec=frontcover&dq=subject:history&hl=&cd=32&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=t2qgiCWI0T4C&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-t2qgiCWI0T4C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 21.33,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 12.82,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=t2qgiCWI0T4C&rdid=book-t2qgiCWI0T4C&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 2.133E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.282E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Erotic_Nihilism_in_Late_Imperial_Russia-sample-epub.acsm?id=t2qgiCWI0T4C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Erotic_Nihilism_in_Late_Imperial_Russia-sample-pdf.acsm?id=t2qgiCWI0T4C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=t2qgiCWI0T4C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "QV1v0adYXR0C",
+   "etag": "oiErgDq4qKc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/QV1v0adYXR0C",
+   "volumeInfo": {
+    "title": "Barron's SAT Subject Test World History",
+    "authors": [
+     "Marilynn Hitchens",
+     "Heidi Roupp"
+    ],
+    "publisher": "Barron's Educational Series",
+    "publishedDate": "2007-10-12",
+    "description": "(back cover) Updated to reflect the most recent SAT Subject Tests in World History, and to review the most recent world events Two full-length practice exams with answers and explanations Practice tests reflect recent actual tests in length, question types, and degree of difficulty A 25-chapter review of world history is organized chronologically and by categories covering major events, ideas, and personages Additional practice and review questions at the end of each chapter.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0764192809"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780764192807"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.0.1.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=QV1v0adYXR0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=QV1v0adYXR0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=QV1v0adYXR0C&printsec=frontcover&dq=subject:history&hl=&cd=33&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=QV1v0adYXR0C&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Barron_s_SAT_Subject_Test_World_History.html?hl=&id=QV1v0adYXR0C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Barron_s_SAT_Subject_Test_World_History-sample-epub.acsm?id=QV1v0adYXR0C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Barron_s_SAT_Subject_Test_World_History-sample-pdf.acsm?id=QV1v0adYXR0C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=QV1v0adYXR0C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "l4qKYovhEYIC",
+   "etag": "qifL3C364FE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/l4qKYovhEYIC",
+   "volumeInfo": {
+    "title": "Connections After Colonialism",
+    "subtitle": "Europe and Latin America in the 1820s",
+    "authors": [
+     "Matthew Brown",
+     "Gabriel Paquette"
+    ],
+    "publisher": "University of Alabama Press",
+    "publishedDate": "2013-01-15",
+    "description": "Contributing to the historiography of transnational and global transmission of ideas, Connections after Colonialism examines relations between Europe and Latin America during the tumultuous 1820s. In the Atlantic World, the 1820s was a decade marked by the rupture of colonial relations, the independence of Latin America, and the ever-widening chasm between the Old World and the New. Connections after Colonialism, edited by Matthew Brown and Gabriel Paquette, builds upon recent advances in the history of colonialism and imperialism by studying former colonies and metropoles through the same analytical lens, as part of an attempt to understand the complex connections—political, economic, intellectual, and cultural—between Europe and Latin America that survived the demise of empire. Historians are increasingly aware of the persistence of robust links between Europe and the new Latin American nations. This book focuses on connections both during the events culminating with independence and in subsequent years, a period strangely neglected in European and Latin American scholarship. Bringing together distinguished historians of both Europe and America, the volume reveals a new cast of characters and relationships ranging from unrepentant American monarchists, compromise seeking liberals in Lisbon and Madrid who envisioned transatlantic federations, and British merchants in the River Plate who saw opportunity where others saw risk to public moralists whose audiences spanned from Paris to Santiago de Chile and plantation owners in eastern Cuba who feared that slave rebellions elsewhere in the Caribbean would spread to their island. Contributors Matthew Brown / Will Fowler / Josep M. Fradera / Carrie Gibson / Brian Hamnett / Maurizio Isabella / Iona Macintyre / Scarlett O’Phelan Godoy / Gabriel Paquette / David Rock / Christopher Schmidt-Nowara / Jay Sexton / Reuben Zahler",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780817317768"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0817317767"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 330,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.0.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=l4qKYovhEYIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=l4qKYovhEYIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=l4qKYovhEYIC&printsec=frontcover&dq=subject:history&hl=&cd=34&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=l4qKYovhEYIC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Connections_After_Colonialism.html?hl=&id=l4qKYovhEYIC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=l4qKYovhEYIC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "wzYElwFYyzYC",
+   "etag": "frJIcHg1kRM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/wzYElwFYyzYC",
+   "volumeInfo": {
+    "title": "Our Inheritance in the Great Pyramid",
+    "authors": [
+     "Charles Piazzi Smyth"
+    ],
+    "publisher": "Cambridge University Press",
+    "publishedDate": "2012-02-16",
+    "description": "Smyth's 1864 work, based on his measurements, argues that the Great Pyramid of Giza was built under divine guidance.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781108044417"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1108044417"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 464,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=wzYElwFYyzYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=wzYElwFYyzYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=wzYElwFYyzYC&printsec=frontcover&dq=subject:history&hl=&cd=35&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=wzYElwFYyzYC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Our_Inheritance_in_the_Great_Pyramid.html?hl=&id=wzYElwFYyzYC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=wzYElwFYyzYC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "QtSMw60pThwC",
+   "etag": "2v4nqUNUruc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/QtSMw60pThwC",
+   "volumeInfo": {
+    "title": "Producing Desire",
+    "subtitle": "Changing Sexual Discourse in the Ottoman Middle East, 1500-1900",
+    "authors": [
+     "Dror Zeʼevi"
+    ],
+    "publisher": "Univ of California Press",
+    "publishedDate": "2006",
+    "description": "\"Producing Desire is a major, highly original, and often surprising presentation of sexual attitudes and practices in the Ottoman Middle East. The author uses a wide variety of contemporary sources to shed new light and draw original conclusions regarding changing attitudes toward sexuality in the Ottoman Empire before and after western influences. These influences are shown to have inhibited forms of male sexual expression that had occurred more freely in an earlier period. I recommend it enthusiastically for students, faculty, and the general public.\"--Nikki R. Keddie, author of Modern Iran: Roots and Results of Revolution \"Using the concept of multiple scripts, Dror Ze'evi brings together into a powerfully analytical focus several sexual discourses to give us a historically grounded and nuanced story about Ottoman sexual thought and practices. No other work brings these 'scripts' together the way Ze'evi has attempted and successfully accomplished.\"--Afsaneh Najmabadi, author of Women with Mustaches and Men without Beards: Gender and Sexual Anxieties of Iranian Modernity \"As a broad treatment of questions of sexuality over four centuries, Producing Desire not only takes up a topic that no one else has treated systematically, but also aims ambitiously to talk about change over time, and in particular to describe the ambiguous and uneasy outlook of the nineteenth century, when various discourses about sex were challenged.\"--Leslie Peirce, author of Morality Tales: Law and Gender in the Ottoman Court of Aintab",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0520245644"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780520245648"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 223,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=QtSMw60pThwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=QtSMw60pThwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=QtSMw60pThwC&printsec=frontcover&dq=subject:history&hl=&cd=36&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=QtSMw60pThwC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Producing_Desire.html?hl=&id=QtSMw60pThwC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Producing_Desire-sample-epub.acsm?id=QtSMw60pThwC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=QtSMw60pThwC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "t5otQOxwTE8C",
+   "etag": "ma4lG1MeOoI",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/t5otQOxwTE8C",
+   "volumeInfo": {
+    "title": "The Quest for Origins",
+    "subtitle": "Who First Discovered and Settled New Zealand the Pacific Islands?",
+    "authors": [
+     "K. R. Howe"
+    ],
+    "publisher": "University of Hawaii Press",
+    "publishedDate": "2003-01",
+    "description": "Islanders' origins. 5.25x7.75\". Annotation.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0824827503"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780824827502"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 235,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "2.0.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=t5otQOxwTE8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=t5otQOxwTE8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=t5otQOxwTE8C&printsec=frontcover&dq=subject:history&hl=&cd=37&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=t5otQOxwTE8C&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-t5otQOxwTE8C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 22.0,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 13.22,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=t5otQOxwTE8C&rdid=book-t5otQOxwTE8C&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 2.2E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.322E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Quest_for_Origins-sample-pdf.acsm?id=t5otQOxwTE8C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=t5otQOxwTE8C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "5SDjn3GMzcoC",
+   "etag": "0WB6uvcOTS8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/5SDjn3GMzcoC",
+   "volumeInfo": {
+    "title": "After Such Knowledge",
+    "subtitle": "Memory, History, and the Legacy of the Holocaust",
+    "authors": [
+     "Eva Hoffman"
+    ],
+    "publisher": "PublicAffairs",
+    "publishedDate": "2011-08-02",
+    "description": "As the Holocaust recedes in time, the guardianship of its legacy is being passed on from its survivors and witnesses to the next generation. How should they, in turn, convey its knowledge to others? What are the effects of a traumatic past on its inheritors? And what are the second-generation's responsibilities to its received memories? In this meditation on the long aftermath of atrocity, Eva Hoffman--a child of Polish Jews who survived the Holocaust with the help of neighbors, but whose entire families perished--probes these questions through personal reflections, and through broader explorations of the historical, psychological, and moral implications of the second-generation experience. She examines the subterranean processes through which private memories of suffering are transmitted, and the more willful stratagems of collective memory. She traces the \"second generation's\" trajectory from childhood intimations of horror, through its struggles between allegiance and autonomy, and its complex transactions with children of perpetrators. As she guides us through the poignant juncture at which living memory must be relinquished, she asks what insights can be carried from the past to the newly problematic present, and urges us to transform potent family stories into a fully informed understanding of a forbidding history.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1610391357"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781610391351"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 321,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.7.6.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=5SDjn3GMzcoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=5SDjn3GMzcoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=5SDjn3GMzcoC&printsec=frontcover&dq=subject:history&hl=&cd=38&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=5SDjn3GMzcoC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-5SDjn3GMzcoC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 14.68,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 8.43,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=5SDjn3GMzcoC&rdid=book-5SDjn3GMzcoC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.468E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 8430000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/After_Such_Knowledge-sample-epub.acsm?id=5SDjn3GMzcoC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/After_Such_Knowledge-sample-pdf.acsm?id=5SDjn3GMzcoC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=5SDjn3GMzcoC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "ZZn3JnHW868C",
+   "etag": "V8HpCCyLDyA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/ZZn3JnHW868C",
+   "volumeInfo": {
+    "title": "The Virtual Representation of the Past",
+    "authors": [
+     "Mark Greengrass",
+     "Lorna M. Hughes"
+    ],
+    "publisher": "Ashgate Publishing, Ltd.",
+    "publishedDate": "2008",
+    "description": "This unique book critically evaluates the virtual representation of the past through digital media. A distinguished team of leading experts in the field approach digital research in history and archaeology from contrasting viewpoints, including philosoph",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0754672883"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780754672883"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 226,
+    "printType": "BOOK",
+    "categories": [
+     "Business & Economics"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=ZZn3JnHW868C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=ZZn3JnHW868C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=ZZn3JnHW868C&printsec=frontcover&dq=subject:history&hl=&cd=39&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=ZZn3JnHW868C&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/The_Virtual_Representation_of_the_Past.html?hl=&id=ZZn3JnHW868C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=ZZn3JnHW868C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "q6_56x5tB7gC",
+   "etag": "La1Xs0wlxlY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/q6_56x5tB7gC",
+   "volumeInfo": {
+    "title": "The Coming Of Post-industrial Society",
+    "authors": [
+     "Daniel Bell"
+    ],
+    "publisher": "Basic Books",
+    "publishedDate": "2008-08-05",
+    "description": "In 1976, Daniel Bell's historical work predicted a vastly different society developing--one that will rely on the \"economics of information\" rather than the \"economics of goods.\" Bell argued that the new society would not displace the older one but rather overlie some of the previous layers just as the industrial society did not completely eradicate the agrarian sectors of our society. The post-industrial society's dimensions would include the spread of a knowledge class, the change from goods to services and the role of women. All of these would be dependent on the expansion of services in the economic sector and an increasing dependence on science as the means of innovating and organizing technological change.Bell prophetically stated in The Coming of the Post-Industrial Society that we should expect \"... new premises and new powers, new constraints and new questions--with the difference that these are now on a scale that had never been previously imagined in world history.\"",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0786724730"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780786724734"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 352,
+    "printType": "BOOK",
+    "categories": [
+     "Business & Economics"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.0.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=q6_56x5tB7gC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=q6_56x5tB7gC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=q6_56x5tB7gC&printsec=frontcover&dq=subject:history&hl=&cd=40&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=q6_56x5tB7gC&dq=subject:history&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/The_Coming_Of_Post_industrial_Society.html?hl=&id=q6_56x5tB7gC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=q6_56x5tB7gC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  }
+ ]
+}

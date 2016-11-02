@@ -1,0 +1,3117 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 696,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "KlKTAbChpxMC",
+   "etag": "3pihs21smr0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/KlKTAbChpxMC",
+   "volumeInfo": {
+    "title": "The Pink Ribbon Diet",
+    "subtitle": "A Revolutionary New Weight Loss Plan to Lower Your Breast Cancer Risk",
+    "authors": [
+     "Mary Flynn",
+     "Nancy Verde Barr"
+    ],
+    "publisher": "Da Capo Press",
+    "publishedDate": "2010",
+    "description": "In a study funded by the Susan G. Komen for the Cure® Foundation, Dr. Mary Flynn researched the effects of an olive-oil-and-plant-based diet on overweight women who had previously undergone treatment for invasive breast cancer. Now, she reveals her findings in The Pink Ribbon Diet. Not only is this program more effective than the National Cancer Institute’s recommended low-fat diet, but it is also a diet that women find more satisfying and can thereby sustain for life. The Pink Ribbon Diet features 150 recipes that naturally emphasize Mediterranean foods with nutrients thought to lower breast-cancer risk and foods that improve biomarkers, indicators of risk. This diet has been effective in helping women who have had breast cancer and those at risk of getting it to avoid unhealthy weight gain and safeguard their health.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780738214382"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0738214388"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 287,
+    "printType": "BOOK",
+    "categories": [
+     "Cooking"
+    ],
+    "averageRating": 3.5,
+    "ratingsCount": 3,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.3.3.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=KlKTAbChpxMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=KlKTAbChpxMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=KlKTAbChpxMC&printsec=frontcover&dq=subject:health&hl=&cd=1&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=KlKTAbChpxMC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-KlKTAbChpxMC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 17.78,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 10.69,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=KlKTAbChpxMC&rdid=book-KlKTAbChpxMC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.778E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.069E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Pink_Ribbon_Diet-sample-epub.acsm?id=KlKTAbChpxMC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=KlKTAbChpxMC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "3VPqP5FDLs0C",
+   "etag": "QuWe/81Y6WY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/3VPqP5FDLs0C",
+   "volumeInfo": {
+    "title": "How Not to be My Patient",
+    "subtitle": "A Physician's Secrets for Staying Healthy and Surviving Any Diagnosis",
+    "authors": [
+     "Edward T. Creagan",
+     "Sandra Wendel"
+    ],
+    "publisher": "Write On, Inc.",
+    "publishedDate": "2003",
+    "description": "A leading cancer specialist shares the secrets of good health as he explains how to eliminate the poor lifestyle choices and risk factors that promote cancer and other serious ailments and offers advice on taking control of one's health care, building a partnership with doctors, and more. Original. 75,000 first printing.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "075730110X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780757301100"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 310,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=3VPqP5FDLs0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=3VPqP5FDLs0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=3VPqP5FDLs0C&printsec=frontcover&dq=subject:health&hl=&cd=2&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=3VPqP5FDLs0C&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/How_Not_to_be_My_Patient.html?hl=&id=3VPqP5FDLs0C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=3VPqP5FDLs0C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "ALVc9UTpqOAC",
+   "etag": "OLHL5XvvVqo",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/ALVc9UTpqOAC",
+   "volumeInfo": {
+    "title": "The Spark",
+    "subtitle": "The 28-Day Breakthrough Plan for Losing Weight, Getting Fit, and Transforming Your Life",
+    "authors": [
+     "Chris Downie"
+    ],
+    "publisher": "Hay House, Inc",
+    "publishedDate": "2011-02-01",
+    "description": "From the experts who created SparkPeople.com, one of the most successful online weight-loss programs to date, comes The Spark, a ground-breaking book that focuses on what you can do, instead of what you can't do.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781401935771"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "140193577X"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 273,
+    "printType": "BOOK",
+    "categories": [
+     "Health"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 7,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.3.3.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=ALVc9UTpqOAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=ALVc9UTpqOAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=ALVc9UTpqOAC&printsec=frontcover&dq=subject:health&hl=&cd=3&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=ALVc9UTpqOAC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-ALVc9UTpqOAC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 6.99,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 4.53,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=ALVc9UTpqOAC&rdid=book-ALVc9UTpqOAC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 6990000.0,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 4530000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Spark-sample-epub.acsm?id=ALVc9UTpqOAC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Spark-sample-pdf.acsm?id=ALVc9UTpqOAC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=ALVc9UTpqOAC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "itxfXK1yrbwC",
+   "etag": "Hh/vAOiwywQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/itxfXK1yrbwC",
+   "volumeInfo": {
+    "title": "Is Religion Good for Your Health?",
+    "subtitle": "The Effects of Religion on Physical and Mental Health",
+    "authors": [
+     "Harold George Koenig"
+    ],
+    "publisher": "Psychology Press",
+    "publishedDate": "1997",
+    "description": "Is Religion Good for Your Health? takes you deep into the heart of the ageless debate on the importance of religion and faith to physical and mental health. On the one hand, you will learn about important research findings from cross-sectional, longitudinal, and intervention studies that have demonstrated positive effects of religious belief on both mental and physical health. On the other hand, you will learn how the vast clinical experiences of leading health experts suggest that religion can have negative effects on health. Integral to the book's exploration of the relationship between health and religion are the trends that have occurred in society over the last century. You will learn about significant demographic changes, changes in health and health care, and shifts in values, attitudes, and religious conviction, all of which have direct implications for health care providers, the clergy, the “baby boomers,” and older adults. From Author Harold Koenig, a leading expert on religion and health who has frequently been interviewed by major broadcasting networks such as ABC, National Public Radio, the British Broadcasting Corporation, NBC, CBS, and “Ivanhoe Broadcast News,” you will also learn about: pathological uses of religion the need for cooperation and collaboration between health and religious professionals studies on the relationship of religious beliefs and practice to physical conditions such as blood pressure, heart disease, stroke, and cancer links between religious behavior and depression, anxiety, and drug use the waning of religion's influence in America first-hand accounts from patients who have faced painful and/or life-threatening illness As Is Religion Good for Your Health? analyzes the pathological aspects of religion, you will begin to understand how religious beliefs have the capacity to strongly influence people's lives and their health, whether positively or negatively. Health care providers, public policy experts, religious professionals, medical researchers, and medical students will find the book's overview of the issues at stake, particularly the implications for our public health care system, crucial to the advancement of health care practice into the next century.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0789001667"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780789001665"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 135,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=itxfXK1yrbwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=itxfXK1yrbwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=itxfXK1yrbwC&printsec=frontcover&dq=subject:health&hl=&cd=4&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=itxfXK1yrbwC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Is_Religion_Good_for_Your_Health.html?hl=&id=itxfXK1yrbwC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Is_Religion_Good_for_Your_Health-sample-epub.acsm?id=itxfXK1yrbwC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=itxfXK1yrbwC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "tI6PO9jAPZwC",
+   "etag": "BVFIMw+LiAY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/tI6PO9jAPZwC",
+   "volumeInfo": {
+    "title": "Perfect Health",
+    "subtitle": "The Natural Way",
+    "authors": [
+     "Mary-Ann Shearer"
+    ],
+    "publisher": "BenBella Books, Inc.",
+    "publishedDate": "2013-08-21",
+    "description": "So many diet programs emphasize a gimmick—counting calories, cutting back on carbs—in order to lose weight. Although these measures may result in weight loss, the weight often comes back and your health may be compromised in the process. In order to lose weight safely and easily, you must change the way you view diet and weight loss: Losing weight is not just about getting thinner…it’s about gaining health. Perfect Health: The Natural Way is about feeding your body what it was designed to eat. This program is not about calorie-counting or deprivation, but about eating an abundance of good, healthy food and understanding what your body needs. By concentrating on getting healthy instead of dieting, you will not just lose weight but radiate health and vitality. Combining scientific findings and common sense, Mary-Ann Shearer clears up the confusion surrounding various diets and explains what we need to eat in order to gain total health: What is the “perfect food” that our bodies are designed to eat? Do we really need animal protein in order to be healthy? What is the truth about healthy fats? How does fasting help the body heal? This book explains not just what we should eat and why, but also offers valuable suggestions on how to integrate this new way of eating into your lifestyle. Included is a section featuring delicious, easy-to-prepare, healthy recipes that will help you begin your journey to PERFECT HEALTH!",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781935251170"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1935251171"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 360,
+    "printType": "BOOK",
+    "categories": [
+     "Cooking"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "3.4.4.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=tI6PO9jAPZwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=tI6PO9jAPZwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=tI6PO9jAPZwC&printsec=frontcover&dq=subject:health&hl=&cd=5&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=tI6PO9jAPZwC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-tI6PO9jAPZwC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 13.49,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 8.24,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=tI6PO9jAPZwC&rdid=book-tI6PO9jAPZwC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.349E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 8240000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Perfect_Health-sample-epub.acsm?id=tI6PO9jAPZwC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=tI6PO9jAPZwC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "1f_RoDUKydgC",
+   "etag": "O7h1z6c7IQw",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/1f_RoDUKydgC",
+   "volumeInfo": {
+    "title": "Vegan for Life",
+    "subtitle": "Everything You Need to Know to Be Healthy and Fit on a Plant-Based Diet",
+    "authors": [
+     "Jack Norris",
+     "Virginia Messina"
+    ],
+    "publisher": "Da Capo Press",
+    "publishedDate": "2011",
+    "description": "Are you considering going vegan, but you're not sure how to start? Are you already committed to an animal-free diet, but are unclear about how to get proper nutrients? Vegan for Life is your comprehensive, go-to guide for optimal plant-based nutrition. Registered dietitians and long-time vegans Jack Norris and Virginia Messina debunk some of the most persistent myths about vegan nutrition and provide essential information about getting enough calcium and protein, finding the best supplements, and understanding the \"real deal\" about soy. Covering everything from a six-step transition plan to meeting calorie and nutrient needs during pregnancy and breastfeeding, Vegan for Life is the guide for aspiring and veteran vegans alike, complete with an easy-to-use food chart, tasty substitutions, sample menus, and expansive resources.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780738214979"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0738214973"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 304,
+    "printType": "BOOK",
+    "categories": [
+     "Cooking"
+    ],
+    "averageRating": 3.5,
+    "ratingsCount": 5,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.7.9.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=1f_RoDUKydgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=1f_RoDUKydgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=1f_RoDUKydgC&printsec=frontcover&dq=subject:health&hl=&cd=6&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=1f_RoDUKydgC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-1f_RoDUKydgC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 17.83,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 10.72,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=1f_RoDUKydgC&rdid=book-1f_RoDUKydgC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.783E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.072E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Vegan_for_Life-sample-epub.acsm?id=1f_RoDUKydgC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=1f_RoDUKydgC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "ZdjuAVVqCzMC",
+   "etag": "uWHh59SupqY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/ZdjuAVVqCzMC",
+   "volumeInfo": {
+    "title": "The Food-Mood-Body Connection",
+    "authors": [
+     "Gary Null"
+    ],
+    "publisher": "Seven Stories Press",
+    "publishedDate": "2001-12-04",
+    "description": "h and Physical Well-Being Health expert and best-selling author Gary Null here reveals how nutritional and environmental approaches can effectively treat many health problems. Exploring the effects of food allergies, vitamin deficiencies and environmental toxins on mental and emotional health, he also covers disorders in children and lists current articles linking nutritional factors with health concerns.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "158322257X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781583222577"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 485,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "averageRating": 3.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.0.1.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=ZdjuAVVqCzMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=ZdjuAVVqCzMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=ZdjuAVVqCzMC&printsec=frontcover&dq=subject:health&hl=&cd=7&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=ZdjuAVVqCzMC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/The_Food_Mood_Body_Connection.html?hl=&id=ZdjuAVVqCzMC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Food_Mood_Body_Connection-sample-epub.acsm?id=ZdjuAVVqCzMC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Food_Mood_Body_Connection-sample-pdf.acsm?id=ZdjuAVVqCzMC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=ZdjuAVVqCzMC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "BnH7umhlC7wC",
+   "etag": "XmJdEX1pELw",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/BnH7umhlC7wC",
+   "volumeInfo": {
+    "title": "Eat what You Love",
+    "subtitle": "Love what You Eat : how to Break Your Eat-repent-repeat Cycle",
+    "authors": [
+     "Michelle May"
+    ],
+    "publisher": "Greenleaf Book Group",
+    "publishedDate": "2009-10-01",
+    "description": "May helps you rediscover when, what, and how much to eat without restrictive rules. You'll learn the truth about nutrition and how to stop using exercise to earn the right to eat. You'll finally experience the pleasure of eating the foods you love-- without guilt or binging.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781608320035"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1608320030"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 405,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 5,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=BnH7umhlC7wC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=BnH7umhlC7wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=BnH7umhlC7wC&printsec=frontcover&dq=subject:health&hl=&cd=8&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=BnH7umhlC7wC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Eat_what_You_Love.html?hl=&id=BnH7umhlC7wC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=BnH7umhlC7wC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "hRUbfN6bmn0C",
+   "etag": "Hnxpplynm8I",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/hRUbfN6bmn0C",
+   "volumeInfo": {
+    "title": "Raising Healthy Eaters",
+    "subtitle": "100 Tips For Parents",
+    "authors": [
+     "Henry Legere"
+    ],
+    "publisher": "Da Capo Press",
+    "publishedDate": "2009",
+    "description": "One of the most important steps that parents can take to prevent childhood obesity or simply to get their children to a healthier weight is to teach them good eating habits. Establishing such habits at an early age will contribute to lifelong health. Indeed, when kids learn that a snack should be an apple or carrots instead of chips or a candy bar-a deceptively difficult lesson to teach-they are better equipped to resist the temptation of junk food on a regular basic. In Raising Healthy Eaters, Dr. Legere offers 100 easy-to-follow and easy-to-implement tips for parents of children of all ages and eating preferences. He includes healthy, quick recipes that kids will actually like, as well as specific suggestions for parents who want to serve only organic foods or whose children have allergies or aversions. Raising Healthy Eaters is the essential resource for parents working to raise healthy kids in a fast-food world.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780786729814"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0786729813"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 189,
+    "printType": "BOOK",
+    "categories": [
+     "FAMILY & RELATIONSHIPS"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.3.3.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=hRUbfN6bmn0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=hRUbfN6bmn0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=hRUbfN6bmn0C&printsec=frontcover&dq=subject:health&hl=&cd=9&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=hRUbfN6bmn0C&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-hRUbfN6bmn0C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 14.63,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 8.4,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=hRUbfN6bmn0C&rdid=book-hRUbfN6bmn0C&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.463E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 8400000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Raising_Healthy_Eaters-sample-epub.acsm?id=hRUbfN6bmn0C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=hRUbfN6bmn0C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "WO9GJAT_L_EC",
+   "etag": "4jPgVoUuSX4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/WO9GJAT_L_EC",
+   "volumeInfo": {
+    "title": "Healthy Eating, Healthy World",
+    "subtitle": "Unleashing the Power of Plant-Based Nutrition",
+    "authors": [
+     "J. Morris Hicks"
+    ],
+    "publisher": "BenBella Books, Inc.",
+    "publishedDate": "2013-08-21",
+    "description": "Imagine that the New York Times tomorrow released some amazing news. A health treatment has been discovered that literally cures most forms of heart disease. But not just that. This treatment has a dramatic impact on most of the diseases Westerners face, including cancer, obesity, autoimmune diseases, diabetes, osteoporosis, Alzheimer's, and many many others. And this treatment is so inexpensive to administer that two-thirds of the medical establishment can be shut down as no longer serving any useful function. It's really too much to believe, isn't it? But there's more. This treatment has miraculous implications for the environment. By applying this treatment, we can eliminate the largest source of global warming, and dramatically reduce the waste that is polluting our water supply. We'll also dramatically improve the health and animal population of our oceans and seas. And there's more. By applying this treatment, we'll dramatically increase the supply of arable land, lowering the cost food and allowing us to feed everyone on this planet. Starvation can become a thing of the past. And one last thing. This treatment also has enormous moral implications, allowing us to eliminate almost all of the pain and suffering we are inflicting on the animals, most of which is hidden away from view, but is morally repulsive to anyone exposed to this suffering. Now what if I told you that we don't have to wait for tomorrow's New York Times, that this treatment has been found, and that the amount of scientific data supporting the claims I just made is overwhelming. The \"miracle\" treatment is simple. It's eating a whole grain, plant-based diet. Skeptical? I'm not surprised. But by the end of this book you'll be exposed to the overwhelming amount of evidence that supports every claim made above. You'll also get to hear the counterarguments made by skeptics and you'll get to decide for yourself whether these claims are true. It's my hope that by the end of this book you'll be convinced and join our movement. You may just save your life and the planet in the bargain. This revolutionary book isHealthy People, Healthy Planet: Unleashing the Power of Plant-based Nutritionby J. Morris Hicks, and it is th book that finally tackles all compelling reasons for adopting a plant-based diet -- from the environment to solving the world's hunger crisis. Additionally, T. Colin Campbell, acclaimed author of the bestselling bookThe China Study, provides a riveting foreword toHealthy People, Healthy Planet. After reading this book, it'll be nearly impossible to ignore the truth: people were not meant to eat animals or animal products, and the time has come to stop.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781936661268"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1936661268"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 241,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.6.5.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=WO9GJAT_L_EC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=WO9GJAT_L_EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=WO9GJAT_L_EC&printsec=frontcover&dq=subject:health&hl=&cd=10&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=WO9GJAT_L_EC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-WO9GJAT_L_EC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 15.57,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 8.36,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=WO9GJAT_L_EC&rdid=book-WO9GJAT_L_EC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.557E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 8360000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Healthy_Eating_Healthy_World-sample-epub.acsm?id=WO9GJAT_L_EC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=WO9GJAT_L_EC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "F4QQbNY4s8oC",
+   "etag": "P+mPGG+abRU",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/F4QQbNY4s8oC",
+   "volumeInfo": {
+    "title": "All in My Head",
+    "subtitle": "An Epic Quest to Cure an Unrelenting, Totally Unreasonable, and Only Slightly Enlightening Headache",
+    "authors": [
+     "Paula Kamen"
+    ],
+    "publisher": "Da Capo Press",
+    "publishedDate": "2009",
+    "description": "All in My Head is the remarkable story of patience, acceptance, and perseverance in the face of terrifying pain due to a never-ending headache.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0786736755"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780786736751"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 368,
+    "printType": "BOOK",
+    "categories": [
+     "Biography & Autobiography"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 4,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.2.4.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=F4QQbNY4s8oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=F4QQbNY4s8oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=F4QQbNY4s8oC&printsec=frontcover&dq=subject:health&hl=&cd=11&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=F4QQbNY4s8oC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-F4QQbNY4s8oC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 15.68,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 8.42,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=F4QQbNY4s8oC&rdid=book-F4QQbNY4s8oC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.568E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 8420000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/All_in_My_Head-sample-epub.acsm?id=F4QQbNY4s8oC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=F4QQbNY4s8oC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "6q0RAhfRtNwC",
+   "etag": "KQTE1kUpnhs",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/6q0RAhfRtNwC",
+   "volumeInfo": {
+    "title": "Leaves from the Tree of Life",
+    "authors": [
+     "Lee Heathman",
+     "Mildred A. Tillotson"
+    ],
+    "publisher": "TEACH Services, Inc.",
+    "publishedDate": "2004",
+    "description": "In a modern world congested with medical information, it can come as a surprise that most people are ignorant of basic health principles. While technology advocates advanced nutrition supplements and formulas, we have overlooked what God has created in perfection.Leaves from the Tree of Life is a practical manual based on Biblical principles. Eight chapters are devoted to exploring the basic laws of health (Nutrition, Exercise, Water, Sunlight, Temperance, Air, Rest, and Trust in Divine Power), and showing how these principles can help enhance, and lengthen the individual's life.Extensive research was consulted when composing this manual, yet it is written in a simple, understandable format with specific ways to make these principles into reality, including 79 pages of nutritious recipes.Edited by Milton G Crane, M.D., FACP, Director of Medical Research at Weimar Institute, this manual has a solid medical basis which sets it above many other publications of its kind.\"I am very pleased with this book; it will be a great asset in working with your students and in presenting your seminars. I believe it will fill a much needed spot in education of lay persons in the basic laws of health. It is well documented and very nicely laid out.\" - Agatha Thrash, M.D. Uchee Pines Institute.Leaves from the Tree of Life is a manual of basic health principles based on the 8 Laws of Health. The author's explore God's plan for feeling better and living longer, and offer practical tips to promote a healthy lifestyle including exercise, diet and spirituality. Also included are many nutritious recipes.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "157258274X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781572582743"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 88,
+    "printType": "BOOK",
+    "categories": [
+     "Diet therapy"
+    ],
+    "averageRating": 2.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=6q0RAhfRtNwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=6q0RAhfRtNwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=6q0RAhfRtNwC&printsec=frontcover&dq=subject:health&hl=&cd=12&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=6q0RAhfRtNwC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-6q0RAhfRtNwC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 9.99,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 6.47,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=6q0RAhfRtNwC&rdid=book-6q0RAhfRtNwC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 6470000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=6q0RAhfRtNwC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "iyn4xULK4JUC",
+   "etag": "ORvH4U8qYTY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/iyn4xULK4JUC",
+   "volumeInfo": {
+    "title": "Fitness and Health",
+    "authors": [
+     "Brian J. Sharkey",
+     "Steven E. Gaskill"
+    ],
+    "publisher": "Human Kinetics",
+    "publishedDate": "2007",
+    "description": "This book explains in plain English how the body responds to physical activity, why physical activity is so important to health, and how best to become physically active. You'll learn how to create programs to improve your aerobic fitness; increase your muscular strength, endurance, and flexibility; control your diet and weight; and improve your performance at work and in sports. With more than 100,000 copies sold, this classic reference (formerly titled Physiology of Fitness) is your source for accurate and insightful information. Now updated and redesigned, this comprehensive text will show you how to improve and maintain your health through regular and enjoyable physical activity.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0736056149"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780736056144"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 429,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 3,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "2.3.0.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=iyn4xULK4JUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=iyn4xULK4JUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=iyn4xULK4JUC&printsec=frontcover&dq=subject:health&hl=&cd=13&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=iyn4xULK4JUC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Fitness_and_Health.html?hl=&id=iyn4xULK4JUC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=iyn4xULK4JUC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "WYAu_vkwHEQC",
+   "etag": "mzF/tq+WfyY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/WYAu_vkwHEQC",
+   "volumeInfo": {
+    "title": "Scale Down",
+    "subtitle": "A Realistic Guide to Balancing Body, Soul, & Spirit",
+    "authors": [
+     "Danna Demetre"
+    ],
+    "publisher": "Revell",
+    "publishedDate": "2006-01-01",
+    "description": "Revised and completely updated, this new edition of Scale Down offers a balanced, realistic approach to good health incorporating both spiritual principles and practical diet and fitness habits.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780800731267"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0800731263"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 336,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 4,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.2.0.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=WYAu_vkwHEQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=WYAu_vkwHEQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=WYAu_vkwHEQC&printsec=frontcover&dq=subject:health&hl=&cd=14&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=WYAu_vkwHEQC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Scale_Down.html?hl=&id=WYAu_vkwHEQC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=WYAu_vkwHEQC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "n_UJ0jYsNJEC",
+   "etag": "7UxLgz+3K18",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/n_UJ0jYsNJEC",
+   "volumeInfo": {
+    "title": "The Core Balance Diet",
+    "subtitle": "A 4-Week Plan for Women to Boost Their Metabolism and Lose Weight",
+    "authors": [
+     "Marcelle Pick"
+    ],
+    "publisher": "Hay House, Inc",
+    "publishedDate": "2011-01-03",
+    "description": "The Core Balance Diet is a breakthrough plan, developed from thousands of treatments by women, for women. Designed to restore your body's equilibrium and return you to a healthy, sustainable weight.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781848504677"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1848504675"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 558,
+    "printType": "BOOK",
+    "categories": [
+     "Health"
+    ],
+    "averageRating": 3.5,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.1.0.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=n_UJ0jYsNJEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=n_UJ0jYsNJEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=n_UJ0jYsNJEC&printsec=frontcover&dq=subject:health&hl=&cd=15&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=n_UJ0jYsNJEC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-n_UJ0jYsNJEC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 17.95,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 10.79,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=n_UJ0jYsNJEC&rdid=book-n_UJ0jYsNJEC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.795E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.079E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Core_Balance_Diet-sample-epub.acsm?id=n_UJ0jYsNJEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Core_Balance_Diet-sample-pdf.acsm?id=n_UJ0jYsNJEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=n_UJ0jYsNJEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "87J4EJX7x0QC",
+   "etag": "RIW1hEB6hQM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/87J4EJX7x0QC",
+   "volumeInfo": {
+    "title": "Maximum Energy",
+    "authors": [
+     "Ted Broer"
+    ],
+    "publisher": "Charisma Media",
+    "publishedDate": "2005-12-08",
+    "description": "These dynamic health keys present a strategic energy advantage that will make a clear and unmistakable difference in one's vitality and quality of life.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781591858768"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1591858763"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 380,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=87J4EJX7x0QC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=87J4EJX7x0QC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=87J4EJX7x0QC&printsec=frontcover&dq=subject:health&hl=&cd=16&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=87J4EJX7x0QC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Maximum_Energy.html?hl=&id=87J4EJX7x0QC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Maximum_Energy-sample-pdf.acsm?id=87J4EJX7x0QC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=87J4EJX7x0QC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "2KHUb3iEkzEC",
+   "etag": "LlvEzGh4EkM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/2KHUb3iEkzEC",
+   "volumeInfo": {
+    "title": "Perfect Health",
+    "authors": [
+     "Deepak Chopra"
+    ],
+    "publisher": "Random House",
+    "publishedDate": "2001",
+    "description": "When it was first published in 1990, Deepak Chopra's Perfect Health quickly became an international bestseller. Combining ancient Ayurvedic healing practices with modern Western medicine, this unique book offered a step-by-step programme of mind/body medicine that could be tailored to the individual's needs. Now, in celebration of the tenth anniversary of this classic bestseller - which has achieved worldwide sales of over 500,000 copies - Chopra returns to his groundbreaking work to bring a fresh, invigorating perspective on this total health plan. Complete with a new introduction, questionnaires and the latest scientific and medical research studies, this revised edition is destined to appeal to the millions of Chopra devotees - and all those in search of balance, harmony and perfect health.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780553813678"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0553813676"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 390,
+    "printType": "BOOK",
+    "categories": [
+     "Health"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.10.3.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=2KHUb3iEkzEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=2KHUb3iEkzEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=2KHUb3iEkzEC&printsec=frontcover&dq=subject:health&hl=&cd=17&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=2KHUb3iEkzEC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Perfect_Health.html?hl=&id=2KHUb3iEkzEC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=2KHUb3iEkzEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "uttjgF2D4GYC",
+   "etag": "re+cJJ7XLYs",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/uttjgF2D4GYC",
+   "volumeInfo": {
+    "title": "Recovery, Analysis, and Identification of Commingled Human Remains",
+    "authors": [
+     "Bradley J. Adams",
+     "John E. Byrd"
+    ],
+    "publisher": "Springer Science & Business Media",
+    "publishedDate": "2008-02-23",
+    "description": "Commingling of human remains presents an added challenge to all phases of the forensic process. This book brings together tools from diverse sources within forensic science to offer a set of comprehensive approaches to handling commingled remains. It details the recovery of commingled remains in the field, the use of triage in the assessment of commingling, various analytical techniques for sorting and determining the number of individuals, the role of DNA in the overall process, ethical considerations, and data management. In addition, the book includes case examples that illustrate techniques found to be successful and those that proved problematic.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1597453161"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781597453165"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 374,
+    "printType": "BOOK",
+    "categories": [
+     "Medical"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "2.5.6.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=uttjgF2D4GYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=uttjgF2D4GYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=uttjgF2D4GYC&printsec=frontcover&dq=subject:health&hl=&cd=18&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=uttjgF2D4GYC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-uttjgF2D4GYC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE_AND_RENTAL",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 179.0,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 124.23,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=uttjgF2D4GYC&rdid=book-uttjgF2D4GYC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.79E8,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.2423E8,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     },
+     {
+      "finskyOfferType": 3,
+      "listPrice": {
+       "amountInMicros": 6.265E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 5.638E7,
+       "currencyCode": "AUD"
+      },
+      "rentalDuration": {
+       "unit": "DAY",
+       "count": 90.0
+      }
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Recovery_Analysis_and_Identification_of-sample-epub.acsm?id=uttjgF2D4GYC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Recovery_Analysis_and_Identification_of-sample-pdf.acsm?id=uttjgF2D4GYC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=uttjgF2D4GYC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "q14NJb5h3eYC",
+   "etag": "qlqG1A039EQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/q14NJb5h3eYC",
+   "volumeInfo": {
+    "title": "Hidden Truth about Cholesterol-Lowering Drugs",
+    "subtitle": "How to Avoid Heart Disease Naturally",
+    "authors": [
+     "Shane Ellison"
+    ],
+    "publisher": "Health Myths Exposed",
+    "publishedDate": "2006-01-01",
+    "description": "As a drug chemist for a leading pharmaceu-tical company I made a startling discovery: you do not have to be dependent on FDA approved drugs to, avoid heart disease. In fact, research clearly shows the opposite. You don't need a single prescription drug to avoid this killer. The best selling drugs of all time are the cholesterol-lowering drugs known as \"statins\". They procure drug makers and their shareholders billions of dollars in profits every year. The success of these drugs is not attributed to their effectiveness but instead to slick and misleading marketing practices. This hype is fueled by egregious conflicts of interest amongst drug company servants disguised as experts. Don't I be surprised if your own doctor falls within this group. The truth be told, statin drugs are poisons - foreign to the human body and may at times be, life threatening. Avoiding heart disease should not be expensive or dangerous. A plethora of natural alternatives exist. Understanding them as outlined in this paradigm shifting book will arm you with the understanding and courage not to accept popular dogma. It may prove to be one of the greatest assets to your health.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0977207900"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780977207909"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 83,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=q14NJb5h3eYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=q14NJb5h3eYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=q14NJb5h3eYC&printsec=frontcover&dq=subject:health&hl=&cd=19&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=q14NJb5h3eYC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Hidden_Truth_about_Cholesterol_Lowering.html?hl=&id=q14NJb5h3eYC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=q14NJb5h3eYC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "H1kEGVLV8tIC",
+   "etag": "5Qfci+HWxDA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/H1kEGVLV8tIC",
+   "volumeInfo": {
+    "title": "No More Dirty Looks",
+    "subtitle": "The Truth about Your Beauty Products -- And the Ultimate Guide to Safe and Clean Cosmetics",
+    "authors": [
+     "Siobhan O'Connor"
+    ],
+    "publisher": "Da Capo Press",
+    "publishedDate": "2010",
+    "description": "It started with a harmless quest for perfect wash-and-go hair. Every girl wants it, and Siobhan O’Connor and Alexandra Spunt finally found it in a fancy salon treatment. They were thrilled—until they discovered that the magic ingredient was formaldehyde. Shocked, O’Connor and Spunt left no bottle unturned. If it went on their body (and thus, was absorbed into their skin and bloodstream), they researched it. As it turns out, many of those unpronounceable ingredients in your self-tanner and leave-in conditioner are not regulated and the “natural” on your face wash doesn’t mean what you think it does. Now, with the help of top scientists, dermatologists, and makeup artists, the authors share their compelling findings and the easy way to detoxify your beauty regimen. No More Dirty Looks also reveals the safest, most effective products on the market and time-tested home recipes. Finally, you don’t need to sacrifice health for beauty—because coming clean is the best look yet.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780738214184"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0738214183"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 303,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "averageRating": 3.5,
+    "ratingsCount": 11,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.3.3.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=H1kEGVLV8tIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=H1kEGVLV8tIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=H1kEGVLV8tIC&printsec=frontcover&dq=subject:health&hl=&cd=20&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=H1kEGVLV8tIC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-H1kEGVLV8tIC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 15.68,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 9.88,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=H1kEGVLV8tIC&rdid=book-H1kEGVLV8tIC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.568E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 9880000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/No_More_Dirty_Looks-sample-epub.acsm?id=H1kEGVLV8tIC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=H1kEGVLV8tIC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "X5Po92PzOtAC",
+   "etag": "aAT8vVtKtmc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/X5Po92PzOtAC",
+   "volumeInfo": {
+    "title": "The Longevity Diet",
+    "subtitle": "The Only Proven Way to Slow the Aging Process and Maintain Peak Vitality--Through Calorie Restriction",
+    "authors": [
+     "Brian M. Delaney",
+     "Lisa Walford"
+    ],
+    "publisher": "Da Capo Press",
+    "publishedDate": "2010",
+    "description": "At last, a book that explains in practical terms the concept of calorie restriction (CR)—a life-extending eating strategy with “profound and sustained beneficial effects,” according to the Proceedings of the National Academy of Sciences. The concept is simple and flexible: eat fewer calories and choose foods carefully. Longtime CR practitioners and experts Brian M. Delaney and Lisa Walford clearly explain all the relevant health and nutrition guidelines and provide the tools you need to make the appropriate dietary changes. The results can be dramatic; those who follow CR have quickly lowered their cholesterol and blood pressure and reduced their body fat. Recently featured on Oprah and 60 Minutes, CR is continuing to gain momentum. With updated research and new information about exercise and food choices, The Longevity Diet is the key to a longer, healthier life.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780738214108"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0738214108"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 353,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.4.5.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=X5Po92PzOtAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=X5Po92PzOtAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=X5Po92PzOtAC&printsec=frontcover&dq=subject:health&hl=&cd=21&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=X5Po92PzOtAC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-X5Po92PzOtAC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 17.82,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 10.71,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=X5Po92PzOtAC&rdid=book-X5Po92PzOtAC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.782E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.071E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Longevity_Diet-sample-epub.acsm?id=X5Po92PzOtAC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=X5Po92PzOtAC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "JguDrizx6ZcC",
+   "etag": "GK89A0ujLvk",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/JguDrizx6ZcC",
+   "volumeInfo": {
+    "title": "Working Out Sucks! (And Why It Doesn't Have To)",
+    "subtitle": "The Only 21-Day Kick-Start Plan for Total Health and Fitness You'll Ever Need",
+    "authors": [
+     "Chuck Runyon"
+    ],
+    "publisher": "Da Capo Press",
+    "publishedDate": "2012",
+    "description": "Tired of diet books that promise to change your life in five minutes? Tired of trying to get healthy and fit—and really getting nowhere? Chuck Runyon, Brian Zehetner, and Rebecca DeRossett are here to confirm what you already know: Working out sucks. The good news? With the new approaches in this book, that is about to change. Working Out Sucks! deprograms those of us who have long been brainwashed by unhealthy habits, destructive attitudes, and misinformation about health, and offers a no-nonsense way to get back on track. Because, while working out may suck, the alternatives—from heart disease to premature aging and shortened lifespan--are a lot worse. As he does in his 1,700 Anytime Fitness clubs (with more than one million members worldwide--and growing), Runyon emphasizes user-friendliness and utility in this get-real, get-healthy message, complete with Zehetner’s 21-day kick-start plan and DeRossett’s tips for mental health.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780738215730"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0738215732"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 283,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "3.6.6.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=JguDrizx6ZcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=JguDrizx6ZcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=JguDrizx6ZcC&printsec=frontcover&dq=subject:health&hl=&cd=22&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=JguDrizx6ZcC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-JguDrizx6ZcC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 15.72,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 8.44,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=JguDrizx6ZcC&rdid=book-JguDrizx6ZcC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.572E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 8440000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Working_Out_Sucks_And_Why_It_Doesn_t_Hav-sample-epub.acsm?id=JguDrizx6ZcC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=JguDrizx6ZcC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "klFouB8b68oC",
+   "etag": "hOKvjjKdpsI",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/klFouB8b68oC",
+   "volumeInfo": {
+    "title": "A Race for Life",
+    "subtitle": "A Diet and Exercise Program for Superfitness and Reversing the Aging Process",
+    "authors": [
+     "Ruth Heidrich"
+    ],
+    "publisher": "Lantern Books",
+    "publishedDate": "2000",
+    "description": "This story of Ruth Heidrich and her fight against cancer explores the powers of nutrition and the rewards of running the Ironman Triathlon. It discusses how you can become healthier, with advice on adopting a diet that cuts down on cancer.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "193005100X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781930051003"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 171,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=klFouB8b68oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=klFouB8b68oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=klFouB8b68oC&printsec=frontcover&dq=subject:health&hl=&cd=23&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=klFouB8b68oC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/A_Race_for_Life.html?hl=&id=klFouB8b68oC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true
+    },
+    "pdf": {
+     "isAvailable": true
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=klFouB8b68oC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "1HWCT64LN3kC",
+   "etag": "W5Na429E31Y",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/1HWCT64LN3kC",
+   "volumeInfo": {
+    "title": "Resonance",
+    "subtitle": "Nine Practices for Harmonious Health and Vitality",
+    "authors": [
+     "Joyce Whiteley Hawkes"
+    ],
+    "publisher": "Hay House, Inc",
+    "publishedDate": "2012-01-01",
+    "description": "In Resonance, internationally respected cell biologist and healing facilitator, Joyce Hawkes, Ph. D., offers the best of science, spirit, and storytelling. Richly detailed with Joyce's experiences studying shamanic healing in South East Asia and stories of the people she has assisted back to health, this book will allow readers to explore their own ability to heal at every level. They will discover current research and fascinating findings about the language of their cells and how these tiny constituents of the body communicate, connect, and touch. Alongside this biological backdrop, they'll fi.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781401929107"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1401929109"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "printType": "BOOK",
+    "categories": [
+     "Health"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.3.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=1HWCT64LN3kC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=1HWCT64LN3kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=1HWCT64LN3kC&printsec=frontcover&dq=subject:health&hl=&cd=24&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=1HWCT64LN3kC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-1HWCT64LN3kC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 24.95,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 14.99,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=1HWCT64LN3kC&rdid=book-1HWCT64LN3kC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 2.495E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.499E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Resonance-sample-epub.acsm?id=1HWCT64LN3kC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Resonance-sample-pdf.acsm?id=1HWCT64LN3kC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=1HWCT64LN3kC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "l_5lUiWFrEoC",
+   "etag": "WeaLwsWrjZs",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/l_5lUiWFrEoC",
+   "volumeInfo": {
+    "title": "Naked at Our Age",
+    "subtitle": "Talking Out Loud About Senior Sex",
+    "authors": [
+     "Joan Price"
+    ],
+    "publisher": "Seal Press",
+    "publishedDate": "2011",
+    "description": "Joan Price is talking out loud about later-life sexuality. With a foreword by Betty Dodson, Naked at Our Age candidly addresses senior sexuality in all its colors—the challenges, disappointments, and surprises, as well as the delights and the love stories. Naked at Our Age gives people over fifty a voice to tell stories of their past and present sex lives, ask questions, and get straightforward advice and information from experts. No topic is off-limits. ?In Naked at Our Age, women and men—coupled and single, straight and gay—talk candidly about how their sex lives and relationships have changed with age, and about how they see themselves, their partners, or their single life. Many are having unsatisfying sex, or no sex at all, and are seeking advice. Price presents their personal stories, and follows up with tips from sex therapists, health professionals, counselors, sex educators, and other knowledgeable experts. Named \"Outstanding Self-Help Book” of 2012 by the American Society of Journalists and Authors and winner of the 2012 Book Award from the American Association of Sexuality Educators, Counselors, and Therapists, Naked at Our Age is an entertaining and indispensable guide to handling and understanding the issues of senior sex and relationships.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781580054003"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1580054005"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 401,
+    "printType": "BOOK",
+    "categories": [
+     "Family & Relationships"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 1,
+    "maturityRating": "MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.0.1.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=l_5lUiWFrEoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=l_5lUiWFrEoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=l_5lUiWFrEoC&printsec=frontcover&dq=subject:health&hl=&cd=25&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=l_5lUiWFrEoC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-l_5lUiWFrEoC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 17.78,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 10.69,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=l_5lUiWFrEoC&rdid=book-l_5lUiWFrEoC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.778E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.069E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Naked_at_Our_Age-sample-epub.acsm?id=l_5lUiWFrEoC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Naked_at_Our_Age-sample-pdf.acsm?id=l_5lUiWFrEoC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=l_5lUiWFrEoC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Gx4jgvgitCgC",
+   "etag": "efolVJYjVlY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Gx4jgvgitCgC",
+   "volumeInfo": {
+    "title": "Physical Activity and Health",
+    "subtitle": "An Interactive Approach",
+    "authors": [
+     "Kelli McCormack Brown",
+     "David Q. Thomas",
+     "Jerome Edward Kotecki"
+    ],
+    "publisher": "Jones & Bartlett Learning",
+    "publishedDate": "2002-01",
+    "description": "This book focuses on the interconnectedness of health and being physically alive.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0867209364"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780867209365"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 435,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "averageRating": 2.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Gx4jgvgitCgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Gx4jgvgitCgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=Gx4jgvgitCgC&printsec=frontcover&dq=subject:health&hl=&cd=26&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=Gx4jgvgitCgC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Physical_Activity_and_Health.html?hl=&id=Gx4jgvgitCgC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=Gx4jgvgitCgC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "MowJF-a76AQC",
+   "etag": "M32qfS5YaGg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/MowJF-a76AQC",
+   "volumeInfo": {
+    "title": "Get On It!",
+    "subtitle": "BOSU Balance Trainer Workouts for Core Strength and a Super Toned Body",
+    "authors": [
+     "Jane Aronovitch",
+     "Craig Colleen",
+     "Miriane Taylor"
+    ],
+    "publisher": "Ulysses Press",
+    "publishedDate": "2009-06-01",
+    "description": "Shaped like a stability ball that's been cut in half, the BOSU℗ʼ Balance Trainer is one of the most challenging and versatile training tools in today's exercise market. Get on It! shows how to tap the power of the BOSU℗ʼ to reshape one's whole body while strengthening the core and stabilizing muscles. Featuring exercises that can be done at home or in the gym, Get on It! dscribes how to use the BOSU℗ʼ for aerobic conditioning, muscle toning, body sculpting, fat burning, and improved posture and alignment as well as mental focus. Progressing from basic standing and sitting postures to more complic.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781569757512"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1569757518"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 144,
+    "printType": "BOOK",
+    "categories": [
+     "HEALTH & FITNESS"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 3,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=MowJF-a76AQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=MowJF-a76AQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=MowJF-a76AQC&printsec=frontcover&dq=subject:health&hl=&cd=27&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=MowJF-a76AQC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Get_On_It.html?hl=&id=MowJF-a76AQC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Get_On_It-sample-epub.acsm?id=MowJF-a76AQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Get_On_It-sample-pdf.acsm?id=MowJF-a76AQC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=MowJF-a76AQC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "HlZW07bP7-4C",
+   "etag": "xSGG4g8CkKQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/HlZW07bP7-4C",
+   "volumeInfo": {
+    "title": "Psychosocial Processes and Health",
+    "subtitle": "A Reader",
+    "authors": [
+     "Andrew Steptoe",
+     "Jane Wardle"
+    ],
+    "publisher": "Cambridge University Press",
+    "publishedDate": "1994-11-24",
+    "description": "Understanding the links between the social environment, emotion, behaviour and illness is a growing theme in medical and health education. The development of the field is reflected in the growth of disciplines such as health psychology, psychosocial epidemiology, and behavioural medicine. The basic literature is however awkwardly dispersed across medical and social science journals. This book makes available within a single volume some of the most important articles that have been published over the past thirty years. The thirty-one articles are grouped round six themes: life stress, social support and health; psychophysiological processes in disease; personality, behaviour patterns and health; health practices and the modification of health risk behaviour; coping with illness and disability; behavioural interventions in medicine. Each is prefaced by a state-of-the-art review of the theme by the editors. These readings will serve as a most valuable resource for psychology and health science teachers and students alike.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0521426189"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780521426183"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 525,
+    "printType": "BOOK",
+    "categories": [
+     "Medical"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.2.0.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=HlZW07bP7-4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=HlZW07bP7-4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=HlZW07bP7-4C&printsec=frontcover&dq=subject:health&hl=&cd=28&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=HlZW07bP7-4C&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Psychosocial_Processes_and_Health.html?hl=&id=HlZW07bP7-4C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=HlZW07bP7-4C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "SQ6NJh-pmCoC",
+   "etag": "tUZkV81xXZE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/SQ6NJh-pmCoC",
+   "volumeInfo": {
+    "title": "Foodwise",
+    "subtitle": "Understanding what We Eat and how it Affects Us : the Story of Human Nutrition",
+    "authors": [
+     "Wendy E. Cook"
+    ],
+    "publisher": "CLAIRVIEW BOOKS",
+    "publishedDate": "2003",
+    "description": "Through her daughter's illness, Wendy Cook began to study the deep aspects of nutrition, and particularly the effects of different foods on human health and consciousness. In Foodwise she presents a cornucopia of ideas, advice and commentary, informed by the work of Rudolf Steiner. Cook relates human evolution to changes in consciousness and the consumption of different foods, considering among other topics the importance of agricultural methods, the nature of the human being, the significance of grasses and grains, the mystery of human digestion and the question of vegetarianism. She also analyzes the nutritional (or otherwise) qualities of carbohydrates, minerals, fats and oils, milk and dairy products, herbs and spices, salt and sweeteners, stimulants, legumes, the nightshade family, bread, water and dietary supplements. She ends this comprehensive survey of nutrition with practical tips on cooking, planning menus, children's food and sharing meals--and some mouth-watering recipes!",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1902636392"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781902636399"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 338,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.0.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=SQ6NJh-pmCoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=SQ6NJh-pmCoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=SQ6NJh-pmCoC&printsec=frontcover&dq=subject:health&hl=&cd=29&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=SQ6NJh-pmCoC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Foodwise.html?hl=&id=SQ6NJh-pmCoC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=SQ6NJh-pmCoC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "PwjeDA60KJwC",
+   "etag": "tJlQBwc9BWY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/PwjeDA60KJwC",
+   "volumeInfo": {
+    "title": "Living with Stress",
+    "subtitle": "Bilical Truths to Manage Your Life",
+    "authors": [
+     "Charles R. Gerber"
+    ],
+    "publisher": "College Press",
+    "publishedDate": "1999",
+    "description": "Have you ever felt stressed out? Everyone does at one point or another, it just comes with being alive. Some stress gets you ready for the day's experiences (I want to get to work on time). Other stress can have negative influences on your life (the speeding ticket received while trying to get to work on time). Our perspective toward how we view various stress points will determine whether stress is helpful or hurtful. If we learn the biblical principles of dealing with stress, we will be equipped to live holy and happy lives.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0899008526"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780899008523"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 122,
+    "printType": "BOOK",
+    "categories": [
+     "Christian life"
+    ],
+    "averageRating": 3.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=PwjeDA60KJwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=PwjeDA60KJwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=PwjeDA60KJwC&printsec=frontcover&dq=subject:health&hl=&cd=30&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=PwjeDA60KJwC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Living_with_Stress.html?hl=&id=PwjeDA60KJwC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=PwjeDA60KJwC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "SXpGhERTtOEC",
+   "etag": "z8G9TXefqqA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/SXpGhERTtOEC",
+   "volumeInfo": {
+    "title": "Health and the Rise of Civilization",
+    "authors": [
+     "Mark Nathan Cohen"
+    ],
+    "publisher": "Yale University Press",
+    "publishedDate": "1989",
+    "description": "Civilized nations popularly assume that 'primitive' societies are poor, ill, and malnourished and that progress through civilization automatically implies improved health. In this provocative book, Mark Nathan Cohen challenges this belief. Using findings from epidemiology, anthropology, and archaeology, Cohen provides fascinating evidence about the actual effects of civilization on health, suggesting that some aspects of 'progress' create as many health problems as they prevent or cure.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0300050232"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780300050233"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 285,
+    "printType": "BOOK",
+    "categories": [
+     "Medical"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=SXpGhERTtOEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=SXpGhERTtOEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=SXpGhERTtOEC&printsec=frontcover&dq=subject:health&hl=&cd=31&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=SXpGhERTtOEC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Health_and_the_Rise_of_Civilization.html?hl=&id=SXpGhERTtOEC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Health_and_the_Rise_of_Civilization-sample-epub.acsm?id=SXpGhERTtOEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=SXpGhERTtOEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Am0lAwAAQBAJ",
+   "etag": "50m+qZTrVuM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Am0lAwAAQBAJ",
+   "volumeInfo": {
+    "title": "Fit for Your Assignment",
+    "authors": [
+     "Reina Olmeda"
+    ],
+    "publisher": "Charisma Media",
+    "publishedDate": "2014-05-06",
+    "description": "It is possible to reach your full potential in Christ, but only when you eliminate the toxic habits and patterns (physical, mental, and spiritual) that hold you back. Today, many people are trying to discover and fulfill God’s purpose and plan for their lives. Do you know what His assignment is for you? Maybe you’ve felt God direct you or call you to a certain type of ministry, but struggle to embrace your God-given design. Or perhaps you’re already involved in service to God, but beneath your proper attire and eloquent words you’re just plain tired. Fit for Your Assignment will awaken a new desire and passion to rise up and change patterns and behaviors (spiritual and physical) for the fulfillment of your God-given purpose. You will be inspired to examine key areas of your life that are critical to the fulfillment of your assignment, including: · Spiritual health · Eating well and weight loss · Overcoming habits and addictions · Proper rest and stress reduction, and more Through the lens of scripture and inspiring stories of others who have been transformed by these principles, you will walk through four steps for true transformation as you learn the importance of caring and ministering to your whole self, body--mind, and spirit.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781621366126"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "162136612X"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 220,
+    "printType": "BOOK",
+    "categories": [
+     "Religion"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Am0lAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Am0lAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=Am0lAwAAQBAJ&printsec=frontcover&dq=subject:health&hl=&cd=32&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=Am0lAwAAQBAJ&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Fit_for_Your_Assignment.html?hl=&id=Am0lAwAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=Am0lAwAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "_3tdBVdalroC",
+   "etag": "pf+axD8LnAg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/_3tdBVdalroC",
+   "volumeInfo": {
+    "title": "Health as Expanding Consciousness",
+    "authors": [
+     "Margaret A. Newman"
+    ],
+    "publisher": "Jones & Bartlett Learning",
+    "publishedDate": "1999-09",
+    "description": "For the author of this book, disease is not an \"enemy\" that strikes a \"victim.\" Rather, health and disease comprise a unitary whole of individual and environment. Health as Expanding Consciousness is an inspiration to those seeking a full experience of personal health.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0763712779"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780763712778"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 200,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.3.4.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=_3tdBVdalroC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=_3tdBVdalroC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=_3tdBVdalroC&printsec=frontcover&dq=subject:health&hl=&cd=33&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=_3tdBVdalroC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Health_as_Expanding_Consciousness.html?hl=&id=_3tdBVdalroC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Health_as_Expanding_Consciousness-sample-epub.acsm?id=_3tdBVdalroC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=_3tdBVdalroC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "PlKJhJRXSXUC",
+   "etag": "8CFwax2YggE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/PlKJhJRXSXUC",
+   "volumeInfo": {
+    "title": "Drop Dead Healthy",
+    "subtitle": "One Man's Humble Quest for Bodily Perfection",
+    "authors": [
+     "A. J. Jacobs"
+    ],
+    "publisher": "Simon and Schuster",
+    "publishedDate": "2012-11-13",
+    "description": "Documents the author's effort to follow a complicated two-year program of dubious diet and exercise practices in a wayward effort to promote perfect health that tests the patience of his long-suffering wife.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781416599081"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1416599088"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 416,
+    "printType": "BOOK",
+    "categories": [
+     "Biography & Autobiography"
+    ],
+    "averageRating": 3.5,
+    "ratingsCount": 24,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=PlKJhJRXSXUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=PlKJhJRXSXUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=PlKJhJRXSXUC&printsec=frontcover&dq=subject:health&hl=&cd=34&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=PlKJhJRXSXUC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Drop_Dead_Healthy.html?hl=&id=PlKJhJRXSXUC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=PlKJhJRXSXUC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "VegUiVbruBMC",
+   "etag": "5gm5yYeO2IE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/VegUiVbruBMC",
+   "volumeInfo": {
+    "title": "Essential Concepts for Healthy Living",
+    "authors": [
+     "Sandra Alters",
+     "Wendy Schiff"
+    ],
+    "publisher": "Jones & Bartlett Publishers",
+    "publishedDate": "2012-02-22",
+    "description": "Thoroughly revised and updated, Essential Concepts for Healthy Living, Sixth Edition provides students with a clear and concise introduction to the latest scientific and medical research in personal health. With its unique focus on critical thinking and analysis of health-related behaviors and attitudes, this text enhances students’ understanding of their own health needs and presents the scientific background necessary for students to think critically about the reliability of health-related information they encounter in the media. Important Notice: The digital edition of this book is missing some of the images or content found in the physical edition.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781449630621"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1449630626"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 620,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.2.0.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=VegUiVbruBMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=VegUiVbruBMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=VegUiVbruBMC&printsec=frontcover&dq=subject:health&hl=&cd=35&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=VegUiVbruBMC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Essential_Concepts_for_Healthy_Living.html?hl=&id=VegUiVbruBMC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=VegUiVbruBMC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "45hDUfC8SyAC",
+   "etag": "bIWcNVs+vPo",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/45hDUfC8SyAC",
+   "volumeInfo": {
+    "title": "Chakras",
+    "subtitle": "Balance Your Body's Energy for Health and Harmony",
+    "authors": [
+     "Patricia Mercier"
+    ],
+    "publisher": "Sterling Publishing Company, Inc.",
+    "publishedDate": "2000",
+    "description": "\"...Mercier has written a great book... for cynics and believers alike. For anyone raised in the nonmystical United States, these Eastern medicinal/spiritual theories may be a bit hard to swallow, yet the book is still chock-ful of good health advice, invigorating guided imagery techniques and statements that make you stop and say 'Huh.'\"--FIT. This illustrated guide provides instruction and inspiration for revitalizing seven major chakras, 21 minor ones, and connecting pathways.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0806966114"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780806966113"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 128,
+    "printType": "BOOK",
+    "categories": [
+     "Body, Mind & Spirit"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=45hDUfC8SyAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=45hDUfC8SyAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=45hDUfC8SyAC&printsec=frontcover&dq=subject:health&hl=&cd=36&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=45hDUfC8SyAC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Chakras.html?hl=&id=45hDUfC8SyAC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=45hDUfC8SyAC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "JXyUXn3esswC",
+   "etag": "z63lOt0FOlE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/JXyUXn3esswC",
+   "volumeInfo": {
+    "title": "Human Health and Disease",
+    "authors": [
+     "Ann Fullick"
+    ],
+    "publisher": "Heinemann",
+    "publishedDate": "1998",
+    "description": "An A-Level text which covers the Human Health and Disease options for UCLES (Modular), O&C and Oxford, and the Health and Disease option for NEAB. The book aims to present a lively approach in addressing the needs of both weaker and stronger candidates.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0435570919"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780435570910"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 163,
+    "printType": "BOOK",
+    "categories": [
+     "Age factors"
+    ],
+    "averageRating": 3.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=JXyUXn3esswC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=JXyUXn3esswC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=JXyUXn3esswC&printsec=frontcover&dq=subject:health&hl=&cd=37&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=JXyUXn3esswC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Human_Health_and_Disease.html?hl=&id=JXyUXn3esswC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=JXyUXn3esswC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "spYhZBCyc2AC",
+   "etag": "rYBlOFLMBpc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/spYhZBCyc2AC",
+   "volumeInfo": {
+    "title": "Getting in Shape God's Way",
+    "authors": [
+     "Ron Kardashian"
+    ],
+    "publisher": "Charisma Media",
+    "publishedDate": "2009",
+    "description": "Fitness and Health From the Inside Out! If you are dissatisfied with the results you are getting from your diet and exercise program, Getting in Shape God’s Way will give you the tools you need to turn things around today. Learn the four simple keys to making everything else--proper nutrition, exercise, and other health principles--really work as you gain the wisdom and tools you need to: Find the real reasons behind your diet and fitness roadblocks Transcend old ways of thinking Motivate yourself so that you will never give up Achieve results that will last a lifetime",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781599793627"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1599793628"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 289,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "averageRating": 3.0,
+    "ratingsCount": 3,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=spYhZBCyc2AC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=spYhZBCyc2AC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=spYhZBCyc2AC&printsec=frontcover&dq=subject:health&hl=&cd=38&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=spYhZBCyc2AC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Getting_in_Shape_God_s_Way.html?hl=&id=spYhZBCyc2AC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Getting_in_Shape_God_s_Way-sample-pdf.acsm?id=spYhZBCyc2AC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=spYhZBCyc2AC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "WAD1gx3qo38C",
+   "etag": "ClOKRnIv5rI",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/WAD1gx3qo38C",
+   "volumeInfo": {
+    "title": "Vitamin K2 and the Calcium Paradox",
+    "subtitle": "How a Little-Known Vitamin Could Save Your Life",
+    "authors": [
+     "Kate Rheaume-Bleue"
+    ],
+    "publisher": "John Wiley & Sons",
+    "publishedDate": "2011-11-07",
+    "description": "Learn the secret to avoiding osteoporosis and heart disease. Rheaume-Bleue shows that vitamin D and calcium supplements actually increase the risk of heart attack and stroke, and teaches you about vitamin K2, a little-known supernutrient that humans once thrived on-- and that has been ignored by scientists.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781118065723"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1118065727"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 288,
+    "printType": "BOOK",
+    "categories": [
+     "Health & Fitness"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=WAD1gx3qo38C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=WAD1gx3qo38C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=WAD1gx3qo38C&printsec=frontcover&dq=subject:health&hl=&cd=39&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=WAD1gx3qo38C&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Vitamin_K2_and_the_Calcium_Paradox.html?hl=&id=WAD1gx3qo38C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=WAD1gx3qo38C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "mgwiloFTrKwC",
+   "etag": "gG8+4dVbrLg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/mgwiloFTrKwC",
+   "volumeInfo": {
+    "title": "Caring for Muslim Patients",
+    "authors": [
+     "Aziz Sheikh",
+     "Abdul Rashid Gatrad"
+    ],
+    "publisher": "Radcliffe Publishing",
+    "publishedDate": "2008",
+    "description": "Muslim patients customarily have particular ways of approaching health and healthcare. This book addresses common misunderstandings and bridges cultural gaps. It includes a profile of the Islamic worldview, taking an insiders perspective' and explores the concept of health and disease within this paradigm. Muslim practices and customs of direct relevance to health and healthcare are also explored and illustrated with case histories. This new edition is now broader in scope and has been thoroughly updated following recent world events. This book offers practical advice to enable all healthcare professionals in hospitals and in the community to provide care in a culturally appropriate manner.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781857758122"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1857758129"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 145,
+    "printType": "BOOK",
+    "categories": [
+     "Medical"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=mgwiloFTrKwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=mgwiloFTrKwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=mgwiloFTrKwC&printsec=frontcover&dq=subject:health&hl=&cd=40&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=mgwiloFTrKwC&dq=subject:health&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Caring_for_Muslim_Patients.html?hl=&id=mgwiloFTrKwC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Caring_for_Muslim_Patients-sample-epub.acsm?id=mgwiloFTrKwC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=mgwiloFTrKwC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  }
+ ]
+}

@@ -38,13 +38,16 @@ public class Book implements Serializable {
      * 
     */
     private Long id;
-    private String name;
+    private String author;
     private String title;
     private List<BookSeller> sellers;
-    private String isbn;
+    private String isbn10;
+    private String isbn13;
     private int publishYear;
+    private int pageCount;
     private String publisher;
     private String imgPath;
+    private Category category;
     
     public String getPublisher() {
         return publisher;
@@ -81,12 +84,12 @@ public class Book implements Serializable {
      * @return a String value
      */
     @Column(nullable = false)
-    public String getName() {
-        return this.name;
+    public String getAuthor() {
+        return this.author;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAuthor(String author) {
+        this.author = author;
     }
     
     
@@ -114,14 +117,6 @@ public class Book implements Serializable {
         this.sellers = sellers;
     }
 
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
     public int getPublishYear() {
         return publishYear;
     }
@@ -137,4 +132,38 @@ public class Book implements Serializable {
     public void setImgPath(String imgPath) {
         this.imgPath = imgPath;
     }
+
+    public String getIsbn10() {
+        return isbn10;
+    }
+
+    public void setIsbn10(String isbn10) {
+        this.isbn10 = isbn10;
+    }
+
+    public String getIsbn13() {
+        return isbn13;
+    }
+
+    public void setIsbn13(String isbn13) {
+        this.isbn13 = isbn13;
+    }
+
+    public int getPageCount() {
+        return pageCount;
+    }
+
+    public void setPageCount(int pageCount) {
+        this.pageCount = pageCount;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+    
+    
 }

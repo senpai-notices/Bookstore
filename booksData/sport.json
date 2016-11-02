@@ -1,0 +1,2715 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 185,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "Zrkv0RhXoKsC",
+   "etag": "OazCckfrrzw",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Zrkv0RhXoKsC",
+   "volumeInfo": {
+    "title": "Nine Lives",
+    "subtitle": "Football, Cancer and Getting on with Life",
+    "authors": [
+     "Adam Ramanauskas",
+     "Emma Quayle"
+    ],
+    "publisher": "Penguin Group Australia",
+    "publishedDate": "2010-06-15",
+    "description": "In February 2003, Adam Ramanauskas was living every boy's dream. At twenty-two he'd been noted as a star of the future and already had one AFL premiership under his belt. He was having the time of his life. Then the bottom fell out of his world. The discovery of an unusual lump in Adam's right shoulder quickly led to the words no one wants to hear: 'You have cancer.' Over the next few years, his three battles with cancer would require every ounce of courage and determination he could summon. This is the remarkable story of a young man who not only bounced back after each setback, but made an incredible return to elite sport, inspiring his teammates, family and the medical profession with his resilience and refusal to take anything lying down. It's a story of growing up quickly and learning about the urgency of time, and working out what matters most.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780670074570"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0670074578"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 288,
+    "printType": "BOOK",
+    "categories": [
+     "Biography & Autobiography"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.5.3.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Zrkv0RhXoKsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Zrkv0RhXoKsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=Zrkv0RhXoKsC&printsec=frontcover&dq=subject:sport&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=Zrkv0RhXoKsC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Nine_Lives.html?hl=&id=Zrkv0RhXoKsC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Nine_Lives-sample-epub.acsm?id=Zrkv0RhXoKsC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=Zrkv0RhXoKsC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "4S1a0fZou4wC",
+   "etag": "bTUbCLyEac4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/4S1a0fZou4wC",
+   "volumeInfo": {
+    "title": "Sport and Exercise Psychology",
+    "authors": [
+     "Dave Shaw",
+     "Trish Gorely",
+     "Rod Corban"
+    ],
+    "publisher": "Garland Science",
+    "publishedDate": "2005",
+    "description": "Instant Notes in Sport and Exercise Psychology provides concise coverage of sport and exercise psychology at the undergraduate level, and also covers the crucial basic psychology that underpins the subject. It has four main themes: theoretical approaches and research methods sport psychology at both the individual and group level of analysis exercise psychology practical applications including performance enhancement and ethics. Suitable for students in sport and exercise science, sport psychology, sport studies and sports management, it will be useful for coaches and athletes who wish to gain an up-to-date understanding of the key concepts, theories and research in this area.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781859962947"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1859962947"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 286,
+    "printType": "BOOK",
+    "categories": [
+     "Psychology"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.0.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=4S1a0fZou4wC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=4S1a0fZou4wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=4S1a0fZou4wC&printsec=frontcover&dq=subject:sport&hl=&cd=2&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=4S1a0fZou4wC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Sport_and_Exercise_Psychology.html?hl=&id=4S1a0fZou4wC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=4S1a0fZou4wC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "irgnN6jsu84C",
+   "etag": "ga5pbE59P7Q",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/irgnN6jsu84C",
+   "volumeInfo": {
+    "title": "\u200fבמגרש המשחקים",
+    "subtitle": "\u200fספורט וחברה בתחילת האלף השלישי",
+    "publisher": "Open University of Israel",
+    "publishedDate": "2009",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "965061026X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9789650610265"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 592,
+    "printType": "BOOK",
+    "categories": [
+     "Sports"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=irgnN6jsu84C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=irgnN6jsu84C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "iw",
+    "previewLink": "http://books.google.com.au/books?id=irgnN6jsu84C&printsec=frontcover&dq=subject:sport&hl=&cd=3&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=irgnN6jsu84C&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/%D7%91%D7%9E%D7%92%D7%A8%D7%A9_%D7%94%D7%9E%D7%A9%D7%97%D7%A7%D7%99%D7%9D.html?hl=&id=irgnN6jsu84C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=irgnN6jsu84C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "MMg11IMiaR8C",
+   "etag": "PeY8btgLyfk",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/MMg11IMiaR8C",
+   "volumeInfo": {
+    "title": "Goal II",
+    "subtitle": "Living the Dream",
+    "authors": [
+     "Robert Rigby"
+    ],
+    "publisher": "Houghton Mifflin Harcourt",
+    "publishedDate": "2007",
+    "description": "After leaving Los Angeles to play soccer with Newcastle United, Mexican American Santiago Munez is recruited to play for Real Madrid, one of the best teams in the world, and must struggle with the pressure and temptations his newfound fame brings.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0152058818"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780152058814"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 218,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Fiction"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 4,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=MMg11IMiaR8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=MMg11IMiaR8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=MMg11IMiaR8C&printsec=frontcover&dq=subject:sport&hl=&cd=4&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=MMg11IMiaR8C&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Goal_II.html?hl=&id=MMg11IMiaR8C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=MMg11IMiaR8C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "xr8bzcCE2FIC",
+   "etag": "J3LR4nn8NUk",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/xr8bzcCE2FIC",
+   "volumeInfo": {
+    "title": "Relationship Marketing in Sports",
+    "authors": [
+     "Andre Buhler",
+     "Simon Chadwick",
+     "Gerd Nufer"
+    ],
+    "publisher": "Routledge",
+    "publishedDate": "2009",
+    "description": "Relationship marketing is an important issue in every business. Knowing the customers and establishing, maintaining and enhancing long-term customer relationships is a key component of long-term business success. Considering that sport is such big business today, it is surprising that this crucial approach to marketing has yet to be fully recognised either in literature or in the sports business itself. Relationship Marketing in Sports aims to fill this void by discussing and reformulating the principles of relationship marketing and by demonstrating how relationship marketing can be successfully applied in practice within a sports context. Written by a unique author team of academic and practitioner experience, the book provides the reader with: the first book to apply the principles of relationship marketing specifically to a sports context case studies from around the world to provide a uniquely global approach applicable worldwide strong pedagogical features including learning outcomes, overviews, discussion questions, glossary, guided reading and web links practical advice for professional, semi-professional and non-professional sporting organisations a companion website providing web links, case studies and PowerPoint slides for lecturers. Relationship Marketing in Sports is crucial reading for both students and professionals alike and marks a turning point in the marketing of sports.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780750684958"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "075068495X"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 198,
+    "printType": "BOOK",
+    "categories": [
+     "Business & Economics"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=xr8bzcCE2FIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=xr8bzcCE2FIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=xr8bzcCE2FIC&printsec=frontcover&dq=subject:sport&hl=&cd=5&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=xr8bzcCE2FIC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Relationship_Marketing_in_Sports.html?hl=&id=xr8bzcCE2FIC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=xr8bzcCE2FIC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "wQOdWpoTK28C",
+   "etag": "h2BKIPnB4r8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/wQOdWpoTK28C",
+   "volumeInfo": {
+    "title": "The Player",
+    "authors": [
+     "Boris Becker",
+     "Robert Lübenoff",
+     "Helmut Sorge"
+    ],
+    "publisher": "Random House",
+    "publishedDate": "2005",
+    "description": "In this frank, tell-all autobiography, the German tennis genius reveals the highs and lows of his life both on and off the court. Boris Becker shot to fame in 1985 when, at the age of seventeen, he became the youngest player to win the men’s final at Wimbledon. He went on to win two more Wimbledon titles, and a total of forty-nine singles and fifteen double crowns, making him one of the greatest players of the twentieth century. But his life off the court has always attracted as much attention as his triumphs on it. Now, in this remarkably candid autobiography, Boris Becker tells the real story behind the headlines. He speaks of the seconds before the serve that made him the youngest Wimbledon winner of all time, and of the minutes after being sentenced as a tax evader. He talks about his marriage, his illegitimate daughter, and his painful divorce. He reveals his emotions at the end of his tennis career, and his battles with pills and alcohol. He also shares his memories of the good times, the championship wins, the make-or-break matches, and the highs and lows of life on the international circuit. Boris Becker has written this autobiography not just for his fans but also for his children, that they may one day read the true account of their father’s remarkable and often controversial life.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780553817164"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0553817167"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 366,
+    "printType": "BOOK",
+    "categories": [
+     "Biography & Autobiography"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.5.0.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=wQOdWpoTK28C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=wQOdWpoTK28C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=wQOdWpoTK28C&printsec=frontcover&dq=subject:sport&hl=&cd=6&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=wQOdWpoTK28C&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/The_Player.html?hl=&id=wQOdWpoTK28C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=wQOdWpoTK28C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "f0HVw0MKrdcC",
+   "etag": "t6xUb8mtY+k",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/f0HVw0MKrdcC",
+   "volumeInfo": {
+    "title": "Cases in Sport Marketing",
+    "authors": [
+     "Mark A. McDonald",
+     "George R. Milne"
+    ],
+    "publisher": "Jones & Bartlett Learning",
+    "publishedDate": "1999",
+    "description": "Health Sciences & Professions",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0763708631"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780763708634"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 351,
+    "printType": "BOOK",
+    "categories": [
+     "Business & Economics"
+    ],
+    "averageRating": 3.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=f0HVw0MKrdcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=f0HVw0MKrdcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=f0HVw0MKrdcC&printsec=frontcover&dq=subject:sport&hl=&cd=7&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=f0HVw0MKrdcC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Cases_in_Sport_Marketing.html?hl=&id=f0HVw0MKrdcC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=f0HVw0MKrdcC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "_uALVcviUXQC",
+   "etag": "fSYXRIku1b4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/_uALVcviUXQC",
+   "volumeInfo": {
+    "title": "Grind",
+    "authors": [
+     "Eric Walters"
+    ],
+    "publisher": "Orca Book Publishers",
+    "publishedDate": "2004-09-01",
+    "description": "Friends Wally and Phillip find themselves becoming stars on a skateboarding Web site, but after Wally attempts a dangerous trick, they find their lives changed forever.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781551433172"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1551433176"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 100,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Fiction"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=_uALVcviUXQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=_uALVcviUXQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=_uALVcviUXQC&printsec=frontcover&dq=subject:sport&hl=&cd=8&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=_uALVcviUXQC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Grind.html?hl=&id=_uALVcviUXQC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Grind-sample-epub.acsm?id=_uALVcviUXQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Grind-sample-pdf.acsm?id=_uALVcviUXQC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=_uALVcviUXQC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "e2EyPI8X8FMC",
+   "etag": "yuuLV6klQ40",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/e2EyPI8X8FMC",
+   "volumeInfo": {
+    "title": "Combat Sports in the Ancient World",
+    "subtitle": "Competition, Violence, and Culture",
+    "authors": [
+     "Michael B. Poliakoff"
+    ],
+    "publisher": "Yale University Press",
+    "publishedDate": "1987",
+    "description": "A study of the practice of combat sports in the ancient civilizations of Greece, Rome and the Near East. The author discusses topics such as the function of competition and violent games in ancient society, the significance of combat sport in myth and literature, and their cultic functions.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0300063121"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780300063127"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 202,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=e2EyPI8X8FMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=e2EyPI8X8FMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=e2EyPI8X8FMC&printsec=frontcover&dq=subject:sport&hl=&cd=9&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=e2EyPI8X8FMC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Combat_Sports_in_the_Ancient_World.html?hl=&id=e2EyPI8X8FMC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Combat_Sports_in_the_Ancient_World-sample-epub.acsm?id=e2EyPI8X8FMC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=e2EyPI8X8FMC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "3Wzil2cS1vgC",
+   "etag": "vCv4QrX21bA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/3Wzil2cS1vgC",
+   "volumeInfo": {
+    "title": "Born to Run",
+    "authors": [
+     "Cathy Freeman"
+    ],
+    "publisher": "Penguin Group Australia",
+    "publishedDate": "2007-03-05",
+    "description": "Hi guys, Ever since I was little I only had one dream – to win a gold medal at the Olympics. When I was twenty-seven years old, my dream came true. I'll never forget that night at the Sydney 2000 Games – as I crossed the finish line, it was as if the whole of Australia was cheering for me. Sometimes I still wonder how it happened. When I was growing up, I felt no different to anyone else. I loved having fun with my brothers, sleeping over at nanna's and going horse riding with my dad. But I especially loved to run. With the help of my family, coaches and teachers, I became the best female 400-metre runner in the world. I hope you enjoy my story, and that it inspires you to chase after your dreams too!",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780143302384"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0143302388"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 139,
+    "printType": "BOOK",
+    "categories": [
+     "Biography & Autobiography"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.4.1.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=3Wzil2cS1vgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=3Wzil2cS1vgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=3Wzil2cS1vgC&printsec=frontcover&dq=subject:sport&hl=&cd=10&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=3Wzil2cS1vgC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Born_to_Run.html?hl=&id=3Wzil2cS1vgC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Born_to_Run-sample-epub.acsm?id=3Wzil2cS1vgC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=3Wzil2cS1vgC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "7DfQmAEACAAJ",
+   "etag": "M/PjexJs9J4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/7DfQmAEACAAJ",
+   "volumeInfo": {
+    "title": "Diary of a Cricket God",
+    "authors": [
+     "Shamini Flint",
+     "Sally Heinrich"
+    ],
+    "publisher": "Allen & Unwin Academic",
+    "publishedDate": "2012-01",
+    "description": "Marcus Atkinson is a cricket god (not!). But his dad is convinced that Marcus has magic in his wrists. Marcus is a Maths whiz who is not good at sport. His dad is a self-help author who thinks Marcus can achieve anything he sets his mind to...with hilarious results. In illustrated diary format, Marcus's gentle, satiric humour and comic drawings will have readers laughing out loud while learning a surprising amount about cricket.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1742378269"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781742378268"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 104,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=7DfQmAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=7DfQmAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=7DfQmAEACAAJ&dq=subject:sport&hl=&cd=11&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=7DfQmAEACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Diary_of_a_Cricket_God.html?hl=&id=7DfQmAEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=7DfQmAEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Tf6xHVUQhrkC",
+   "etag": "Pyt4hISbGZE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Tf6xHVUQhrkC",
+   "volumeInfo": {
+    "title": "Reading the Play",
+    "subtitle": "On Life and Leadership",
+    "authors": [
+     "James Hird"
+    ],
+    "publisher": "Macmillan Publishers Aus.",
+    "publishedDate": "2007",
+    "description": "For over 16 years, James Hird has been one of the AFL's greatest champions. He's captained Essendon to a premiership, won a Brownlow Medal, been voted his club's Best and Fairest four times, selected as an All-Australian in five International Series, and been named the third greatest Essendon player of all time. But Hird's record as a footballer is only part of his story. In the same year he won the Brownlow he graduated as an engineer. Despite the workload and the pressures of professional football and captaining his club, he has worked as a stockbroker, an airline employee, a television executive, a media personality and a partner in a sports marketing consultancy. His perspective on the game is informed by a wealth of life knowledge, and his perspective on life is informed by an equal wealth of football experience. Reading the Play is a fascinating account of his life and his views, both on the sport he loves and on the things he finds important, from the fundamentals of family, to self-discipline and the power of courage. It's frank, informed, entertaining and inspiring. And, like Hird himself, completely unique.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1405038101"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781405038102"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 344,
+    "printType": "BOOK",
+    "categories": [
+     "Australian football players"
+    ],
+    "averageRating": 1.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.2.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Tf6xHVUQhrkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Tf6xHVUQhrkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=Tf6xHVUQhrkC&printsec=frontcover&dq=subject:sport&hl=&cd=12&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=Tf6xHVUQhrkC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Reading_the_Play.html?hl=&id=Tf6xHVUQhrkC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Reading_the_Play-sample-pdf.acsm?id=Tf6xHVUQhrkC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=Tf6xHVUQhrkC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "_ckOt6oqMEAC",
+   "etag": "+nagQ/vbAIU",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/_ckOt6oqMEAC",
+   "volumeInfo": {
+    "title": "Sport, Culture & Media",
+    "authors": [
+     "Rowe, David"
+    ],
+    "publisher": "McGraw-Hill Education (UK)",
+    "publishedDate": "2003-12-01",
+    "description": "Examining the ways in which media sport has insinuated itself into contemporary everyday life, this book traces the rise of the sports media and the economic and political influences on and implications of the media sports cultural complex.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780335210756"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0335210759"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 253,
+    "printType": "BOOK",
+    "categories": [
+     "Sports & Recreation"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=_ckOt6oqMEAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=_ckOt6oqMEAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=_ckOt6oqMEAC&printsec=frontcover&dq=subject:sport&hl=&cd=13&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=_ckOt6oqMEAC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Sport_Culture_Media.html?hl=&id=_ckOt6oqMEAC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Sport_Culture_Media-sample-pdf.acsm?id=_ckOt6oqMEAC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=_ckOt6oqMEAC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "8z9aAAAAYAAJ",
+   "etag": "MRvPejW1m6A",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/8z9aAAAAYAAJ",
+   "volumeInfo": {
+    "title": "Freestyle Soccer Tricks",
+    "subtitle": "Tricks, Flick-Ups, Catches",
+    "authors": [
+     "Sean D'Arcy"
+    ],
+    "publisher": "Firefly Books Limited",
+    "publishedDate": "2008",
+    "description": "The professional soccer freestyler offers tips, exercises, and drills designed to improve coordination and ball control and provides instructions for performing various types of juggling tricks.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1554074045"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781554074044"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 120,
+    "printType": "BOOK",
+    "categories": [
+     "Sports & Recreation"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.0.0.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=8z9aAAAAYAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=8z9aAAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=8z9aAAAAYAAJ&dq=subject:sport&hl=&cd=14&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=8z9aAAAAYAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Freestyle_Soccer_Tricks.html?hl=&id=8z9aAAAAYAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=8z9aAAAAYAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "d2XKb2MeSSIC",
+   "etag": "UVKZNKmQ1jY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/d2XKb2MeSSIC",
+   "volumeInfo": {
+    "title": "Lockdown",
+    "authors": [
+     "Matthew K. Manning",
+     "Caio Majado"
+    ],
+    "publisher": "Capstone Classroom",
+    "publishedDate": "2012-01-01",
+    "description": "When the remaining members of the Revolution team are sent to New York to retrieve another Artifact, they find that once again the Collective has beaten them to it, and that the whole mission is a trap--can the exiled Dylan rescue them?",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781434238900"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1434238903"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 128,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=d2XKb2MeSSIC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=d2XKb2MeSSIC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=d2XKb2MeSSIC&dq=subject:sport&hl=&cd=15&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=d2XKb2MeSSIC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Lockdown.html?hl=&id=d2XKb2MeSSIC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=d2XKb2MeSSIC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "fEAUvjXAAJsC",
+   "etag": "xUMc+jm4ypk",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/fEAUvjXAAJsC",
+   "volumeInfo": {
+    "title": "Tunnel Vision",
+    "authors": [
+     "Brandon Terrell",
+     "Caio Majado"
+    ],
+    "publisher": "Capstone Classroom",
+    "publishedDate": "2012-01-01",
+    "description": "As the Revolution team secures more of the Artifacts their powers are increasing, and one dangerous vision leads Omar to Hawaii and a confrontation with his former best friend Tommy and the Collective--will the other members of the team rescue him in time?",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781434238887"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1434238881"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 112,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=fEAUvjXAAJsC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=fEAUvjXAAJsC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=fEAUvjXAAJsC&dq=subject:sport&hl=&cd=16&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=fEAUvjXAAJsC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Tunnel_Vision.html?hl=&id=fEAUvjXAAJsC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=fEAUvjXAAJsC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "MR6eADeN3N4C",
+   "etag": "cFOAHXQhmhY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/MR6eADeN3N4C",
+   "volumeInfo": {
+    "title": "Monster Jam",
+    "authors": [
+     "Hank Herman"
+    ],
+    "publisher": "Skylark Books",
+    "publishedDate": "1996",
+    "description": "Will has to decide if he will betray an old friend to win the monster jam tournament at basketball camp.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0553482769"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780553482768"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 101,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=MR6eADeN3N4C&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=MR6eADeN3N4C&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=MR6eADeN3N4C&dq=subject:sport&hl=&cd=17&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=MR6eADeN3N4C&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Monster_Jam.html?hl=&id=MR6eADeN3N4C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=MR6eADeN3N4C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "flcLlwEACAAJ",
+   "etag": "NiaXx2N/4l8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/flcLlwEACAAJ",
+   "volumeInfo": {
+    "title": "I Am Zlatan Ibrahimovic",
+    "authors": [
+     "Zlatan Ibrahimovic",
+     "David Lagercrantz",
+     "Ruth Urbom"
+    ],
+    "publisher": "Viking",
+    "publishedDate": "2013",
+    "description": "'Why be a Fiat, when you can be a Ferrari?' Zlatan Ibrahimovic Nickname: 'Ibracadabra' Height: 6 ft 5 in. Nationality: Sweden Club Goals: 266 Club Games: 531 Trophies: 19 Transfer Fees: £150 million (world record) Hobbies: Fast cars (Porsche Turbo), Snowmobile, Taekwondo (black belt) Welcome to planet Zlatan. This is the story of how a Swedish immigrant rose from poverty to become a football genius. In his own inimitable style, Zlatan recalls every struggle, every goal, and every training ground bust-up on his journey to dominate the world's top clubs, including Ajax, Juventus, Internazionale, Barcelona, Milan and Paris Saint-Germain. Full of wicked one-liners and amazing stories, Zlatan lifts the lid on some of the biggest names in football, including Guardiola, Mourinho and Messi. Moving, funny and totally frank, I am Zlatan is a remarkable story of genuine hardship and unimaginable success. It is unlike any autobiography you have ever read. 'There's never a dull moment on Planet Zlatan. This is a snarling, fizzing, unrepentant firecracker of a book; if footballers' memoirs bore you, make an exception for this one.' The Independant",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0241966833"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780241966839"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 332,
+    "printType": "BOOK",
+    "categories": [
+     "Biography & Autobiography"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=flcLlwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=flcLlwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=flcLlwEACAAJ&dq=subject:sport&hl=&cd=18&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=flcLlwEACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/I_Am_Zlatan_Ibrahimovic.html?hl=&id=flcLlwEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=flcLlwEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "ttm46_W9kf4C",
+   "etag": "XzqNv5DoJe0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/ttm46_W9kf4C",
+   "volumeInfo": {
+    "title": "Kevin Sheedy",
+    "subtitle": "The Jigsaw Man : the Piecing Together of a Super Coach",
+    "authors": [
+     "Tim Watson"
+    ],
+    "publisher": "Macmillan Publishers Aus.",
+    "publishedDate": "2006-01-01",
+    "description": "Who is Kevin Sheedy? Genius? Madman? Visionary? Eccentric? It depends on who you ask. In this extraordinary book Tim Watson, one of Essendon's all-time greatest players, seeks out the truth about Kevin Sheedy and his 25-year reign as coach at Windy Hill.Sheedy himself has co-operated for the purposes of this book, but Watson baulks at none of the controversies – from Sheedy's role in the Hawthorn drug-taking allegations of 1984; the disastrous recruitments of Mike Richardson and Geoff Raines; and the board-inspired player revolt which threatened Sheedy's tenure in the late 1990s.Then of course there are the back-to-back premiership triumphs of 1984-85, the unexpected glory of 1993 and the unparalleled success of season 2000, on top of Essendon's emergence as an AFL superpower – in no small way built on Sheedy's direct marketing genius.Gathering together as many pieces of the puzzle as possible, Watson discovers a ruthless, compassionate, eccentric, quirky, self-driven character, spurred on by a desire for greatness and an insatiable love for the game. More than any other observer he has given us the true essence of Kevin Sheedy – Jigsaw Man.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1405037288"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781405037280"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 361,
+    "printType": "BOOK",
+    "categories": [
+     "Australian football"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.3.2.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=ttm46_W9kf4C&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=ttm46_W9kf4C&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=ttm46_W9kf4C&dq=subject:sport&hl=&cd=19&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=ttm46_W9kf4C&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Kevin_Sheedy.html?hl=&id=ttm46_W9kf4C"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true
+    },
+    "pdf": {
+     "isAvailable": true
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=ttm46_W9kf4C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "fwGoPQAACAAJ",
+   "etag": "Eb3WNg4Pmog",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/fwGoPQAACAAJ",
+   "volumeInfo": {
+    "title": "Goal!",
+    "subtitle": "Glory Days",
+    "authors": [
+     "Robert Rigby"
+    ],
+    "publisher": "Graphia Books",
+    "publishedDate": "2009",
+    "description": "Santiago Muänez returns to England and is selected for the World Cup Squad, but then an injury threatens his dream of playing in the World Cup finals.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0152059210"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780152059217"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 245,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Fiction"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 3,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=fwGoPQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=fwGoPQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=fwGoPQAACAAJ&dq=subject:sport&hl=&cd=20&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=fwGoPQAACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Goal.html?hl=&id=fwGoPQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=fwGoPQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "uSaGLQAACAAJ",
+   "etag": "3KqeJM6zgic",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/uSaGLQAACAAJ",
+   "volumeInfo": {
+    "title": "Dangerous Games",
+    "authors": [
+     "Jonathan Harlen"
+    ],
+    "publishedDate": "2008",
+    "description": "Hired by rising cricket star Tom Baker to retrieve a lucky pig's foot given to him by Don Bradman, Fletcher finds himself fighting for his life in the dangerous underworld of Australian sport. To crack this case, he'll need to battle killer sea wasps, a ruthless hitman and a deranged tennis prodigy.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1741691443"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781741691443"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 184,
+    "printType": "BOOK",
+    "categories": [
+     "Children's stories"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=uSaGLQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=uSaGLQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=uSaGLQAACAAJ&dq=subject:sport&hl=&cd=21&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=uSaGLQAACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Dangerous_Games.html?hl=&id=uSaGLQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=uSaGLQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "kByIhiOCjqIC",
+   "etag": "4UW8COKUSIY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/kByIhiOCjqIC",
+   "volumeInfo": {
+    "title": "Advances in Sport Psychology",
+    "authors": [
+     "Thelma S. Horn"
+    ],
+    "publisher": "Human Kinetics Publishers",
+    "publishedDate": "2002",
+    "description": "Ranging from self-perceptions, moral reasoning levels, flow and peak performance and athletic injury, this guide also provides reviews on personality, motivation, anxiety and goal-setting in sports, and addresses research issues.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0736032983"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780736032988"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 562,
+    "printType": "BOOK",
+    "categories": [
+     "Medical"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=kByIhiOCjqIC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=kByIhiOCjqIC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=kByIhiOCjqIC&dq=subject:sport&hl=&cd=22&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=kByIhiOCjqIC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Advances_in_Sport_Psychology.html?hl=&id=kByIhiOCjqIC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=kByIhiOCjqIC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "7_9w63mlG1wC",
+   "etag": "IcT67+ozoJo",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/7_9w63mlG1wC",
+   "volumeInfo": {
+    "title": "Coaches Guide to Sport Psychology",
+    "authors": [
+     "Rainer Martens",
+     "American Coaching Effectiveness Program"
+    ],
+    "publisher": "Human Kinetics 1",
+    "publishedDate": "1987",
+    "description": "Philosophy of coaching - Motivation - Leadership skills - Communication skills - Stress management - Developing self-confidence - Goal setting.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0873220226"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780873220224"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 195,
+    "printType": "BOOK",
+    "categories": [
+     "Sports & Recreation"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=7_9w63mlG1wC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=7_9w63mlG1wC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=7_9w63mlG1wC&dq=subject:sport&hl=&cd=23&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=7_9w63mlG1wC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Coaches_Guide_to_Sport_Psychology.html?hl=&id=7_9w63mlG1wC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=7_9w63mlG1wC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "K7fEqKZ7yNkC",
+   "etag": "u/6iSiM7210",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/K7fEqKZ7yNkC",
+   "volumeInfo": {
+    "title": "Yellow Flag",
+    "authors": [
+     "Robert Lipsyte"
+    ],
+    "publisher": "Harper Collins",
+    "publishedDate": "2007-09-04",
+    "description": "When seventeen-year-old Kyle reluctantly succumbs to family pressure and replaces his injured brother in the family racecar, he struggles to keep up with his trumpet playing while deciding how--or if--he can continue making music with a brass quintet andheadlines as a Nascar racer.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780060557072"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0060557079"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 240,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Fiction"
+    ],
+    "averageRating": 3.0,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=K7fEqKZ7yNkC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=K7fEqKZ7yNkC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=K7fEqKZ7yNkC&dq=subject:sport&hl=&cd=24&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=K7fEqKZ7yNkC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Yellow_Flag.html?hl=&id=K7fEqKZ7yNkC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=K7fEqKZ7yNkC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "52qG475drkYC",
+   "etag": "lkFOK262HA0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/52qG475drkYC",
+   "volumeInfo": {
+    "title": "A Fine Place to Daydream",
+    "authors": [
+     "Bill Barich"
+    ],
+    "publisher": "HarperCollins UK",
+    "publishedDate": "2006-02",
+    "description": "Experience the sheer thrill and joy of national hunt racing as an American novelist follows a select group of leading horses and their Irish trainers on their annual pilgrimage to the Cheltenham Festival, in this evocative book on the jumps and the Irish love of horse racing.The last thing Bill Barich expected when he left California for a holiday in London was to fall in love - and yet he did, with a charming Irish woman. This led to Dublin becoming his home from home. 'I had friends who thought I was being rash or just plain foolish,' he writes, 'but trust and conviction grow if real love is in the mix.' His leap-of-faith left him slightly unmoored, adrift in a new city; so to anchor himself he began visiting the local betting shops to play the horses.Barich came to share Ireland's passion for the National Hunt. He even felt a kinship for the chasers and hurdlers who 'hang for a half-second in a cloud of uncertainty' every time they jump. That passion revealed to him a great deal about Irish culture, immediate and unvarnished, beyond any touristy stereotypes.So Barich wanted to go deeper. He spent a season - the season of Best Mate's third Gold Cup bid - with the leading Irish trainers, jockeys and horses, charting their progress on the road to their annual tilt against the British at the Cheltenham Festival. Here such major players as Jessica Harrington, Michael Hourigan, Paul Carberry, and Barry Geraghty are captured as never before, with Barich following the caravan from the humble races at Thurles to the glories of the Hennessy at Leopardstown.Here, too, are the big horses - Florida Pearl, Beef Or Salmon, and the quirky Moscow Flyer, who never loses except when he beats himself. A Fine Place to Daydream is a beautifully written elegy to a vanishing way of life. It will reveal an Ireland that is largely hidden to visitors, and will be a timeless account of what promises to be a vintage racing season.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780007191819"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0007191812"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 297,
+    "printType": "BOOK",
+    "categories": [
+     "Gambling"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.3.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=52qG475drkYC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=52qG475drkYC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=52qG475drkYC&dq=subject:sport&hl=&cd=25&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=52qG475drkYC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/A_Fine_Place_to_Daydream.html?hl=&id=52qG475drkYC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=52qG475drkYC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "a1r_qhDZjyAC",
+   "etag": "7NVAJ08YC1E",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/a1r_qhDZjyAC",
+   "volumeInfo": {
+    "title": "Sport, Media and Society",
+    "authors": [
+     "Eileen Kennedy",
+     "Laura Hills"
+    ],
+    "publisher": "Berg Publishers",
+    "publishedDate": "2009-10-15",
+    "description": "Sports are an integral component of today's media, from prime time television to interactive websites. This book is a theoretical and methodological guide to analyzing sports in their diverse mediated forms. Students of media are taken through techniques of analysis for film, TV, newspapers, magazines, advertisements, spaces such as stadia and museums, and the internet. The ambiguous and shifting cultural politics of sport are explored through original, researched case studies, drawn from across the UK, USA and beyond. The book encourages students to engage critically with their own experience of the media and sports. It also encourages the development of an independent approach to analysis, and as such it will be an essential purchase for all students of media and sports studies students.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781845206864"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "184520686X"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 205,
+    "printType": "BOOK",
+    "categories": [
+     "Social Science"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=a1r_qhDZjyAC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=a1r_qhDZjyAC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=a1r_qhDZjyAC&dq=subject:sport&hl=&cd=26&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=a1r_qhDZjyAC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Sport_Media_and_Society.html?hl=&id=a1r_qhDZjyAC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true
+    },
+    "pdf": {
+     "isAvailable": true
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=a1r_qhDZjyAC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "EnSHngEACAAJ",
+   "etag": "KsCp96/5UPo",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/EnSHngEACAAJ",
+   "volumeInfo": {
+    "title": "Neymar",
+    "subtitle": "The Making of the World's Greatest New Number 10",
+    "authors": [
+     "Luca Caioli"
+    ],
+    "publisher": "Icon Books",
+    "publishedDate": "2014",
+    "description": "Neymar da Silva Santos Junior is the new global football superstar, already acclaimed as ‘the next Pelé’. He is the player everyone wants to watch in the 2014 World Cup in Brazil, his home country.With Santos, the team where Pelé played, he has reached three national Championships and has twice been elected the best player in South America. With Barcelona, which signed him for 57 million euros, he will flourish alongside Leo Messi to become one of the most lethal partnerships in football’s history.Luca Caioli, author of bestselling biographies of Messi and Ronaldo, reconstructs Neymar’s life and career through exclusive private access to his friends, his family, his coaches, his teammates, his advisors, his fans. This is the first book about a new world footballing icon.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "184831681X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781848316812"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 250,
+    "printType": "BOOK",
+    "categories": [
+     "Sports & Recreation"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=EnSHngEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=EnSHngEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=EnSHngEACAAJ&dq=subject:sport&hl=&cd=27&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=EnSHngEACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Neymar.html?hl=&id=EnSHngEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=EnSHngEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "iP2BAAAAMAAJ",
+   "etag": "ZAK/RRMnIxM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/iP2BAAAAMAAJ",
+   "volumeInfo": {
+    "title": "Le sport français dans l'entre-deux-guerres",
+    "subtitle": "regards croisés sur les influences étrangères",
+    "authors": [
+     "Jean-Philippe Saint-Martin",
+     "Thierry Terret"
+    ],
+    "publisher": "Editions L'Harmattan",
+    "publishedDate": "2000",
+    "description": "L'entre-deux-guerres est une période où les identités nationales se restructurent et où les exemples étrangers se présentent comme autant de modèles possibles pour la France. Entre histoire politique et histoire culturelle, entre influences étrangères, construction identitaire et relations internationales, dans quelle mesure le sport et l'éducation physique participent-ils de ces processus ? A partir de quelques exemples, l'ouvrage aborde cette question en croisant trois regards. Le premier insiste sur \" l'exportation \" plus ou moins laborieuse des modèles nationaux. Le second traite des influences étrangères proprement dites sur le sport français et le dernier, enfin, propose un questionnement de la problématique identitaire qui bouscule les logiques strictement nationales. Le sport apparaît ainsi comme un révélateur original des relations entretenues par les Etats au moment où se transforment les grands équilibres européens.",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "UOM:39015053385640"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 324,
+    "printType": "BOOK",
+    "categories": [
+     "Sports"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=iP2BAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=iP2BAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "fr",
+    "previewLink": "http://books.google.com.au/books?id=iP2BAAAAMAAJ&dq=subject:sport&hl=&cd=28&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=iP2BAAAAMAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Le_sport_fran%C3%A7ais_dans_l_entre_deux_gue.html?hl=&id=iP2BAAAAMAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=iP2BAAAAMAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "EtJ7rgEACAAJ",
+   "etag": "zqR4/tkkWBg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/EtJ7rgEACAAJ",
+   "volumeInfo": {
+    "title": "One Foot on the Podium",
+    "authors": [
+     "Don Elgin",
+     "Kevin Moloney"
+    ],
+    "publishedDate": "2015-06-27",
+    "description": "Born without the lower half of his left leg, young Don Elgin never considered himself disabled until he was in high school - and even then, he had to be convinced. His story, of a boy from the bush who battled the odds and finally stepped onto the podium as a medallist at the Sydney Paralympics, is one of absolute inspiration. Driven by an inherited sense of grit, determination and pure guts, Don overcomes an abundance of obstacles to rise to the top of the sporting heap. His life's philosophy tells us that success is not a birthright - it's earned.Don Elgin: One Foot On The Podium is not just the rags-to-riches story of a poor disabled boy who becomes an elite athlete. It's a tell-all tale laced with his natural humour and just enough larrikinism to make him loveable. The way Don tells his story is the reason he's one of the most entertaining and engaging speakers on the Australian circuit today.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0994229615"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780994229618"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 292,
+    "printType": "BOOK",
+    "categories": [
+     "Athletes with disabilities"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=EtJ7rgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=EtJ7rgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=EtJ7rgEACAAJ&dq=subject:sport&hl=&cd=29&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=EtJ7rgEACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/One_Foot_on_the_Podium.html?hl=&id=EtJ7rgEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=EtJ7rgEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "xRl2rgEACAAJ",
+   "etag": "fJ2g+2jIehw",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/xRl2rgEACAAJ",
+   "volumeInfo": {
+    "title": "Winning Edge",
+    "authors": [
+     "Michael Hussey"
+    ],
+    "publishedDate": "2015-08-01",
+    "description": "Michael Hussey has an incredible playing record which any sportsman could be envious of, but in Winning Edge he reveals how he overcame the times when he wondered if he could go on. Whether it was his first serious injury, his lack of form or the pressure of performing in front of thousands of fans, Mike takes us behind the scenes of elite cricket and explores the challenges that players face. Mike has found it takes time to learn the range of skills you need to survive and if you do not adapt quickly enough you can easily be spat out of the system. He has seen many players come and go, a scrapheap of talented cricketers who might have had a fruitful career had they been more aware and better prepared for the job than simply knowing how to play a good back defence or cover drive. Mindful of the challenges and opportunities that will confront sportspeople as they progress through the ranks, Mike's experiences and observations could be applied to other sports-and even other fields, such as business. Winning Edge takes you behind the scenes and into Mike's world of cricket.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "174270896X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781742708966"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 226,
+    "printType": "BOOK",
+    "categories": [
+     "Cricket"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=xRl2rgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=xRl2rgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=xRl2rgEACAAJ&dq=subject:sport&hl=&cd=30&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=xRl2rgEACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Winning_Edge.html?hl=&id=xRl2rgEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=xRl2rgEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "kUQQAAAACAAJ",
+   "etag": "EffPn7TjVO8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/kUQQAAAACAAJ",
+   "volumeInfo": {
+    "title": "Cannily, Cannily",
+    "authors": [
+     "Simon French"
+    ],
+    "publisher": "Puffin",
+    "publishedDate": "1999",
+    "description": "Fiction for young readers. Trevor lives in a caravan and is used to moving and having to fit into new places. But things go horribly wrong when he decides to join the school football team. By the author of 'All We Know', winner of the 1987 Children's Book Council of Australia's Book of the Year award.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "014130524X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780141305240"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 154,
+    "printType": "BOOK",
+    "categories": [
+     "Adolescence"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=kUQQAAAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=kUQQAAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=kUQQAAAACAAJ&dq=subject:sport&hl=&cd=31&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=kUQQAAAACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Cannily_Cannily.html?hl=&id=kUQQAAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=kUQQAAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "pBwTAAAACAAJ",
+   "etag": "ozCjcmiKRVI",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/pBwTAAAACAAJ",
+   "volumeInfo": {
+    "title": "Sport zwischen Kultur, Kult und Kommerz",
+    "authors": [
+     "Markus Lamprecht",
+     "Hanspeter Stamm"
+    ],
+    "publishedDate": "2002",
+    "description": "Dieses Buch bietet Einsichten und Analysen zu gesellschaftlichen Hintergründen und aktuellen Problemen des modernen Sports. Die Fitnesswelle mit ihrem Körperkult wird dabei genauso thematisiert wie die Entwicklung der Trendsportarten, die bewegte Geschichte des Frauensports oder die Funktionsweise des hochprofessionalisierten Wirtschaftsfaktors und des perfekt inszenierten Medienprodukts Sport.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "390823980X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9783908239802"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 205,
+    "printType": "BOOK",
+    "categories": [
+     "Entwicklung"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=pBwTAAAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=pBwTAAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "de",
+    "previewLink": "http://books.google.com.au/books?id=pBwTAAAACAAJ&dq=subject:sport&hl=&cd=32&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=pBwTAAAACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Sport_zwischen_Kultur_Kult_und_Kommerz.html?hl=&id=pBwTAAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=pBwTAAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "xwnYPAAACAAJ",
+   "etag": "UnC6Wi204DU",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/xwnYPAAACAAJ",
+   "volumeInfo": {
+    "title": "A Year of Sport Travel",
+    "subtitle": "Experience the Greatest Sporting Events in the World",
+    "authors": [
+     "Simone Egger"
+    ],
+    "publishedDate": "2009",
+    "description": "Four sports per week, for the entire year outlines the best sporting events to see at the best times of the year.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1741798833"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781741798838"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 215,
+    "printType": "BOOK",
+    "categories": [
+     "Travel"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=xwnYPAAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=xwnYPAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=xwnYPAAACAAJ&dq=subject:sport&hl=&cd=33&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=xwnYPAAACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/A_Year_of_Sport_Travel.html?hl=&id=xwnYPAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=xwnYPAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "zivNPQAACAAJ",
+   "etag": "cyhr3kwz9O0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/zivNPQAACAAJ",
+   "volumeInfo": {
+    "title": "Simply Glorious",
+    "subtitle": "The Rise of Gloucestershire County Cricket Club",
+    "authors": [
+     "Andy Stockhausen",
+     "Bristol Evening Post",
+     "Bristol Evening Post Staff"
+    ],
+    "publishedDate": "2001-06",
+    "description": "Simply Glorious is the behind-the-scenes story of one of the most dramatic rags-to-riches tales in recent sporting history. From the low-point of Courtney Walsh's unseemly departure, the author charts an astonishing renaissance, reliving the joy of that Super Cup triumph and all the colour and drama of three subsequent Lord's finals. Pulling no punches, the author analyses the reasons behind the county's lack of Championship success and explains the steps being taken to ensure Gloucestershire once more become a force in the four-day game. Through a series of candid interviews with the central characters, Andy Stockhausen lifts the lid on the infamous 'Kabir Ali' episode, reveals how Jack Russell drove Somerset players to distraction in the 'Cider Final' and offers an insight into the crucial negotiations which eventually signalled the end of Courtney Walsh's glittering county career.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1859832342"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781859832349"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 160,
+    "printType": "BOOK",
+    "categories": [
+     "Sport"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=zivNPQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=zivNPQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=zivNPQAACAAJ&dq=subject:sport&hl=&cd=34&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=zivNPQAACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Simply_Glorious.html?hl=&id=zivNPQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=zivNPQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "RHCsGQAACAAJ",
+   "etag": "XznYKKvT8QE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/RHCsGQAACAAJ",
+   "volumeInfo": {
+    "title": "BTEC in a Box",
+    "subtitle": "BTEC First Sport",
+    "authors": [
+     "Edexcel (Organization)"
+    ],
+    "publishedDate": "2006-11-14",
+    "description": "Edexcel's own resources for BTEC Firsts",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1846900549"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781846900549"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 384,
+    "printType": "BOOK",
+    "categories": [
+     "Sport"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=RHCsGQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=RHCsGQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=RHCsGQAACAAJ&dq=subject:sport&hl=&cd=35&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=RHCsGQAACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/BTEC_in_a_Box.html?hl=&id=RHCsGQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=RHCsGQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "9y39SARLDyEC",
+   "etag": "dGLHkmnF5LE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/9y39SARLDyEC",
+   "volumeInfo": {
+    "title": "The Big Game",
+    "publisher": "Fremantle Press",
+    "publishedDate": "1998",
+    "description": "The leap Greg took was quicker and higher than any he'd made going for a mark. If he'd taken air in a game, this time he took ozone. It was the most important jump he'd ever make. It saved his life. In this sequel to Killer Boots, footie is more than just a game, and the stakes are as high as they get.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1921888121"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781921888120"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 178,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=9y39SARLDyEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=9y39SARLDyEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=9y39SARLDyEC&printsec=frontcover&dq=subject:sport&hl=&cd=36&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=9y39SARLDyEC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-9y39SARLDyEC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 13.99,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 8.55,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=9y39SARLDyEC&rdid=book-9y39SARLDyEC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.399E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 8550000.0,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Big_Game-sample-epub.acsm?id=9y39SARLDyEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/The_Big_Game-sample-pdf.acsm?id=9y39SARLDyEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=9y39SARLDyEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "-U7eBgAAQBAJ",
+   "etag": "f5iQq8dG9J0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/-U7eBgAAQBAJ",
+   "volumeInfo": {
+    "title": "Samurai vs Ninja 2: The Race for the Shogun’s Treasure",
+    "authors": [
+     "Nick Falk"
+    ],
+    "publisher": "Random House Australia",
+    "publishedDate": "2015-04-01",
+    "description": "When the Great Bear is stolen from Edo Castle, the samurai and the ninjas face battle once again! The Shogun has promised that whoever finds his most prized possession will be named ruler of the Hidden Valley. The race is on and the samurai and ninja will do anything to find it first! Nab your nunchucks and shine your shuriken--another great Samurai vs Ninja battle is about to begin!",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780857986368"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0857986368"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 96,
+    "printType": "BOOK",
+    "categories": [
+     "Ninja"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=-U7eBgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=-U7eBgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=-U7eBgAAQBAJ&printsec=frontcover&dq=subject:sport&hl=&cd=37&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=-U7eBgAAQBAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Samurai_vs_Ninja_2_The_Race_for_the_Shog.html?hl=&id=-U7eBgAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=-U7eBgAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "0acUJdlmr0IC",
+   "etag": "JxrAUKm9sbc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/0acUJdlmr0IC",
+   "volumeInfo": {
+    "title": "Taking the Chequered Flag",
+    "authors": [
+     "Michael Panckridge",
+     "Pam Harvey"
+    ],
+    "publisher": "HarperCollins Australia",
+    "publishedDate": "2008",
+    "description": "It's all about boys and bikes, and the high energy thrill of motocross racing Emilio De Luglio (E.D.) is the youngest of three brothers, all of them motocross enthusiasts. As the youngest, he's always been support crew, fixing up his brothers' bike, rather than racing. But this time, as a result of losing a bet with his brother tony, he's reluctantly competing in a race. It doesn't seem as if the race track is a level playing field, though. there are some mysterious riders in lime green bikes who don't play fair, and there's a whiff of high tech cheating going on around Proctor's Powerhouse (suppliers of motorbikes and gadgets) which seems to have developed into a thriving business in a suspiciously short time. And there's also a legendary motocross track through the old railway system, including a tunnel. No one's ever done this dangerous track in less than 15 seconds before, but plenty are game to try, including E.D.'s brothers. When a serious crash puts his older brother tony in hospital, E.D. must step up to the job and compete on his behalf, even though he knows he doesn't have much of a chance to get through to the finals. But E.D. proves once again his capacity to surprise everyone - in an unexpected way. Ages 10 - 13",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780207200625"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0207200629"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 185,
+    "printType": "BOOK",
+    "categories": [
+     "Children's stories"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=0acUJdlmr0IC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=0acUJdlmr0IC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=0acUJdlmr0IC&printsec=frontcover&dq=subject:sport&hl=&cd=38&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=0acUJdlmr0IC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Taking_the_Chequered_Flag.html?hl=&id=0acUJdlmr0IC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=0acUJdlmr0IC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "4idnJgvj48sC",
+   "etag": "OG1wsM8vR2c",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/4idnJgvj48sC",
+   "volumeInfo": {
+    "title": "Live Action",
+    "authors": [
+     "Michael Panckridge",
+     "Laurie Daley"
+    ],
+    "publisher": "HarperCollins Australia",
+    "publishedDate": "2007",
+    "description": "Sam's favourite rugby league team isn't making the grade, and he means to figure out why Sam Davies discovers that the house next door to his aunt's is being used to store action figures from all his favourite premier rugby league teams. And it looks like Sam's enemy, Vipers player Vinny taranto, might be involved. Desperate to rescue the struggling premier league club he has bought, Vinny's father is using microchips inserted in the action figures to control the players themselves, via the logos on their new jumpers. After Sam experiences a series of uncharacteristic blunders while training, discovery of a Sam-like figure prompts him and his friends to take a closer look at Mr taranto's operation. In an explosive showdown, Sam rescues Vinny from the booby-trapped house and discovers that Vinny is Mr taranto's stepson, not his son. And that's not the only surprise in store for Vinny ... Ages 10 - 14",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780207200533"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "020720053X"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 199,
+    "printType": "BOOK",
+    "categories": [
+     "Action figures (Toys)"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=4idnJgvj48sC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=4idnJgvj48sC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=4idnJgvj48sC&printsec=frontcover&dq=subject:sport&hl=&cd=39&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=4idnJgvj48sC&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Live_Action.html?hl=&id=4idnJgvj48sC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=4idnJgvj48sC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "9TXJAAAACAAJ",
+   "etag": "FCVgr7lR83U",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/9TXJAAAACAAJ",
+   "volumeInfo": {
+    "title": "Motive im Sport",
+    "subtitle": "motivationspsychologische Analysen und empirische Studien",
+    "authors": [
+     "Hartmut Gabler"
+    ],
+    "publishedDate": "2002",
+    "description": "Die Frage nach den Motiven sportlicher Handlungen gehört zu den zentralen Fragen der Sportwissenschaft. Sie bezieht sich sowohl auf den Breiten- als auch auf den Hochleistungssport, aber auch auf die Sportzuschauer oder auf das in zunehmendem Masse beobachtbare extreme Sporttreiben. Dabei sind innerhalb der Vielfalt der einzelnen Motive, die sportliche Handlungen begründen, das Leistungs-, Aggressions- und Fairnessmotiv von besonderem Interesse. Letztendlich geht es um den individuellen Sinn, den die Sportlerinnen und Sportler ihrem Handeln zugrunde legen.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "3778068016"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9783778068014"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 257,
+    "printType": "BOOK",
+    "categories": [
+     "Motivationspsychologie"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "de",
+    "previewLink": "http://books.google.com.au/books?id=9TXJAAAACAAJ&dq=subject:sport&hl=&cd=40&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=9TXJAAAACAAJ&dq=subject:sport&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Motive_im_Sport.html?hl=&id=9TXJAAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=9TXJAAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  }
+ ]
+}

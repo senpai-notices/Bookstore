@@ -1,0 +1,2501 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 57,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "TzM9ltY8wWIC",
+   "etag": "7fr1DtwWhsE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/TzM9ltY8wWIC",
+   "volumeInfo": {
+    "title": "Sketches of Thought",
+    "authors": [
+     "Vinod Goel"
+    ],
+    "publisher": "MIT Press",
+    "publishedDate": "1995",
+    "description": "Much of the cognitive lies beyond articulate, discursive thought, beyond the reach of current computational notions. In Sketches of Thought, Vinod Goel argues that the cognitive computational conception of the world requires our thought processes to be precise, rigid, discrete, and unambiguous; yet there are dense, ambiguous, and amorphous symbol systems, like sketching, painting, and poetry, found in the arts and much of everyday discourse that have an important, non-trivial place in cognition. Goel maintains that while on occasion our thoughts do conform to the current computational theory of mind, they often are - indeed must be - vague, fluid, ambiguous, and amorphous. He argues that if cognitive science takes the classical computational story seriously, it must deny or ignore these processes, or at least relegate them to the realm of the nonmental. Along the way, Goel makes a number of significant and controversial interim points. He shows that there is a principled distinction between design and nondesign problems, that there are standard stages in the solution of design problems, that these stages correlate with the use of different types of external symbol systems, that these symbol systems are usefully individuated in Nelson Goodman's syntactic and semantic terms, and that different cognitive processes are facilitated by different types of symbol systems.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0262071630"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780262071635"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 279,
+    "printType": "BOOK",
+    "categories": [
+     "Psychology"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=TzM9ltY8wWIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=TzM9ltY8wWIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=TzM9ltY8wWIC&printsec=frontcover&dq=subject:computer&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=TzM9ltY8wWIC&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Sketches_of_Thought.html?hl=&id=TzM9ltY8wWIC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=TzM9ltY8wWIC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "wgdxhRD8P_YC",
+   "etag": "M3jS4rKpzxI",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/wgdxhRD8P_YC",
+   "volumeInfo": {
+    "title": "Apple Pro Training Series",
+    "subtitle": "Motion 4",
+    "authors": [
+     "Mark Spencer"
+    ],
+    "publisher": "Peachpit Press",
+    "publishedDate": "2009-09-22",
+    "description": "In this best-selling guide to Motion 4, you’ll create eight sophisticated projects including a 3D show promo, a network-style title sequence, a DVD motion menu, and an actual temp effect used in Overture Film’s Traitor. Each chapter represents a complete lesson, with a commercial-quality project to work through as you learn. Master trainer Mark Spencer starts with the fundamentals of motion graphics and quickly moves into compositing, animation, motion graphics design, visual effects design, and the world of 3D. The book is fully revised to take advantage of the software’s new features: you’ll explore 3D shadows, reflections, and depth of field; “fly” a camera from one object to another; ripple text characters on and off the screen with ease; animate date and time sequences automatically; and master Motion’s remarkable new linking behavior. Along the way, you’ll work with particles, generators, filters, effects, templates, greenscreen mattes, keying, tracking, paint, and more. Whether you’re just entering the field or are already an accomplished motion graphics pro, this book will have you designing in Motion in record time. DVD-ROM includes lesson and media files Focused lessons take you step by step through real-world projects Accessible writing style puts expert instructors at your side Ample illustrations help you master techniques fast Lesson goals and time estimates help you plan your time Chapter review questions summarize what you’ve learned and help you prepare for the Apple Pro certification exam All of Peachpit's eBooks contain the same content as the print edition. You will find a link in the last few pages of your eBook that directs you to the media files. Helpful tips: If you are able to search the book, search for \"Where are the lesson files?\" Go to the very last page of the book and scroll backwards. You will need a web-enabled device or computer in order to access the media files that accompany this ebook. Entering the URL supplied into a computer with web access will allow you to get to the files. Depending on your device, it is possible that your display settings will cut off part of the URL. To make sure this is not the case, try reducing your font size and turning your device to a landscape view. This should cause the full URL to appear.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0321679601"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780321679604"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 553,
+    "printType": "BOOK",
+    "categories": [
+     "Computers"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.8.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=wgdxhRD8P_YC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=wgdxhRD8P_YC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=wgdxhRD8P_YC&printsec=frontcover&dq=subject:computer&hl=&cd=2&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=wgdxhRD8P_YC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-wgdxhRD8P_YC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 51.95,
+     "currencyCode": "AUD"
+    },
+    "retailPrice": {
+     "amount": 33.66,
+     "currencyCode": "AUD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=wgdxhRD8P_YC&rdid=book-wgdxhRD8P_YC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 5.195E7,
+       "currencyCode": "AUD"
+      },
+      "retailPrice": {
+       "amountInMicros": 3.366E7,
+       "currencyCode": "AUD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=wgdxhRD8P_YC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "w4ZGFVexSlQC",
+   "etag": "tj36XkFLQ+Q",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/w4ZGFVexSlQC",
+   "volumeInfo": {
+    "title": "Computer Security - ESORICS 2004",
+    "subtitle": "9th European Symposium on Research Computer Security, Sophia Antipolis, France, September 13-15, 2004. Proceedings",
+    "authors": [
+     "Pierangela Samarati"
+    ],
+    "publisher": "Springer Science & Business Media",
+    "publishedDate": "2004-09-06",
+    "description": "This book constitutes the refereed proceedings of the 9th European Symposium on Research in Computer Security, ESORICS 2004, held in Sophia Antipolis, France in September 2004. The 27 revised full papers presented were carefully reviewed and selected from 159 submissions. Among the topics addressed are access control, authorization frameworks, privacy policies, security protocols, trusted computing, anonymity, information hiding, steganography, digital signature schemes, encrypted communication, information flow control, authentication, key distribution, public key cryptography, intrusion prevention, and attack discovery.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9783540229872"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "3540229876"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 456,
+    "printType": "BOOK",
+    "categories": [
+     "Business & Economics"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.0.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=w4ZGFVexSlQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=w4ZGFVexSlQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=w4ZGFVexSlQC&printsec=frontcover&dq=subject:computer&hl=&cd=3&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=w4ZGFVexSlQC&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Computer_Security_ESORICS_2004.html?hl=&id=w4ZGFVexSlQC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com.au/books/download/Computer_Security_ESORICS_2004-sample-pdf.acsm?id=w4ZGFVexSlQC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=w4ZGFVexSlQC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "QHm1bIqIFAwC",
+   "etag": "r9gborqxPkQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/QHm1bIqIFAwC",
+   "volumeInfo": {
+    "title": "Delivering Learning on the Net",
+    "subtitle": "The Why, what & how of Online Education",
+    "authors": [
+     "Martin Weller"
+    ],
+    "publisher": "Psychology Press",
+    "publishedDate": "2002",
+    "description": "As online education becomes more familiar, so the reality of using it in teaching and learning has moved beyond the realm of the specialist. Pedagogy and best practice Delivering Learning on the Net explores the reality of online education today. Martin Weller chaired the groundbreaking Open University course You, Your computer and the Net, which is now the largest for-credit online course in Europe. Based on this and his experiences elsewhere, the book is a comprehensive resource grounded in practical reality as well as in research. Key issues covered include: *the Net and its relation to education; *developing and implementing online courses; *the key issues surrounding online education. Teachers, trainers, technologists, administrators and decision-makers working in higher and further education will all find much of value in this book.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780749436759"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0749436751"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 181,
+    "printType": "BOOK",
+    "categories": [
+     "Education"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=QHm1bIqIFAwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=QHm1bIqIFAwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=QHm1bIqIFAwC&printsec=frontcover&dq=subject:computer&hl=&cd=4&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=QHm1bIqIFAwC&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Delivering_Learning_on_the_Net.html?hl=&id=QHm1bIqIFAwC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=QHm1bIqIFAwC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "EboTAQAAIAAJ",
+   "etag": "MPnrf6bWz+I",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/EboTAQAAIAAJ",
+   "volumeInfo": {
+    "title": "The Playful World",
+    "subtitle": "How Technology is Transforming Our Imagination",
+    "authors": [
+     "Mark Pesce"
+    ],
+    "publishedDate": "2000",
+    "description": "Analyses new gaming technology to introduce the interactive toys that will influence an entire generation of young users.",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "STANFORD:36105025044749"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 287,
+    "printType": "BOOK",
+    "categories": [
+     "Technology & Engineering"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=EboTAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=EboTAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=EboTAQAAIAAJ&dq=subject:computer&hl=&cd=5&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=EboTAQAAIAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/The_Playful_World.html?hl=&id=EboTAQAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=EboTAQAAIAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "67iaAAAAIAAJ",
+   "etag": "vQ94BjJwz70",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/67iaAAAAIAAJ",
+   "volumeInfo": {
+    "title": "Computer applications in applied polymer science II",
+    "subtitle": "automation, modeling, and simulation",
+    "authors": [
+     "Theodore Provder",
+     "American Chemical Society. Division of Polymeric Materials: Science and Engineering",
+     "American Chemical Society. Meeting"
+    ],
+    "publisher": "Oxford University Press, USA",
+    "publishedDate": "1989-05-05",
+    "description": "Addresses the impact of computer science on automation, modeling, simulation, and optimization of polymer science as a result of the availability of more powerful, lower-cost computers and modeling software. Five sections illustrate a wide variety of modeling applications, including laboratory and information automation; mathematical modeling, simulation, and optimization; cross-linking reactions and cure process modeling; polymerization kinetics and process modeling; and polymerization process control.",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "UCAL:B4412923"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 568,
+    "printType": "BOOK",
+    "categories": [
+     "Computers"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=67iaAAAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=67iaAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=67iaAAAAIAAJ&dq=subject:computer&hl=&cd=6&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=67iaAAAAIAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Computer_applications_in_applied_polymer.html?hl=&id=67iaAAAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=67iaAAAAIAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Joy8K9JIMoEC",
+   "etag": "e3iTK3EK5ck",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Joy8K9JIMoEC",
+   "volumeInfo": {
+    "title": "Emphasizing Distributed Systems",
+    "authors": [
+     "Marvin V. Zelkowitz"
+    ],
+    "publisher": "Elsevier",
+    "publishedDate": "2000",
+    "description": "As the computer industry moves into the 21st century, the long-running Advances in Computers is ready to tackle the challenges of the new century with insightful articles on new technology, just as it has since 1960 in chronicling the advances in computer technology from the last century. As the longest-running continuing series on computers, Advances in Computers presents those technologies that will affect the industry in the years to come. In this volume, the 53rd in the series, we present 8 relevant topics. The first three represent a common theme on distributed computing systems -using more than one processor to allow for parallel execution, and hence completion of a complex computing task in a minimal amount of time. The other 5 chapters describe other relevant advances from the late 1990s with an emphasis on software development, topics of vital importance to developers today- process improvement, measurement and legal liabilities. Key Features * Longest running series on computers * Contains eight insightful chapters on new technology * Gives comprehensive treatment of distributed systems * Shows how to evaluate measurements * Details how to evaluate software process improvement models * Examines how to expand e-commerce on the Web * Discusses legal liabilities in developing software-a must-read for developers",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780120121533"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0120121530"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 534,
+    "printType": "BOOK",
+    "categories": [
+     "Computers"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.3.0.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Joy8K9JIMoEC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Joy8K9JIMoEC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=Joy8K9JIMoEC&dq=subject:computer&hl=&cd=7&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=Joy8K9JIMoEC&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Emphasizing_Distributed_Systems.html?hl=&id=Joy8K9JIMoEC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=Joy8K9JIMoEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "mt5lkIS29fQC",
+   "etag": "epD+gbxQBA0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/mt5lkIS29fQC",
+   "volumeInfo": {
+    "title": "Computer Fundamentals and Information Technology",
+    "authors": [
+     "Ramesh Bangia"
+    ],
+    "publisher": "Firewall Media",
+    "publishedDate": "2008-01-01",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "8131802965"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9788131802960"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 601,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=mt5lkIS29fQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=mt5lkIS29fQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=mt5lkIS29fQC&printsec=frontcover&dq=subject:computer&hl=&cd=8&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=mt5lkIS29fQC&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Computer_Fundamentals_and_Information_Te.html?hl=&id=mt5lkIS29fQC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=mt5lkIS29fQC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "d5RQAAAAMAAJ",
+   "etag": "Z3LpUcydIhU",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/d5RQAAAAMAAJ",
+   "volumeInfo": {
+    "title": "Advances in Computers",
+    "authors": [
+     "Marvin V. Zelkowitz"
+    ],
+    "publishedDate": "2002",
+    "description": "Advances in Computers remains at the forefront in presenting the new developments in the ever-changing field of information technology. Since 1960, Advances in Computers has chronicled the constantly shifting theories and methods of this technology that greatly shape our lives today. Volume 56 presents eight chapters that describe how the software, hardware and applications of computers are changing the use of computers during the early part of the 21st century: · Software Evolution and the Staged Model of the Software Lifecycle · Embedded Software · Empirical Studies of Quality Models in Object-Oriented Systems · Software Fault Prevention by Language Choice · Quantum computing and communication · Exception Handling · Breaking the Robustness Barrier: Recent Progress on the Design of Robust Multimodal Systems · Using Data Mining to Discover the Preferences of Computer Criminals As the longest-running continuous serial on computers, Advances in Computers presents technologies that will affect the industry in the years to come, covering hot topics from fundamentals to applications. Additionally, readers benefit from contributions of both academic and industry professionals of the highest caliber. Volume 56 presents eight chapters that describe how the software, hardware and applications of computers are changing the use of computers during the early part of the 21st century: · Software Evolution and the Staged Model of the Software Lifecycle · Embedded Software · Empirical Studies of Quality Models in Object-Oriented Systems · Software Fault Prevention by Language Choice · Quantum computing and communication · Exception Handling · Breaking the Robustness Barrier: Recent Progress on the Design of Robust Multimodal Systems · Using Data Mining to Discover the Preferences of Computer Criminals",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0120121565"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780120121564"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 400,
+    "printType": "BOOK",
+    "categories": [
+     "Computers"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.10.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=d5RQAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=d5RQAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=d5RQAAAAMAAJ&dq=subject:computer&hl=&cd=9&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=d5RQAAAAMAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Advances_in_Computers.html?hl=&id=d5RQAAAAMAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=d5RQAAAAMAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "NV67ywfxvuoC",
+   "etag": "jBfeMuFj8+A",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/NV67ywfxvuoC",
+   "volumeInfo": {
+    "title": "Usable Authentication and Click-based Graphical Passwords",
+    "publisher": "ProQuest",
+    "publishedDate": "2009",
+    "description": "Security experts often refer to humans as the \"weakest link\" (Sasse, Brostoff, and Weirich, 2001) in the security chain, asserting that the problem lies not with the security systems themselves, but with users who are unable or unwilling to comply with security protocols. The shift towards usable security and including human factors in system design is an important one that has a direct impact on system security.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0494474750"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780494474754"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 190,
+    "printType": "BOOK",
+    "categories": [
+     "Authentication"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=NV67ywfxvuoC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=NV67ywfxvuoC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=NV67ywfxvuoC&dq=subject:computer&hl=&cd=10&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=NV67ywfxvuoC&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Usable_Authentication_and_Click_based_Gr.html?hl=&id=NV67ywfxvuoC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=NV67ywfxvuoC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "yqp9AAAAIAAJ",
+   "etag": "grsuFdBGrYA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/yqp9AAAAIAAJ",
+   "volumeInfo": {
+    "title": "Hardware Specification, Verification and Synthesis: Mathematical Aspects",
+    "subtitle": "Mathematical Sciences Institute Workshop. Cornell University Ithaca, New York, USA. July 5-7, 1989. Proceedings",
+    "authors": [
+     "Miriam Leeser",
+     "Geoffrey Brown"
+    ],
+    "publisher": "Springer Verlag",
+    "publishedDate": "1990-02-14",
+    "description": "The papers in this volume present current research into formal methods for hardware design. The goal of this research is to develop new ways of using logic to specify systems, model hardware and verify designs. Most of the research was performed in the United States.",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "UCAL:B4524891"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 402,
+    "printType": "BOOK",
+    "categories": [
+     "Computers"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.13.2.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=yqp9AAAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=yqp9AAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=yqp9AAAAIAAJ&dq=subject:computer&hl=&cd=11&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=yqp9AAAAIAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Hardware_Specification_Verification_and.html?hl=&id=yqp9AAAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=yqp9AAAAIAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "DKc-AQAAIAAJ",
+   "etag": "6AAfseIxnmQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/DKc-AQAAIAAJ",
+   "volumeInfo": {
+    "title": "MicroStation bible",
+    "subtitle": "an invaluable reference guide for beginning through experienced users",
+    "authors": [
+     "Ross Cowden"
+    ],
+    "publisher": "Onword Pr",
+    "publishedDate": "1993-05-01",
+    "description": "The everything-you-always-wanted-to-know-about MicroStation book. For beginning, intermediate, and users. Covers a multitude of applications, utilities, databases, customization, Windows, MDE/MDL, software, hardware, and much more.",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "UCSC:32106019334199"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 743,
+    "printType": "BOOK",
+    "categories": [
+     "Computers"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=DKc-AQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=DKc-AQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=DKc-AQAAIAAJ&dq=subject:computer&hl=&cd=12&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=DKc-AQAAIAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/MicroStation_bible.html?hl=&id=DKc-AQAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=DKc-AQAAIAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "cYyRDf-qqisC",
+   "etag": "cq7VmL7FF4o",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/cYyRDf-qqisC",
+   "volumeInfo": {
+    "title": "Advancing Into the 21st Century",
+    "authors": [
+     "Marvin V. Zelkowitz"
+    ],
+    "publisher": "Elsevier",
+    "publishedDate": "2000",
+    "description": "Humans are often distinguished from other animals by their ability, even need, to see patterns in everyday life. As we enter a new millennium, all aspects of society seem to want to take stock of what has happened in the past and what is likely to happen in the future. The computer industry is no different from others. Advances in Computers has been published continuously since 1960 and this year's volume is the fiftieth technical volume in the series (two index volumes were published as volumes 50 and 51). Since it is the fortieth year of publication, we decided to look back on the changes that have occurred since Volume 1 of Advances in computers appeared in 1960. We looked at the six chapters of that initial volume and decided that an appropriate anniversary volume for this series would be a collection of papers on the same topics that appeared in 1960. What has happened to those technologies? Are we making the progress we thought we would or are events moving more slowly? Key Features * Business computing * Numerical weather prediction * Spoken language * Language understanding * Microprocessor design * Computer games",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780120121526"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0120121522"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 350,
+    "printType": "BOOK",
+    "categories": [
+     "Computers"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.3.0.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=cYyRDf-qqisC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=cYyRDf-qqisC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=cYyRDf-qqisC&dq=subject:computer&hl=&cd=13&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=cYyRDf-qqisC&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Advancing_Into_the_21st_Century.html?hl=&id=cYyRDf-qqisC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=cYyRDf-qqisC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "18cy2E-o8gIC",
+   "etag": "qsqqbVB9Pp0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/18cy2E-o8gIC",
+   "volumeInfo": {
+    "title": "CAD/CAM: Computer-Aided Design and Manufacturing",
+    "authors": [
+     "Groover"
+    ],
+    "publisher": "Pearson Education India",
+    "publishedDate": "2006",
+    "description": "In this book, the authors examine interactive computer graphics and its use in designing industrial robots, computer control of manufacturing processes, computer-integrated production control, automated inspections, and flexible manufacturing systems. They also discuss the implementation of turnkey CAD/CAM systems",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "8177584162"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9788177584165"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 511,
+    "printType": "BOOK",
+    "categories": [
+     "CAD/CAM"
+    ],
+    "averageRating": 3.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.0.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=18cy2E-o8gIC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=18cy2E-o8gIC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=18cy2E-o8gIC&dq=subject:computer&hl=&cd=14&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=18cy2E-o8gIC&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/CAD_CAM_Computer_Aided_Design_and_Manufa.html?hl=&id=18cy2E-o8gIC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=18cy2E-o8gIC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "DVntAAAAMAAJ",
+   "etag": "xEnkt8/DaoM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/DVntAAAAMAAJ",
+   "volumeInfo": {
+    "title": "Computers, jobs, and skills",
+    "subtitle": "the industrial relations of technological change",
+    "authors": [
+     "Christopher Baldry"
+    ],
+    "publisher": "Plenum Pub Corp",
+    "publishedDate": "1988-10-01",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "UOM:39015018626310"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 191,
+    "printType": "BOOK",
+    "categories": [
+     "Business & Economics"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=DVntAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=DVntAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=DVntAAAAMAAJ&dq=subject:computer&hl=&cd=15&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=DVntAAAAMAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Computers_jobs_and_skills.html?hl=&id=DVntAAAAMAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=DVntAAAAMAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "2EZOAQAAIAAJ",
+   "etag": "xnbo3jPLsZc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/2EZOAQAAIAAJ",
+   "volumeInfo": {
+    "title": "ICCAD-83",
+    "subtitle": "digest of technical papers",
+    "authors": [
+     "International Conference on Computer Aided Design",
+     "IEEE Computer Society",
+     "IEEE Circuits and Systems Society",
+     "IEEE Electron Devices Society"
+    ],
+    "publishedDate": "1983",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0818605189"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780818605185"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 259,
+    "printType": "BOOK",
+    "categories": [
+     "Computers"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=2EZOAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=2EZOAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=2EZOAQAAIAAJ&dq=subject:computer&hl=&cd=16&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=2EZOAQAAIAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/ICCAD_83.html?hl=&id=2EZOAQAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=2EZOAQAAIAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "SRYnC3zrMHAC",
+   "etag": "gIcsPBrJ62s",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/SRYnC3zrMHAC",
+   "volumeInfo": {
+    "title": "Guidelines for benchmarking ADP systems in the competitive procurement environment",
+    "authors": [
+     "United States. National Bureau of Standards"
+    ],
+    "publishedDate": "1977",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "UIUC:30112105105123"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 28,
+    "printType": "BOOK",
+    "categories": [
+     "Computers"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=SRYnC3zrMHAC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=SRYnC3zrMHAC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=SRYnC3zrMHAC&dq=subject:computer&hl=&cd=17&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=SRYnC3zrMHAC&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Guidelines_for_benchmarking_ADP_systems.html?hl=&id=SRYnC3zrMHAC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=SRYnC3zrMHAC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "RyFGAQAAIAAJ",
+   "etag": "MDxtvSxp47I",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/RyFGAQAAIAAJ",
+   "volumeInfo": {
+    "title": "Digest of technical papers",
+    "authors": [
+     "IEEE Computer Society",
+     "IEEE Circuits and Systems Society",
+     "IEEE Electron Devices Society",
+     "ACM Special Interest Group on Design Automation"
+    ],
+    "publishedDate": "1986",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0818687444"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780818687440"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 523,
+    "printType": "BOOK",
+    "categories": [
+     "Computer-aided design"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=RyFGAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=RyFGAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=RyFGAQAAIAAJ&dq=subject:computer&hl=&cd=18&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=RyFGAQAAIAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Digest_of_technical_papers.html?hl=&id=RyFGAQAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=RyFGAQAAIAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "LIxRrcHllGcC",
+   "etag": "11KrsKm+WTk",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/LIxRrcHllGcC",
+   "volumeInfo": {
+    "title": "Academic Research Equipment in Computer Science, Central Computer Facilities and Engineering, 1989",
+    "publishedDate": "1991",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "IND:30000038622613"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 25,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.2.0.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=LIxRrcHllGcC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=LIxRrcHllGcC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=LIxRrcHllGcC&dq=subject:computer&hl=&cd=19&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=LIxRrcHllGcC&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Academic_Research_Equipment_in_Computer.html?hl=&id=LIxRrcHllGcC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=LIxRrcHllGcC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "a0N9VmFhiYwC",
+   "etag": "o+o2pVJBD4o",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/a0N9VmFhiYwC",
+   "volumeInfo": {
+    "title": "IP Design for Mobile Networks",
+    "authors": [
+     "Grayson Mark"
+    ],
+    "publisher": "Pearson Education India",
+    "publishedDate": "2012",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "8131758117"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9788131758113"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 531,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=a0N9VmFhiYwC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=a0N9VmFhiYwC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=a0N9VmFhiYwC&dq=subject:computer&hl=&cd=20&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=a0N9VmFhiYwC&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/IP_Design_for_Mobile_Networks.html?hl=&id=a0N9VmFhiYwC"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=a0N9VmFhiYwC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "3MlkPQAACAAJ",
+   "etag": "j2uHPIS7Sx8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/3MlkPQAACAAJ",
+   "volumeInfo": {
+    "title": "Student Manual",
+    "subtitle": "Project+ Cert, 2003 Obj, Comptia Ed, Mu Cbt",
+    "authors": [
+     "Axzo Press"
+    ],
+    "publisher": "Axzo Press",
+    "publishedDate": "2006-01-01",
+    "description": "This ILT Series course, rated 4.9/5.0 in overall quality by ProCert Labs, will prepare students for the current CompTIA Project+ certification exam. It covers the full range of skills and concepts students need to know to plan and implement projects. The project initiation and planning process is covered in-depth, culminating in the creation of a project schedule. Learning how to manage business concerns such as cost and risk is balanced by thorough coverage of best practices in managing people and resources. Students will also learn how to manage change and the steps necessary in closing a project. Comes with MeasureUp exam prep software and a companion CBT program.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "142391449X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781423914495"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 276,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=3MlkPQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=3MlkPQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=3MlkPQAACAAJ&dq=subject:computer&hl=&cd=21&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=3MlkPQAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Student_Manual.html?hl=&id=3MlkPQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=3MlkPQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "gIUeQwAACAAJ",
+   "etag": "0Uh72R6F/mA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/gIUeQwAACAAJ",
+   "volumeInfo": {
+    "title": "Higher National in Computing",
+    "subtitle": "Btec",
+    "publishedDate": "2005",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1844792420"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781844792429"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 238,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=gIUeQwAACAAJ&dq=subject:computer&hl=&cd=22&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=gIUeQwAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Higher_National_in_Computing.html?hl=&id=gIUeQwAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=gIUeQwAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "klbDAAAACAAJ",
+   "etag": "RWblnS8ggjg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/klbDAAAACAAJ",
+   "volumeInfo": {
+    "title": "Basic Computer Skills Practice Book Level 3",
+    "authors": [
+     "MaryJo Fante Milburn",
+     "SRA/McGraw-Hill"
+    ],
+    "publishedDate": "2000-07",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0026844818"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780026844819"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 82,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=klbDAAAACAAJ&dq=subject:computer&hl=&cd=23&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=klbDAAAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Basic_Computer_Skills_Practice_Book_Leve.html?hl=&id=klbDAAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=klbDAAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "BRaBPQAACAAJ",
+   "etag": "KuRIdsoe/Ng",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/BRaBPQAACAAJ",
+   "volumeInfo": {
+    "title": "Lessons in Teamwork",
+    "subtitle": "Computer-Based Training Modules",
+    "authors": [
+     "Kimberly Mullins"
+    ],
+    "publishedDate": "1995-05-01",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0874252539"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780874252538"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 54,
+    "printType": "BOOK",
+    "categories": [
+     "Teams in the workplace"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=BRaBPQAACAAJ&dq=subject:computer&hl=&cd=24&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=BRaBPQAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Lessons_in_Teamwork.html?hl=&id=BRaBPQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=BRaBPQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "kFSztgAACAAJ",
+   "etag": "kkKJJlmGk1w",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/kFSztgAACAAJ",
+   "volumeInfo": {
+    "title": "Computer streiten nicht (Nebula award stories, dt., Ausz.) Science Fiction-Stories",
+    "authors": [
+     "Damon Knight",
+     "Hans Maeter"
+    ],
+    "publishedDate": "1973",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "OCLC:163759299"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=kFSztgAACAAJ&dq=subject:computer&hl=&cd=25&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=kFSztgAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Computer_streiten_nicht_Nebula_award_sto.html?hl=&id=kFSztgAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=kFSztgAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "anyBHAAACAAJ",
+   "etag": "04HzFbCzCww",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/anyBHAAACAAJ",
+   "volumeInfo": {
+    "title": "Computer Organization and Design",
+    "subtitle": "Computer Engineering 331 : Department of Computer Science and Engineering",
+    "authors": [
+     "A. R. Hurson",
+     "S. H. Pakzad"
+    ],
+    "publishedDate": "1993",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "OCLC:80858422"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 304,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=anyBHAAACAAJ&dq=subject:computer&hl=&cd=26&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=anyBHAAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Computer_Organization_and_Design.html?hl=&id=anyBHAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=anyBHAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "DLJTAAAAYAAJ",
+   "etag": "R8aiygIUdRY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/DLJTAAAAYAAJ",
+   "volumeInfo": {
+    "title": "Southcon Conference Record",
+    "publishedDate": "1994",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "CORNELL:31924072880655"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.25.2.0.preview.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=DLJTAAAAYAAJ&dq=subject:computer&hl=&cd=27&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=DLJTAAAAYAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Southcon_Conference_Record.html?hl=&id=DLJTAAAAYAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=DLJTAAAAYAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "-ZtcPQAACAAJ",
+   "etag": "UTee7IU5tPQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/-ZtcPQAACAAJ",
+   "volumeInfo": {
+    "title": "Computer Graphics",
+    "subtitle": "From a Small Formula to Cyberworlds",
+    "authors": [
+     "Alexei Sourin"
+    ],
+    "publishedDate": "2005",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "9810675518"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9789810675516"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 353,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=-ZtcPQAACAAJ&dq=subject:computer&hl=&cd=28&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=-ZtcPQAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Computer_Graphics.html?hl=&id=-ZtcPQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=-ZtcPQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Y620DAEACAAJ",
+   "etag": "ESqtYKDY+fs",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Y620DAEACAAJ",
+   "volumeInfo": {
+    "title": "Computer Attitude, Computer Anxiety and Computer Self-efficacy",
+    "subtitle": "A Study Among Preservice and Inservice Teachers in UNIMAS",
+    "publishedDate": "2009",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "OCLC:943472277"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 71,
+    "printType": "BOOK",
+    "categories": [
+     "Borneo"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=Y620DAEACAAJ&dq=subject:computer&hl=&cd=29&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=Y620DAEACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Computer_Attitude_Computer_Anxiety_and_C.html?hl=&id=Y620DAEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=Y620DAEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "0mooAQAACAAJ",
+   "etag": "LErq4+gwkF8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/0mooAQAACAAJ",
+   "volumeInfo": {
+    "title": "Computer mal menschlich",
+    "publishedDate": "1986",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "3729602381"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9783729602380"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 129,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=0mooAQAACAAJ&dq=subject:computer&hl=&cd=30&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=0mooAQAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Computer_mal_menschlich.html?hl=&id=0mooAQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=0mooAQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "ToCQMQEACAAJ",
+   "etag": "0RfHrI7DGqA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/ToCQMQEACAAJ",
+   "volumeInfo": {
+    "title": "Children and Media",
+    "subtitle": "Image, Education, Participation",
+    "authors": [
+     "Ulla Carlsson",
+     "Cecilia von Feilitzen"
+    ],
+    "publisher": "Coronet Books Incorporated",
+    "publishedDate": "1999-01-01",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "9163078759"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9789163078750"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 483,
+    "printType": "BOOK",
+    "categories": [
+     "Social Science"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=ToCQMQEACAAJ&dq=subject:computer&hl=&cd=31&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=ToCQMQEACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Children_and_Media.html?hl=&id=ToCQMQEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=ToCQMQEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "HwWHtgAACAAJ",
+   "etag": "IT7HxP2WxZY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/HwWHtgAACAAJ",
+   "volumeInfo": {
+    "title": "CEPA 1985 Fall Conference Proceedings",
+    "authors": [
+     "Martin A. Zellin"
+    ],
+    "publishedDate": "1986",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0933007116"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780933007116"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 44,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=HwWHtgAACAAJ&dq=subject:computer&hl=&cd=32&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=HwWHtgAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/CEPA_1985_Fall_Conference_Proceedings.html?hl=&id=HwWHtgAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=HwWHtgAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "2JXVAAAACAAJ",
+   "etag": "dl3RWg8P8bc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/2JXVAAAACAAJ",
+   "volumeInfo": {
+    "title": "Computer Dictionary",
+    "subtitle": "Supplement",
+    "authors": [
+     "Patricia Conniffe"
+    ],
+    "publishedDate": "1984",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0590343157"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780590343152"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 96,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=2JXVAAAACAAJ&dq=subject:computer&hl=&cd=33&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=2JXVAAAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Computer_Dictionary.html?hl=&id=2JXVAAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=2JXVAAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "h2LknQEACAAJ",
+   "etag": "sxkf30/9JmM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/h2LknQEACAAJ",
+   "volumeInfo": {
+    "title": "Minerva Computer Dictionary",
+    "subtitle": "A Dictionary for the Information Age",
+    "publishedDate": "2000",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "9836803173"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9789836803177"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 381,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=h2LknQEACAAJ&dq=subject:computer&hl=&cd=34&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=h2LknQEACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Minerva_Computer_Dictionary.html?hl=&id=h2LknQEACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=h2LknQEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "rmirPAAACAAJ",
+   "etag": "LyRRsZy5A4g",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/rmirPAAACAAJ",
+   "volumeInfo": {
+    "title": "Das EDV-Checkbuch für das Handwerk",
+    "authors": [
+     "Michael Bartsch"
+    ],
+    "publishedDate": "1989-01",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "3486214837"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9783486214833"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 283,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "de",
+    "previewLink": "http://books.google.com.au/books?id=rmirPAAACAAJ&dq=subject:computer&hl=&cd=35&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=rmirPAAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Das_EDV_Checkbuch_f%C3%BCr_das_Handwerk.html?hl=&id=rmirPAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=rmirPAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "yz97NAAACAAJ",
+   "etag": "Na58nlnuJDs",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/yz97NAAACAAJ",
+   "volumeInfo": {
+    "title": "The Optical Mouse, and an Architectural Methodology for Smart Digital Sensors",
+    "authors": [
+     "Richard F. Lyon"
+    ],
+    "publishedDate": "1981",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "OCLC:10346024"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 32,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=yz97NAAACAAJ&dq=subject:computer&hl=&cd=36&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=yz97NAAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/The_Optical_Mouse_and_an_Architectural_M.html?hl=&id=yz97NAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=yz97NAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "g1Y7uAAACAAJ",
+   "etag": "sdi+wZ5Ob7Q",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/g1Y7uAAACAAJ",
+   "volumeInfo": {
+    "title": "In den Schluchten der Bytes",
+    "subtitle": "ein Brevier für Computer-Freaks und solche, die es noch nicht sind",
+    "authors": [
+     "Dietmar Eirich"
+    ],
+    "publishedDate": "1988",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "3701402647"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9783701402649"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 259,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "de",
+    "previewLink": "http://books.google.com.au/books?id=g1Y7uAAACAAJ&dq=subject:computer&hl=&cd=37&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=g1Y7uAAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/In_den_Schluchten_der_Bytes.html?hl=&id=g1Y7uAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=g1Y7uAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Vf2EMwAACAAJ",
+   "etag": "jpkdBmChpLc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Vf2EMwAACAAJ",
+   "volumeInfo": {
+    "title": "In pej Urdū",
+    "authors": [
+     "Naṣīr Dihlavī"
+    ],
+    "publishedDate": "2002",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "OCLC:156905140"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 148,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=Vf2EMwAACAAJ&dq=subject:computer&hl=&cd=38&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=Vf2EMwAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/In_pej_Urd%C5%AB.html?hl=&id=Vf2EMwAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=Vf2EMwAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "i6vWAAAAMAAJ",
+   "etag": "Z4M0lFWt9Z4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/i6vWAAAAMAAJ",
+   "volumeInfo": {
+    "title": "Introduction to IBM Direct-access Storage Devices and Organization Methods",
+    "authors": [
+     "International Business Machines Corporation. Data Processing Division"
+    ],
+    "publishedDate": "1966",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "PSU:000010103609"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 70,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=i6vWAAAAMAAJ&dq=subject:computer&hl=&cd=39&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=i6vWAAAAMAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Introduction_to_IBM_Direct_access_Storag.html?hl=&id=i6vWAAAAMAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=i6vWAAAAMAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "YaklPQAACAAJ",
+   "etag": "72zzTsHzsYA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/YaklPQAACAAJ",
+   "volumeInfo": {
+    "title": "Computer Basics for Forestry",
+    "authors": [
+     "Hardip Singh Kingra",
+     "Kingra",
+     "H. S. & Singh"
+    ],
+    "publishedDate": "1993-01-01",
+    "description": "This book is an attempt to make people understand the jargonized terminology of computer world. The book, covers everything from the conception of the idea, to purchase a computer, to the actual use of the computer in the forestry field, to maximize use of the computers, through the use of optimum software is also discussed in detail in the book.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "8170891892"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9788170891895"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 410,
+    "printType": "BOOK",
+    "categories": [
+     "Computer"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=YaklPQAACAAJ&dq=subject:computer&hl=&cd=40&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=YaklPQAACAAJ&dq=subject:computer&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com.au/books/about/Computer_Basics_for_Forestry.html?hl=&id=YaklPQAACAAJ"
+   },
+   "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com.au/books/reader?id=YaklPQAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  }
+ ]
+}

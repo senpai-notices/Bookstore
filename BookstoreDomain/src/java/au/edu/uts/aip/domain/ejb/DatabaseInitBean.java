@@ -2,6 +2,7 @@ package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.entity.Book;
 import au.edu.uts.aip.domain.entity.BookSeller;
+import au.edu.uts.aip.domain.entity.Category;
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.Role.RoleType;
 import au.edu.uts.aip.domain.entity.User;
@@ -108,6 +109,8 @@ public class DatabaseInitBean {
         
         System.out.println("Importing sample books data");
         String filePath = this.getClass().getResource("/books.csv").getFile();
+        
+        HashMap<String, Category> categoryMap = new HashMap<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))){
             String line;
             while ( (line = br.readLine()) != null){
@@ -116,14 +119,29 @@ public class DatabaseInitBean {
                     String[] data = line.split(",");
                 
                     Book book = new Book();
-                    book.setIsbn(data[0]);
-                    book.setTitle(data[1]);
-                    book.setName(data[2]);
+                    book.setIsbn10(data[0].substring(1, data[0].length() - 2));
+                    book.setIsbn13(data[1].substring(1, data[0].length() - 2));
+                    book.setTitle(data[2]);
+                    
+                    book.setAuthor(data[3]);
                     data[3] = data[3].replaceAll("\"", "");
-                    book.setPublishYear(Integer.parseInt(data[3]));
+                    
                     book.setPublisher(data[4]);
-                    book.setImgPath(data[data.length - 1]);
+                    
+                    book.setPublishYear(Integer.parseInt(data[5].substring(0, 4)));
+                    book.setPageCount(Integer.parseInt(data[6]));
+                    
+                    book.setImgPath(data[7]);
+                    
+                    String categoryName = data[8];
+                    if (categoryMap.get(categoryName) == null){
+                        Category category = new Category();
+                        category.setCategoryName(categoryName);
+                    }
+                    
+                    book.setCategory(categoryMap.get(categoryName));
 
+                    
                     List<BookSeller> sellers = new ArrayList<>();
                     BookSeller adminSeller = new BookSeller();
                     adminSeller.setBook(book);
@@ -163,6 +181,8 @@ public class DatabaseInitBean {
         q = em.createNativeQuery("drop view jdbcrealm_user");
         q.executeUpdate();
         q = em.createNativeQuery("delete from Book_Seller");
+        q.executeUpdate();
+        q = em.createNativeQuery("date from Category");
         q.executeUpdate();
         q = em.createNativeQuery("delete from Book");
         q.executeUpdate();
