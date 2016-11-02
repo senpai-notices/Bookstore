@@ -76,7 +76,7 @@ public class EmailResource {
         
         try {
             User user = userBean.getUser(username);
-            String body = "Dear" + user.getFullname() + ", your verification request has been approved\n\n";
+            String body = "Dear " + user.getFullname() + ", your verification request has been approved\n\n";
             
             SendEmail.SendEmail(user.getEmail(), "Account verification status", body);
             return Response.ok().build();
