@@ -39,7 +39,9 @@ public class EmailResource {
             User user = userBean.getUser(securityContext.getUserPrincipal().getName());
             String token = userBean.generateActivationToken(user);
             
-            String body = servletContext.getInitParameter("clientURL") + "/?token=" + token;
+            String body = "Hi " + user.getFullname() + ", \n Welcome to Bookstore! To get started"
+                    + ", please activate your account by clicking the link below:\n"
+                    + servletContext.getInitParameter("clientURL") + "/?token=" + token;
             body += "&username=" + user.getUsername();
             SendEmail.SendEmail(user.getEmail(), "Account activation", body);
             
