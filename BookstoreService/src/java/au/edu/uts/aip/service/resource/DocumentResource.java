@@ -47,9 +47,9 @@ public class DocumentResource {
         
         String extension = request.getHeader("Content-Type").split("/")[1];
         String username = request.getUserPrincipal().getName();
-        String baseUploadFoler = servletContext.getRealPath("/../../../../");
+        String baseUploadFolder = servletContext.getRealPath("/../../../../");
         
-        String userFolder = new File(baseUploadFoler).getPath() + File.separator + username;
+        String userFolder = new File(baseUploadFolder).getPath() + File.separator + username;
         File uploadDirectory = new File(userFolder);
         if (!uploadDirectory.exists()){
             uploadDirectory.mkdir();
