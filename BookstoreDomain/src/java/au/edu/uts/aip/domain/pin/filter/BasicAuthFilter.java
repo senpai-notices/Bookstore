@@ -1,7 +1,7 @@
 /**
  * Source: http://www.adam-bien.com/roller/abien/entry/client_side_http_basic_access
  */
-package au.edu.uts.aip.service.filter;
+package au.edu.uts.aip.domain.pin.filter;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
