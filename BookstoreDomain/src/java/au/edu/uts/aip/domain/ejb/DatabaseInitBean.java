@@ -182,7 +182,7 @@ public class DatabaseInitBean {
         q.executeUpdate();
         q = em.createNativeQuery("delete from Book_Seller");
         q.executeUpdate();
-        q = em.createNativeQuery("date from Category");
+        q = em.createNativeQuery("delete from Category");
         q.executeUpdate();
         q = em.createNativeQuery("delete from Book");
         q.executeUpdate();
