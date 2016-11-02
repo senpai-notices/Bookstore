@@ -5,6 +5,7 @@ import au.edu.uts.aip.domain.pin.dto.PinCardPost;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
 import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
+import au.edu.uts.aip.domain.pin.dto.PinRecipientPut;
 import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
 import au.edu.uts.aip.domain.pin.filter.BasicAuthFilter;
 import au.edu.uts.aip.domain.pin.filter.ClientResponseLoggingFilter;
@@ -33,7 +34,6 @@ public class PaymentBean implements PaymentRemote {
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(pinCardPost, MediaType.APPLICATION_JSON_TYPE));
         
-        // Convert a Response to a String
         //String responseString = response.readEntity(String.class);
 
         client.close();
@@ -46,7 +46,7 @@ public class PaymentBean implements PaymentRemote {
 
         Client client = ClientBuilder.newClient()
                 .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new ClientResponseLoggingFilter());;
+                .register(new ClientResponseLoggingFilter());
 
         Response response = client.target(BASE_URL + "/customers")
                 .request(MediaType.APPLICATION_JSON)
@@ -61,7 +61,7 @@ public class PaymentBean implements PaymentRemote {
 
         Client client = ClientBuilder.newClient()
                 .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new ClientResponseLoggingFilter());;
+                .register(new ClientResponseLoggingFilter());
 
         Response response = client.target(BASE_URL + "/charges")
                 .request(MediaType.APPLICATION_JSON)
@@ -75,7 +75,7 @@ public class PaymentBean implements PaymentRemote {
     public Response createRecipient(PinRecipientPost pinRecipientPost) {
         Client client = ClientBuilder.newClient()
                 .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new ClientResponseLoggingFilter());;
+                .register(new ClientResponseLoggingFilter());
 
         Response response = client.target(BASE_URL + "/recipients")
                 .request(MediaType.APPLICATION_JSON)
@@ -89,12 +89,44 @@ public class PaymentBean implements PaymentRemote {
     public Response transfer(PinTransferPost pinTransferPost) {
         Client client = ClientBuilder.newClient()
                 .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new ClientResponseLoggingFilter());;
+                .register(new ClientResponseLoggingFilter());
 
         Response response = client.target(BASE_URL + "/transfers")
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(pinTransferPost, MediaType.APPLICATION_JSON_TYPE));
 
+        client.close();
+        return response;
+    }
+
+    @Override
+    public Response fetchRecipient(String recipientToken) {
+        Client client = ClientBuilder.newClient()
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new ClientResponseLoggingFilter());
+               
+        Response response = client.target(BASE_URL + "/recipients")
+                .path("{recipient-token}")
+                .resolveTemplate("recipient-token", recipientToken)
+                .request()
+                .get();               
+    
+        client.close();
+        return response;
+    }
+
+    @Override
+    public Response editRecipient(String recipientToken, PinRecipientPut pinRecipientPut) {
+        Client client = ClientBuilder.newClient()
+                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new ClientResponseLoggingFilter());
+               
+        Response response = client.target(BASE_URL + "/recipients")
+                .path("{recipient-token}")
+                .resolveTemplate("recipient-token", recipientToken)
+                .request()
+                .put(Entity.entity(pinRecipientPut, MediaType.APPLICATION_JSON_TYPE));               
+    
         client.close();
         return response;
     }

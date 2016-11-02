@@ -88,6 +88,8 @@ public class PaymentResource {
 
         return response;
     }
+    
+    // TODO: fetch and edit Recipient (bank account details)
 
     /*
     @GET

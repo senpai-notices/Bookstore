@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PinBankAccountPost implements Serializable {
+public class PinBankAccount implements Serializable {
     private String name;
     private String bsb;
     private String number;
