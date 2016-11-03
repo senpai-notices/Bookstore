@@ -4,8 +4,8 @@ import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
-public class PinCardPost implements Serializable {
+@XmlRootElement(name="card")
+public class PinCard implements Serializable {
     private String number;
     private String expiryMonth;
     private String expiryYear;

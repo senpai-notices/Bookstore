@@ -9,6 +9,7 @@ public class PinRecipientPost implements Serializable {
     private String email;
     private PinBankAccount bankAccount;
 
+    @XmlElement(name="email")
     public String getEmail() {
         return email;
     }

@@ -1,24 +1,24 @@
 package au.edu.uts.aip.domain.remote;
 
-import au.edu.uts.aip.domain.pin.dto.PinCardPost;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
 import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPut;
 import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
-import javax.ws.rs.core.Response;
+import au.edu.uts.aip.domain.validation.ValidationResult;
+import javax.ejb.Remote;
+import javax.json.JsonObject;
 
+@Remote
 public interface PaymentRemote {
 
-    Response createCard(PinCardPost pinCardPost);
+    ValidationResult createCustomer(PinCustomerPost pinCustomerPost);
 
-    Response createCustomer(PinCustomerPost pinCustomerPost);
-
-    Response charge(PinChargePost pinChargePost);
+    ValidationResult charge(PinChargePost pinChargePost);
     
-    Response createRecipient(PinRecipientPost pinRecipientPost);
+    ValidationResult createRecipient(PinRecipientPost pinRecipientPost);
     
-    Response transfer(PinTransferPost pinTransferPost);
+    ValidationResult transfer(PinTransferPost pinTransferPost);
     
     /**
      * Returns the details of a recipient.
@@ -26,7 +26,7 @@ public interface PaymentRemote {
      * @param recipientToken
      * @return 
      */
-    Response fetchRecipient(String recipientToken);
+    JsonObject fetchRecipient(String recipientToken);
     
     /**
      * Updates the given details of a recipient and returns its details.
@@ -35,5 +35,5 @@ public interface PaymentRemote {
      * @param pinRecipientPut
      * @return 
      */
-    Response editRecipient(String recipientToken, PinRecipientPut pinRecipientPut);
+    ValidationResult editRecipient(String recipientToken, PinRecipientPut pinRecipientPut);
 }
