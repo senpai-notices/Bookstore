@@ -4,13 +4,17 @@ import au.edu.uts.aip.domain.pin.dto.PinCardPost;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
 import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
+import au.edu.uts.aip.domain.pin.dto.PinRecipientPut;
 import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
 import au.edu.uts.aip.domain.remote.PaymentRemote;
 
 import javax.ejb.EJB;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -91,6 +95,30 @@ public class PaymentResource {
     
     // TODO: fetch and edit Recipient (bank account details)
 
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("recipient/{recipient-token}")
+    public Response fetchRecipient(@PathParam("recipient-token") String recipientToken) {
+
+        Response response = paymentBean.fetchRecipient(recipientToken);
+
+        return response;
+    }
+    
+    @PUT
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("recipient/{recipient-token}")
+    public Response editRecipient(@PathParam("recipient-token") String recipientToken,
+                                    PinRecipientPut pinRecipientPut) {
+
+        Response response = paymentBean.editRecipient(recipientToken, pinRecipientPut);
+
+        return response;
+    }
+    
+    // <editor-fold defaultstate="collapsed" desc="unused">
     /*
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -187,4 +215,5 @@ public class PaymentResource {
         return response;
     }
      */
+    // </editor-fold>
 }
