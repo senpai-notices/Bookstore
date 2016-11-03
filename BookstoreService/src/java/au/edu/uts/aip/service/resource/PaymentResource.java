@@ -1,14 +1,16 @@
 package au.edu.uts.aip.service.resource;
 
-import au.edu.uts.aip.domain.pin.dto.PinCardPost;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
 import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPut;
 import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
 import au.edu.uts.aip.domain.remote.PaymentRemote;
+import au.edu.uts.aip.domain.validation.ValidationResult;
+import au.edu.uts.aip.service.utility.ResourceUtility;
 
 import javax.ejb.EJB;
+import javax.json.JsonObject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -29,26 +31,12 @@ public class PaymentResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
-    @Path("card/create")
-    public Response createCard(PinCardPost pinCardPost) {
-
-        Response response = paymentBean.createCard(pinCardPost);
-
-        return response;
-    }
-
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
     @Path("customer/create")
     public Response createCustomer(PinCustomerPost pinCustomerPost) {
+        
+        ValidationResult validationResult = paymentBean.createCustomer(pinCustomerPost);
 
-        Response response = paymentBean.createCustomer(pinCustomerPost);
-        // TODO: convert response to String
-        // TODO: check response status code.
-        // If != 201, then check if error array exists. If so, add it to the validation message stack.
-        return response;
+        return ResourceUtility.generate201Response(validationResult);
     }
 
     @POST
@@ -58,9 +46,9 @@ public class PaymentResource {
     @Path("charge")
     public Response charge(PinChargePost pinChargePost) {
 
-        Response response = paymentBean.charge(pinChargePost);
+        ValidationResult validationResult = paymentBean.charge(pinChargePost);
 
-        return response;
+        return ResourceUtility.generate201Response(validationResult);
     }
     
     @POST
@@ -70,9 +58,9 @@ public class PaymentResource {
     @Path("recipient/create")
     public Response createRecipient(PinRecipientPost pinRecipientPost) {
 
-        Response response = paymentBean.createRecipient(pinRecipientPost);
+        ValidationResult validationResult = paymentBean.createRecipient(pinRecipientPost);
 
-        return response;
+        return ResourceUtility.generate201Response(validationResult);
     }
     
     /**
@@ -88,34 +76,34 @@ public class PaymentResource {
     @Path("transfer")
     public Response transfer(PinTransferPost pinTransferPost) {
 
-        Response response = paymentBean.transfer(pinTransferPost);
+        ValidationResult validationResult = paymentBean.transfer(pinTransferPost);
 
-        return response;
+        return ResourceUtility.generate201Response(validationResult);
     }
     
-    // TODO: fetch and edit Recipient (bank account details)
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("recipient/{recipient-token}")
     public Response fetchRecipient(@PathParam("recipient-token") String recipientToken) {
 
-        Response response = paymentBean.fetchRecipient(recipientToken);
+        JsonObject recipient = paymentBean.fetchRecipient(recipientToken);
 
-        return response;
+        return Response.ok(recipient, MediaType.APPLICATION_JSON).build();
     }
     
     @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("recipient/{recipient-token}")
     public Response editRecipient(@PathParam("recipient-token") String recipientToken,
                                     PinRecipientPut pinRecipientPut) {
 
-        Response response = paymentBean.editRecipient(recipientToken, pinRecipientPut);
+        ValidationResult validationResult = 
+                paymentBean.editRecipient(recipientToken, pinRecipientPut);
 
-        return response;
+        return ResourceUtility.generate200Response(validationResult);
     }
     
     // <editor-fold defaultstate="collapsed" desc="unused">

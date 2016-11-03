@@ -1,7 +1,6 @@
 package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.remote.PaymentRemote;
-import au.edu.uts.aip.domain.pin.dto.PinCardPost;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
 import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
@@ -9,7 +8,10 @@ import au.edu.uts.aip.domain.pin.dto.PinRecipientPut;
 import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
 import au.edu.uts.aip.domain.pin.filter.BasicAuthFilter;
 import au.edu.uts.aip.domain.pin.filter.ClientResponseLoggingFilter;
+import au.edu.uts.aip.domain.pin.utility.PinResponseUtility;
+import au.edu.uts.aip.domain.validation.ValidationResult;
 import javax.ejb.Stateless;
+import javax.json.JsonObject;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
@@ -24,25 +26,7 @@ public class PaymentBean implements PaymentRemote {
     private static final String PASSWORD = "";
 
     @Override
-    public Response createCard(PinCardPost pinCardPost) {
-
-        Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new ClientResponseLoggingFilter());
-
-        Response response = client.target(BASE_URL + "/cards")
-                .request(MediaType.APPLICATION_JSON)
-                .post(Entity.entity(pinCardPost, MediaType.APPLICATION_JSON_TYPE));
-        
-        //String responseString = response.readEntity(String.class);
-
-        client.close();
-        
-        return response;
-    }
-
-    @Override
-    public Response createCustomer(PinCustomerPost pinCustomerPost) {
+    public ValidationResult createCustomer(PinCustomerPost pinCustomerPost) {
 
         Client client = ClientBuilder.newClient()
                 .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
@@ -52,12 +36,15 @@ public class PaymentBean implements PaymentRemote {
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(pinCustomerPost, MediaType.APPLICATION_JSON_TYPE));
 
+        int statusCode = response.getStatus();
+        JsonObject responseJson = PinResponseUtility.toJson(response.readEntity(String.class));
         client.close();
-        return response;
+
+        return PinResponseUtility.validate(statusCode, responseJson);
     }
 
     @Override
-    public Response charge(PinChargePost pinChargePost) {
+    public ValidationResult charge(PinChargePost pinChargePost) {
 
         Client client = ClientBuilder.newClient()
                 .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
@@ -67,12 +54,15 @@ public class PaymentBean implements PaymentRemote {
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(pinChargePost, MediaType.APPLICATION_JSON_TYPE));
 
+        int statusCode = response.getStatus();
+        JsonObject responseJson = PinResponseUtility.toJson(response.readEntity(String.class));
         client.close();
-        return response;
+
+        return PinResponseUtility.validate(statusCode, responseJson);
     }
 
     @Override
-    public Response createRecipient(PinRecipientPost pinRecipientPost) {
+    public ValidationResult createRecipient(PinRecipientPost pinRecipientPost) {
         Client client = ClientBuilder.newClient()
                 .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
                 .register(new ClientResponseLoggingFilter());
@@ -81,12 +71,15 @@ public class PaymentBean implements PaymentRemote {
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(pinRecipientPost, MediaType.APPLICATION_JSON_TYPE));
 
+        int statusCode = response.getStatus();
+        JsonObject responseJson = PinResponseUtility.toJson(response.readEntity(String.class));
         client.close();
-        return response;
+
+        return PinResponseUtility.validate(statusCode, responseJson);
     }
 
     @Override
-    public Response transfer(PinTransferPost pinTransferPost) {
+    public ValidationResult transfer(PinTransferPost pinTransferPost) {
         Client client = ClientBuilder.newClient()
                 .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
                 .register(new ClientResponseLoggingFilter());
@@ -95,39 +88,47 @@ public class PaymentBean implements PaymentRemote {
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(pinTransferPost, MediaType.APPLICATION_JSON_TYPE));
 
+        int statusCode = response.getStatus();
+        JsonObject responseJson = PinResponseUtility.toJson(response.readEntity(String.class));
         client.close();
-        return response;
+
+        return PinResponseUtility.validate(statusCode, responseJson);
     }
 
     @Override
-    public Response fetchRecipient(String recipientToken) {
+    public JsonObject fetchRecipient(String recipientToken) {
         Client client = ClientBuilder.newClient()
                 .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
                 .register(new ClientResponseLoggingFilter());
-               
+
         Response response = client.target(BASE_URL + "/recipients")
                 .path("{recipient-token}")
                 .resolveTemplate("recipient-token", recipientToken)
                 .request()
-                .get();               
-    
+                .get();
+
+        JsonObject responseJson = PinResponseUtility.toJson(response.readEntity(String.class));
         client.close();
-        return response;
+
+        return responseJson;
     }
 
     @Override
-    public Response editRecipient(String recipientToken, PinRecipientPut pinRecipientPut) {
+    public ValidationResult editRecipient(String recipientToken, PinRecipientPut pinRecipientPut) {
         Client client = ClientBuilder.newClient()
                 .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
                 .register(new ClientResponseLoggingFilter());
-               
+
         Response response = client.target(BASE_URL + "/recipients")
                 .path("{recipient-token}")
                 .resolveTemplate("recipient-token", recipientToken)
                 .request()
-                .put(Entity.entity(pinRecipientPut, MediaType.APPLICATION_JSON_TYPE));               
-    
+                .put(Entity.entity(pinRecipientPut, MediaType.APPLICATION_JSON_TYPE));
+
+        int statusCode = response.getStatus();
+        JsonObject responseJson = PinResponseUtility.toJson(response.readEntity(String.class));
         client.close();
-        return response;
+
+        return PinResponseUtility.validate(statusCode, responseJson);
     }
 }

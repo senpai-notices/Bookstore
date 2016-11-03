@@ -1,13 +1,12 @@
 package au.edu.uts.aip.domain.pin.dto;
 
 import java.io.Serializable;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class PinCustomerPost implements Serializable {
     private String email;
-    private String cardToken;
+    private PinCard card;
 
     public String getEmail() {
         return email;
@@ -17,12 +16,11 @@ public class PinCustomerPost implements Serializable {
         this.email = email;
     }
 
-    @XmlElement(name="card_token")
-    public String getCardToken() {
-        return cardToken;
+    public PinCard getCard() {
+        return card;
     }
-
-    public void setCardToken(String cardToken) {
-        this.cardToken = cardToken;
-    }
+    
+    public void setCard(PinCard card) {
+        this.card = card;
+    }   
 }
