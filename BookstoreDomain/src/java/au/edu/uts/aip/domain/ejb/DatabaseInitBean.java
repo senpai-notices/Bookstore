@@ -137,10 +137,15 @@ public class DatabaseInitBean {
                     if (categoryMap.get(categoryName) == null){
                         Category category = new Category();
                         category.setCategoryName(categoryName);
+                        em.persist(category);
+                        categoryMap.put(categoryName, category);
                     }
                     
-                    book.setCategory(categoryMap.get(categoryName));
-
+                    Category category = categoryMap.get(categoryName);
+                    book.setCategory(category);
+                    //category.getBooks().add(book);
+                    em.persist(category);
+                    
                     
                     List<BookSeller> sellers = new ArrayList<>();
                     BookSeller adminSeller = new BookSeller();
@@ -157,10 +162,19 @@ public class DatabaseInitBean {
                     double usedPrice = Math.random() * brandNewPrice;
                     userSeller.setPrice(usedPrice);
                     userSeller.setCondition("Used");
-
-                    book.setSellers(sellers);
+                    
                     em.persist(book);
+                    
+                    book.setSellers(sellers);
+                    
+                    
+                    em.persist(adminSeller);
+                    em.persist(userSeller);
+                    
+                    em.persist(book);
+                    
                 } catch (Exception ex){
+                    System.out.println(ex.getMessage());
                     continue;
                 }
                 
@@ -182,13 +196,13 @@ public class DatabaseInitBean {
         q.executeUpdate();
         q = em.createNativeQuery("delete from Book_Seller");
         q.executeUpdate();
-        q = em.createNativeQuery("delete from Category");
-        q.executeUpdate();
         q = em.createNativeQuery("delete from Book");
         q.executeUpdate();
         q = em.createNativeQuery("delete from Bookstore_User");
         q.executeUpdate();
         q = em.createNativeQuery("delete from Bookstore_Role");
+        q.executeUpdate();
+        q = em.createNativeQuery("delete from Category");
         q.executeUpdate();
         
         System.out.println("Cleaning database...Done");

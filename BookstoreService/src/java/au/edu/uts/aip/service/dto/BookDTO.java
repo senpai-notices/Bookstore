@@ -1,7 +1,9 @@
 package au.edu.uts.aip.service.dto;
 
 import au.edu.uts.aip.domain.entity.Book;
+import au.edu.uts.aip.domain.entity.BookSeller;
 import java.io.Serializable;
+import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -40,6 +42,10 @@ public class BookDTO implements Serializable {
         this.isbn10 = bookEntity.getIsbn10();
         this.isbn13 = bookEntity.getIsbn13();
         this.pageCount = bookEntity.getPageCount();
+        
+        //List<BookSeller> sellers = bookEntity.getSellers();
+        Object a = bookEntity.getSellers();
+        int i = 0;
     }
     
     public long getId() {

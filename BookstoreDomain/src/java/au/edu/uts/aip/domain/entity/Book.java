@@ -5,8 +5,10 @@ import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
@@ -26,7 +28,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @NamedQueries({
     @NamedQuery(name="Book.getLatest", query="SELECT b FROM Book b ORDER BY b.publishYear DESC"),
-    @NamedQuery(name="Book.getSingle", query="SELECT b FROM Book b where b.isbn10 like :isbn10 AND b.isbn13 like :isbn13 AND b.title like :title")
+    @NamedQuery(name="Book.getSingle", query="SELECT b FROM Book b JOIN FETCH b.sellers WHERE b.isbn10 like :isbn10 AND b.isbn13 like :isbn13 AND b.title like :title")
 })
 @Entity
 public class Book implements Serializable {
@@ -112,6 +114,7 @@ public class Book implements Serializable {
     }
     
     @OneToMany(mappedBy = "book")
+    @JoinColumn(name = "book")
     public List<BookSeller> getSellers() {
         return sellers;
     }
