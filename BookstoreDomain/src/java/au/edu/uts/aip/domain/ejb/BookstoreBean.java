@@ -1,7 +1,7 @@
 package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.entity.Book;
-import au.edu.uts.aip.domain.entity.BookSeller;
+import au.edu.uts.aip.domain.entity.BookSales;
 import au.edu.uts.aip.domain.entity.Category;
 import au.edu.uts.aip.domain.remote.BookstoreRemote;
 import java.util.List;
@@ -30,6 +30,7 @@ public class BookstoreBean implements BookstoreRemote {
         typedQuery.setParameter("isbn10", "%" + isbn10 + "%");
         typedQuery.setParameter("isbn13", "%" + isbn13 + "%");
         typedQuery.setParameter("title", "%" + title + "%");
+        List<Book> test = typedQuery.getResultList();
         return typedQuery.getSingleResult();
     }
 }

@@ -2,7 +2,8 @@ import React from 'react'
 import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
 import { connect } from 'react-redux'
 import * as bs from 'react-bootstrap'
-import { LoadingSpinner, BookItemThumbnail } from 'components'
+import { LoadingSpinner, EditableTable, StaticTable } from 'components'
+import InlineEdit from 'react-edit-inline'
 
 class ManageBooksView extends BaseView {
 	constructor(props){
@@ -10,15 +11,88 @@ class ManageBooksView extends BaseView {
 
 		this.searchBook = this.searchBook.bind(this)
 		this.getBookDetail = this.getBookDetail.bind(this)
+		this.removeSale = this.removeSale.bind(this)
+		this.addSale = this.addSale.bind(this)
+		this.resetSale = this.resetSale.bind(this)
+		this.saveSale = this.saveSale.bind(this)
 		this.state.bookList = []
+	}
+
+	saveSale(){
+		// TODO: call backend to update data
+	}
+
+	resetSale(){
+		let saleIndex = 0
+		this.state.userSalesInfo = []
+		this.state.userSalesInfoReset.forEach((sale) => {
+			sale.index = saleIndex
+			this.state.userSalesInfo.push({
+				condition: sale.condition,
+				price: sale.price,
+				quantity: sale.quantity,
+				actions: (<bs.Button bsStyle="danger" onClick={() => this.removeSale(sale)}>Remove</bs.Button>)
+			})
+			
+			saleIndex++
+		})
+		this.setState(this.state)
+	}
+
+	addSale(){
+		let newSale = {
+			condition: "<<condition>>",
+			price: "<<price>>",
+			quantity: "<<quantity>>",
+			index: this.state.userSalesInfo.length,
+			actions: (<bs.Button bsStyle="danger" onClick={() => this.removeSale(newSale)}>Remove</bs.Button>)
+		}
+
+		this.state.userSalesInfo.push(newSale)
+		this.setState(this.state)
+	}
+
+	removeSale(sale){
+		this.state.userSalesInfo.splice(sale.index, 1)
+		
+		let saleIndex = 0
+		this.state.userSalesInfo.forEach((saleInfo) =>{
+			saleInfo.index = saleIndex
+			saleIndex++
+		})
+		this.setState(this.state)
 	}
 
 	getBookDetail(book){
 
-		this.setState({loadingBookDetail: true})
+		this.state.userSalesInfo = []
+		this.state.loadingBookDetail = true
+		this.state.userSalesInfoReset = []
+		this.setState(this.state)
+
 		this.bookService.getBookDetail(book.isbn10, book.isbn13, book.title)
 			.then((bookDetail) => {
 				this.state.selectedBook = bookDetail
+
+				let saleIndex = 0
+				bookDetail.sales.forEach((sale) => {
+					if (sale.sellerName === this.props.user.username){
+						sale.index = saleIndex
+						saleIndex++
+						this.state.userSalesInfo.push({
+							condition: sale.bookCondition,
+							price: sale.price,
+							quantity: sale.quantity,
+							actions: (<bs.Button bsStyle="danger" onClick={() => this.removeSale(sale)}>Remove</bs.Button>)
+						})
+
+						this.state.userSalesInfoReset.push({
+							condition: sale.bookCondition,
+							price: sale.price,
+							quantity: sale.quantity
+						})
+					}
+				})
 			})
 			.fail((err) => {
 				this.state.selectedBook = book
@@ -115,41 +189,13 @@ class ManageBooksView extends BaseView {
 			verticalAlign: "middle"
 		}
 		if (this.state.bookList.length > 0){
-			let bookListView = []
-			let key = 0;
-			this.state.bookList.forEach((book) => {
-				key++
-				let isbn = []
-				if (book.isbn10) {
-					isbn.push(<div>{book.isbn10}</div>)
-				}
-				if (book.isbn13) {
-					isbn.push(<div>{book.isbn13}</div>)	
-				}
-
-				bookListView.push(
-					<tr key={key} style={{cursor: "pointer"}}
-						onClick={() => this.getBookDetail(book)}>
-						<td style={tdStyle}>{isbn}</td>
-						<td style={tdStyle}>{book.title}</td>
-						<td style={tdStyle}>{book.author}</td>
-					</tr>
-				)
-			})
 
 			searchResult = (
-				<bs.Table striped bordered condensed hover>
-					<thead>
-						<tr>
-							<th>ISBN</th>
-							<th>Title</th>
-							<th>Author(s)</th>
-						</tr>
-					</thead>
-					<tbody>
-					{bookListView}
-					</tbody>
-				</bs.Table>
+				<StaticTable dataList={this.state.bookList}
+					headers={['ISBN10', 'ISBN13', 'Title', 'Author']}
+					columns={['isbn10', 'isbn13', 'title', 'author']}
+					tdStyle={tdStyle} trStyle={{cursor: "pointer"}}
+					onRowClick={(selectedBook) => this.getBookDetail(selectedBook)}/>
 			)
 		}
 
@@ -158,8 +204,46 @@ class ManageBooksView extends BaseView {
 		const detailLoader = <LoadingSpinner visible={this.state.loadingBookDetail}/>
 		let bookDetail = ""
 		if (this.state.selectedBook && !this.state.loadingBookDetail){
+			const selectedBook = this.state.selectedBook
+
+			let userSalesView = ""
+			if (this.state.userSalesInfo.length > 0){
+
+				userSalesView = (
+					<div>
+						<EditableTable dataList={this.state.userSalesInfo}
+							headers={['Quantity', 'Price', 'Condition', 'Actions']}
+							columns={['quantity', 'price', 'condition', 'actions']}
+							tdStyle={tdStyle}
+							onChange={(resultList) => this.setState({userSalesInfo: resultList})} />
+
+						<p><small>Click on the text to edit your sales</small></p>
+					</div>
+				)
+			}
+
 			bookDetail = (
-				<BookItemThumbnail book={this.state.selectedBook} onClick={(book) => {console.log(book)}} />
+				<div>
+					<bs.Row>
+						<bs.Col xs={6}>
+							<bs.Thumbnail src={selectedBook.imgPath}/>
+						</bs.Col>
+						<bs.Col xs={6}>
+							<h3>{selectedBook.title}</h3>
+							<h4>Author: {selectedBook.author}</h4>
+							<h4>Published in: {selectedBook.publishYear}</h4>
+							<h4>Pubisher: {selectedBook.publisher}</h4>
+						</bs.Col>
+					</bs.Row>
+					<bs.Row>
+						{userSalesView}
+						<bs.Button bsStyle="primary" onClick={() => this.addSale()}>Add sales</bs.Button>
+						&nbsp;
+						<bs.Button bsStyle="warning" onClick={() => this.resetSale()}>Reset</bs.Button>
+						&nbsp;
+						<bs.Button bsStyle="success" onClick={() => this.saveSale()}>Save</bs.Button>
+					</bs.Row>
+				</div>
 			)
 		}
 

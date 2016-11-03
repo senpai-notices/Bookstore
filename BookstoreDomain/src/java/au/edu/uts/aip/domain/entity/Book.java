@@ -2,6 +2,7 @@ package au.edu.uts.aip.domain.entity;
 
 /*the needed libraries imported here*/
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,6 +15,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
@@ -28,9 +31,12 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @NamedQueries({
     @NamedQuery(name="Book.getLatest", query="SELECT b FROM Book b ORDER BY b.publishYear DESC"),
-    @NamedQuery(name="Book.getSingle", query="SELECT b FROM Book b JOIN FETCH b.sellers WHERE b.isbn10 like :isbn10 AND b.isbn13 like :isbn13 AND b.title like :title")
+    @NamedQuery(name="Book.getSingle", query="SELECT DISTINCT b FROM Book b JOIN FETCH b.sales  WHERE b.isbn10 like :isbn10 AND b.isbn13 like :isbn13 AND b.title like :title")
 })
 @Entity
+@Table(uniqueConstraints = {
+    @UniqueConstraint(columnNames = {"isbn10", "isbn13", "title"})
+})
 public class Book implements Serializable {
 
     
@@ -45,7 +51,7 @@ public class Book implements Serializable {
     private Long id;
     private String author;
     private String title;
-    private List<BookSeller> sellers;
+    private List<BookSales> sales = new ArrayList<>();
     private String isbn10;
     private String isbn13;
     private int publishYear;
@@ -115,12 +121,12 @@ public class Book implements Serializable {
     
     @OneToMany(mappedBy = "book")
     @JoinColumn(name = "book")
-    public List<BookSeller> getSellers() {
-        return sellers;
+    public List<BookSales> getSales() {
+        return sales;
     }
 
-    public void setSellers(List<BookSeller> sellers) {
-        this.sellers = sellers;
+    public void setSales(List<BookSales> sales) {
+        this.sales = sales;
     }
 
     public int getPublishYear() {

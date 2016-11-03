@@ -20,6 +20,7 @@ class BaseView extends React.Component {
 		this.adminService = new AdminService()
 		this.handleChange = this.handleChange.bind(this)
 		this.handleFileChange = this.handleFileChange.bind(this)
+		this.handleInlineChange = this.handleInlineChange.bind(this)
 	}
 
 	handleChange(event) {
@@ -30,6 +31,11 @@ class BaseView extends React.Component {
 	handleFileChange(event, name){
 		this.state[name] = event.target.files[0]
 		this.setState(this.state)
+	}
+
+	handleInlineChange(event, item){
+		console.log(event)
+		console.log(item)
 	}
 
 	componentWillUnmount(){

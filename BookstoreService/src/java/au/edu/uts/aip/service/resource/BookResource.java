@@ -39,7 +39,7 @@ public class BookResource {
             @QueryParam("isbn13") String isbn13,
             @QueryParam("title") String title){
         Book bookEntity = bookstoreBean.getSingleBook(isbn10, isbn13, title);
-        BookDTO bookDTO = new BookDTO(bookEntity);
+        BookDTO bookDTO = new BookDTO(bookEntity, bookEntity.getSales());
         
         return Response.ok(bookDTO).build();
     }

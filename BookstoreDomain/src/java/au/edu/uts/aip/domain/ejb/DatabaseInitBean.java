@@ -1,7 +1,7 @@
 package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.entity.Book;
-import au.edu.uts.aip.domain.entity.BookSeller;
+import au.edu.uts.aip.domain.entity.BookSales;
 import au.edu.uts.aip.domain.entity.Category;
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.Role.RoleType;
@@ -132,6 +132,7 @@ public class DatabaseInitBean {
                     book.setPageCount(Integer.parseInt(data[6]));
                     
                     book.setImgPath(data[7]);
+                    em.persist(book);
                     
                     String categoryName = data[8];
                     if (categoryMap.get(categoryName) == null){
@@ -142,35 +143,35 @@ public class DatabaseInitBean {
                     }
                     
                     Category category = categoryMap.get(categoryName);
-                    book.setCategory(category);
                     //category.getBooks().add(book);
                     em.persist(category);
+                    book.setCategory(category);
+                    em.persist(book);
                     
                     
-                    List<BookSeller> sellers = new ArrayList<>();
-                    BookSeller adminSeller = new BookSeller();
+                    List<BookSales> sellers = new ArrayList<>();
+                    BookSales adminSeller = new BookSales();
                     adminSeller.setBook(book);
                     adminSeller.setSeller(adminUser);
                     double brandNewPrice = Math.random() * 200;
                     adminSeller.setPrice(brandNewPrice);
                     adminSeller.setCondition("Brand new");
+                    adminSeller.setQuantity(r.nextInt(20) + 1);
 
-                    BookSeller userSeller = new BookSeller();
+                    BookSales userSeller = new BookSales();
                     userSeller.setBook(book);
                     User seller = verifiedUsers[r.nextInt(20)];
                     userSeller.setSeller(seller);
                     double usedPrice = Math.random() * brandNewPrice;
                     userSeller.setPrice(usedPrice);
                     userSeller.setCondition("Used");
-                    
-                    em.persist(book);
-                    
-                    book.setSellers(sellers);
-                    
+                    userSeller.setQuantity(r.nextInt(2) + 1);
                     
                     em.persist(adminSeller);
                     em.persist(userSeller);
                     
+                    book.getSales().add(adminSeller);
+                    book.getSales().add(userSeller);
                     em.persist(book);
                     
                 } catch (Exception ex){
@@ -194,7 +195,7 @@ public class DatabaseInitBean {
         q.executeUpdate();
         q = em.createNativeQuery("drop view jdbcrealm_user");
         q.executeUpdate();
-        q = em.createNativeQuery("delete from Book_Seller");
+        q = em.createNativeQuery("delete from Book_sales");
         q.executeUpdate();
         q = em.createNativeQuery("delete from Book");
         q.executeUpdate();

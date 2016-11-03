@@ -1,8 +1,9 @@
 package au.edu.uts.aip.service.dto;
 
 import au.edu.uts.aip.domain.entity.Book;
-import au.edu.uts.aip.domain.entity.BookSeller;
+import au.edu.uts.aip.domain.entity.BookSales;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -27,7 +28,8 @@ public class BookDTO implements Serializable {
     private String isbn13;
     @XmlElement
     private int pageCount;
-
+    private List<SellerDTO> sales;
+    
     public BookDTO(){
         
     }
@@ -42,10 +44,20 @@ public class BookDTO implements Serializable {
         this.isbn10 = bookEntity.getIsbn10();
         this.isbn13 = bookEntity.getIsbn13();
         this.pageCount = bookEntity.getPageCount();
+    }
+    
+    public BookDTO(Book bookEntity, List<BookSales> sales){
+        this(bookEntity);
         
-        //List<BookSeller> sellers = bookEntity.getSellers();
-        Object a = bookEntity.getSellers();
-        int i = 0;
+        this.sales = new ArrayList<>();
+        for(BookSales bookSeller: sales){
+            SellerDTO sellerDTO = new SellerDTO();
+            sellerDTO.setSellerName(bookSeller.getSeller().getUsername());
+            sellerDTO.setBookCondition(bookSeller.getCondition());
+            sellerDTO.setPrice(bookSeller.getPrice());
+            sellerDTO.setQuantity(bookSeller.getQuantity());
+            this.sales.add(sellerDTO);
+        }
     }
     
     public long getId() {
@@ -118,5 +130,13 @@ public class BookDTO implements Serializable {
 
     public void setPageCount(int pageCount) {
         this.pageCount = pageCount;
+    }
+
+    public List<SellerDTO> getSales() {
+        return sales;
+    }
+
+    public void setSales(List<SellerDTO> sales) {
+        this.sales = sales;
     }
 }
