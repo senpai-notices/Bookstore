@@ -5,11 +5,13 @@ package au.edu.uts.aip.domain.pin.filter;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import javax.annotation.Priority;
 import javax.ws.rs.client.ClientRequestContext;
 import javax.ws.rs.client.ClientRequestFilter;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.xml.bind.DatatypeConverter;
 
+@Priority(value = 1)
 public class BasicAuthFilter implements ClientRequestFilter {
 
     private final String user;
