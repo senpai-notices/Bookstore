@@ -107,6 +107,7 @@ public class PaymentResource {
     }
     
     @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("recipient/{recipient-token}")
