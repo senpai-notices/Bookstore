@@ -6,7 +6,7 @@ import * as bs from 'react-bootstrap'
 class ShoppingCartView extends BaseView{
 
 	constructor(props){
-		
+		super(props)
 	}
 
 	render(){

@@ -37,3 +37,20 @@ export const setFormErrorMessage = (formName, errorMessage=undefined) => ({
 	formName,
 	errorMessage
 })
+
+// shopping cart actions
+export const addItem = (itemId, sellerId) => ({
+	type: "ADD_ITEM",
+	itemId,
+	sellerId
+})
+
+export const removeItem = (itemId, sellerId) => ({
+	type: "REMOVE_ITEM",
+	itemId,
+	sellerId
+})
+
+export const clearCart = () => ({
+	type: "CLEAR_CART"
+})

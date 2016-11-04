@@ -4,6 +4,19 @@ import { BooksRow } from 'components'
 
 class StaticTable extends React.Component {
 
+	constructor(props){
+		super(props)
+		this.rowClicked = this.rowClicked.bind(this)
+	}
+
+	rowClicked(item){
+		event.preventDefault()
+
+		if (this.props.onRowClick){
+			this.props.onRowClick(item)
+		}
+	}
+
 	render() {
 		const { dataList, headers, columns, tdStyle, trStyle } = this.props
 
@@ -24,7 +37,7 @@ class StaticTable extends React.Component {
 				})
 
 				rowsView.push(
-					<tr key={key} style={trStyle} onClick={() => this.props.onRowClick(item)}>
+					<tr key={key} style={trStyle} onClick={() => this.rowClicked(item)}>
 						{columnsView}
 					</tr>
 				)
