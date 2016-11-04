@@ -1,7 +1,5 @@
 package au.edu.uts.aip.domain.utility;
 
-import au.edu.uts.aip.domain.ejb.UserBean;
-import au.edu.uts.aip.domain.entity.User;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,12 +18,12 @@ import javax.mail.internet.MimeMessage;
 public class SendEmail {
 
     private static Session emailSession = null;
-    
-    private static Session getEmailSession(){
-        if (emailSession != null){
+
+    private static Session getEmailSession() {
+        if (emailSession != null) {
             return emailSession;
         }
-        
+
         final String username = "***REMOVED***";
         final String password = "***REMOVED***";
         //String from = "USNWGroup@aip.uts.edu.au";
@@ -43,20 +41,20 @@ public class SendEmail {
                 return new PasswordAuthentication(username, password);
             }
         });
-        
+
         return emailSession;
     }
-    
+
     public static void SendEmail(String to, String subject, String body) throws MessagingException {
         Session session = getEmailSession();
-        
-        try{
+
+        try {
             MimeMessage message = new MimeMessage(session);
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
             message.setSubject(subject);
             message.setText(body);
             Transport.send(message);
-        } catch (MessagingException ex){
+        } catch (MessagingException ex) {
             Logger.getLogger(SendEmail.class.getName()).log(Level.SEVERE, null, ex);
             throw ex;
         }

@@ -13,8 +13,8 @@ public class ResourceUtility {
                     .entity(validationResult.toJson()).build();
         }
     }
-    
-        public static Response generate200Response(ValidationResult validationResult) {
+
+    public static Response generate200Response(ValidationResult validationResult) {
         if (validationResult == null) {
             return Response.status(Response.Status.CREATED).build();
         } else {

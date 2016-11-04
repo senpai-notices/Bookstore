@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class BookSaleDTO implements Serializable {
+
     @XmlElement
     private String sellerName;
     @XmlElement
@@ -56,6 +57,4 @@ public class BookSaleDTO implements Serializable {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-    
-    
 }

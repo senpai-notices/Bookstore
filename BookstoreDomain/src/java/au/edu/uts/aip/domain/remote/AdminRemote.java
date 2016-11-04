@@ -4,6 +4,8 @@ import javax.ejb.Remote;
 
 @Remote
 public interface AdminRemote {
+
     void rejectVerificationRequest(String username);
+
     void approveVerificationRequest(String username);
 }

@@ -1,18 +1,29 @@
 package au.edu.uts.aip.domain.ejb;
 
+import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.remote.UserRemote;
-import au.edu.uts.aip.domain.entity.*;
 import au.edu.uts.aip.domain.entity.Role.RoleType;
-import au.edu.uts.aip.domain.exception.*;
+import au.edu.uts.aip.domain.entity.User;
+import au.edu.uts.aip.domain.exception.ActivationException;
+import au.edu.uts.aip.domain.exception.InvalidTokenException;
 import au.edu.uts.aip.domain.utility.SHA;
 import au.edu.uts.aip.domain.validation.ValidationResult;
-import io.jsonwebtoken.*;
-import java.util.*;
-import java.util.logging.*;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.SignatureException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.persistence.*;
-import javax.validation.*;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
 
 @Stateless
 @LocalBean
@@ -20,21 +31,20 @@ public class UserBean implements UserRemote {
 
     @PersistenceContext
     private EntityManager em;
-    
-    
-    public Role getRole(String roleName){
+
+    public Role getRole(String roleName) {
         TypedQuery<Role> typedQuery = em.createNamedQuery("Role.find", Role.class);
         typedQuery.setParameter("name", roleName);
         return typedQuery.getSingleResult();
     }
-    
+
     @Override
     public User getUser(String username) {
-        try{
+        try {
             TypedQuery<User> typedQuery = em.createNamedQuery("User.find", User.class);
             typedQuery.setParameter("username", username);
             return typedQuery.getSingleResult();
-        } catch (Exception ex){
+        } catch (Exception ex) {
             return null;
         }
     }
@@ -48,16 +58,16 @@ public class UserBean implements UserRemote {
     public ValidationResult createUser(User user) {
         try {
             User existingUser = getUser(user.getUsername());
-            
-            if (existingUser != null){
+
+            if (existingUser != null) {
                 ValidationResult result = new ValidationResult();
                 String errorMessage = "Username " + user.getUsername() + " already exists";
                 result.addFormError("username", errorMessage);
                 return result;
             }
-            
+
             em.persist(user);
-            
+
             // hash password
             String unhashedPassword = user.getPassword();
             String hashsedPassword = SHA.hash256(unhashedPassword);
@@ -93,33 +103,33 @@ public class UserBean implements UserRemote {
     }
 
     @Override
-    public void activateAccount(String token, String username) throws ActivationException, InvalidTokenException{
+    public void activateAccount(String token, String username) throws ActivationException, InvalidTokenException {
         try {
             User user = getUser(username);
-            
+
             if (!user.getRole().getRoleName().equals("INACTIVATED")) {
                 throw new ActivationException();
             }
-            
+
             Jwts.parser().setSigningKey(user.getPassword())
-                .requireSubject(user.getUsername()).parseClaimsJws(token);
-            
+                    .requireSubject(user.getUsername()).parseClaimsJws(token);
+
             Role userRole = getRole(RoleType.USER.toString());
             user.setRole(userRole);
             em.persist(user);
-            
+
         } catch (SignatureException ex) {
             throw new InvalidTokenException();
         }
     }
-    
+
     @Override
-    public List<User> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit){
+    public List<User> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit) {
         List<Role> roles = new ArrayList<>();
-        for(String roleName: rolesName){
+        for (String roleName : rolesName) {
             roles.add(getRole(roleName));
         }
-        
+
         TypedQuery<User> typedQuery = em.createNamedQuery("User.findUsers", User.class);
         typedQuery.setParameter("roles", roles);
         typedQuery.setParameter("username", "%" + username + "%");
@@ -129,55 +139,55 @@ public class UserBean implements UserRemote {
         typedQuery.setMaxResults(limit);
         return typedQuery.getResultList();
     }
-    
+
     @Override
-    public void updateVerificationDocuments(String username, String documentType, String filePath){
+    public void updateVerificationDocuments(String username, String documentType, String filePath) {
         User user = getUser(username);
-        if (documentType.equals("id")){
+        if (documentType.equals("id")) {
             user.setIdVerificationPath(filePath);
-        } else if (documentType.equals("residential")){
+        } else if (documentType.equals("residential")) {
             user.setResidentialVerificationPath(filePath);
         } else {
             throw new RuntimeException("Invalid document type");
         }
-        
-        if (user.getRole().getRoleName().equals(RoleType.ADMIN.toString())){
+
+        if (user.getRole().getRoleName().equals(RoleType.ADMIN.toString())) {
             throw new RuntimeException("Verification on administrator account");
         }
 
-        if (user.getIdVerificationPath() != null && user.getResidentialVerificationPath() != null){
+        if (user.getIdVerificationPath() != null && user.getResidentialVerificationPath() != null) {
             Role verifyingRole = getRole(RoleType.VERIFYING.toString());
             user.setRole(verifyingRole);
         }
 
         em.persist(user);
     }
-    
+
     @Override
-    public void banAccount(String username){
+    public void banAccount(String username) {
         User user = getUser(username);
-        
-        if (user.getRole().getRoleName().equals(RoleType.ADMIN.toString())){
+
+        if (user.getRole().getRoleName().equals(RoleType.ADMIN.toString())) {
             throw new RuntimeException("Cannot ban administrator account");
         }
-        
+
         Role bannedRole = getRole(RoleType.BANNED.toString());
         user.setRole(bannedRole);
-        
+
         em.persist(user);
     }
-    
+
     @Override
-    public void unbanAccount(String username){
+    public void unbanAccount(String username) {
         User user = getUser(username);
-        
-        if (!user.getRole().getRoleName().equals(RoleType.BANNED.toString())){
+
+        if (!user.getRole().getRoleName().equals(RoleType.BANNED.toString())) {
             throw new RuntimeException("The account is no banned");
         }
-        
+
         Role userRole = getRole(RoleType.USER.toString());
         user.setRole(userRole);
-        
+
         em.persist(user);
     }
 }

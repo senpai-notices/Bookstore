@@ -23,7 +23,7 @@ public class Cart implements Serializable {
     public List<CartItem> getCartItems() {
         return cartItems;
     }
-    
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -32,4 +32,3 @@ public class Cart implements Serializable {
         this.cartItems = cartItems;
     }
 }
-

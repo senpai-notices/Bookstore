@@ -15,28 +15,28 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="Book_sales", uniqueConstraints = {
+@Table(name = "Book_sales", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"book", "seller", "price"})
 })
 @NamedQueries({
-    @NamedQuery(name="BookSales.getSingle", query="SELECT bs FROM BookSales bs where bs.book=:book AND bs.seller=:seller")
+    @NamedQuery(name = "BookSales.getSingle", query = "SELECT bs FROM BookSales bs where bs.book=:book AND bs.seller=:seller")
 })
 public class BookSales implements Serializable {
-    
+
     private long salesId;
     private Book book;
     private User seller;
-    
+
     @NotNull
     @Min(value = (long) 0.01, message = "Please set a price for the book")
     private double price;
-    
+
     @NotNull
     @Size(min = 3, message = "Please enter book condition with at least 3 characters")
     private String condition;
-    
+
     @NotNull
-    @Min(value = 1, message =  "Please enter a positive value for quantity")
+    @Min(value = 1, message = "Please enter a positive value for quantity")
     private int quantity;
 
     @Id
@@ -48,7 +48,7 @@ public class BookSales implements Serializable {
     public void setSalesId(long salesId) {
         this.salesId = salesId;
     }
-    
+
     @ManyToOne
     @JoinColumn(name = "book_id", referencedColumnName = "id")
     public Book getBook() {
@@ -58,7 +58,7 @@ public class BookSales implements Serializable {
     public void setBook(Book book) {
         this.book = book;
     }
-    
+
     @ManyToOne
     @JoinColumn(name = "seller_id", referencedColumnName = "id")
     public User getSeller() {

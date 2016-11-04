@@ -9,12 +9,20 @@ import javax.ejb.Remote;
 
 @Remote
 public interface UserRemote {
+
     User getUser(String username);
+
     ValidationResult createUser(User user);
+
     String generateActivationToken(User user);
+
     void activateAccount(String token, String username) throws ActivationException, InvalidTokenException;
+
     List<User> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit);
+
     void updateVerificationDocuments(String username, String documentType, String filePath);
+
     void banAccount(String username);
+
     void unbanAccount(String username);
 }

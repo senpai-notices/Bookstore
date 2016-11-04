@@ -3,6 +3,7 @@ package au.edu.uts.aip.domain.entity;
 import java.io.Serializable;
 
 public class BookSaleId implements Serializable {
+
     private long bookId;
     private long sellerId;
     private double price;
@@ -30,16 +31,16 @@ public class BookSaleId implements Serializable {
     public void setPrice(double price) {
         this.price = price;
     }
-    
+
     @Override
-    public int hashCode(){
-        return (int)(bookId + sellerId + price);
+    public int hashCode() {
+        return (int) (bookId + sellerId + price);
     }
-    
+
     @Override
-    public boolean equals(Object object){
-        if (object instanceof BookSaleId){
-            BookSaleId otherBookId = (BookSaleId)object;
+    public boolean equals(Object object) {
+        if (object instanceof BookSaleId) {
+            BookSaleId otherBookId = (BookSaleId) object;
             return (otherBookId.sellerId == this.sellerId)
                     && (otherBookId.bookId == this.sellerId)
                     && (otherBookId.price == this.price);

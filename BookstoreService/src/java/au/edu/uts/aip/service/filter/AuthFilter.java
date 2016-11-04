@@ -21,8 +21,8 @@ import javax.ws.rs.core.SecurityContext;
 import javax.ws.rs.ext.Provider;
 
 /**
- * Authentication filter for resource methods that have RoleAllowed,
- * PermitAll, or DenyAll annotation
+ * Authentication filter for resource methods that have RoleAllowed, PermitAll, or DenyAll
+ * annotation
  */
 @Provider
 @Priority(Priorities.AUTHENTICATION)
@@ -30,10 +30,10 @@ public class AuthFilter implements ContainerRequestFilter {
 
     @Context
     private ResourceInfo resourceInfo;
-    
+
     @Context
     private SecurityContext securityContext;
-    
+
     @Context
     private HttpServletRequest request;
 
@@ -41,39 +41,39 @@ public class AuthFilter implements ContainerRequestFilter {
     private HttpServletResponse response;
 
     /**
-     * Check resource method annotation and user privilege
-     * Prevent the resource method from being invoked if user do not have enough
-     * privilege to access the resource method
+     * Check resource method annotation and user privilege Prevent the resource method from being
+     * invoked if user do not have enough privilege to access the resource method
+     *
      * @param requestContext use to determine whether the request can reach the resource or not
-     * @throws IOException 
+     * @throws IOException
      */
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
         Method resourceMethod = resourceInfo.getResourceMethod();
-        
+
         // allow resource method to be invoked if it is decorated with PermitAll annotation
         PermitAll permitAll = resourceMethod.getAnnotation(PermitAll.class);
-        if (permitAll != null){
+        if (permitAll != null) {
             return;
         }
-        
+
         // reject all request if resource method is decorated with DenyAll annotation
         DenyAll denyAll = resourceMethod.getAnnotation(DenyAll.class);
-        if (denyAll != null){
+        if (denyAll != null) {
             requestContext.abortWith(Response.status(Response.Status.FORBIDDEN).build());
             return;
         }
-        
+
         // allow resource method to be invoked it does not have any RolesAllowed filter
         RolesAllowed rolesAllowed = resourceMethod.getAnnotation(RolesAllowed.class);
-        if (rolesAllowed == null){
+        if (rolesAllowed == null) {
             return;
         }
-        
+
         // otherwise, check user privilege
         try {
             boolean authenticated = request.authenticate(response);
-            if (!authenticated){
+            if (!authenticated) {
                 requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
                 return;
             }
@@ -82,18 +82,18 @@ public class AuthFilter implements ContainerRequestFilter {
             requestContext.abortWith(Response.status(Response.Status.INTERNAL_SERVER_ERROR).build());
             return;
         }
-        if (securityContext.getUserPrincipal() == null){
+        if (securityContext.getUserPrincipal() == null) {
             requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
             return;
         }
-        
+
         String[] roles = rolesAllowed.value();
-        for(String role: roles){
-            if (securityContext.isUserInRole(role)){
+        for (String role : roles) {
+            if (securityContext.isUserInRole(role)) {
                 return;
             }
         }
-        
+
         requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
     }
 }

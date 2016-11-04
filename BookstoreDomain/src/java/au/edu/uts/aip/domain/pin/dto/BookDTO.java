@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class BookDTO implements Serializable {
+
     @XmlElement
     private long id;
     @XmlElement
@@ -29,12 +30,12 @@ public class BookDTO implements Serializable {
     @XmlElement
     private int pageCount;
     private List<BookSaleDTO> sales;
-    
-    public BookDTO(){
-        
+
+    public BookDTO() {
+
     }
-    
-    public BookDTO(Book bookEntity){
+
+    public BookDTO(Book bookEntity) {
         this.id = bookEntity.getId();
         this.title = bookEntity.getTitle();
         this.author = bookEntity.getAuthor();
@@ -45,12 +46,12 @@ public class BookDTO implements Serializable {
         this.isbn13 = bookEntity.getIsbn13();
         this.pageCount = bookEntity.getPageCount();
     }
-    
-    public BookDTO(Book bookEntity, List<BookSales> sales){
+
+    public BookDTO(Book bookEntity, List<BookSales> sales) {
         this(bookEntity);
-        
+
         this.sales = new ArrayList<>();
-        for(BookSales bookSeller: sales){
+        for (BookSales bookSeller : sales) {
             BookSaleDTO saleDTO = new BookSaleDTO();
             saleDTO.setBookId(bookEntity.getId());
             saleDTO.setSellerName(bookSeller.getSeller().getUsername());
@@ -60,7 +61,7 @@ public class BookDTO implements Serializable {
             this.sales.add(saleDTO);
         }
     }
-    
+
     public long getId() {
         return id;
     }

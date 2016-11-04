@@ -2,7 +2,6 @@ package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.entity.Book;
 import au.edu.uts.aip.domain.entity.BookSales;
-import au.edu.uts.aip.domain.entity.Category;
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.pin.dto.BookDTO;
@@ -53,7 +52,8 @@ public class BookstoreBean implements BookstoreRemote {
         
         Book book = em.find(Book.class, salesData.getId());
         
-        TypedQuery<BookSales> typedQuery = em.createNamedQuery("BookSales.getSingle", BookSales.class);
+        TypedQuery<BookSales> typedQuery = 
+                em.createNamedQuery("BookSales.getSingle", BookSales.class);
         typedQuery.setParameter("book", book);
         typedQuery.setParameter("seller", seller);
         List<BookSales> oldSales = typedQuery.getResultList();
