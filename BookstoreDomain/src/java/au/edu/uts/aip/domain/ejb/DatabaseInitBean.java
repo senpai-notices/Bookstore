@@ -141,10 +141,12 @@ public class DatabaseInitBean {
 //                    em.persist(category);
 //                    book.setCategory(category);
 //                    em.persist(book);
+
+
                     BookSales adminSales = new BookSales();
                     adminSales.setBook(book);
                     adminSales.setSeller(adminUser);
-                    double brandNewPrice = (int) (Math.random() * 200);
+                    double brandNewPrice = (int)(Math.random() * 200);
                     adminSales.setPrice(brandNewPrice);
                     adminSales.setCondition("Brand new");
                     adminSales.setQuantity(r.nextInt(20) + 1);
