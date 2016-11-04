@@ -6,8 +6,8 @@ import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPut;
 import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
-import au.edu.uts.aip.domain.pin.filter.BasicAuthFilter;
-import au.edu.uts.aip.domain.pin.filter.ClientResponseLoggingFilter;
+import au.edu.uts.aip.domain.pin.filter.PinAuthFilter;
+import au.edu.uts.aip.domain.pin.filter.PinResponseLoggingFilter;
 import au.edu.uts.aip.domain.pin.utility.PinResponseUtility;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import javax.ejb.Stateless;
@@ -29,8 +29,8 @@ public class PaymentBean implements PaymentRemote {
     public ValidationResult createCustomer(PinCustomerPost pinCustomerPost) {
 
         Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new ClientResponseLoggingFilter());
+                .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new PinResponseLoggingFilter());
 
         Response response = client.target(BASE_URL + "/customers")
                 .request(MediaType.APPLICATION_JSON)
@@ -47,8 +47,8 @@ public class PaymentBean implements PaymentRemote {
     public ValidationResult charge(PinChargePost pinChargePost) {
 
         Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new ClientResponseLoggingFilter());
+                .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new PinResponseLoggingFilter());
 
         Response response = client.target(BASE_URL + "/charges")
                 .request(MediaType.APPLICATION_JSON)
@@ -64,8 +64,8 @@ public class PaymentBean implements PaymentRemote {
     @Override
     public ValidationResult createRecipient(PinRecipientPost pinRecipientPost) {
         Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new ClientResponseLoggingFilter());
+                .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new PinResponseLoggingFilter());
 
         Response response = client.target(BASE_URL + "/recipients")
                 .request(MediaType.APPLICATION_JSON)
@@ -81,8 +81,8 @@ public class PaymentBean implements PaymentRemote {
     @Override
     public ValidationResult transfer(PinTransferPost pinTransferPost) {
         Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new ClientResponseLoggingFilter());
+                .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new PinResponseLoggingFilter());
 
         Response response = client.target(BASE_URL + "/transfers")
                 .request(MediaType.APPLICATION_JSON)
@@ -98,8 +98,8 @@ public class PaymentBean implements PaymentRemote {
     @Override
     public JsonObject fetchRecipient(String recipientToken) {
         Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new ClientResponseLoggingFilter());
+                .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new PinResponseLoggingFilter());
 
         Response response = client.target(BASE_URL + "/recipients")
                 .path("{recipient-token}")
@@ -116,8 +116,8 @@ public class PaymentBean implements PaymentRemote {
     @Override
     public ValidationResult editRecipient(String recipientToken, PinRecipientPut pinRecipientPut) {
         Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new ClientResponseLoggingFilter());
+                .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
+                .register(new PinResponseLoggingFilter());
 
         Response response = client.target(BASE_URL + "/recipients")
                 .path("{recipient-token}")

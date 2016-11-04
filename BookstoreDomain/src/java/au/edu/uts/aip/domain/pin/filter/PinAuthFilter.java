@@ -12,13 +12,13 @@ import javax.ws.rs.core.MultivaluedMap;
 import javax.xml.bind.DatatypeConverter;
 
 @Priority(value = 1)
-public class BasicAuthFilter implements ClientRequestFilter {
+public class PinAuthFilter implements ClientRequestFilter {
 
     private final String user;
     private final String password;
     private static final String KEY_PREFIX = "Basic ";
 
-    public BasicAuthFilter(String user, String password) {
+    public PinAuthFilter(String user, String password) {
         this.user = user;
         this.password = password;
     }

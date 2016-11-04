@@ -14,8 +14,8 @@ import javax.ws.rs.client.ClientResponseFilter;
 import javax.ws.rs.core.Response;
 
 @Priority(value = 2)
-public class ClientResponseLoggingFilter implements ClientResponseFilter {
-    private static final Logger LOG = Logger.getLogger(ClientResponseLoggingFilter.class.getName());
+public class PinResponseLoggingFilter implements ClientResponseFilter {
+    private static final Logger LOG = Logger.getLogger(PinResponseLoggingFilter.class.getName());
             
     @Override
     public void filter(ClientRequestContext requestContext, 
