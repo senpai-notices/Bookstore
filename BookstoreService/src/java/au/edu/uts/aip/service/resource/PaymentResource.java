@@ -7,7 +7,7 @@ import au.edu.uts.aip.domain.pin.dto.PinRecipientPut;
 import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
 import au.edu.uts.aip.domain.remote.PaymentRemote;
 import au.edu.uts.aip.domain.validation.ValidationResult;
-import au.edu.uts.aip.service.utility.ResourceUtility;
+import au.edu.uts.aip.service.util.ResourceUtil;
 
 import javax.ejb.EJB;
 import javax.json.JsonObject;
@@ -36,7 +36,7 @@ public class PaymentResource {
         
         ValidationResult validationResult = paymentBean.createCustomer(pinCustomerPost);
 
-        return ResourceUtility.generate201Response(validationResult);
+        return ResourceUtil.generate201Response(validationResult);
     }
 
     @POST
@@ -48,7 +48,7 @@ public class PaymentResource {
 
         ValidationResult validationResult = paymentBean.charge(pinChargePost);
 
-        return ResourceUtility.generate201Response(validationResult);
+        return ResourceUtil.generate201Response(validationResult);
     }
     
     @POST
@@ -60,7 +60,7 @@ public class PaymentResource {
 
         ValidationResult validationResult = paymentBean.createRecipient(pinRecipientPost);
 
-        return ResourceUtility.generate201Response(validationResult);
+        return ResourceUtil.generate201Response(validationResult);
     }
     
     /**
@@ -78,7 +78,7 @@ public class PaymentResource {
 
         ValidationResult validationResult = paymentBean.transfer(pinTransferPost);
 
-        return ResourceUtility.generate201Response(validationResult);
+        return ResourceUtil.generate201Response(validationResult);
     }
     
     @GET
@@ -103,7 +103,7 @@ public class PaymentResource {
         ValidationResult validationResult = 
                 paymentBean.editRecipient(recipientToken, pinRecipientPut);
 
-        return ResourceUtility.generate200Response(validationResult);
+        return ResourceUtil.generate200Response(validationResult);
     }
     
     // <editor-fold defaultstate="collapsed" desc="unused">

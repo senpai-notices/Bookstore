@@ -2,7 +2,7 @@ package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.auspost.dto.AuspostPostageGet;
 import au.edu.uts.aip.domain.auspost.filter.AuspostAuthFilter;
-import au.edu.uts.aip.domain.utility.ApiResponseUtil;
+import au.edu.uts.aip.domain.util.ApiResponseUtil;
 import javax.ejb.Stateless;
 import javax.json.JsonObject;
 import javax.ws.rs.client.Client;

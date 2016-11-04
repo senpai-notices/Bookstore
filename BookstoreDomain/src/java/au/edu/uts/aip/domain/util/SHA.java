@@ -1,4 +1,4 @@
-package au.edu.uts.aip.domain.utility;
+package au.edu.uts.aip.domain.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

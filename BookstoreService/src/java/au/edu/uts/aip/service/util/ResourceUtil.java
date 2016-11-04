@@ -1,9 +1,9 @@
-package au.edu.uts.aip.service.utility;
+package au.edu.uts.aip.service.util;
 
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import javax.ws.rs.core.Response;
 
-public class ResourceUtility {
+public class ResourceUtil {
 
     public static Response generate201Response(ValidationResult validationResult) {
         if (validationResult == null) {

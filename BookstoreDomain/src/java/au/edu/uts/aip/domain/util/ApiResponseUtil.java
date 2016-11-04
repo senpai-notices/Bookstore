@@ -1,4 +1,4 @@
-package au.edu.uts.aip.domain.utility;
+package au.edu.uts.aip.domain.util;
 
 import java.io.StringReader;
 import javax.json.Json;

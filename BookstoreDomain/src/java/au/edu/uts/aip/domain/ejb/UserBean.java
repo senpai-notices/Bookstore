@@ -8,7 +8,7 @@ import au.edu.uts.aip.domain.entity.Role.RoleType;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.ActivationException;
 import au.edu.uts.aip.domain.exception.InvalidTokenException;
-import au.edu.uts.aip.domain.utility.SHA;
+import au.edu.uts.aip.domain.util.SHA;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

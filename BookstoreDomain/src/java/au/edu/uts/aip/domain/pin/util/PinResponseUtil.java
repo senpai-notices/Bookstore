@@ -1,4 +1,4 @@
-package au.edu.uts.aip.domain.pin.utility;
+package au.edu.uts.aip.domain.pin.util;
 
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import java.io.StringReader;
@@ -9,7 +9,7 @@ import javax.json.JsonReader;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status.Family;
 
-public class PinResponseUtility {
+public class PinResponseUtil {
 
     @Deprecated // TODO: Use domain.utility.ApiResponseUtil.toJson() instead.
     public static JsonObject toJson(String jsonString) {

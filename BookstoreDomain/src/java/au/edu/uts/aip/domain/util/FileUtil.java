@@ -1,4 +1,4 @@
-package au.edu.uts.aip.domain.utility;
+package au.edu.uts.aip.domain.util;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 /**
  * Helper class for file-related actions
  */
-public class FileUtility {
+public class FileUtil {
 
     /**
      * Copy a file input stream to a location.
@@ -28,7 +28,7 @@ public class FileUtility {
                 output.write(buffer, 0, len);
             }
         } catch (IOException ex) {
-            Logger.getLogger(FileUtility.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FileUtil.class.getName()).log(Level.SEVERE, null, ex);
             throw ex;
         }
     }
