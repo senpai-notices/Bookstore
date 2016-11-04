@@ -1,14 +1,11 @@
 package au.edu.uts.aip.domain.utility;
 
-import com.sun.xml.wss.impl.misc.Base64;
-import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.apache.xml.security.exceptions.Base64DecodingException;
 
 /**
  * Helper class for file-related actions

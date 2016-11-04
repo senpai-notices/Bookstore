@@ -15,25 +15,26 @@ public interface PaymentRemote {
     ValidationResult createCustomer(PinCustomerPost pinCustomerPost);
 
     ValidationResult charge(PinChargePost pinChargePost);
-    
+
     ValidationResult createRecipient(PinRecipientPost pinRecipientPost);
-    
+
     ValidationResult transfer(PinTransferPost pinTransferPost);
-    
+
     /**
-     * Returns the details of a recipient.
-     * Note: A bank account is inside a recipient
+     * Returns the details of a recipient. Note: A bank account is inside a recipient
+     *
      * @param recipientToken
-     * @return 
+     * @return
      */
     JsonObject fetchRecipient(String recipientToken);
-    
+
     /**
-     * Updates the given details of a recipient and returns its details.
-     * Note: A bank account is inside a recipient
+     * Updates the given details of a recipient and returns its details. Note: A bank account is
+     * inside a recipient
+     *
      * @param recipientToken
      * @param pinRecipientPut
-     * @return 
+     * @return
      */
     ValidationResult editRecipient(String recipientToken, PinRecipientPut pinRecipientPut);
 }

@@ -20,7 +20,7 @@ public class PinResponseUtility {
 
         return jsonObject;
     }
-    
+
     public static ValidationResult validate(int statusCode, JsonObject response) {
         ValidationResult validationResult = new ValidationResult();
 

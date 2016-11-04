@@ -9,12 +9,13 @@ import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQueries({
-    @NamedQuery(name="Category.find", query="SELECT c from Category c where c.categoryName=:name")
+    @NamedQuery(name = "Category.find", query = "SELECT c from Category c where c.categoryName=:name")
 })
 public class Category implements Serializable {
+
     private int Id;
     private String categoryName;
-    
+
     @Id
     @GeneratedValue
     public int getId() {

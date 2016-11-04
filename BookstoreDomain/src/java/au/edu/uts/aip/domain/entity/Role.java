@@ -11,19 +11,20 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Bookstore_Role")
 @NamedQueries({
-    @NamedQuery(name="Role.find", query="SELECT r from Role r where r.roleName=:name")
+    @NamedQuery(name = "Role.find", query = "SELECT r from Role r where r.roleName=:name")
 })
 public class Role implements Serializable {
+
     private int Id;
     private String roleName;
-    
-    public enum RoleType{
-        ADMIN("ADMIN"), USER("USER"), INACTIVATED("INACTIVATED"), 
+
+    public enum RoleType {
+        ADMIN("ADMIN"), USER("USER"), INACTIVATED("INACTIVATED"),
         VERIFYING("VERIFYING USER"), VERIFIED("VERIFIED USER"), BANNED("BANNED");
-        
+
         private final String type;
-        
-        private RoleType(String type){
+
+        private RoleType(String type) {
             this.type = type;
         }
 
@@ -32,7 +33,7 @@ public class Role implements Serializable {
             return type;
         }
     }
-    
+
     @Id
     @GeneratedValue
     public int getId() {

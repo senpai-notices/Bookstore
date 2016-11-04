@@ -15,12 +15,13 @@ import javax.ws.rs.core.Response;
 
 @Priority(value = 2)
 public class PinResponseLoggingFilter implements ClientResponseFilter {
+
     private static final Logger LOG = Logger.getLogger(PinResponseLoggingFilter.class.getName());
-            
+
     @Override
-    public void filter(ClientRequestContext requestContext, 
+    public void filter(ClientRequestContext requestContext,
             ClientResponseContext responseContext) throws IOException {
-        
+
         LOG.log(Level.INFO, "<< {0} {1}", new Object[]{requestContext.getMethod(), requestContext.getUri()});
         LOG.log(Level.INFO, "<< (status) {0}", responseContext.getStatus());
         LOG.log(Level.INFO, "<< (headers) {0}", responseContext.getHeaders().toString());
@@ -29,12 +30,12 @@ public class PinResponseLoggingFilter implements ClientResponseFilter {
         if (entityStream != null) {
             LOG.log(Level.FINER, "<< (body){0}", entityStream.toString());
         }
-        
+
         if (responseContext.getStatusInfo().getFamily() == Response.Status.Family.SUCCESSFUL) {
             System.out.println("From the filter... successful");
         } else {
             System.out.println("From the filter... not successful");
         }
     }
-    
+
 }
