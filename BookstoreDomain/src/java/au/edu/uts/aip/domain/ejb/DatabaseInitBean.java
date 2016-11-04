@@ -10,21 +10,17 @@ import au.edu.uts.aip.domain.utility.SHA;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.ejb.EJB;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 
 @Singleton
 @Startup
@@ -95,16 +91,13 @@ public class DatabaseInitBean {
             em.persist(verifiedUser);
             verifiedUsers[i] = verifiedUser;
         }
-//        User myUser = new User();
-//        myUser.setUsername("sondang241212");
-//        myUser.setFullname("Dang Cuu Son");
-//        myUser.setEmail("sondang2412@gmail.com");
-//        myUser.setPassword(SHA.hash256("123123123"));
-//        myUser.setIdVerificationPath("/home/sondang/NetBeansProjects/aip-a2-local/dist/gfdeploy/aip-a2/BookstoreService_war/../../../../sondang241212/id.jpeg");
-//        myUser.setResidentialVerificationPath("/home/sondang/NetBeansProjects/aip-a2-local/dist/gfdeploy/aip-a2/BookstoreService_war/../../../../sondang241212/residental.jpeg");
-//        myUser.setRole(roleMap.get(RoleType.VERIFYING));
-//        em.persist(myUser);
-        
+        User myUser = new User();
+        myUser.setUsername("sondang2412");
+        myUser.setFullname("Dang Cuu Son");
+        myUser.setEmail("sondang2412@gmail.com");
+        myUser.setPassword(SHA.hash256("qwerty"));
+        myUser.setRole(roleMap.get(RoleType.VERIFIED));
+        em.persist(myUser);
         System.out.println("Creating sample user account...Done");
         
         System.out.println("Importing sample books data");
@@ -134,26 +127,25 @@ public class DatabaseInitBean {
                     book.setImgPath(data[7]);
                     em.persist(book);
                     
-                    String categoryName = data[8];
-                    if (categoryMap.get(categoryName) == null){
-                        Category category = new Category();
-                        category.setCategoryName(categoryName);
-                        em.persist(category);
-                        categoryMap.put(categoryName, category);
-                    }
-                    
-                    Category category = categoryMap.get(categoryName);
-                    //category.getBooks().add(book);
-                    em.persist(category);
-                    book.setCategory(category);
-                    em.persist(book);
-                    
-                    
-                    List<BookSales> sellers = new ArrayList<>();
+//                    String categoryName = data[8];
+//                    if (categoryMap.get(categoryName) == null){
+//                        Category category = new Category();
+//                        category.setCategoryName(categoryName);
+//                        em.persist(category);
+//                        categoryMap.put(categoryName, category);
+//                    }
+//                    
+//                    Category category = categoryMap.get(categoryName);
+//                    //category.getBooks().add(book);
+//                    em.persist(category);
+//                    book.setCategory(category);
+//                    em.persist(book);
+
+
                     BookSales adminSales = new BookSales();
                     adminSales.setBook(book);
                     adminSales.setSeller(adminUser);
-                    double brandNewPrice = Math.random() * 200;
+                    double brandNewPrice = (int)(Math.random() * 200);
                     adminSales.setPrice(brandNewPrice);
                     adminSales.setCondition("Brand new");
                     adminSales.setQuantity(r.nextInt(20) + 1);
@@ -162,7 +154,7 @@ public class DatabaseInitBean {
                     userSales.setBook(book);
                     User seller = verifiedUsers[r.nextInt(20)];
                     userSales.setSeller(seller);
-                    double usedPrice = Math.random() * brandNewPrice;
+                    double usedPrice = (int)(Math.random() * brandNewPrice);
                     userSales.setPrice(usedPrice);
                     userSales.setCondition("Used");
                     userSales.setQuantity(r.nextInt(2) + 1);
@@ -181,7 +173,6 @@ public class DatabaseInitBean {
                     
                 } catch (Exception ex){
                     Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
-                    continue;
                 }
                 
             }

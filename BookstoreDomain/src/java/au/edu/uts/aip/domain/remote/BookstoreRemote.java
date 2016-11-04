@@ -10,5 +10,5 @@ import javax.ejb.Remote;
 public interface BookstoreRemote {
     List<Book> getLatestBooks(int offset, int limit);
     Book getSingleBook(String isbn10, String isbn13, String title);
-    void updateSale(String username, BookDTO salesData);
+    BookDTO updateSale(String username, BookDTO salesData);
 }
