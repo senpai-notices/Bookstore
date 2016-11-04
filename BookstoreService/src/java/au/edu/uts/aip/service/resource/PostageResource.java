@@ -22,6 +22,7 @@ public class PostageResource {
     @EJB
     private PostageBean postageBean;
 
+    @Deprecated
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -30,6 +31,16 @@ public class PostageResource {
     public Response calculate(AuspostPostageGet auspostPostageGet) {
         JsonObject response = postageBean.calculatePostageCostJson(auspostPostageGet);
         return Response.ok(response, MediaType.APPLICATION_JSON).build();
+    }
+
+    @Deprecated
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("calculate_test")
+    public Response calculateTest() {
+        postageBean.calculatePostageCost(5, "2000", "3000", "AUS_PARCEL_REGULAR");
+        return Response.ok().build();
     }
 
 }

@@ -11,10 +11,11 @@ import javax.ws.rs.core.Response.Status.Family;
 
 public class PinResponseUtility {
 
-    public static JsonObject toJson(String s) {
+    @Deprecated // TODO: Use domain.utility.ApiResponseUtil.toJson() instead.
+    public static JsonObject toJson(String jsonString) {
         JsonObject jsonObject;
 
-        try (JsonReader reader = Json.createReader(new StringReader(s))) {
+        try (JsonReader reader = Json.createReader(new StringReader(jsonString))) {
             jsonObject = reader.readObject();
         }
 
