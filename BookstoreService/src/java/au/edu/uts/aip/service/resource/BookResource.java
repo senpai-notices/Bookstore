@@ -33,12 +33,7 @@ public class BookResource {
     public Response getLatestBooks(@QueryParam("offset") int offset,
                                    @QueryParam("limit") int limit) {
 
-        List<Book> booksEntity = bookstoreBean.getLatestBooks(offset, limit);
-        ArrayList<BookDTO> booksDTO = new ArrayList<>();
-        for (Book bookEntity : booksEntity) {
-            booksDTO.add(new BookDTO(bookEntity));
-        }
-
+        List<BookDTO> booksDTO = bookstoreBean.getLatestBooks(offset, limit);
         return Response.status(Response.Status.OK).entity(booksDTO.toArray(new BookDTO[0])).build();
     }
 
@@ -47,8 +42,7 @@ public class BookResource {
     public Response getBook(@QueryParam("isbn10") String isbn10,
                             @QueryParam("isbn13") String isbn13,
                             @QueryParam("title") String title) {
-        Book bookEntity = bookstoreBean.getSingleBook(isbn10, isbn13, title);
-        BookDTO bookDTO = new BookDTO(bookEntity, bookEntity.getSales());
+        BookDTO bookDTO = bookstoreBean.getSingleBook(isbn10, isbn13, title);
 
         return Response.ok(bookDTO).build();
     }

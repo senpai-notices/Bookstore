@@ -7,6 +7,7 @@ import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.dto.BookDTO;
 import au.edu.uts.aip.domain.dto.BookSaleDTO;
 import au.edu.uts.aip.domain.remote.BookstoreRemote;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -24,21 +25,27 @@ public class BookstoreBean implements BookstoreRemote {
     private UserBean userBean;
 
     @Override
-    public List<Book> getLatestBooks(int offset, int limit) {
+    public List<BookDTO> getLatestBooks(int offset, int limit) {
         TypedQuery<Book> typedQuery = em.createNamedQuery("Book.getLatest", Book.class);
         typedQuery.setFirstResult(offset);
         typedQuery.setMaxResults(limit);
-        List<Book> result = typedQuery.getResultList();
-        return result;
+        List<Book> booksEntity = typedQuery.getResultList();
+        List<BookDTO> booksDTO = new ArrayList<>();
+        
+        for(Book bookEntity: booksEntity){
+            booksDTO.add(new BookDTO(bookEntity));
+        }
+        return booksDTO;
     }
 
     @Override
-    public Book getSingleBook(String isbn10, String isbn13, String title) {
+    public BookDTO getSingleBook(String isbn10, String isbn13, String title) {
         TypedQuery<Book> typedQuery = em.createNamedQuery("Book.getSingle", Book.class);
         typedQuery.setParameter("isbn10", "%" + isbn10 + "%");
         typedQuery.setParameter("isbn13", "%" + isbn13 + "%");
         typedQuery.setParameter("title", "%" + title + "%");
-        return typedQuery.getSingleResult();
+        Book bookEntity = typedQuery.getSingleResult();
+        return new BookDTO(bookEntity, bookEntity.getSales());
     }
 
     public Book createBook(BookDTO bookDTO) {
@@ -58,7 +65,7 @@ public class BookstoreBean implements BookstoreRemote {
 
     @Override
     public BookDTO updateSale(String username, BookDTO salesData) {
-        User seller = userBean.getUser(username);
+        User seller = userBean.getUserEntity(username);
 
         if (!seller.getRole().getRoleName().equals(Role.RoleType.ADMIN.toString())
                 && !seller.getRole().getRoleName().equals(Role.RoleType.VERIFIED.toString())) {

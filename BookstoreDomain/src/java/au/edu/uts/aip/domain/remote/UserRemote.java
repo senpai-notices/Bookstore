@@ -1,5 +1,7 @@
 package au.edu.uts.aip.domain.remote;
 
+import au.edu.uts.aip.domain.dto.DocumentsDTO;
+import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.ActivationException;
 import au.edu.uts.aip.domain.exception.InvalidTokenException;
@@ -10,15 +12,17 @@ import javax.ejb.Remote;
 @Remote
 public interface UserRemote {
 
-    User getUser(String username);
+    UserDTO getUser(String username);
 
-    ValidationResult createUser(User user);
+    ValidationResult createUser(UserDTO user, String password);
+    
+    DocumentsDTO getDocumentPath(String username);
 
-    String generateActivationToken(User user);
+    String generateActivationToken(String username);
 
     void activateAccount(String token, String username) throws ActivationException, InvalidTokenException;
 
-    List<User> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit);
+    List<UserDTO> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit);
 
     void updateVerificationDocuments(String username, String documentType, String filePath);
 

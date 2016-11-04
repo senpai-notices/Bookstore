@@ -1,5 +1,7 @@
 package au.edu.uts.aip.domain.ejb;
 
+import au.edu.uts.aip.domain.dto.DocumentsDTO;
+import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.entity.Role.RoleType;
@@ -39,43 +41,52 @@ public class UserBean implements UserRemote {
     }
 
     @Override
-    public User getUser(String username) {
+    public UserDTO getUser(String username) {
+            User userEntity = getUserEntity(username);
+            return userEntity == null ? null : new UserDTO(userEntity);
+    }
+    
+    public User getUserEntity(String username){
         try {
             TypedQuery<User> typedQuery = em.createNamedQuery("User.find", User.class);
             typedQuery.setParameter("username", username);
             return typedQuery.getSingleResult();
-        } catch (Exception ex) {
+        } catch (Exception ex){
             return null;
         }
     }
 
     /**
      *
-     * @param user
+     * @param userDTO
+     * @param password
      * @return
      */
     @Override
-    public ValidationResult createUser(User user) {
+    public ValidationResult createUser(UserDTO userDTO, String password) {
         try {
-            User existingUser = getUser(user.getUsername());
+            User userEntity = getUserEntity(userDTO.getUsername());
 
-            if (existingUser != null) {
+            if (userEntity != null) {
                 ValidationResult result = new ValidationResult();
-                String errorMessage = "Username " + user.getUsername() + " already exists";
+                String errorMessage = "Username " + userDTO.getUsername() + " already exists";
                 result.addFormError("username", errorMessage);
                 return result;
             }
-
-            em.persist(user);
-
+            
+            userEntity = new User();
+            userEntity.setUsername(userDTO.getUsername());
+            userEntity.setFullname(userDTO.getFullname());
+            userEntity.setEmail(userDTO.getEmail());
             // hash password
-            String unhashedPassword = user.getPassword();
-            String hashsedPassword = SHA.hash256(unhashedPassword);
-            user.setPassword(hashsedPassword);
+            userEntity.setPassword(SHA.hash256(password));
 
+            // insert to database
+            em.persist(userEntity);
+            
             // add user to INACTIVATED group
             Role inactivatedRole = getRole(RoleType.INACTIVATED.toString());
-            user.setRole(inactivatedRole);
+            userEntity.setRole(inactivatedRole);
 
             // no validation error
             return null;
@@ -90,9 +101,19 @@ public class UserBean implements UserRemote {
             return result;
         }
     }
+    
+    @Override
+    public DocumentsDTO getDocumentPath(String username) {
+        User user = getUserEntity(username);
+        DocumentsDTO documentDTO = new DocumentsDTO();
+        documentDTO.setIdVerificationPath(user.getIdVerificationPath());
+        documentDTO.setResidentialVerificationPath(user.getResidentialVerificationPath());
+        return documentDTO;
+    }
 
     @Override
-    public String generateActivationToken(User user) {
+    public String generateActivationToken(String username) {
+        User user = getUserEntity(username);
         Date now = new Date();
         Date expirationDate = new Date();
         expirationDate.setTime(now.getTime() + 1000 * 60 * 60 * 24);
@@ -105,7 +126,7 @@ public class UserBean implements UserRemote {
     @Override
     public void activateAccount(String token, String username) throws ActivationException, InvalidTokenException {
         try {
-            User user = getUser(username);
+            User user = getUserEntity(username);
 
             if (!user.getRole().getRoleName().equals("INACTIVATED")) {
                 throw new ActivationException();
@@ -124,7 +145,7 @@ public class UserBean implements UserRemote {
     }
 
     @Override
-    public List<User> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit) {
+    public List<UserDTO> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit) {
         List<Role> roles = new ArrayList<>();
         for (String roleName : rolesName) {
             roles.add(getRole(roleName));
@@ -137,12 +158,18 @@ public class UserBean implements UserRemote {
         typedQuery.setParameter("email", "%" + email + "%");
         typedQuery.setFirstResult(offset);
         typedQuery.setMaxResults(limit);
-        return typedQuery.getResultList();
+        
+        List<User> usersEntity = typedQuery.getResultList();
+        List<UserDTO> usersDTO = new ArrayList<>();
+        for(User userEntity: usersEntity){
+            usersDTO.add(new UserDTO(userEntity));
+        }
+        return usersDTO;
     }
 
     @Override
     public void updateVerificationDocuments(String username, String documentType, String filePath) {
-        User user = getUser(username);
+        User user = getUserEntity(username);
         if (documentType.equals("id")) {
             user.setIdVerificationPath(filePath);
         } else if (documentType.equals("residential")) {
@@ -165,7 +192,7 @@ public class UserBean implements UserRemote {
 
     @Override
     public void banAccount(String username) {
-        User user = getUser(username);
+        User user = getUserEntity(username);
 
         if (user.getRole().getRoleName().equals(RoleType.ADMIN.toString())) {
             throw new RuntimeException("Cannot ban administrator account");
@@ -179,7 +206,7 @@ public class UserBean implements UserRemote {
 
     @Override
     public void unbanAccount(String username) {
-        User user = getUser(username);
+        User user = getUserEntity(username);
 
         if (!user.getRole().getRoleName().equals(RoleType.BANNED.toString())) {
             throw new RuntimeException("The account is no banned");

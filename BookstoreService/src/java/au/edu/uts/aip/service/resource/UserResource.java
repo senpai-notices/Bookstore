@@ -44,10 +44,8 @@ public class UserResource {
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed({"USER", "ADMIN", "VERIFYING USER", "VERIFIED USER", "INACTIVATED"})
     public Response get() {
-        User userEntity = userBean.getUser(request.getUserPrincipal().getName());
-        UserDTO userDTO = new UserDTO(userEntity);
-
-        return Response.status(Response.Status.OK).entity(userDTO).build();
+        UserDTO user = userBean.getUser(request.getUserPrincipal().getName());
+        return Response.status(Response.Status.OK).entity(user).build();
     }
 
     /**
@@ -67,13 +65,12 @@ public class UserResource {
                          @FormParam("email") String email,
                          @FormParam("fullname") String fullname) {
         try {
-            User user = new User();
+            UserDTO user = new UserDTO();
             user.setUsername(username);
-            user.setPassword(password);
             user.setEmail(email);
             user.setFullname(fullname);
 
-            ValidationResult result = userBean.createUser(user);
+            ValidationResult result = userBean.createUser(user, password);
             if (result == null) {
                 return Response.status(Response.Status.ACCEPTED).build();
             } else {
@@ -128,12 +125,7 @@ public class UserResource {
                                 @QueryParam("offset") int offset,
                                 @QueryParam("limit") int limit) {
         String[] rolesName = roles.split(",");
-        List<User> usersEntity = 
-                userBean.findUsers(rolesName, username, fullname, email, offset, limit);
-        ArrayList<UserDTO> usersDTO = new ArrayList<>();
-        for (User userEntity : usersEntity) {
-            usersDTO.add(new UserDTO(userEntity));
-        }
+        List<UserDTO> usersDTO = userBean.findUsers(rolesName, username, fullname, email, offset, limit);
 
         return Response.status(Response.Status.OK).entity(usersDTO.toArray(new UserDTO[0]))
                 .build();

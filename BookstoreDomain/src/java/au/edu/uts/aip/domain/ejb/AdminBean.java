@@ -19,8 +19,12 @@ public class AdminBean implements AdminRemote {
 
     @Override
     public void rejectVerificationRequest(String username) {
-        User user = userBean.getUser(username);
+        User user = userBean.getUserEntity(username);
 
+        if (!Role.RoleType.VERIFYING.toString().equals(user.getRole().getRoleName())) {
+            throw new RuntimeException("The user does not have any verification request");
+        }
+        
         user.setIdVerificationPath(null);
         user.setResidentialVerificationPath(null);
         Role normalUserRole = userBean.getRole(Role.RoleType.USER.toString());
@@ -31,7 +35,7 @@ public class AdminBean implements AdminRemote {
 
     @Override
     public void approveVerificationRequest(String username) {
-        User user = userBean.getUser(username);
+        User user = userBean.getUserEntity(username);
 
         Role verfiedUserRole = userBean.getRole(Role.RoleType.VERIFIED.toString());
         user.setRole(verfiedUserRole);

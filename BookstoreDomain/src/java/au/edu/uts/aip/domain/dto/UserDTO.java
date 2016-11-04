@@ -16,7 +16,7 @@ public class UserDTO implements Serializable {
     private String email;
     @XmlElement
     private String role;
-
+    
     public UserDTO() {
 
     }

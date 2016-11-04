@@ -1,5 +1,7 @@
 package au.edu.uts.aip.service.resource;
 
+import au.edu.uts.aip.domain.dto.DocumentsDTO;
+import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.remote.AdminRemote;
@@ -87,14 +89,14 @@ public class DocumentResource {
     @Produces({"application/pdf", "image/png", "image/jpeg"})
     public Response get(@PathParam("username") String username,
                         @PathParam("documentType") String documentType) {
-        User user = userBean.getUser(username);
+        DocumentsDTO documents = userBean.getDocumentPath(username);
         File returnFile;
         switch (documentType) {
             case "id":
-                returnFile = new File(user.getIdVerificationPath());
+                returnFile = new File(documents.getIdVerificationPath());
                 break;
             case "residential":
-                returnFile = new File(user.getResidentialVerificationPath());
+                returnFile = new File(documents.getResidentialVerificationPath());
                 break;
             default:
                 return Response.status(Response.Status.BAD_REQUEST).build();
@@ -117,19 +119,15 @@ public class DocumentResource {
     @RolesAllowed({"ADMIN"})
     @Path("reject/{username}")
     public Response reject(@PathParam("username") String username) {
-        User user = userBean.getUser(username);
-        if (!Role.RoleType.VERIFYING.toString().equals(user.getRole().getRoleName())) {
-            return Response.status(Response.Status.BAD_REQUEST)
-                    .entity("The user does not have any verification request").build();
-        }
-
-        File idFile = new File(user.getIdVerificationPath());
-        File residentialFile = new File(user.getResidentialVerificationPath());
+        DocumentsDTO documentsDTO = userBean.getDocumentPath(username);
+        File idFile = new File(documentsDTO.getIdVerificationPath());
+        File residentialFile = new File(documentsDTO.getResidentialVerificationPath());
+        
+        adminBean.rejectVerificationRequest(username);
+        
         idFile.delete();
         residentialFile.delete();
-
-        adminBean.rejectVerificationRequest(username);
-
+        
         return Response.ok().build();
     }
 
@@ -137,8 +135,8 @@ public class DocumentResource {
     @RolesAllowed({"ADMIN"})
     @Path("approve/{username}")
     public Response approve(@PathParam("username") String username) {
-        User user = userBean.getUser(username);
-        if (!Role.RoleType.VERIFYING.toString().equals(user.getRole().getRoleName())) {
+        UserDTO user = userBean.getUser(username);
+        if (!Role.RoleType.VERIFYING.toString().equals(user.getRole())) {
             return Response.status(Response.Status.BAD_REQUEST)
                     .entity("The user does not have any verification request").build();
         }
