@@ -7,11 +7,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+/**
+ * Note: 'Order' is a SQL-reserved keyword.
+ * @author tanman
+ */
 @Entity
-public class Cart implements Serializable {
+public class BookOrder implements Serializable {
 
     private Long id;
-    private List<CartItem> cartItems;
+    private List<BookOrderLine> orderLines;
 
     @Id
     @GeneratedValue
@@ -20,15 +24,15 @@ public class Cart implements Serializable {
     }
 
     @OneToMany
-    public List<CartItem> getCartItems() {
-        return cartItems;
+    public List<BookOrderLine> getOrderLines() {
+        return orderLines;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
 
-    public void setCartItems(List<CartItem> cartItems) {
-        this.cartItems = cartItems;
+    public void setOrderLines(List<BookOrderLine> orderLines) {
+        this.orderLines = orderLines;
     }
 }
