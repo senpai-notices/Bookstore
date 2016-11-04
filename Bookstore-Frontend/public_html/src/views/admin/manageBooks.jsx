@@ -13,31 +13,49 @@ class ManageBooksView extends BaseView {
 		this.getBookDetail = this.getBookDetail.bind(this)
 		this.removeSale = this.removeSale.bind(this)
 		this.addSale = this.addSale.bind(this)
-		this.resetSale = this.resetSale.bind(this)
 		this.saveSale = this.saveSale.bind(this)
 		this.state.bookList = []
 	}
 
 	saveSale(){
-		// TODO: call backend to update data
-		this.bookService.updateBookSale(this.state.userSalesInfo, this.state.selectedBook.id)
-	}
+		// TODO: client side validation
 
-	resetSale(){
-		let saleIndex = 0
-		this.state.userSalesInfo = []
-		this.state.userSalesInfoReset.forEach((sale) => {
-			sale.index = saleIndex
-			this.state.userSalesInfo.push({
-				bookCondition: sale.bookCondition,
-				price: sale.price,
-				quantity: sale.quantity,
-				actions: (<bs.Button bsStyle="danger" onClick={() => this.removeSale(sale)}>Remove</bs.Button>)
-			})
-			
-			saleIndex++
+		let valid = true
+		let priceList = []
+		this.state.userSalesInfo.forEach((saleInfo) => {
+			if (!saleInfo.quantity.toString().match(/^[1-9][0-9]*$/)) {
+				alert("Quantity must be a positive integer")
+				valid = false
+				return
+			}
+			if (isNaN(saleInfo.price) || saleInfo.price < 0.01) {
+				alert("Please enter a valid price (at least 0.01 $AUD)")
+				valid = false
+				return	
+			}
+			if (saleInfo.bookCondition.length < 3){
+				alert("Condition must be a least 3 characters long")
+				valid = false
+				return
+			}
 		})
+
+		if (!valid) return
+
+		this.state.savingSales = true
 		this.setState(this.state)
+		this.bookService.updateBookSale(this.state.userSalesInfo, this.state.selectedBook)
+			.then((resp) => {
+				this.state.selectedBook = resp
+				this.state.saveCompleted = true
+			})
+			.fail((err) =>{
+				alert("Cannot update sales data")
+			})
+			.always(() =>{
+				this.state.savingSales = false;
+				this.setState(this.state)
+			})
 	}
 
 	addSale(){
@@ -68,12 +86,11 @@ class ManageBooksView extends BaseView {
 
 		this.state.userSalesInfo = []
 		this.state.loadingBookDetail = true
-		this.state.userSalesInfoReset = []
+		this.state.saveCompleted = false
 		this.setState(this.state)
 
 		this.bookService.getBookDetail(book.isbn10, book.isbn13, book.title)
 			.then((bookDetail) => {
-				console.log(bookDetail)
 				this.state.selectedBook = bookDetail
 
 				let saleIndex = 0
@@ -86,12 +103,6 @@ class ManageBooksView extends BaseView {
 							price: sale.price,
 							quantity: sale.quantity,
 							actions: (<bs.Button bsStyle="danger" onClick={() => this.removeSale(sale)}>Remove</bs.Button>)
-						})
-
-						this.state.userSalesInfoReset.push({
-							bookCondition: sale.bookCondition,
-							price: sale.price,
-							quantity: sale.quantity
 						})
 					}
 				})
@@ -110,6 +121,8 @@ class ManageBooksView extends BaseView {
 
 		this.state.bookList = []
 		this.state.searching = true
+		this.state.saveCompleted = false
+		this.state.selectedBook = ""
 		this.setState(this.state)
 		this.bookService.findFromGoogleAPI(this.state.isbn, this.state.title)
 			.then((resp) => {
@@ -214,7 +227,7 @@ class ManageBooksView extends BaseView {
 				userSalesView = (
 					<div>
 						<EditableTable dataList={this.state.userSalesInfo}
-							headers={['Quantity', 'Price', 'Condition', 'Actions']}
+							headers={['Quantity', 'Price (AUD)', 'Condition', 'Actions']}
 							columns={['quantity', 'price', 'bookCondition', 'actions']}
 							tdStyle={tdStyle}
 							onChange={(resultList) => this.setState({userSalesInfo: resultList})} />
@@ -224,6 +237,10 @@ class ManageBooksView extends BaseView {
 				)
 			}
 
+			let saveCompleted = ""
+			if (!this.state.savingSales && this.state.saveCompleted){
+				saveCompleted = (<bs.Glyphicon style={{color: "#5cb85c"}} glyph="ok"/>)
+			}
 			bookDetail = (
 				<div>
 					<bs.Row>
@@ -238,12 +255,16 @@ class ManageBooksView extends BaseView {
 						</bs.Col>
 					</bs.Row>
 					<bs.Row>
+						<bs.Button bsStyle="primary" onClick={() => this.addSale()}>Add Sale</bs.Button>
+						&nbsp;
+						<bs.Button bsStyle="success" onClick={() => this.saveSale()} disabled={this.state.savingSales}>
+							{(this.state.savingSales && "Saving") || "Save"}
+						</bs.Button>
+						&nbsp;&nbsp;&nbsp;
+						{saveCompleted}
+						<br/>
+						<br/>
 						{userSalesView}
-						<bs.Button bsStyle="primary" onClick={() => this.addSale()}>Add sales</bs.Button>
-						&nbsp;
-						<bs.Button bsStyle="warning" onClick={() => this.resetSale()}>Reset</bs.Button>
-						&nbsp;
-						<bs.Button bsStyle="success" onClick={() => this.saveSale()}>Save</bs.Button>
 					</bs.Row>
 				</div>
 			)

@@ -5,6 +5,7 @@ import au.edu.uts.aip.domain.remote.BookstoreRemote;
 import au.edu.uts.aip.domain.pin.dto.BookDTO;
 import java.util.ArrayList;
 import java.util.List;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -54,9 +55,11 @@ public class BookResource {
 
     @POST
     @Path("sales")
+    @RolesAllowed({"ADMIN", "VERIFIED USER"})
     @Consumes(MediaType.APPLICATION_JSON)
-    public String updateSales(BookDTO salesData) {
-        bookstoreBean.updateSale("admin1", salesData);
-        return "TEST";
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response updateSales(BookDTO salesData) {
+        BookDTO result = bookstoreBean.updateSale(securityContext.getUserPrincipal().getName(), salesData);
+        return Response.ok().entity(result).build();
     }
 }

@@ -19,7 +19,7 @@ import javax.validation.constraints.Size;
     @UniqueConstraint(columnNames = {"book", "seller", "price"})
 })
 @NamedQueries({
-    @NamedQuery(name = "BookSales.getSingle", query = "SELECT bs FROM BookSales bs where bs.book=:book AND bs.seller=:seller")
+    @NamedQuery(name = "BookSales.findSales", query = "SELECT bs FROM BookSales bs where bs.book=:book AND bs.seller=:seller")
 })
 public class BookSales implements Serializable {
 

@@ -12,5 +12,6 @@ public interface BookstoreRemote {
 
     Book getSingleBook(String isbn10, String isbn13, String title);
 
-    void updateSale(String username, BookDTO salesData);
+    BookDTO updateSale(String username, BookDTO salesData);
+
 }

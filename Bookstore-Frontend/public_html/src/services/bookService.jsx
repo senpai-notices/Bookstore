@@ -22,6 +22,7 @@ class BookService {
 		if (title){
 			queries.push(`title:${title}`)
 		}
+		//queries.push('maxResults=40')
 		const queryString = queries.join("&")
 		return reqwest({
 			url: `https://www.googleapis.com/books/v1/volumes?q=${queryString}`,
@@ -43,20 +44,24 @@ class BookService {
 		})
 	}
 
-	updateBookSale(salesData, bookId){
+	updateBookSale(salesData, book){
+		let refinedSalesData = []
 		salesData.forEach((sale) =>{
-			sale.actions = undefined
+			refinedSalesData.push({
+				quantity: sale.quantity,
+				price: sale.price,
+				bookCondition: sale.bookCondition
+			})
 		})
+
+		book['sales'] = refinedSalesData
 
 		return reqwest({
 			url: config.getServerAddress() + '/book/sales',
 			method: 'post',
 			crossOrigin: true,
 			withCredentials: true,
-			data: JSON.stringify({
-				id: bookId,
-				sales: salesData
-			}),
+			data: JSON.stringify(book),
 			headers: {
 				'Authorization': config.getAuthHeader(),
 				'Content-Type': 'application/json'
