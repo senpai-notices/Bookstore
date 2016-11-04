@@ -5,7 +5,7 @@ import au.edu.uts.aip.domain.exception.ActivationException;
 import au.edu.uts.aip.domain.exception.InvalidTokenException;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.validation.ValidationResult;
-import au.edu.uts.aip.domain.pin.dto.UserDTO;
+import au.edu.uts.aip.domain.dto.UserDTO;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.security.RolesAllowed;

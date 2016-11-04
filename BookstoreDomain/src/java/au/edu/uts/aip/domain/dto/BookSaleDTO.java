@@ -1,4 +1,4 @@
-package au.edu.uts.aip.domain.pin.dto;
+package au.edu.uts.aip.domain.dto;
 
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;

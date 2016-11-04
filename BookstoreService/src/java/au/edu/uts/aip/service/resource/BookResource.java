@@ -2,7 +2,7 @@ package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.entity.Book;
 import au.edu.uts.aip.domain.remote.BookstoreRemote;
-import au.edu.uts.aip.domain.pin.dto.BookDTO;
+import au.edu.uts.aip.domain.dto.BookDTO;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.security.RolesAllowed;

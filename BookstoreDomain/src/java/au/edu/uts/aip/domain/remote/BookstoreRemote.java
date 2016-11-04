@@ -1,7 +1,7 @@
 package au.edu.uts.aip.domain.remote;
 
 import au.edu.uts.aip.domain.entity.Book;
-import au.edu.uts.aip.domain.pin.dto.BookDTO;
+import au.edu.uts.aip.domain.dto.BookDTO;
 import java.util.List;
 import javax.ejb.Remote;
 

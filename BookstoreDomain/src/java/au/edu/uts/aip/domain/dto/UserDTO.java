@@ -1,4 +1,4 @@
-package au.edu.uts.aip.domain.pin.dto;
+package au.edu.uts.aip.domain.dto;
 
 import au.edu.uts.aip.domain.entity.User;
 import java.io.Serializable;
