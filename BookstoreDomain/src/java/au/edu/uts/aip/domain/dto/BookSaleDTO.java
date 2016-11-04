@@ -1,5 +1,6 @@
 package au.edu.uts.aip.domain.dto;
 
+import au.edu.uts.aip.domain.entity.BookSales;
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -13,6 +14,18 @@ public class BookSaleDTO implements Serializable {
     private double price;
     private int quantity;
 
+    public BookSaleDTO(){
+        
+    }
+    
+    public BookSaleDTO(BookSales bookSaleEntity){
+        this.sellerName = bookSaleEntity.getSeller().getUsername();
+        this.bookId = bookSaleEntity.getBook().getId();
+        this.bookCondition = bookSaleEntity.getCondition();
+        this.price = bookSaleEntity.getPrice();
+        this.quantity = bookSaleEntity.getQuantity();
+    }
+    
     @XmlElement
     public String getSellerName() {
         return sellerName;

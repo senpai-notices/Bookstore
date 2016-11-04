@@ -39,18 +39,12 @@ public class BookDTO implements Serializable {
         this.pageCount = bookEntity.getPageCount();
     }
 
-    public BookDTO(Book bookEntity, List<BookSales> sales) {
+    public BookDTO(Book bookEntity, List<BookSales> salesEntity) {
         this(bookEntity);
 
         this.sales = new ArrayList<>();
-        for (BookSales bookSeller : sales) {
-            BookSaleDTO saleDTO = new BookSaleDTO();
-            saleDTO.setBookId(bookEntity.getId());
-            saleDTO.setSellerName(bookSeller.getSeller().getUsername());
-            saleDTO.setBookCondition(bookSeller.getCondition());
-            saleDTO.setPrice(bookSeller.getPrice());
-            saleDTO.setQuantity(bookSeller.getQuantity());
-            this.sales.add(saleDTO);
+        for (BookSales saleEntity : salesEntity) {
+            this.sales.add(new BookSaleDTO(saleEntity));
         }
     }
 

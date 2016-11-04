@@ -8,7 +8,9 @@ import au.edu.uts.aip.domain.dto.BookDTO;
 import au.edu.uts.aip.domain.dto.BookSaleDTO;
 import au.edu.uts.aip.domain.remote.BookstoreRemote;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -80,8 +82,8 @@ public class BookstoreBean implements BookstoreRemote {
         }
         TypedQuery<BookSales> typedQuery
                 = em.createNamedQuery("BookSales.findSales", BookSales.class);
-        typedQuery.setParameter("book", book);
-        typedQuery.setParameter("seller", seller);
+        typedQuery.setParameter("bookIds", Arrays.asList(book.getId()));
+        typedQuery.setParameter("sellerIds", Arrays.asList(seller.getUsername()));
         List<BookSales> oldSales = typedQuery.getResultList();
 
         for (BookSales oldSale : oldSales) {
@@ -104,5 +106,18 @@ public class BookstoreBean implements BookstoreRemote {
         }
 
         return new BookDTO(book, book.getSales());
+    }
+    
+    @Override
+    public List<BookSaleDTO> getSales(List<BookSaleDTO> request) {
+        TypedQuery<BookSales> typedQuery = em.createNamedQuery("BookSales.findSales", BookSales.class);
+        typedQuery.setParameter("bookIds", request.stream().map(BookSaleDTO::getBookId).collect(Collectors.toList()));
+        typedQuery.setParameter("sellerIds", request.stream().map(BookSaleDTO::getSellerName).collect(Collectors.toList()));
+        List<BookSales> bookSalesEntity = typedQuery.getResultList();
+        List<BookSaleDTO> bookSalesDTO = new ArrayList<>();
+        bookSalesEntity.stream().forEach((_item) -> {
+            bookSalesDTO.add(new BookSaleDTO(_item));
+        });
+        return bookSalesDTO;
     }
 }

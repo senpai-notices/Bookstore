@@ -9,17 +9,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "Book_sales", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"book", "seller", "price"})
-})
+@Table(name = "Book_sales")
 @NamedQueries({
-    @NamedQuery(name = "BookSales.findSales", query = "SELECT bs FROM BookSales bs where bs.book=:book AND bs.seller=:seller")
+    @NamedQuery(name = "BookSales.findSales", query = "SELECT bs FROM BookSales bs where bs.book.id IN :bookIds AND bs.seller.username IN :sellerIds")
 })
 public class BookSales implements Serializable {
 

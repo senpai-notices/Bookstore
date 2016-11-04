@@ -57,13 +57,25 @@ class BookService {
 		book['sales'] = refinedSalesData
 
 		return reqwest({
-			url: config.getServerAddress() + '/book/sales',
-			method: 'post',
+			url: config.getServerAddress() + '/book/sales/',
+			method: 'put',
 			crossOrigin: true,
 			withCredentials: true,
 			data: JSON.stringify(book),
 			headers: {
 				'Authorization': config.getAuthHeader(),
+				'Content-Type': 'application/json'
+			}
+		})
+	}
+
+	getBookSales(salesRequest){
+		return reqwest({
+			url: config.getServerAddress() + '/book/sales/',
+			method: 'post',
+			crossOrigin: true,
+			data: JSON.stringify(salesRequest),
+			headers: {
 				'Content-Type': 'application/json'
 			}
 		})
