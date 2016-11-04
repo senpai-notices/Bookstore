@@ -9,7 +9,7 @@ public class PinRecipientPost implements Serializable {
     private String email;
     private PinBankAccount bankAccount;
 
-    @XmlElement(name="email")
+    @XmlElement(required = true, name = "email")
     public String getEmail() {
         return email;
     }
@@ -18,7 +18,7 @@ public class PinRecipientPost implements Serializable {
         this.email = email;
     }
 
-    @XmlElement(name="bank_account")
+    @XmlElement(required = true, name = "bank_account")
     public PinBankAccount getBankAccount() {
         return bankAccount;
     }

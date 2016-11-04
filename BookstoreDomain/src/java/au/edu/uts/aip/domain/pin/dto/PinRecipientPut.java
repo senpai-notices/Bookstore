@@ -6,10 +6,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class PinRecipientPut implements Serializable {
-    // TODO: Naming inconsistency
+
     private PinBankAccount bankAccount;
 
-    @XmlElement(name="bank_account")
+    @XmlElement(required = true, name = "bank_account")
     public PinBankAccount getBankAccount() {
         return bankAccount;
     }

@@ -1,15 +1,17 @@
 package au.edu.uts.aip.domain.pin.dto;
 
 import java.io.Serializable;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "bank_account")
 public class PinBankAccount implements Serializable {
+
     private String name;
     private String bsb;
     private String number;
 
+    @XmlElement(required = true)
     public String getName() {
         return name;
     }
@@ -18,6 +20,7 @@ public class PinBankAccount implements Serializable {
         this.name = name;
     }
 
+    @XmlElement(required = true)
     public String getBsb() {
         return bsb;
     }
@@ -26,6 +29,7 @@ public class PinBankAccount implements Serializable {
         this.bsb = bsb;
     }
 
+    @XmlElement(required = true)
     public String getNumber() {
         return number;
     }
