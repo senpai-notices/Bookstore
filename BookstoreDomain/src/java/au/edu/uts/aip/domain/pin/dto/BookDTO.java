@@ -11,23 +11,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class BookDTO implements Serializable {
 
-    @XmlElement
     private long id;
-    @XmlElement
     private String title;
-    @XmlElement
     private String author;
-    @XmlElement
     private int publishYear;
-    @XmlElement
     private String publisher;
-    @XmlElement
     private String imgPath;
-    @XmlElement
     private String isbn10;
-    @XmlElement
     private String isbn13;
-    @XmlElement
+
     private int pageCount;
     private List<BookSaleDTO> sales;
 
@@ -62,6 +54,7 @@ public class BookDTO implements Serializable {
         }
     }
 
+    @XmlElement
     public long getId() {
         return id;
     }
@@ -70,6 +63,7 @@ public class BookDTO implements Serializable {
         this.id = id;
     }
 
+    @XmlElement
     public String getTitle() {
         return title;
     }
@@ -78,6 +72,7 @@ public class BookDTO implements Serializable {
         this.title = title;
     }
 
+    @XmlElement
     public String getAuthor() {
         return author;
     }
@@ -86,6 +81,7 @@ public class BookDTO implements Serializable {
         this.author = author;
     }
 
+    @XmlElement
     public int getPublishYear() {
         return publishYear;
     }
@@ -94,6 +90,7 @@ public class BookDTO implements Serializable {
         this.publishYear = publishYear;
     }
 
+    @XmlElement
     public String getPublisher() {
         return publisher;
     }
@@ -102,6 +99,7 @@ public class BookDTO implements Serializable {
         this.publisher = publisher;
     }
 
+    @XmlElement
     public String getImgPath() {
         return imgPath;
     }
@@ -110,6 +108,7 @@ public class BookDTO implements Serializable {
         this.imgPath = imgPath;
     }
 
+    @XmlElement
     public String getIsbn10() {
         return isbn10;
     }
@@ -118,6 +117,7 @@ public class BookDTO implements Serializable {
         this.isbn10 = isbn10;
     }
 
+    @XmlElement
     public String getIsbn13() {
         return isbn13;
     }
@@ -126,6 +126,7 @@ public class BookDTO implements Serializable {
         this.isbn13 = isbn13;
     }
 
+    @XmlElement
     public int getPageCount() {
         return pageCount;
     }
@@ -134,6 +135,7 @@ public class BookDTO implements Serializable {
         this.pageCount = pageCount;
     }
 
+    @XmlElement
     public List<BookSaleDTO> getSales() {
         return sales;
     }

@@ -7,17 +7,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class BookSaleDTO implements Serializable {
 
-    @XmlElement
     private String sellerName;
-    @XmlElement
     private long bookId;
-    @XmlElement
     private String bookCondition;
-    @XmlElement
     private double price;
-    @XmlElement
     private int quantity;
 
+    @XmlElement
     public String getSellerName() {
         return sellerName;
     }
@@ -26,6 +22,7 @@ public class BookSaleDTO implements Serializable {
         this.sellerName = sellerName;
     }
 
+    @XmlElement
     public long getBookId() {
         return bookId;
     }
@@ -34,6 +31,7 @@ public class BookSaleDTO implements Serializable {
         this.bookId = bookId;
     }
 
+    @XmlElement
     public String getBookCondition() {
         return bookCondition;
     }
@@ -42,6 +40,7 @@ public class BookSaleDTO implements Serializable {
         this.bookCondition = bookCondition;
     }
 
+    @XmlElement
     public double getPrice() {
         return price;
     }
@@ -50,6 +49,7 @@ public class BookSaleDTO implements Serializable {
         this.price = price;
     }
 
+    @XmlElement
     public int getQuantity() {
         return quantity;
     }
