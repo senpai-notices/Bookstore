@@ -51,7 +51,6 @@ public class Book implements Serializable {
     private int pageCount;
     private String publisher;
     private String imgPath;
-    private Category category;
 
     public String getPublisher() {
         return publisher;
@@ -154,14 +153,4 @@ public class Book implements Serializable {
     public void setPageCount(int pageCount) {
         this.pageCount = pageCount;
     }
-
-    @ManyToOne
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
 }

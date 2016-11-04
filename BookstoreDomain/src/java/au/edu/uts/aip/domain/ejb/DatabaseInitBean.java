@@ -2,7 +2,6 @@ package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.entity.Book;
 import au.edu.uts.aip.domain.entity.BookSales;
-import au.edu.uts.aip.domain.entity.Category;
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.Role.RoleType;
 import au.edu.uts.aip.domain.entity.User;
@@ -103,8 +102,7 @@ public class DatabaseInitBean {
 
         System.out.println("Importing sample books data");
         String filePath = this.getClass().getResource("/books.csv").getFile();
-
-        HashMap<String, Category> categoryMap = new HashMap<>();
+        
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -127,21 +125,6 @@ public class DatabaseInitBean {
 
                     book.setImgPath(data[7]);
                     em.persist(book);
-
-//                    String categoryName = data[8];
-//                    if (categoryMap.get(categoryName) == null){
-//                        Category category = new Category();
-//                        category.setCategoryName(categoryName);
-//                        em.persist(category);
-//                        categoryMap.put(categoryName, category);
-//                    }
-//                    
-//                    Category category = categoryMap.get(categoryName);
-//                    //category.getBooks().add(book);
-//                    em.persist(category);
-//                    book.setCategory(category);
-//                    em.persist(book);
-
 
                     BookSales adminSales = new BookSales();
                     adminSales.setBook(book);

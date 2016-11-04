@@ -5,8 +5,26 @@ import * as bs from 'react-bootstrap'
 
 class ShoppingCartView extends BaseView{
 
+	constructor(props){
+		
+	}
+
 	render(){
-		const shoppingCart = (
+		const shoppingCart = this.props.shoppingCart
+
+		let itemListView = []
+
+		shoppingCart.items.forEach((item) => {
+			itemListView.push(
+				<bs.Row>
+					<bs.Col xs={12}>
+
+					</bs.Col>
+				</bs.Row>
+			)
+		})
+
+		const shoppingCartView = (
 			<bs.Modal {...this.props} bsSize="lg" show>
 				<bs.Modal.Header closeButton>
 					<bs.Modal.Title>Your shopping cart</bs.Modal.Title>
@@ -19,7 +37,7 @@ class ShoppingCartView extends BaseView{
 
 		return (
 			<div>
-			{shoppingCart}
+			{shoppingCartView}
 			</div>
 		)
 	}
