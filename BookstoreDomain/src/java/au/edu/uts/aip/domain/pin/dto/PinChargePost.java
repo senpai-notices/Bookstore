@@ -6,11 +6,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class PinChargePost implements Serializable {
+
     private String email;
     private String description;
     private String customerToken;
     private String amount;
 
+    @XmlElement(required = true)
     public String getEmail() {
         return email;
     }
@@ -19,6 +21,7 @@ public class PinChargePost implements Serializable {
         this.email = email;
     }
 
+    @XmlElement(required = true)
     public String getDescription() {
         return description;
     }
@@ -27,7 +30,7 @@ public class PinChargePost implements Serializable {
         this.description = description;
     }
 
-    @XmlElement(name="customer_token")
+    @XmlElement(required = true, name = "customer_token")
     public String getCustomerToken() {
         return customerToken;
     }
@@ -36,6 +39,7 @@ public class PinChargePost implements Serializable {
         this.customerToken = customerToken;
     }
 
+    @XmlElement(required = true)
     public String getAmount() {
         return amount;
     }

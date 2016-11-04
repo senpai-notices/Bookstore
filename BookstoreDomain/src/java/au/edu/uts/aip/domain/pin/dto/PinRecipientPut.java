@@ -9,7 +9,7 @@ public class PinRecipientPut implements Serializable {
 
     private PinBankAccount bankAccount;
 
-    @XmlElement(name="bank_account")
+    @XmlElement(required = true, name = "bank_account")
     public PinBankAccount getBankAccount() {
         return bankAccount;
     }
