@@ -27,8 +27,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "Bookstore_User")
 @NamedQueries({
-    @NamedQuery(name = "User.find", query = "SELECT u from User u where u.username=:username")
-    ,
+    @NamedQuery(name = "User.find", query = "SELECT u from User u where u.username=:username"),
     @NamedQuery(name = "User.findUsers", query = "SELECT u from User u where "
             + "u.role IN :roles AND lower(u.email) like lower(:email) "
             + "AND lower(u.username) like lower(:username) "

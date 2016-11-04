@@ -63,9 +63,9 @@ public class UserResource {
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.APPLICATION_JSON)
     public Response post(@FormParam("username") String username,
-            @FormParam("password") String password,
-            @FormParam("email") String email,
-            @FormParam("fullname") String fullname) {
+                         @FormParam("password") String password,
+                         @FormParam("email") String email,
+                         @FormParam("fullname") String fullname) {
         try {
             User user = new User();
             user.setUsername(username);
@@ -122,11 +122,11 @@ public class UserResource {
     @RolesAllowed({"ADMIN"})
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAccounts(@QueryParam("roles") String roles,
-            @QueryParam("username") String username,
-            @QueryParam("fullname") String fullname,
-            @QueryParam("email") String email,
-            @QueryParam("offset") int offset,
-            @QueryParam("limit") int limit) {
+                                @QueryParam("username") String username,
+                                @QueryParam("fullname") String fullname,
+                                @QueryParam("email") String email,
+                                @QueryParam("offset") int offset,
+                                @QueryParam("limit") int limit) {
         String[] rolesName = roles.split(",");
         List<User> usersEntity = 
                 userBean.findUsers(rolesName, username, fullname, email, offset, limit);

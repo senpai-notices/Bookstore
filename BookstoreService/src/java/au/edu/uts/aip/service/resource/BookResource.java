@@ -31,7 +31,7 @@ public class BookResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("latest")
     public Response getLatestBooks(@QueryParam("offset") int offset,
-            @QueryParam("limit") int limit) {
+                                   @QueryParam("limit") int limit) {
 
         List<Book> booksEntity = bookstoreBean.getLatestBooks(offset, limit);
         ArrayList<BookDTO> booksDTO = new ArrayList<>();
@@ -45,8 +45,8 @@ public class BookResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getBook(@QueryParam("isbn10") String isbn10,
-            @QueryParam("isbn13") String isbn13,
-            @QueryParam("title") String title) {
+                            @QueryParam("isbn13") String isbn13,
+                            @QueryParam("title") String title) {
         Book bookEntity = bookstoreBean.getSingleBook(isbn10, isbn13, title);
         BookDTO bookDTO = new BookDTO(bookEntity, bookEntity.getSales());
 

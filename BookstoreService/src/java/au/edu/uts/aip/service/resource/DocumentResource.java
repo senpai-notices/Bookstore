@@ -86,7 +86,7 @@ public class DocumentResource {
     @Path("{username}/{documentType}")
     @Produces({"application/pdf", "image/png", "image/jpeg"})
     public Response get(@PathParam("username") String username,
-            @PathParam("documentType") String documentType) {
+                        @PathParam("documentType") String documentType) {
         User user = userBean.getUser(username);
         File returnFile;
         switch (documentType) {
