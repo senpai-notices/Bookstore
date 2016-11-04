@@ -2,7 +2,9 @@ package au.edu.uts.aip.domain.entity;
 
 /*import the needed libraries*/
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -62,7 +64,7 @@ public class User implements Serializable {
     @Pattern(regexp = "^[^ ]+@[^ ]+\\.[^ ]+$")
     private String email;
     
-    private List<BookSales> sellingBooks;
+    private List<BookSales> sellingBooks = new ArrayList<>();
     
     private Role role;
     

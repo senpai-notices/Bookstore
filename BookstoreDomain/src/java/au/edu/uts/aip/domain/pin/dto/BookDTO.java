@@ -1,4 +1,4 @@
-package au.edu.uts.aip.service.dto;
+package au.edu.uts.aip.domain.pin.dto;
 
 import au.edu.uts.aip.domain.entity.Book;
 import au.edu.uts.aip.domain.entity.BookSales;
@@ -28,7 +28,7 @@ public class BookDTO implements Serializable {
     private String isbn13;
     @XmlElement
     private int pageCount;
-    private List<SellerDTO> sales;
+    private List<BookSaleDTO> sales;
     
     public BookDTO(){
         
@@ -51,12 +51,13 @@ public class BookDTO implements Serializable {
         
         this.sales = new ArrayList<>();
         for(BookSales bookSeller: sales){
-            SellerDTO sellerDTO = new SellerDTO();
-            sellerDTO.setSellerName(bookSeller.getSeller().getUsername());
-            sellerDTO.setBookCondition(bookSeller.getCondition());
-            sellerDTO.setPrice(bookSeller.getPrice());
-            sellerDTO.setQuantity(bookSeller.getQuantity());
-            this.sales.add(sellerDTO);
+            BookSaleDTO saleDTO = new BookSaleDTO();
+            saleDTO.setBookId(bookEntity.getId());
+            saleDTO.setSellerName(bookSeller.getSeller().getUsername());
+            saleDTO.setBookCondition(bookSeller.getCondition());
+            saleDTO.setPrice(bookSeller.getPrice());
+            saleDTO.setQuantity(bookSeller.getQuantity());
+            this.sales.add(saleDTO);
         }
     }
     
@@ -132,11 +133,11 @@ public class BookDTO implements Serializable {
         this.pageCount = pageCount;
     }
 
-    public List<SellerDTO> getSales() {
+    public List<BookSaleDTO> getSales() {
         return sales;
     }
 
-    public void setSales(List<SellerDTO> sales) {
+    public void setSales(List<BookSaleDTO> sales) {
         this.sales = sales;
     }
 }

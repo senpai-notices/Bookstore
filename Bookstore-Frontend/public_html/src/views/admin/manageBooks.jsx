@@ -20,6 +20,7 @@ class ManageBooksView extends BaseView {
 
 	saveSale(){
 		// TODO: call backend to update data
+		this.bookService.updateBookSale(this.state.userSalesInfo, this.state.selectedBook.id)
 	}
 
 	resetSale(){
@@ -28,7 +29,7 @@ class ManageBooksView extends BaseView {
 		this.state.userSalesInfoReset.forEach((sale) => {
 			sale.index = saleIndex
 			this.state.userSalesInfo.push({
-				condition: sale.condition,
+				bookCondition: sale.bookCondition,
 				price: sale.price,
 				quantity: sale.quantity,
 				actions: (<bs.Button bsStyle="danger" onClick={() => this.removeSale(sale)}>Remove</bs.Button>)
@@ -41,7 +42,7 @@ class ManageBooksView extends BaseView {
 
 	addSale(){
 		let newSale = {
-			condition: "<<condition>>",
+			bookCondition: "<<condition>>",
 			price: "<<price>>",
 			quantity: "<<quantity>>",
 			index: this.state.userSalesInfo.length,
@@ -54,11 +55,11 @@ class ManageBooksView extends BaseView {
 
 	removeSale(sale){
 		this.state.userSalesInfo.splice(sale.index, 1)
-		
 		let saleIndex = 0
 		this.state.userSalesInfo.forEach((saleInfo) =>{
 			saleInfo.index = saleIndex
 			saleIndex++
+			saleInfo.actions = (<bs.Button bsStyle="danger" onClick={() => this.removeSale(saleInfo)}>Remove</bs.Button>)
 		})
 		this.setState(this.state)
 	}
@@ -72,6 +73,7 @@ class ManageBooksView extends BaseView {
 
 		this.bookService.getBookDetail(book.isbn10, book.isbn13, book.title)
 			.then((bookDetail) => {
+				console.log(bookDetail)
 				this.state.selectedBook = bookDetail
 
 				let saleIndex = 0
@@ -80,14 +82,14 @@ class ManageBooksView extends BaseView {
 						sale.index = saleIndex
 						saleIndex++
 						this.state.userSalesInfo.push({
-							condition: sale.bookCondition,
+							bookCondition: sale.bookCondition,
 							price: sale.price,
 							quantity: sale.quantity,
 							actions: (<bs.Button bsStyle="danger" onClick={() => this.removeSale(sale)}>Remove</bs.Button>)
 						})
 
 						this.state.userSalesInfoReset.push({
-							condition: sale.bookCondition,
+							bookCondition: sale.bookCondition,
 							price: sale.price,
 							quantity: sale.quantity
 						})
@@ -213,7 +215,7 @@ class ManageBooksView extends BaseView {
 					<div>
 						<EditableTable dataList={this.state.userSalesInfo}
 							headers={['Quantity', 'Price', 'Condition', 'Actions']}
-							columns={['quantity', 'price', 'condition', 'actions']}
+							columns={['quantity', 'price', 'bookCondition', 'actions']}
 							tdStyle={tdStyle}
 							onChange={(resultList) => this.setState({userSalesInfo: resultList})} />
 

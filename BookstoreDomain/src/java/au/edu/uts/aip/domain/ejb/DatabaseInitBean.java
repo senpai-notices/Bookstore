@@ -150,32 +150,37 @@ public class DatabaseInitBean {
                     
                     
                     List<BookSales> sellers = new ArrayList<>();
-                    BookSales adminSeller = new BookSales();
-                    adminSeller.setBook(book);
-                    adminSeller.setSeller(adminUser);
+                    BookSales adminSales = new BookSales();
+                    adminSales.setBook(book);
+                    adminSales.setSeller(adminUser);
                     double brandNewPrice = Math.random() * 200;
-                    adminSeller.setPrice(brandNewPrice);
-                    adminSeller.setCondition("Brand new");
-                    adminSeller.setQuantity(r.nextInt(20) + 1);
+                    adminSales.setPrice(brandNewPrice);
+                    adminSales.setCondition("Brand new");
+                    adminSales.setQuantity(r.nextInt(20) + 1);
 
-                    BookSales userSeller = new BookSales();
-                    userSeller.setBook(book);
+                    BookSales userSales = new BookSales();
+                    userSales.setBook(book);
                     User seller = verifiedUsers[r.nextInt(20)];
-                    userSeller.setSeller(seller);
+                    userSales.setSeller(seller);
                     double usedPrice = Math.random() * brandNewPrice;
-                    userSeller.setPrice(usedPrice);
-                    userSeller.setCondition("Used");
-                    userSeller.setQuantity(r.nextInt(2) + 1);
+                    userSales.setPrice(usedPrice);
+                    userSales.setCondition("Used");
+                    userSales.setQuantity(r.nextInt(2) + 1);
                     
-                    em.persist(adminSeller);
-                    em.persist(userSeller);
+                    em.persist(adminSales);
+                    em.persist(userSales);
                     
-                    book.getSales().add(adminSeller);
-                    book.getSales().add(userSeller);
+                    book.getSales().add(adminSales);
+                    book.getSales().add(userSales);
                     em.persist(book);
                     
+                    adminUser.getSellingBooks().add(adminSales);
+                    seller.getSellingBooks().add(userSales);
+                    em.persist(adminUser);
+                    em.persist(seller);
+                    
                 } catch (Exception ex){
-                    System.out.println(ex.getMessage());
+                    Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
                     continue;
                 }
                 

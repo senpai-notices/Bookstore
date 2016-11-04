@@ -42,6 +42,27 @@ class BookService {
 			}
 		})
 	}
+
+	updateBookSale(salesData, bookId){
+		salesData.forEach((sale) =>{
+			sale.actions = undefined
+		})
+
+		return reqwest({
+			url: config.getServerAddress() + '/book/sales',
+			method: 'post',
+			crossOrigin: true,
+			withCredentials: true,
+			data: JSON.stringify({
+				id: bookId,
+				sales: salesData
+			}),
+			headers: {
+				'Authorization': config.getAuthHeader(),
+				'Content-Type': 'application/json'
+			}
+		})
+	}
 }
 
 export default BookService

@@ -1,13 +1,15 @@
-package au.edu.uts.aip.service.dto;
+package au.edu.uts.aip.domain.pin.dto;
 
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class SellerDTO implements Serializable {
+public class BookSaleDTO implements Serializable {
     @XmlElement
     private String sellerName;
+    @XmlElement
+    private long bookId;
     @XmlElement
     private String bookCondition;
     @XmlElement
@@ -21,6 +23,14 @@ public class SellerDTO implements Serializable {
 
     public void setSellerName(String sellerName) {
         this.sellerName = sellerName;
+    }
+
+    public long getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(long bookId) {
+        this.bookId = bookId;
     }
 
     public String getBookCondition() {

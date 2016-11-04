@@ -2,21 +2,28 @@ package au.edu.uts.aip.domain.entity;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="Book_sales")
-@IdClass(BookSaleId.class)
+@Table(name="Book_sales", uniqueConstraints = {
+    @UniqueConstraint(columnNames = {"book", "seller", "price"})
+})
+@NamedQueries({
+    @NamedQuery(name="BookSales.getSingle", query="SELECT bs FROM BookSales bs where bs.book=:book AND bs.seller=:seller")
+})
 public class BookSales implements Serializable {
+    
+    private long salesId;
     private Book book;
     private User seller;
     
@@ -31,8 +38,17 @@ public class BookSales implements Serializable {
     @NotNull
     @Min(value = 1, message =  "Please enter a positive value for quantity")
     private int quantity;
-    
+
     @Id
+    @GeneratedValue
+    public long getSalesId() {
+        return salesId;
+    }
+
+    public void setSalesId(long salesId) {
+        this.salesId = salesId;
+    }
+    
     @ManyToOne
     @JoinColumn(name = "book_id", referencedColumnName = "id")
     public Book getBook() {
@@ -42,8 +58,7 @@ public class BookSales implements Serializable {
     public void setBook(Book book) {
         this.book = book;
     }
-
-    @Id
+    
     @ManyToOne
     @JoinColumn(name = "seller_id", referencedColumnName = "id")
     public User getSeller() {
@@ -53,8 +68,7 @@ public class BookSales implements Serializable {
     public void setSeller(User seller) {
         this.seller = seller;
     }
-    
-    @Id
+
     @JoinColumn(name = "price_id", referencedColumnName = "id")
     public double getPrice() {
         return price;

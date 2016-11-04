@@ -3,24 +3,24 @@ package au.edu.uts.aip.domain.entity;
 import java.io.Serializable;
 
 public class BookSaleId implements Serializable {
-    private long book;
-    private long seller;
+    private long bookId;
+    private long sellerId;
     private double price;
 
-    public long getBook() {
-        return book;
+    public long getBookId() {
+        return bookId;
     }
 
-    public void setBook(long book) {
-        this.book = book;
+    public void setBookId(long bookId) {
+        this.bookId = bookId;
     }
 
-    public long getSeller() {
-        return seller;
+    public long getSellerId() {
+        return sellerId;
     }
 
-    public void setSeller(long seller) {
-        this.seller = seller;
+    public void setSellerId(long sellerId) {
+        this.sellerId = sellerId;
     }
 
     public double getPrice() {
@@ -33,15 +33,15 @@ public class BookSaleId implements Serializable {
     
     @Override
     public int hashCode(){
-        return (int)(book + seller + price);
+        return (int)(bookId + sellerId + price);
     }
     
     @Override
     public boolean equals(Object object){
         if (object instanceof BookSaleId){
             BookSaleId otherBookId = (BookSaleId)object;
-            return (otherBookId.seller == this.seller)
-                    && (otherBookId.book == this.seller)
+            return (otherBookId.sellerId == this.sellerId)
+                    && (otherBookId.bookId == this.sellerId)
                     && (otherBookId.price == this.price);
         }
         return false;

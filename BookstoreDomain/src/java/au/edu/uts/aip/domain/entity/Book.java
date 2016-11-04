@@ -4,6 +4,7 @@ package au.edu.uts.aip.domain.entity;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -31,7 +32,9 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @NamedQueries({
     @NamedQuery(name="Book.getLatest", query="SELECT b FROM Book b ORDER BY b.publishYear DESC"),
-    @NamedQuery(name="Book.getSingle", query="SELECT DISTINCT b FROM Book b JOIN FETCH b.sales  WHERE b.isbn10 like :isbn10 AND b.isbn13 like :isbn13 AND b.title like :title")
+    @NamedQuery(name="Book.getSingle", query="SELECT DISTINCT b FROM Book b LEFT JOIN FETCH b.sales "
+            + "WHERE b.isbn10 like :isbn10 AND b.isbn13 like :isbn13 AND b.title like :title")
+    //@NamedQuery(name="Book.getSales", query="SELECT DISTINCT b FROM Book b JOIN FETCH b.sales WHERE b.id=:bookId AND b.sales.seller=:seller")
 })
 @Entity
 @Table(uniqueConstraints = {
