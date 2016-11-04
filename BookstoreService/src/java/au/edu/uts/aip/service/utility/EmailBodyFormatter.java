@@ -18,6 +18,12 @@ public class EmailBodyFormatter {
             "Your account has been banned.";
     private static final String BODY_ACCOUNT_UNBAN = 
             "Your account has been unbanned.";
+    private static final String BODY_ORDER_FAIL = 
+            "Your payment has failed to process for your order %1$s. Please try again.";
+    private static final String BODY_ORDER_COMPLETE = 
+            "Thank you for your order from Bookstore. Below is your order information:\n\n%1$s";
+    private static final String BODY_ORDER_PENDING = 
+            "I don't know a use case for this. %1$s";
     
     public static String onAccountActivation(String name, String activationUrl) {
         return format(name, String.format(BODY_ACCOUNT_ACTIVATION, activationUrl));
@@ -37,6 +43,18 @@ public class EmailBodyFormatter {
     
     public static String onAccountUnban(String name) {
         return format(name, BODY_ACCOUNT_UNBAN);
+    }
+    
+    public static String onOrderFail(String name, String orderInfo) {
+        return format(name, format(BODY_ORDER_FAIL, orderInfo));
+    }
+    
+    public static String onOrderComplete(String name, String orderInfo) {
+        return format(name, format(BODY_ORDER_COMPLETE, orderInfo));
+    }
+    
+    public static String onOrderPending(String name, String orderInfo) {
+        return format(name, format(BODY_ORDER_PENDING, orderInfo));
     }
     
     public static String format(String name, String info) {

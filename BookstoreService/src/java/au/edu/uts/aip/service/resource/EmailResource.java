@@ -76,8 +76,8 @@ public class EmailResource {
 
         try {
             User user = userBean.getUser(username);
-            String body2 = EmailBodyFormatter.onVerificationApprove(user.getFullname());
-            SendEmail.SendEmail(user.getEmail(), "Account verification status", body2);
+            String body = EmailBodyFormatter.onVerificationApprove(user.getFullname());
+            SendEmail.SendEmail(user.getEmail(), "Account verification status", body);
             return Response.ok().build();
         } catch (MessagingException ex) {
             return Response.serverError().build();
@@ -90,8 +90,8 @@ public class EmailResource {
     public Response banAccount(@PathParam("username") String username) {
         try {
             User user = userBean.getUser(username);
-            String body2 = EmailBodyFormatter.onAccountBan(user.getFullname());
-            SendEmail.SendEmail(user.getEmail(), "Account banned", body2);
+            String body = EmailBodyFormatter.onAccountBan(user.getFullname());
+            SendEmail.SendEmail(user.getEmail(), "Account banned", body);
             return Response.ok().build();
         } catch (MessagingException ex) {
             return Response.serverError().build();
@@ -104,8 +104,50 @@ public class EmailResource {
     public Response unbanAccount(@PathParam("username") String username) {
         try {
             User user = userBean.getUser(username);
-            String body2 = EmailBodyFormatter.onAccountUnban(user.getFullname());
-            SendEmail.SendEmail(user.getEmail(), "Ban lifted", body2);
+            String body = EmailBodyFormatter.onAccountUnban(user.getFullname());
+            SendEmail.SendEmail(user.getEmail(), "Ban lifted", body);
+            return Response.ok().build();
+        } catch (MessagingException ex) {
+            return Response.serverError().build();
+        }
+    }
+
+    @POST
+    @RolesAllowed({"VERIFIED"})
+    @Path("/order/{order-id}/fail")
+    public Response orderFail(@PathParam("order-id") String orderId, String username) {
+        try {
+            User user = userBean.getUser(username);
+            String body = EmailBodyFormatter.onOrderFail(user.getFullname(), orderId);
+            SendEmail.SendEmail(user.getEmail(), "Order failed", body);
+            return Response.ok().build();
+        } catch (MessagingException ex) {
+            return Response.serverError().build();
+        }
+    }
+
+    @POST
+    @RolesAllowed({"VERIFIED"})
+    @Path("/order/{order-id}/pending")
+    public Response orderPending(@PathParam("order-id") String orderId, String username) {
+        try {
+            User user = userBean.getUser(username);
+            String body = EmailBodyFormatter.onOrderPending(user.getFullname(), orderId);
+            SendEmail.SendEmail(user.getEmail(), "Order pending", body);
+            return Response.ok().build();
+        } catch (MessagingException ex) {
+            return Response.serverError().build();
+        }
+    }
+
+    @POST
+    @RolesAllowed({"VERIFIED"})
+    @Path("/order/{order-id}/complete")
+    public Response orderComplete(@PathParam("order-id") String orderId, String username) {
+        try {
+            User user = userBean.getUser(username);
+            String body = EmailBodyFormatter.onOrderComplete(user.getFullname(), orderId);
+            SendEmail.SendEmail(user.getEmail(), "Order complete", body);
             return Response.ok().build();
         } catch (MessagingException ex) {
             return Response.serverError().build();
