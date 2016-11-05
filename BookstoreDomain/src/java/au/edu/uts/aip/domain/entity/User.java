@@ -7,10 +7,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -27,7 +29,8 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "Bookstore_User")
 @NamedQueries({
-    @NamedQuery(name = "User.find", query = "SELECT u from User u where u.username=:username"),
+    @NamedQuery(name = "User.find", query = "SELECT u from User u where u.username=:username")
+    ,
     @NamedQuery(name = "User.findUsers", query = "SELECT u from User u where "
             + "u.role IN :roles AND lower(u.email) like lower(:email) "
             + "AND lower(u.username) like lower(:username) "
@@ -66,6 +69,10 @@ public class User implements Serializable {
     private String idVerificationPath;
 
     private String residentialVerificationPath;
+
+    private Address address;
+    private BankAccount bankAccount;
+    private String recipientToken;
 
     @Id
     @GeneratedValue
@@ -172,4 +179,34 @@ public class User implements Serializable {
     public void setResidentialVerificationPath(String residentialVerificationPath) {
         this.residentialVerificationPath = residentialVerificationPath;
     }
+
+    @OneToOne
+    @JoinColumn(name = "address_id", referencedColumnName = "id")
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    @OneToOne
+    @JoinColumn(name = "bank_account_id", referencedColumnName = "id")
+    public BankAccount getBankAccount() {
+        return bankAccount;
+    }
+
+    public void setBankAccount(BankAccount bankAccount) {
+        this.bankAccount = bankAccount;
+    }
+
+    @Column(name = "recipient_token")
+    public String getRecipientToken() {
+        return recipientToken;
+    }
+
+    public void setRecipientToken(String recipientToken) {
+        this.recipientToken = recipientToken;
+    }
+
 }

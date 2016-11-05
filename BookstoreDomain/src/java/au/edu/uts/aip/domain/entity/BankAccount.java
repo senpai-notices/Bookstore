@@ -1,12 +1,16 @@
 package au.edu.uts.aip.domain.entity;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "bank_account")
 public class BankAccount implements Serializable {
+
     private Long id;
     private String name;
     private String bsb;
@@ -22,6 +26,7 @@ public class BankAccount implements Serializable {
         this.id = id;
     }
 
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -30,6 +35,7 @@ public class BankAccount implements Serializable {
         this.name = name;
     }
 
+    @Column(name = "bsb")
     public String getBsb() {
         return bsb;
     }
@@ -38,6 +44,7 @@ public class BankAccount implements Serializable {
         this.bsb = bsb;
     }
 
+    @Column(name = "number")
     public String getNumber() {
         return number;
     }
@@ -45,6 +52,5 @@ public class BankAccount implements Serializable {
     public void setNumber(String number) {
         this.number = number;
     }
-    
-    
+
 }
