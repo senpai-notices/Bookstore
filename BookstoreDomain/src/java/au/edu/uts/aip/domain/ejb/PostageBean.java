@@ -52,8 +52,9 @@ public class PostageBean {
     }
 
     // TODO: find a way to get the seller's postcode and the buyer's postcode.
-    public double calculatePostageCost(int quantity, String fromPostcode, String toPostcode, String serviceCode) {
+    public double calculatePostageCost(int quantity, int fromPostcode, int toPostcode, String serviceCode) {
 
+        // Qty cannot exceed 30
         int parcelHeight = calculateParcelHeight(quantity);
         double parcelWeight = calculateParcelWeight(quantity);
 
@@ -61,8 +62,8 @@ public class PostageBean {
                 .register(new AuspostAuthFilter(API_KEY));
 
         String response = client.target(BASE_URL + "/postage/parcel/domestic/calculate.json")
-                .queryParam("from_postcode", fromPostcode)
-                .queryParam("to_postcode", toPostcode)
+                .queryParam("from_postcode", String.format("%04d", fromPostcode))
+                .queryParam("to_postcode", String.format("%04d", toPostcode))
                 .queryParam("length", PARCEL_LENGTH)
                 .queryParam("width", PARCEL_WIDTH)
                 .queryParam("height", parcelHeight)
@@ -73,13 +74,14 @@ public class PostageBean {
                 .readEntity(String.class);
         client.close();
         JsonObject responseJson = ApiResponseUtil.toJson(response);
-        
+
         if (responseJson.containsKey("postage_result")) {
             String totalPostageCostString = responseJson.getJsonObject("postage_result").getString("total_cost");
             double totalPostageCost = Double.parseDouble(totalPostageCostString);
             System.out.println(totalPostageCost);
             return totalPostageCost;
-        } else { 
+        } else {
+            System.out.println("error");
             return -1.0;
         }
     }
@@ -91,4 +93,5 @@ public class PostageBean {
     private double calculateParcelWeight(int quantity) {
         return (quantity * BOOK_WEIGHT) + PARCEL_WEIGHT_BUFFER;
     }
+
 }
