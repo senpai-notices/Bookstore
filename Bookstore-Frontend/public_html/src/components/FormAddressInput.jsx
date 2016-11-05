@@ -10,6 +10,7 @@ class FormAddressInput extends React.Component {
 
 		this.updateAddress = this.updateAddress.bind(this)
 		this.addressSelected = this.addressSelected.bind(this)
+		this.setValue = this.setValue.bind(this)
 	}
 
 	updateAddress(value){
@@ -19,9 +20,11 @@ class FormAddressInput extends React.Component {
 		}
 	}
 
+	setValue(value){
+		this.geoSuggest.update(value)
+	}
+
 	addressSelected(input){
-		this.state.address = input.label
-		this.setState(this.state)
 		let event = { target: { name: this.props.name, value: input.label } }
 		if (this.props.onAddressSelected){
 			this.props.onAddressSelected(event)
@@ -29,7 +32,6 @@ class FormAddressInput extends React.Component {
 	}
 
 	render() {
-
 		let requiredAsterisk = ""
 		if (this.props.required && !this.props.hideAsterisk){
 			let asteriskStyle = {
@@ -53,9 +55,9 @@ class FormAddressInput extends React.Component {
 		return (
 			<bs.FormGroup bsSize={size} {...validationState}>
 				<bs.ControlLabel>{this.props.label}{requiredAsterisk}</bs.ControlLabel>
-				<Geosuggest onSuggestSelect={this.addressSelected} initialValue={this.props.value}
+				<Geosuggest onSuggestSelect={this.addressSelected}
 							onChange={this.updateAddress}
-							country="au" ref={(geoSuggest) => this.geoSuggest = geoSuggest}/>
+							country="au" ref={(input) => this.geoSuggest = input}/>
 
 				{validationState && <bs.HelpBlock>{this.props.errorMessage}</bs.HelpBlock>}
 			</bs.FormGroup>
