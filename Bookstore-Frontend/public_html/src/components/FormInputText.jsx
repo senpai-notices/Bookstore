@@ -81,7 +81,8 @@ class FormInputText extends React.Component {
 									onChange={this.props.onChange}
 									onFocus={this.props.onFocus}
 									onBlur={this.props.onBlur}
-									required={this.props.required}/>
+									required={this.props.required}
+									style={this.props.style}/>
 					{addonAfter}
 				</bs.InputGroup>
 				{validationState && <bs.HelpBlock>{this.props.errorMessage}</bs.HelpBlock>}

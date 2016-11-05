@@ -20,8 +20,10 @@ class ShoppingCartView extends BaseView{
 
 				<bs.Modal.Footer>
 					<bs.Button bsStyle="primary" onClick={this.props.onCheckout} 
-						disabled={this.props.shoppingCart.items.length === 0}>
-						Checkout
+						disabled={this.props.shoppingCart.items.length === 0 || this.props.user.status !== 'loggedIn'}>
+						{(this.props.shoppingCart.items.length === 0 && "No item to checkout")
+						||(this.props.user.status !== 'loggedIn' && "Please login before checkout")
+						|| "Checkout"}
 					</bs.Button>
 				</bs.Modal.Footer>
 			</bs.Modal>

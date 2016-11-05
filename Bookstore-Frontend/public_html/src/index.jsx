@@ -37,6 +37,13 @@ const redirectToHome = () => {
 	browserHistory.replace("/")
 }
 
+const checkCheckout = (nextState, replaceState) => {
+	const {user, shoppingCart} = store.getState()
+	if (user.status !== 'loggedIn' || shoppingCart.items.length === 0){
+		replaceState("/")
+	}
+}
+
 const routerKey = Math.random()
 const rootElement = (
 	<Provider store={store}>
@@ -48,7 +55,7 @@ const rootElement = (
 				<Route path="account">
 					<Route path="activation" component={views.AccountActivationView}/>
 				</Route>
-				<Route path="checkout" component={views.CheckoutView}/>
+				<Route path="checkout" component={views.CheckoutView} onEnter={checkCheckout} onLogout={redirectToHome}/>
 				<Route path="user" onEnter={checkUser} onLogout={redirectToHome}>
 					<Route path="dashboard" component={views.UserDashboardView}/>
 				</Route>
