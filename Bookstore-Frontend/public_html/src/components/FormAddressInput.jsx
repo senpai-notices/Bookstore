@@ -57,6 +57,7 @@ class FormAddressInput extends React.Component {
 				<bs.ControlLabel>{this.props.label}{requiredAsterisk}</bs.ControlLabel>
 				<Geosuggest onSuggestSelect={this.addressSelected}
 							onChange={this.updateAddress}
+							onFocus={this.props.onFocus}
 							country="au" ref={(input) => this.geoSuggest = input}/>
 
 				{validationState && <bs.HelpBlock>{this.props.errorMessage}</bs.HelpBlock>}
