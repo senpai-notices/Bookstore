@@ -185,13 +185,13 @@ class Template extends BaseView{
 
 		return (
 			<div>
+				{shoppingCartView}
 				{header}
 				<div className="container" style={{marginTop: "70px"}}>
 					{notification}
 					{this.props.children}
 					
 				</div>
-				{shoppingCartView}
 			</div>
 		)
 	}

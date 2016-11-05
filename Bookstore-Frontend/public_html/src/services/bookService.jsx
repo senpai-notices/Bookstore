@@ -48,6 +48,7 @@ class BookService {
 		let refinedSalesData = []
 		salesData.forEach((sale) =>{
 			refinedSalesData.push({
+				id: sale.id,
 				quantity: sale.quantity,
 				price: sale.price,
 				bookCondition: sale.bookCondition
@@ -58,7 +59,7 @@ class BookService {
 
 		return reqwest({
 			url: config.getServerAddress() + '/book/sales/',
-			method: 'put',
+			method: 'post',
 			crossOrigin: true,
 			withCredentials: true,
 			data: JSON.stringify(book),
@@ -70,13 +71,16 @@ class BookService {
 	}
 
 	getBookSales(salesRequest){
+		let data = []
+		salesRequest.forEach((req) =>{
+			data.push(req.id)
+		})
 		return reqwest({
 			url: config.getServerAddress() + '/book/sales/',
-			method: 'post',
+			method: 'get',
 			crossOrigin: true,
-			data: JSON.stringify(salesRequest),
-			headers: {
-				'Content-Type': 'application/json'
+			data: {
+				saleIds: data.join()
 			}
 		})
 	}

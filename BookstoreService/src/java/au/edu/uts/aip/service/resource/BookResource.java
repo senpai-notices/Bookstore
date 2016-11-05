@@ -5,7 +5,9 @@ import au.edu.uts.aip.domain.remote.BookstoreRemote;
 import au.edu.uts.aip.domain.dto.BookDTO;
 import au.edu.uts.aip.domain.dto.BookSaleDTO;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.json.JsonArray;
@@ -51,7 +53,7 @@ public class BookResource {
         return Response.ok(bookDTO).build();
     }
 
-    @PUT
+    @POST
     @Path("sales")
     @RolesAllowed({"ADMIN", "VERIFIED USER"})
     @Consumes(MediaType.APPLICATION_JSON)
@@ -61,12 +63,11 @@ public class BookResource {
         return Response.ok().entity(result).build();
     }
     
-    @POST
+    @GET
     @Path("sales")
-    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getSales(List<BookSaleDTO> salesDTO){
-        List<BookSaleDTO> result = bookstoreBean.getSales(salesDTO);
-        return Response.ok().entity(result).build();
+    public Response getSales(@QueryParam("saleIds") String saleIds){
+        List<BookSaleDTO> result = bookstoreBean.getSales(Arrays.asList(saleIds.split(",")).stream().map(Long::parseLong).collect(Collectors.toList()));
+        return Response.ok().entity(result.toArray(new BookSaleDTO[0])).build();
     }
 }

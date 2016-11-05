@@ -80,44 +80,69 @@ public class BookstoreBean implements BookstoreRemote {
         } else {
             book = em.find(Book.class, salesData.getId());
         }
+        
         TypedQuery<BookSales> typedQuery
                 = em.createNamedQuery("BookSales.findSales", BookSales.class);
-        typedQuery.setParameter("bookIds", Arrays.asList(book.getId()));
-        typedQuery.setParameter("sellerIds", Arrays.asList(seller.getUsername()));
-        List<BookSales> oldSales = typedQuery.getResultList();
+        typedQuery.setParameter("bookId", book.getId());
+        typedQuery.setParameter("sellerId", seller.getUsername());
+        List<BookSales> existingSales = typedQuery.getResultList();
+        
+        // add new sales
+        for (BookSaleDTO saleData: salesData.getSales()){
+            if (saleData.getId() == 0){
+                BookSales newSale = new BookSales();
+                newSale.setBook(book);
+                newSale.setSeller(seller);
+                newSale.setCondition(saleData.getBookCondition());
+                newSale.setPrice(saleData.getPrice());
+                newSale.setQuantity(saleData.getQuantity());
 
-        for (BookSales oldSale : oldSales) {
-            seller.getSellingBooks().remove(oldSale);
-            book.getSales().remove(oldSale);
-            em.remove(oldSale);
+                book.getSales().add(newSale);
+                seller.getSellingBooks().add(newSale);
+                em.persist(newSale);
+            }
         }
-
-        for (BookSaleDTO saleData : salesData.getSales()) {
-            BookSales newSale = new BookSales();
-            newSale.setBook(book);
-            newSale.setSeller(seller);
-            newSale.setCondition(saleData.getBookCondition());
-            newSale.setPrice(saleData.getPrice());
-            newSale.setQuantity(saleData.getQuantity());
-
-            book.getSales().add(newSale);
-            seller.getSellingBooks().add(newSale);
-            em.persist(newSale);
+        
+        // update & remove old sales
+        for(BookSales saleEntity: existingSales){
+            BookSaleDTO matched = null;
+            for (BookSaleDTO saleDTO: salesData.getSales()){
+                if (saleEntity.getSalesId() == saleDTO.getId()){
+                    matched = saleDTO;
+                    break;
+                }
+            }
+            
+            // update
+            if (matched != null){
+                salesData.getSales().remove(matched);
+                saleEntity.setCondition(matched.getBookCondition());
+                saleEntity.setPrice(matched.getPrice());
+                saleEntity.setQuantity(matched.getQuantity());
+                em.persist(saleEntity);
+                
+            } else { // remove
+                seller.getSellingBooks().remove(saleEntity);
+                book.getSales().remove(saleEntity);
+                em.remove(saleEntity);
+            }
         }
 
         return new BookDTO(book, book.getSales());
     }
     
     @Override
-    public List<BookSaleDTO> getSales(List<BookSaleDTO> request) {
-        TypedQuery<BookSales> typedQuery = em.createNamedQuery("BookSales.findSales", BookSales.class);
-        typedQuery.setParameter("bookIds", request.stream().map(BookSaleDTO::getBookId).collect(Collectors.toList()));
-        typedQuery.setParameter("sellerIds", request.stream().map(BookSaleDTO::getSellerName).collect(Collectors.toList()));
+    public List<BookSaleDTO> getSales(List<Long> saleIds) {
+        TypedQuery<BookSales> typedQuery = em.createNamedQuery("BookSales.findSalesByIds", BookSales.class);
+        typedQuery.setParameter("saleIds", saleIds);
         List<BookSales> bookSalesEntity = typedQuery.getResultList();
+        
         List<BookSaleDTO> bookSalesDTO = new ArrayList<>();
-        bookSalesEntity.stream().forEach((_item) -> {
-            bookSalesDTO.add(new BookSaleDTO(_item));
+        bookSalesEntity.stream().forEach(saleEntity -> {
+            saleIds.remove(saleEntity.getSalesId());
+            bookSalesDTO.add(new BookSaleDTO(saleEntity));
         });
+        
         return bookSalesDTO;
     }
 }

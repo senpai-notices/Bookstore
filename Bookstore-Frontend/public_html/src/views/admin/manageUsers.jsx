@@ -97,6 +97,7 @@ class ManageUsersView extends BaseView {
 				saveAs(resp, username +"_id." + fileType);
 			})
 			.catch((err) =>{
+				// TODO; display error
 				console.log(err)
 			})
 	}
@@ -107,7 +108,8 @@ class ManageUsersView extends BaseView {
 				let fileType = resp.type.split("/")[1];
 				saveAs(resp, username +"_residential." + fileType);
 			})
-			.catch((err) =>{
+			.catch((err) => {
+				// TODO: display error
 				console.log(err)
 			})
 	}

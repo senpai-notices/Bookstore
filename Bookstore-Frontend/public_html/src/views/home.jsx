@@ -34,7 +34,6 @@ class HomeView extends BaseView {
 		this.setState({loadingBookDetail: true})
 		this.bookService.getBookDetail(book.isbn10, book.isbn13, book.title)
 			.then((bookDetail) => {
-				console.log(bookDetail)
 				this.state.selectedBook = bookDetail
 				this.setState(this.state)
 			})
@@ -43,16 +42,20 @@ class HomeView extends BaseView {
 			})
 	}
 
-	addToCart(itemId, sellerId){
-		this.props.dispatch.addItem(itemId, sellerId)
+	addToCart(sale){
+		this.props.dispatch.addItem(sale)
 	}
 
-	isItemInCart(itemId, sellerId){
-		let filteredItems = this.props.shoppingCart.items.filter( (item) => {
-			return (item.itemId === itemId && item.sellerId === sellerId)
+	isItemInCart(saleId){
+		let retValue = false
+		this.props.shoppingCart.items.forEach((item) =>{
+			if (item.id === saleId){
+				retValue = true
+				return
+			}
 		})
 
-		return filteredItems.length > 0
+		return retValue
 	}
 
 	render(){
@@ -61,7 +64,7 @@ class HomeView extends BaseView {
 		let bookDetailView = ""
 		if (this.state.selectedBook || this.state.loadingBookDetail){
 			const selectedBook = this.state.selectedBook
-			let bookDetailModalHeader = (<h2>Book information</h2>)
+			let bookDetailModalHeader = "Book information"
 			let bookDetailModalBody = ""
 
 			if (selectedBook){
@@ -69,10 +72,11 @@ class HomeView extends BaseView {
 				if (selectedBook.sales.length > 0){
 
 					selectedBook.sales.forEach((sale) => {
+						let isItemInCart = this.isItemInCart(sale.id)
 						sale.actions = (
-							<bs.Button bsStyle="primary" disabled={this.isItemInCart(sale.bookId, sale.sellerName)}
-								onClick={() => this.addToCart(sale.bookId, sale.sellerName)}>
-								{(this.isItemInCart(sale.bookId, sale.sellerName) && "Added to cart") || "Add to cart"}
+							<bs.Button bsStyle="primary" disabled={isItemInCart}
+								onClick={() => this.addToCart(sale)}>
+								{(isItemInCart && "Added to cart") || "Add to cart"}
 							</bs.Button>
 						)
 					})
@@ -82,7 +86,7 @@ class HomeView extends BaseView {
 							<h2>Sales information</h2>
 							<StaticTable dataList={selectedBook.sales}
 								headers={['Seller', 'Quantity', 'Price (AUD)', 'Book Condition', 'Actions']}
-								columns={['sellerName', 'quantity', 'price', 'bookCondition', 'actions']}
+								columns={['sellerId', 'quantity', 'price', 'bookCondition', 'actions']}
 								tdStyle={{verticalAlign: "middle"}} />
 						</div>
 					)
