@@ -1,5 +1,6 @@
 package au.edu.uts.aip.domain.ejb;
 
+import au.edu.uts.aip.domain.entity.Area;
 import au.edu.uts.aip.domain.entity.Book;
 import au.edu.uts.aip.domain.entity.BookSales;
 import au.edu.uts.aip.domain.entity.Role;
@@ -20,6 +21,9 @@ import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.ParameterExpression;
 
 @Singleton
 @Startup
@@ -101,9 +105,9 @@ public class DatabaseInitBean {
         System.out.println("Creating sample user account...Done");
 
         System.out.println("Importing sample books data");
-        String filePath = this.getClass().getResource("/books.csv").getFile();
-        
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+        String booksCsvfilePath = this.getClass().getResource("/books.csv").getFile();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(booksCsvfilePath))) {
             String line;
             while ((line = br.readLine()) != null) {
 
@@ -129,7 +133,7 @@ public class DatabaseInitBean {
                     BookSales adminSales = new BookSales();
                     adminSales.setBook(book);
                     adminSales.setSeller(adminUser);
-                    double brandNewPrice = (int)(Math.random() * 200);
+                    double brandNewPrice = (int) (Math.random() * 200);
                     adminSales.setPrice(brandNewPrice);
                     adminSales.setCondition("Brand new");
                     adminSales.setQuantity(r.nextInt(20) + 1);
@@ -155,7 +159,7 @@ public class DatabaseInitBean {
                     em.persist(adminUser);
                     em.persist(seller);
 
-                } catch (Exception ex) {
+                } catch (NumberFormatException ex) {
                     Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
@@ -164,7 +168,39 @@ public class DatabaseInitBean {
             Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        System.out.println("Init database...Done");
+//        CriteriaBuilder qb = em.getCriteriaBuilder();
+//        CriteriaQuery<Long> cq = qb.createQuery(Long.class);
+//        cq.select(qb.count(cq.from(Area.class)));
+//        Long count = em.createQuery(cq).getSingleResult();
+//        if (count != 15418) {
+
+            System.out.println("Importing area data");
+            String areaCsvFilePath = this.getClass().getResource("/area.csv").getFile();
+
+            try (BufferedReader br = new BufferedReader(new FileReader(areaCsvFilePath))) {
+                String line;
+                while ((line = br.readLine()) != null) {
+
+                    try {
+                        String[] data = line.split(",");
+
+                        Area area = new Area();
+                        area.setSuburb(data[0]);
+                        area.setStateName(data[1]);
+                        area.setPostcode(Integer.parseInt(data[2]));
+
+                        em.persist(area);
+
+                    } catch (NumberFormatException ex) {
+                        Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
+            }
+//        }
+            System.out.println("Init database...Done");
     }
 
     @PreDestroy
@@ -175,9 +211,23 @@ public class DatabaseInitBean {
         q.executeUpdate();
         q = em.createNativeQuery("drop view jdbcrealm_user");
         q.executeUpdate();
+
+//        CriteriaBuilder qb = em.getCriteriaBuilder();
+//        CriteriaQuery<Long> cq = qb.createQuery(Long.class);
+//        cq.select(qb.count(cq.from(Area.class)));
+//        Long count = em.createQuery(cq).getSingleResult();
+//        if (count != 15418) {
+            q = em.createNativeQuery("delete from area");
+            q.executeUpdate();
+//        }
+        
         q = em.createNativeQuery("delete from Book_sales");
         q.executeUpdate();
         q = em.createNativeQuery("delete from Book");
+        q.executeUpdate();
+        q = em.createNativeQuery("delete from address");
+        q.executeUpdate();
+        q = em.createNativeQuery("delete from bank_account");
         q.executeUpdate();
         q = em.createNativeQuery("delete from Bookstore_User");
         q.executeUpdate();
