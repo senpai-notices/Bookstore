@@ -8,15 +8,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class UserDTO implements Serializable {
 
-    @XmlElement
     private String username;
-    @XmlElement
     private String fullname;
-    @XmlElement
     private String email;
-    @XmlElement
     private String role;
-    
+
     public UserDTO() {
 
     }
@@ -28,6 +24,7 @@ public class UserDTO implements Serializable {
         this.role = userEntity.getRole().getRoleName();
     }
 
+    @XmlElement
     public String getUsername() {
         return username;
     }
@@ -36,6 +33,7 @@ public class UserDTO implements Serializable {
         this.username = username;
     }
 
+    @XmlElement
     public String getFullname() {
         return fullname;
     }
@@ -44,6 +42,7 @@ public class UserDTO implements Serializable {
         this.fullname = fullname;
     }
 
+    @XmlElement
     public String getEmail() {
         return email;
     }
@@ -52,6 +51,7 @@ public class UserDTO implements Serializable {
         this.email = email;
     }
 
+    @XmlElement
     public String getRole() {
         return role;
     }
