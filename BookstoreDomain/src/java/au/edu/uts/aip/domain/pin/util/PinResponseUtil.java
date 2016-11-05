@@ -1,26 +1,12 @@
 package au.edu.uts.aip.domain.pin.util;
 
 import au.edu.uts.aip.domain.validation.ValidationResult;
-import java.io.StringReader;
-import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
-import javax.json.JsonReader;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status.Family;
 
 public class PinResponseUtil {
-
-    @Deprecated // TODO: Use domain.utility.ApiResponseUtil.toJson() instead.
-    public static JsonObject toJson(String jsonString) {
-        JsonObject jsonObject;
-
-        try (JsonReader reader = Json.createReader(new StringReader(jsonString))) {
-            jsonObject = reader.readObject();
-        }
-
-        return jsonObject;
-    }
 
     public static ValidationResult validate(int statusCode, JsonObject response) {
         ValidationResult validationResult = new ValidationResult();
