@@ -43,7 +43,7 @@ public class PaymentResource {
             case 422:
                 return Response.status(422).entity(responseDto.getBody()).build();
             default:
-                return Response.status(400).build();
+                return Response.status(500).build();
         }
     }
 

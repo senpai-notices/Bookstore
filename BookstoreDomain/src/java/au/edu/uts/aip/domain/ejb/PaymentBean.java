@@ -45,7 +45,7 @@ public class PaymentBean implements PaymentRemote {
         ValidationResult validationResult = PinResponseUtil.validate(statusCode, responseJson);
 
         if (validationResult == null) {
-            return new ResponseDTO(responseJson, 201);
+            return new ResponseDTO(responseJson, Response.Status.CREATED.getStatusCode());
         } else {
             return new ResponseDTO(validationResult.toJson(), 422);
         }
