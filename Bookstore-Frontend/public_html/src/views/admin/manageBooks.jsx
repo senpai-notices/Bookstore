@@ -18,7 +18,6 @@ class ManageBooksView extends BaseView {
 	}
 
 	saveSale(){
-		// TODO: client side validation
 
 		let valid = true
 		let priceList = []
@@ -60,6 +59,7 @@ class ManageBooksView extends BaseView {
 
 	addSale(){
 		let newSale = {
+			id: 0,
 			bookCondition: "<<condition>>",
 			price: "<<price>>",
 			quantity: "<<quantity>>",
@@ -95,10 +95,11 @@ class ManageBooksView extends BaseView {
 
 				let saleIndex = 0
 				bookDetail.sales.forEach((sale) => {
-					if (sale.sellerName === this.props.user.username){
+					if (sale.sellerId === this.props.user.username){
 						sale.index = saleIndex
 						saleIndex++
 						this.state.userSalesInfo.push({
+							id: sale.id,
 							bookCondition: sale.bookCondition,
 							price: sale.price,
 							quantity: sale.quantity,

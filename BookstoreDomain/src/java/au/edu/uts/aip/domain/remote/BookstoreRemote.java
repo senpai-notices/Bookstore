@@ -14,5 +14,5 @@ public interface BookstoreRemote {
 
     BookDTO updateSale(String username, BookDTO salesData);
     
-    List<BookSaleDTO> getSales(List<BookSaleDTO> request);
+    List<BookSaleDTO> getSales(List<Long> saleIds);
 }

@@ -27,7 +27,8 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "Book_sales")
 @NamedQueries({
-    @NamedQuery(name = "BookSales.findSales", query = "SELECT bs FROM BookSales bs where bs.book.id IN :bookIds AND bs.seller.username IN :sellerIds")
+    @NamedQuery(name = "BookSales.findSales", query = "SELECT bs FROM BookSales bs where bs.book.id=:bookId AND bs.seller.username=:sellerId"),
+    @NamedQuery(name = "BookSales.findSalesByIds", query = "SELECT bs FROM BookSales bs where bs.salesId IN :saleIds")
 })
 public class BookSales implements Serializable {
     

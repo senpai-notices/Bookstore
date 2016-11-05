@@ -111,7 +111,6 @@ class AdminService {
 		    xhr.responseType = "blob"
 		    xhr.onload = function (e) {
 		    	if (this.status >= 200 && this.status < 300) {
-		    		console.log(e)
 		    		resolve(xhr.response)
 		    	} else {
 		    		reject({
