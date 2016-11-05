@@ -1,5 +1,8 @@
 package au.edu.uts.aip.domain.entity;
 
+/**
+* the necessary library
+*/
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -12,15 +15,34 @@ import javax.persistence.TemporalType;
 
 /**
  * Note: 'Order' is a SQL-reserved keyword.
+ * A Data model class to access data in the BookOrder table. BookOrder describes the order item list
+ * It has properties Id, orderLines, postageCost and orderTimestamp
+ * All the attributes of this model class are private attributes and all of them have relative get and set functions in
+ * order to access the attributes
+ *
  */
 @Entity
 public class BookOrder implements Serializable {
-
+    /**
+     * id is the book order record id
+     */
     private Long id;
+    /**
+     * orderLines is the list of the orders
+     */
     private List<BookOrderLine> orderLines;
+    /**
+     * the cost of the postage delivery
+     */
     private double postageCost;
+    /**
+     * the order time
+     */
     private Date orderTimestamp;
 
+    /**
+     * {@link BookOrder#id}
+     */
     @Id
     @GeneratedValue
     public Long getId() {
@@ -31,6 +53,10 @@ public class BookOrder implements Serializable {
         this.id = id;
     }
 
+    
+    /**
+     * {@link BookOrder#orderLines}
+     */
     @OneToMany
     public List<BookOrderLine> getOrderLines() {
         return orderLines;
@@ -40,6 +66,9 @@ public class BookOrder implements Serializable {
         this.orderLines = orderLines;
     }
 
+    /**
+     * {@link BookOrder#postageCost}
+     */
     public double getPostageCost() {
         return postageCost;
     }
@@ -48,6 +77,9 @@ public class BookOrder implements Serializable {
         this.postageCost = postageCost;
     }
 
+    /**
+     * {@link BookOrder#orderTimestamp}
+     */
     @Temporal(TemporalType.TIMESTAMP)
     public Date getOrderTimestamp() {
         return orderTimestamp;
