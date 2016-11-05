@@ -38,7 +38,7 @@ public class PostageResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("calculate_reg_test")
     public Response calculateRegularTest() {
-        postageBean.calculatePostageCost(32, 1000, 9999, "AUS_PARCEL_REGULAR");
+        postageBean.calculatePostageCost(32, 800, 9999, "AUS_PARCEL_REGULAR");
         return Response.ok().build();
     }
 
@@ -47,7 +47,7 @@ public class PostageResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("calculate_exp_test")
     public Response calculateExpressTest() {
-        postageBean.calculatePostageCost(32, 1000, 9999, "AUS_PARCEL_EXPRESS");
+        postageBean.calculatePostageCost(32, 800, 9999, "AUS_PARCEL_EXPRESS");
         return Response.ok().build();
     }
 
