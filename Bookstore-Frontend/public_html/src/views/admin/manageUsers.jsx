@@ -299,6 +299,8 @@ class ManageUsersView extends BaseView {
 							View Residential Evidence
 						</bs.Button>
 						&nbsp;
+						<br/>
+						<br/>
 					</span>
 				)
 
@@ -318,6 +320,7 @@ class ManageUsersView extends BaseView {
 							onClick={() => this.setState({showRejectReasonForm: true, rejectUser: user.username, reject_reason: ""})}>
 							Reject
 						</bs.Button>
+						&nbsp;
 					</span>
 				)
 			}
@@ -365,10 +368,10 @@ class ManageUsersView extends BaseView {
 						<tr>
 							<th className={"col-md-1"}>Username</th>
 							<th className={"col-md-1"}>Fullname</th>
-							<th className={"col-md-1"}>Address</th>
+							<th className={"col-md-3"}>Address</th>
 							<th className={"col-md-1"}>Email</th>
 							<th className={"col-md-1"}>Role</th>
-							<th className={"col-md-8"}>Actions</th>
+							<th className={"col-md-5"}>Actions</th>
 						</tr>
 					</thead>
 					<tbody>		
