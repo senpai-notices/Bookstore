@@ -2,9 +2,7 @@ package au.edu.uts.aip.domain.remote;
 
 import au.edu.uts.aip.domain.dto.DocumentsDTO;
 import au.edu.uts.aip.domain.dto.UserDTO;
-import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.ActivationException;
-import au.edu.uts.aip.domain.exception.InvalidTokenException;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import java.util.List;
 import javax.ejb.Remote;
@@ -20,7 +18,7 @@ public interface UserRemote {
 
     String generateActivationToken(String username);
 
-    void activateAccount(String token, String username) throws ActivationException, InvalidTokenException;
+    void activateAccount(String token, String username) throws ActivationException;
 
     List<UserDTO> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit);
 

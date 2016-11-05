@@ -14,14 +14,14 @@ class AccountActivationView extends BaseView{
 		this.userService.activateAccount(this.props.location.query.token, this.props.location.query.username)
 			.then((resp) => {
 				this.state.activateStatus = "success";
-				this.state.username = resp.username
 				this.setState(this.state)
+				this.props.dispatch.setUser("username", this.props.location.query.username)
 			})
 			.fail((err) => {
-				if (err.status == 400) {
-					this.state.activateStatus = err.response
-				} else {
+				if (err.status === 500) {
 					this.state.activateStatus = "Server Error"
+				} else {
+					this.state.activateStatus = err.response
 				}
 				this.setState(this.state)
 			})

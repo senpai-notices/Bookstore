@@ -7,12 +7,14 @@ import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.entity.Role.RoleType;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.ActivationException;
-import au.edu.uts.aip.domain.exception.InvalidTokenException;
 import au.edu.uts.aip.domain.util.SHA;
 import au.edu.uts.aip.domain.validation.ValidationResult;
+import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.SignatureException;
+import io.jsonwebtoken.UnsupportedJwtException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -120,28 +122,41 @@ public class UserBean implements UserRemote {
         String activateToken = Jwts.builder().setSubject(user.getUsername())
                 .signWith(SignatureAlgorithm.HS512, user.getPassword())
                 .setIssuedAt(now).setExpiration(expirationDate).compact();
+        user.setActivationToken(activateToken);
         return activateToken;
     }
 
     @Override
-    public void activateAccount(String token, String username) throws ActivationException, InvalidTokenException {
-        try {
-            User user = getUserEntity(username);
+    public void activateAccount(String token, String username) throws ActivationException {
+        User user = getUserEntity(username);
 
-            if (!user.getRole().getRoleName().equals("INACTIVATED")) {
-                throw new ActivationException();
-            }
+        if (user == null){
+            throw new ActivationException("Account does not exists");
+        }
+        
+        if (user.getRole().getRoleName().equals(RoleType.BANNED.toString())) {
+            throw new ActivationException("Account has been banned");
+        }
+        
+        if (!user.getRole().getRoleName().equals(RoleType.INACTIVATED.toString())){
+            throw new ActivationException("Account has already activated");
+        }
 
+        if (!token.equals(user.getActivationToken())){
+            throw new ActivationException("Invalid token");
+        }
+
+        try{
             Jwts.parser().setSigningKey(user.getPassword())
                     .requireSubject(user.getUsername()).parseClaimsJws(token);
-
-            Role userRole = getRole(RoleType.USER.toString());
-            user.setRole(userRole);
-            em.persist(user);
-
-        } catch (SignatureException ex) {
-            throw new InvalidTokenException();
+        } catch (UnsupportedJwtException | MalformedJwtException | SignatureException | IllegalArgumentException ex){
+            throw new ActivationException("Invalid token");
+        } catch (ExpiredJwtException ex){
+            throw new ActivationException("Token expired");
         }
+
+        Role userRole = getRole(RoleType.USER.toString());
+        user.setRole(userRole);
     }
 
     @Override

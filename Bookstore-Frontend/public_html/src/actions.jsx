@@ -1,7 +1,8 @@
 // user actions
-export const setUser = (event) => ({
+export const setUser = (key, value) => ({
 	type: "SET_USER",
-	event
+	key,
+	value
 })
 
 export const logout = () => ({

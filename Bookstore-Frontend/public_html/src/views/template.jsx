@@ -96,11 +96,11 @@ class Template extends BaseView{
 				<Form onSubmit={this.login}>
 				<FormGroup>
 					<FormControl type="text" name="username" placeholder="Username" 
-								value={user.username} onChange={this.props.dispatch.setUser}
+								value={user.username} onChange={(e) => this.props.dispatch.setUser("username", e.target.value)}
 								disabled={user.status === "loggingIn"}/>
 					&nbsp;
 					<FormControl type="password" name="password" placeholder="Password" 
-								value={user.password} onChange={this.props.dispatch.setUser}
+								value={user.password} onChange={(e) => this.props.dispatch.setUser("password", e.target.value)}
 								disabled={user.status === "loggingIn"}/>
 					&nbsp;
 					<Button type="submit" bsStyle="success" disabled={user.status === "loggingIn"}>

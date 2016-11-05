@@ -8,7 +8,7 @@ export const UserReducer = (state, action) => {
 			if (newState.status !== "loggedOut"){
 				return newState
 			}
-			newState[action.event.target.name] = action.event.target.value
+			newState[action.key] = action.value
 			return newState
 		case "LOGOUT":
 			newState.password = ""

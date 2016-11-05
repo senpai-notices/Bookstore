@@ -2,7 +2,6 @@ package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.ActivationException;
-import au.edu.uts.aip.domain.exception.InvalidTokenException;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import au.edu.uts.aip.domain.dto.UserDTO;
@@ -95,11 +94,8 @@ public class UserResource {
         try {
             userBean.activateAccount(token, username);
             return Response.status(Response.Status.OK).build();
-        } catch (InvalidTokenException ex) {
-            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid token").build();
         } catch (ActivationException ex) {
-            return Response.status(Response.Status.BAD_REQUEST).entity("Cannot activate account")
-                    .build();
+            return Response.status(Response.Status.BAD_REQUEST).entity(ex.getMessage()).build();
         }
     }
 

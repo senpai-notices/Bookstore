@@ -73,6 +73,8 @@ public class User implements Serializable {
     private Address address;
     private BankAccount bankAccount;
     private String recipientToken;
+    private String activationToken;
+    private String resetPasswordToken;
 
     @Id
     @GeneratedValue
@@ -209,4 +211,21 @@ public class User implements Serializable {
         this.recipientToken = recipientToken;
     }
 
+    public String getActivationToken() {
+        return activationToken;
+    }
+
+    public void setActivationToken(String activationToken) {
+        this.activationToken = activationToken;
+    }
+
+    public String getResetPasswordToken() {
+        return resetPasswordToken;
+    }
+
+    public void setResetPasswordToken(String resetPasswordToken) {
+        this.resetPasswordToken = resetPasswordToken;
+    }
+
+    
 }
