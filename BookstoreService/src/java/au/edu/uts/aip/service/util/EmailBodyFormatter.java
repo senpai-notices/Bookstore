@@ -6,8 +6,8 @@ public class EmailBodyFormatter {
     private static final String SIGNATURE_PREFIX = "Regards";
     private static final String SENDER_NAME = "The Bookstore Team";
     private static final String BODY_ACCOUNT_ACTIVATION
-            = "Welcome to Bookstore!\n\nTo get started, please activate your account by clicking the "
-            + "link below:\n%1$s";
+            = "Welcome to Bookstore!\n\nTo get started, please activate your account by clicking "
+            + "the link below:\n%1$s";
     private static final String BODY_VERIFICATION_REJECT
             = "Thank you for submitting your documents for identity verification. "
             + "However, we are unable to approve your submission due to the following reason:\n\n"
