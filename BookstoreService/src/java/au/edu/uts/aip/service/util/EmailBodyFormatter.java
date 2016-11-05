@@ -1,4 +1,4 @@
-package au.edu.uts.aip.service.utility;
+package au.edu.uts.aip.service.util;
 
 public class EmailBodyFormatter {
 

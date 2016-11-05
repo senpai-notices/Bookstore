@@ -5,7 +5,7 @@ import au.edu.uts.aip.domain.entity.BookSales;
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.Role.RoleType;
 import au.edu.uts.aip.domain.entity.User;
-import au.edu.uts.aip.domain.utility.SHA;
+import au.edu.uts.aip.domain.util.SHA;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

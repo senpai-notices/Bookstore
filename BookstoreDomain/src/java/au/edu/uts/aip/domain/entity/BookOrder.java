@@ -18,8 +18,8 @@ public class BookOrder implements Serializable {
 
     private Long id;
     private List<BookOrderLine> orderLines;
-    private double shippingCost;
-    private Date timestamp;
+    private double postageCost;
+    private Date orderTimestamp;
 
     @Id
     @GeneratedValue
@@ -40,20 +40,20 @@ public class BookOrder implements Serializable {
         this.orderLines = orderLines;
     }
 
-    public double getShippingCost() {
-        return shippingCost;
+    public double getPostageCost() {
+        return postageCost;
     }
 
-    public void setShippingCost(double shippingCost) {
-        this.shippingCost = shippingCost;
+    public void setPostageCost(double postageCost) {
+        this.postageCost = postageCost;
     }
 
     @Temporal(TemporalType.TIMESTAMP)
-    public Date getTimestamp() {
-        return timestamp;
+    public Date getOrderTimestamp() {
+        return orderTimestamp;
     }
 
-    public void setTimestamp(Date timestamp) {
-        this.timestamp = timestamp;
+    public void setOrderTimestamp(Date orderTimestamp) {
+        this.orderTimestamp = orderTimestamp;
     }
 }

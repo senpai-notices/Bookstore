@@ -8,7 +8,7 @@ import au.edu.uts.aip.domain.pin.dto.PinRecipientPut;
 import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
 import au.edu.uts.aip.domain.pin.filter.PinAuthFilter;
 import au.edu.uts.aip.domain.pin.filter.PinResponseLoggingFilter;
-import au.edu.uts.aip.domain.pin.utility.PinResponseUtility;
+import au.edu.uts.aip.domain.pin.util.PinResponseUtil;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import javax.ejb.Stateless;
 import javax.json.JsonObject;
@@ -37,10 +37,10 @@ public class PaymentBean implements PaymentRemote {
                 .post(Entity.entity(pinCustomerPost, MediaType.APPLICATION_JSON_TYPE));
 
         int statusCode = response.getStatus();
-        JsonObject responseJson = PinResponseUtility.toJson(response.readEntity(String.class));
+        JsonObject responseJson = PinResponseUtil.toJson(response.readEntity(String.class));
         client.close();
 
-        return PinResponseUtility.validate(statusCode, responseJson);
+        return PinResponseUtil.validate(statusCode, responseJson);
     }
 
     @Override
@@ -55,10 +55,10 @@ public class PaymentBean implements PaymentRemote {
                 .post(Entity.entity(pinChargePost, MediaType.APPLICATION_JSON_TYPE));
 
         int statusCode = response.getStatus();
-        JsonObject responseJson = PinResponseUtility.toJson(response.readEntity(String.class));
+        JsonObject responseJson = PinResponseUtil.toJson(response.readEntity(String.class));
         client.close();
 
-        return PinResponseUtility.validate(statusCode, responseJson);
+        return PinResponseUtil.validate(statusCode, responseJson);
     }
 
     @Override
@@ -72,10 +72,10 @@ public class PaymentBean implements PaymentRemote {
                 .post(Entity.entity(pinRecipientPost, MediaType.APPLICATION_JSON_TYPE));
 
         int statusCode = response.getStatus();
-        JsonObject responseJson = PinResponseUtility.toJson(response.readEntity(String.class));
+        JsonObject responseJson = PinResponseUtil.toJson(response.readEntity(String.class));
         client.close();
 
-        return PinResponseUtility.validate(statusCode, responseJson);
+        return PinResponseUtil.validate(statusCode, responseJson);
     }
 
     @Override
@@ -89,10 +89,10 @@ public class PaymentBean implements PaymentRemote {
                 .post(Entity.entity(pinTransferPost, MediaType.APPLICATION_JSON_TYPE));
 
         int statusCode = response.getStatus();
-        JsonObject responseJson = PinResponseUtility.toJson(response.readEntity(String.class));
+        JsonObject responseJson = PinResponseUtil.toJson(response.readEntity(String.class));
         client.close();
 
-        return PinResponseUtility.validate(statusCode, responseJson);
+        return PinResponseUtil.validate(statusCode, responseJson);
     }
 
     @Override
@@ -107,7 +107,7 @@ public class PaymentBean implements PaymentRemote {
                 .request()
                 .get();
 
-        JsonObject responseJson = PinResponseUtility.toJson(response.readEntity(String.class));
+        JsonObject responseJson = PinResponseUtil.toJson(response.readEntity(String.class));
         client.close();
 
         return responseJson;
@@ -126,9 +126,9 @@ public class PaymentBean implements PaymentRemote {
                 .put(Entity.entity(pinRecipientPut, MediaType.APPLICATION_JSON_TYPE));
 
         int statusCode = response.getStatus();
-        JsonObject responseJson = PinResponseUtility.toJson(response.readEntity(String.class));
+        JsonObject responseJson = PinResponseUtil.toJson(response.readEntity(String.class));
         client.close();
 
-        return PinResponseUtility.validate(statusCode, responseJson);
+        return PinResponseUtil.validate(statusCode, responseJson);
     }
 }

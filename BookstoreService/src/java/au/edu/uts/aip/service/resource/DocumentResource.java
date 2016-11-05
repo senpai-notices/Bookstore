@@ -5,7 +5,7 @@ import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.remote.AdminRemote;
-import au.edu.uts.aip.domain.utility.FileUtility;
+import au.edu.uts.aip.domain.util.FileUtil;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import java.io.File;
 import java.io.IOException;
@@ -72,7 +72,7 @@ public class DocumentResource {
         String filePath = uploadDirectory + File.separator + documentType + "." + extension;
         try {
             InputStream decodedStream = Base64.getMimeDecoder().wrap(request.getInputStream());
-            FileUtility.copy(decodedStream, filePath);
+            FileUtil.copy(decodedStream, filePath);
             synchronized (syncRoot) {
                 userBean.updateVerificationDocuments(username, documentType, filePath);
             }
@@ -102,7 +102,7 @@ public class DocumentResource {
                 return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        String fileExtension = FileUtility.getExtension(returnFile.getPath());
+        String fileExtension = FileUtil.getExtension(returnFile.getPath());
         String type = null;
         if (fileExtension.endsWith("jpeg")) {
             type = "image/jpeg";
