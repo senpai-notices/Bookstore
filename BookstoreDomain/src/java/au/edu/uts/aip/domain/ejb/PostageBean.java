@@ -105,6 +105,20 @@ public class PostageBean {
         return (quantity * BOOK_WEIGHT) + PARCEL_WEIGHT_BUFFER;
     }
 
+    /**
+     * Get the state that the postcode belongs to. Returns a ResponseDTO (JSON body and HTTP status
+     * code). The body contains the name of the state.
+     *
+     * Example 1: input 3000 -> returns ResponseDTO containing the strings "VIC" and "Victoria" and
+     * also status code 200
+     *
+     * Example 2: input 0 -> returns ResponseDTO containing an error message and status code 404
+     *
+     * @param postcode The postcode that is queried
+     * @return If postcode is found, a ResponseDTO containing the name of the state that the
+     * postcode is in will be returned with status code 200. Otherwise, return a ResponseDTO
+     * containing an error message with status 404.
+     */
     public ResponseDTO getStateLocality(int postcode) {
         if ((postcode >= 1000 && postcode <= 2599)
                 || (postcode >= 2620 && postcode <= 2899)
