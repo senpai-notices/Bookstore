@@ -2,8 +2,10 @@ package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.auspost.dto.AuspostPostageGet;
 import au.edu.uts.aip.domain.auspost.filter.AuspostAuthFilter;
+import au.edu.uts.aip.domain.dto.ResponseDTO;
 import au.edu.uts.aip.domain.util.ApiResponseUtil;
 import javax.ejb.Stateless;
+import javax.json.Json;
 import javax.json.JsonObject;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -23,6 +25,15 @@ public class PostageBean {
     private static final int PARCEL_WIDTH = BOOK_WIDTH + PARCEL_PACKAGING_BUFFER;
     private static final double BOOK_WEIGHT = 0.5;
     private static final double PARCEL_WEIGHT_BUFFER = 0.4;
+    private static final JsonObject JSON_STATE_NSW = Json.createObjectBuilder().add("name", "NSW").add("name_long", "New South Wales").build();
+    private static final JsonObject JSON_STATE_VIC = Json.createObjectBuilder().add("name", "VIC").add("name_long", "Victoria").build();
+    private static final JsonObject JSON_STATE_QLD = Json.createObjectBuilder().add("name", "QLD").add("name_long", "Queensland").build();
+    private static final JsonObject JSON_STATE_ACT = Json.createObjectBuilder().add("name", "ACT").add("name_long", "Australian Capital Territory").build();
+    private static final JsonObject JSON_STATE_TAS = Json.createObjectBuilder().add("name", "TAS").add("name_long", "Tasmania").build();
+    private static final JsonObject JSON_STATE_NT = Json.createObjectBuilder().add("name", "NT").add("name_long", "Northern Territory").build();
+    private static final JsonObject JSON_STATE_SA = Json.createObjectBuilder().add("name", "SA").add("name_long", "South Australia").build();
+    private static final JsonObject JSON_STATE_WA = Json.createObjectBuilder().add("name", "WA").add("name_long", "Western Australia").build();
+    private static final JsonObject JSON_STATE_NOT_FOUND = Json.createObjectBuilder().add("error", "Postcode not found").build();
 
     @Deprecated
     public JsonObject calculatePostageCostJson(AuspostPostageGet auspostPostageGet) {
@@ -94,39 +105,32 @@ public class PostageBean {
         return (quantity * BOOK_WEIGHT) + PARCEL_WEIGHT_BUFFER;
     }
 
-    public String getState(int postcode) {
-        if (postcode >= 1000 && postcode <= 2599) {
-            return "NSW";
-        } else if (postcode >= 2620 && postcode <= 2899) {
-            return "NSW";
-        } else if (postcode >= 2921 && postcode <= 2999) {
-            return "NSW";
-        } else if (postcode >= 200 && postcode <= 299) {
-            return "ACT";
-        } else if (postcode >= 2600 && postcode <= 2619) {
-            return "ACT";
-        } else if (postcode >= 2900 && postcode <= 2920) {
-            return "ACT";
-        } else if (postcode >= 3000 && postcode <= 3999) {
-            return "VIC";
-        } else if (postcode >= 8000 && postcode <= 8999) {
-            return "VIC";
-        } else if (postcode >= 4000 && postcode <= 4999) {
-            return "QLD";
-        } else if (postcode >= 9000 && postcode <= 9999) {
-            return "QLD";
+    public ResponseDTO getStateLocality(int postcode) {
+        if ((postcode >= 1000 && postcode <= 2599)
+                || (postcode >= 2620 && postcode <= 2899)
+                || (postcode >= 2921 && postcode <= 2999)) {
+            return new ResponseDTO(JSON_STATE_NSW, Response.Status.OK.getStatusCode());
+        } else if ((postcode >= 200 && postcode <= 299)
+                || (postcode >= 2600 && postcode <= 2619)
+                || (postcode >= 2900 && postcode <= 2920)) {
+            return new ResponseDTO(JSON_STATE_ACT, Response.Status.OK.getStatusCode());
+        } else if ((postcode >= 3000 && postcode <= 3999)
+                || (postcode >= 8000 && postcode <= 8999)) {
+            return new ResponseDTO(JSON_STATE_VIC, Response.Status.OK.getStatusCode());
+        } else if ((postcode >= 4000 && postcode <= 4999)
+                || (postcode >= 9000 && postcode <= 9999)) {
+            return new ResponseDTO(JSON_STATE_QLD, Response.Status.OK.getStatusCode());
         } else if (postcode >= 5000 && postcode <= 5999) {
-            return "SA";
-        } else if (postcode >= 6000 && postcode <= 6797) {
-            return "WA";
-        } else if (postcode >= 6800 && postcode <= 6999) {
-            return "WA";
+            return new ResponseDTO(JSON_STATE_SA, Response.Status.OK.getStatusCode());
+        } else if ((postcode >= 6000 && postcode <= 6797)
+                || (postcode >= 6800 && postcode <= 6999)) {
+            return new ResponseDTO(JSON_STATE_WA, Response.Status.OK.getStatusCode());
         } else if (postcode >= 7000 && postcode <= 7999) {
-            return "TAS";
+            return new ResponseDTO(JSON_STATE_TAS, Response.Status.OK.getStatusCode());
         } else if (postcode >= 800 && postcode <= 999) {
-            return "NT";
+            return new ResponseDTO(JSON_STATE_NT, Response.Status.OK.getStatusCode());
         } else {
-            return "";
+            return new ResponseDTO(JSON_STATE_NOT_FOUND, Response.Status.NOT_FOUND.getStatusCode());
         }
     }
 }

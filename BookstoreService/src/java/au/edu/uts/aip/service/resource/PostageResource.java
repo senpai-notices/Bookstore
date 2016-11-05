@@ -1,14 +1,17 @@
 package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.auspost.dto.AuspostPostageGet;
+import au.edu.uts.aip.domain.dto.ResponseDTO;
 import au.edu.uts.aip.domain.ejb.PostageBean;
 
 import javax.ejb.EJB;
+import javax.json.Json;
 import javax.json.JsonObject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -51,4 +54,29 @@ public class PostageResource {
         return Response.ok().build();
     }
 
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("state/{postcode}")
+    public Response fetchState(@PathParam("postcode") String postcodeString) {
+        int postcode;
+
+        try {
+            postcode = Integer.parseInt(postcodeString);
+        } catch (NumberFormatException ex) {
+            return Response.status(422).entity(Json.createObjectBuilder().add("error", "Invalid postcode. Postcode must be numeric.").build()).build();
+        }
+        if (postcodeString.length() != 4) {
+            return Response.status(422).entity(Json.createObjectBuilder().add("error", "Invalid postcode. Postcode must be four digits.").build()).build();
+        }
+        ResponseDTO responseDto = postageBean.getStateLocality(postcode);
+        switch (responseDto.getStatusCode()) {
+            case 200:
+                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+            case 404:
+                return Response.status(404).entity(responseDto.getBody()).build();
+            default:
+                return Response.status(500).build();
+        }
+    }
 }
