@@ -7,6 +7,14 @@ const defaultShoppingCartState = {
 export const ShoppingCartReducer = (state, action) => {
 	let newState = Object.assign({}, state)
 
+	if (state === undefined){
+		newState = localStorage.load('shoppingCart', defaultShoppingCartState)
+		// remove items with incorrect format
+		newState.items = newState.items.filter((item) => {
+			return (item.id && item.book instanceof Object && item.seller instanceof Object)
+		})
+	}
+
 	switch (action.type){
 		case 'ADD_ITEM':
 			newState.items = [...state.items, {'id': action.sale.id, 
@@ -27,7 +35,7 @@ export const ShoppingCartReducer = (state, action) => {
 		case 'UPDATE_QUANTITY':
 			newState.items.forEach((cartItem) => {
 				if (cartItem.id === action.id){
-					cartItem.quantity = Math.max(1, Math.min(action.quantity, cartItem.maxQuantity))
+					cartItem.quantity = Math.min(cartItem.maxQuantity, Math.max(action.quantity, 1))
 					cartItem.totalPrice = cartItem.quantity * cartItem.price
 				}
 			})
@@ -60,18 +68,6 @@ export const ShoppingCartReducer = (state, action) => {
 			break
 	}
 
-	if (state === undefined) {
-		let savedShoppingCart = localStorage.load('shoppingCart', defaultShoppingCartState)
-		// remove items with incorrect format
-		savedShoppingCart.items = savedShoppingCart.items.filter((item) => {
-			return (item.id && item.book instanceof Object && item.seller instanceof Object)
-		})
-		// update local storage
-		localStorage.save('shoppingCart', savedShoppingCart)
-		return savedShoppingCart
-
-	} else {
-		localStorage.save('shoppingCart', newState)
-		return newState
-	}
+	localStorage.save('shoppingCart', newState)
+	return newState
 }

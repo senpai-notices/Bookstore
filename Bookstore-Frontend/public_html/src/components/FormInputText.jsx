@@ -10,7 +10,7 @@ class FormInputText extends React.Component {
 
 	render() {
 		let requiredAsterisk = ""
-		if (this.props.required){
+		if (this.props.required && !this.props.hideAsterisk){
 			let asteriskStyle = {
 				color: "#FF0000",
 				marginLeft: ".25em"
@@ -80,8 +80,8 @@ class FormInputText extends React.Component {
 									disabled={this.props.disabled}
 									onChange={this.props.onChange}
 									onFocus={this.props.onFocus}
-									onBlur={this.props.onBlur}/>
-					<bs.FormControl.Feedback />
+									onBlur={this.props.onBlur}
+									required={this.props.required}/>
 					{addonAfter}
 				</bs.InputGroup>
 				{validationState && <bs.HelpBlock>{this.props.errorMessage}</bs.HelpBlock>}
