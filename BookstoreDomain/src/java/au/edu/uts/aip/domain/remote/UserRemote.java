@@ -1,5 +1,6 @@
 package au.edu.uts.aip.domain.remote;
 
+import au.edu.uts.aip.domain.dto.AddressDTO;
 import au.edu.uts.aip.domain.dto.DocumentsDTO;
 import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.exception.ActivationException;
@@ -29,4 +30,6 @@ public interface UserRemote {
     void updateVerificationDocuments(String username, String documentType, String filePath);
     
     DocumentsDTO getDocumentPath(String username);
+    
+    void updateAddress(AddressDTO addressDTO, String username);
 }

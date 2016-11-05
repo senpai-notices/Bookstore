@@ -1,5 +1,6 @@
 package au.edu.uts.aip.service.resource;
 
+import au.edu.uts.aip.domain.dto.AddressDTO;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.ActivationException;
 import au.edu.uts.aip.domain.remote.UserRemote;
@@ -24,6 +25,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.SecurityContext;
 
 @Path("user")
 @RequestScoped
@@ -37,6 +39,9 @@ public class UserResource {
     
     @Context
     private HttpServletRequest request;
+    
+    @Context
+    private SecurityContext securityContext;
 
     /**
      * Retrieve the current authenticated user Banned accounts or not logged in user will not be
@@ -83,6 +88,17 @@ public class UserResource {
         } catch (Exception ex) {
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
+    }
+    
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("address")
+    @RolesAllowed({"USER", "VERIFYING USER"})
+    public Response updateAddress(AddressDTO addressDTO){
+        String username = securityContext.getUserPrincipal().getName();
+        userBean.updateAddress(addressDTO, username);
+        return Response.ok().build();
     }
 
     /**

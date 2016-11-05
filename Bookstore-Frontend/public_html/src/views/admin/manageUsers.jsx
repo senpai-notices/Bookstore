@@ -121,9 +121,9 @@ class ManageUsersView extends BaseView {
 		this.adminService.rejectAccountVerification(this.state.rejectUser, this.state.reject_reason)
 			.then((resp) => {
 				this.adminService.sendRejectEmail(this.state.rejectUser, this.state.reject_reason)
-				this.getUserList()
 			})
 			.always(() => {
+				this.getUserList()
 				this.setState({ rejecting: false , showRejectReasonForm: false})
 			})
 	}
@@ -135,9 +135,9 @@ class ManageUsersView extends BaseView {
 		this.adminService.approveAccountVerification(this.state.approveUser)
 			.then((resp) => {
 				this.adminService.sendApproveEmail(this.state.approveUser)
-				this.getUserList()
 			})
 			.always(() =>{
+				this.getUserList()
 				this.setState({approving: false, showConfirmApproveDialog: false})
 			})
 	}
@@ -149,9 +149,9 @@ class ManageUsersView extends BaseView {
 		this.adminService.banAccount(this.state.banUser)
 			.then((resp) => {
 				this.adminService.sendBanEmail(this.state.banUser)
-				this.getUserList()
 			})
 			.always(() => {
+				this.getUserList()
 				this.setState({banning: false, showConfirmBanDialog: false})
 			})
 	}
@@ -163,9 +163,9 @@ class ManageUsersView extends BaseView {
 		this.adminService.unbanAccount(this.state.unbanUser)
 			.then((resp) => {
 				this.adminService.sendUnbanEmail(this.state.unbanUser)
-				this.getUserList()
 			})
 			.always(() => {
+				this.getUserList()
 				this.setState({unbanning: false, showConfirmUnbanDialog: false})
 			})
 	}
@@ -348,6 +348,7 @@ class ManageUsersView extends BaseView {
 				<tr key={key}>
 					<td style={tdStyle}>{user.username}</td>
 					<td style={tdStyle}>{user.fullname}</td>
+					<td style={tdStyle}>{user.address}</td>
 					<td style={tdStyle}>{user.email}</td>
 					<td style={tdStyle}>{user.role}</td>
 					<td style={tdStyle}>{actions}</td>
@@ -364,6 +365,7 @@ class ManageUsersView extends BaseView {
 						<tr>
 							<th className={"col-md-1"}>Username</th>
 							<th className={"col-md-1"}>Fullname</th>
+							<th className={"col-md-1"}>Address</th>
 							<th className={"col-md-1"}>Email</th>
 							<th className={"col-md-1"}>Role</th>
 							<th className={"col-md-8"}>Actions</th>

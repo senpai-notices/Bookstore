@@ -146,4 +146,11 @@ public class Address implements Serializable {
         this.addressCountry = addressCountry;
     }
 
+    @Override
+    public String toString() {
+        String address2 = this.addressLine2 == null ? "" : this.addressLine2;
+        return this.addressLine1 + ", " + address2 + ", "
+                + this.addressCity + ", " + this.addressState + ", "
+                + this.addressCountry + ", " + this.addressPostcode;
+    } 
 }
