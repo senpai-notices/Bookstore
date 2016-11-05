@@ -5,6 +5,8 @@ import au.edu.uts.aip.domain.exception.ActivationException;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import au.edu.uts.aip.domain.dto.UserDTO;
+import au.edu.uts.aip.domain.exception.PasswordResetException;
+import au.edu.uts.aip.domain.remote.AdminRemote;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.security.RolesAllowed;
@@ -30,6 +32,9 @@ public class UserResource {
     @EJB
     private UserRemote userBean;
 
+    @EJB
+    private AdminRemote adminBean;
+    
     @Context
     private HttpServletRequest request;
 
@@ -93,8 +98,28 @@ public class UserResource {
                                     @FormParam("username") String username) {
         try {
             userBean.activateAccount(token, username);
-            return Response.status(Response.Status.OK).build();
+            return Response.ok().build();
         } catch (ActivationException ex) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(ex.getMessage()).build();
+        }
+    }
+    
+    /**
+     * Reset user's password
+     * @param token
+     * @param username
+     * @param newPassword
+     * @return 
+     */
+    @POST
+    @Path("reset")
+    public Response resetPassword(@FormParam("token") String token,
+                                @FormParam("username") String username,
+                                @FormParam("newPassword") String newPassword){
+        try {
+            userBean.resetPassword(token, username, newPassword);
+            return Response.ok().build();
+        } catch (PasswordResetException ex){
             return Response.status(Response.Status.BAD_REQUEST).entity(ex.getMessage()).build();
         }
     }
@@ -131,7 +156,7 @@ public class UserResource {
     @Path("ban/{username}")
     @RolesAllowed({"ADMIN"})
     public Response banAccount(@PathParam("username") String username) {
-        userBean.banAccount(username);
+        adminBean.banAccount(username);
         return Response.ok().build();
     }
 
@@ -139,7 +164,7 @@ public class UserResource {
     @Path("unban/{username}")
     @RolesAllowed({"ADMIN"})
     public Response unbanAccount(@PathParam("username") String username) {
-        userBean.unbanAccount(username);
+        adminBean.unbanAccount(username);
         return Response.ok().build();
     }
 }

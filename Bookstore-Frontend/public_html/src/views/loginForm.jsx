@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import * as bs from 'react-bootstrap'
 import { Link, browserHistory } from 'react-router'
 import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
+import { FormInputText } from 'components'
 
 class LoginForm extends BaseView{
 
@@ -59,29 +60,11 @@ class LoginForm extends BaseView{
 
 						<bs.Form horizontal onSubmit={this.login}>
 
-							<bs.FormGroup bsSize="lg">
-								<bs.ControlLabel>Username</bs.ControlLabel>
-								<bs.InputGroup>
-									<bs.InputGroup.Addon>
-										<bs.Glyphicon glyph="user"/>
-									</bs.InputGroup.Addon>
-									<bs.FormControl type="text" name="username" placeholder="Username" 
-													onChange={this.props.dispatch.setUser} value={user.username}
-													disabled={user.status === "loggingIn"}/>
-								</bs.InputGroup>
-							</bs.FormGroup>
+							<FormInputText label="Username" addonBefore="glyph-user" value={user.username} required hideAsterisk 
+										onChange={(e) => this.props.dispatch.setUser("username", e.target.value)} />
 
-							<bs.FormGroup bsSize="lg">
-								<bs.ControlLabel>Password</bs.ControlLabel>
-								<bs.InputGroup>
-									<bs.InputGroup.Addon>
-										<bs.Glyphicon glyph="lock"/>
-									</bs.InputGroup.Addon>
-									<bs.FormControl type="password" name="password" placeholder="Password" 
-													onChange={this.props.dispatch.setUser} value={user.password}
-													disabled={user.status === "loggingIn"}/>
-								</bs.InputGroup>
-							</bs.FormGroup>
+							<FormInputText label="Password" addonBefore="glyph-lock" value={user.password} type="password"
+										onChange={(e) => this.props.dispatch.setUser("password", e.target.value)} required hideAsterisk/>
 
 							<bs.FormGroup bsSize="lg">
 								<bs.Button type="submit" bsStyle="success" bsSize="lg" block disabled={user.status === "loggingIn"}>
@@ -89,7 +72,8 @@ class LoginForm extends BaseView{
 								</bs.Button>
 								<br/>
 								<div className='text-center'>
-									<Link to="/register"><h4>Register</h4></Link>
+									<Link to="/reset">Forgot password</Link>
+									
 								</div>
 							</bs.FormGroup>
 

@@ -8,6 +8,8 @@ public class EmailBodyFormatter {
     private static final String BODY_ACCOUNT_ACTIVATION
             = "Welcome to Bookstore!\n\nTo get started, please activate your account by clicking "
             + "the link below:\n%1$s";
+    private static final String BODY_RESET_PASSWORD
+            = "Please click on the link below to reset your password\n%1$s";
     private static final String BODY_VERIFICATION_REJECT
             = "Thank you for submitting your documents for identity verification. "
             + "However, we are unable to approve your submission due to the following reason:\n\n"
@@ -28,6 +30,10 @@ public class EmailBodyFormatter {
 
     public static String onAccountActivation(String name, String activationUrl) {
         return format(name, String.format(BODY_ACCOUNT_ACTIVATION, activationUrl));
+    }
+    
+    public static String onPasswordReset(String name, String resetUrl) {
+        return format(name, String.format(BODY_RESET_PASSWORD, resetUrl));
     }
 
     public static String onVerificationReject(String name, String reason) {

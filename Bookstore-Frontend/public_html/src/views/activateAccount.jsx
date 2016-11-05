@@ -5,7 +5,7 @@ import Halogen from 'halogen'
 import * as bs from 'react-bootstrap'
 import { LoginForm } from 'views'
 
-class AccountActivationView extends BaseView{
+class ActivateAccountView extends BaseView{
 
 	constructor(props){
 		super(props)
@@ -73,4 +73,4 @@ class AccountActivationView extends BaseView{
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AccountActivationView)
+export default connect(mapStateToProps, mapDispatchToProps)(ActivateAccountView)

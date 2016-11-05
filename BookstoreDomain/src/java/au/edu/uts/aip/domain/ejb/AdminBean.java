@@ -43,4 +43,31 @@ public class AdminBean implements AdminRemote {
         em.persist(user);
     }
 
+    @Override
+    public void banAccount(String username) {
+        User user = userBean.getUserEntity(username);
+
+        if (user.getRole().getRoleName().equals(Role.RoleType.ADMIN.toString())) {
+            throw new RuntimeException("Cannot ban administrator account");
+        }
+
+        Role bannedRole = userBean.getRole(Role.RoleType.BANNED.toString());
+        user.setRole(bannedRole);
+
+        em.persist(user);
+    }
+
+    @Override
+    public void unbanAccount(String username) {
+        User user = userBean.getUserEntity(username);
+
+        if (!user.getRole().getRoleName().equals(Role.RoleType.BANNED.toString())) {
+            throw new RuntimeException("The account is no banned");
+        }
+
+        Role userRole = userBean.getRole(Role.RoleType.USER.toString());
+        user.setRole(userRole);
+
+        em.persist(user);
+    }
 }

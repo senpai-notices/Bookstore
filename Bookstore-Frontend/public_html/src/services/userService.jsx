@@ -65,7 +65,7 @@ class UserService {
 
 	sendActivateEmail() {
 		return reqwest({
-			url: config.getServerAddress() + '/email/activation',
+			url: config.getServerAddress() + '/email/activation/',
 			method: 'post',
 			headers: {
 				'Authorization': config.getAuthHeader()
@@ -75,9 +75,24 @@ class UserService {
 		})
 	}
 
+	sendResetPasswordEmail(username, email) {
+		return reqwest({
+			url: config.getServerAddress() + "/email/reset/",
+			method: 'post',
+			crossOrigin: true,
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded'
+			},
+			data: {
+				username: username,
+				email: email
+			}
+		})
+	}
+
 	activateAccount(token, username){
 		return reqwest({
-			url: config.getServerAddress() + '/user/activate',
+			url: config.getServerAddress() + '/user/activate/',
 			method: 'post',
 			headers: {
 				'Content-Type' : 'application/x-www-form-urlencoded'
@@ -87,6 +102,25 @@ class UserService {
 				username: username
 			},
 			crossOrigin: true
+		})
+	}
+
+	resetPassword(token, username, newPassword){
+		console.log(token)
+		console.log(username)
+		console.log(newPassword)
+		return reqwest({
+			url: config.getServerAddress() + '/user/reset/',
+			method: 'post',
+			crossOrigin: true,
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded'
+			},
+			data: {
+				token: token,
+				username: username,
+				newPassword: newPassword
+			}
 		})
 	}
 

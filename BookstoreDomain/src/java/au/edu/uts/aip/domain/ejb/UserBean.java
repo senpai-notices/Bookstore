@@ -7,6 +7,8 @@ import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.entity.Role.RoleType;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.ActivationException;
+import au.edu.uts.aip.domain.exception.PasswordResetException;
+import au.edu.uts.aip.domain.exception.TokenGenerationException;
 import au.edu.uts.aip.domain.util.SHA;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -28,6 +30,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import javax.ws.rs.ClientErrorException;
 
 @Stateless
 @LocalBean
@@ -76,6 +79,13 @@ public class UserBean implements UserRemote {
                 return result;
             }
             
+            if (password.length() < 6){
+                ValidationResult result = new ValidationResult();
+                String errorMessage = "Password must be at least 6 characters long";
+                result.addFormError("password", errorMessage);
+                return result;
+            }
+            
             userEntity = new User();
             userEntity.setUsername(userDTO.getUsername());
             userEntity.setFullname(userDTO.getFullname());
@@ -114,8 +124,11 @@ public class UserBean implements UserRemote {
     }
 
     @Override
-    public String generateActivationToken(String username) {
+    public String generateActivationToken(String username) throws TokenGenerationException {
         User user = getUserEntity(username);
+        if (user == null){
+            throw new TokenGenerationException("Account does not exists");
+        }
         Date now = new Date();
         Date expirationDate = new Date();
         expirationDate.setTime(now.getTime() + 1000 * 60 * 60 * 24);
@@ -124,6 +137,23 @@ public class UserBean implements UserRemote {
                 .setIssuedAt(now).setExpiration(expirationDate).compact();
         user.setActivationToken(activateToken);
         return activateToken;
+    }
+    
+    @Override
+    public String generateResetPasswordToken(String username, String email) throws TokenGenerationException {
+        User user = getUserEntity(username);
+        if (user == null || !email.equals(user.getEmail())){
+            throw new TokenGenerationException("Username and email do not match");
+        }
+        
+        Date now = new Date();
+        Date expirationDate = new Date();
+        expirationDate.setTime(now.getTime() + 1000 * 60 * 60 * 24);
+        String resetPasswordToken = Jwts.builder().setSubject(user.getUsername())
+                .signWith(SignatureAlgorithm.HS512, user.getPassword())
+                .setIssuedAt(now).setExpiration(expirationDate).compact();
+        user.setResetPasswordToken(resetPasswordToken);
+        return resetPasswordToken;
     }
 
     @Override
@@ -157,6 +187,38 @@ public class UserBean implements UserRemote {
 
         Role userRole = getRole(RoleType.USER.toString());
         user.setRole(userRole);
+    }
+    
+    @Override
+    public void resetPassword(String token, String username, String newPassword) throws PasswordResetException {
+        User user = getUserEntity(username);
+        
+        if (user == null){
+            throw new PasswordResetException("Account does not exists");
+        }
+        
+        if (user.getRole().getRoleName().equals(RoleType.BANNED.toString())) {
+            throw new PasswordResetException("Account has been banned");
+        }
+        
+        if (!token.equals(user.getResetPasswordToken())){
+            throw new PasswordResetException("Invalid token");
+        }
+        
+        try{
+            Jwts.parser().setSigningKey(user.getPassword())
+                    .requireSubject(user.getUsername()).parseClaimsJws(token);
+        } catch (UnsupportedJwtException | MalformedJwtException | SignatureException | IllegalArgumentException ex){
+            throw new PasswordResetException("Invalid token");
+        } catch (ExpiredJwtException ex){
+            throw new PasswordResetException("Token expired");
+        }
+        
+        if (newPassword.length() < 6){
+            throw new PasswordResetException("Password must be as least 6 characters long");
+        }
+        
+        user.setPassword(SHA.hash256(newPassword));
     }
 
     @Override
@@ -201,34 +263,6 @@ public class UserBean implements UserRemote {
             Role verifyingRole = getRole(RoleType.VERIFYING.toString());
             user.setRole(verifyingRole);
         }
-
-        em.persist(user);
-    }
-
-    @Override
-    public void banAccount(String username) {
-        User user = getUserEntity(username);
-
-        if (user.getRole().getRoleName().equals(RoleType.ADMIN.toString())) {
-            throw new RuntimeException("Cannot ban administrator account");
-        }
-
-        Role bannedRole = getRole(RoleType.BANNED.toString());
-        user.setRole(bannedRole);
-
-        em.persist(user);
-    }
-
-    @Override
-    public void unbanAccount(String username) {
-        User user = getUserEntity(username);
-
-        if (!user.getRole().getRoleName().equals(RoleType.BANNED.toString())) {
-            throw new RuntimeException("The account is no banned");
-        }
-
-        Role userRole = getRole(RoleType.USER.toString());
-        user.setRole(userRole);
 
         em.persist(user);
     }

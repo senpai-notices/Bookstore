@@ -95,11 +95,11 @@ class Template extends BaseView{
 			<Navbar.Form pullRight>
 				<Form onSubmit={this.login}>
 				<FormGroup>
-					<FormControl type="text" name="username" placeholder="Username" 
+					<FormControl type="text" name="username" placeholder="Username" required
 								value={user.username} onChange={(e) => this.props.dispatch.setUser("username", e.target.value)}
 								disabled={user.status === "loggingIn"}/>
 					&nbsp;
-					<FormControl type="password" name="password" placeholder="Password" 
+					<FormControl type="password" name="password" placeholder="Password" required
 								value={user.password} onChange={(e) => this.props.dispatch.setUser("password", e.target.value)}
 								disabled={user.status === "loggingIn"}/>
 					&nbsp;

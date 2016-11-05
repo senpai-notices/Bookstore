@@ -2,18 +2,23 @@ package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.entity.User;
+import au.edu.uts.aip.domain.exception.TokenGenerationException;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.util.SendEmail;
 import au.edu.uts.aip.service.util.EmailBodyFormatter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.mail.MessagingException;
 import javax.servlet.ServletContext;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
@@ -45,12 +50,43 @@ public class EmailResource {
             String body = EmailBodyFormatter.onAccountActivation(
                     user.getFullname(),
                     servletContext.getInitParameter("clientURL") + "/?token=" + token
-                    + "&username=" + user.getUsername());
+                    + "&username=" + user.getUsername() + "&action=activation");
             SendEmail.SendEmail(user.getEmail(), "Account activation", body);
 
             return Response.ok().build();
         } catch (MessagingException ex) {
-            return Response.serverError().build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Email cannot be sent").build();
+        } catch (TokenGenerationException ex) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(ex.getMessage()).build();
+        }
+    }
+    
+    /**
+     * Send an email that include a link to reset user's password
+     *
+     * @param username
+     * @param email
+     * @return
+     */
+    @POST
+    @Path("reset")
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public Response resetPasswordToken(@FormParam("username") String username,
+                                        @FormParam("email") String email) {
+        try {
+            UserDTO user = userBean.getUser(username);
+            String token = userBean.generateResetPasswordToken(username, email);
+            String body = EmailBodyFormatter.onPasswordReset(
+                    user.getFullname(),
+                    servletContext.getInitParameter("clientURL") + "/?token=" + token
+                    + "&username=" + user.getUsername() + "&action=reset");
+            SendEmail.SendEmail(user.getEmail(), "Account activation", body);
+
+            return Response.ok().build();
+        } catch (MessagingException ex) {
+            return Response.status(Response.Status.BAD_REQUEST).entity("Email cannot be sent").build();
+        } catch (TokenGenerationException ex) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(ex.getMessage()).build();
         }
     }
 

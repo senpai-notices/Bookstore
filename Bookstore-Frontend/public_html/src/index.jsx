@@ -9,8 +9,12 @@ import { store } from 'config'
 
 const checkToken = (nextState, replaceState) => {
 	const queries = nextState.location.query
-	if ('token' in queries && 'username' in queries){
-		replaceState(`/account/activation?token=${queries.token}&username=${queries.username}`)
+	if ('token' in queries && 'username' in queries && 'action' in queries){
+		if (queries.action === 'activation'){
+			replaceState(`/account/activation?token=${queries.token}&username=${queries.username}`)
+		} else if (queries.action === 'reset'){
+			replaceState(`/account/reset?token=${queries.token}&username=${queries.username}`)
+		}
 	}
 }
 
@@ -23,10 +27,6 @@ const checkAdmin = (nextState, replaceState) => {
 }
 
 const checkUser = (nextState, replaceState) => {
-	if (nextState.location.pathname.startsWith("/account/activation")){
-		return;
-	}
-
 	const user = store.getState().user
 	if (user.role.indexOf("USER") === -1){
 		replaceState("/")
@@ -53,7 +53,8 @@ const rootElement = (
 				<Route path="login" component={views.LoginForm}/>
 				<Route path="register" component={views.RegisterForm}/>
 				<Route path="account">
-					<Route path="activation" component={views.AccountActivationView}/>
+					<Route path="activation" component={views.ActivateAccountView}/>
+					<Route path="reset" component={views.EnterNewPasswordView}/>
 				</Route>
 				<Route path="checkout" component={views.CheckoutView} onEnter={checkCheckout} onLogout={redirectToHome}/>
 				<Route path="user" onEnter={checkUser} onLogout={redirectToHome}>
@@ -63,6 +64,7 @@ const rootElement = (
 					<Route path="users" component={views.ManageUsersView}/>
 					<Route path="books" component={views.ManageBooksView}/>
 				</Route>
+				<Route path="reset" component={views.ResetPasswordView}/>
 			</Route>
 		</Router>
 	</Provider>

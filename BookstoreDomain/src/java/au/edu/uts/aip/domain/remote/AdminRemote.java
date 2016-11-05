@@ -8,4 +8,8 @@ public interface AdminRemote {
     void rejectVerificationRequest(String username);
 
     void approveVerificationRequest(String username);
+    
+    void banAccount(String username);
+
+    void unbanAccount(String username);
 }
