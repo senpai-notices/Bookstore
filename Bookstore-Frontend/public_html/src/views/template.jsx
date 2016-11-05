@@ -174,7 +174,13 @@ class Template extends BaseView{
 
 		let shoppingCartView = "";
 		if (this.state.showShoppingCart){
-			shoppingCartView = (<ShoppingCartView show={this.state.showShoppingCart} onHide={this.toggleShoppingCart}/>)
+			shoppingCartView = (
+				<ShoppingCartView 
+					onCheckout={() => {this.toggleShoppingCart() 
+										browserHistory.push("/checkout")} 
+								} 
+					onHide={this.toggleShoppingCart}/>
+				)
 		}
 
 		const header = (

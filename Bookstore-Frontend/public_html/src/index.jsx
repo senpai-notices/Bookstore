@@ -48,6 +48,7 @@ const rootElement = (
 				<Route path="account">
 					<Route path="activation" component={views.AccountActivationView}/>
 				</Route>
+				<Route path="checkout" component={views.CheckoutView}/>
 				<Route path="user" onEnter={checkUser} onLogout={redirectToHome}>
 					<Route path="dashboard" component={views.UserDashboardView}/>
 				</Route>

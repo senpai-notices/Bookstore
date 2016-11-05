@@ -27,7 +27,7 @@ class FormAddressInput extends React.Component {
 
 	render() {
 		let requiredAsterisk = ""
-		if (this.props.required){
+		if (this.props.required && !this.props.hideAsterisk){
 			let asteriskStyle = {
 				color: "#FF0000",
 				marginLeft: ".25em"
