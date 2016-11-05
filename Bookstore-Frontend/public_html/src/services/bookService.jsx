@@ -85,9 +85,23 @@ class BookService {
 		})
 	}
 
-	checkoutBookSales(data){
+	getPinToken(data){
 		return reqwest({
-			url: config.getServerAddress() + '/payment/customer/create',
+			url: config.getServerAddress() + '/payment/customer/create2',
+			method: 'post',
+			crossOrigin: true,
+			withCredentials: true,
+			data: JSON.stringify(data),
+			headers: {
+				'Authorization': config.getAuthHeader(),
+				'Content-Type': 'application/json'
+			}
+		})
+	}
+
+	chargeMoney(data){
+		return reqwest({
+			url: config.getServerAddress() + '/payment/charge2',
 			method: 'post',
 			crossOrigin: true,
 			withCredentials: true,

@@ -12,7 +12,8 @@ public class UserDTO implements Serializable {
     private String fullname;
     private String email;
     private String role;
-
+    private String address;
+    
     public UserDTO() {
 
     }
@@ -22,6 +23,10 @@ public class UserDTO implements Serializable {
         this.fullname = userEntity.getFullname();
         this.email = userEntity.getEmail();
         this.role = userEntity.getRole().getRoleName();
+        
+        if (userEntity.getAddress() != null){
+            this.address = userEntity.getAddress().toString();
+        }
     }
 
     @XmlElement
@@ -58,5 +63,14 @@ public class UserDTO implements Serializable {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    @XmlElement
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

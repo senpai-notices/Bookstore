@@ -1,7 +1,9 @@
 package au.edu.uts.aip.domain.ejb;
 
+import au.edu.uts.aip.domain.dto.AddressDTO;
 import au.edu.uts.aip.domain.dto.DocumentsDTO;
 import au.edu.uts.aip.domain.dto.UserDTO;
+import au.edu.uts.aip.domain.entity.Address;
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.entity.Role.RoleType;
@@ -30,7 +32,6 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
-import javax.ws.rs.ClientErrorException;
 
 @Stateless
 @LocalBean
@@ -265,5 +266,21 @@ public class UserBean implements UserRemote {
         }
 
         em.persist(user);
+    }
+    
+    @Override
+    public void updateAddress(AddressDTO addressDTO, String username) {
+        User user = getUserEntity(username);
+        
+        Address addressEntity = new Address();
+        addressEntity.setAddressLine1(addressDTO.getAddressLine1());
+        addressEntity.setAddressLine2(addressDTO.getAddressLine2());
+        addressEntity.setAddressCity(addressDTO.getAddressCity());
+        addressEntity.setAddressCountry(addressDTO.getAddressCountry());
+        addressEntity.setAddressPostcode(addressDTO.getAddressPostCode());
+        addressEntity.setAddressState(addressDTO.getAddressState());
+        
+        em.persist(addressEntity);
+        user.setAddress(addressEntity);
     }
 }

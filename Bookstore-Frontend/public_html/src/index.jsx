@@ -28,20 +28,13 @@ const checkAdmin = (nextState, replaceState) => {
 
 const checkUser = (nextState, replaceState) => {
 	const user = store.getState().user
-	if (user.role.indexOf("USER") === -1){
+	if (user.role === undefined || user.role.indexOf("USER") === -1){
 		replaceState("/")
 	}
 }
 
 const redirectToHome = () => {
 	browserHistory.replace("/")
-}
-
-const checkCheckout = (nextState, replaceState) => {
-	const {user, shoppingCart} = store.getState()
-	if (user.status !== 'loggedIn' || shoppingCart.items.length === 0){
-		replaceState("/")
-	}
 }
 
 const routerKey = Math.random()
@@ -56,7 +49,7 @@ const rootElement = (
 					<Route path="activation" component={views.ActivateAccountView}/>
 					<Route path="reset" component={views.EnterNewPasswordView}/>
 				</Route>
-				<Route path="checkout" component={views.CheckoutView} onEnter={checkCheckout} onLogout={redirectToHome}/>
+				<Route path="checkout" component={views.CheckoutView}/>
 				<Route path="user" onEnter={checkUser} onLogout={redirectToHome}>
 					<Route path="dashboard" component={views.UserDashboardView}/>
 				</Route>

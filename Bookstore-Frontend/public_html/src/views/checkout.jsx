@@ -22,11 +22,18 @@ class CheckoutView extends BaseView {
 		this.setState(this.state)
 	}
 
+	componentWillMount(){
+		// if (nextProps.user.status !== 'loggedIn' 
+		// 	|| nextProps.shoppingCart.items.length === 0){
+		// 	browserHistory.replace("/")
+		// }
+	}
+
 	componentWillReceiveProps(nextProps){
-		if (nextProps.user.status !== 'loggedIn' 
-			|| nextProps.shoppingCart.items.length === 0){
-			browserHistory.replace("/")
-		}
+		// if (nextProps.user.status !== 'loggedIn' 
+		// 	|| nextProps.shoppingCart.items.length === 0){
+		// 	browserHistory.replace("/")
+		// }
 	}
 
 	calculateTotalPrice(){
@@ -69,11 +76,20 @@ class CheckoutView extends BaseView {
 		data.card.address_state = this.state['card.address_state']
 		data.card.address_country = this.state['card.address_country']
 
-		this.bookService.checkoutBookSales(data)
+		this.bookService.getPinToken(data)
 			.then((resp) => {
-				console.log(resp)
+				data.customer_token = resp.response.token
+				data.amount = "100"
+				data.description = "Description"
+				this.bookService.chargeMoney(data)
+					.then((resp) => {
+						console.log(resp)
+					})
+					.fail((err) => {
+					})
 			})
 			.fail((err) => {
+				console.log(err)
 				this.state.form_errors = JSON.parse(err.response).form_errors
 				this.state.errors = JSON.parse(err.response).errors
 				this.setState(this.state)

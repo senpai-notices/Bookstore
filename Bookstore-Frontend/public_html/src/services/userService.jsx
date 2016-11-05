@@ -35,7 +35,7 @@ class UserService {
 
 	createAccount(account) {
 		return reqwest({
-			url: config.getServerAddress() + '/user',
+			url: config.getServerAddress() + '/user/',
 			method: 'post',
 			headers: {
 				'Content-Type' : 'application/x-www-form-urlencoded'
@@ -47,6 +47,20 @@ class UserService {
 				fullname: account.fullname
 			},
 			crossOrigin: true
+		})
+	}
+
+	updateAddress(address){
+		return reqwest({
+			url: config.getServerAddress() + '/user/address',
+			method: 'post',
+			headers: {
+				'Authorization': config.getAuthHeader(),
+				'Content-Type': 'application/json'
+			},
+			data: JSON.stringify(address),
+			crossOrigin: true,
+			withCredentials: true
 		})
 	}
 

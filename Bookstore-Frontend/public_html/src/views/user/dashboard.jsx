@@ -13,42 +13,74 @@ class UserDashboardView extends BaseView {
 		this.changePassword = this.changePassword.bind(this)
 		this.uploadDocuments = this.uploadDocuments.bind(this)
 		this.readFile = this.readFile.bind(this)
+		this.removeFormError = this.removeFormError.bind(this)
+		this.onAddressSelected = this.onAddressSelected.bind(this)
+
+		this.state.form_errors = {}
 	}
 
 	changePassword(event){
 		event.preventDefault()
 	}
 
+	removeFormError(formName){
+		this.state.form_errors[formName] = ""
+		this.setState(this.state)
+	}
+
+	onAddressSelected(event){
+		let selectedAddress = event.target.value
+		const addressParts = selectedAddress.split(',')
+
+		this.state.address_line1  = addressParts[0]
+		this.state.address_city = addressParts[1]
+		this.state.address_state = addressParts[2]
+		this.state.address_country = addressParts[3]
+		this.setState(this.state)
+
+		this.addressSuggest.setValue(this.state.address_line1)
+	}
+
 	uploadDocuments(event){
 		event.preventDefault()
-		this.state.uploading = true
+		this.state.submitting = true
 		this.setState(this.state)
 		const readFilePromises = []
 		readFilePromises.push(this.readFile("id", this.state.verification_id))
 		readFilePromises.push(this.readFile("residential", this.state.address_proof))
 
 		Promise.all(readFilePromises).then((results) =>{
-			const uploadFilePromises = []
+			const callAPIPromises = []
 			results.forEach((readFileResult) =>{
 				const documentType = readFileResult[0]
 				const fileStream = readFileResult[1].replace(/^data:[^;]+;base64,/, '')
 				const contentType = readFileResult[2]
 
-				uploadFilePromises.push(this.userService.uploadDocument(documentType, contentType, fileStream))
+				callAPIPromises.push(this.userService.uploadDocument(documentType, contentType, fileStream))
 			})
 
-			return Promise.all(uploadFilePromises)
+			const addressData = {
+				address_line1: this.state.address_line1,
+				address_line2: this.state.address_line2,
+				address_city: this.state.address_city,
+				address_state: this.state.address_state,
+				address_country: this.state.address_country,
+				address_postcode: this.state.address_postcode
+			}
+			callAPIPromises.push(this.userService.updateAddress(addressData))
+
+			return Promise.all(callAPIPromises)
 		}).then((resp) => {
 			return this.userService.fetchAccount()
 		}).then((resp) => {
 			this.props.dispatch.login(resp)
 
 			alert("Your documents have been upladed successfully")
-			this.state.uploading = false
+			this.state.submitting = false
 			this.setState(this.state)
 		}).catch((err) => {
-			alert("There was an error while trying to upload your documents")
-			this.state.uploading = false
+			alert("There was an error while trying to submit your documents")
+			this.state.submitting = false
 			this.setState(this.state)
 		})
 	}
@@ -77,7 +109,7 @@ class UserDashboardView extends BaseView {
 					<hr/>
 
 					<p>In order to sell your used books on our platform, you must have your account verified first</p>
-					<p>Please upload your ID (passpord, driver license, photo ID, etc), and upload evidence of resident status in Australia</p>
+					<p>Please upload your ID (passpord, driver license, photo ID, etc), enter your address and upload evidence of resident status in Australia</p>
 					<p>An email will be sent to your account's email once the verification is completed</p>
 					<br/>
 
@@ -91,9 +123,59 @@ class UserDashboardView extends BaseView {
 										errorMessage={form_errors.address_proof} onChange={(event) => this.handleFileChange(event, "address_proof")} 
 										onFocus={() => this.props.dispatch.setFormErrorMessage("address_proof")} required disabled={this.state.uploading}/>
 
+						<bs.Row>
+						<bs.Col xs={7}>
+								<FormAddressInput label="Address line 1" name="address_line1"
+													value={this.state.address_line1} errorMessage={form_errors.address_line1}
+													onAddressSelected={this.onAddressSelected}
+													onFocus={() => this.removeFormError('address_line1')}
+													onChange={this.handleChange} ref={(input) => this.addressSuggest = input}
+													required/>
+							</bs.Col>
+						</bs.Row>
+						<bs.Row>
+							<bs.Col xs={12}>
+								<FormInputText label="Address line 2" name="address_line2"
+												value={this.state.address_line2} errorMessage={this.state.form_errors.address_line2}
+												onChange={this.handleChange} onFocus={() => this.removeFormError('address_line2')}
+												style={{width: "209%"}}/>
+							</bs.Col>
+						</bs.Row>
+
+						<bs.Row>
+							<bs.Col xs={4}>
+								<FormInputText label="City" name="address_city"
+												value={this.state.address_city} errorMessage={this.state.form_errors.address_city}
+												onChange={this.handleChange} onFocus={() => this.removeFormError('address_city')}
+												required/>
+							</bs.Col>
+							<bs.Col xs={4}>
+								<FormInputText label="State" name="address_state"
+												value={this.state.address_state} errorMessage={this.state.form_errors.address_state}
+												onChange={this.handleChange} onFocus={() => this.removeFormError('address_state')}
+												required/>
+							</bs.Col>
+						</bs.Row>
+
+						<bs.Row>
+							<bs.Col xs={4}>
+								<FormInputText label="Postcode" name="address_postcode"
+												value={this.state.address_postcode} errorMessage={this.state.form_errors.address_postcode}
+												onChange={this.handleChange} onFocus={() => this.removeFormError('address_postcode')}
+												required/>
+							</bs.Col>
+							<bs.Col xs={4}>
+								<FormInputText label="Country" name="address_country"
+												value={this.state.address_country} errorMessage={this.state.form_errors.address_country}
+												onChange={this.handleChange} onFocus={() => this.removeFormError('address_country')}
+												required/>
+							</bs.Col>
+
+						</bs.Row>
+
 						<bs.FormGroup bsSize="lg">
-							<bs.Button type="submit" bsStyle="primary" bsSize="lg" block disabled={this.state.uploading}>
-								{this.state.uploading && 'Uploading files' || 'Upload documents'}
+							<bs.Button type="submit" bsStyle="primary" bsSize="lg" block disabled={this.state.submitting}>
+								{this.state.submitting && 'Uploading files' || 'Upload documents'}
 							</bs.Button>
 						</bs.FormGroup>
 
