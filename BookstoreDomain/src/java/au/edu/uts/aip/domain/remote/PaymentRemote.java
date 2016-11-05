@@ -1,5 +1,6 @@
 package au.edu.uts.aip.domain.remote;
 
+import au.edu.uts.aip.domain.dto.ResponseDTO;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
 import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
@@ -13,12 +14,17 @@ import javax.json.JsonObject;
 public interface PaymentRemote {
 
     ValidationResult createCustomer(PinCustomerPost pinCustomerPost);
+    
+    ResponseDTO createCustomer2(PinCustomerPost pinCustomerPost);
 
     ValidationResult charge(PinChargePost pinChargePost);
+    ResponseDTO charge2(PinChargePost pinChargePost);
 
     ValidationResult createRecipient(PinRecipientPost pinRecipientPost);
+    ResponseDTO createRecipient2(PinRecipientPost pinRecipientPost);
 
     ValidationResult transfer(PinTransferPost pinTransferPost);
+    ResponseDTO transfer2(PinTransferPost pinTransferPost);
 
     /**
      * Returns the details of a recipient. Note: A bank account is inside a recipient
@@ -37,4 +43,5 @@ public interface PaymentRemote {
      * @return
      */
     ValidationResult editRecipient(String recipientToken, PinRecipientPut pinRecipientPut);
+    ResponseDTO editRecipient2(String recipientToken, PinRecipientPut pinRecipientPut);
 }

@@ -95,10 +95,6 @@ public class PostageBean {
     }
 
     public String getState(int postcode) {
-        return "";
-    }
-    
-    public String isValidPostcode(int postcode) {
         if (postcode >= 1000 && postcode <= 2599) {
             return "NSW";
         } else if (postcode >= 2620 && postcode <= 2899) {
@@ -106,29 +102,29 @@ public class PostageBean {
         } else if (postcode >= 2921 && postcode <= 2999) {
             return "NSW";
         } else if (postcode >= 200 && postcode <= 299) {
-            return "NSW";
+            return "ACT";
         } else if (postcode >= 2600 && postcode <= 2619) {
-            return "NSW";
+            return "ACT";
         } else if (postcode >= 2900 && postcode <= 2920) {
-            return "NSW";
+            return "ACT";
         } else if (postcode >= 3000 && postcode <= 3999) {
-            return "NSW";
+            return "VIC";
         } else if (postcode >= 8000 && postcode <= 8999) {
-            return "NSW";
+            return "VIC";
         } else if (postcode >= 4000 && postcode <= 4999) {
-            return "NSW";
+            return "QLD";
         } else if (postcode >= 9000 && postcode <= 9999) {
-            return "NSW";
+            return "QLD";
         } else if (postcode >= 5000 && postcode <= 5999) {
-            return "NSW";
+            return "SA";
         } else if (postcode >= 6000 && postcode <= 6797) {
-            return "NSW";
+            return "WA";
         } else if (postcode >= 6800 && postcode <= 6999) {
-            return "NSW";
+            return "WA";
         } else if (postcode >= 7000 && postcode <= 7999) {
-            return "NSW";
+            return "TAS";
         } else if (postcode >= 800 && postcode <= 999) {
-            return "NSW";
+            return "NT";
         } else {
             return "";
         }

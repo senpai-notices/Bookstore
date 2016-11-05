@@ -1,5 +1,6 @@
 package au.edu.uts.aip.service.resource;
 
+import au.edu.uts.aip.domain.dto.ResponseDTO;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
 import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
@@ -31,9 +32,117 @@ public class PaymentResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
+    @Path("customer/create2")
+    public Response createCustomer2(PinCustomerPost pinCustomerPost) {
+
+        ResponseDTO responseDto = paymentBean.createCustomer2(pinCustomerPost);
+
+        switch (responseDto.getStatusCode()) {
+            case 201:
+                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+            case 422:
+                return Response.status(422).entity(responseDto.getBody()).build();
+            default:
+                return Response.status(400).build();
+        }
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("charge2")
+    public Response charge2(PinChargePost pinChargePost) {
+
+        ResponseDTO responseDto = paymentBean.charge2(pinChargePost);
+
+        switch (responseDto.getStatusCode()) {
+            case 201:
+                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+            case 422:
+                return Response.status(422).entity(responseDto.getBody()).build();
+            default:
+                return Response.status(400).build();
+        }
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("recipient/create2")
+    public Response createRecipient2(PinRecipientPost pinRecipientPost) {
+
+        ResponseDTO responseDto = paymentBean.createRecipient2(pinRecipientPost);
+
+        switch (responseDto.getStatusCode()) {
+            case 201:
+                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+            case 422:
+                return Response.status(422).entity(responseDto.getBody()).build();
+            default:
+                return Response.status(400).build();
+        }
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("recipient/{recipient-token}")
+    public Response fetchRecipient(@PathParam("recipient-token") String recipientToken) {
+
+        JsonObject recipient = paymentBean.fetchRecipient(recipientToken);
+
+        return Response.ok(recipient, MediaType.APPLICATION_JSON).build();
+    }
+
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("recipient2/{recipient-token}")
+    public Response editRecipient2(@PathParam("recipient-token") String recipientToken,
+            PinRecipientPut pinRecipientPut) {
+
+        ResponseDTO responseDto
+                = paymentBean.editRecipient2(recipientToken, pinRecipientPut);
+
+        switch (responseDto.getStatusCode()) {
+            case 201:
+                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+            case 422:
+                return Response.status(422).entity(responseDto.getBody()).build();
+            default:
+                return Response.status(400).build();
+        }
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("transfer2")
+    public Response transfer2(PinTransferPost pinTransferPost) {
+
+        ResponseDTO responseDto = paymentBean.transfer2(pinTransferPost);
+
+        switch (responseDto.getStatusCode()) {
+            case 201:
+                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+            case 422:
+                return Response.status(422).entity(responseDto.getBody()).build();
+            default:
+                return Response.status(400).build();
+        }
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
     @Path("customer/create")
     public Response createCustomer(PinCustomerPost pinCustomerPost) {
-        
+
         ValidationResult validationResult = paymentBean.createCustomer(pinCustomerPost);
 
         return ResourceUtil.generate201Response(validationResult);
@@ -50,7 +159,7 @@ public class PaymentResource {
 
         return ResourceUtil.generate201Response(validationResult);
     }
-    
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -62,12 +171,12 @@ public class PaymentResource {
 
         return ResourceUtil.generate201Response(validationResult);
     }
-    
+
     /**
-     * Only for testing, unless there is a need to manually perform
-     * transfers from the frontend.
+     * Only for testing, unless there is a need to manually perform transfers from the frontend.
+     *
      * @param pinTransferPost
-     * @return 
+     * @return
      */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
@@ -80,32 +189,21 @@ public class PaymentResource {
 
         return ResourceUtil.generate201Response(validationResult);
     }
-    
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
-    @Path("recipient/{recipient-token}")
-    public Response fetchRecipient(@PathParam("recipient-token") String recipientToken) {
 
-        JsonObject recipient = paymentBean.fetchRecipient(recipientToken);
-
-        return Response.ok(recipient, MediaType.APPLICATION_JSON).build();
-    }
-    
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("recipient/{recipient-token}")
     public Response editRecipient(@PathParam("recipient-token") String recipientToken,
-                                    PinRecipientPut pinRecipientPut) {
+            PinRecipientPut pinRecipientPut) {
 
-        ValidationResult validationResult = 
-                paymentBean.editRecipient(recipientToken, pinRecipientPut);
+        ValidationResult validationResult
+                = paymentBean.editRecipient(recipientToken, pinRecipientPut);
 
         return ResourceUtil.generate200Response(validationResult);
     }
-    
+
     // <editor-fold defaultstate="collapsed" desc="unused">
     /*
     @GET
