@@ -13,6 +13,7 @@ class CheckoutView extends BaseView {
 		this.calculateTotalPrice = this.calculateTotalPrice.bind(this)
 		this.state.form_errors = {}
 		this.onAddressSelected = this.onAddressSelected.bind(this)
+		this.submitPayment = this.submitPayment.bind(this)
 	}
 
 	componentWillReceiveProps(nextProps){
@@ -35,13 +36,43 @@ class CheckoutView extends BaseView {
 		let selectedAddress = event.target.value
 		const addressParts = selectedAddress.split(',')
 
-		this.state.address_1  = addressParts[0]
-		this.state.address_city = addressParts[1]
-		this.state.address_state = addressParts[2]
-		this.state.address_country = addressParts[3]
+		this.state['card.address_line1']  = addressParts[0]
+		this.state['card.address_city'] = addressParts[1]
+		this.state['card.address_state'] = addressParts[2]
+		this.state['card.address_country'] = addressParts[3]
 		this.setState(this.state)
 
-		this.addressSuggest.setValue(this.state.address_1)
+		this.addressSuggest.setValue(this.state['card.address_line1'])
+	}
+
+	submitPayment(event){
+		event.preventDefault()
+
+		let data = {}
+		data.email = this.props.user.email
+		data.card = {}
+		data.card.number = this.state['card.number']
+		data.card.expiry_month = this.state['card.expiry_month']
+		data.card.expiry_year = this.state['card.expiry_year']
+		data.card.cvc = this.state['card.cvc']
+		data.card.name = this.state['card.name']
+		data.card.address_line1 = this.state['card.address_line1']
+		data.card.address_line2 = this.state['card.address_line2']
+		data.card.address_city = this.state['card.address_city']
+		data.card.address_postcode = this.state['card.address_postcode']
+		data.card.address_state = this.state['card.address_state']
+		data.card.address_country = this.state['card.address_country']
+
+		this.bookService.checkoutBookSales(data)
+			.then((resp) => {
+				alert("OK")
+			})
+			.fail((err) => {
+				console.log(err)
+				console.log(err.response)
+				this.state.form_errors = JSON.parse(err.response).form_errors
+				this.setState(this.state)
+			})
 	}
 
 	render(){
@@ -56,46 +87,46 @@ class CheckoutView extends BaseView {
 			<div>
 				<SalesListView />
 
-				<bs.Form style={{height: "500px"}}>
+				<bs.Form style={{height: "500px"}} onSubmit={this.submitPayment}>
 				<bs.Col xs={5}>
 					<h3>Online payment</h3>
 					<bs.Row>
 						<bs.Col xs={12}>
 							<FormInputText label="Card Number" name="card.number"
-											value={this.state['card.number']} errorMessage={form_errors['card.number']}
+											value={this.state['card.number']} errorMessage={this.state.form_errors['card.number']}
 											onChange={this.handleChange} onFocus={() => this.state.form_errors['card.number'] = ""}
-											required hideAsterisk/>
+											 hideAsterisk/>
 						</bs.Col>
 					</bs.Row>
 					<bs.Row>
 						<bs.Col xs={12}>
 							<FormInputText label="Card Name" name="card.name"
-											value={this.state['card.name']} errorMessage={form_errors['card.name']}
+											value={this.state['card.name']} errorMessage={this.state.form_errors['card.name']}
 											onChange={this.handleChange} onFocus={() => this.state.form_errors['card.name'] = ""}
-											required hideAsterisk/>
+											 hideAsterisk/>
 						</bs.Col>
 					</bs.Row>
 					<bs.Row>
 						<bs.Col xs={3}>
 							<FormInputText label="Expiry Month" name="card.expiry_month" type="number"
-											value={this.state['card.expiry_month']} errorMessage={form_errors['card.expiry_month']}
+											value={this.state['card.expiry_month']} errorMessage={this.state.form_errors['card.expiry_month']}
 											onChange={this.handleChange} onFocus={() => this.state.form_errors['card.expiry_month'] = ""}
-											required hideAsterisk/>
+											 hideAsterisk/>
 						</bs.Col>
 
 						<bs.Col xs={3}>
 							<FormInputText label="Expiry Year" name="card.expiry_year" type="number"
-											value={this.state['card.expiry_year']} errorMessage={form_errors['card.expiry_year']}
+											value={this.state['card.expiry_year']} errorMessage={this.state.form_errors['card.expiry_year']}
 											onChange={this.handleChange} onFocus={() => this.state.form_errors['card.expiry_year'] = ""}
-											required hideAsterisk/>
+											 hideAsterisk/>
 						</bs.Col>
 					</bs.Row>
 					<bs.Row>
 						<bs.Col xs={3}>
 							<FormInputText label="CVC" name="card.cvc"
-											value={this.state['card.cvc']} errorMessage={form_errors['card.cvc']}
+											value={this.state['card.cvc']} errorMessage={this.state.form_errors['card.cvc']}
 											onChange={this.handleChange} onFocus={() => this.state.form_errors.cvc = ""}
-											required hideAsterisk/>
+											 hideAsterisk/>
 						</bs.Col>
 					</bs.Row>
 
@@ -106,49 +137,49 @@ class CheckoutView extends BaseView {
 				<h3>Shipping detail</h3>
 					<bs.Row>
 						<bs.Col xs={12}>
-							<FormAddressInput label="Address line 1" name="address_1"
-												value={this.state.address_1} errorMessage={form_errors.address_1}
+							<FormAddressInput label="Address line 1" name="card.address_line1"
+												value={this.state['card.address_line1']} errorMessage={form_errors['card.address_line1']}
 												onAddressSelected={this.onAddressSelected}
 												onChange={this.handleChange} ref={(input) => this.addressSuggest = input}
-												required/>
+												/>
 						</bs.Col>
 					</bs.Row>
 					<bs.Row>
 						<bs.Col xs={12}>
-							<FormInputText label="Address line 2" name="address_2"
-											value={this.state.address_2} errorMessage={form_errors.address_2}
-											onChange={this.handleChange} onFocus={() => this.state.form_errors.address_2 = ""}
+							<FormInputText label="Address line 2" name="card.address_line2"
+											value={this.state['card.address_line2']} errorMessage={this.state.form_errors['card.address_line2']}
+											onChange={this.handleChange} onFocus={() => this.state.form_errors['card.address_line2'] = ""}
 											style={{width: "203%"}}/>
 						</bs.Col>
 					</bs.Row>
 
 					<bs.Row>
 						<bs.Col xs={6}>
-							<FormInputText label="City" name="address_city"
-											value={this.state.address_city} errorMessage={form_errors.address_city}
-											onChange={this.handleChange} onFocus={() => this.state.form_errors.address_city = ""}
-											required/>
+							<FormInputText label="City" name="card.address_city"
+											value={this.state['card.address_city']} errorMessage={this.state.form_errors['card.address_city']}
+											onChange={this.handleChange} onFocus={() => this.state.form_errors['card.address_city'] = ""}
+											/>
 						</bs.Col>
 						<bs.Col xs={6}>
-							<FormInputText label="State" name="address_state"
-											value={this.state.address_state} errorMessage={form_errors.address_state}
-											onChange={this.handleChange} onFocus={() => this.state.form_errors.address_state = ""}
-											required/>
+							<FormInputText label="State" name="card.address_state"
+											value={this.state['card.address_state']} errorMessage={this.state.form_errors['card.address_state']}
+											onChange={this.handleChange} onFocus={() => this.state.form_errors['card.address_state'] = ""}
+											/>
 						</bs.Col>
 					</bs.Row>
 
 					<bs.Row>
 						<bs.Col xs={6}>
-							<FormInputText label="Postcode" name="address_postcode"
-											value={this.state.address_postcode} errorMessage={form_errors.address_postcode}
-											onChange={this.handleChange} onFocus={() => this.state.form_errors.address_postcode = ""}
-											required/>
+							<FormInputText label="Postcode" name="card.address_postcode"
+											value={this.state['card.address_postcode']} errorMessage={this.state.form_errors['card.address_postcode']}
+											onChange={this.handleChange} onFocus={() => this.state.form_errors['card.address_postcode'] = ""}
+											/>
 						</bs.Col>
 						<bs.Col xs={6}>
-							<FormInputText label="Country" name="address_country"
-											value={this.state.address_country} errorMessage={form_errors.address_country}
-											onChange={this.handleChange} onFocus={() => this.state.form_errors.address_country = ""}
-											required/>
+							<FormInputText label="Country" name="card.address_country"
+											value={this.state['card.address_country']} errorMessage={this.state.form_errors['card.address_country']}
+											onChange={this.handleChange} onFocus={() => this.state.form_errors['card.address_country'] = ""}
+											/>
 						</bs.Col>
 
 						<bs.Button type="submit" bsStyle="primary">Calculate cost</bs.Button>

@@ -84,6 +84,20 @@ class BookService {
 			}
 		})
 	}
+
+	checkoutBookSales(data){
+		return reqwest({
+			url: config.getServerAddress() + '/payment/customer/create',
+			method: 'post',
+			crossOrigin: true,
+			withCredentials: true,
+			data: JSON.stringify(data),
+			headers: {
+				'Authorization': config.getAuthHeader(),
+				'Content-Type': 'application/json'
+			}
+		})
+	}
 }
 
 export default BookService
