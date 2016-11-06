@@ -6,6 +6,10 @@ import javax.ws.rs.client.ClientRequestContext;
 import javax.ws.rs.client.ClientRequestFilter;
 import javax.ws.rs.core.MultivaluedMap;
 
+/**
+ * Add authorisation header to Auspost API requests.
+ * @author x
+ */
 @Priority(value = 1)
 public class AuspostAuthFilter implements ClientRequestFilter {
 

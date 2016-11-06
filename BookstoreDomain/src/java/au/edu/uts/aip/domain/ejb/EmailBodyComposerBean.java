@@ -3,7 +3,6 @@ package au.edu.uts.aip.domain.ejb;
 import javax.ejb.Stateless;
 
 /**
- * NOT USED YET. EXACT COPY OF EMAILBODYCOMPOSER.JAVA IN SRV LAYER.
  * Composes email bodies, including salutations, signatures and main content
  */
 @Stateless
@@ -41,47 +40,47 @@ public class EmailBodyComposerBean {
             + "transfers can take up to seven days to appear in your bank statements.\n\n"
             + "Below is your order information:\n\n%1$s";
 
-    public static String onAccountActivation(String name, String activationUrl) {
+    public String onAccountActivation(String name, String activationUrl) {
         return format(name, String.format(BODY_ACCOUNT_ACTIVATION, activationUrl));
     }
 
-    public static String onPasswordReset(String name, String resetUrl) {
+    public String onPasswordReset(String name, String resetUrl) {
         return format(name, String.format(BODY_RESET_PASSWORD, resetUrl));
     }
 
-    public static String onVerificationReject(String name, String reason) {
+    public String onVerificationReject(String name, String reason) {
         return format(name, String.format(BODY_VERIFICATION_REJECT, reason));
     }
 
-    public static String onVerificationApprove(String name) {
+    public String onVerificationApprove(String name) {
         return format(name, BODY_VERIFICATION_APPROVE);
     }
 
-    public static String onAccountBan(String name) {
+    public String onAccountBan(String name) {
         return format(name, BODY_ACCOUNT_BAN);
     }
 
-    public static String onAccountUnban(String name) {
+    public String onAccountUnban(String name) {
         return format(name, BODY_ACCOUNT_UNBAN);
     }
 
-    public static String onOrderFail(String name, String orderInfo) {
+    public String onOrderFail(String name, String orderInfo) {
         return format(name, format(BODY_ORDER_FAIL, orderInfo));
     }
 
-    public static String onOrderPending(String name, String orderInfo) {
+    public String onOrderPending(String name, String orderInfo) {
         return format(name, format(BODY_ORDER_PENDING, orderInfo));
     }
 
-    public static String onOrderCompleteBuyer(String name, String orderInfo) {
+    public String onOrderCompleteBuyer(String name, String orderInfo) {
         return format(name, format(BODY_ORDER_COMPLETE_BUYER, orderInfo));
     }
 
-    public static String onOrderCompleteSeller(String name, String orderInfo) {
+    public String onOrderCompleteSeller(String name, String orderInfo) {
         return format(name, format(BODY_ORDER_COMPLETE_SELLER, orderInfo));
     }
 
-    public static String format(String name, String info) {
+    public String format(String name, String info) {
         return String.format(
                 "%1$s %2$s,\n\n%3$s\n\n%4$s,\n%5$s",
                 SALUTATION_PREFIX, name, info, SIGNATURE_PREFIX, SENDER_NAME

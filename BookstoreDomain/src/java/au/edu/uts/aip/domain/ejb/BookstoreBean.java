@@ -1,8 +1,5 @@
 package au.edu.uts.aip.domain.ejb;
 
-/**
- *The needed libraries
- */
 import au.edu.uts.aip.domain.entity.Book;
 import au.edu.uts.aip.domain.entity.BookSales;
 import au.edu.uts.aip.domain.entity.Role;
@@ -31,7 +28,7 @@ import javax.persistence.TypedQuery;
  * updateSale;
  * getSales;
  * 
- *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ *  @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Stateless
 public class BookstoreBean implements BookstoreRemote {

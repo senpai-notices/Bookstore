@@ -1,8 +1,5 @@
 package au.edu.uts.aip.domain.entity;
 
-/**
- *The needed libraries
- */
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,21 +9,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Suburb is an Entity that is used to access the data in Suburb table in the database
- * It is a model class
- * 
- * It has properties: 
- * id: Long value
- * name: String value
- * stateName: String value
- * postcode: Integer value
- * The attributes are not null and accessed by get and set methods
- * 
- *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ * Suburb is an Entity that is used to access the data in Suburb table in the database It is a model
+ * class
+ *
+ * It has properties: id: Long value name: String value stateName: String value postcode: Integer
+ * value The attributes are not null and accessed by get and set methods
+ *
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Entity
 @Table(name = "suburb")
 public class Suburb implements Serializable {
+
     /**
      * the id of the suburb record
      */
@@ -45,10 +39,8 @@ public class Suburb implements Serializable {
     private int postcode;
 
     /**
-    * {@link Suburb#id}
-    * data type: Long
-    * return an long Value
-    */
+     * {@link Suburb#id} data type: Long return an long Value
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
@@ -60,10 +52,8 @@ public class Suburb implements Serializable {
     }
 
     /**
-    * {@link Suburb#name}
-    * data type: String
-    * return an String Value
-    */
+     * {@link Suburb#name} data type: String return an String Value
+     */
     @Column(nullable = false, name = "name")
     public String getName() {
         return name;
@@ -74,10 +64,8 @@ public class Suburb implements Serializable {
     }
 
     /**
-    * {@link Suburb#stateName}
-    * data type: String
-    * return an String Value
-    */
+     * {@link Suburb#stateName} data type: String return an String Value
+     */
     @Column(nullable = false, name = "state_name")
     public String getStateName() {
         return stateName;
@@ -88,10 +76,8 @@ public class Suburb implements Serializable {
     }
 
     /**
-    * {@link Suburb#postcode}
-    * data type: Integer
-    * return an int Value
-    */
+     * {@link Suburb#postcode} data type: Integer return an int Value
+     */
     @Column(nullable = false, name = "postcode")
     public int getPostcode() {
         return postcode;

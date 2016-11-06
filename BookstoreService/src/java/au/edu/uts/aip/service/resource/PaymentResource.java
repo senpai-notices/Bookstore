@@ -10,8 +10,6 @@ import au.edu.uts.aip.domain.pin.dto.PinRecipientPut;
 import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
 import au.edu.uts.aip.domain.remote.PaymentRemote;
 import au.edu.uts.aip.domain.remote.UserRemote;
-import au.edu.uts.aip.domain.validation.ValidationResult;
-import au.edu.uts.aip.service.util.ResourceUtil;
 import javax.annotation.security.RolesAllowed;
 
 import javax.ejb.EJB;
@@ -160,74 +158,6 @@ public class PaymentResource {
             default:
                 return Response.status(400).build();
         }
-    }
-
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
-    @Path("customer/create")
-    public Response createCustomer(PinCustomerPost pinCustomerPost) {
-
-        ValidationResult validationResult = paymentBean.createCustomer(pinCustomerPost);
-
-        return ResourceUtil.generate201Response(validationResult);
-    }
-
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
-    @Path("charge")
-    public Response charge(PinChargePost pinChargePost) {
-
-        ValidationResult validationResult = paymentBean.charge(pinChargePost);
-
-        return ResourceUtil.generate201Response(validationResult);
-    }
-
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
-    @Path("recipient/create")
-    public Response createRecipient(PinRecipientPost pinRecipientPost) {
-
-        ValidationResult validationResult = paymentBean.createRecipient(pinRecipientPost);
-
-        return ResourceUtil.generate201Response(validationResult);
-    }
-
-    /**
-     * Only for testing, unless there is a need to manually perform transfers from the frontend.
-     *
-     * @param pinTransferPost
-     * @return
-     */
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
-    @Path("transfer")
-    public Response transfer(PinTransferPost pinTransferPost) {
-
-        ValidationResult validationResult = paymentBean.transfer(pinTransferPost);
-
-        return ResourceUtil.generate201Response(validationResult);
-    }
-
-    @PUT
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
-    @Path("recipient/{recipient-token}")
-    public Response editRecipient(@PathParam("recipient-token") String recipientToken,
-            PinRecipientPut pinRecipientPut) {
-
-        ValidationResult validationResult
-                = paymentBean.editRecipient(recipientToken, pinRecipientPut);
-
-        return ResourceUtil.generate200Response(validationResult);
     }
 
     // <editor-fold defaultstate="collapsed" desc="unused">

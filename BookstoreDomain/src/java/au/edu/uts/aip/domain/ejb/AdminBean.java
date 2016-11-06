@@ -1,8 +1,5 @@
 package au.edu.uts.aip.domain.ejb;
 
-/**
- *The needed libraries
- */
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.remote.AdminRemote;
@@ -21,7 +18,7 @@ import javax.persistence.PersistenceContext;
  * approveVerificationRequest function is used to approve the user's verification request
  * rejectVerificationRequest function is used to reject the user's verification request
  * 
- *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ *  @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Stateless
 public class AdminBean implements AdminRemote {

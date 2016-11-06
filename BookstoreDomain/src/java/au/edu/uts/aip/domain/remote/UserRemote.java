@@ -6,7 +6,6 @@ import au.edu.uts.aip.domain.dto.RegistrationDTO;
 import au.edu.uts.aip.domain.dto.ResetPasswordDTO;
 import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.exception.ActivationException;
-import au.edu.uts.aip.domain.exception.PasswordResetException;
 import au.edu.uts.aip.domain.exception.TokenGenerationException;
 import java.util.List;
 import javax.ejb.Remote;

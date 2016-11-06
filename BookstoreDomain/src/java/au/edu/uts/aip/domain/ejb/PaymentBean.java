@@ -44,7 +44,7 @@ import javax.ws.rs.core.Response;
  * 
  * It uses the Pin API to handle the payment 
  * Official Pin API documentation can be found here: https://pin.net.au/docs/api/
- *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ *  @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Stateless
 public class PaymentBean implements PaymentRemote {
@@ -316,109 +316,5 @@ public class PaymentBean implements PaymentRemote {
         } else {
             return new SerialResponse(validationResult.toJson(), 422);
         }
-    }
-    // stop here. everything below here is deprecated.
-
-    /**
-    * createCustomer is used to create a customer
-    */
-    @Override
-    public ValidationResult createCustomer(PinCustomerPost pinCustomerPost) {
-
-        Client client = ClientBuilder.newClient()
-                .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new PinResponseLoggingFilter());
-
-        Response response = client.target(BASE_URL + "/customers")
-                .request(MediaType.APPLICATION_JSON)
-                .post(Entity.entity(pinCustomerPost, MediaType.APPLICATION_JSON_TYPE));
-
-        int statusCode = response.getStatus();
-        JsonObject responseJson = ApiResponseUtil.toJson(response.readEntity(String.class));
-        client.close();
-
-        return PinResponseUtil.validate(statusCode, responseJson);
-    }
-    /**
-    * charge function is used to charge the money
-    */
-    @Override
-    public ValidationResult charge(PinChargePost pinChargePost) {
-
-        Client client = ClientBuilder.newClient()
-                .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new PinResponseLoggingFilter());
-
-        Response response = client.target(BASE_URL + "/charges")
-                .request(MediaType.APPLICATION_JSON)
-                .post(Entity.entity(pinChargePost, MediaType.APPLICATION_JSON_TYPE));
-
-        int statusCode = response.getStatus();
-        JsonObject responseJson = ApiResponseUtil.toJson(response.readEntity(String.class));
-        client.close();
-
-        return PinResponseUtil.validate(statusCode, responseJson);
-    }
-    /**
-    * createRecipient function is used to create a recipient of the payment
-    */
-    @Override
-    public ValidationResult createRecipient(PinRecipientPost pinRecipientPost) {
-        Client client = ClientBuilder.newClient()
-                .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new PinResponseLoggingFilter());
-
-        Response response = client.target(BASE_URL + "/recipients")
-                .request(MediaType.APPLICATION_JSON)
-                .post(Entity.entity(pinRecipientPost, MediaType.APPLICATION_JSON_TYPE));
-
-        int statusCode = response.getStatus();
-        JsonObject responseJson = ApiResponseUtil.toJson(response.readEntity(String.class));
-        client.close();
-
-        return PinResponseUtil.validate(statusCode, responseJson);
-    }
-
-    
-    /**
-    * transfer function is used to transfer the money
-    */
-    @Override
-    public ValidationResult transfer(PinTransferPost pinTransferPost) {
-        Client client = ClientBuilder.newClient()
-                .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new PinResponseLoggingFilter());
-
-        Response response = client.target(BASE_URL + "/transfers")
-                .request(MediaType.APPLICATION_JSON)
-                .post(Entity.entity(pinTransferPost, MediaType.APPLICATION_JSON_TYPE));
-
-        int statusCode = response.getStatus();
-        JsonObject responseJson = ApiResponseUtil.toJson(response.readEntity(String.class));
-        client.close();
-
-        return PinResponseUtil.validate(statusCode, responseJson);
-    }
-
-    /**
-    * editRecipient function is used to edit the information of the recipient 
-    */
-    @Override
-    public ValidationResult editRecipient(String recipientToken, PinRecipientPut pinRecipientPut) {
-        Client client = ClientBuilder.newClient()
-                .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
-                .register(new PinResponseLoggingFilter());
-
-        Response response = client.target(BASE_URL + "/recipients")
-                .path("{recipient-token}")
-                .resolveTemplate("recipient-token", recipientToken)
-                .request()
-                .put(Entity.entity(pinRecipientPut, MediaType.APPLICATION_JSON_TYPE));
-
-        int statusCode = response.getStatus();
-        JsonObject responseJson = ApiResponseUtil.toJson(response.readEntity(String.class));
-        client.close();
-
-        return PinResponseUtil.validate(statusCode, responseJson);
     }
 }

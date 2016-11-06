@@ -4,6 +4,10 @@ import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ *
+ * @author x
+ */
 @XmlRootElement(name = "card")
 public class PinCard implements Serializable {
     private String number;
@@ -18,6 +22,10 @@ public class PinCard implements Serializable {
     private String addressState;
     private String addressCountry;
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true)
     public String getNumber() {
         return number;
@@ -27,6 +35,10 @@ public class PinCard implements Serializable {
         this.number = number;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true, name = "expiry_month")
     public String getExpiryMonth() {
         return expiryMonth;
@@ -36,6 +48,10 @@ public class PinCard implements Serializable {
         this.expiryMonth = expiryMonth;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true, name = "expiry_year")
     public String getExpiryYear() {
         return expiryYear;
@@ -45,6 +61,10 @@ public class PinCard implements Serializable {
         this.expiryYear = expiryYear;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true)
     public String getCvc() {
         return cvc;
@@ -54,6 +74,10 @@ public class PinCard implements Serializable {
         this.cvc = cvc;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true)
     public String getName() {
         return name;
@@ -63,6 +87,10 @@ public class PinCard implements Serializable {
         this.name = name;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true, name = "address_line1")
     public String getAddressLine1() {
         return addressLine1;
@@ -72,6 +100,10 @@ public class PinCard implements Serializable {
         this.addressLine1 = addressLine1;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = false, name = "address_line2")
     public String getAddressLine2() {
         return addressLine2;
@@ -81,6 +113,10 @@ public class PinCard implements Serializable {
         this.addressLine2 = addressLine2;
     }
     
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true, name = "address_city")
     public String getAddressCity() {
         return addressCity;
@@ -90,6 +126,10 @@ public class PinCard implements Serializable {
         this.addressCity = addressCity;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = false, name = "address_postcode")
     public String getAddressPostcode() {
         return addressPostcode;
@@ -99,6 +139,10 @@ public class PinCard implements Serializable {
         this.addressPostcode = addressPostcode;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = false, name = "address_state")
     public String getAddressState() {
         return addressState;
@@ -108,6 +152,10 @@ public class PinCard implements Serializable {
         this.addressState = addressState;
     }
     
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true, name = "address_country")
     public String getAddressCountry() {
         return addressCountry;

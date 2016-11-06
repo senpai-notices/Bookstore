@@ -68,7 +68,7 @@ public class EmailBean {
             message.setSentDate(new Date());
             message.setText(body);
             Transport.send(message);
-        } catch (MessagingException ex) {
+        } catch (MessagingException ex) { // Throw this to service layer.
             ex.printStackTrace();
         }
     }

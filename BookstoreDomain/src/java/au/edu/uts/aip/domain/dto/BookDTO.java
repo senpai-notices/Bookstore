@@ -1,8 +1,5 @@
 package au.edu.uts.aip.domain.dto;
 
-/**
- *The needed libraries
- */
 import au.edu.uts.aip.domain.entity.Book;
 import au.edu.uts.aip.domain.entity.BookSales;
 import java.io.Serializable;
@@ -12,18 +9,17 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * A BookDTO is used to access all the information that is related to a book
- * It is a data transfer object for Book
- * describes the detail of a book
- * It has properties: id, title, author, publishYear, publisher, imgPath, isbn10 and isbn13, pageCount and sales
- * 
- *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ * A BookDTO is used to access all the information that is related to a book It is a data transfer
+ * object for Book describes the detail of a book It has properties: id, title, author, publishYear,
+ * publisher, imgPath, isbn10 and isbn13, pageCount and sales
+ *
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class BookDTO implements Serializable {
 
     /**
-     * the id of the book
+     * The unique ID of the book.
      */
     private long id;
     /**
@@ -35,7 +31,7 @@ public class BookDTO implements Serializable {
      */
     private String author;
     /**
-     * the publish year of the book
+     * the publishing year of the book
      */
     private int publishYear;
     /**
@@ -43,29 +39,33 @@ public class BookDTO implements Serializable {
      */
     private String publisher;
     /**
-     * the storage image location on the server
+     * The storage image location on the internet.
      */
     private String imgPath;
     private String isbn10;
     private String isbn13;
 
     /**
-     * the page number of the book
+     * The page count of the book.
      */
     private int pageCount;
     /**
-     * the sale records of the book
+     * The sale records of the book.
      */
     private List<BookSaleDTO> sales;
 
-    /*constructor of the BookDTO class*/
+    /**
+     * Empty constructor of the BookDTO class
+     */
     public BookDTO() {
 
     }
 
-    /**constructor of the BookDTO class with parameters
-     * the parameter passed to the constructor is the Book object 
-     * 
+    /**
+     * Constructor of the BookDTO class with parameters the parameter passed to the constructor is
+     * the Book object
+     *
+     * @param bookEntity
      */
     public BookDTO(Book bookEntity) {
         this.id = bookEntity.getId();
@@ -79,11 +79,12 @@ public class BookDTO implements Serializable {
         this.pageCount = bookEntity.getPageCount();
     }
 
-    /**constructor of the BookDTO class with parameters
-     * the parameter passed to the constructor:
-     * first parameter is book obejct
-     * second parameter is a book sales list
-     * 
+    /**
+     * constructor of the BookDTO class with parameters the parameter passed to the constructor:
+     * first parameter is book obejct second parameter is a book sales list
+     *
+     * @param bookEntity
+     * @param salesEntity
      */
     public BookDTO(Book bookEntity, List<BookSales> salesEntity) {
         this(bookEntity);
@@ -95,10 +96,9 @@ public class BookDTO implements Serializable {
     }
 
     /**
-    * {@link BookDTO#id}
-    * data type: long
-    * return a long value
-    */
+     * {@link BookDTO#id}
+     * @return 
+     */
     @XmlElement
     public long getId() {
         return id;
@@ -107,11 +107,11 @@ public class BookDTO implements Serializable {
     public void setId(long id) {
         this.id = id;
     }
+
     /**
-    * {@link BookDTO#title}
-    * data type: String
-    * return a String value
-    */
+     * {@link BookDTO#title}
+     * @return title
+     */
     @XmlElement
     public String getTitle() {
         return title;
@@ -122,10 +122,9 @@ public class BookDTO implements Serializable {
     }
 
     /**
-    * {@link BookDTO#author}
-    * data type: String
-    * return a String value
-    */
+     * {@link BookDTO#author}
+     * @return author
+     */
     @XmlElement
     public String getAuthor() {
         return author;
@@ -136,10 +135,9 @@ public class BookDTO implements Serializable {
     }
 
     /**
-    * {@link BookDTO#publishYear}
-    * data type: Integer
-    * return a int value
-    */
+     * {@link BookDTO#publishYear}
+     * @return publishYear
+     */
     @XmlElement
     public int getPublishYear() {
         return publishYear;
@@ -150,10 +148,9 @@ public class BookDTO implements Serializable {
     }
 
     /**
-    * {@link BookDTO#publisher}
-    * data type: String
-    * return a String value
-    */
+     * {@link BookDTO#publisher}
+     * @return publisher
+     */
     @XmlElement
     public String getPublisher() {
         return publisher;
@@ -164,10 +161,9 @@ public class BookDTO implements Serializable {
     }
 
     /**
-    * {@link BookDTO#imgPath}
-    * data type: String
-    * return a String value
-    */
+     * {@link BookDTO#imgPath}
+     * @return imgPath
+     */
     @XmlElement
     public String getImgPath() {
         return imgPath;
@@ -178,10 +174,9 @@ public class BookDTO implements Serializable {
     }
 
     /**
-    * {@link BookDTO#isbn10}
-    * data type: String
-    * return a String value
-    */
+     * {@link BookDTO#isbn10}
+     * @return isbn10
+     */
     @XmlElement
     public String getIsbn10() {
         return isbn10;
@@ -192,10 +187,9 @@ public class BookDTO implements Serializable {
     }
 
     /**
-    * {@link BookDTO#isbn13}
-    * data type: String
-    * return a String value
-    */
+     * {@link BookDTO#isbn13}
+     * @return isbn13
+     */
     @XmlElement
     public String getIsbn13() {
         return isbn13;
@@ -206,10 +200,9 @@ public class BookDTO implements Serializable {
     }
 
     /**
-    * {@link BookDTO#pageCount}
-    * data type: Integer
-    * return a int value
-    */
+     * {@link BookDTO#pageCount}
+     * @return pageCount
+     */
     @XmlElement
     public int getPageCount() {
         return pageCount;
@@ -220,10 +213,9 @@ public class BookDTO implements Serializable {
     }
 
     /**
-    * {@link BookDTO#sales}
-    * data type: List<BookSaleDTO>
-    * return a List object
-    */
+     * {@link BookDTO#sales}
+     * @return sales
+     */
     @XmlElement
     public List<BookSaleDTO> getSales() {
         return sales;

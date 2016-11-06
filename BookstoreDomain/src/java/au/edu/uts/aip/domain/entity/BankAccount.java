@@ -1,8 +1,5 @@
 package au.edu.uts.aip.domain.entity;
 
-/**
- *The needed libraries
- */
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,12 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * A data model class to access data in the Bank_account table in the database. 
- * A bank_account object describes information of the bank account of the user
+ * A data model class to access data in the Bank_account table in the database. A bank_account
+ * object describes information of the bank account of the user
  *
- * BankAccount entity has properties id, name, bsb and number
- * All the attributes of this model class are private attributes and all of them have relative get and set functions in
- * order to access the attributes
+ * BankAccount entity has properties id, name, bsb and number All the attributes of this model class
+ * are private attributes and all of them have relative get and set functions in order to access the
+ * attributes
  *
  * @author
  */
@@ -25,7 +22,7 @@ import javax.persistence.Table;
 public class BankAccount implements Serializable {
 
     /**
-     * the id of the bank_account record 
+     * the id of the bank_account record
      */
     private Long id;
     /**
@@ -41,11 +38,8 @@ public class BankAccount implements Serializable {
      */
     private String number;
 
-    
     /**
-     * {@link BankAccount#id}
-     * data type: long
-     * return a long value
+     * {@link BankAccount#id} data type: long return a long value
      */
     @Id
     @GeneratedValue
@@ -57,10 +51,8 @@ public class BankAccount implements Serializable {
         this.id = id;
     }
 
-      /**
-     * {@link BankAccount#name}
-     * data type: String
-     * return a String value
+    /**
+     * {@link BankAccount#name} data type: String return a String value
      */
     @Column(name = "name")
     public String getName() {
@@ -71,10 +63,8 @@ public class BankAccount implements Serializable {
         this.name = name;
     }
 
-      /**
-     * {@link BankAccount#bsb}
-     * data type: String
-     * return a String value
+    /**
+     * {@link BankAccount#bsb} data type: String return a String value
      */
     @Column(name = "bsb")
     public String getBsb() {
@@ -85,10 +75,8 @@ public class BankAccount implements Serializable {
         this.bsb = bsb;
     }
 
-     /**
-     * {@link BankAccount#number}
-     * data type: String
-     * return a String value
+    /**
+     * {@link BankAccount#number} data type: String return a String value
      */
     @Column(name = "number")
     public String getNumber() {
