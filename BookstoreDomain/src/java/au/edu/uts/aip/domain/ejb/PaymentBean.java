@@ -65,6 +65,92 @@ public class PaymentBean implements PaymentRemote {
     @PersistenceContext
     private EntityManager em;
 
+    @Override
+    public void checkout(CheckoutDTO checkoutDTO, String username){
+        User user = userBean.getUserEntity(username);
+        
+        // create orders
+        List<Long> saleIds = checkoutDTO.getItems().stream().map(CheckoutItemDTO::getSaleId).collect(Collectors.toList());
+        TypedQuery<BookSales> typedQuery = em.createNamedQuery("BookSales.findSalesByIds", BookSales.class);
+        typedQuery.setParameter("saleIds", saleIds);
+        List<BookSales> bookSales = typedQuery.getResultList();
+        
+        // generate order line from each bookSale
+        List<BookOrderLine> orderLineList = new ArrayList<>();
+        for(BookSales bookSale: bookSales){
+            CheckoutItemDTO matchedItem = null;
+            for (CheckoutItemDTO item: checkoutDTO.getItems()){
+                if (bookSale.getSalesId() == item.getSaleId()){
+                    matchedItem = item;
+                    break;
+                }
+            }
+            
+            if (matchedItem == null){
+                throw new RuntimeException("Sales of book " + bookSale.getBook().getTitle()
+                                            + " from seller " + bookSale.getSeller().getUsername()
+                                            + " is not exist");
+            }
+            
+            if (bookSale.getQuantity() < matchedItem.getBuyQuantity()){
+                throw new RuntimeException("Sales of book " + bookSale.getBook().getTitle()
+                                            + " from seller " + bookSale.getSeller().getUsername()
+                                            + " only have " + bookSale.getQuantity() + " books remains");
+            }
+            
+            BookOrderLine orderLine = new BookOrderLine();
+            orderLine.setBook(bookSale.getBook());
+            orderLine.setSeller(bookSale.getSeller());
+            orderLine.setBookCondition(bookSale.getCondition());
+            orderLine.setQuantity(matchedItem.getBuyQuantity());
+            orderLine.setUnitCost(bookSale.getPrice());
+            
+            orderLine.setQuantity(matchedItem.getBuyQuantity());
+            em.persist(orderLine);
+            orderLineList.add(orderLine);
+        }
+        
+        // add order lines to order
+        BookOrder bookOrder = new BookOrder();
+        bookOrder.setOrderLines(orderLineList);
+        bookOrder.setOrderTimestamp(new Date());
+        bookOrder.setPostageCost(checkoutDTO.getShippingCost());
+        em.persist(bookOrder);
+        
+        // create customer from card detail
+        PinCustomerPost pinCustomerPost = new PinCustomerPost();
+        pinCustomerPost.setEmail(user.getEmail());
+        pinCustomerPost.setCard(checkoutDTO.getCard());
+        
+        SerialResponse createCustomerResponse = createCustomer2(pinCustomerPost);
+        
+        // failed at create customer
+        if (createCustomerResponse.getStatusCode() != Response.Status.CREATED.getStatusCode()){
+            throw new ClientErrorException(createCustomerResponse.getBody().toString(), createCustomerResponse.getStatusCode());
+        }
+        
+        // calculate total cost & charge money
+        double totalCost = 0;
+        for(BookOrderLine orderLine: orderLineList){
+            totalCost += orderLine.getQuantity() * orderLine.getUnitCost();
+        }
+        totalCost += checkoutDTO.getShippingCost();
+        String description = "Order " + bookOrder.getId();
+        String customerToken = createCustomerResponse.getBody().getJsonObject("response").getString("token");
+        
+        PinChargePost pinChargePost = new PinChargePost();
+        pinChargePost.setAmount( (int)(totalCost * 100) + "") ;
+        pinChargePost.setCustomerToken(customerToken);
+        pinChargePost.setDescription(description);
+        pinChargePost.setEmail(user.getEmail());
+        
+        SerialResponse chargeResponse = charge2(pinChargePost);
+        // failed at charge
+        if (chargeResponse.getStatusCode() != Response.Status.CREATED.getStatusCode()){
+            throw new ClientErrorException(chargeResponse.getBody().toString(), chargeResponse.getStatusCode());
+        }
+    }
+    
     /**
     * createCustomer2 is used to create a customer
     * return ResponseDTO
@@ -334,91 +420,5 @@ public class PaymentBean implements PaymentRemote {
         client.close();
 
         return PinResponseUtil.validate(statusCode, responseJson);
-    }
-    
-    @Override
-    public void checkout(CheckoutDTO checkoutDTO, String username){
-        User user = userBean.getUserEntity(username);
-        
-        // create orders
-        List<Long> saleIds = checkoutDTO.getItems().stream().map(CheckoutItemDTO::getSaleId).collect(Collectors.toList());
-        TypedQuery<BookSales> typedQuery = em.createNamedQuery("BookSales.findSalesByIds", BookSales.class);
-        typedQuery.setParameter("saleIds", saleIds);
-        List<BookSales> bookSales = typedQuery.getResultList();
-        
-        // generate order line from each bookSale
-        List<BookOrderLine> orderLineList = new ArrayList<>();
-        for(BookSales bookSale: bookSales){
-            CheckoutItemDTO matchedItem = null;
-            for (CheckoutItemDTO item: checkoutDTO.getItems()){
-                if (bookSale.getSalesId() == item.getSaleId()){
-                    matchedItem = item;
-                    break;
-                }
-            }
-            
-            if (matchedItem == null){
-                throw new RuntimeException("Sales of book " + bookSale.getBook().getTitle()
-                                            + " from seller " + bookSale.getSeller().getUsername()
-                                            + " is not exist");
-            }
-            
-            if (bookSale.getQuantity() < matchedItem.getBuyQuantity()){
-                throw new RuntimeException("Sales of book " + bookSale.getBook().getTitle()
-                                            + " from seller " + bookSale.getSeller().getUsername()
-                                            + " only have " + bookSale.getQuantity() + " books remains");
-            }
-            
-            BookOrderLine orderLine = new BookOrderLine();
-            orderLine.setBook(bookSale.getBook());
-            orderLine.setSeller(bookSale.getSeller());
-            orderLine.setBookCondition(bookSale.getCondition());
-            orderLine.setQuantity(matchedItem.getBuyQuantity());
-            orderLine.setUnitCost(bookSale.getPrice());
-            
-            orderLine.setQuantity(matchedItem.getBuyQuantity());
-            em.persist(orderLine);
-            orderLineList.add(orderLine);
-        }
-        
-        // add order lines to order
-        BookOrder bookOrder = new BookOrder();
-        bookOrder.setOrderLines(orderLineList);
-        bookOrder.setOrderTimestamp(new Date());
-        bookOrder.setPostageCost(checkoutDTO.getShippingCost());
-        em.persist(bookOrder);
-        
-        // create customer from card detail
-        PinCustomerPost pinCustomerPost = new PinCustomerPost();
-        pinCustomerPost.setEmail(user.getEmail());
-        pinCustomerPost.setCard(checkoutDTO.getCard());
-        
-        SerialResponse createCustomerResponse = createCustomer2(pinCustomerPost);
-        
-        // failed at create customer
-        if (createCustomerResponse.getStatusCode() != Response.Status.CREATED.getStatusCode()){
-            throw new ClientErrorException(createCustomerResponse.getBody().toString(), createCustomerResponse.getStatusCode());
-        }
-        
-        // calculate total cost & charge money
-        double totalCost = 0;
-        for(BookOrderLine orderLine: orderLineList){
-            totalCost += orderLine.getQuantity() * orderLine.getUnitCost();
-        }
-        totalCost += checkoutDTO.getShippingCost();
-        String description = "Order " + bookOrder.getId();
-        String customerToken = createCustomerResponse.getBody().getJsonObject("response").getString("token");
-        
-        PinChargePost pinChargePost = new PinChargePost();
-        pinChargePost.setAmount( (int)(totalCost * 100) + "") ;
-        pinChargePost.setCustomerToken(customerToken);
-        pinChargePost.setDescription(description);
-        pinChargePost.setEmail(user.getEmail());
-        
-        SerialResponse chargeResponse = charge2(pinChargePost);
-        // failed at charge
-        if (chargeResponse.getStatusCode() != Response.Status.CREATED.getStatusCode()){
-            throw new ClientErrorException(chargeResponse.getBody().toString(), chargeResponse.getStatusCode());
-        }
     }
 }
