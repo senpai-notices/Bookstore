@@ -1,11 +1,17 @@
 package au.edu.uts.aip.domain.dto;
 
+import au.edu.uts.aip.domain.ejb.UserBean;
 import java.io.Serializable;
+import javax.ejb.EJB;
+import javax.naming.NamingException;
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class RegistrationDTO implements Serializable{
+    @EJB
+    private UserBean userBean;
+    
     private String username;
     private String fullname;
     private String email;
@@ -62,7 +68,7 @@ public class RegistrationDTO implements Serializable{
     }
     
     @AssertTrue(message = "Password and confirm password do not match")
-    public boolean isPasswordMatch(){
+    public boolean isPasswordMatch() {
         return this.password.equals(this.confirmPassword);
     }
 }

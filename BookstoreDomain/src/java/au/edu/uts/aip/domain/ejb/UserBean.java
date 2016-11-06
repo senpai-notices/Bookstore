@@ -34,6 +34,8 @@ import javax.persistence.TypedQuery;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import javax.validation.Valid;
+import javax.validation.ValidationException;
+import org.hibernate.validator.internal.engine.ConstraintViolationImpl;
 
 @Stateless
 @LocalBean
@@ -67,8 +69,6 @@ public class UserBean implements UserRemote {
     /**
      *
      * @param registraiontionDTO
-     * @param userDTO
-     * @param password
      * @return
      */
     @Override
@@ -79,7 +79,7 @@ public class UserBean implements UserRemote {
             ValidationResult result = new ValidationResult();
             String errorMessage = "Username " + registraiontionDTO.getUsername() + " already exists";
             result.addFormError("username", errorMessage);
-            return;
+            throw new RuntimeException(errorMessage);
         }
 
         userEntity = new User();

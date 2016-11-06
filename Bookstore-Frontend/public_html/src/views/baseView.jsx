@@ -20,6 +20,19 @@ class BaseView extends React.Component {
 		this.adminService = new AdminService()
 		this.handleChange = this.handleChange.bind(this)
 		this.handleFileChange = this.handleFileChange.bind(this)
+		this.removeErrorMessage = this.removeErrorMessage.bind(this)
+		this.removeFormErrorMessage = this.removeFormErrorMessage.bind(this)
+	}
+
+	removeErrorMessage(index){
+		console.log(index)
+		this.state.errors.splice(index, 1)
+		this.setState(this.state)
+	}
+
+	removeFormErrorMessage(formName){
+		delete this.state.formErrors[formName]
+		this.setState(this.state)
 	}
 
 	handleChange(event) {
