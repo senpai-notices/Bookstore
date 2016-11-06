@@ -1,13 +1,11 @@
 package au.edu.uts.aip.service.filter;
 
 import au.edu.uts.aip.domain.validation.ValidationResult;
-import javax.ejb.Singleton;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
 @Provider
-@Singleton
 public class RuntimeExceptionMapper implements ExceptionMapper<RuntimeException> {
 
     @Override

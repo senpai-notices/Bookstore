@@ -122,6 +122,13 @@ public class UserResource {
         userBean.updateRecipientToken(username, token);
         return Response.ok().build();
     }
+    
+    @GET
+    @Path("orders")
+    public Response getOrders(){
+        
+        return Response.ok().build();
+    }
 
     /**
      * Retrieve a list of user accounts with filter Only administrators can access this resource
