@@ -50,7 +50,7 @@ public class PostalDataBean {
 
     /**
      * Get the state that the postcode belongs to. Returns a SerialResponse (JSON body and HTTP
-     * status code). The body contains the name of the state.
+     * status code). The body contains the name of the state, if it exists.
      *
      * Example 1: input 3000 -> returns SerialResponse containing the strings "VIC" and "Victoria"
      * and also status code 200

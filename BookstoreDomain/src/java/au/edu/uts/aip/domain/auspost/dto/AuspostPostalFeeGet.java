@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * AuspostPostageFeeGet class is a DTO class 
+ * AuspostPostalFeeGet class is a DTO class 
  The class is used to retrieve the postage related information
 
  It has properties: fromPostagecode, topPostcode, length, width, height, weight and service code
@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author team San Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
-public class AuspostPostageFeeGet {
+public class AuspostPostalFeeGet {
 
     /**
      * the postcode
@@ -45,7 +45,7 @@ public class AuspostPostageFeeGet {
     private String serviceCode;
 
     /**
-    * {@link AuspostPostageFeeGet#fromPostcode}
+    * {@link AuspostPostalFeeGet#fromPostcode}
     * data type: String
     * return a String value
     */
@@ -59,7 +59,7 @@ public class AuspostPostageFeeGet {
     }
 
     /**
-    * {@link AuspostPostageFeeGet#toPostcode}
+    * {@link AuspostPostalFeeGet#toPostcode}
     * data type: String
     * return a String value
     */
@@ -73,7 +73,7 @@ public class AuspostPostageFeeGet {
     }
 
     /**
-    * {@link AuspostPostageFeeGet#length}
+    * {@link AuspostPostalFeeGet#length}
     * data type: Integer
     * return an int value
     */
@@ -87,7 +87,7 @@ public class AuspostPostageFeeGet {
     }
 
     /**
-    * {@link AuspostPostageFeeGet#width}
+    * {@link AuspostPostalFeeGet#width}
     * data type: Integer
     * return an int value
     */
@@ -101,7 +101,7 @@ public class AuspostPostageFeeGet {
     }
 
     /**
-    * {@link AuspostPostageFeeGet#height}
+    * {@link AuspostPostalFeeGet#height}
     * data type: Integer
     * return an int value
     */
@@ -115,7 +115,7 @@ public class AuspostPostageFeeGet {
     }
 
     /**
-    * {@link AuspostPostageFeeGet#weight}
+    * {@link AuspostPostalFeeGet#weight}
     * data type: Double
     * return a double value
     */
@@ -129,7 +129,7 @@ public class AuspostPostageFeeGet {
     }
 
     /**
-    * {@link AuspostPostageFeeGet#serviceCode}
+    * {@link AuspostPostalFeeGet#serviceCode}
     * data type: String
     * return a String value
     */

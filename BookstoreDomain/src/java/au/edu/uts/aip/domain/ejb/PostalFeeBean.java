@@ -1,6 +1,6 @@
 package au.edu.uts.aip.domain.ejb;
 
-import au.edu.uts.aip.domain.auspost.dto.AuspostPostageFeeGet;
+import au.edu.uts.aip.domain.auspost.dto.AuspostPostalFeeGet;
 import au.edu.uts.aip.domain.auspost.filter.AuspostAuthFilter;
 import au.edu.uts.aip.domain.util.ApiResponseUtil;
 import javax.ejb.Stateless;
@@ -51,7 +51,7 @@ public class PostalFeeBean {
 
     // <editor-fold defaultstate="collapsed" desc="unused">
     @Deprecated
-    public JsonObject calculatePostageCostJson(AuspostPostageFeeGet auspostPostageGet) {
+    public JsonObject calculatePostageCostJson(AuspostPostalFeeGet auspostPostageGet) {
 
         Client client = ClientBuilder.newClient()
                 .register(new AuspostAuthFilter(API_KEY));
