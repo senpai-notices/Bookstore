@@ -3,6 +3,7 @@ package au.edu.uts.aip.domain.ejb;
 import au.edu.uts.aip.domain.dto.AddressDTO;
 import au.edu.uts.aip.domain.dto.DocumentsDTO;
 import au.edu.uts.aip.domain.dto.RegistrationDTO;
+import au.edu.uts.aip.domain.dto.ResetPasswordDTO;
 import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.entity.Address;
 import au.edu.uts.aip.domain.entity.Role;
@@ -176,35 +177,33 @@ public class UserBean implements UserRemote {
     }
     
     @Override
-    public void resetPassword(String token, String username, String newPassword) throws PasswordResetException {
-        User user = getUserEntity(username);
+    public void resetPassword(@Valid ResetPasswordDTO resetPasswordDTO) {
+        User user = getUserEntity(resetPasswordDTO.getUsername());
         
         if (user == null){
-            throw new PasswordResetException("Account does not exists");
+            throw new RuntimeException("Account does not exists");
         }
         
         if (user.getRole().getRoleName().equals(RoleType.BANNED.toString())) {
-            throw new PasswordResetException("Account has been banned");
+            throw new RuntimeException("Account has been banned");
         }
         
-        if (!token.equals(user.getResetPasswordToken())){
-            throw new PasswordResetException("Invalid token");
+        if (!resetPasswordDTO.getResetToken().equals(user.getResetPasswordToken())){
+            throw new RuntimeException("Invalid token");
         }
         
         try{
             Jwts.parser().setSigningKey(user.getPassword())
-                    .requireSubject(user.getUsername()).parseClaimsJws(token);
+                    .requireSubject(user.getUsername())
+                    .parseClaimsJws(resetPasswordDTO.getResetToken());
+            
         } catch (UnsupportedJwtException | MalformedJwtException | SignatureException | IllegalArgumentException ex){
-            throw new PasswordResetException("Invalid token");
+            throw new RuntimeException("Invalid token");
         } catch (ExpiredJwtException ex){
-            throw new PasswordResetException("Token expired");
+            throw new RuntimeException("Token expired");
         }
         
-        if (newPassword.length() < 6){
-            throw new PasswordResetException("Password must be as least 6 characters long");
-        }
-        
-        user.setPassword(SHA.hash256(newPassword));
+        user.setPassword(SHA.hash256(resetPasswordDTO.getNewPassword()));
     }
 
     @Override

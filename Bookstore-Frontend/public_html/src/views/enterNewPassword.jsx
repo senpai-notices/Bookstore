@@ -2,7 +2,7 @@ import React from 'react'
 import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
 import { connect } from 'react-redux'
 import * as bs from 'react-bootstrap'
-import { FormInputText } from 'components'
+import { FormInputText, ErrorDisplay } from 'components'
 import { browserHistory } from 'react-router'
 
 class EnterNewPasswordView extends BaseView {
@@ -27,28 +27,31 @@ class EnterNewPasswordView extends BaseView {
 	setNewPassword(event){
 		event.preventDefault()
 
-		if (this.state.newPassword !== this.state.confirmNewPassword){
-			this.state.message = "Password can confirm new password do not match"
-			this.state.messageStyle = "danger"
-			this.setState(this.state)
-			return
-		}
-
 		this.state.submitting = true
 		this.state.message = ""
 		this.setState(this.state)
-		this.userService.resetPassword(this.props.location.query.token, this.props.location.query.username, this.state.newPassword)
+
+		const data = {
+			resetToken: this.props.location.query.token,
+			username: this.props.location.query.username,
+			newPassword: this.state.newPassword,
+			confirmNewPassword: this.state.confirmNewPassword
+		}
+
+		this.userService.resetPassword(data)
 			.then((resp) => {
-				this.state.messageStyle = "success"
-				this.state.message = "Your password has been reset, your can now login with the new password"
+				this.state.resetSuccess = true
+				this.state.errors = []
 			})
 			.fail((err) => {
 				console.log(err)
-				this.state.messageStyle = "danger"
-				if (err.status === 500){
-					this.state.message = (<h3>Server error</h3>)
+				if (err.status === 400){
+					const validateResult = JSON.parse(err.response)
+					this.state.formErrors = validateResult.formErrors
+					this.state.errors = validateResult.errors
 				} else {
-					this.state.message = (<h3>{err.response}</h3>)
+					this.state.errors = []
+					this.state.errors.push("Server error")
 				}
 			})
 			.always(() => {
@@ -59,13 +62,18 @@ class EnterNewPasswordView extends BaseView {
 
 	render(){
 		const user = this.props.user
+		const formErrors = this.state.formErrors
 
-		const message = this.state.message && (
-			<bs.Alert bsStyle={this.state.messageStyle} className={'text-center'}
-					onDismiss={() => this.setState({message: ""})}>
-				{this.state.message}
-			</bs.Alert>
-		)
+		let message = ""
+		if (this.state.resetSuccess){
+			message = (
+				<bs.Alert bsStyle="success" className={'text-center'} onDismiss={() => this.setState(resetSuccess: false)}>
+					Your password has been reset, your can now login with the new password
+				</bs.Alert>
+			)
+		} else {
+			message = (<ErrorDisplay errors={this.state.errors} onRemove={(index) => this.removeErrorMessage(index)}/>)
+		}
 
 		return(
 			<bs.Col xs={12} md={6} mdOffset={3}>
@@ -83,13 +91,15 @@ class EnterNewPasswordView extends BaseView {
 						<bs.Form horizontal onSubmit={this.setNewPassword}>
 							<FormInputText label="New password" addonBefore="glyph-lock" type="password"
 											name="newPassword" value={this.state.newPassword} 
-											required hideAsterisk
-											onChange={this.handleChange} />
+											errorMessage={formErrors.newPassword} 
+											onFocus={() => this.removeFormErrorMessage("newPassword")}
+											required hideAsterisk onChange={this.handleChange} />
 
 							<FormInputText label="Confirm new password" addonBefore="glyph-lock" type="password" 
 											name="confirmNewPassword" value={this.state.confirmNewPassword} 
-											required hideAsterisk
-											onChange={this.handleChange} />
+											errorMessage={formErrors.passwordMatch} 
+											onFocus={() => this.removeFormErrorMessage("passwordMatch")}
+											required hideAsterisk onChange={this.handleChange} />
 
 							<bs.FormGroup bsSize="lg">
 								<bs.Button type="submit" bsStyle="primary" bsSize="lg" block disabled={this.state.submitting}>

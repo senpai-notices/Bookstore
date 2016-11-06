@@ -12,8 +12,6 @@ class RegisterForm extends BaseView {
 
 		this.register = this.register.bind(this)
 		this.sendActivateEmail = this.sendActivateEmail.bind(this)
-		this.state.errors = []
-		this.state.formErrors = {}
 	}
 
 	register(event){
@@ -94,8 +92,7 @@ class RegisterForm extends BaseView {
 
 				<bs.Col xsOffset={1} xs={10}>
 
-					<ErrorDisplay errors={this.state.errors} 
-						onRemove={(index) => this.removeErrorMessage(index)}/>
+					<ErrorDisplay errors={this.state.errors} onRemove={(index) => this.removeErrorMessage(index)}/>
 					<bs.Form horizontal onSubmit={this.register}>
 
 						<FormInputText label="Fullname" addonBefore="glyph-user" 

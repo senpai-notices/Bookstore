@@ -14,7 +14,7 @@ class ErrorDisplay extends React.Component {
 		errors.forEach((error) => {
 			let i = index
 			errorDisplay.push(
-				<bs.Alert key={index} bsStyle="danger" 
+				<bs.Alert key={index} bsStyle="danger" className={'text-center'}
 					onDismiss={() => (this.props.onRemove && this.props.onRemove(i))}>
 					{error}
 				</bs.Alert>

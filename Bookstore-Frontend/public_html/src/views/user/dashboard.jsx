@@ -14,8 +14,6 @@ class UserDashboardView extends BaseView {
 		this.uploadDocuments = this.uploadDocuments.bind(this)
 		this.readFile = this.readFile.bind(this)
 		this.onAddressSelected = this.onAddressSelected.bind(this)
-
-		this.state.formErrors = {}
 	}
 
 	changePassword(event){
@@ -108,13 +106,13 @@ class UserDashboardView extends BaseView {
 
 					<bs.Form horizontal onSubmit={this.uploadDocuments} encType="multipart/form-data">
 						
-						<FormInputText label="Your ID" type="file" name="verification_id" 
+						<FormInputText label="Your ID (accepted file types: pdf/jpeg/png)" type="file" name="verification_id" 
 										onChange={(event) => this.handleFileChange(event, "verification_id")} 
-										required disabled={this.state.uploading}/>
+										required hideAsterisk disabled={this.state.uploading}/>
 
-						<FormInputText label="Your proof of address" type="file" name="address_proof" 
+						<FormInputText label="Your proof of address (accepted file types: pdf/jpeg/png)" type="file" name="address_proof" 
 										onChange={(event) => this.handleFileChange(event, "address_proof")} 
-										required disabled={this.state.uploading}/>
+										required hideAsterisk disabled={this.state.uploading}/>
 
 						<bs.Row>
 						<bs.Col xs={7}>

@@ -29,9 +29,15 @@ class LoginForm extends BaseView{
 			})
 	}
 
+	componentDidMount(){
+		if (this.props.user.status === 'loggedIn'){
+			browserHistory.replace('/')
+		}
+	}
+
 	componentWillReceiveProps(nextProps){
 		if (nextProps.user.status === "loggedIn") {
-			browserHistory.replace({ pathname: "/"})
+			browserHistory.replace('/')
 		}
 	}
 

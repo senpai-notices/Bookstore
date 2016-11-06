@@ -114,22 +114,15 @@ class UserService {
 		})
 	}
 
-	resetPassword(token, username, newPassword){
-		console.log(token)
-		console.log(username)
-		console.log(newPassword)
+	resetPassword(data){
 		return reqwest({
-			url: config.getServerAddress() + '/user/reset/',
+			url: config.getServerAddress() + '/user/reset',
 			method: 'post',
 			crossOrigin: true,
 			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded'
+				'Content-Type': 'application/json'
 			},
-			data: {
-				token: token,
-				username: username,
-				newPassword: newPassword
-			}
+			data: JSON.stringify(data)
 		})
 	}
 

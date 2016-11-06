@@ -2,6 +2,7 @@ package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.dto.AddressDTO;
 import au.edu.uts.aip.domain.dto.RegistrationDTO;
+import au.edu.uts.aip.domain.dto.ResetPasswordDTO;
 import au.edu.uts.aip.domain.exception.ActivationException;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.dto.UserDTO;
@@ -102,22 +103,15 @@ public class UserResource {
     
     /**
      * Reset user's password
-     * @param token
-     * @param username
-     * @param newPassword
+     * @param resetPasswordDTO
      * @return 
      */
     @POST
+    @Consumes(MediaType.APPLICATION_JSON)
     @Path("reset")
-    public Response resetPassword(@FormParam("token") String token,
-                                @FormParam("username") String username,
-                                @FormParam("newPassword") String newPassword){
-        try {
-            userBean.resetPassword(token, username, newPassword);
-            return Response.ok().build();
-        } catch (PasswordResetException ex){
-            return Response.status(Response.Status.BAD_REQUEST).entity(ex.getMessage()).build();
-        }
+    public Response resetPassword(@Valid ResetPasswordDTO resetPasswordDTO){
+        userBean.resetPassword(resetPasswordDTO);
+        return Response.ok().build();
     }
 
     /**

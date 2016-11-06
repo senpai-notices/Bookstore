@@ -3,6 +3,7 @@ package au.edu.uts.aip.domain.remote;
 import au.edu.uts.aip.domain.dto.AddressDTO;
 import au.edu.uts.aip.domain.dto.DocumentsDTO;
 import au.edu.uts.aip.domain.dto.RegistrationDTO;
+import au.edu.uts.aip.domain.dto.ResetPasswordDTO;
 import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.exception.ActivationException;
 import au.edu.uts.aip.domain.exception.PasswordResetException;
@@ -26,7 +27,7 @@ public interface UserRemote {
     
     void activateAccount(String token, String username) throws ActivationException;
     
-    void resetPassword(String token, String username, String newPassword) throws PasswordResetException;
+    void resetPassword(@Valid ResetPasswordDTO resetPasswordDTO);
 
     void updateVerificationDocuments(String username, String documentType, String filePath);
     
