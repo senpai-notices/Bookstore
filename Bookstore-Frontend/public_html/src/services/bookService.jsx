@@ -132,7 +132,7 @@ class BookService {
 
 	checkout(data){
 		return reqwest({
-			url: config.getServerAddress() + '/payment/checkout',
+			url: config.getServerAddress() + '/order/checkout',
 			method: 'post',
 			crossOrigin: true,
 			withCredentials: true,

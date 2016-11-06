@@ -31,5 +31,4 @@ public interface PaymentRemote {
     JsonObject fetchRecipient(String recipientToken);
 
     SerialResponse editRecipient2(String recipientToken, PinRecipientPut pinRecipientPut);
-    void checkout(CheckoutDTO checkoutDTO, String username);
 }

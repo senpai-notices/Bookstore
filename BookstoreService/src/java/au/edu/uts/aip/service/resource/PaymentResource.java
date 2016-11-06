@@ -39,16 +39,6 @@ public class PaymentResource {
     private SecurityContext securityContext;
     
     @POST
-    @Path("checkout")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @RolesAllowed({"USER", "VERIFYING USER", "VERIFIED USER", "ADMIN"})
-    public Response checkout(CheckoutDTO checkoutDTO){
-        String username = securityContext.getUserPrincipal().getName();
-        paymentBean.checkout(checkoutDTO, username);;
-        return Response.ok().build();
-    }
-    
-    @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
