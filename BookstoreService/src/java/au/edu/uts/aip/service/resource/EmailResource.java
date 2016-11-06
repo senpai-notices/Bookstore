@@ -181,7 +181,9 @@ public class EmailResource {
     @POST
     @RolesAllowed({"VERIFIED"})
     @Path("/order/{order-id}/complete")
-    public Response orderComplete(@PathParam("order-id") String orderId, String usernameBuyer, String usernameSeller) {
+    public Response orderComplete(@PathParam("order-id") String orderId/*, String usernameBuyer, String usernameSeller*/) {
+        String usernameBuyer = "";
+        String usernameSeller = "";
         try {
             // Email the buyer
             UserDTO buyer = userBean.getUser(usernameBuyer);
