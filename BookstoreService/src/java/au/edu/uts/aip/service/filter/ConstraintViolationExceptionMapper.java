@@ -13,7 +13,7 @@ import javax.ws.rs.ext.ExceptionMapper;
 
 @Provider
 @Priority(Priorities.ENTITY_CODER)
-public class ValidationFilter implements ExceptionMapper<ConstraintViolationException> {
+public class ConstraintViolationExceptionMapper implements ExceptionMapper<ConstraintViolationException> {
 
     @Override
     public Response toResponse(ConstraintViolationException exception) {
@@ -27,7 +27,7 @@ public class ValidationFilter implements ExceptionMapper<ConstraintViolationExce
             result.addFormError(paths.get(0), constraint.getMessage());
         }
         
-        return Response.status(Response.Status.CONFLICT).entity(result.toJson()).build();
+        return Response.status(Response.Status.BAD_REQUEST).entity(result.toJson()).build();
     }
     
 }

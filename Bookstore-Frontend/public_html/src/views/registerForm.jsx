@@ -3,7 +3,7 @@ import * as bs from 'react-bootstrap'
 import { Glyphicon } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
-import { FormInputText } from 'components'
+import { FormInputText, ErrorDisplay } from 'components'
 
 class RegisterForm extends BaseView {
 
@@ -12,15 +12,12 @@ class RegisterForm extends BaseView {
 
 		this.register = this.register.bind(this)
 		this.sendActivateEmail = this.sendActivateEmail.bind(this)
+		this.state.errors = []
+		this.state.formErrors = {}
 	}
 
 	register(event){
 		event.preventDefault()
-
-		// if (this.state.password != this.state.password_confirm){
-		// 	this.props.dispatch.setFormErrorMessage("password_confirm", "Password confirm does not match")
-		// 	return
-		// }
 
 		this.state.submitting = true
 		this.setState(this.state)
@@ -31,12 +28,12 @@ class RegisterForm extends BaseView {
 				this.sendActivateEmail(null)
 			})
 			.fail((err) => {
-				if (err.status === 409){ // conflict
-					let validateResult = JSON.parse(err.response)
-					console.log(validateResult)
-					this.props.dispatch.setValidationMessage(validateResult)
-				} else if (err.status === 500) { // internal server error
-					this.props.dispatch.addErrorMessage("Cannot create account, please try again")
+				if (err.status === 400){ 
+					const validateResult = JSON.parse(err.response)
+					this.state.errors = validateResult.errors
+					this.state.formErrors = validateResult.form_errors
+				} else { 
+					this.state.errors.push(<h3>Cannot create account, please try again</h3>)
 				}
 			})
 			.always((resp) => {
@@ -62,20 +59,11 @@ class RegisterForm extends BaseView {
 
 		if (this.state.registerSuccess){
 
-			let requestTokenButton = ""
-			if (this.state.requestingToken){
-				requestTokenButton = (
-					<bs.Button bsStyle="primary" disabled>
-						Please wait a few seconds before requesting another email
-					</bs.Button>
-				)
-			} else {
-				requestTokenButton = (
-					<bs.Button bsStyle="primary" onClick={this.sendActivateEmail}>
-						Resend activation email
-					</bs.Button>
-				)
-			}
+			const requestTokenButton = (
+				<bs.Button bsStyle="primary" disabled={this.state.requestingToken} onClick={this.sendActivateEmail}>
+					{(this.state.requestingToken && "Sending email") || "Resend activation email"}
+				</bs.Button>
+			)
 
 			return (
 				<bs.Col xs={12} md={6} mdOffset={3}>
@@ -97,17 +85,6 @@ class RegisterForm extends BaseView {
 			)
 		}
 
-		const {errors, form_errors} = this.props.validationMessage
-
-		let errorDisplay = ""
-		if (errors.length > 0){
-			errorDisplay = (
-				<bs.Alert bsStyle="danger" onDismiss={this.props.dispatch.removeValidationMessage}>
-
-				</bs.Alert>
-			)
-		}
-
 		return (
 			<bs.Col xs={12}  md={6} mdOffset={3}>
 				<div className='text-center'>
@@ -116,36 +93,39 @@ class RegisterForm extends BaseView {
 				</div>
 
 				<bs.Col xsOffset={1} xs={10}>
+
+					<ErrorDisplay errors={this.state.errors} 
+						onRemove={(index) => this.removeErrorMessage(index)}/>
 					<bs.Form horizontal onSubmit={this.register}>
 
 						<FormInputText label="Fullname" addonBefore="glyph-user" 
 										name="fullname" placeholder="Please enter your fullname"
-										value={this.state.fullname} errorMessage={form_errors.fullname}
-										onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("fullname")}
+										value={this.state.fullname} errorMessage={this.state.formErrors.fullname}
+										onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage("fullname")}
 										required/>
 
 						<FormInputText label="Username" addonBefore="glyph-user" 
 										name="username" placeholder="Please enter your username"
-										value={this.state.username} errorMessage={form_errors.username}
-										onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("username")}
+										value={this.state.username} errorMessage={this.state.formErrors.username}
+										onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage("username")}
 										required/>
 
 						<FormInputText label="Email" addonBefore="strong-@" type="email"
 										name="email" placeholder="Please enter your email address"
-										value={this.state.email} errorMessage={form_errors.email}
-										onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("email")}
+										value={this.state.email} errorMessage={this.state.formErrors.email}
+										onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage("email")}
 										required/>
 
 						<FormInputText label="Password" addonBefore="glyph-lock" type="password"
 										name="password" placeholder="Please select a password for your account"
-										value={this.state.password} errorMessage={form_errors.password}
-										onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("password")}
+										value={this.state.password} errorMessage={this.state.formErrors.password}
+										onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage("password")}
 										required/>
 
 						<FormInputText label="Confirm password" addonBefore="glyph-lock" type="password"
 										name="confirmPassword" placeholder="Please retype your password"
-										value={this.state.confirmPassword} errorMessage={form_errors.passwordMatch}
-										onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("passwordMatch")}
+										value={this.state.confirmPassword} errorMessage={this.state.formErrors.passwordMatch}
+										onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage("passwordMatch")}
 										required/>
 
 						<bs.FormGroup bsSize="lg">
