@@ -90,7 +90,7 @@ class CheckoutView extends BaseView {
 			})
 			.fail((err) => {
 				console.log(err)
-				this.state.form_errors = JSON.parse(err.response).form_errors
+				this.state.form_errors = JSON.parse(err.response).formErrors
 				this.state.errors = JSON.parse(err.response).errors
 				this.setState(this.state)
 			})

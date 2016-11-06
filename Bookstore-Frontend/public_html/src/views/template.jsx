@@ -27,9 +27,8 @@ class Template extends BaseView{
 				this.props.dispatch.login(loggedInUser)
 			})
 			.fail((err) => {
-				this.props.dispatch.addErrorMessage("Cannot login, please try again")
 				this.props.dispatch.logout()
-				browserHistory.push({ pathname: "/login"})
+				browserHistory.push({ pathname: "/login", state: {errors: ["Cannot login, please try again"]}})
 			})
 	}
 

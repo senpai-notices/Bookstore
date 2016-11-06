@@ -1,6 +1,5 @@
 import { createStore, combineReducers } from 'redux'
 import { UserReducer as user } from 'reducers/user'
-import { ValidationReducer as validationMessage } from 'reducers/validation'
 import { ShoppingCartReducer as shoppingCart } from 'reducers/shoppingCart'
 
 const SERVER_ADDRESS = 'http://localhost:8080/BookstoreService/api';
@@ -21,7 +20,7 @@ const initialState = {
 }
 
 const mainReducer = combineReducers({
-	user, shoppingCart, validationMessage
+	user, shoppingCart
 })
 
 // redux store

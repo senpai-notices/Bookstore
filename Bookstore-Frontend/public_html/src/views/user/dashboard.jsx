@@ -13,19 +13,13 @@ class UserDashboardView extends BaseView {
 		this.changePassword = this.changePassword.bind(this)
 		this.uploadDocuments = this.uploadDocuments.bind(this)
 		this.readFile = this.readFile.bind(this)
-		this.removeFormError = this.removeFormError.bind(this)
 		this.onAddressSelected = this.onAddressSelected.bind(this)
 
-		this.state.form_errors = {}
+		this.state.formErrors = {}
 	}
 
 	changePassword(event){
 		event.preventDefault()
-	}
-
-	removeFormError(formName){
-		this.state.form_errors[formName] = ""
-		this.setState(this.state)
 	}
 
 	onAddressSelected(event){
@@ -95,10 +89,9 @@ class UserDashboardView extends BaseView {
 	}
 
 	render(){
-		const {errors, form_errors} = this.props.validationMessage
 		const user = this.props.user
-		const addressInput = (<FormAddressInput label="Your Address" name="address" value={this.state.address} errorMessage={form_errors.address}
-									onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("address")} required />)
+		const formErrors = this.state.formErrors
+		const errors = this.state.errors
 
 		let verifyAccountSection = "";
 		
@@ -115,20 +108,20 @@ class UserDashboardView extends BaseView {
 
 					<bs.Form horizontal onSubmit={this.uploadDocuments} encType="multipart/form-data">
 						
-						<FormInputText label="Your ID" type="file" name="verification_id" errorMessage={form_errors.verification_id} 
+						<FormInputText label="Your ID" type="file" name="verification_id" 
 										onChange={(event) => this.handleFileChange(event, "verification_id")} 
-										onFocus={() => this.props.dispatch.setFormErrorMessage("verification_id")} required disabled={this.state.uploading}/>
+										required disabled={this.state.uploading}/>
 
 						<FormInputText label="Your proof of address" type="file" name="address_proof" 
-										errorMessage={form_errors.address_proof} onChange={(event) => this.handleFileChange(event, "address_proof")} 
-										onFocus={() => this.props.dispatch.setFormErrorMessage("address_proof")} required disabled={this.state.uploading}/>
+										onChange={(event) => this.handleFileChange(event, "address_proof")} 
+										required disabled={this.state.uploading}/>
 
 						<bs.Row>
 						<bs.Col xs={7}>
 								<FormAddressInput label="Address line 1" name="address_line1"
-													value={this.state.address_line1} errorMessage={form_errors.address_line1}
+													value={this.state.address_line1} errorMessage={this.state.formErrors.address_line1}
 													onAddressSelected={this.onAddressSelected}
-													onFocus={() => this.removeFormError('address_line1')}
+													onFocus={() => this.removeFormErrorMessage('address_line1')}
 													onChange={this.handleChange} ref={(input) => this.addressSuggest = input}
 													required/>
 							</bs.Col>
@@ -136,8 +129,8 @@ class UserDashboardView extends BaseView {
 						<bs.Row>
 							<bs.Col xs={12}>
 								<FormInputText label="Address line 2" name="address_line2"
-												value={this.state.address_line2} errorMessage={this.state.form_errors.address_line2}
-												onChange={this.handleChange} onFocus={() => this.removeFormError('address_line2')}
+												value={this.state.address_line2} errorMessage={formErrors.address_line2}
+												onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_line2')}
 												style={{width: "209%"}}/>
 							</bs.Col>
 						</bs.Row>
@@ -145,14 +138,14 @@ class UserDashboardView extends BaseView {
 						<bs.Row>
 							<bs.Col xs={4}>
 								<FormInputText label="City" name="address_city"
-												value={this.state.address_city} errorMessage={this.state.form_errors.address_city}
-												onChange={this.handleChange} onFocus={() => this.removeFormError('address_city')}
+												value={this.state.address_city} errorMessage={formErrors.address_city}
+												onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_city')}
 												required/>
 							</bs.Col>
 							<bs.Col xs={4}>
 								<FormInputText label="State" name="address_state"
-												value={this.state.address_state} errorMessage={this.state.form_errors.address_state}
-												onChange={this.handleChange} onFocus={() => this.removeFormError('address_state')}
+												value={this.state.address_state} errorMessage={formErrors.address_state}
+												onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_state')}
 												required/>
 							</bs.Col>
 						</bs.Row>
@@ -160,14 +153,14 @@ class UserDashboardView extends BaseView {
 						<bs.Row>
 							<bs.Col xs={4}>
 								<FormInputText label="Postcode" name="address_postcode"
-												value={this.state.address_postcode} errorMessage={this.state.form_errors.address_postcode}
-												onChange={this.handleChange} onFocus={() => this.removeFormError('address_postcode')}
+												value={this.state.address_postcode} errorMessage={formErrors.address_postcode}
+												onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_postcode')}
 												required/>
 							</bs.Col>
 							<bs.Col xs={4}>
 								<FormInputText label="Country" name="address_country"
-												value={this.state.address_country} errorMessage={this.state.form_errors.address_country}
-												onChange={this.handleChange} onFocus={() => this.removeFormError('address_country')}
+												value={this.state.address_country} errorMessage={formErrors.address_country}
+												onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_country')}
 												required/>
 							</bs.Col>
 
@@ -205,16 +198,16 @@ class UserDashboardView extends BaseView {
 				<hr/>
 				<bs.Form horizontal onSubmit={this.changePassword}>
 					<FormInputText label="Current password" type="password" name="password" value={this.state.password} 
-									errorMessage={form_errors.password} onChange={this.handleChange} 
-									onFocus={() => this.props.dispatch.setFormErrorMessage("password")} required/>
+									errorMessage={formErrors.password} onChange={this.handleChange} 
+									onFocus={() => this.removeFormErrorMessage("password")} required/>
 
-					<FormInputText label="New password" type="password" name="new_password" value={this.state.new_password} 
-									errorMessage={form_errors.new_password} onChange={this.handleChange} 
-									onFocus={() => this.props.dispatch.setFormErrorMessage("new_password")} required/>
+					<FormInputText label="New password" type="password" name="newPassword" value={this.state.newPassword} 
+									errorMessage={formErrors.newPassword} onChange={this.handleChange} 
+									onFocus={() => this.removeFormErrorMessage("newPassword")} required/>
 
-					<FormInputText label="Confirm new password" type="password" name="confirm_new_password" 
-									value={this.state.confirm_new_password} errorMessage={form_errors.confirm_new_password}
-									onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("confirm_new_password")}
+					<FormInputText label="Confirm new password" type="password" name="confirmNewPassword" 
+									value={this.state.confirmNewPassword} errorMessage={formErrors.passwordMatch}
+									onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage("passwordMatch")}
 									required/>
 
 					<bs.FormGroup bsSize="lg">
