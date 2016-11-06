@@ -91,6 +91,8 @@ Dulguigan,NSW,2484
 Dunluce,VIC,3472
 Dyraaba,NSW,2470
 East Ipswich,QLD,4305
+East Melbourne,VIC,3002
+East Melbourne,VIC,8002
 Eastville,VIC,3463
 Edith,NSW,2787
 Elgin Vale,QLD,4615
@@ -176,9 +178,18 @@ Maroochydore,QLD,4558
 Marys Mount,NSW,2380
 Maylands,WA,6051
 Meandarra,QLD,4422
+Melaleuca,WA,6079
+Melawondi,QLD,4570
+Melba,ACT,2615
+Melbergen,NSW,2669
 Melbourne,VIC,3000
 Melbourne,VIC,3001
 Melbourne,VIC,8001
+Melbourne University,VIC,3052
+Meldale,QLD,4510
+Melinga,NSW,2430
+Mella,TAS,7330
+Mellong,NSW,2756
 Melville,NSW,2320
 Merkanooka,WA,6625
 Mexico,QLD,4728
@@ -223,6 +234,18 @@ Oyster Creek,QLD,4674
 Pallinup,WA,6335
 Paraburdoo,WA,6754
 Parkwood,QLD,4214
+Parmelia,WA,6167
+Parnaroo,SA,5422
+Parndana,SA,5220
+Parrakie,SA,5301
+Parramatta,NSW,2123
+Parramatta,NSW,2124
+Parramatta Park,QLD,4870
+Parramatta Westfield,NSW,2150
+Parrawe,TAS,7321
+Parraweena,NSW,2339
+Parrearra,QLD,4575
+Parryville,WA,6333
 Peaceful Bay,WA,6333
 Pemulwuy,NSW,2145
 Perth,WA,6000
@@ -267,8 +290,14 @@ Stowport,TAS,7321
 Stuart,QLD,4811
 Sunnybank,QLD,4109
 Suttontown,SA,5291
+Sydenham,NSW,2044
+Sydenham,VIC,3037
 Sydney,NSW,2000
 Sydney,NSW,2001
+Sydney International Airport,NSW,2020
+Sydney Markets,NSW,2129
+Sydney South,NSW,1235
+Sylvania Southgate,NSW,2224
 Tabbil Creek,NSW,2420
 Tallebudgera Valley,QLD,4228
 Tangorin,QLD,4821
@@ -288,6 +317,12 @@ Tullera,NSW,2480
 Turvey Park,NSW,2650
 Uleybury,SA,5114
 Ultimo,NSW,2007
+University of Canberra,ACT,2617
+University of Melbourne,VIC,3010
+University of New England,NSW,2351
+University of Queensland,QLD,4072
+University of Wollongong,NSW,2522
+UNSW Sydney,NSW,1466
 Upper Burringbar,NSW,2483
 Upper Pinelands,QLD,4355
 Vale of Clwydd,NSW,2790
@@ -303,6 +338,7 @@ Wattle Grove,NSW,2173
 Wedge Island,WA,6044
 Wellstead,WA,6328
 West Cape Howe,WA,6330
+West Melbourne,VIC,3003
 West Ryde,NSW,1685
 Wetherill Park DC,NSW,1851
 Whites River,SA,5607
