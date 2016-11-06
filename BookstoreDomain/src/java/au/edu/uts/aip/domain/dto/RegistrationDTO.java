@@ -4,10 +4,7 @@ import java.io.Serializable;
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
 public class RegistrationDTO implements Serializable{
     private String username;
     private String fullname;
@@ -16,10 +13,9 @@ public class RegistrationDTO implements Serializable{
     private String confirmPassword;
     
     @Size(min = 6, max = 32)
-    @Pattern(regexp = "^[a-zA-Z0-9_]$", message = "Username contains invalid character. "
+    @Pattern(regexp = "^([a-zA-Z0-9_])+$", message = "Username contains invalid character. "
             + "Available characters are English alphaet (a-z, A-Z), "
             + "number (0-9) and underscore(_)")
-    @XmlElement(name = "username")
     public String getUsername() {
         return username;
     }
@@ -31,7 +27,6 @@ public class RegistrationDTO implements Serializable{
     @Size(max = 255)
     @Pattern(regexp = "^([a-zA-Z]+)( [a-zA-Z]+)+$", 
             message = "Fullname can only contain English alphabet chracters, and must contain at least 2 words")
-    @XmlElement
     public String getFullname() {
         return fullname;
     }
@@ -41,7 +36,6 @@ public class RegistrationDTO implements Serializable{
     }
     
     @Pattern(regexp = "^[^ ]+@[^ ]+\\.[^ ]+$", message = "Email address is not valid")
-    @XmlElement
     public String getEmail() {
         return email;
     }
@@ -51,7 +45,6 @@ public class RegistrationDTO implements Serializable{
     }
     
     @Size(min = 6, message = "Password must be at least 6 characters long")
-    @XmlElement
     public String getPassword() {
         return password;
     }
@@ -60,7 +53,6 @@ public class RegistrationDTO implements Serializable{
         this.password = password;
     }
     
-    @XmlElement
     public String getConfirmPassword() {
         return confirmPassword;
     }
