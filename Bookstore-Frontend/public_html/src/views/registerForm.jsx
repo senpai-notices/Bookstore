@@ -31,7 +31,7 @@ class RegisterForm extends BaseView {
 				if (err.status === 400){ 
 					const validateResult = JSON.parse(err.response)
 					this.state.errors = validateResult.errors
-					this.state.formErrors = validateResult.form_errors
+					this.state.formErrors = validateResult.formErrors
 				} else { 
 					this.state.errors.push(<h3>Cannot create account, please try again</h3>)
 				}

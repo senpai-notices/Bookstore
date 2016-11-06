@@ -47,7 +47,7 @@ public class ValidationResult {
 
         JsonObjectBuilder resultBuilder = Json.createObjectBuilder();
         resultBuilder.add("errors", errorsBuilder.build());
-        resultBuilder.add("form_errors", formErrorsBuilder.build());
+        resultBuilder.add("formErrors", formErrorsBuilder.build());
 
         return resultBuilder.build();
     }

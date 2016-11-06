@@ -44,10 +44,6 @@ class BaseView extends React.Component {
 		this.state[name] = event.target.files[0]
 		this.setState(this.state)
 	}
-
-	componentWillUnmount(){
-		this.props.dispatch.removeValidationMessage()
-	}
 }
 
 export const mapStateToProps = (state, ownProps) => ({
