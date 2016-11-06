@@ -5,11 +5,10 @@ import au.edu.uts.aip.domain.auspost.filter.AuspostAuthFilter;
 import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.entity.Suburb;
 import au.edu.uts.aip.domain.util.ApiResponseUtil;
-import java.util.ArrayList;
+import java.math.BigDecimal;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.json.Json;
-import javax.json.JsonArray;
 import javax.json.JsonArrayBuilder;
 import javax.json.JsonObject;
 import javax.json.JsonObjectBuilder;
@@ -18,11 +17,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.ParameterExpression;
-import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-import javax.persistence.metamodel.EntityType;
-import javax.persistence.metamodel.Metamodel;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
@@ -129,18 +124,18 @@ public class PostalBean {
     }
 
     /**
-     * Get the state that the postcode belongs to. Returns a SerialResponse (JSON body and HTTP status
- code). The body contains the name of the state.
-
- Example 1: input 3000 -> returns SerialResponse containing the strings "VIC" and "Victoria" and
- also status code 200
-
- Example 2: input 0 -> returns SerialResponse containing an error message and status code 404
+     * Get the state that the postcode belongs to. Returns a SerialResponse (JSON body and HTTP
+     * status code). The body contains the name of the state.
+     *
+     * Example 1: input 3000 -> returns SerialResponse containing the strings "VIC" and "Victoria"
+     * and also status code 200
+     *
+     * Example 2: input 0 -> returns SerialResponse containing an error message and status code 404
      *
      * @param postcode The postcode that is queried
      * @return If postcode is found, a SerialResponse containing the name of the state that the
- postcode is in will be returned with status code 200. Otherwise, return a SerialResponse
- containing an error message with status 404.
+     * postcode is in will be returned with status code 200. Otherwise, return a SerialResponse
+     * containing an error message with status 404.
      */
     public SerialResponse getStateName(int postcode) {
         if ((postcode >= 1000 && postcode <= 2599)
@@ -172,9 +167,10 @@ public class PostalBean {
     }
 
     /**
-     * Get possible postcodes for a given suburb.
+     * Get possible postcodes for a given suburb name.
+     *
      * @param suburb The name of the suburb. It is case-sensitive.
-     * @return 
+     * @return
      */
     public SerialResponse searchPostcodes(String suburb) {
         // TODO: remove if trimming in frontend.
@@ -200,6 +196,46 @@ public class PostalBean {
                 jsonArrayBuilder.add(s.getPostcode());
             }
             JsonObject resultJson = jsonBuilder.add("suburbs", jsonArrayBuilder).build();
+
+            return new SerialResponse(resultJson, Response.Status.OK.getStatusCode());
+        }
+        return new SerialResponse(JSON_SUBURB_NOT_FOUND, Response.Status.NOT_FOUND.getStatusCode());
+    }
+
+    /**
+     * Get possible details of suburb for a given suburb name.
+     *
+     * @param suburb The name of the suburb. It is case-sensitive.
+     * @return
+     */
+    public SerialResponse searchSuburbDetail(String suburb) {
+        // TODO: remove if trimming in frontend.
+        suburb = suburb.trim();
+
+        // Build criteria query returning Suburbs      
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<Suburb> cq = cb.createQuery(Suburb.class);
+
+        // Set up the query       
+        Root<Suburb> root = cq.from(Suburb.class);
+        cq.where(cb.like(root.<String>get("name"), cb.parameter(String.class, "param")));
+        TypedQuery<Suburb> tq = em.createQuery(cq);
+        tq.setParameter("param", "%" + suburb + "%");
+
+        List<Suburb> result = tq.getResultList();
+
+        if (!result.isEmpty()) {
+            JsonObjectBuilder outerJsonBuilder = Json.createObjectBuilder();
+            JsonArrayBuilder jsonArrayBuilder = Json.createArrayBuilder();
+
+            for (Suburb s : result) {
+                JsonObjectBuilder innerJsonBuilder = Json.createObjectBuilder()
+                        .add("name", s.getName())
+                        .add("state_name", s.getStateName())
+                        .add("postcode", s.getPostcode());
+                jsonArrayBuilder.add(innerJsonBuilder);
+            }
+            JsonObject resultJson = outerJsonBuilder.add("suburb_details", jsonArrayBuilder).build();
 
             return new SerialResponse(resultJson, Response.Status.OK.getStatusCode());
         }
