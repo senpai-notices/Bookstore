@@ -1,5 +1,6 @@
 package au.edu.uts.aip.service.resource;
 
+import au.edu.uts.aip.domain.dto.CheckoutDTO;
 import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
@@ -217,6 +218,16 @@ public class PaymentResource {
                 = paymentBean.editRecipient(recipientToken, pinRecipientPut);
 
         return ResourceUtil.generate200Response(validationResult);
+    }
+    
+    @POST
+    @Path("checkout")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @RolesAllowed({"USER", "VERIFYING USER", "VERIFIED USER", "ADMIN"})
+    public Response checkout(CheckoutDTO checkoutDTO){
+        String username = securityContext.getUserPrincipal().getName();
+        paymentBean.checkout(checkoutDTO, username);;
+        return Response.ok().build();
     }
 
     // <editor-fold defaultstate="collapsed" desc="unused">

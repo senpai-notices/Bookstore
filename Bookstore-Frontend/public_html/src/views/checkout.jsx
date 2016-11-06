@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
 import { connect } from 'react-redux'
-import { FormInputText, FormAddressInput, ErrorDisplay } from 'components'
+import { FormInputText, FormAddressInput, ErrorDisplay, ModalDialog } from 'components'
 import { SalesListView } from 'views'
 import * as bs from 'react-bootstrap'
 import { browserHistory } from 'react-router'
@@ -65,38 +65,62 @@ class CheckoutView extends BaseView {
 			return
 		}
 
+		if (this.state['card.address_postcode'].length != 4){
+			alert("Please enter a valid postcode")
+			return
+		}
+
 		this.state.calculatingShippingCost = true
 		this.state.shippingCost = []
 		this.state.totalShippingCost = null
 		this.setState(this.state)
 		let fromPostcode = this.state['card.address_postcode']
 		let callAIPPromises = []
-		this.props.shoppingCart.items.forEach((cartItem) => {
-			let quantiy = cartItem.quantiy
-			let toPostcode = cartItem.seller.postcode
-			let type = cartItem.shippingType
+		let postcodeItemCount = {}
 
-			callAIPPromises.push(this.bookService.calculateShippingCost(quantiy, fromPostcode, toPostcode, type))
+		this.props.shoppingCart.items.forEach((cartItem) => {
+
+			if (!postcodeItemCount[cartItem.seller.username]){
+				postcodeItemCount[cartItem.seller.username] = {}
+			}
+
+			if (!postcodeItemCount[cartItem.seller.username][cartItem.seller.postcode]){
+				postcodeItemCount[cartItem.seller.username][cartItem.seller.postcode] = {}
+			}
+
+			if (!postcodeItemCount[cartItem.seller.username][cartItem.seller.postcode][cartItem.shippingType]){
+				postcodeItemCount[cartItem.seller.username][cartItem.seller.postcode][cartItem.shippingType] = 0
+			}
+
+			postcodeItemCount[cartItem.seller.username][cartItem.seller.postcode][cartItem.shippingType] += cartItem.quantity
+		})
+
+		Object.keys(postcodeItemCount).forEach((sellerName) => {
+			Object.keys(postcodeItemCount[sellerName]).forEach((toPostcode) => {
+				Object.keys(postcodeItemCount[sellerName][toPostcode]).forEach((shippingType) => {
+					let quantity = postcodeItemCount[sellerName][toPostcode][shippingType]
+					callAIPPromises.push(this.bookService.calculateShippingCost(quantity, fromPostcode, toPostcode, shippingType))
+				})
+			})
 		})
 
 		Promise.all(callAIPPromises).then((resp) => {
 			this.state.shippingCost = resp
 			this.state.totalShippingCost = this.state.shippingCost.reduce(function(a, b) { return +a + +b; }, 0);
-			console.log(this.state.totalShippingCost)
 			this.state.calculatingShippingCost = false
 			this.setState(this.state)
 		}).catch(() => {
-			alert("Cannot calculate shipping cost")
 			this.state.calculatingShippingCost = false
 			this.setState(this.state)
+			alert("Cannot calculate shipping cost")
 		})
+
 	}
 
 	submitPayment(event){
 		event.preventDefault()
 
 		let data = {}
-		data.email = this.props.user.email
 		data.card = {}
 		data.card.number = this.state['card.number']
 		data.card.expiry_month = this.state['card.expiry_month']
@@ -109,34 +133,76 @@ class CheckoutView extends BaseView {
 		data.card.address_postcode = this.state['card.address_postcode']
 		data.card.address_state = this.state['card.address_state']
 		data.card.address_country = this.state['card.address_country']
+		data.shippingCost = this.state.totalShippingCost
+		data.items = []
+		this.props.shoppingCart.items.forEach((cartItem) => {
+			data.items.push({
+				saleId: cartItem.id,
+				buyQuantity: cartItem.quantity
+			})
+		})
 
-		this.bookService.getPinToken(data)
+		this.state.checkingOut = true
+		this.setState(this.state)
+		this.bookService.checkout(data)
 			.then((resp) => {
-				data.customer_token = resp.response.token
-				data.amount = "100"
-				data.description = "Description"
-				this.bookService.chargeMoney(data)
-					.then((resp) => {
-						console.log(resp)
-					})
-					.fail((err) => {
-						const validationResult = JSON.parse(err.response)
-						this.state.formErrors = validationResult.formErrors
-						this.state.errors = validationResult.errors	
-					})
-					.always(() => {
-						this.setState(this.state)
-					})
+				alert("Checkout successfully")
+				this.props.dispatch.clearCart()
 			})
 			.fail((err) => {
 				console.log(err)
-				const validationResult = JSON.parse(err.response)
-				this.state.formErrors = validationResult.formErrors
-				this.state.errors = validationResult.errors
+				if (err.status === 422 || err.status === 400){
+					const validationResult = JSON.parse(err.response)
+					console.log(validationResult)
+					this.state.formErrors = validationResult.formErrors
+					this.state.errors = validationResult.errors	
+				}
+				else {
+					alert("Cannot checkout")
+				}
 			})
 			.always(() => {
+				this.state.checkingOut = false
 				this.setState(this.state)
 			})
+		// this.bookService.getPinToken(data)
+		// 	.then((resp) => {
+		// 		data.customer_token = resp.response.token
+		// 		data.amount = "100"
+		// 		data.description = "Description"
+		// 		this.bookService.chargeMoney(data)
+		// 			.then((resp) => {
+		// 				console.log(resp)
+		// 			})
+		// 			.fail((err) => {
+		// 				const validationResult = JSON.parse(err.response)
+		// 				this.state.formErrors = validationResult.formErrors
+		// 				this.state.errors = validationResult.errors	
+		// 			})
+		// 			.always(() => {
+		// 				this.state.checkingOut = false
+		// 				this.setState(this.state)
+		// 			})
+		// 	})
+		// 	.fail((err) => {
+		// 		const validationResult = JSON.parse(err.response)
+		// 		this.state.formErrors = validationResult.formErrors
+		// 		this.state.errors = validationResult.errors
+		// 	})
+		// 	.always(() => {
+		// 		this.state.checkingOut = false
+		// 		this.setState(this.state)
+		// 	})
+	}
+
+	componentWillReceiveProps(nextProps){
+		let currentShoppingCartJson = JSON.stringify(this.props.shoppingCart)
+		let nextShoppingCartJson = JSON.stringify(nextProps.shoppingCart)
+
+		if (this.props.shoppingCart !== nextProps.shoppingCart){
+			this.state.totalShippingCost = undefined
+			this.setState(this.state)
+		}
 	}
 
 	render(){
@@ -150,7 +216,7 @@ class CheckoutView extends BaseView {
 
 		const checkoutView = (
 			<div>
-				<SalesListView showShipping shippingCost={this.state.shippingCost}/>
+				<SalesListView showShipping/>
 
 				<bs.Row>
 					<bs.Col xs={4} xsOffset={8}>
@@ -207,7 +273,12 @@ class CheckoutView extends BaseView {
 						</bs.Col>
 					</bs.Row>
 
-					<bs.Button type="submit" bsStyle="primary">Submit</bs.Button>
+					<bs.Button type="submit" bsStyle="primary" disabled={this.state.checkingOut || !this.state.totalShippingCost}>
+						{(this.state.checkingOut && "Submitting") 
+						|| (!this.state.totalShippingCost && "Please check shipping cost first") 
+						|| "Submit"} 
+					</bs.Button>
+
 				</bs.Col>
 
 				<bs.Col xs={6}>

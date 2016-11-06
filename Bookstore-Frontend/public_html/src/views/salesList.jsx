@@ -90,8 +90,6 @@ class SalesListView extends BaseView {
 											onChange={() => this.props.dispatch.updateShippingType(item.id, 'express')}>
 											Express
 										</bs.Radio>
-										{this.props.shippingCost
-											&& (<bs.ControlLabel>Shipping: AU$ {this.props.shippingCost[index]}</bs.ControlLabel>)}
 										
 									</bs.Col>)}
 

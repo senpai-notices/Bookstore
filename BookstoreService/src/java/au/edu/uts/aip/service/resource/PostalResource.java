@@ -125,12 +125,21 @@ public class PostalResource {
                                         @FormParam("from") int from,
                                         @FormParam("to") int to,
                                         @FormParam("type") String type) {
+        String serviceCode = "";
         if (type.equals("normal")){
-            return postalFeeBean.calculatePostageCost(quantity, from, to, "AUS_PARCEL_REGULAR");
+            serviceCode = "AUS_PARCEL_REGULAR";
         } else if (type.equals("express")){
-            return postalFeeBean.calculatePostageCost(quantity, from, to, "AUS_PARCEL_EXPRESS");
+            serviceCode = "AUS_PARCEL_EXPRESS";
+        } else {
+            throw new RuntimeException("Invalid service code");
         }
         
-        return 0;
+        double cost = 0;
+        while(quantity > 0){
+            cost += postalFeeBean.calculatePostageCost(Math.max(quantity, 30), from, to, serviceCode);
+            quantity -= 30;
+        }
+        
+        return cost;
     }
 }

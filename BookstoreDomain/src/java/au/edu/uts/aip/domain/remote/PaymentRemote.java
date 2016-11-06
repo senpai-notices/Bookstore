@@ -1,5 +1,6 @@
 package au.edu.uts.aip.domain.remote;
 
+import au.edu.uts.aip.domain.dto.CheckoutDTO;
 import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
 import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
@@ -44,4 +45,5 @@ public interface PaymentRemote {
      */
     ValidationResult editRecipient(String recipientToken, PinRecipientPut pinRecipientPut);
     SerialResponse editRecipient2(String recipientToken, PinRecipientPut pinRecipientPut);
+    void checkout(CheckoutDTO checkoutDTO, String username);
 }
