@@ -3,6 +3,7 @@ package au.edu.uts.aip.domain.ejb;
 /**
  *The needed libraries
  */
+import au.edu.uts.aip.domain.entity.Address;
 import au.edu.uts.aip.domain.entity.Suburb;
 import au.edu.uts.aip.domain.entity.Book;
 import au.edu.uts.aip.domain.entity.BookSales;
@@ -81,49 +82,47 @@ public class DatabaseInitBean {
         adminUser.setPassword(SHA.hash256("qwerty"));
         adminUser.setEmail("admin@test.com");
         adminUser.setRole(roleMap.get(RoleType.ADMIN));
+        adminUser.setRecipientToken("rp_Y9rAv-gcPzXkeKkNfuBXUQ");
+        
+        Address adminAddress = new Address();
+        adminAddress.setAddressLine1("123 Fake street");
+        adminAddress.setAddressPostcode(2192);
+        adminAddress.setAddressState("NSW");
+        adminAddress.setAddressCountry("Australia");
+        adminAddress.setAddressCity("Sydney");
+        em.persist(adminAddress);
+        
+        adminUser.setAddress(adminAddress);
+        
         em.persist(adminUser);
         System.out.println("Creating admin account...Done");
 
         System.out.println("Creating sample user account");
-        RoleType[] randomRoleList = {RoleType.INACTIVATED, RoleType.USER, RoleType.BANNED};
-        Random r = new Random();
-        for (int i = 0; i < 80; i++) {
-            User normalUser = new User();
-            normalUser.setFullname("Full name Here");
-            normalUser.setUsername("username" + i);
-            normalUser.setPassword(SHA.hash256("123123"));
-            normalUser.setEmail("sondang2412@gmail.com");
-
-            RoleType randomRole = randomRoleList[r.nextInt(randomRoleList.length)];
-            normalUser.setRole(roleMap.get(randomRole));
-
-            em.persist(normalUser);
-        }
-
-        User[] verifiedUsers = new User[20];
-        for (int i = 0; i < 20; i++) {
-            User verifiedUser = new User();
-            verifiedUser.setFullname("Full name here");
-            verifiedUser.setUsername("username" + (i + 80));
-            verifiedUser.setPassword(SHA.hash256("123123"));
-            verifiedUser.setEmail("sondang2412@gmail.com");
-            verifiedUser.setRole(roleMap.get(RoleType.VERIFIED));
-
-            em.persist(verifiedUser);
-            verifiedUsers[i] = verifiedUser;
-        }
+        
         User myUser = new User();
         myUser.setUsername("sondang2412");
         myUser.setFullname("Dang Cuu Son");
         myUser.setEmail("sondang2412@gmail.com");
         myUser.setPassword(SHA.hash256("qwerty"));
         myUser.setRole(roleMap.get(RoleType.USER));
+        myUser.setRecipientToken("rp_PxxcoyvLclg-j9cTwPG9YQ");
+        
+        Address myAddress = new Address();
+        myAddress.setAddressLine1("321 Real Street");
+        myAddress.setAddressPostcode(2192);
+        myAddress.setAddressState("NSW");
+        myAddress.setAddressCountry("Australia");
+        myAddress.setAddressCity("Sydney");
+        em.persist(myAddress);
+        
+        myUser.setAddress(myAddress);
         em.persist(myUser);
+        
         System.out.println("Creating sample user account...Done");
 
         System.out.println("Importing sample books data");
         String booksCsvfilePath = this.getClass().getResource("/books.csv").getFile();
-
+        Random r = new Random();
         try (BufferedReader br = new BufferedReader(new FileReader(booksCsvfilePath))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -154,27 +153,14 @@ public class DatabaseInitBean {
                     adminSales.setPrice(brandNewPrice);
                     adminSales.setCondition("Brand new");
                     adminSales.setQuantity(r.nextInt(20) + 1);
-
-                    BookSales userSales = new BookSales();
-                    userSales.setBook(book);
-                    User seller = verifiedUsers[r.nextInt(20)];
-                    userSales.setSeller(seller);
-                    double usedPrice = (int) (Math.random() * brandNewPrice);
-                    userSales.setPrice(usedPrice);
-                    userSales.setCondition("Used");
-                    userSales.setQuantity(r.nextInt(2) + 1);
-
+                    
                     em.persist(adminSales);
-                    em.persist(userSales);
 
                     book.getSales().add(adminSales);
-                    book.getSales().add(userSales);
                     em.persist(book);
 
                     adminUser.getSellingBooks().add(adminSales);
-                    seller.getSellingBooks().add(userSales);
                     em.persist(adminUser);
-                    em.persist(seller);
 
                 } catch (NumberFormatException ex) {
                     Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
@@ -246,11 +232,11 @@ public class DatabaseInitBean {
         q.executeUpdate();
         q = em.createNativeQuery("delete from Book");
         q.executeUpdate();
+        q = em.createNativeQuery("delete from Bookstore_User");
+        q.executeUpdate();
         q = em.createNativeQuery("delete from address");
         q.executeUpdate();
         q = em.createNativeQuery("delete from bank_account");
-        q.executeUpdate();
-        q = em.createNativeQuery("delete from Bookstore_User");
         q.executeUpdate();
         q = em.createNativeQuery("delete from Bookstore_Role");
         q.executeUpdate();
