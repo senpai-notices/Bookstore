@@ -225,15 +225,19 @@ public class DatabaseInitBean {
             q.executeUpdate();
 //        }
         
+        q = em.createNativeQuery("delete from BookOrderLine");
+        q.executeUpdate();
+        q = em.createNativeQuery("delete from BookOrder");
+        q.executeUpdate();
         q = em.createNativeQuery("delete from Book_sales");
         q.executeUpdate();
         q = em.createNativeQuery("delete from Book");
         q.executeUpdate();
-        q = em.createNativeQuery("delete from Bookstore_User");
-        q.executeUpdate();
         q = em.createNativeQuery("delete from address");
         q.executeUpdate();
         q = em.createNativeQuery("delete from bank_account");
+        q.executeUpdate();
+        q = em.createNativeQuery("delete from Bookstore_User");
         q.executeUpdate();
         q = em.createNativeQuery("delete from Bookstore_Role");
         q.executeUpdate();

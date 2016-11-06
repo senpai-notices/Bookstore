@@ -9,6 +9,8 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -20,6 +22,7 @@ import javax.persistence.TemporalType;
  * access the attributes Note: 'Order' is a reserved keyword and is therefore not used.
  */
 @Entity
+@NamedQuery(name = "BookOrder.findByOwner", query = "SELECT bo from BookOrder bo where bo.owner=:owner")
 public class BookOrder implements Serializable {
 
     /**
@@ -38,6 +41,8 @@ public class BookOrder implements Serializable {
      * the order time
      */
     private Date orderTimestamp;
+    
+    private User owner;
 
     /**
      * {@link BookOrder#id}
@@ -50,6 +55,18 @@ public class BookOrder implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    /**
+     * {@link BookOrder#owner}
+     */
+    @ManyToOne
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
     }
 
     /**

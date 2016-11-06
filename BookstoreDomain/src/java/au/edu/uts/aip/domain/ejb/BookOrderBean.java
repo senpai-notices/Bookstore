@@ -1,5 +1,6 @@
 package au.edu.uts.aip.domain.ejb;
 
+import au.edu.uts.aip.domain.dto.BookOrderDTO;
 import au.edu.uts.aip.domain.dto.CheckoutDTO;
 import au.edu.uts.aip.domain.dto.CheckoutItemDTO;
 import au.edu.uts.aip.domain.entity.BookOrder;
@@ -74,8 +75,7 @@ public class BookOrderBean implements BookOrderRemote {
             orderLine.setSeller(bookSale.getSeller());
             orderLine.setBookCondition(bookSale.getCondition());
             orderLine.setQuantity(matchedItem.getBuyQuantity());
-            orderLine.setUnitCost(bookSale.getPrice());
-            
+            orderLine.setUnitPrice(bookSale.getPrice());
             orderLine.setQuantity(matchedItem.getBuyQuantity());
             em.persist(orderLine);
             orderLineList.add(orderLine);
@@ -86,6 +86,7 @@ public class BookOrderBean implements BookOrderRemote {
         bookOrder.setOrderLines(orderLineList);
         bookOrder.setOrderTimestamp(new Date());
         bookOrder.setPostageCost(checkoutDTO.getShippingCost());
+        bookOrder.setOwner(user);
         em.persist(bookOrder);
         
         // create customer from card detail
@@ -103,7 +104,7 @@ public class BookOrderBean implements BookOrderRemote {
         // calculate total cost & charge money
         double totalCost = 0;
         for(BookOrderLine orderLine: orderLineList){
-            totalCost += orderLine.getQuantity() * orderLine.getUnitCost();
+            totalCost += orderLine.getQuantity() * orderLine.getUnitPrice();
         }
         totalCost += checkoutDTO.getShippingCost();
         String description = "Order " + bookOrder.getId();
@@ -120,5 +121,21 @@ public class BookOrderBean implements BookOrderRemote {
         if (chargeResponse.getStatusCode() != Response.Status.CREATED.getStatusCode()){
             throw new ClientErrorException(chargeResponse.getBody().toString(), chargeResponse.getStatusCode());
         }
+    }
+    
+    @Override
+    public List<BookOrderDTO> getBuyOrder(String username) {
+        User user = userBean.getUserEntity(username);
+        
+        TypedQuery<BookOrder> typedQuery = em.createNamedQuery("BookOrder.findByOwner", BookOrder.class);
+        typedQuery.setParameter("owner", user);
+        List<BookOrder> bookOrdersEntity = typedQuery.getResultList();
+        
+        List<BookOrderDTO> bookOrdersDTO = new ArrayList<>();
+        bookOrdersEntity.stream().forEach(bookOrder -> {
+            bookOrdersDTO.add(new BookOrderDTO(bookOrder));
+        });
+        
+        return bookOrdersDTO;
     }
 }
