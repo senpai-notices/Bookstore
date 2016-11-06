@@ -3,8 +3,7 @@ package au.edu.uts.aip.domain.ejb;
 import javax.ejb.Stateless;
 
 /**
- * NOT USED YET. EXACT COPY OF EMAILBODYCOMPOSER.JAVA IN SRV LAYER. Composes email bodies, including
- * salutations, signatures and main content
+ * Composes email bodies, including salutations, signatures and main content
  */
 @Stateless
 public class EmailBodyComposerBean {
