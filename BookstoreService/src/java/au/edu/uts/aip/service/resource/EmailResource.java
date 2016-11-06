@@ -1,13 +1,12 @@
 package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.dto.UserDTO;
+import au.edu.uts.aip.domain.ejb.EmailBean;
+import au.edu.uts.aip.domain.ejb.EmailBodyComposerBean;
 import au.edu.uts.aip.domain.exception.TokenGenerationException;
 import au.edu.uts.aip.domain.remote.UserRemote;
-import au.edu.uts.aip.domain.util.SendEmail;
-import au.edu.uts.aip.service.util.EmailBodyComposer;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
-import javax.mail.MessagingException;
 import javax.servlet.ServletContext;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
@@ -25,6 +24,12 @@ public class EmailResource {
     @EJB
     private UserRemote userBean;
 
+    @EJB
+    private EmailBean emailBean;
+
+    @EJB
+    private EmailBodyComposerBean emailBodyComposerBean;
+
     @Context
     private SecurityContext securityContext;
 
@@ -38,26 +43,27 @@ public class EmailResource {
      */
     @POST
     @RolesAllowed({"INACTIVATED"})
-    @Path("/activation")
+    @Path("activation")
     public Response activationToken() {
         try {
             String username = securityContext.getUserPrincipal().getName();
             UserDTO user = userBean.getUser(username);
             String token = userBean.generateActivationToken(username);
-            String body = EmailBodyComposer.onAccountActivation(
+            String body = emailBodyComposerBean.onAccountActivation(
                     user.getFullname(),
                     servletContext.getInitParameter("clientURL") + "/?token=" + token
                     + "&username=" + user.getUsername() + "&action=activation");
-            SendEmail.SendEmail(user.getEmail(), "Account activation", body);
+            emailBean.sendEmail(user.getEmail(), "Account activation", body);
 
             return Response.ok().build();
-        } catch (MessagingException ex) {
-            return Response.status(Response.Status.BAD_REQUEST).entity("Email cannot be sent").build();
-        } catch (TokenGenerationException ex) {
+        } //        catch (MessagingException ex) {
+        //            return Response.status(Response.Status.BAD_REQUEST).entity("Email cannot be sent").build();
+        //        } 
+        catch (TokenGenerationException ex) {
             return Response.status(Response.Status.BAD_REQUEST).entity(ex.getMessage()).build();
         }
     }
-    
+
     /**
      * Send an email that include a link to reset user's password
      *
@@ -69,19 +75,17 @@ public class EmailResource {
     @Path("reset")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Response resetPasswordToken(@FormParam("username") String username,
-                                        @FormParam("email") String email) {
+            @FormParam("email") String email) {
         try {
             UserDTO user = userBean.getUser(username);
             String token = userBean.generateResetPasswordToken(username, email);
-            String body = EmailBodyComposer.onPasswordReset(
+            String body = emailBodyComposerBean.onPasswordReset(
                     user.getFullname(),
                     servletContext.getInitParameter("clientURL") + "/?token=" + token
                     + "&username=" + user.getUsername() + "&action=reset");
-            SendEmail.SendEmail(user.getEmail(), "Account activation", body);
+            emailBean.sendEmail(user.getEmail(), "Account activation", body);
 
             return Response.ok().build();
-        } catch (MessagingException ex) {
-            return Response.status(Response.Status.BAD_REQUEST).entity("Email cannot be sent").build();
         } catch (TokenGenerationException ex) {
             return Response.status(Response.Status.BAD_REQUEST).entity(ex.getMessage()).build();
         }
@@ -89,112 +93,96 @@ public class EmailResource {
 
     @POST
     @RolesAllowed({"ADMIN"})
-    @Path("/reject")
+    @Path("reject")
     public Response rejectVerification(@FormParam("username") String username,
             @FormParam("reason") String reason) {
 
-        try {
-            UserDTO user = userBean.getUser(username);
-            String body = EmailBodyComposer.onVerificationReject(user.getFullname(), reason);
-            SendEmail.SendEmail(user.getEmail(), "Account verification status", body);
+        UserDTO user = userBean.getUser(username);
+        String body = emailBodyComposerBean.onVerificationReject(user.getFullname(), reason);
+        emailBean.sendEmail(user.getEmail(), "Account verification status", body);
 
-            return Response.ok().build();
-        } catch (MessagingException ex) {
-            return Response.serverError().build();
-        }
+        return Response.ok().build();
+
     }
 
     @POST
     @RolesAllowed({"ADMIN"})
-    @Path("/approve/{username}")
+    @Path("approve/{username}")
     public Response approveVerification(@PathParam("username") String username) {
 
-        try {
-            UserDTO user = userBean.getUser(username);
-            String body = EmailBodyComposer.onVerificationApprove(user.getFullname());
-            SendEmail.SendEmail(user.getEmail(), "Account verification status", body);
-            return Response.ok().build();
-        } catch (MessagingException ex) {
-            return Response.serverError().build();
-        }
+        UserDTO user = userBean.getUser(username);
+        String body = emailBodyComposerBean.onVerificationApprove(user.getFullname());
+        emailBean.sendEmail(user.getEmail(), "Account verification status", body);
+        return Response.ok().build();
+
     }
 
     @POST
     @RolesAllowed({"ADMIN"})
-    @Path("/ban/{username}")
+    @Path("ban/{username}")
     public Response banAccount(@PathParam("username") String username) {
-        try {
-            UserDTO user = userBean.getUser(username);
-            String body = EmailBodyComposer.onAccountBan(user.getFullname());
-            SendEmail.SendEmail(user.getEmail(), "Account banned", body);
-            return Response.ok().build();
-        } catch (MessagingException ex) {
-            return Response.serverError().build();
-        }
+
+        UserDTO user = userBean.getUser(username);
+        String body = emailBodyComposerBean.onAccountBan(user.getFullname());
+        emailBean.sendEmail(user.getEmail(), "Account banned", body);
+        return Response.ok().build();
+
     }
 
     @POST
     @RolesAllowed({"ADMIN"})
-    @Path("/unban/{username}")
+    @Path("unban/{username}")
     public Response unbanAccount(@PathParam("username") String username) {
-        try {
-            UserDTO user = userBean.getUser(username);
-            String body = EmailBodyComposer.onAccountUnban(user.getFullname());
-            SendEmail.SendEmail(user.getEmail(), "Ban lifted", body);
-            return Response.ok().build();
-        } catch (MessagingException ex) {
-            return Response.serverError().build();
-        }
+
+        UserDTO user = userBean.getUser(username);
+        String body = emailBodyComposerBean.onAccountUnban(user.getFullname());
+        emailBean.sendEmail(user.getEmail(), "Ban lifted", body);
+        return Response.ok().build();
+
     }
 
     @POST
     @RolesAllowed({"VERIFIED"})
-    @Path("/order/{order-id}/fail")
+    @Path("order/{order-id}/fail")
     public Response orderFail(@PathParam("order-id") String orderId, String username) {
-        try {
-            UserDTO user = userBean.getUser(username);
-            String body = EmailBodyComposer.onOrderFail(user.getFullname(), orderId);
-            SendEmail.SendEmail(user.getEmail(), "Order failed", body);
-            return Response.ok().build();
-        } catch (MessagingException ex) {
-            return Response.serverError().build();
-        }
+
+        UserDTO user = userBean.getUser(username);
+        String body = emailBodyComposerBean.onOrderFail(user.getFullname(), orderId);
+        emailBean.sendEmail(user.getEmail(), "Order failed", body);
+        return Response.ok().build();
+
     }
 
     @POST
     @RolesAllowed({"VERIFIED"})
-    @Path("/order/{order-id}/pending")
+    @Path("order/{order-id}/pending")
     public Response orderPending(@PathParam("order-id") String orderId, String username) {
-        try {
-            UserDTO user = userBean.getUser(username);
-            String body = EmailBodyComposer.onOrderPending(user.getFullname(), orderId);
-            SendEmail.SendEmail(user.getEmail(), "Order pending", body);
-            return Response.ok().build();
-        } catch (MessagingException ex) {
-            return Response.serverError().build();
-        }
+
+        UserDTO user = userBean.getUser(username);
+        String body = emailBodyComposerBean.onOrderPending(user.getFullname(), orderId);
+        emailBean.sendEmail(user.getEmail(), "Order pending", body);
+        return Response.ok().build();
+
     }
 
     @POST
     @RolesAllowed({"VERIFIED"})
-    @Path("/order/{order-id}/complete")
+    @Path("order/{order-id}/complete")
     public Response orderComplete(@PathParam("order-id") String orderId/*, String usernameBuyer, String usernameSeller*/) {
         String usernameBuyer = "";
         String usernameSeller = "";
-        try {
-            // Email the buyer
-            UserDTO buyer = userBean.getUser(usernameBuyer);
-            String buyerEmailBody = EmailBodyComposer.onOrderCompleteBuyer(buyer.getFullname(), orderId);
-            SendEmail.SendEmail(buyer.getEmail(), "Order complete", buyerEmailBody);
-            
-            // Email the seller
-            UserDTO seller = userBean.getUser(usernameSeller);
-            String sellerEmailBody = EmailBodyComposer.onOrderCompleteSeller(seller.getFullname(), orderId);
-            SendEmail.SendEmail(buyer.getEmail(), "Order complete", sellerEmailBody);
-            
-            return Response.ok().build();
-        } catch (MessagingException ex) {
-            return Response.serverError().build();
-        }
+
+        // Email the buyer
+        UserDTO buyer = userBean.getUser(usernameBuyer);
+        String buyerEmailBody = emailBodyComposerBean.onOrderCompleteBuyer(buyer.getFullname(), orderId);
+        emailBean.sendEmail(buyer.getEmail(), "Order complete", buyerEmailBody);
+
+        // Email the seller
+        UserDTO seller = userBean.getUser(usernameSeller);
+        String sellerEmailBody = emailBodyComposerBean.onOrderCompleteSeller(seller.getFullname(), orderId);
+        emailBean.sendEmail(buyer.getEmail(), "Order complete", sellerEmailBody);
+
+        return Response.ok().build();
+
     }
 }

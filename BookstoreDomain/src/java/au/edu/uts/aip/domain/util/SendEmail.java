@@ -15,6 +15,7 @@ import javax.mail.internet.MimeMessage;
  *
  * @author https://www.mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/
  */
+@Deprecated
 public class SendEmail {
 
     private static Session emailSession = null;
