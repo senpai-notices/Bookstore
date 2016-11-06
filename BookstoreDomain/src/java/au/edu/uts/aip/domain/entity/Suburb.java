@@ -9,11 +9,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "area")
-public class Area implements Serializable {
+@Table(name = "suburb")
+public class Suburb implements Serializable {
 
     private Long id;
-    private String suburb;
+    private String name;
     private String stateName;
     private int postcode;
 
@@ -27,13 +27,13 @@ public class Area implements Serializable {
         this.id = id;
     }
 
-    @Column(nullable = false, name = "suburb")
-    public String getSuburb() {
-        return suburb;
+    @Column(nullable = false, name = "name")
+    public String getName() {
+        return name;
     }
 
-    public void setSuburb(String suburb) {
-        this.suburb = suburb;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Column(nullable = false, name = "state_name")
