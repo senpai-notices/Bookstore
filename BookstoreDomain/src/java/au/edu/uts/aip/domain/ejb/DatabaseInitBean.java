@@ -175,7 +175,7 @@ public class DatabaseInitBean {
 //        if (count != 15418) {
 
             System.out.println("Importing area data");
-            String suburbCsvFilePath = this.getClass().getResource("/suburbs-subset325.csv").getFile();
+            String suburbCsvFilePath = this.getClass().getResource("/suburbs-development.csv").getFile();
 
             try (BufferedReader br = new BufferedReader(new FileReader(suburbCsvFilePath))) {
                 String line;
