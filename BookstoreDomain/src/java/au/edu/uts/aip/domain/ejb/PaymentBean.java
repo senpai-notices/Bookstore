@@ -98,6 +98,8 @@ public class PaymentBean implements PaymentRemote {
                                             + " only have " + bookSale.getQuantity() + " books remains");
             }
             
+            bookSale.setQuantity(bookSale.getQuantity() - matchedItem.getBuyQuantity());
+            
             BookOrderLine orderLine = new BookOrderLine();
             orderLine.setBook(bookSale.getBook());
             orderLine.setSeller(bookSale.getSeller());
