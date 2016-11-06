@@ -1,8 +1,6 @@
-/**
- * Source: http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/javamail/javamail.html
- */
 package au.edu.uts.aip.domain.ejb;
 
+import au.edu.uts.aip.domain.remote.EmailRemote;
 import java.util.Date;
 import java.util.Properties;
 import javax.ejb.Stateless;
@@ -15,22 +13,17 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+/**
+ * @inheritDoc
+ * Source: http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/javamail/javamail.html
+ */
 @Stateless
-public class EmailBean {
+public class EmailBean implements EmailRemote {
 
-    public enum Protocol {
-        SMTP, SMTPS, TLS
-    }
-
-    private final int port = 587;
-    private final String host = "***REMOVED***";
-    private final String from = "***REMOVED***";
-    private final boolean auth = true;
-    private final String username = "***REMOVED***";
-    private final String password = "***REMOVED***";
-    private final Protocol protocol = Protocol.TLS;
-    private final boolean debug = true;
-
+    /**
+     * @inheritDoc
+     */
+    @Override
     public void sendEmail(String to, String subject, String body) {
         Properties props = new Properties();
         props.put("mail.smtp.host", host);

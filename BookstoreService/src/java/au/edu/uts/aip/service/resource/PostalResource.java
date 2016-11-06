@@ -1,13 +1,11 @@
 package au.edu.uts.aip.service.resource;
 
-import au.edu.uts.aip.domain.auspost.dto.AuspostPostalFeeGet;
-import au.edu.uts.aip.domain.ejb.PostalDataBean;
 import au.edu.uts.aip.domain.response.SerialResponse;
-import au.edu.uts.aip.domain.ejb.PostalFeeBean;
+import au.edu.uts.aip.domain.remote.PostalDataRemote;
+import au.edu.uts.aip.domain.remote.PostalFeeRemote;
 
 import javax.ejb.EJB;
 import javax.json.Json;
-import javax.json.JsonObject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -22,22 +20,11 @@ import javax.ws.rs.core.Response;
 public class PostalResource {
 
     @EJB
-    private PostalFeeBean postalFeeBean;
+    private PostalFeeRemote postalFeeBean;
     @EJB
-    private PostalDataBean postalDataBean;
+    private PostalDataRemote postalDataBean;
 
     // <editor-fold defaultstate="collapsed" desc="test methods for postal fee API">
-    @Deprecated
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
-    @Path("calculate")
-    public Response calculate(AuspostPostalFeeGet auspostPostageGet) {
-        JsonObject response = postalFeeBean.calculatePostageCostJson(auspostPostageGet);
-        return Response.ok(response, MediaType.APPLICATION_JSON).build();
-    }
-
     @Deprecated
     @GET
     @Produces(MediaType.APPLICATION_JSON)
