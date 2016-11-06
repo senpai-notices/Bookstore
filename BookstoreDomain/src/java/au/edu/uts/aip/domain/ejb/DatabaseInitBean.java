@@ -117,7 +117,7 @@ public class DatabaseInitBean {
         myUser.setFullname("Dang Cuu Son");
         myUser.setEmail("sondang2412@gmail.com");
         myUser.setPassword(SHA.hash256("qwerty"));
-        myUser.setRole(roleMap.get(RoleType.VERIFIED));
+        myUser.setRole(roleMap.get(RoleType.USER));
         em.persist(myUser);
         System.out.println("Creating sample user account...Done");
 

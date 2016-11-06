@@ -113,6 +113,16 @@ public class UserResource {
         userBean.resetPassword(resetPasswordDTO);
         return Response.ok().build();
     }
+    
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Path("recipientToken")
+    @RolesAllowed({"USER", "VERIFIED USER", "ADMIN"})
+    public Response setRecipientToken(@FormParam("token") String token){
+        String username = securityContext.getUserPrincipal().getName();
+        userBean.updateRecipientToken(username, token);
+        return Response.ok().build();
+    }
 
     /**
      * Retrieve a list of user accounts with filter Only administrators can access this resource

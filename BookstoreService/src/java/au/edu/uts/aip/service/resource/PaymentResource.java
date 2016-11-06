@@ -1,5 +1,6 @@
 package au.edu.uts.aip.service.resource;
 
+import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
 import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
@@ -7,8 +8,10 @@ import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPut;
 import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
 import au.edu.uts.aip.domain.remote.PaymentRemote;
+import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import au.edu.uts.aip.service.util.ResourceUtil;
+import javax.annotation.security.RolesAllowed;
 
 import javax.ejb.EJB;
 import javax.json.JsonObject;
@@ -19,8 +22,10 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.SecurityContext;
 
 @Path("/payment")
 public class PaymentResource {
@@ -28,6 +33,12 @@ public class PaymentResource {
     @EJB
     private PaymentRemote paymentBean;
 
+    @EJB
+    private UserRemote userBean;
+    
+    @Context
+    private SecurityContext securityContext;
+    
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -69,10 +80,13 @@ public class PaymentResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
+    @RolesAllowed({"USER", "VERIFIED USER", "ADMIN"})
     @Path("recipient/create2")
     public Response createRecipient2(PinRecipientPost pinRecipientPost) {
 
+        String username = securityContext.getUserPrincipal().getName();
+        UserDTO userDTO = userBean.getUser(username);
+        pinRecipientPost.setEmail(userDTO.getEmail());
         SerialResponse responseDto = paymentBean.createRecipient2(pinRecipientPost);
 
         switch (responseDto.getStatusCode()) {

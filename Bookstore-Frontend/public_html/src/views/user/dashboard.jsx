@@ -37,44 +37,61 @@ class UserDashboardView extends BaseView {
 		event.preventDefault()
 		this.state.submitting = true
 		this.setState(this.state)
-		const readFilePromises = []
-		readFilePromises.push(this.readFile("id", this.state.verification_id))
-		readFilePromises.push(this.readFile("residential", this.state.address_proof))
 
-		Promise.all(readFilePromises).then((results) =>{
-			const callAPIPromises = []
-			results.forEach((readFileResult) =>{
-				const documentType = readFileResult[0]
-				const fileStream = readFileResult[1].replace(/^data:[^;]+;base64,/, '')
-				const contentType = readFileResult[2]
+		const bankAccount = {
+			name: this.state['bankAccount.name'],
+			bsb: this.state['bankAccount.bsb'],
+			number: this.state['bankAccount.number']
+		}
 
-				callAPIPromises.push(this.userService.uploadDocument(documentType, contentType, fileStream))
+		this.userService.updateBankAccount(bankAccount)
+			.then((resp) => {
+				const recipientToken = resp.response.token
+				const readFilePromises = []
+				readFilePromises.push(this.readFile("id", this.state.verification_id))
+				readFilePromises.push(this.readFile("residential", this.state.address_proof))
+
+				Promise.all(readFilePromises).then((results) => {
+					const callAPIPromises = []
+					results.forEach((readFileResult) =>{
+						const documentType = readFileResult[0]
+						const fileStream = readFileResult[1].replace(/^data:[^;]+;base64,/, '')
+						const contentType = readFileResult[2]
+
+						callAPIPromises.push(this.userService.uploadDocument(documentType, contentType, fileStream))
+					})
+
+					const addressData = {
+						address_line1: this.state.address_line1,
+						address_line2: this.state.address_line2,
+						address_city: this.state.address_city,
+						address_state: this.state.address_state,
+						address_country: this.state.address_country,
+						address_postcode: this.state.address_postcode
+					}
+					callAPIPromises.push(this.userService.updateAddress(addressData))
+					callAPIPromises.push(this.userService.setRecipientToken(recipientToken))
+
+					return Promise.all(callAPIPromises)
+				}).then((resp) => {
+					return this.userService.fetchAccount()
+				}).then((resp) => {
+					this.props.dispatch.login(resp)
+
+					alert("Your documents have been upladed successfully")
+					this.state.submitting = false
+					this.setState(this.state)
+				}).catch((err) => {
+					alert("There was an error while trying to submit your documents")
+					this.state.submitting = false
+					this.setState(this.state)
+				})
 			})
-
-			const addressData = {
-				address_line1: this.state.address_line1,
-				address_line2: this.state.address_line2,
-				address_city: this.state.address_city,
-				address_state: this.state.address_state,
-				address_country: this.state.address_country,
-				address_postcode: this.state.address_postcode
-			}
-			callAPIPromises.push(this.userService.updateAddress(addressData))
-
-			return Promise.all(callAPIPromises)
-		}).then((resp) => {
-			return this.userService.fetchAccount()
-		}).then((resp) => {
-			this.props.dispatch.login(resp)
-
-			alert("Your documents have been upladed successfully")
-			this.state.submitting = false
-			this.setState(this.state)
-		}).catch((err) => {
-			alert("There was an error while trying to submit your documents")
-			this.state.submitting = false
-			this.setState(this.state)
-		})
+			.fail((err) => {
+				alert("Bank account is invalid")
+				this.state.submitting = false
+				this.setState(this.state)
+			})
 	}
 
 	readFile(documentType, file){
@@ -115,51 +132,78 @@ class UserDashboardView extends BaseView {
 										required hideAsterisk disabled={this.state.uploading}/>
 
 						<bs.Row>
-						<bs.Col xs={7}>
-								<FormAddressInput label="Address line 1" name="address_line1"
-													value={this.state.address_line1} errorMessage={this.state.formErrors.address_line1}
-													onAddressSelected={this.onAddressSelected}
-													onFocus={() => this.removeFormErrorMessage('address_line1')}
-													onChange={this.handleChange} ref={(input) => this.addressSuggest = input}
-													required/>
+							<bs.Col xs={7}>
+								<h3>Address detail</h3>
+								<bs.Row>
+									<bs.Col xs={12}>
+										<FormAddressInput label="Address line 1" name="address_line1"
+											value={this.state.address_line1} errorMessage={this.state.formErrors.address_line1}
+											onAddressSelected={this.onAddressSelected}
+											onFocus={() => this.removeFormErrorMessage('address_line1')}
+											onChange={this.handleChange} ref={(input) => this.addressSuggest = input}
+											required/>
+									</bs.Col>	
+								</bs.Row>
+								<bs.Row>
+									<bs.Col xs={12}>
+										<FormInputText label="Address line 2" name="address_line2"
+											value={this.state.address_line2} errorMessage={formErrors.address_line2}
+											onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_line2')}
+											style={{width: "209%"}}/>
+									</bs.Col>
+								</bs.Row>
+								<bs.Row>
+									<bs.Col xs={6}>
+										<FormInputText label="City" name="address_city"
+											value={this.state.address_city} errorMessage={formErrors.address_city}
+											onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_city')}
+											required/>
+									</bs.Col>
+									<bs.Col xs={6}>
+										<FormInputText label="State" name="address_state"
+											value={this.state.address_state} errorMessage={formErrors.address_state}
+											onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_state')}
+											required/>
+									</bs.Col>
+								</bs.Row>
+								<bs.Row>
+									<bs.Col xs={6}>
+										<FormInputText label="Postcode" name="address_postcode"
+											value={this.state.address_postcode} errorMessage={formErrors.address_postcode}
+											onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_postcode')}
+											required/>
+									</bs.Col>
+									<bs.Col xs={6}>
+										<FormInputText label="Country" name="address_country"
+											value={this.state.address_country} errorMessage={formErrors.address_country}
+											onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_country')}
+											required/>
+									</bs.Col>
+								</bs.Row>
 							</bs.Col>
 						</bs.Row>
 						<bs.Row>
 							<bs.Col xs={12}>
-								<FormInputText label="Address line 2" name="address_line2"
-												value={this.state.address_line2} errorMessage={formErrors.address_line2}
-												onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_line2')}
-												style={{width: "209%"}}/>
-							</bs.Col>
-						</bs.Row>
+								<h3>Bank account</h3>
+								<bs.Row>
+									<bs.Col xs={4}>
+										<FormInputText label="Account name" name="bankAccount.name" value={this.state['bankAccount.name']} 
+											errorMessage={formErrors['bankAccount.name']} onChange={this.handleChange} 
+											onFocus={() => this.removeFormErrorMessage('bankAccount.name')} required/>
+									</bs.Col>
 
-						<bs.Row>
-							<bs.Col xs={4}>
-								<FormInputText label="City" name="address_city"
-												value={this.state.address_city} errorMessage={formErrors.address_city}
-												onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_city')}
-												required/>
-							</bs.Col>
-							<bs.Col xs={4}>
-								<FormInputText label="State" name="address_state"
-												value={this.state.address_state} errorMessage={formErrors.address_state}
-												onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_state')}
-												required/>
-							</bs.Col>
-						</bs.Row>
+									<bs.Col xs={4}>
+										<FormInputText label="BSB" name="bankAccount.bsb" value={this.state['bankAccount.bsb']} 
+											errorMessage={formErrors['bankAccount.bsb']} onChange={this.handleChange} 
+											onFocus={() => this.removeFormErrorMessage('bankAccount.bsb')} required/>
+									</bs.Col>
 
-						<bs.Row>
-							<bs.Col xs={4}>
-								<FormInputText label="Postcode" name="address_postcode"
-												value={this.state.address_postcode} errorMessage={formErrors.address_postcode}
-												onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_postcode')}
-												required/>
-							</bs.Col>
-							<bs.Col xs={4}>
-								<FormInputText label="Country" name="address_country"
-												value={this.state.address_country} errorMessage={formErrors.address_country}
-												onChange={this.handleChange} onFocus={() => this.removeFormErrorMessage('address_country')}
-												required/>
+									<bs.Col xs={4}>
+										<FormInputText label="Account number" name="bankAccount.number" value={this.state['bankAccount.number']} 
+											errorMessage={formErrors['bankAccount.number']} onChange={this.handleChange} 
+											onFocus={() => this.removeFormErrorMessage('bankAccount.number')} required/>
+									</bs.Col>
+								</bs.Row>
 							</bs.Col>
 
 						</bs.Row>

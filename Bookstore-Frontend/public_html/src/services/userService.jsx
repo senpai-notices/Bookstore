@@ -59,6 +59,36 @@ class UserService {
 		})
 	}
 
+	updateBankAccount(bankAccount){
+		return reqwest({
+			url: config.getServerAddress() + "/payment/recipient/create2",
+			method: 'post',
+			headers: {
+				'Authorization': config.getAuthHeader(),
+				'Content-Type': 'application/json'
+			},
+			data: JSON.stringify({bank_account: bankAccount}),
+			crossOrigin: true,
+			withCredentials: true
+		})
+	}
+
+	setRecipientToken(token){
+		return reqwest({
+			url: config.getServerAddress() + "/user/recipientToken",
+			method: 'post',
+			headers: {
+				'Authorization': config.getAuthHeader(),
+				'Content-Type': 'application/x-www-form-urlencoded'
+			},
+			data: {
+				token: token
+			},
+			crossOrigin: true,
+			withCredentials: true
+		})
+	}
+
 	sendActivateEmailAfterRegister(username, password) {
 		let authHeader = 'Basic ' + base64.encode(username + ":" + password, true)
 		return reqwest({

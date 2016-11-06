@@ -34,4 +34,6 @@ public interface UserRemote {
     DocumentsDTO getDocumentPath(String username);
     
     void updateAddress(AddressDTO addressDTO, String username);
+    
+    void updateRecipientToken(String username, String token);
 }

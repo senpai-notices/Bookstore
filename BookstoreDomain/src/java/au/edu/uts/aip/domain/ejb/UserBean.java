@@ -267,4 +267,10 @@ public class UserBean implements UserRemote {
         em.persist(addressEntity);
         user.setAddress(addressEntity);
     }
+    
+    @Override
+    public void updateRecipientToken(String username, String token) {
+        User user = getUserEntity(username);
+        user.setRecipientToken(token);
+    }
 }
