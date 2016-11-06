@@ -24,10 +24,10 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 /**
- * PaymentBean is a JavaBean that is used to handle the payment related operations
+ * PaymentBean is an EJB that is used to handle the payment related operations
  * 
- * It uses payment API to handle the payment 
- * 
+ * It uses the Pin API to handle the payment 
+ * Official Pin API documentation can be found here: https://pin.net.au/docs/api/
  *  @author team San Dang, Alex Tan, Xiaoyang Liu
  */
 @Stateless
@@ -46,6 +46,7 @@ public class PaymentBean implements PaymentRemote {
     /**
     * createCustomer2 is used to create a customer
     * return ResponseDTO
+     * @param pinCustomerPost
     */
     @Override
     public SerialResponse createCustomer2(PinCustomerPost pinCustomerPost) {
@@ -74,6 +75,8 @@ public class PaymentBean implements PaymentRemote {
     
     /**
     * charge2 funtion is used to charge the money
+     * @param pinChargePost
+     * @return 
     */
     @Override
     public SerialResponse charge2(PinChargePost pinChargePost) {
@@ -93,7 +96,7 @@ public class PaymentBean implements PaymentRemote {
         ValidationResult validationResult = PinResponseUtil.validate(statusCode, responseJson);
 
         if (validationResult == null) {
-            return new SerialResponse(responseJson, 201);
+            return new SerialResponse(responseJson, Response.Status.CREATED.getStatusCode());
         } else {
             return new SerialResponse(validationResult.toJson(), 422);
         }
@@ -101,6 +104,8 @@ public class PaymentBean implements PaymentRemote {
 
     /**
     * createRecipient2 function is used to create a receipt
+     * @param pinRecipientPost
+     * @return 
     */
     @Override
     public SerialResponse createRecipient2(PinRecipientPost pinRecipientPost) {
@@ -119,7 +124,7 @@ public class PaymentBean implements PaymentRemote {
         ValidationResult validationResult = PinResponseUtil.validate(statusCode, responseJson);
 
         if (validationResult == null) {
-            return new SerialResponse(responseJson, 201);
+            return new SerialResponse(responseJson, Response.Status.CREATED.getStatusCode());
         } else {
             return new SerialResponse(validationResult.toJson(), 422);
         }
@@ -127,6 +132,8 @@ public class PaymentBean implements PaymentRemote {
 
     /**
     * transfer2 function is used to transfer the money
+     * @param pinTransferPost
+     * @return 
     */
     @Override
     public SerialResponse transfer2(PinTransferPost pinTransferPost) {
@@ -145,7 +152,7 @@ public class PaymentBean implements PaymentRemote {
         ValidationResult validationResult = PinResponseUtil.validate(statusCode, responseJson);
 
         if (validationResult == null) {
-            return new SerialResponse(responseJson, 201);
+            return new SerialResponse(responseJson, Response.Status.CREATED.getStatusCode());
         } else {
             return new SerialResponse(validationResult.toJson(), 422);
         }
@@ -174,6 +181,9 @@ public class PaymentBean implements PaymentRemote {
 
     /**
     * editRecipient2 function is used to edit the information of the recipient
+     * @param recipientToken
+     * @param pinRecipientPut
+     * @return 
     */
     @Override
     public SerialResponse editRecipient2(String recipientToken, PinRecipientPut pinRecipientPut) {
@@ -194,11 +204,12 @@ public class PaymentBean implements PaymentRemote {
         ValidationResult validationResult = PinResponseUtil.validate(statusCode, responseJson);
 
         if (validationResult == null) {
-            return new SerialResponse(responseJson, 201);
+            return new SerialResponse(responseJson, Response.Status.CREATED.getStatusCode());
         } else {
             return new SerialResponse(validationResult.toJson(), 422);
         }
     }
+    // stop here. everything below here is deprecated.
 
     /**
     * createCustomer is used to create a customer

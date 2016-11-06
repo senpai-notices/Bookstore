@@ -1,9 +1,9 @@
 package au.edu.uts.aip.service.resource;
 
-import au.edu.uts.aip.domain.auspost.dto.AuspostPostageGet;
+import au.edu.uts.aip.domain.auspost.dto.AuspostPostalFeeGet;
+import au.edu.uts.aip.domain.ejb.PostalDataBean;
 import au.edu.uts.aip.domain.response.SerialResponse;
-import au.edu.uts.aip.domain.ejb.PostalBean;
-import java.util.List;
+import au.edu.uts.aip.domain.ejb.PostalFeeBean;
 
 import javax.ejb.EJB;
 import javax.json.Json;
@@ -18,23 +18,23 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-/**
- * May not be required
- */
 @Path("postal")
 public class PostalResource {
 
     @EJB
-    private PostalBean postalBean;
+    private PostalFeeBean postalFeeBean;
+    @EJB
+    private PostalDataBean postalDataBean;
 
+    // <editor-fold defaultstate="collapsed" desc="test methods for postal fee API">
     @Deprecated
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("calculate")
-    public Response calculate(AuspostPostageGet auspostPostageGet) {
-        JsonObject response = postalBean.calculatePostageCostJson(auspostPostageGet);
+    public Response calculate(AuspostPostalFeeGet auspostPostageGet) {
+        JsonObject response = postalFeeBean.calculatePostageCostJson(auspostPostageGet);
         return Response.ok(response, MediaType.APPLICATION_JSON).build();
     }
 
@@ -43,7 +43,7 @@ public class PostalResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("calculate_reg_test")
     public Response calculateRegularTest() {
-        postalBean.calculatePostageCost(32, 800, 9999, "AUS_PARCEL_REGULAR");
+        postalFeeBean.calculatePostageCost(32, 800, 9999, "AUS_PARCEL_REGULAR");
         return Response.ok().build();
     }
 
@@ -52,9 +52,11 @@ public class PostalResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("calculate_exp_test")
     public Response calculateExpressTest() {
-        postalBean.calculatePostageCost(32, 800, 9999, "AUS_PARCEL_EXPRESS");
+        postalFeeBean.calculatePostageCost(32, 800, 9999, "AUS_PARCEL_EXPRESS");
         return Response.ok().build();
     }
+    
+    // </editor-fold>
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -71,7 +73,7 @@ public class PostalResource {
         if (postcodeString.length() != 4) {
             return Response.status(422).entity(Json.createObjectBuilder().add("error", "Invalid postcode. Postcode must be four digits.").build()).build();
         }
-        SerialResponse response = postalBean.getStateName(postcode);
+        SerialResponse response = postalDataBean.getStateName(postcode);
         switch (response.getStatusCode()) {
             case 200:
                 return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
@@ -88,7 +90,7 @@ public class PostalResource {
     @Path("postcode/{suburb}")
     public Response searchPostcodes(@PathParam("suburb") String suburb) {
 
-        SerialResponse response = postalBean.searchPostcodes(suburb);
+        SerialResponse response = postalDataBean.searchPostcodes(suburb);
         switch (response.getStatusCode()) {
             case 200:
                 return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
@@ -105,7 +107,7 @@ public class PostalResource {
     @Path("suburb/detail/{suburb}")
     public Response searchSuburbDetail(@PathParam("suburb") String suburb) {
 
-        SerialResponse response = postalBean.searchSuburbDetail(suburb);
+        SerialResponse response = postalDataBean.searchSuburbDetail(suburb);
         switch (response.getStatusCode()) {
             case 200:
                 return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
@@ -124,9 +126,9 @@ public class PostalResource {
                                         @FormParam("to") int to,
                                         @FormParam("type") String type) {
         if (type.equals("normal")){
-            return postalBean.calculatePostageCost(quantity, from, to, "AUS_PARCEL_REGULAR");
+            return postalFeeBean.calculatePostageCost(quantity, from, to, "AUS_PARCEL_REGULAR");
         } else if (type.equals("express")){
-            return postalBean.calculatePostageCost(quantity, from, to, "AUS_PARCEL_EXPRESS");
+            return postalFeeBean.calculatePostageCost(quantity, from, to, "AUS_PARCEL_EXPRESS");
         }
         
         return 0;

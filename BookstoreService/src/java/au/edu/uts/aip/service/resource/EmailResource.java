@@ -1,13 +1,10 @@
 package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.dto.UserDTO;
-import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.TokenGenerationException;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.util.SendEmail;
 import au.edu.uts.aip.service.util.EmailBodyComposer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.mail.MessagingException;
