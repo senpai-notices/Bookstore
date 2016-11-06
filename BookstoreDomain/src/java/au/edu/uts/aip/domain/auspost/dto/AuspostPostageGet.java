@@ -13,6 +13,7 @@ public class AuspostPostageGet {
     private int height;
     private double weight;
     private String serviceCode;
+    private int quantity;
 
     @XmlElement(required = true, name = "from_postcode")
     public String getFromPostcode() {
@@ -77,4 +78,12 @@ public class AuspostPostageGet {
         this.serviceCode = serviceCode;
     }
 
+    @XmlElement
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 }

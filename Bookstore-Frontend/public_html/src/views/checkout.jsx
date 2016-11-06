@@ -13,6 +13,7 @@ class CheckoutView extends BaseView {
 		this.calculateTotalPrice = this.calculateTotalPrice.bind(this)
 		this.onAddressSelected = this.onAddressSelected.bind(this)
 		this.submitPayment = this.submitPayment.bind(this)
+		this.calculateShippingCost = this.calculateShippingCost.bind(this)
 	}
 
 	componentWillMount(){
@@ -49,6 +50,46 @@ class CheckoutView extends BaseView {
 		this.setState(this.state)
 
 		this.addressSuggest.setValue(this.state['card.address_line1'])
+	}
+
+	calculateShippingCost(event){
+		event.preventDefault()
+
+		if (!this.state['card.address_postcode']){
+			alert("Please enter postcode")
+			return
+		}
+
+		if (isNaN(this.state['card.address_postcode'])){
+			alert("Please enter a valid postcode")
+			return
+		}
+
+		this.state.calculatingShippingCost = true
+		this.state.shippingCost = []
+		this.state.totalShippingCost = null
+		this.setState(this.state)
+		let fromPostcode = this.state['card.address_postcode']
+		let callAIPPromises = []
+		this.props.shoppingCart.items.forEach((cartItem) => {
+			let quantiy = cartItem.quantiy
+			let toPostcode = cartItem.seller.postcode
+			let type = cartItem.shippingType
+
+			callAIPPromises.push(this.bookService.calculateShippingCost(quantiy, fromPostcode, toPostcode, type))
+		})
+
+		Promise.all(callAIPPromises).then((resp) => {
+			this.state.shippingCost = resp
+			this.state.totalShippingCost = this.state.shippingCost.reduce(function(a, b) { return +a + +b; }, 0);
+			console.log(this.state.totalShippingCost)
+			this.state.calculatingShippingCost = false
+			this.setState(this.state)
+		}).catch(() => {
+			alert("Cannot calculate shipping cost")
+			this.state.calculatingShippingCost = false
+			this.setState(this.state)
+		})
 	}
 
 	submitPayment(event){
@@ -109,9 +150,18 @@ class CheckoutView extends BaseView {
 
 		const checkoutView = (
 			<div>
-				<SalesListView />
+				<SalesListView showShipping shippingCost={this.state.shippingCost}/>
 
-				<bs.Form style={{height: "500px"}} onSubmit={this.submitPayment}>
+				<bs.Row>
+					<bs.Col xs={4} xsOffset={8}>
+						<h3>Total: AU$ {this.calculateTotalPrice()}</h3>
+						{this.state.totalShippingCost && (
+							<h3>Shipping cost: AU$ {this.state.totalShippingCost}</h3>
+						) || (<h3>&nbsp;</h3>)}
+					</bs.Col>
+				</bs.Row>
+
+				<bs.Form style={{height: "600px"}} onSubmit={this.submitPayment}>
 
 				<ErrorDisplay errors={this.state.errors} onRemove={(index) => this.removeErrorMessage(index)}/>
 
@@ -210,7 +260,9 @@ class CheckoutView extends BaseView {
 											required/>
 						</bs.Col>
 
-						<bs.Button type="submit" bsStyle="primary">Calculate cost</bs.Button>
+						<bs.Button bsStyle="primary" onClick={this.calculateShippingCost} disabled={this.state.calculatingShippingCost}>
+							{(this.state.calculatingShippingCost && "Calculating") || "Calculate shipping cost"}
+						</bs.Button>
 					</bs.Row>
 				</bs.Col>
 				</bs.Form>

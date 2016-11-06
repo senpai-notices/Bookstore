@@ -24,7 +24,8 @@ export const ShoppingCartReducer = (state, action) => {
 												'maxQuantity': action.sale.quantity,
 												'quantity': 1,
 												'price': action.sale.price,
-												'totalPrice': action.sale.price}]
+												'totalPrice': action.sale.price,
+												'shippingType': 'normal'}]
 			break
 		case 'REMOVE_ITEM':
 			let filteredItems = newState.items.filter((item) => {
@@ -37,6 +38,13 @@ export const ShoppingCartReducer = (state, action) => {
 				if (cartItem.id === action.id){
 					cartItem.quantity = Math.min(cartItem.maxQuantity, Math.max(action.quantity, 1))
 					cartItem.totalPrice = cartItem.quantity * cartItem.price
+				}
+			})
+			break
+		case 'UPDATE_SHIPPING_TYPE':
+			newState.items.forEach((cartItem) => {
+				if (cartItem.id === action.id){
+					cartItem.shippingType = action.shippingType
 				}
 			})
 			break
@@ -63,6 +71,7 @@ export const ShoppingCartReducer = (state, action) => {
 					cartItem['maxQuantity'] = 0
 					cartItem['price'] = 0
 					cartItem['totalPrice'] = 0
+					cartItem['shippingType'] = undefined
 				}
 			})
 			break

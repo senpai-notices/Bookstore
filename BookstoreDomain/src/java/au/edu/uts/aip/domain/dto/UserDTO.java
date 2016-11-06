@@ -46,15 +46,17 @@ public class UserDTO implements Serializable {
      */
     private String address;
     
+    private int postcode;
+    
     /**
-     * constructor of the UserDTO class without paramters 
+     * Parameterless constructor for serializable interface
      */
     public UserDTO() {
 
     }
 
     /**
-     * constructor of the UserDTO class with one paramter
+     * Constructor that copy data from user entity model
      */
     public UserDTO(User userEntity) {
         this.username = userEntity.getUsername();
@@ -64,6 +66,7 @@ public class UserDTO implements Serializable {
         
         if (userEntity.getAddress() != null){
             this.address = userEntity.getAddress().toString();
+            this.postcode = userEntity.getAddress().getAddressPostcode();
         }
     }
 
@@ -135,5 +138,14 @@ public class UserDTO implements Serializable {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @XmlElement
+    public int getPostcode() {
+        return postcode;
+    }
+
+    public void setPostcode(int postcode) {
+        this.postcode = postcode;
     }
 }

@@ -99,6 +99,23 @@ class BookService {
 		})
 	}
 
+	calculateShippingCost(quantity, fromPostcode, toPostcode, type){
+		return reqwest({
+			url: config.getServerAddress() + '/postal/calculate',
+			method: 'post',
+			crossOrigin: true,
+			data: {
+				quantity: quantity,
+				from: fromPostcode,
+				to: toPostcode,
+				type: type
+			},
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded'
+			}
+		})
+	}
+
 	chargeMoney(data){
 		return reqwest({
 			url: config.getServerAddress() + '/payment/charge2',

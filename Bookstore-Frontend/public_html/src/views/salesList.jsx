@@ -48,7 +48,9 @@ class SalesListView extends BaseView {
 		if (this.state.loadingSalesInfo){
 			salesListView = (<LoadingSpinner visible/>)
 		} else {
+			let index = -1
 			shoppingCart.items.forEach((item) => {
+				index++
 				salesListView.push(
 					<bs.Panel key={item.id}>
 						<bs.Row>
@@ -76,7 +78,31 @@ class SalesListView extends BaseView {
 									</bs.Col>
 								</bs.Row>
 								<br/>
-								<bs.Button bsStyle="warning" onClick={() => this.props.dispatch.removeItem(item.id)}>Remove</bs.Button>
+								<bs.Row>
+								
+									{this.props.showShipping && (<bs.Col xs={6}>
+										<bs.ControlLabel>Shipping method</bs.ControlLabel>
+										<bs.Radio name={"shipping" + item.id} checked={item.shippingType === 'normal'}
+											onChange={() => this.props.dispatch.updateShippingType(item.id, 'normal')}>
+											Normal
+										</bs.Radio>
+										<bs.Radio name={"shipping" + item.id} checked={item.shippingType === 'express'}
+											onChange={() => this.props.dispatch.updateShippingType(item.id, 'express')}>
+											Express
+										</bs.Radio>
+										{this.props.shippingCost
+											&& (<bs.ControlLabel>Shipping: AU$ {this.props.shippingCost[index]}</bs.ControlLabel>)}
+										
+									</bs.Col>)}
+
+									<bs.Col xs={6}>
+										<bs.Button bsStyle="warning" 
+											onClick={() => this.props.dispatch.removeItem(item.id)}>
+												Remove
+										</bs.Button>
+									</bs.Col>
+								</bs.Row>
+								
 							</bs.Col>
 						</bs.Row>
 					</bs.Panel>

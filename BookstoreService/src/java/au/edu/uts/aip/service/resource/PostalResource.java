@@ -3,11 +3,13 @@ package au.edu.uts.aip.service.resource;
 import au.edu.uts.aip.domain.auspost.dto.AuspostPostageGet;
 import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.ejb.PostalBean;
+import java.util.List;
 
 import javax.ejb.EJB;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -112,5 +114,21 @@ public class PostalResource {
             default:
                 return Response.status(500).build();
         }
+    }
+    
+    @POST
+    @Path("calculate")
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public double calculateShippingCost(@FormParam("quantity") int quantity,
+                                        @FormParam("from") int from,
+                                        @FormParam("to") int to,
+                                        @FormParam("type") String type) {
+        if (type.equals("normal")){
+            return postalBean.calculatePostageCost(quantity, from, to, "AUS_PARCEL_REGULAR");
+        } else if (type.equals("express")){
+            return postalBean.calculatePostageCost(quantity, from, to, "AUS_PARCEL_EXPRESS");
+        }
+        
+        return 0;
     }
 }

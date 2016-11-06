@@ -43,3 +43,9 @@ export const updateItemQuantity = (id, quantity) => ({
 	id,
 	quantity
 })
+
+export const updateShippingType = (id, shippingType) => ({
+	type: "UPDATE_SHIPPING_TYPE",
+	id,
+	shippingType
+})
