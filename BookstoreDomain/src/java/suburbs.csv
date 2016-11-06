@@ -48,7 +48,7 @@ Adavale,QLD,4474
 Addington,VIC,3352
 Adelaide,SA,5000
 Adelaide,SA,5001
-Adelaide Bc,SA,5000
+Adelaide BC,SA,5000
 Adelaide Lead,VIC,3465
 Adelaide Park,QLD,4703
 Adelaide River,NT,846
@@ -82,7 +82,7 @@ Albacutya,VIC,3424
 Albanvale,VIC,3021
 Albany,WA,6330
 Albany Creek,QLD,4035
-Albany Dc,WA,6331
+Albany DC,WA,6331
 Albert Park,VIC,3206
 Albert Park,SA,5014
 Alberta,QLD,4702
@@ -94,8 +94,8 @@ Alberton West,VIC,3971
 Albion,VIC,3020
 Albion,QLD,4010
 Albion,QLD,4822
-Albion Bc,QLD,4010
-Albion Dc,QLD,4010
+Albion BC,QLD,4010
+Albion DC,QLD,4010
 Albion Park,NSW,2527
 Albion Park Rail,NSW,2527
 Albury,NSW,2640
@@ -302,7 +302,7 @@ Archdale Junction,VIC,3475
 Archer,NT,830
 Archer River,QLD,4892
 Archerfield,QLD,4108
-Archerfield Bc,QLD,4108
+Archerfield BC,QLD,4108
 Archerton,VIC,3723
 Archies Creek,VIC,3995
 Ardath,WA,6419
@@ -361,7 +361,7 @@ Arthurville,NSW,2820
 Arumbera,NT,873
 Arumpo,NSW,2715
 Arundel,QLD,4214
-Arundel Dc,QLD,4214
+Arundel DC,QLD,4214
 Ascot,VIC,3364
 Ascot,VIC,3551
 Ascot,QLD,4007
@@ -575,7 +575,7 @@ Ballapur,VIC,3483
 Ballarat,VIC,3350
 Ballarat,VIC,3353
 Ballarat East,VIC,3350
-Ballarat Mc,VIC,3354
+Ballarat MC,VIC,3354
 Ballarat West,VIC,3350
 Ballard,QLD,4352
 Ballaroo,QLD,4455
@@ -623,7 +623,7 @@ Banca,TAS,7265
 Bancroft,QLD,4630
 Banda Banda,NSW,2446
 Bandiana,VIC,3691
-Bandiana Milpo,VIC,3694
+Bandiana MILPO,VIC,3694
 Bandon Grove,NSW,2420
 Bandy Creek,WA,6450
 Bandya,WA,6440
@@ -908,7 +908,7 @@ Belalie North,SA,5491
 Belanglo,NSW,2577
 Belbora,NSW,2422
 Belconnen,ACT,2616
-Belconnen Dc,ACT,2617
+Belconnen DC,ACT,2617
 Beldon,WA,6027
 Belfield,NSW,2191
 Belford,NSW,2335
@@ -1025,7 +1025,7 @@ Bentleigh East,VIC,3165
 Bentley,NSW,2480
 Bentley,WA,6102
 Bentley,WA,6982
-Bentley Dc,WA,6983
+Bentley DC,WA,6983
 Bentley South,WA,6102
 Benwerrin,VIC,3235
 Berajondo,QLD,4674
@@ -1109,8 +1109,8 @@ Bibaringa,SA,5118
 Bibbenluke,NSW,2632
 Biboohra,QLD,4880
 Bibra Lake,WA,6163
-Bibra Lake Dc,WA,6163
-Bibra Lake Dc,WA,6965
+Bibra Lake DC,WA,6163
+Bibra Lake DC,WA,6965
 Bickley,WA,6076
 Bickley Vale,NSW,2570
 Bicton,WA,6157
@@ -1700,7 +1700,7 @@ Bremer Bay,WA,6338
 Brenanah,VIC,3517
 Brenda Park,SA,5320
 Brendale,QLD,4500
-Brendale Bc,QLD,4500
+Brendale BC,QLD,4500
 Brentford Square,VIC,3131
 Brentwood,SA,5575
 Brentwood,WA,6153
@@ -2014,7 +2014,7 @@ Bunbury,WA,6230
 Bunbury,WA,6231
 Bundaberg,QLD,4670
 Bundaberg Central,QLD,4670
-Bundaberg Dc,QLD,4670
+Bundaberg DC,QLD,4670
 Bundaberg East,QLD,4670
 Bundaberg North,QLD,4670
 Bundaberg South,QLD,4670
@@ -2100,7 +2100,7 @@ Burkes Bridge,VIC,3568
 Burkes Flat,VIC,3475
 Burketown,QLD,4830
 Burleigh,QLD,4822
-Burleigh Dc,QLD,4220
+Burleigh DC,QLD,4220
 Burleigh Heads,QLD,4220
 Burleigh Town,QLD,4220
 Burleigh Waters,QLD,4220
@@ -2126,7 +2126,7 @@ Burnt Bridge,NSW,2440
 Burnt Yards,NSW,2792
 Buronga,NSW,2739
 Burpengary,QLD,4505
-Burpengary Dc,QLD,4505
+Burpengary DC,QLD,4505
 Burpengary East,QLD,4505
 Burra,NSW,2620
 Burra,NSW,2653
@@ -2224,7 +2224,7 @@ Cabbage Tree Island,NSW,2430
 Cabbage Tree Island,NSW,2477
 Cable Beach,WA,6726
 Caboolture,QLD,4510
-Caboolture Bc,QLD,4510
+Caboolture BC,QLD,4510
 Caboonbah,QLD,4312
 Cabramatta,NSW,2166
 Cabramatta West,NSW,2166
@@ -2248,7 +2248,7 @@ Cairnlea,VIC,3023
 Cairns,QLD,4870
 Cairns Bay,TAS,7116
 Cairns City,QLD,4870
-Cairns Dc,QLD,4870
+Cairns DC,QLD,4870
 Cairns North,QLD,4870
 Calala,NSW,2340
 Calamia,NSW,2460
@@ -2294,7 +2294,7 @@ Calomba,SA,5501
 Caloola,NSW,2795
 Caloote,SA,5254
 Caloundra,QLD,4551
-Caloundra Dc,QLD,4551
+Caloundra DC,QLD,4551
 Caloundra West,QLD,4551
 Calrossie,VIC,3971
 Caltowie,SA,5490
@@ -2375,7 +2375,7 @@ Canary Island,VIC,3537
 Canbelego,NSW,2835
 Canberra,ACT,2600
 Canberra,ACT,2601
-Canberra Bc,ACT,2610
+Canberra BC,ACT,2610
 Candelo,NSW,2550
 Cane,WA,6710
 Cangai,NSW,2460
@@ -2393,8 +2393,8 @@ Cannindah,QLD,4630
 Canning Bridge Applecross,WA,6153
 Canning Mills,WA,6111
 Canning Vale,WA,6155
-Canning Vale Dc,WA,6155
-Canning Vale Dc,WA,6970
+Canning Vale DC,WA,6155
+Canning Vale DC,WA,6970
 Cannington,WA,6987
 Cannon Creek,QLD,4310
 Cannon Creek,QLD,4380
@@ -2417,7 +2417,7 @@ Canunda,SA,5280
 Canungra,QLD,4275
 Canyonleigh,NSW,2577
 Capalaba,QLD,4157
-Capalaba Dc,QLD,4157
+Capalaba DC,QLD,4157
 Caparra,NSW,2429
 Cape Arid,WA,6452
 Cape Barren Island,TAS,7257
@@ -2673,7 +2673,7 @@ Central Macdonald,NSW,2775
 Central Mangrove,NSW,2250
 Central Park,VIC,3145
 Central Plateau,TAS,7304
-Central Queensland Mc,QLD,4702
+Central Queensland MC,QLD,4702
 Central Queensland University,QLD,4701
 Central Tilba,NSW,2546
 Ceratodus,QLD,4627
@@ -2903,7 +2903,7 @@ Cleve,SA,5640
 Cleveland,NSW,2530
 Cleveland,QLD,4163
 Cleveland,TAS,7211
-Cleveland Dc,QLD,4163
+Cleveland DC,QLD,4163
 Clifden,NSW,2460
 Clifford,QLD,4427
 Clifford Gardens,QLD,4350
@@ -2927,7 +2927,7 @@ Clontarf,NSW,2093
 Clontarf,QLD,4019
 Clontarf,QLD,4357
 Clontarf Beach,QLD,4019
-Clontarf Dc,QLD,4019
+Clontarf DC,QLD,4019
 Closeburn,QLD,4520
 Clothiers Creek,NSW,2484
 Clouds Creek,NSW,2453
@@ -3273,7 +3273,7 @@ Coorow,WA,6515
 Cooroy,QLD,4563
 Cooroy Mountain,QLD,4563
 Coorparoo,QLD,4151
-Coorparoo Dc,QLD,4151
+Coorparoo DC,QLD,4151
 Coorumba,QLD,4860
 Cootamundra,NSW,2590
 Cootharaba,QLD,4565
@@ -4293,7 +4293,7 @@ East Yuna,WA,6532
 Eastbrook,WA,6260
 Eastern Creek,NSW,2766
 Eastern Heights,QLD,4305
-Eastern Suburbs Mc,NSW,2004
+Eastern Suburbs MC,NSW,2004
 Eastern View,VIC,3231
 Eastgardens,NSW,2036
 Eastlakes,NSW,2018
@@ -4415,7 +4415,7 @@ Elizabeth Park,SA,5113
 Elizabeth South,SA,5112
 Elizabeth Town,TAS,7304
 Elizabeth Vale,SA,5112
-Elizabeth West Dc,SA,5113
+Elizabeth West DC,SA,5113
 Ellalong,NSW,2325
 Elland,NSW,2460
 Ellangowan,NSW,2470
@@ -4735,7 +4735,7 @@ Ferny Creek,VIC,3786
 Ferny Glen,QLD,4275
 Ferny Grove,QLD,4055
 Ferny Hills,QLD,4055
-Ferny Hills Dc,QLD,4055
+Ferny Hills DC,QLD,4055
 Ferodale,NSW,2318
 Ferryden Park,SA,5010
 Feysville,WA,6431
@@ -4891,7 +4891,7 @@ Forth,TAS,7310
 Forthside,TAS,7310
 Fortis Creek,NSW,2460
 Fortitude Valley,QLD,4006
-Fortitude Valley Bc,QLD,4006
+Fortitude Valley BC,QLD,4006
 Foster,VIC,3960
 Foster North,VIC,3960
 Fosters Valley,NSW,2795
@@ -5168,7 +5168,7 @@ Gingin,WA,6503
 Ginginup,WA,6503
 Gingkin,NSW,2787
 Ginoondan,QLD,4625
-Gippsland Mc,VIC,3841
+Gippsland MC,VIC,3841
 Giralang,ACT,2617
 Girards Hill,NSW,2480
 Girgarre,VIC,3624
@@ -5191,9 +5191,9 @@ Gladstone,NSW,2440
 Gladstone,QLD,4680
 Gladstone,SA,5473
 Gladstone,TAS,7264
-Gladstone Bc,QLD,4680
+Gladstone BC,QLD,4680
 Gladstone Central,QLD,4680
-Gladstone Dc,QLD,4680
+Gladstone DC,QLD,4680
 Gladstone Harbour,QLD,4680
 Gladstone Park,VIC,3043
 Gladysdale,VIC,3797
@@ -5388,7 +5388,7 @@ Gogango,QLD,4702
 Gogeldrie,NSW,2705
 Gol Gol,NSW,2738
 Golconda,TAS,7254
-Gold Coast Mc,QLD,9726
+Gold Coast MC,QLD,9726
 Golden Beach,VIC,3851
 Golden Beach,QLD,4551
 Golden Fleece,QLD,4621
@@ -5683,7 +5683,7 @@ Greythorn,VIC,3104
 Griffin,QLD,4503
 Griffith,ACT,2603
 Griffith,NSW,2680
-Griffith Dc,NSW,2680
+Griffith DC,NSW,2680
 Griffith East,NSW,2680
 Griffith University,QLD,4222
 Grimwade,WA,6253
@@ -5780,13 +5780,13 @@ Gwambegwine,QLD,4420
 Gwambygine,WA,6302
 Gwandalan,NSW,2259
 Gwelup,WA,6018
-Gwelup Dc,WA,6018
+Gwelup DC,WA,6018
 Gwynneville,NSW,2500
 Gymbowen,VIC,3401
 Gymea,NSW,2227
 Gymea Bay,NSW,2227
 Gympie,QLD,4570
-Gympie Dc,QLD,4570
+Gympie DC,QLD,4570
 Haasts Bluff,NT,872
 Habana,QLD,4740
 Haberfield,NSW,2045
@@ -6055,7 +6055,7 @@ Herrick,TAS,7264
 Herron,WA,6211
 Herston,QLD,4006
 Hervey Bay,QLD,4655
-Hervey Bay Dc,QLD,4655
+Hervey Bay DC,QLD,4655
 Hervey Range,QLD,4817
 Hesket,VIC,3442
 Hesse,VIC,3321
@@ -6288,7 +6288,7 @@ Hunchy,QLD,4555
 Hungerford,NSW,2840
 Hungerford,QLD,4493
 Hunter,VIC,3558
-Hunter Region Mc,NSW,2310
+Hunter Region MC,NSW,2310
 Hunters Hill,NSW,2110
 Hunterston,VIC,3971
 Hunterview,NSW,2330
@@ -6311,7 +6311,7 @@ Huonville,TAS,7109
 Hurlstone Park,NSW,2193
 Hurstbridge,VIC,3099
 Hurstville,NSW,2220
-Hurstville Bc,NSW,1481
+Hurstville BC,NSW,1481
 Huskisson,NSW,2540
 Hutt Street,SA,5000
 Hutton Creek,QLD,4454
@@ -6597,8 +6597,8 @@ Jones Gully,QLD,4355
 Jones Hill,QLD,4570
 Jones Island,NSW,2430
 Joondalup,WA,6027
-Joondalup Dc,WA,6027
-Joondalup Dc,WA,6919
+Joondalup DC,WA,6027
+Joondalup DC,WA,6919
 Jordan Springs,NSW,2747
 Josephville,QLD,4285
 Joskeleigh,QLD,4702
@@ -6659,7 +6659,7 @@ Kaldoonera,SA,5655
 Kaleen,ACT,2617
 Kalgan,WA,6330
 Kalgoorlie,WA,6430
-Kalgoorlie Dc,WA,6433
+Kalgoorlie DC,WA,6433
 Kalimna,VIC,3909
 Kalimna West,VIC,3909
 Kalinga,QLD,4030
@@ -6791,7 +6791,7 @@ Katherine,NT,850
 Katherine,NT,851
 Katherine South,NT,850
 Katoomba,NSW,2780
-Katoomba Dc,NSW,2780
+Katoomba DC,NSW,2780
 Katrine,WA,6566
 Katunga,VIC,3640
 Kauring,WA,6302
@@ -6834,13 +6834,13 @@ Kellyville,NSW,2155
 Kellyville Ridge,NSW,2155
 Kelmscott,WA,6111
 Kelmscott,WA,6991
-Kelmscott Dc,WA,6997
+Kelmscott DC,WA,6997
 Kelso,NSW,2795
 Kelso,QLD,4815
 Kelso,TAS,7270
 Kelvin,NSW,2380
 Kelvin Grove,QLD,4059
-Kelvin Grove Dc,QLD,4059
+Kelvin Grove DC,QLD,4059
 Kelvin View,VIC,3666
 Kelvinhaugh,QLD,4401
 Kembla Grange,NSW,2526
@@ -6857,7 +6857,7 @@ Kenley,VIC,3597
 Kenmare,VIC,3395
 Kenmare,WA,6316
 Kenmore,QLD,4069
-Kenmore Dc,QLD,4069
+Kenmore DC,QLD,4069
 Kenmore East,QLD,4069
 Kenmore Hills,QLD,4069
 Kennaicle Creek,NSW,2449
@@ -6875,7 +6875,7 @@ Kensington Gardens,SA,5068
 Kensington Grove,QLD,4341
 Kensington Park,SA,5068
 Kent Town,SA,5067
-Kent Town Dc,SA,5071
+Kent Town DC,SA,5071
 Kenthurst,NSW,2156
 Kentlyn,NSW,2560
 Kenton Valley,SA,5233
@@ -7089,7 +7089,7 @@ Kirkstall,VIC,3283
 Kirkwood,QLD,4680
 Kirrama,QLD,4872
 Kirrawee,NSW,2232
-Kirrawee Dc,NSW,2232
+Kirrawee DC,NSW,2232
 Kirribilli,NSW,2061
 Kirup,WA,6251
 Kirwan,QLD,4817
@@ -7771,11 +7771,11 @@ Loftus,NSW,2232
 Loftville,NSW,2480
 Logan,VIC,3475
 Logan Central,QLD,4114
-Logan City Dc,QLD,4114
+Logan City DC,QLD,4114
 Logan Reserve,QLD,4133
 Logan Village,QLD,4207
 Loganholme,QLD,4129
-Loganholme Dc,QLD,4129
+Loganholme DC,QLD,4129
 Loganlea,QLD,4131
 Logans Crossing,NSW,2439
 Logie Brae,NSW,2713
@@ -7816,7 +7816,7 @@ Longwood,SA,5153
 Longwood East,VIC,3666
 Lonnavale,TAS,7109
 Lonsdale,SA,5160
-Lonsdale Dc,SA,5160
+Lonsdale DC,SA,5160
 Loombah,NSW,2867
 Loomberah,NSW,2340
 Loongana,TAS,7315
@@ -7980,9 +7980,9 @@ Machans Beach,QLD,4878
 Machine Creek,QLD,4695
 Mackay,QLD,4740
 Mackay Caneland,QLD,4740
-Mackay Dc,QLD,4740
+Mackay DC,QLD,4740
 Mackay Harbour,QLD,4740
-Mackay Mc,QLD,4741
+Mackay MC,QLD,4741
 Mackay North,QLD,4740
 Mackay South,QLD,4740
 Mackenzie,QLD,4156
@@ -8116,7 +8116,7 @@ Mandalong,NSW,2264
 Mandemar,NSW,2575
 Mandogalup,WA,6167
 Mandurah,WA,6210
-Mandurah Dc,WA,6210
+Mandurah DC,WA,6210
 Mandurah East,WA,6210
 Mandurah North,WA,6210
 Mandurang,VIC,3551
@@ -8162,8 +8162,8 @@ Manor Lakes,VIC,3024
 Manorina,VIC,3889
 Mansfield,VIC,3722
 Mansfield,VIC,3724
-Mansfield Bc,QLD,4122
-Mansfield Dc,QLD,4122
+Mansfield BC,QLD,4122
+Mansfield DC,QLD,4122
 Mansfield Park,SA,5012
 Manton,NSW,2582
 Mantung,SA,5308
@@ -8229,7 +8229,7 @@ Marlbed,VIC,3483
 Marlborough,QLD,4705
 Marlee,NSW,2429
 Marleston,SA,5033
-Marleston Dc,SA,5033
+Marleston DC,SA,5033
 Marlo,VIC,3888
 Marlo Merrican,NSW,2441
 Marlow,NSW,2775
@@ -8248,7 +8248,7 @@ Marom Creek,NSW,2480
 Marong,VIC,3515
 Maroochy River,QLD,4561
 Maroochydore,QLD,4558
-Maroochydore Bc,QLD,4558
+Maroochydore BC,QLD,4558
 Maroon,QLD,4310
 Maroona,VIC,3377
 Maroondan,QLD,4671
@@ -8290,7 +8290,7 @@ Marungi,VIC,3634
 Marvel Loch,WA,6426
 Maryborough,VIC,3465
 Maryborough,QLD,4650
-Maryborough Dc,QLD,4650
+Maryborough DC,QLD,4650
 Maryborough West,QLD,4650
 Marybrook,WA,6280
 Maryknoll,VIC,3812
@@ -8441,7 +8441,7 @@ Melrose,SA,5483
 Melrose,TAS,7310
 Melrose Park,NSW,2114
 Melrose Park,SA,5039
-Melrose Park Dc,SA,5039
+Melrose Park DC,SA,5039
 Melton,VIC,3337
 Melton,SA,5552
 Melton Mowbray,TAS,7030
@@ -8594,7 +8594,7 @@ Midgee,SA,5602
 Midgeree Bar,QLD,4852
 Midginbil,NSW,2484
 Midland,WA,6056
-Midland Dc,WA,6936
+Midland DC,WA,6936
 Midway Point,TAS,7171
 Miena,TAS,7030
 Miepoll,VIC,3666
@@ -8670,7 +8670,7 @@ Milsons Point,NSW,1565
 Miltalie,SA,5602
 Milton,NSW,2538
 Milton,QLD,4064
-Milton Bc,QLD,4064
+Milton BC,QLD,4064
 Mimegarra,WA,6507
 Mimili,SA,872
 Mimosa,NSW,2666
@@ -9217,7 +9217,7 @@ Mount Irvine,NSW,2786
 Mount Irving,QLD,4401
 Mount Isa,QLD,4825
 Mount Isa City,QLD,4825
-Mount Isa Dc,QLD,4825
+Mount Isa DC,QLD,4825
 Mount Jackson,WA,6426
 Mount Jagged,SA,5211
 Mount Johns,NT,874
@@ -9464,7 +9464,7 @@ Mundabullangana,WA,6721
 Mundallio,SA,5700
 Mundamia,NSW,2540
 Mundaring,WA,6073
-Mundaring Dc,WA,6073
+Mundaring DC,WA,6073
 Mundarlo,NSW,2729
 Munderoo,NSW,2653
 Mundic Creek,SA,5340
@@ -9545,7 +9545,7 @@ Murray Bridge South,SA,5253
 Murray Downs,NSW,2734
 Murray Gorge,NSW,2642
 Murray Island,QLD,4875
-Murray Region Mc,NSW,2708
+Murray Region MC,NSW,2708
 Murray Upper,QLD,4854
 Murray-Sunset,VIC,3490
 Murraydale,VIC,3586
@@ -9599,7 +9599,7 @@ Myalup,WA,6220
 Myamyn,VIC,3304
 Myara,WA,6207
 Myaree,WA,6154
-Myaree Bc,WA,6960
+Myaree BC,WA,6960
 Mylestom,NSW,2454
 Mylneford,NSW,2460
 Mylor,SA,5153
@@ -9652,7 +9652,7 @@ Nalyerlup,WA,6338
 Namban,WA,6512
 Nambeelup,WA,6207
 Nambour,QLD,4560
-Nambour Dc,QLD,4560
+Nambour DC,QLD,4560
 Nambour West,QLD,4560
 Nambrok,VIC,3847
 Nambucca Heads,NSW,2448
@@ -9811,7 +9811,7 @@ Nepabunna,SA,5732
 Nepean Bay,SA,5223
 Nerada,QLD,4860
 Nerang,QLD,4211
-Nerang Dc,QLD,4211
+Nerang DC,QLD,4211
 Neranwood,QLD,4213
 Nericon,NSW,2680
 Neridup,WA,6450
@@ -9850,7 +9850,7 @@ New Berrima,NSW,2577
 New Brighton,NSW,2483
 New Buildings,NSW,2550
 New Chum,QLD,4303
-New England Mc,NSW,2348
+New England MC,NSW,2348
 New Gisborne,VIC,3438
 New Harbourline,QLD,4858
 New Italy,NSW,2472
@@ -9994,7 +9994,7 @@ Nooroo,NSW,2415
 Noosa Heads,QLD,4567
 Noosa North Shore,QLD,4565
 Noosaville,QLD,4566
-Noosaville Dc,QLD,4566
+Noosaville DC,QLD,4566
 Noradjuha,VIC,3409
 Norah Head,NSW,2263
 Noranda,WA,6062
@@ -10098,7 +10098,7 @@ North Road,VIC,3187
 North Rocks,NSW,2151
 North Rothbury,NSW,2335
 North Ryde,NSW,2113
-North Ryde Bc,NSW,1670
+North Ryde BC,NSW,1670
 North Shields,SA,5607
 North Shore,NSW,2444
 North Shore,VIC,3214
@@ -10174,7 +10174,7 @@ Nowhere Else,TAS,7306
 Nowie,VIC,3585
 Nowley,NSW,2386
 Nowra,NSW,2541
-Nowra Dc,NSW,2541
+Nowra DC,NSW,2541
 Nowra East,NSW,2541
 Nowra Hill,NSW,2540
 Nowra Naval Po,NSW,2540
@@ -10259,7 +10259,7 @@ O'reilly,QLD,4275
 O'sullivan Beach,SA,5166
 Oak Beach,QLD,4877
 Oak Flats,NSW,2529
-Oak Flats Dc,NSW,2529
+Oak Flats DC,NSW,2529
 Oak Park,VIC,3046
 Oak Valley,QLD,4811
 Oak Valley,SA,5690
@@ -10378,7 +10378,7 @@ Oran Park,NSW,2570
 Orana,WA,6330
 Orange,NSW,2800
 Orange Creek,QLD,4715
-Orange Dc,NSW,2800
+Orange DC,NSW,2800
 Orange East,NSW,2800
 Orange Grove,NSW,2380
 Orange Grove,WA,6109
@@ -10408,7 +10408,7 @@ Osborne,QLD,4806
 Osborne,SA,5017
 Osborne Park,WA,6017
 Osborne Park,WA,6916
-Osborne Park Dc,WA,6916
+Osborne Park DC,WA,6916
 Osmaston,TAS,7303
 Osmington,WA,6285
 Osterley,NSW,2324
@@ -10523,7 +10523,7 @@ Palmwoods,QLD,4555
 Palmyra,QLD,4751
 Palmyra,WA,6157
 Palmyra,WA,6957
-Palmyra Dc,WA,6961
+Palmyra DC,WA,6961
 Paluma,QLD,4816
 Pambula,NSW,2549
 Pambula Beach,NSW,2549
@@ -10742,7 +10742,7 @@ Perseverance,QLD,4352
 Perth,WA,6000
 Perth,WA,6001
 Perth Airport,WA,6105
-Perth Bc,WA,6849
+Perth BC,WA,6849
 Perth St Georges Tce,WA,6831
 Perup,WA,6258
 Perwillowen,QLD,4560
@@ -10972,7 +10972,7 @@ Porky Flat,SA,5222
 Pormpuraaw,QLD,4892
 Porongurup,WA,6324
 Port Adelaide,SA,5015
-Port Adelaide Dc,SA,5015
+Port Adelaide DC,SA,5015
 Port Albany,WA,6330
 Port Albert,VIC,3971
 Port Alma,QLD,4699
@@ -11009,7 +11009,7 @@ Port Lincoln,SA,5606
 Port Lincoln,SA,5607
 Port Macdonnell,SA,5291
 Port Macquarie,NSW,2444
-Port Macquarie Bc,NSW,2444
+Port Macquarie BC,NSW,2444
 Port Melbourne,VIC,3207
 Port Moorowie,SA,5576
 Port Neill,SA,5604
@@ -11160,7 +11160,7 @@ Quandong,VIC,3030
 Quantong,VIC,3401
 Quarry Hill,VIC,3550
 Queanbeyan,NSW,2620
-Queanbeyan Dc,NSW,2620
+Queanbeyan DC,NSW,2620
 Queanbeyan East,NSW,2620
 Queanbeyan West,NSW,2620
 Quedjinup,WA,6281
@@ -11473,7 +11473,7 @@ Robertstown,SA,5381
 Robigana,TAS,7275
 Robin Hill,NSW,2795
 Robina,QLD,4226
-Robina Dc,QLD,4226
+Robina DC,QLD,4226
 Robina Town Centre,QLD,4230
 Robinson,VIC,3019
 Robinson,WA,6330
@@ -11496,16 +11496,16 @@ Rockbank,VIC,3335
 Rockdale,NSW,2216
 Rockhampton,QLD,4700
 Rockhampton City,QLD,4700
-Rockhampton Dc,QLD,4701
+Rockhampton DC,QLD,4701
 Rockhampton Hospital,QLD,4700
 Rockingham,QLD,4854
 Rockingham,WA,6168
 Rockingham,WA,6968
 Rockingham Beach,WA,6969
-Rockingham Dc,WA,6967
+Rockingham DC,WA,6967
 Rocklea,QLD,4106
 Rocklea,WA,6751
-Rocklea Dc,QLD,4106
+Rocklea DC,QLD,4106
 Rockleigh,SA,5254
 Rockley,NSW,2795
 Rockley Mount,NSW,2795
@@ -11764,7 +11764,7 @@ Salisbury Park,SA,5109
 Salisbury Plain,SA,5109
 Salisbury Plains,NSW,2358
 Salisbury South,SA,5106
-Salisbury South Dc,SA,5106
+Salisbury South DC,SA,5106
 Salisbury West,VIC,3517
 Sallys Flat,NSW,2850
 Salmon Gums,WA,6445
@@ -11798,7 +11798,7 @@ Sandford,VIC,3312
 Sandford,TAS,7020
 Sandgate,NSW,2304
 Sandgate,QLD,4017
-Sandgate Dc,QLD,4017
+Sandgate DC,QLD,4017
 Sandhill Lake,VIC,3579
 Sandhurst,VIC,3977
 Sandhurst East,VIC,3550
@@ -11880,7 +11880,7 @@ Schroeder,WA,6285
 Scone,NSW,2337
 Scopus,TAS,7330
 Scoresby,VIC,3179
-Scoresby Bc,VIC,3176
+Scoresby BC,VIC,3176
 Scotchtown,TAS,7330
 Scotchy Pocket,QLD,4570
 Scotia,NSW,2648
@@ -12179,7 +12179,7 @@ South Boulder,WA,6432
 South Bowenfels,NSW,2790
 South Brighton,SA,5048
 South Brisbane,QLD,4101
-South Brisbane Bc,QLD,4101
+South Brisbane BC,QLD,4101
 South Broken Hill,NSW,2880
 South Bruny,TAS,7150
 South Bunbury,WA,6230
@@ -12289,7 +12289,7 @@ Southgate,NSW,2460
 Southland Centre,VIC,3192
 Southport,QLD,4215
 Southport,TAS,7109
-Southport Bc,QLD,4215
+Southport BC,QLD,4215
 Southport Lagoon,TAS,7109
 Southport Park,QLD,4215
 Southside,QLD,4570
@@ -12439,7 +12439,7 @@ St Ruth,QLD,4405
 Staaten,QLD,4892
 Staceys Bridge,VIC,3971
 Stafford,QLD,4053
-Stafford Dc,QLD,4053
+Stafford DC,QLD,4053
 Stafford Heights,QLD,4053
 Staffordshire Reef,VIC,3351
 Staghorn Flat,VIC,3691
@@ -12637,7 +12637,7 @@ Summerlands,VIC,3922
 Summertown,SA,5141
 Sumner,VIC,3057
 Sumner,QLD,4074
-Sumner Park Bc,QLD,4074
+Sumner Park BC,QLD,4074
 Sun Valley,NSW,2777
 Sun Valley,QLD,4680
 Sunbury,VIC,3429
@@ -12669,7 +12669,7 @@ Sunshine,VIC,3020
 Sunshine Acres,QLD,4655
 Sunshine Bay,NSW,2536
 Sunshine Beach,QLD,4567
-Sunshine Coast Mc,QLD,4560
+Sunshine Coast MC,QLD,4560
 Sunshine Plaza,QLD,4558
 Sunshine West,VIC,3020
 Suntop,NSW,2820
@@ -13228,7 +13228,7 @@ Tindarey,NSW,2835
 Tinderbox,TAS,7054
 Tinderry,NSW,2620
 Tingalpa,QLD,4173
-Tingalpa Dc,QLD,4173
+Tingalpa DC,QLD,4173
 Tingha,NSW,2369
 Tingira Heights,NSW,2290
 Tingledale,WA,6333
@@ -13347,12 +13347,12 @@ Tootgarook,VIC,3941
 Toothdale,NSW,2550
 Tootool,NSW,2655
 Toowong,QLD,4066
-Toowong Dc,QLD,4066
+Toowong DC,QLD,4066
 Toowoomba,QLD,4350
 Toowoomba City,QLD,4350
-Toowoomba Dc,QLD,4350
+Toowoomba DC,QLD,4350
 Toowoomba East,QLD,4350
-Toowoomba Mc,QLD,4352
+Toowoomba MC,QLD,4352
 Toowoomba Village Fair,QLD,4350
 Toowoomba West,QLD,4350
 Toowoon Bay,NSW,2261
@@ -13404,9 +13404,9 @@ Townsendale,WA,6311
 Townson,QLD,4341
 Townsville,QLD,4810
 Townsville City,QLD,4810
-Townsville Dc,QLD,4810
-Townsville Mc,QLD,4810
-Townsville Milpo,QLD,4813
+Townsville DC,QLD,4810
+Townsville MC,QLD,4810
+Townsville MILPO,QLD,4813
 Townview,QLD,4825
 Towong,VIC,3707
 Towong Upper,VIC,3707
@@ -13484,7 +13484,7 @@ Tuen,QLD,4490
 Tuena,NSW,2583
 Tuerong,VIC,3915
 Tuggerah,NSW,2259
-Tuggeranong Dc,ACT,2901
+Tuggeranong DC,ACT,2901
 Tuggerawong,NSW,2259
 Tugrabakh,NSW,2422
 Tugrah,TAS,7310
@@ -13636,7 +13636,7 @@ University Of New England,NSW,2351
 University Of Queensland,QLD,4072
 University Of Wollongong,NSW,2522
 Unley,SA,5061
-Unley Bc,SA,5061
+Unley BC,SA,5061
 Unley Park,SA,5061
 Unsw Sydney,NSW,1466
 Unumgar,NSW,2474
@@ -13819,7 +13819,7 @@ Violet Town,VIC,3669
 Virginia,NT,834
 Virginia,QLD,4014
 Virginia,SA,5120
-Virginia Bc,QLD,4014
+Virginia BC,QLD,4014
 Vista,SA,5091
 Vite Vite,VIC,3325
 Vite Vite North,VIC,3325
@@ -13847,7 +13847,7 @@ Wagait Beach,NT,822
 Wagaman,NT,810
 Wagerup,WA,6215
 Wagga Wagga,NSW,2650
-Wagga Wagga Bc,NSW,2650
+Wagga Wagga BC,NSW,2650
 Waggrakine,WA,6530
 Wagin,WA,6315
 Wagstaffe,NSW,2257
@@ -13935,7 +13935,7 @@ Wallingat,NSW,2428
 Wallington,VIC,3222
 Wallis Lake,NSW,2428
 Walliston,WA,6076
-Walliston Dc,WA,6925
+Walliston DC,WA,6925
 Walloway,SA,5431
 Wallsend,NSW,2287
 Wallsend South,NSW,2287
@@ -14005,8 +14005,8 @@ Wangandary,VIC,3678
 Wanganella,NSW,2710
 Wanganui,NSW,2482
 Wangara,WA,6065
-Wangara Dc,WA,6065
-Wangara Dc,WA,6947
+Wangara DC,WA,6065
+Wangara DC,WA,6947
 Wangaratta,VIC,3676
 Wangaratta,QLD,4806
 Wangaratta South,VIC,3678
@@ -14302,7 +14302,7 @@ Welsby,QLD,4507
 Welshmans Reef,VIC,3462
 Welshpool,VIC,3966
 Welshpool,WA,6106
-Welshpool Dc,WA,6986
+Welshpool DC,WA,6986
 Wembley,WA,6913
 Wemen,VIC,3549
 Wendoree Park,NSW,2250
@@ -14447,7 +14447,7 @@ Westwood,QLD,4702
 Westwood,WA,6316
 Westwood,TAS,7292
 Wetherill Park,NSW,2164
-Wetherill Park Dc,NSW,1851
+Wetherill Park DC,NSW,1851
 Wetuppa,NSW,2734
 Weyba Downs,QLD,4562
 Weymouth,TAS,7252
@@ -14518,7 +14518,7 @@ Whorouly South,VIC,3735
 Whroo,VIC,3612
 Whyalla,SA,5600
 Whyalla Barson,SA,5601
-Whyalla Dc,SA,5600
+Whyalla DC,SA,5600
 Whyalla Jenkins,SA,5609
 Whyalla Norrie,SA,5608
 Whyalla Norrie East,SA,5608
@@ -15231,7 +15231,7 @@ Yarwun,QLD,4694
 Yass,NSW,2582
 Yass River,NSW,2582
 Yatala,QLD,4207
-Yatala Dc,QLD,4207
+Yatala DC,QLD,4207
 Yatala Vale,SA,5126
 Yatchaw,VIC,3301
 Yathella,NSW,2650
