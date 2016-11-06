@@ -46,13 +46,13 @@ public class PaymentResource {
     @Path("customer/create2")
     public Response createCustomer2(PinCustomerPost pinCustomerPost) {
 
-        SerialResponse responseDto = paymentBean.createCustomer2(pinCustomerPost);
+        SerialResponse response = paymentBean.createCustomer2(pinCustomerPost);
 
-        switch (responseDto.getStatusCode()) {
+        switch (response.getStatusCode()) {
             case 201:
-                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+                return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
             case 422:
-                return Response.status(422).entity(responseDto.getBody()).build();
+                return Response.status(422).entity(response.getBody()).build();
             default:
                 return Response.status(500).build();
         }
@@ -65,13 +65,13 @@ public class PaymentResource {
     @Path("charge2")
     public Response charge2(PinChargePost pinChargePost) {
 
-        SerialResponse responseDto = paymentBean.charge2(pinChargePost);
+        SerialResponse response = paymentBean.charge2(pinChargePost);
 
-        switch (responseDto.getStatusCode()) {
+        switch (response.getStatusCode()) {
             case 201:
-                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+                return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
             case 422:
-                return Response.status(422).entity(responseDto.getBody()).build();
+                return Response.status(422).entity(response.getBody()).build();
             default:
                 return Response.status(400).build();
         }
@@ -87,13 +87,14 @@ public class PaymentResource {
         String username = securityContext.getUserPrincipal().getName();
         UserDTO userDTO = userBean.getUser(username);
         pinRecipientPost.setEmail(userDTO.getEmail());
-        SerialResponse responseDto = paymentBean.createRecipient2(pinRecipientPost);
 
-        switch (responseDto.getStatusCode()) {
+        SerialResponse response = paymentBean.createRecipient2(pinRecipientPost);
+
+        switch (response.getStatusCode()) {
             case 201:
-                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+                return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
             case 422:
-                return Response.status(422).entity(responseDto.getBody()).build();
+                return Response.status(422).entity(response.getBody()).build();
             default:
                 return Response.status(400).build();
         }
@@ -118,14 +119,14 @@ public class PaymentResource {
     public Response editRecipient2(@PathParam("recipient-token") String recipientToken,
             PinRecipientPut pinRecipientPut) {
 
-        SerialResponse responseDto
+        SerialResponse response
                 = paymentBean.editRecipient2(recipientToken, pinRecipientPut);
 
-        switch (responseDto.getStatusCode()) {
+        switch (response.getStatusCode()) {
             case 201:
-                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+                return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
             case 422:
-                return Response.status(422).entity(responseDto.getBody()).build();
+                return Response.status(422).entity(response.getBody()).build();
             default:
                 return Response.status(400).build();
         }
@@ -138,13 +139,13 @@ public class PaymentResource {
     @Path("transfer2")
     public Response transfer2(PinTransferPost pinTransferPost) {
 
-        SerialResponse responseDto = paymentBean.transfer2(pinTransferPost);
+        SerialResponse response = paymentBean.transfer2(pinTransferPost);
 
-        switch (responseDto.getStatusCode()) {
+        switch (response.getStatusCode()) {
             case 201:
-                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+                return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
             case 422:
-                return Response.status(422).entity(responseDto.getBody()).build();
+                return Response.status(422).entity(response.getBody()).build();
             default:
                 return Response.status(400).build();
         }

@@ -1,13 +1,14 @@
 package au.edu.uts.aip.service.util;
 
-public class EmailBodyFormatter {
+public class EmailBodyComposer {
 
     private static final String SALUTATION_PREFIX = "Dear";
     private static final String SIGNATURE_PREFIX = "Regards";
     private static final String SENDER_NAME = "The Bookstore Team";
+    private static final String BRAND_NAME = "Bookstore";
     private static final String BODY_ACCOUNT_ACTIVATION
-            = "Welcome to Bookstore!\n\nTo get started, please activate your account by clicking "
-            + "the link below:\n%1$s";
+            = "Welcome to " + BRAND_NAME + "!\n\nTo get started, please activate your account by "
+            + "clicking the link below:\n%1$s";
     private static final String BODY_RESET_PASSWORD
             = "Please click on the link below to reset your password\n%1$s";
     private static final String BODY_VERIFICATION_REJECT
@@ -25,13 +26,18 @@ public class EmailBodyFormatter {
             = "Your payment has failed to process for your order %1$s. Please try again.";
     private static final String BODY_ORDER_PENDING
             = "I don't know a use case for this. %1$s";
-    private static final String BODY_ORDER_COMPLETE
-            = "Thank you for your order from Bookstore. Below is your order information:\n\n%1$s";
+    private static final String BODY_ORDER_COMPLETE_BUYER
+            = "Thank you for your order from " + BRAND_NAME + ". Below is your order information:"
+            + "\n\n%1$s";
+    private static final String BODY_ORDER_COMPLETE_SELLER
+            = "You've just made a sale on " + BRAND_NAME + "! Please keep in mind that bank "
+            + "transfers can take up to seven days to appear in your bank statements.\n\n"
+            + "Below is your order information:\n\n%1$s";
 
     public static String onAccountActivation(String name, String activationUrl) {
         return format(name, String.format(BODY_ACCOUNT_ACTIVATION, activationUrl));
     }
-    
+
     public static String onPasswordReset(String name, String resetUrl) {
         return format(name, String.format(BODY_RESET_PASSWORD, resetUrl));
     }
@@ -60,8 +66,12 @@ public class EmailBodyFormatter {
         return format(name, format(BODY_ORDER_PENDING, orderInfo));
     }
 
-    public static String onOrderComplete(String name, String orderInfo) {
-        return format(name, format(BODY_ORDER_COMPLETE, orderInfo));
+    public static String onOrderCompleteBuyer(String name, String orderInfo) {
+        return format(name, format(BODY_ORDER_COMPLETE_BUYER, orderInfo));
+    }
+
+    public static String onOrderCompleteSeller(String name, String orderInfo) {
+        return format(name, format(BODY_ORDER_COMPLETE_SELLER, orderInfo));
     }
 
     public static String format(String name, String info) {

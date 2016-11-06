@@ -79,7 +79,7 @@ public class PostalResource {
                 return Response.status(500).build();
         }
     }
-    
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
@@ -87,6 +87,23 @@ public class PostalResource {
     public Response searchPostcodes(@PathParam("suburb") String suburb) {
 
         SerialResponse response = postalBean.searchPostcodes(suburb);
+        switch (response.getStatusCode()) {
+            case 200:
+                return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
+            case 404:
+                return Response.status(404).entity(response.getBody()).build();
+            default:
+                return Response.status(500).build();
+        }
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("suburb/detail/{suburb}")
+    public Response searchSuburbDetail(@PathParam("suburb") String suburb) {
+
+        SerialResponse response = postalBean.searchSuburbDetail(suburb);
         switch (response.getStatusCode()) {
             case 200:
                 return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();

@@ -5,7 +5,7 @@ import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.TokenGenerationException;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import au.edu.uts.aip.domain.util.SendEmail;
-import au.edu.uts.aip.service.util.EmailBodyFormatter;
+import au.edu.uts.aip.service.util.EmailBodyComposer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.security.RolesAllowed;
@@ -47,7 +47,7 @@ public class EmailResource {
             String username = securityContext.getUserPrincipal().getName();
             UserDTO user = userBean.getUser(username);
             String token = userBean.generateActivationToken(username);
-            String body = EmailBodyFormatter.onAccountActivation(
+            String body = EmailBodyComposer.onAccountActivation(
                     user.getFullname(),
                     servletContext.getInitParameter("clientURL") + "/?token=" + token
                     + "&username=" + user.getUsername() + "&action=activation");
@@ -76,7 +76,7 @@ public class EmailResource {
         try {
             UserDTO user = userBean.getUser(username);
             String token = userBean.generateResetPasswordToken(username, email);
-            String body = EmailBodyFormatter.onPasswordReset(
+            String body = EmailBodyComposer.onPasswordReset(
                     user.getFullname(),
                     servletContext.getInitParameter("clientURL") + "/?token=" + token
                     + "&username=" + user.getUsername() + "&action=reset");
@@ -98,7 +98,7 @@ public class EmailResource {
 
         try {
             UserDTO user = userBean.getUser(username);
-            String body = EmailBodyFormatter.onVerificationReject(user.getFullname(), reason);
+            String body = EmailBodyComposer.onVerificationReject(user.getFullname(), reason);
             SendEmail.SendEmail(user.getEmail(), "Account verification status", body);
 
             return Response.ok().build();
@@ -114,7 +114,7 @@ public class EmailResource {
 
         try {
             UserDTO user = userBean.getUser(username);
-            String body = EmailBodyFormatter.onVerificationApprove(user.getFullname());
+            String body = EmailBodyComposer.onVerificationApprove(user.getFullname());
             SendEmail.SendEmail(user.getEmail(), "Account verification status", body);
             return Response.ok().build();
         } catch (MessagingException ex) {
@@ -128,7 +128,7 @@ public class EmailResource {
     public Response banAccount(@PathParam("username") String username) {
         try {
             UserDTO user = userBean.getUser(username);
-            String body = EmailBodyFormatter.onAccountBan(user.getFullname());
+            String body = EmailBodyComposer.onAccountBan(user.getFullname());
             SendEmail.SendEmail(user.getEmail(), "Account banned", body);
             return Response.ok().build();
         } catch (MessagingException ex) {
@@ -142,7 +142,7 @@ public class EmailResource {
     public Response unbanAccount(@PathParam("username") String username) {
         try {
             UserDTO user = userBean.getUser(username);
-            String body = EmailBodyFormatter.onAccountUnban(user.getFullname());
+            String body = EmailBodyComposer.onAccountUnban(user.getFullname());
             SendEmail.SendEmail(user.getEmail(), "Ban lifted", body);
             return Response.ok().build();
         } catch (MessagingException ex) {
@@ -156,7 +156,7 @@ public class EmailResource {
     public Response orderFail(@PathParam("order-id") String orderId, String username) {
         try {
             UserDTO user = userBean.getUser(username);
-            String body = EmailBodyFormatter.onOrderFail(user.getFullname(), orderId);
+            String body = EmailBodyComposer.onOrderFail(user.getFullname(), orderId);
             SendEmail.SendEmail(user.getEmail(), "Order failed", body);
             return Response.ok().build();
         } catch (MessagingException ex) {
@@ -170,7 +170,7 @@ public class EmailResource {
     public Response orderPending(@PathParam("order-id") String orderId, String username) {
         try {
             UserDTO user = userBean.getUser(username);
-            String body = EmailBodyFormatter.onOrderPending(user.getFullname(), orderId);
+            String body = EmailBodyComposer.onOrderPending(user.getFullname(), orderId);
             SendEmail.SendEmail(user.getEmail(), "Order pending", body);
             return Response.ok().build();
         } catch (MessagingException ex) {
@@ -181,11 +181,20 @@ public class EmailResource {
     @POST
     @RolesAllowed({"VERIFIED"})
     @Path("/order/{order-id}/complete")
-    public Response orderComplete(@PathParam("order-id") String orderId, String username) {
+    public Response orderComplete(@PathParam("order-id") String orderId/*, String usernameBuyer, String usernameSeller*/) {
+        String usernameBuyer = "";
+        String usernameSeller = "";
         try {
-            UserDTO user = userBean.getUser(username);
-            String body = EmailBodyFormatter.onOrderComplete(user.getFullname(), orderId);
-            SendEmail.SendEmail(user.getEmail(), "Order complete", body);
+            // Email the buyer
+            UserDTO buyer = userBean.getUser(usernameBuyer);
+            String buyerEmailBody = EmailBodyComposer.onOrderCompleteBuyer(buyer.getFullname(), orderId);
+            SendEmail.SendEmail(buyer.getEmail(), "Order complete", buyerEmailBody);
+            
+            // Email the seller
+            UserDTO seller = userBean.getUser(usernameSeller);
+            String sellerEmailBody = EmailBodyComposer.onOrderCompleteSeller(seller.getFullname(), orderId);
+            SendEmail.SendEmail(buyer.getEmail(), "Order complete", sellerEmailBody);
+            
             return Response.ok().build();
         } catch (MessagingException ex) {
             return Response.serverError().build();
