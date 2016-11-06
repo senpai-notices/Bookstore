@@ -3,7 +3,6 @@ package au.edu.uts.aip.service.resource;
 import au.edu.uts.aip.domain.dto.DocumentsDTO;
 import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.entity.Role;
-import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.remote.AdminRemote;
 import au.edu.uts.aip.domain.util.FileUtil;
 import au.edu.uts.aip.domain.remote.UserRemote;
@@ -26,7 +25,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 
-@Path("/document")
+@Path("document")
 public class DocumentResource {
 
     @Context
