@@ -1,5 +1,8 @@
 package au.edu.uts.aip.domain.ejb;
 
+/**
+ * the needed library
+ */
 import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.remote.PaymentRemote;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
@@ -20,13 +23,30 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+/**
+ * PaymentBean is a JavaBean that is used to handle the payment related operations
+ * 
+ * It uses payment API to handle the payment 
+ * 
+ *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ */
 @Stateless
 public class PaymentBean implements PaymentRemote {
 
+    /**
+    * API address
+    */
     private static final String BASE_URL = "https://test-api.pin.net.au/1";
+    /**
+    * API secret key
+    */
     private static final String API_KEY_SECRET = "***REMOVED***";
     private static final String PASSWORD = "";
 
+    /**
+    * createCustomer2 is used to create a customer
+    * return ResponseDTO
+    */
     @Override
     public SerialResponse createCustomer2(PinCustomerPost pinCustomerPost) {
 
@@ -51,6 +71,10 @@ public class PaymentBean implements PaymentRemote {
         }
     }
 
+    
+    /**
+    * charge2 funtion is used to charge the money
+    */
     @Override
     public SerialResponse charge2(PinChargePost pinChargePost) {
 
@@ -75,6 +99,9 @@ public class PaymentBean implements PaymentRemote {
         }
     }
 
+    /**
+    * createRecipient2 function is used to create a receipt
+    */
     @Override
     public SerialResponse createRecipient2(PinRecipientPost pinRecipientPost) {
         Client client = ClientBuilder.newClient()
@@ -98,6 +125,9 @@ public class PaymentBean implements PaymentRemote {
         }
     }
 
+    /**
+    * transfer2 function is used to transfer the money
+    */
     @Override
     public SerialResponse transfer2(PinTransferPost pinTransferPost) {
         Client client = ClientBuilder.newClient()
@@ -121,6 +151,9 @@ public class PaymentBean implements PaymentRemote {
         }
     }
 
+    /**
+    * fetchRecipient function is used to fetch the requested recipient
+    */
     @Override
     public JsonObject fetchRecipient(String recipientToken) {
         Client client = ClientBuilder.newClient()
@@ -139,6 +172,9 @@ public class PaymentBean implements PaymentRemote {
         return responseJson;
     }
 
+    /**
+    * editRecipient2 function is used to edit the information of the recipient
+    */
     @Override
     public SerialResponse editRecipient2(String recipientToken, PinRecipientPut pinRecipientPut) {
         Client client = ClientBuilder.newClient()
@@ -164,6 +200,9 @@ public class PaymentBean implements PaymentRemote {
         }
     }
 
+    /**
+    * createCustomer is used to create a customer
+    */
     @Override
     public ValidationResult createCustomer(PinCustomerPost pinCustomerPost) {
 
@@ -181,7 +220,9 @@ public class PaymentBean implements PaymentRemote {
 
         return PinResponseUtil.validate(statusCode, responseJson);
     }
-
+    /**
+    * charge function is used to charge the money
+    */
     @Override
     public ValidationResult charge(PinChargePost pinChargePost) {
 
@@ -199,7 +240,9 @@ public class PaymentBean implements PaymentRemote {
 
         return PinResponseUtil.validate(statusCode, responseJson);
     }
-
+    /**
+    * createRecipient function is used to create a recipient of the payment
+    */
     @Override
     public ValidationResult createRecipient(PinRecipientPost pinRecipientPost) {
         Client client = ClientBuilder.newClient()
@@ -217,6 +260,10 @@ public class PaymentBean implements PaymentRemote {
         return PinResponseUtil.validate(statusCode, responseJson);
     }
 
+    
+    /**
+    * transfer function is used to transfer the money
+    */
     @Override
     public ValidationResult transfer(PinTransferPost pinTransferPost) {
         Client client = ClientBuilder.newClient()
@@ -234,6 +281,9 @@ public class PaymentBean implements PaymentRemote {
         return PinResponseUtil.validate(statusCode, responseJson);
     }
 
+    /**
+    * editRecipient function is used to edit the information of the recipient 
+    */
     @Override
     public ValidationResult editRecipient(String recipientToken, PinRecipientPut pinRecipientPut) {
         Client client = ClientBuilder.newClient()

@@ -1,5 +1,8 @@
 package au.edu.uts.aip.domain.ejb;
 
+/**
+ *The needed libraries
+ */
 import au.edu.uts.aip.domain.dto.AddressDTO;
 import au.edu.uts.aip.domain.dto.DocumentsDTO;
 import au.edu.uts.aip.domain.dto.RegistrationDTO;
@@ -38,6 +41,25 @@ import javax.validation.Valid;
 import javax.validation.ValidationException;
 import org.hibernate.validator.internal.engine.ConstraintViolationImpl;
 
+/**
+ * UserBean is a JavaBean that is used to handle the user related operations
+ * 
+ * It has 12 methods:
+ * getRole(): used to get the role object
+ * getUser(): used to get the user info
+ * getUserEntity(): used to get a User Object
+ * createUser(): used to create a user
+ * getDocumentPath(): used to get the path of the document
+ * generateActivationToken(): used to generate the activation Token
+ * generateResetPasswordToken(): used to get the reset password token
+ * resetPassword(): used to reset the password
+ * activateAccount(): used to activate the account
+ * findUsers(): used to find all the users
+ * updateVerificationDocuments(): used to update the verification documents
+ * updateAddress(): used to update the address
+ * 
+ *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ */
 @Stateless
 @LocalBean
 public class UserBean implements UserRemote {
@@ -45,18 +67,28 @@ public class UserBean implements UserRemote {
     @PersistenceContext
     private EntityManager em;
 
+     /**
+     * the method is used to get the role object
+     */
     public Role getRole(String roleName) {
         TypedQuery<Role> typedQuery = em.createNamedQuery("Role.find", Role.class);
         typedQuery.setParameter("name", roleName);
         return typedQuery.getSingleResult();
     }
 
+     /**
+     * the method is used to get the information of the user
+     * return a UserDTO object
+     */
     @Override
     public UserDTO getUser(String username) {
             User userEntity = getUserEntity(username);
             return userEntity == null ? null : new UserDTO(userEntity);
     }
     
+     /**
+     * the method is used to get a relevant User object
+     */
     public User getUserEntity(String username){
         try {
             TypedQuery<User> typedQuery = em.createNamedQuery("User.find", User.class);
@@ -101,6 +133,10 @@ public class UserBean implements UserRemote {
 
     }
     
+     /**
+     * the method is used to get the path of the documents
+     * return a DocumentsDTO object
+     */
     @Override
     public DocumentsDTO getDocumentPath(String username) {
         User user = getUserEntity(username);
@@ -110,6 +146,10 @@ public class UserBean implements UserRemote {
         return documentDTO;
     }
 
+     /**
+     * the method is used to generate the activation Token
+     * return a String value
+     */
     @Override
     public String generateActivationToken(String username) throws TokenGenerationException {
         User user = getUserEntity(username);
@@ -126,6 +166,10 @@ public class UserBean implements UserRemote {
         return activateToken;
     }
     
+      /**
+     * the method is used to generate the reset password token
+     * return a String value
+     */
     @Override
     public String generateResetPasswordToken(String username, String email) throws TokenGenerationException {
         User user = getUserEntity(username);
@@ -143,6 +187,10 @@ public class UserBean implements UserRemote {
         return resetPasswordToken;
     }
 
+    /**
+     * the method is used to activate a user account
+     * return none
+     */
     @Override
     public void activateAccount(String token, String username) throws ActivationException {
         User user = getUserEntity(username);
@@ -176,6 +224,11 @@ public class UserBean implements UserRemote {
         user.setRole(userRole);
     }
     
+       
+    /**
+     * the method is used to reset the password
+     * return none
+     */
     @Override
     public void resetPassword(@Valid ResetPasswordDTO resetPasswordDTO) {
         User user = getUserEntity(resetPasswordDTO.getUsername());
@@ -206,6 +259,9 @@ public class UserBean implements UserRemote {
         user.setPassword(SHA.hash256(resetPasswordDTO.getNewPassword()));
     }
 
+    /**
+     * the method is used to find all the users
+     */
     @Override
     public List<UserDTO> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit) {
         List<Role> roles = new ArrayList<>();
@@ -229,6 +285,9 @@ public class UserBean implements UserRemote {
         return usersDTO;
     }
 
+     /**
+     * the method is used to update the verification documents
+     */
     @Override
     public void updateVerificationDocuments(String username, String documentType, String filePath) {
         User user = getUserEntity(username);
@@ -252,6 +311,10 @@ public class UserBean implements UserRemote {
         em.persist(user);
     }
     
+      /**
+     * the method is used to update the address information
+     * return none
+     */
     @Override
     public void updateAddress(AddressDTO addressDTO, String username) {
         User user = getUserEntity(username);
