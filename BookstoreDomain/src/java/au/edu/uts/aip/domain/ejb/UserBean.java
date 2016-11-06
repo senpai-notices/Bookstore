@@ -2,6 +2,7 @@ package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.dto.AddressDTO;
 import au.edu.uts.aip.domain.dto.DocumentsDTO;
+import au.edu.uts.aip.domain.dto.RegistrationDTO;
 import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.entity.Address;
 import au.edu.uts.aip.domain.entity.Role;
@@ -32,6 +33,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import javax.validation.Valid;
 
 @Stateless
 @LocalBean
@@ -64,55 +66,38 @@ public class UserBean implements UserRemote {
 
     /**
      *
+     * @param registraiontionDTO
      * @param userDTO
      * @param password
      * @return
      */
     @Override
-    public ValidationResult createUser(UserDTO userDTO, String password) {
-        try {
-            User userEntity = getUserEntity(userDTO.getUsername());
+    public void createUser(@Valid RegistrationDTO registraiontionDTO) {
+        User userEntity = getUserEntity(registraiontionDTO.getUsername());
 
-            if (userEntity != null) {
-                ValidationResult result = new ValidationResult();
-                String errorMessage = "Username " + userDTO.getUsername() + " already exists";
-                result.addFormError("username", errorMessage);
-                return result;
-            }
-            
-            if (password.length() < 6){
-                ValidationResult result = new ValidationResult();
-                String errorMessage = "Password must be at least 6 characters long";
-                result.addFormError("password", errorMessage);
-                return result;
-            }
-            
-            userEntity = new User();
-            userEntity.setUsername(userDTO.getUsername());
-            userEntity.setFullname(userDTO.getFullname());
-            userEntity.setEmail(userDTO.getEmail());
-            // hash password
-            userEntity.setPassword(SHA.hash256(password));
-
-            // insert to database
-            em.persist(userEntity);
-            
-            // add user to INACTIVATED group
-            Role inactivatedRole = getRole(RoleType.INACTIVATED.toString());
-            userEntity.setRole(inactivatedRole);
-
-            // no validation error
-            return null;
-        } catch (ConstraintViolationException ex) {
-            Logger.getLogger(UserBean.class.getName()).log(Level.SEVERE, null, ex);
-
+        if (userEntity != null) {
             ValidationResult result = new ValidationResult();
-            Set<ConstraintViolation<?>> constraints = ex.getConstraintViolations();
-            for (ConstraintViolation constraint : constraints) {
-                result.addFormError(constraint.getPropertyPath().toString(), constraint.getMessage());
-            }
-            return result;
+            String errorMessage = "Username " + registraiontionDTO.getUsername() + " already exists";
+            result.addFormError("username", errorMessage);
+            return;
         }
+
+        userEntity = new User();
+        userEntity.setUsername(registraiontionDTO.getUsername());
+        userEntity.setFullname(registraiontionDTO.getFullname());
+        userEntity.setEmail(registraiontionDTO.getEmail());
+        // hash password
+        userEntity.setPassword(SHA.hash256(registraiontionDTO.getPassword()));
+
+        // insert to database
+        em.persist(userEntity);
+
+        // add user to INACTIVATED group
+        Role inactivatedRole = getRole(RoleType.INACTIVATED.toString());
+        userEntity.setRole(inactivatedRole);
+
+        // no validation error
+
     }
     
     @Override

@@ -1,6 +1,7 @@
 package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.dto.AddressDTO;
+import au.edu.uts.aip.domain.dto.RegistrationDTO;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.exception.ActivationException;
 import au.edu.uts.aip.domain.remote.UserRemote;
@@ -14,6 +15,8 @@ import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.ConstraintViolationException;
+import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -60,34 +63,15 @@ public class UserResource {
     /**
      * Create a new user account
      *
-     * @param username
-     * @param password
-     * @param email
-     * @param fullname
+     * @param registrationDTO
      * @return
      */
     @POST
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response post(@FormParam("username") String username,
-                         @FormParam("password") String password,
-                         @FormParam("email") String email,
-                         @FormParam("fullname") String fullname) {
-        try {
-            UserDTO user = new UserDTO();
-            user.setUsername(username);
-            user.setEmail(email);
-            user.setFullname(fullname);
-
-            ValidationResult result = userBean.createUser(user, password);
-            if (result == null) {
-                return Response.status(Response.Status.ACCEPTED).build();
-            } else {
-                return Response.status(Response.Status.CONFLICT).entity(result.toJson()).build();
-            }
-        } catch (Exception ex) {
-            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-        }
+    public Response registration(@Valid RegistrationDTO registrationDTO) {
+        userBean.createUser(registrationDTO);
+        return Response.ok().build();
     }
     
     @POST

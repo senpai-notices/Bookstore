@@ -1,6 +1,6 @@
 package au.edu.uts.aip.domain.ejb;
 
-import au.edu.uts.aip.domain.entity.Area;
+import au.edu.uts.aip.domain.entity.Suburb;
 import au.edu.uts.aip.domain.entity.Book;
 import au.edu.uts.aip.domain.entity.BookSales;
 import au.edu.uts.aip.domain.entity.Role;
@@ -170,26 +170,26 @@ public class DatabaseInitBean {
 
 //        CriteriaBuilder qb = em.getCriteriaBuilder();
 //        CriteriaQuery<Long> cq = qb.createQuery(Long.class);
-//        cq.select(qb.count(cq.from(Area.class)));
+//        cq.select(qb.count(cq.from(Suburb.class)));
 //        Long count = em.createQuery(cq).getSingleResult();
 //        if (count != 15418) {
 
             System.out.println("Importing area data");
-            String areaCsvFilePath = this.getClass().getResource("/area.csv").getFile();
+            String suburbCsvFilePath = this.getClass().getResource("/suburbs.csv").getFile();
 
-            try (BufferedReader br = new BufferedReader(new FileReader(areaCsvFilePath))) {
+            try (BufferedReader br = new BufferedReader(new FileReader(suburbCsvFilePath))) {
                 String line;
                 while ((line = br.readLine()) != null) {
 
                     try {
                         String[] data = line.split(",");
 
-                        Area area = new Area();
-                        area.setSuburb(data[0]);
-                        area.setStateName(data[1]);
-                        area.setPostcode(Integer.parseInt(data[2]));
+                        Suburb suburb = new Suburb();
+                        suburb.setName(data[0]);
+                        suburb.setStateName(data[1]);
+                        suburb.setPostcode(Integer.parseInt(data[2]));
 
-                        em.persist(area);
+                        em.persist(suburb);
 
                     } catch (NumberFormatException ex) {
                         Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
@@ -214,10 +214,10 @@ public class DatabaseInitBean {
 
 //        CriteriaBuilder qb = em.getCriteriaBuilder();
 //        CriteriaQuery<Long> cq = qb.createQuery(Long.class);
-//        cq.select(qb.count(cq.from(Area.class)));
+//        cq.select(qb.count(cq.from(Suburb.class)));
 //        Long count = em.createQuery(cq).getSingleResult();
 //        if (count != 15418) {
-            q = em.createNativeQuery("delete from area");
+            q = em.createNativeQuery("delete from suburb");
             q.executeUpdate();
 //        }
         

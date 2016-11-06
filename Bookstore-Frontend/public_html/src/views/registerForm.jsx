@@ -17,10 +17,10 @@ class RegisterForm extends BaseView {
 	register(event){
 		event.preventDefault()
 
-		if (this.state.password != this.state.password_confirm){
-			this.props.dispatch.setFormErrorMessage("password_confirm", "Password confirm does not match")
-			return
-		}
+		// if (this.state.password != this.state.password_confirm){
+		// 	this.props.dispatch.setFormErrorMessage("password_confirm", "Password confirm does not match")
+		// 	return
+		// }
 
 		this.state.submitting = true
 		this.setState(this.state)
@@ -33,6 +33,7 @@ class RegisterForm extends BaseView {
 			.fail((err) => {
 				if (err.status === 409){ // conflict
 					let validateResult = JSON.parse(err.response)
+					console.log(validateResult)
 					this.props.dispatch.setValidationMessage(validateResult)
 				} else if (err.status === 500) { // internal server error
 					this.props.dispatch.addErrorMessage("Cannot create account, please try again")
@@ -142,9 +143,9 @@ class RegisterForm extends BaseView {
 										required/>
 
 						<FormInputText label="Confirm password" addonBefore="glyph-lock" type="password"
-										name="password_confirm" placeholder="Please retype your password"
-										value={this.state.password_confirm} errorMessage={form_errors.password_confirm}
-										onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("password_confirm")}
+										name="confirmPassword" placeholder="Please retype your password"
+										value={this.state.confirmPassword} errorMessage={form_errors.passwordMatch}
+										onChange={this.handleChange} onFocus={() => this.props.dispatch.setFormErrorMessage("passwordMatch")}
 										required/>
 
 						<bs.FormGroup bsSize="lg">
