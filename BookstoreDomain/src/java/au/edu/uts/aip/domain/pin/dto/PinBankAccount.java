@@ -4,6 +4,10 @@ import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ *
+ * @author x
+ */
 @XmlRootElement(name = "bank_account")
 public class PinBankAccount implements Serializable {
 
@@ -11,6 +15,10 @@ public class PinBankAccount implements Serializable {
     private String bsb;
     private String number;
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true)
     public String getName() {
         return name;
@@ -20,6 +28,10 @@ public class PinBankAccount implements Serializable {
         this.name = name;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true)
     public String getBsb() {
         return bsb;
@@ -29,6 +41,10 @@ public class PinBankAccount implements Serializable {
         this.bsb = bsb;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true)
     public String getNumber() {
         return number;

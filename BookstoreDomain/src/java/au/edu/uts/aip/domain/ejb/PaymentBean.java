@@ -28,7 +28,7 @@ import javax.ws.rs.core.Response;
  * 
  * It uses the Pin API to handle the payment 
  * Official Pin API documentation can be found here: https://pin.net.au/docs/api/
- *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ *  @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Stateless
 public class PaymentBean implements PaymentRemote {

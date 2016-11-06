@@ -4,12 +4,20 @@ import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ *
+ * @author x
+ */
 @XmlRootElement
 public class PinCustomerPost implements Serializable {
 
     private String email;
     private PinCard card;
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true)
     public String getEmail() {
         return email;
@@ -19,6 +27,10 @@ public class PinCustomerPost implements Serializable {
         this.email = email;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true)
     public PinCard getCard() {
         return card;

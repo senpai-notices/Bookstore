@@ -1,53 +1,50 @@
 package au.edu.uts.aip.domain.dto;
 
-/**
- *The needed libraries
- */
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * A AddressDTO is a DTO class that is used to access all the information that is related to a address
- * It is a data transfer object for retrieving the address information
- * describes the detail of the address of the user
- * It has properties: addressLine1, addressLine2, addressCity, addressCountry, addressPostcode and addressState
- * 
- *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ * A AddressDTO is a DTO class that is used to access all the information that is related to a
+ * address It is a data transfer object for retrieving the address information describes the detail
+ * of the address of the user It has properties: addressLine1, addressLine2, addressCity,
+ * addressCountry, addressPostcode and addressState
+ *
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class AddressDTO {
-    
+
     /**
-     * the first line of the address
+     * The first line of the user's address. Required field. Format: [Street number] [Street name]
+     * [Street type] E.g.: 123 Fake St
      */
     private String addressLine1;
     /**
-     * the second line of the address
+     * The second line of the user's address. Optional field. E.g. Suite 34
      */
     private String addressLine2;
     /**
-     * the city of the address
+     * The suburb of the address. Required field E.g. North Sydney
      */
     private String addressCity;
     /**
-     * the country of the address
+     * The country of the address. Always equal to Australia. Required field.
      */
     private String addressCountry;
     /**
-     * the postcode of the address
+     * The postcode of the address. It must be within valid ranges, defined in
+     * PostalDataBean.getStateName(). Required field.
      */
     private int addressPostCode;
     /**
-     * the state of the address
+     * The state of the address. Required field. E.g. NSW, VIC, QLD.
      */
     private String addressState;
 
-    
     /**
-    * {@link AddressDTO#addressLine1}
-    * data type: String
-    * return a String value
-    */
+     * {@link AddressDTO#addressLine1}
+     * @return addressLine1
+     */
     @XmlElement(name = "address_line1")
     public String getAddressLine1() {
         return addressLine1;
@@ -58,10 +55,9 @@ public class AddressDTO {
     }
 
     /**
-    * {@link AddressDTO#addressLine2}
-    * data type: String
-    * return a String value
-    */
+     * {@link AddressDTO#addressLine2}
+     * @return addressLine2
+     */
     @XmlElement(name = "address_line2")
     public String getAddressLine2() {
         return addressLine2;
@@ -72,10 +68,9 @@ public class AddressDTO {
     }
 
     /**
-    * {@link AddressDTO#addressCity}
-    * data type: String
-    * return a String value
-    */
+     * {@link AddressDTO#addressCity}
+     * @return addressCity
+     */
     @XmlElement(name = "address_city")
     public String getAddressCity() {
         return addressCity;
@@ -84,12 +79,11 @@ public class AddressDTO {
     public void setAddressCity(String addressCity) {
         this.addressCity = addressCity;
     }
-    
+
     /**
-    * {@link AddressDTO#addressCountry}
-    * data type: String
-    * return a String value
-    */
+     * {@link AddressDTO#addressCountry}
+     * @return addressCountry
+     */
     @XmlElement(name = "address_country")
     public String getAddressCountry() {
         return addressCountry;
@@ -100,10 +94,9 @@ public class AddressDTO {
     }
 
     /**
-    * {@link AddressDTO#addressPostcode}
-    * data type: Integer
-    * return an int value
-    */
+     * {@link AddressDTO#addressPostcode}
+     * @return addressPostCode
+     */
     @XmlElement(name = "address_postcode")
     public int getAddressPostCode() {
         return addressPostCode;
@@ -114,10 +107,9 @@ public class AddressDTO {
     }
 
     /**
-    * {@link AddressDTO#addressState}
-    * data type: String
-    * return a String value
-    */
+     * {@link AddressDTO#addressState}
+     * @return addressState
+     */
     @XmlElement(name = "address_state")
     public String getAddressState() {
         return addressState;

@@ -1,8 +1,5 @@
 package au.edu.uts.aip.domain.ejb;
 
-/**
- *The needed libraries
- */
 import au.edu.uts.aip.domain.entity.Address;
 import au.edu.uts.aip.domain.entity.Suburb;
 import au.edu.uts.aip.domain.entity.Book;
@@ -37,7 +34,7 @@ import javax.persistence.criteria.ParameterExpression;
  * init(): used to initialize the database setting
  * cleanup(): used to stop the database connection and clean up useless data
  * 
- *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ *  @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Singleton
 @Startup

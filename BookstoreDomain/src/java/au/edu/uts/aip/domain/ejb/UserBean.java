@@ -1,8 +1,5 @@
 package au.edu.uts.aip.domain.ejb;
 
-/**
- * The needed libraries
- */
 import au.edu.uts.aip.domain.dto.AddressDTO;
 import au.edu.uts.aip.domain.dto.DocumentsDTO;
 import au.edu.uts.aip.domain.dto.RegistrationDTO;
@@ -44,7 +41,7 @@ import javax.validation.Valid;
  * the users updateVerificationDocuments(): used to update the verification documents
  * updateAddress(): used to update the address
  *
- * @author team San Dang, Alex Tan, Xiaoyang Liu
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Stateless
 @LocalBean

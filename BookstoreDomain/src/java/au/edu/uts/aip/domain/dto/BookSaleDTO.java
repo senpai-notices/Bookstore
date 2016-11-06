@@ -1,20 +1,17 @@
 package au.edu.uts.aip.domain.dto;
 
-/**
- *The needed libraries
- */
 import au.edu.uts.aip.domain.entity.BookSales;
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * BookSaleDTO is a DTO class that is used to retrieve all the information that is related to the book sale record
- * It is a data transfer object for retrieving the sale information of the book
- * describes the detail of the sale
- * It has properties: id, sellerId, bookCondition, price, quantity, book and seller
- * 
- *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ * BookSaleDTO is a DTO class that is used to retrieve all the information that is related to the
+ * book sale record It is a data transfer object for retrieving the sale information of the book
+ * describes the detail of the sale It has properties: id, sellerId, bookCondition, price, quantity,
+ * book and seller
+ *
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class BookSaleDTO implements Serializable {
@@ -32,7 +29,7 @@ public class BookSaleDTO implements Serializable {
      */
     private long bookId;
     /**
-     * the condition of the book that is selling
+     * the condition of the book that is selling e.g. "Used" or "New"
      */
     private String bookCondition;
     /**
@@ -44,30 +41,30 @@ public class BookSaleDTO implements Serializable {
      */
     private int quantity;
     /**
-     * the information of the selling book
-     * it is a BookDTO object
-     * the object are used to retrieve all the book info
+     * the information of the selling book it is a BookDTO object the object are used to retrieve
+     * all the book info
      */
     private BookDTO book;
     /**
-     * the information of seller user
-     * it is a UserDTO object
-     * the object are used to retrieve all the related user info
+     * the information of seller user it is a UserDTO object the object are used to retrieve all the
+     * related user info
      */
     private UserDTO seller;
-    
-    
-    /*constructor of the BookSaleDTO class without paramters */
-    public BookSaleDTO(){
-        
-    }
-    
+
     /**
-     * constructor of the BookSaleDTO class with parameters
-     * the parameter passed to the constructor is a BookSales object 
-     * 
+     * Default constructor
      */
-    public BookSaleDTO(BookSales bookSaleEntity){
+    public BookSaleDTO() {
+
+    }
+
+    /**
+     * constructor of the BookSaleDTO class with parameters the parameter passed to the constructor
+     * is a BookSales object
+     *
+     * @param bookSaleEntity
+     */
+    public BookSaleDTO(BookSales bookSaleEntity) {
         this.id = bookSaleEntity.getSalesId();
         this.sellerId = bookSaleEntity.getSeller().getUsername();
         this.seller = new UserDTO(bookSaleEntity.getSeller());
@@ -79,10 +76,10 @@ public class BookSaleDTO implements Serializable {
     }
 
     /**
-    * {@link BookSaleDTO#id}
-    * data type: long
-    * return a long value
-    */
+     * {@link BookSaleDTO#id} data type: long return a long value
+     *
+     * @return
+     */
     public long getId() {
         return id;
     }
@@ -90,12 +87,12 @@ public class BookSaleDTO implements Serializable {
     public void setId(long id) {
         this.id = id;
     }
-    
+
     /**
-    * {@link BookSaleDTO#sellerId}
-    * data type: String
-    * return a String value
-    */
+     * {@link BookSaleDTO#sellerId} data type: String return a String value
+     *
+     * @return
+     */
     @XmlElement
     public String getSellerId() {
         return sellerId;
@@ -106,10 +103,10 @@ public class BookSaleDTO implements Serializable {
     }
 
     /**
-    * {@link BookSaleDTO#bookId}
-    * data type: long
-    * return a long value
-    */
+     * {@link BookSaleDTO#bookId} data type: long return a long value
+     *
+     * @return
+     */
     @XmlElement
     public long getBookId() {
         return bookId;
@@ -120,10 +117,10 @@ public class BookSaleDTO implements Serializable {
     }
 
     /**
-    * {@link BookSaleDTO#bookCondition}
-    * data type: String 
-    * return a String value
-    */
+     * {@link BookSaleDTO#bookCondition} data type: String return a String value
+     *
+     * @return
+     */
     @XmlElement
     public String getBookCondition() {
         return bookCondition;
@@ -134,10 +131,10 @@ public class BookSaleDTO implements Serializable {
     }
 
     /**
-    * {@link BookSaleDTO#price}
-    * data type: double
-    * return a double value
-    */
+     * {@link BookSaleDTO#price} data type: double return a double value
+     *
+     * @return
+     */
     @XmlElement
     public double getPrice() {
         return price;
@@ -148,10 +145,10 @@ public class BookSaleDTO implements Serializable {
     }
 
     /**
-    * {@link BookSaleDTO#quantity}
-    * data type: Integer
-    * return an int value
-    */
+     * {@link BookSaleDTO#quantity} data type: Integer return an int value
+     *
+     * @return
+     */
     @XmlElement
     public int getQuantity() {
         return quantity;
@@ -162,10 +159,10 @@ public class BookSaleDTO implements Serializable {
     }
 
     /**
-    * {@link BookSaleDTO#book}
-    * data type: BookDTO
-    * return a BookDTO object 
-    */
+     * {@link BookSaleDTO#book} data type: BookDTO return a BookDTO object
+     *
+     * @return
+     */
     @XmlElement
     public BookDTO getBook() {
         return book;
@@ -176,10 +173,10 @@ public class BookSaleDTO implements Serializable {
     }
 
     /**
-    * {@link BookSaleDTO#seller}
-    * data type: UserDTO
-    * return a UserDTO object
-    */
+     * {@link BookSaleDTO#seller} data type: UserDTO return a UserDTO object
+     *
+     * @return
+     */
     @XmlElement
     public UserDTO getSeller() {
         return seller;
@@ -188,6 +185,5 @@ public class BookSaleDTO implements Serializable {
     public void setSeller(UserDTO seller) {
         this.seller = seller;
     }
-    
-    
+
 }

@@ -1,19 +1,42 @@
 package au.edu.uts.aip.domain.dto;
 
-import au.edu.uts.aip.domain.ejb.UserBean;
 import java.io.Serializable;
-import javax.ejb.EJB;
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-public class RegistrationDTO implements Serializable{
+/**
+ * 
+ * @author x
+ */
+public class RegistrationDTO implements Serializable {
+
+    /**
+     *
+     */
     private String username;
+    /**
+     *
+     */
     private String fullname;
+    /**
+     *
+     */
     private String email;
+    /**
+     *
+     */
     private String password;
+    /**
+     *
+     */
     private String confirmPassword;
-    
+
+    /**
+     * {@link RegistrationDTO#username}
+     *
+     * @return
+     */
     @Size(min = 6, max = 32)
     @Pattern(regexp = "^([a-zA-Z0-9_])+$", message = "Username contains invalid character. "
             + "Available characters are English alphaet (a-z, A-Z), "
@@ -25,9 +48,14 @@ public class RegistrationDTO implements Serializable{
     public void setUsername(String username) {
         this.username = username;
     }
-    
+
+    /**
+     * {@link RegistrationDTO#fullname}
+     *
+     * @return
+     */
     @Size(max = 255)
-    @Pattern(regexp = "^([a-zA-Z]+)( [a-zA-Z]+)+$", 
+    @Pattern(regexp = "^([a-zA-Z]+)( [a-zA-Z]+)+$",
             message = "Fullname can only contain English alphabet chracters, and must contain at least 2 words")
     public String getFullname() {
         return fullname;
@@ -36,7 +64,12 @@ public class RegistrationDTO implements Serializable{
     public void setFullname(String fullname) {
         this.fullname = fullname;
     }
-    
+
+        /**
+     * {@link RegistrationDTO#email}
+     *
+     * @return
+     */
     @Pattern(regexp = "^[^ ]+@[^ ]+\\.[^ ]+$", message = "Email address is not valid")
     public String getEmail() {
         return email;
@@ -45,7 +78,12 @@ public class RegistrationDTO implements Serializable{
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
+        /**
+     * {@link RegistrationDTO#password}
+     *
+     * @return
+     */
     @Size(min = 6, message = "Password must be at least 6 characters long")
     public String getPassword() {
         return password;
@@ -54,7 +92,11 @@ public class RegistrationDTO implements Serializable{
     public void setPassword(String password) {
         this.password = password;
     }
-    
+    /**
+     * {@link RegistrationDTO#confirmPassword}
+     *
+     * @return
+     */
     public String getConfirmPassword() {
         return confirmPassword;
     }
@@ -62,7 +104,11 @@ public class RegistrationDTO implements Serializable{
     public void setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
     }
-    
+    /**
+     * Check if submitted password and its confirmation is the same.
+     * True if matches.
+     * @return
+     */
     @AssertTrue(message = "Password and confirm password do not match")
     public boolean isPasswordMatch() {
         return this.password.equals(this.confirmPassword);

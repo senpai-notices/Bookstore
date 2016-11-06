@@ -1,8 +1,5 @@
 package au.edu.uts.aip.domain.response;
 
-/**
- * The needed libraries
- */
 import java.io.Serializable;
 import javax.json.JsonObject;
 
@@ -12,7 +9,7 @@ import javax.json.JsonObject;
  * properties: body: JsonObject object statusCode: Integer value The attributes are not null and
  * accessed by get and set methods
  *
- * @author team Son Dang, Alex Tan, Xiaoyang Liu
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 public class SerialResponse implements Serializable {
 

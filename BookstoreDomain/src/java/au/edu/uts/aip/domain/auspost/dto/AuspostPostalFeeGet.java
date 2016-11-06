@@ -1,55 +1,56 @@
 package au.edu.uts.aip.domain.auspost.dto;
 
-/**
- *The needed libraries
- */
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * AuspostPostalFeeGet class is a DTO class 
- The class is used to retrieve the postage related information
-
- It has properties: fromPostagecode, topPostcode, length, width, height, weight and service code
- All the attributes are private and need get and set methods to access them
- * 
- * @author team San Dang, Alex Tan, Xiaoyang Liu
+ * AuspostPostalFeeGet class is a DTO class The class is used to retrieve the postage related
+ * information
+ *
+ * It has properties: fromPostagecode, topPostcode, length, width, height, weight and service code
+ * All the attributes are private and need get and set methods to access them
+ *
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class AuspostPostalFeeGet {
 
     /**
-     * the postcode
+     * The origin postcode. Should be four digits. Required field. E.g. 2000, 0800.
      */
     private String fromPostcode;
+    /**
+     * The destination postcode. Should be four digits. Required field. E.g. 2000, 0800.
+     */
     private String toPostcode;
     /**
-     * the length of the postage
+     * The length of the parcel in centimetres. Required field. E.g. 34
      */
     private int length;
     /**
-     * the width of the postage
+     * The width of the parcel in centimetres. Required field. E.g. 42
      */
     private int width;
     /**
-     * the height of the postage
+     * The height of the parcel in centimetres. Required field. E.g. 33
      */
     private int height;
     /**
-     * the weight of the postage
+     * The weight of the parcel in kilograms. Current usage is to 1 decimal-place. Required field.
+     * E.g. 12.5
      */
     private double weight;
     /**
-     * the service code of the postage
+     * The service code of the postage which defines the postage speed - regular or express.
+     * Required field. Value must be either "AUS_PARCEL_REGULAR" or "AUS_PARCEL_EXPRESS".
      */
     private String serviceCode;
-    private int quantity;
 
     /**
-    * {@link AuspostPostalFeeGet#fromPostcode}
-    * data type: String
-    * return a String value
-    */
+     * {@link AuspostPostalFeeGet#fromPostcode}
+     *
+     * @return fromPostcode
+     */
     @XmlElement(required = true, name = "from_postcode")
     public String getFromPostcode() {
         return fromPostcode;
@@ -60,10 +61,10 @@ public class AuspostPostalFeeGet {
     }
 
     /**
-    * {@link AuspostPostalFeeGet#toPostcode}
-    * data type: String
-    * return a String value
-    */
+     * {@link AuspostPostalFeeGet#toPostcode} * @return String
+     *
+     * @return toPostcode
+     */
     @XmlElement(required = true, name = "to_postcode")
     public String getToPostcode() {
         return toPostcode;
@@ -74,10 +75,10 @@ public class AuspostPostalFeeGet {
     }
 
     /**
-    * {@link AuspostPostalFeeGet#length}
-    * data type: Integer
-    * return an int value
-    */
+     * {@link AuspostPostalFeeGet#length}
+     *
+     * @return length
+     */
     @XmlElement(required = true)
     public int getLength() {
         return length;
@@ -88,10 +89,10 @@ public class AuspostPostalFeeGet {
     }
 
     /**
-    * {@link AuspostPostalFeeGet#width}
-    * data type: Integer
-    * return an int value
-    */
+     * {@link AuspostPostalFeeGet#width}
+     *
+     * @return width
+     */
     @XmlElement(required = true)
     public int getWidth() {
         return width;
@@ -102,10 +103,10 @@ public class AuspostPostalFeeGet {
     }
 
     /**
-    * {@link AuspostPostalFeeGet#height}
-    * data type: Integer
-    * return an int value
-    */
+     * {@link AuspostPostalFeeGet#height}
+     *
+     * @return height
+     */
     @XmlElement(required = true)
     public int getHeight() {
         return height;
@@ -116,10 +117,10 @@ public class AuspostPostalFeeGet {
     }
 
     /**
-    * {@link AuspostPostalFeeGet#weight}
-    * data type: Double
-    * return a double value
-    */
+     * {@link AuspostPostalFeeGet#weight}
+     *
+     * @return weight
+     */
     @XmlElement(required = true)
     public double getWeight() {
         return weight;
@@ -130,10 +131,10 @@ public class AuspostPostalFeeGet {
     }
 
     /**
-    * {@link AuspostPostalFeeGet#serviceCode}
-    * data type: String
-    * return a String value
-    */
+     * {@link AuspostPostalFeeGet#serviceCode}
+     *
+     * @return serviceCode
+     */
     @XmlElement(required = true, name = "service_code")
     public String getServiceCode() {
         return serviceCode;
@@ -141,14 +142,5 @@ public class AuspostPostalFeeGet {
 
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
-    }
-
-    @XmlElement
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 }

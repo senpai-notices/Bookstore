@@ -1,23 +1,19 @@
 package au.edu.uts.aip.domain.dto;
 
-/**
- *The needed libraries
- */
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * DocumentsDTO is a DTO class that is used to verify the identification and residential information
- * It is a data transfer object
- * Used to retrieve the idVerificationPath and residentialVerificationPath
- * It has properties: idVerificationPath, residentialVerificationPath
- * 
- *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ * It is a data transfer object Used to retrieve the idVerificationPath and
+ * residentialVerificationPath It has properties: idVerificationPath, residentialVerificationPath
+ *
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class DocumentsDTO implements Serializable {
-    
+
     /**
      * the path for id verification
      */
@@ -28,24 +24,24 @@ public class DocumentsDTO implements Serializable {
     private String residentialVerificationPath;
 
     /**
-    * {@link DocumentsDTO#idVerificationPath}
-    * data type: String
-    * return a String value
-    */
+     * {@link DocumentsDTO#idVerificationPath} data type: String return a String value
+     *
+     * @return
+     */
     @XmlElement
     public String getIdVerificationPath() {
         return idVerificationPath;
     }
-    
+
     public void setIdVerificationPath(String idVerificationPath) {
         this.idVerificationPath = idVerificationPath;
     }
 
     /**
-    * {@link DocumentsDTO#residentialVerificationPath}
-    * data type: String
-    * return a String value
-    */
+     * {@link DocumentsDTO#residentialVerificationPath} data type: String return a String value
+     *
+     * @return
+     */
     @XmlElement
     public String getResidentialVerificationPath() {
         return residentialVerificationPath;

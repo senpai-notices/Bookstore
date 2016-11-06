@@ -227,5 +227,4 @@ public class User implements Serializable {
         this.resetPasswordToken = resetPasswordToken;
     }
 
-    
 }

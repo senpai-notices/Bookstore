@@ -4,6 +4,10 @@ import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ *
+ * @author x
+ */
 @XmlRootElement
 public class PinTransferPost implements Serializable {
 
@@ -12,6 +16,10 @@ public class PinTransferPost implements Serializable {
     private String currency;
     private String recipient;
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true)
     public String getDescription() {
         return description;
@@ -21,6 +29,10 @@ public class PinTransferPost implements Serializable {
         this.description = description;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true)
     public String getAmount() {
         return amount;
@@ -30,6 +42,10 @@ public class PinTransferPost implements Serializable {
         this.amount = amount;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true)
     public String getCurrency() {
         return currency;
@@ -39,6 +55,10 @@ public class PinTransferPost implements Serializable {
         this.currency = currency;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true)
     public String getRecipient() {
         return recipient;

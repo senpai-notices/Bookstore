@@ -24,7 +24,7 @@ import javax.ws.rs.core.Response;
  * searchPostcodes(): Get possible postcodes for a given suburb name searchSuburbDetail(): Get
  * possible suburb detail for a given suburb name
  *
- * @author team San Dang, Alex Tan, Xiaoyang Liu
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Stateless
 public class PostalFeeBean {

@@ -4,11 +4,19 @@ import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ *
+ * @author x
+ */
 @XmlRootElement
 public class PinRecipientPost implements Serializable {
     private String email;
     private PinBankAccount bankAccount;
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true, name = "email")
     public String getEmail() {
         return email;
@@ -18,6 +26,10 @@ public class PinRecipientPost implements Serializable {
         this.email = email;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlElement(required = true, name = "bank_account")
     public PinBankAccount getBankAccount() {
         return bankAccount;

@@ -129,8 +129,8 @@ public class PostalResource {
             return postalFeeBean.calculatePostageCost(quantity, from, to, "AUS_PARCEL_REGULAR");
         } else if (type.equals("express")){
             return postalFeeBean.calculatePostageCost(quantity, from, to, "AUS_PARCEL_EXPRESS");
+        } else {
+            return -1.0;
         }
-        
-        return 0;
     }
 }

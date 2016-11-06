@@ -1,8 +1,5 @@
 package au.edu.uts.aip.domain.entity;
 
-/**
- *The needed libraries
- */
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,21 +9,20 @@ import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
-
 /**
- * A data entity class to access data in the Address table. 
- * A Address object describes the address detail of the buyer
+ * A data entity class to access data in the Address table. A Address object describes the address
+ * detail of the buyer
  *
- * Address entity has properties id, addressLine1, addressLine2, addressCity, addressPostcode, addressState and addressCountry. 
- * All the attributes of this model class are private attributes and all of them have relative get and set functions in
- * order to access the attributes
+ * Address entity has properties id, addressLine1, addressLine2, addressCity, addressPostcode,
+ * addressState and addressCountry. All the attributes of this model class are private attributes
+ * and all of them have relative get and set functions in order to access the attributes
  *
  * @author
  */
 @Entity
 @Table(name = "address")
 public class Address implements Serializable {
-     
+
     /**
      * the address record id
      */
@@ -56,7 +52,6 @@ public class Address implements Serializable {
      */
     private String addressCountry;
 
-    
     /**
      * {@link Address#id}
      */
@@ -81,7 +76,7 @@ public class Address implements Serializable {
     public void setAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
     }
-    
+
     /**
      * {@link Address#addressLine2}
      */
@@ -106,10 +101,8 @@ public class Address implements Serializable {
         this.addressCity = addressCity;
     }
 
-    
     /**
-     * {@link Address#addressPostcode}
-     * the size must be >=800 and <=9999
+     * {@link Address#addressPostcode} the size must be >=800 and <=9999
      */
     @Min(value = 800, message = "Please enter a valid postcode")
     @Max(value = 9999, message = "Please enter a valid postcode")
@@ -152,5 +145,5 @@ public class Address implements Serializable {
         return this.addressLine1 + ", " + address2
                 + this.addressCity + ", " + this.addressState + ", "
                 + this.addressCountry + ", " + this.addressPostcode;
-    } 
+    }
 }

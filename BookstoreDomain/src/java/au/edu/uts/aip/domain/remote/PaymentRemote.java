@@ -6,7 +6,6 @@ import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPut;
 import au.edu.uts.aip.domain.pin.dto.PinTransferPost;
-import au.edu.uts.aip.domain.validation.ValidationResult;
 import javax.ejb.Remote;
 import javax.json.JsonObject;
 

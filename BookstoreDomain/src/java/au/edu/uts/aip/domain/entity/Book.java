@@ -24,10 +24,11 @@ import javax.persistence.UniqueConstraint;
  * @author
  */
 @NamedQueries({
-    @NamedQuery(name = "Book.getLatest", query = "SELECT b FROM Book b ORDER BY b.publishYear DESC"),
+    @NamedQuery(name = "Book.getLatest", query = "SELECT b FROM Book b ORDER BY b.publishYear DESC")
+    ,
     @NamedQuery(name = "Book.getSingle", query = "SELECT DISTINCT b FROM Book b LEFT JOIN FETCH b.sales "
             + "WHERE b.isbn10 like :isbn10 AND b.isbn13 like :isbn13 AND b.title like :title")
-    //@NamedQuery(name="Book.getSales", query="SELECT DISTINCT b FROM Book b JOIN FETCH b.sales WHERE b.id=:bookId AND b.sales.seller=:seller")
+//@NamedQuery(name="Book.getSales", query="SELECT DISTINCT b FROM Book b JOIN FETCH b.sales WHERE b.id=:bookId AND b.sales.seller=:seller")
 })
 @Entity
 @Table(uniqueConstraints = {

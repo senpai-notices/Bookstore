@@ -1,8 +1,5 @@
 package au.edu.uts.aip.domain.dto;
 
-/**
- *The needed libraries
- */
 import au.edu.uts.aip.domain.entity.User;
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
@@ -10,17 +7,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * UserDTO is a DTO class that is used to retrieve all the information related to the website user
- * It is a data transfer object 
- * 
- * It has properties: 
- * username: String value
- * fullname: String value
- * email: String value
- * role: String value
- * address: String value
- * The attributes are not null and accessed by get and set methods
- * 
- *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ * It is a data transfer object
+ *
+ * It has properties: username: String value fullname: String value email: String value role: String
+ * value address: String value The attributes are not null and accessed by get and set methods
+ *
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class UserDTO implements Serializable {
@@ -45,9 +37,9 @@ public class UserDTO implements Serializable {
      * the address of the user
      */
     private String address;
-    
+
     private int postcode;
-    
+
     /**
      * Parameterless constructor for serializable interface
      */
@@ -57,24 +49,26 @@ public class UserDTO implements Serializable {
 
     /**
      * Constructor that copy data from user entity model
+     *
+     * @param userEntity
      */
     public UserDTO(User userEntity) {
         this.username = userEntity.getUsername();
         this.fullname = userEntity.getFullname();
         this.email = userEntity.getEmail();
         this.role = userEntity.getRole().getRoleName();
-        
-        if (userEntity.getAddress() != null){
+
+        if (userEntity.getAddress() != null) {
             this.address = userEntity.getAddress().toString();
             this.postcode = userEntity.getAddress().getAddressPostcode();
         }
     }
 
     /**
-    * {@link UserDTO#username}
-    * data type: String
-    * return a String value
-    */
+     * {@link UserDTO#username} data type: String return a String value
+     *
+     * @return
+     */
     @XmlElement
     public String getUsername() {
         return username;
@@ -85,10 +79,10 @@ public class UserDTO implements Serializable {
     }
 
     /**
-    * {@link UserDTO#fullname}
-    * data type: String
-    * return a String value
-    */
+     * {@link UserDTO#fullname} data type: String return a String value
+     *
+     * @return
+     */
     @XmlElement
     public String getFullname() {
         return fullname;
@@ -99,10 +93,10 @@ public class UserDTO implements Serializable {
     }
 
     /**
-    * {@link UserDTO#email}
-    * data type: String
-    * return a String value
-    */
+     * {@link UserDTO#email} data type: String return a String value
+     *
+     * @return
+     */
     @XmlElement
     public String getEmail() {
         return email;
@@ -113,10 +107,10 @@ public class UserDTO implements Serializable {
     }
 
     /**
-    * {@link UserDTO#role}
-    * data type: String
-    * return a String value
-    */
+     * {@link UserDTO#role} data type: String return a String value
+     *
+     * @return
+     */
     @XmlElement
     public String getRole() {
         return role;
@@ -127,10 +121,10 @@ public class UserDTO implements Serializable {
     }
 
     /**
-    * {@link UserDTO#address}
-    * data type: String
-    * return a String value
-    */
+     * {@link UserDTO#address} data type: String return a String value
+     *
+     * @return
+     */
     @XmlElement
     public String getAddress() {
         return address;
