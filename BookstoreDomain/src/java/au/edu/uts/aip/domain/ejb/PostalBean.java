@@ -3,20 +3,40 @@ package au.edu.uts.aip.domain.ejb;
 import au.edu.uts.aip.domain.auspost.dto.AuspostPostageGet;
 import au.edu.uts.aip.domain.auspost.filter.AuspostAuthFilter;
 import au.edu.uts.aip.domain.dto.ResponseDTO;
+import au.edu.uts.aip.domain.entity.Suburb;
 import au.edu.uts.aip.domain.util.ApiResponseUtil;
+import java.util.ArrayList;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonArrayBuilder;
 import javax.json.JsonObject;
+import javax.json.JsonObjectBuilder;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.ParameterExpression;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+import javax.persistence.metamodel.EntityType;
+import javax.persistence.metamodel.Metamodel;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Stateless
-public class PostageBean {
+public class PostalBean {
+
+    @PersistenceContext
+    private EntityManager em;
 
     private static final String BASE_URL = "https://digitalapi.auspost.com.au";
     private static final String API_KEY = "***REMOVED***";
+
     private static final int BOOK_LENGTH = 25;
     private static final int BOOK_WIDTH = 20;
     private static final int BOOK_HEIGHT = 3;
@@ -25,6 +45,7 @@ public class PostageBean {
     private static final int PARCEL_WIDTH = BOOK_WIDTH + PARCEL_PACKAGING_BUFFER;
     private static final double BOOK_WEIGHT = 0.5;
     private static final double PARCEL_WEIGHT_BUFFER = 0.4;
+
     private static final JsonObject JSON_STATE_NSW = Json.createObjectBuilder().add("name", "NSW").add("name_long", "New South Wales").build();
     private static final JsonObject JSON_STATE_VIC = Json.createObjectBuilder().add("name", "VIC").add("name_long", "Victoria").build();
     private static final JsonObject JSON_STATE_QLD = Json.createObjectBuilder().add("name", "QLD").add("name_long", "Queensland").build();
@@ -34,6 +55,8 @@ public class PostageBean {
     private static final JsonObject JSON_STATE_SA = Json.createObjectBuilder().add("name", "SA").add("name_long", "South Australia").build();
     private static final JsonObject JSON_STATE_WA = Json.createObjectBuilder().add("name", "WA").add("name_long", "Western Australia").build();
     private static final JsonObject JSON_STATE_NOT_FOUND = Json.createObjectBuilder().add("error", "Postcode not found").build();
+
+    private static final JsonObject JSON_SUBURB_NOT_FOUND = Json.createObjectBuilder().add("error", "Suburb not found").build();
 
     @Deprecated
     public JsonObject calculatePostageCostJson(AuspostPostageGet auspostPostageGet) {
@@ -119,7 +142,7 @@ public class PostageBean {
      * postcode is in will be returned with status code 200. Otherwise, return a ResponseDTO
      * containing an error message with status 404.
      */
-    public ResponseDTO getStateLocality(int postcode) {
+    public ResponseDTO getStateName(int postcode) {
         if ((postcode >= 1000 && postcode <= 2599)
                 || (postcode >= 2620 && postcode <= 2899)
                 || (postcode >= 2921 && postcode <= 2999)) {
@@ -146,5 +169,40 @@ public class PostageBean {
         } else {
             return new ResponseDTO(JSON_STATE_NOT_FOUND, Response.Status.NOT_FOUND.getStatusCode());
         }
+    }
+
+    /**
+     * Get possible postcodes for a given suburb.
+     * @param suburb The name of the suburb. It is case-sensitive.
+     * @return 
+     */
+    public ResponseDTO searchPostcodes(String suburb) {
+        // TODO: remove if trimming in frontend.
+        suburb = suburb.trim();
+
+        // Build criteria query returning Suburbs      
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<Suburb> cq = cb.createQuery(Suburb.class);
+
+        // Set up the query       
+        Root<Suburb> root = cq.from(Suburb.class);
+        cq.where(cb.like(root.<String>get("name"), cb.parameter(String.class, "param")));
+        TypedQuery<Suburb> tq = em.createQuery(cq);
+        tq.setParameter("param", "%" + suburb + "%");
+
+        List<Suburb> result = tq.getResultList();
+
+        if (!result.isEmpty()) {
+            JsonObjectBuilder jsonBuilder = Json.createObjectBuilder();
+            JsonArrayBuilder jsonArrayBuilder = Json.createArrayBuilder();
+
+            for (Suburb s : result) {
+                jsonArrayBuilder.add(s.getPostcode());
+            }
+            JsonObject resultJson = jsonBuilder.add("suburbs", jsonArrayBuilder).build();
+
+            return new ResponseDTO(resultJson, Response.Status.OK.getStatusCode());
+        }
+        return new ResponseDTO(JSON_SUBURB_NOT_FOUND, Response.Status.NOT_FOUND.getStatusCode());
     }
 }

@@ -2,7 +2,7 @@ package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.auspost.dto.AuspostPostageGet;
 import au.edu.uts.aip.domain.dto.ResponseDTO;
-import au.edu.uts.aip.domain.ejb.PostageBean;
+import au.edu.uts.aip.domain.ejb.PostalBean;
 
 import javax.ejb.EJB;
 import javax.json.Json;
@@ -19,11 +19,11 @@ import javax.ws.rs.core.Response;
 /**
  * May not be required
  */
-@Path("/postage")
-public class PostageResource {
+@Path("postal")
+public class PostalResource {
 
     @EJB
-    private PostageBean postageBean;
+    private PostalBean postalBean;
 
     @Deprecated
     @POST
@@ -32,7 +32,7 @@ public class PostageResource {
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("calculate")
     public Response calculate(AuspostPostageGet auspostPostageGet) {
-        JsonObject response = postageBean.calculatePostageCostJson(auspostPostageGet);
+        JsonObject response = postalBean.calculatePostageCostJson(auspostPostageGet);
         return Response.ok(response, MediaType.APPLICATION_JSON).build();
     }
 
@@ -41,7 +41,7 @@ public class PostageResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("calculate_reg_test")
     public Response calculateRegularTest() {
-        postageBean.calculatePostageCost(32, 800, 9999, "AUS_PARCEL_REGULAR");
+        postalBean.calculatePostageCost(32, 800, 9999, "AUS_PARCEL_REGULAR");
         return Response.ok().build();
     }
 
@@ -50,7 +50,7 @@ public class PostageResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("calculate_exp_test")
     public Response calculateExpressTest() {
-        postageBean.calculatePostageCost(32, 800, 9999, "AUS_PARCEL_EXPRESS");
+        postalBean.calculatePostageCost(32, 800, 9999, "AUS_PARCEL_EXPRESS");
         return Response.ok().build();
     }
 
@@ -69,7 +69,24 @@ public class PostageResource {
         if (postcodeString.length() != 4) {
             return Response.status(422).entity(Json.createObjectBuilder().add("error", "Invalid postcode. Postcode must be four digits.").build()).build();
         }
-        ResponseDTO responseDto = postageBean.getStateLocality(postcode);
+        ResponseDTO responseDto = postalBean.getStateName(postcode);
+        switch (responseDto.getStatusCode()) {
+            case 200:
+                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+            case 404:
+                return Response.status(404).entity(responseDto.getBody()).build();
+            default:
+                return Response.status(500).build();
+        }
+    }
+    
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //@RolesAllowed({"USER", "ADMIN"})
+    @Path("postcode/{suburb}")
+    public Response searchPostcodes(@PathParam("suburb") String suburb) {
+
+        ResponseDTO responseDto = postalBean.searchPostcodes(suburb);
         switch (responseDto.getStatusCode()) {
             case 200:
                 return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
