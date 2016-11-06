@@ -1,7 +1,7 @@
 package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.auspost.dto.AuspostPostageGet;
-import au.edu.uts.aip.domain.dto.ResponseDTO;
+import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.ejb.PostalBean;
 
 import javax.ejb.EJB;
@@ -69,12 +69,12 @@ public class PostalResource {
         if (postcodeString.length() != 4) {
             return Response.status(422).entity(Json.createObjectBuilder().add("error", "Invalid postcode. Postcode must be four digits.").build()).build();
         }
-        ResponseDTO responseDto = postalBean.getStateName(postcode);
-        switch (responseDto.getStatusCode()) {
+        SerialResponse response = postalBean.getStateName(postcode);
+        switch (response.getStatusCode()) {
             case 200:
-                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+                return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
             case 404:
-                return Response.status(404).entity(responseDto.getBody()).build();
+                return Response.status(404).entity(response.getBody()).build();
             default:
                 return Response.status(500).build();
         }
@@ -86,12 +86,12 @@ public class PostalResource {
     @Path("postcode/{suburb}")
     public Response searchPostcodes(@PathParam("suburb") String suburb) {
 
-        ResponseDTO responseDto = postalBean.searchPostcodes(suburb);
-        switch (responseDto.getStatusCode()) {
+        SerialResponse response = postalBean.searchPostcodes(suburb);
+        switch (response.getStatusCode()) {
             case 200:
-                return Response.ok(responseDto.getBody(), MediaType.APPLICATION_JSON).build();
+                return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
             case 404:
-                return Response.status(404).entity(responseDto.getBody()).build();
+                return Response.status(404).entity(response.getBody()).build();
             default:
                 return Response.status(500).build();
         }

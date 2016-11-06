@@ -1,6 +1,6 @@
 package au.edu.uts.aip.domain.ejb;
 
-import au.edu.uts.aip.domain.dto.ResponseDTO;
+import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.remote.PaymentRemote;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
 import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
@@ -28,7 +28,7 @@ public class PaymentBean implements PaymentRemote {
     private static final String PASSWORD = "";
 
     @Override
-    public ResponseDTO createCustomer2(PinCustomerPost pinCustomerPost) {
+    public SerialResponse createCustomer2(PinCustomerPost pinCustomerPost) {
 
         Client client = ClientBuilder.newClient()
                 .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
@@ -45,14 +45,14 @@ public class PaymentBean implements PaymentRemote {
         ValidationResult validationResult = PinResponseUtil.validate(statusCode, responseJson);
 
         if (validationResult == null) {
-            return new ResponseDTO(responseJson, Response.Status.CREATED.getStatusCode());
+            return new SerialResponse(responseJson, Response.Status.CREATED.getStatusCode());
         } else {
-            return new ResponseDTO(validationResult.toJson(), 422);
+            return new SerialResponse(validationResult.toJson(), 422);
         }
     }
 
     @Override
-    public ResponseDTO charge2(PinChargePost pinChargePost) {
+    public SerialResponse charge2(PinChargePost pinChargePost) {
 
         Client client = ClientBuilder.newClient()
                 .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
@@ -69,14 +69,14 @@ public class PaymentBean implements PaymentRemote {
         ValidationResult validationResult = PinResponseUtil.validate(statusCode, responseJson);
 
         if (validationResult == null) {
-            return new ResponseDTO(responseJson, 201);
+            return new SerialResponse(responseJson, 201);
         } else {
-            return new ResponseDTO(validationResult.toJson(), 422);
+            return new SerialResponse(validationResult.toJson(), 422);
         }
     }
 
     @Override
-    public ResponseDTO createRecipient2(PinRecipientPost pinRecipientPost) {
+    public SerialResponse createRecipient2(PinRecipientPost pinRecipientPost) {
         Client client = ClientBuilder.newClient()
                 .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
                 .register(new PinResponseLoggingFilter());
@@ -92,14 +92,14 @@ public class PaymentBean implements PaymentRemote {
         ValidationResult validationResult = PinResponseUtil.validate(statusCode, responseJson);
 
         if (validationResult == null) {
-            return new ResponseDTO(responseJson, 201);
+            return new SerialResponse(responseJson, 201);
         } else {
-            return new ResponseDTO(validationResult.toJson(), 422);
+            return new SerialResponse(validationResult.toJson(), 422);
         }
     }
 
     @Override
-    public ResponseDTO transfer2(PinTransferPost pinTransferPost) {
+    public SerialResponse transfer2(PinTransferPost pinTransferPost) {
         Client client = ClientBuilder.newClient()
                 .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
                 .register(new PinResponseLoggingFilter());
@@ -115,9 +115,9 @@ public class PaymentBean implements PaymentRemote {
         ValidationResult validationResult = PinResponseUtil.validate(statusCode, responseJson);
 
         if (validationResult == null) {
-            return new ResponseDTO(responseJson, 201);
+            return new SerialResponse(responseJson, 201);
         } else {
-            return new ResponseDTO(validationResult.toJson(), 422);
+            return new SerialResponse(validationResult.toJson(), 422);
         }
     }
 
@@ -140,7 +140,7 @@ public class PaymentBean implements PaymentRemote {
     }
 
     @Override
-    public ResponseDTO editRecipient2(String recipientToken, PinRecipientPut pinRecipientPut) {
+    public SerialResponse editRecipient2(String recipientToken, PinRecipientPut pinRecipientPut) {
         Client client = ClientBuilder.newClient()
                 .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
                 .register(new PinResponseLoggingFilter());
@@ -158,9 +158,9 @@ public class PaymentBean implements PaymentRemote {
         ValidationResult validationResult = PinResponseUtil.validate(statusCode, responseJson);
 
         if (validationResult == null) {
-            return new ResponseDTO(responseJson, 201);
+            return new SerialResponse(responseJson, 201);
         } else {
-            return new ResponseDTO(validationResult.toJson(), 422);
+            return new SerialResponse(validationResult.toJson(), 422);
         }
     }
 

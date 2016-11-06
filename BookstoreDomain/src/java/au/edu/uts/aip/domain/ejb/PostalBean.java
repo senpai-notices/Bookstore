@@ -2,7 +2,7 @@ package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.auspost.dto.AuspostPostageGet;
 import au.edu.uts.aip.domain.auspost.filter.AuspostAuthFilter;
-import au.edu.uts.aip.domain.dto.ResponseDTO;
+import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.entity.Suburb;
 import au.edu.uts.aip.domain.util.ApiResponseUtil;
 import java.util.ArrayList;
@@ -129,45 +129,45 @@ public class PostalBean {
     }
 
     /**
-     * Get the state that the postcode belongs to. Returns a ResponseDTO (JSON body and HTTP status
-     * code). The body contains the name of the state.
-     *
-     * Example 1: input 3000 -> returns ResponseDTO containing the strings "VIC" and "Victoria" and
-     * also status code 200
-     *
-     * Example 2: input 0 -> returns ResponseDTO containing an error message and status code 404
+     * Get the state that the postcode belongs to. Returns a SerialResponse (JSON body and HTTP status
+ code). The body contains the name of the state.
+
+ Example 1: input 3000 -> returns SerialResponse containing the strings "VIC" and "Victoria" and
+ also status code 200
+
+ Example 2: input 0 -> returns SerialResponse containing an error message and status code 404
      *
      * @param postcode The postcode that is queried
-     * @return If postcode is found, a ResponseDTO containing the name of the state that the
-     * postcode is in will be returned with status code 200. Otherwise, return a ResponseDTO
-     * containing an error message with status 404.
+     * @return If postcode is found, a SerialResponse containing the name of the state that the
+ postcode is in will be returned with status code 200. Otherwise, return a SerialResponse
+ containing an error message with status 404.
      */
-    public ResponseDTO getStateName(int postcode) {
+    public SerialResponse getStateName(int postcode) {
         if ((postcode >= 1000 && postcode <= 2599)
                 || (postcode >= 2620 && postcode <= 2899)
                 || (postcode >= 2921 && postcode <= 2999)) {
-            return new ResponseDTO(JSON_STATE_NSW, Response.Status.OK.getStatusCode());
+            return new SerialResponse(JSON_STATE_NSW, Response.Status.OK.getStatusCode());
         } else if ((postcode >= 200 && postcode <= 299)
                 || (postcode >= 2600 && postcode <= 2619)
                 || (postcode >= 2900 && postcode <= 2920)) {
-            return new ResponseDTO(JSON_STATE_ACT, Response.Status.OK.getStatusCode());
+            return new SerialResponse(JSON_STATE_ACT, Response.Status.OK.getStatusCode());
         } else if ((postcode >= 3000 && postcode <= 3999)
                 || (postcode >= 8000 && postcode <= 8999)) {
-            return new ResponseDTO(JSON_STATE_VIC, Response.Status.OK.getStatusCode());
+            return new SerialResponse(JSON_STATE_VIC, Response.Status.OK.getStatusCode());
         } else if ((postcode >= 4000 && postcode <= 4999)
                 || (postcode >= 9000 && postcode <= 9999)) {
-            return new ResponseDTO(JSON_STATE_QLD, Response.Status.OK.getStatusCode());
+            return new SerialResponse(JSON_STATE_QLD, Response.Status.OK.getStatusCode());
         } else if (postcode >= 5000 && postcode <= 5999) {
-            return new ResponseDTO(JSON_STATE_SA, Response.Status.OK.getStatusCode());
+            return new SerialResponse(JSON_STATE_SA, Response.Status.OK.getStatusCode());
         } else if ((postcode >= 6000 && postcode <= 6797)
                 || (postcode >= 6800 && postcode <= 6999)) {
-            return new ResponseDTO(JSON_STATE_WA, Response.Status.OK.getStatusCode());
+            return new SerialResponse(JSON_STATE_WA, Response.Status.OK.getStatusCode());
         } else if (postcode >= 7000 && postcode <= 7999) {
-            return new ResponseDTO(JSON_STATE_TAS, Response.Status.OK.getStatusCode());
+            return new SerialResponse(JSON_STATE_TAS, Response.Status.OK.getStatusCode());
         } else if (postcode >= 800 && postcode <= 999) {
-            return new ResponseDTO(JSON_STATE_NT, Response.Status.OK.getStatusCode());
+            return new SerialResponse(JSON_STATE_NT, Response.Status.OK.getStatusCode());
         } else {
-            return new ResponseDTO(JSON_STATE_NOT_FOUND, Response.Status.NOT_FOUND.getStatusCode());
+            return new SerialResponse(JSON_STATE_NOT_FOUND, Response.Status.NOT_FOUND.getStatusCode());
         }
     }
 
@@ -176,7 +176,7 @@ public class PostalBean {
      * @param suburb The name of the suburb. It is case-sensitive.
      * @return 
      */
-    public ResponseDTO searchPostcodes(String suburb) {
+    public SerialResponse searchPostcodes(String suburb) {
         // TODO: remove if trimming in frontend.
         suburb = suburb.trim();
 
@@ -201,8 +201,8 @@ public class PostalBean {
             }
             JsonObject resultJson = jsonBuilder.add("suburbs", jsonArrayBuilder).build();
 
-            return new ResponseDTO(resultJson, Response.Status.OK.getStatusCode());
+            return new SerialResponse(resultJson, Response.Status.OK.getStatusCode());
         }
-        return new ResponseDTO(JSON_SUBURB_NOT_FOUND, Response.Status.NOT_FOUND.getStatusCode());
+        return new SerialResponse(JSON_SUBURB_NOT_FOUND, Response.Status.NOT_FOUND.getStatusCode());
     }
 }

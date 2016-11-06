@@ -1,6 +1,6 @@
 package au.edu.uts.aip.service.resource;
 
-import au.edu.uts.aip.domain.dto.ResponseDTO;
+import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
 import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
 import au.edu.uts.aip.domain.pin.dto.PinRecipientPost;
@@ -35,7 +35,7 @@ public class PaymentResource {
     @Path("customer/create2")
     public Response createCustomer2(PinCustomerPost pinCustomerPost) {
 
-        ResponseDTO responseDto = paymentBean.createCustomer2(pinCustomerPost);
+        SerialResponse responseDto = paymentBean.createCustomer2(pinCustomerPost);
 
         switch (responseDto.getStatusCode()) {
             case 201:
@@ -54,7 +54,7 @@ public class PaymentResource {
     @Path("charge2")
     public Response charge2(PinChargePost pinChargePost) {
 
-        ResponseDTO responseDto = paymentBean.charge2(pinChargePost);
+        SerialResponse responseDto = paymentBean.charge2(pinChargePost);
 
         switch (responseDto.getStatusCode()) {
             case 201:
@@ -73,7 +73,7 @@ public class PaymentResource {
     @Path("recipient/create2")
     public Response createRecipient2(PinRecipientPost pinRecipientPost) {
 
-        ResponseDTO responseDto = paymentBean.createRecipient2(pinRecipientPost);
+        SerialResponse responseDto = paymentBean.createRecipient2(pinRecipientPost);
 
         switch (responseDto.getStatusCode()) {
             case 201:
@@ -104,7 +104,7 @@ public class PaymentResource {
     public Response editRecipient2(@PathParam("recipient-token") String recipientToken,
             PinRecipientPut pinRecipientPut) {
 
-        ResponseDTO responseDto
+        SerialResponse responseDto
                 = paymentBean.editRecipient2(recipientToken, pinRecipientPut);
 
         switch (responseDto.getStatusCode()) {
@@ -124,7 +124,7 @@ public class PaymentResource {
     @Path("transfer2")
     public Response transfer2(PinTransferPost pinTransferPost) {
 
-        ResponseDTO responseDto = paymentBean.transfer2(pinTransferPost);
+        SerialResponse responseDto = paymentBean.transfer2(pinTransferPost);
 
         switch (responseDto.getStatusCode()) {
             case 201:
