@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import * as bs from 'react-bootstrap'
 import { Link, browserHistory } from 'react-router'
 import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
-import { FormInputText } from 'components'
+import { FormInputText, ErrorDisplay } from 'components'
 
 class LoginForm extends BaseView{
 
@@ -23,7 +23,9 @@ class LoginForm extends BaseView{
 			})
 			.fail((err) => {
 				this.props.dispatch.logout()
-				this.props.dispatch.addErrorMessage("Cannot login, please try again")
+				this.state.errors = []
+				this.state.errors.push(["Cannot login, please try again"])
+				this.setState(this.state)
 			})
 	}
 
@@ -34,16 +36,7 @@ class LoginForm extends BaseView{
 	}
 
 	render(){
-		const validationMessage = this.props.validationMessage
 		const user = this.props.user
-		let errorDisplay = ""
-		if (validationMessage.errors[0] !== undefined){
-			errorDisplay = (
-				<bs.Alert bsStyle="danger" onDismiss={this.props.dispatch.removeValidationMessage}>
-					{validationMessage.errors[0]}
-				</bs.Alert>
-			)
-		}
 
 		return (
 			<bs.Col xs={12} md={6} mdOffset={3}>
@@ -56,7 +49,7 @@ class LoginForm extends BaseView{
 
 					<bs.Col xsOffset={1} xs={10}>
 
-						{errorDisplay}
+						<ErrorDisplay errors={this.state.errors} onRemove={(index) => this.removeErrorMessage(index)}/>
 
 						<bs.Form horizontal onSubmit={this.login}>
 
