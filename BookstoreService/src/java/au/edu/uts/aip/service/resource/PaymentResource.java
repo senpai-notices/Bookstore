@@ -45,7 +45,7 @@ public class PaymentResource {
     @Path("customer/create2")
     public Response createCustomer2(PinCustomerPost pinCustomerPost) {
 
-        SerialResponse response = paymentBean.createCustomer2(pinCustomerPost);
+        SerialResponse response = paymentBean.createCustomer(pinCustomerPost);
 
         switch (response.getStatusCode()) {
             case 201:
@@ -64,7 +64,7 @@ public class PaymentResource {
     @Path("charge2")
     public Response charge2(PinChargePost pinChargePost) {
 
-        SerialResponse response = paymentBean.charge2(pinChargePost);
+        SerialResponse response = paymentBean.charge(pinChargePost);
 
         switch (response.getStatusCode()) {
             case 201:
@@ -87,7 +87,7 @@ public class PaymentResource {
         UserDTO userDTO = userBean.getUser(username);
         pinRecipientPost.setEmail(userDTO.getEmail());
 
-        SerialResponse response = paymentBean.createRecipient2(pinRecipientPost);
+        SerialResponse response = paymentBean.createRecipient(pinRecipientPost);
 
         switch (response.getStatusCode()) {
             case 201:
@@ -119,7 +119,7 @@ public class PaymentResource {
             PinRecipientPut pinRecipientPut) {
 
         SerialResponse response
-                = paymentBean.editRecipient2(recipientToken, pinRecipientPut);
+                = paymentBean.editRecipient(recipientToken, pinRecipientPut);
 
         switch (response.getStatusCode()) {
             case 201:
@@ -138,7 +138,7 @@ public class PaymentResource {
     @Path("transfer2")
     public Response transfer2(PinTransferPost pinTransferPost) {
 
-        SerialResponse response = paymentBean.transfer2(pinTransferPost);
+        SerialResponse response = paymentBean.transfer(pinTransferPost);
 
         switch (response.getStatusCode()) {
             case 201:

@@ -1,9 +1,9 @@
 package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.dto.UserDTO;
-import au.edu.uts.aip.domain.ejb.EmailBean;
-import au.edu.uts.aip.domain.ejb.EmailBodyComposerBean;
 import au.edu.uts.aip.domain.exception.TokenGenerationException;
+import au.edu.uts.aip.domain.remote.EmailBodyComposerRemote;
+import au.edu.uts.aip.domain.remote.EmailRemote;
 import au.edu.uts.aip.domain.remote.UserRemote;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
@@ -25,10 +25,10 @@ public class EmailResource {
     private UserRemote userBean;
 
     @EJB
-    private EmailBean emailBean;
+    private EmailRemote emailBean;
 
     @EJB
-    private EmailBodyComposerBean emailBodyComposerBean;
+    private EmailBodyComposerRemote emailBodyComposerBean;
 
     @Context
     private SecurityContext securityContext;

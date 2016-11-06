@@ -41,33 +41,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 /**
- * PaymentBean is an EJB that is used to handle the payment related operations
- * 
- * It uses the Pin API to handle the payment 
- * Official Pin API documentation can be found here: https://pin.net.au/docs/api/
- *  @author Son Dang, Alex Tan, Xiaoyang Liu
+ * @inheritDoc
  */
 @Stateless
 @LocalBean
 public class PaymentBean implements PaymentRemote {
 
     /**
-    * API address
-    */
-    private static final String BASE_URL = "https://test-api.pin.net.au/1";
-    /**
-    * API secret key
-    */
-    private static final String API_KEY_SECRET = "***REMOVED***";
-    private static final String PASSWORD = "";
-    
-    /**
-    * createCustomer2 is used to create a customer
-    * return ResponseDTO
-     * @param pinCustomerPost
-    */
+     * @inheritDoc
+     */
     @Override
-    public SerialResponse createCustomer2(PinCustomerPost pinCustomerPost) {
+    public SerialResponse createCustomer(PinCustomerPost pinCustomerPost) {
 
         Client client = ClientBuilder.newClient()
                 .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
@@ -90,14 +74,11 @@ public class PaymentBean implements PaymentRemote {
         }
     }
 
-    
     /**
-    * charge2 funtion is used to charge the money
-     * @param pinChargePost
-     * @return 
-    */
+     * @inheritDoc
+     */
     @Override
-    public SerialResponse charge2(PinChargePost pinChargePost) {
+    public SerialResponse charge(PinChargePost pinChargePost) {
 
         Client client = ClientBuilder.newClient()
                 .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
@@ -121,12 +102,10 @@ public class PaymentBean implements PaymentRemote {
     }
 
     /**
-    * createRecipient2 function is used to create a receipt
-     * @param pinRecipientPost
-     * @return 
-    */
+     * @inheritDoc
+     */
     @Override
-    public SerialResponse createRecipient2(PinRecipientPost pinRecipientPost) {
+    public SerialResponse createRecipient(PinRecipientPost pinRecipientPost) {
         Client client = ClientBuilder.newClient()
                 .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
                 .register(new PinResponseLoggingFilter());
@@ -149,12 +128,10 @@ public class PaymentBean implements PaymentRemote {
     }
 
     /**
-    * transfer2 function is used to transfer the money
-     * @param pinTransferPost
-     * @return 
-    */
+     * @inheritDoc
+     */
     @Override
-    public SerialResponse transfer2(PinTransferPost pinTransferPost) {
+    public SerialResponse transfer(PinTransferPost pinTransferPost) {
         Client client = ClientBuilder.newClient()
                 .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
                 .register(new PinResponseLoggingFilter());
@@ -177,8 +154,8 @@ public class PaymentBean implements PaymentRemote {
     }
 
     /**
-    * fetchRecipient function is used to fetch the requested recipient
-    */
+     * @inheritDoc
+     */
     @Override
     public JsonObject fetchRecipient(String recipientToken) {
         Client client = ClientBuilder.newClient()
@@ -198,13 +175,10 @@ public class PaymentBean implements PaymentRemote {
     }
 
     /**
-    * editRecipient2 function is used to edit the information of the recipient
-     * @param recipientToken
-     * @param pinRecipientPut
-     * @return 
-    */
+     * @inheritDoc
+     */
     @Override
-    public SerialResponse editRecipient2(String recipientToken, PinRecipientPut pinRecipientPut) {
+    public SerialResponse editRecipient(String recipientToken, PinRecipientPut pinRecipientPut) {
         Client client = ClientBuilder.newClient()
                 .register(new PinAuthFilter(API_KEY_SECRET, PASSWORD))
                 .register(new PinResponseLoggingFilter());

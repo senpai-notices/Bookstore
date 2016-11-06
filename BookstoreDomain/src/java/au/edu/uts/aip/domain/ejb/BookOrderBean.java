@@ -94,7 +94,7 @@ public class BookOrderBean implements BookOrderRemote {
         pinCustomerPost.setEmail(user.getEmail());
         pinCustomerPost.setCard(checkoutDTO.getCard());
         
-        SerialResponse createCustomerResponse = paymentBean.createCustomer2(pinCustomerPost);
+        SerialResponse createCustomerResponse = paymentBean.createCustomer(pinCustomerPost);
         
         // failed at create customer
         if (createCustomerResponse.getStatusCode() != Response.Status.CREATED.getStatusCode()){
@@ -116,7 +116,7 @@ public class BookOrderBean implements BookOrderRemote {
         pinChargePost.setDescription(description);
         pinChargePost.setEmail(user.getEmail());
         
-        SerialResponse chargeResponse = paymentBean.charge2(pinChargePost);
+        SerialResponse chargeResponse = paymentBean.charge(pinChargePost);
         // failed at charge
         if (chargeResponse.getStatusCode() != Response.Status.CREATED.getStatusCode()){
             throw new ClientErrorException(chargeResponse.getBody().toString(), chargeResponse.getStatusCode());
