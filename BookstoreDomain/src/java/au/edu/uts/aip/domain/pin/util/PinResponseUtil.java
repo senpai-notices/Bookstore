@@ -3,8 +3,6 @@ package au.edu.uts.aip.domain.pin.util;
 import au.edu.uts.aip.domain.validation.ValidationResult;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status.Family;
 
 public class PinResponseUtil {
 
@@ -37,30 +35,4 @@ public class PinResponseUtil {
                 return null;
         }
     }
-
-    // <editor-fold defaultstate="collapsed" desc="unused">
-    public static boolean is200Code(int responseCode) {
-        Family family = Response.Status.Family.familyOf(responseCode);
-        if (family == Response.Status.Family.SUCCESSFUL) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean is400Code(int responseCode) {
-        Family family = Response.Status.Family.familyOf(responseCode);
-        if (family == Response.Status.Family.CLIENT_ERROR) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean is500Code(int responseCode) {
-        Family family = Response.Status.Family.familyOf(responseCode);
-        if (family == Response.Status.Family.SERVER_ERROR) {
-            return true;
-        }
-        return false;
-    }
-    // </editor-fold>
 }
