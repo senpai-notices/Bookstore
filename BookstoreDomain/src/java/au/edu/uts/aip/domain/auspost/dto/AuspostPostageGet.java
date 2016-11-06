@@ -1,19 +1,54 @@
 package au.edu.uts.aip.domain.auspost.dto;
 
+/**
+ *The needed libraries
+ */
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * AuspostPostageGet class is a DTO class 
+ * The class is used to retrieve the postage related information
+ *
+ * It has properties: fromPostagecode, topPostcode, length, width, height, weight and service code
+ * All the attributes are private and need get and set methods to access them
+ * 
+ * @author team San Dang, Alex Tan, Xiaoyang Liu
+ */
 @XmlRootElement
 public class AuspostPostageGet {
 
+    /**
+     * the postcode
+     */
     private String fromPostcode;
     private String toPostcode;
+    /**
+     * the length of the postage
+     */
     private int length;
+    /**
+     * the width of the postage
+     */
     private int width;
+    /**
+     * the height of the postage
+     */
     private int height;
+    /**
+     * the weight of the postage
+     */
     private double weight;
+    /**
+     * the service code of the postage
+     */
     private String serviceCode;
 
+    /**
+    * {@link AuspostPostageGet#fromPostcode}
+    * data type: String
+    * return a String value
+    */
     @XmlElement(required = true, name = "from_postcode")
     public String getFromPostcode() {
         return fromPostcode;
@@ -23,6 +58,11 @@ public class AuspostPostageGet {
         this.fromPostcode = fromPostcode;
     }
 
+    /**
+    * {@link AuspostPostageGet#toPostcode}
+    * data type: String
+    * return a String value
+    */
     @XmlElement(required = true, name = "to_postcode")
     public String getToPostcode() {
         return toPostcode;
@@ -32,6 +72,11 @@ public class AuspostPostageGet {
         this.toPostcode = toPostcode;
     }
 
+    /**
+    * {@link AuspostPostageGet#length}
+    * data type: Integer
+    * return an int value
+    */
     @XmlElement(required = true)
     public int getLength() {
         return length;
@@ -41,6 +86,11 @@ public class AuspostPostageGet {
         this.length = length;
     }
 
+    /**
+    * {@link AuspostPostageGet#width}
+    * data type: Integer
+    * return an int value
+    */
     @XmlElement(required = true)
     public int getWidth() {
         return width;
@@ -50,6 +100,11 @@ public class AuspostPostageGet {
         this.width = width;
     }
 
+    /**
+    * {@link AuspostPostageGet#height}
+    * data type: Integer
+    * return an int value
+    */
     @XmlElement(required = true)
     public int getHeight() {
         return height;
@@ -59,6 +114,11 @@ public class AuspostPostageGet {
         this.height = height;
     }
 
+    /**
+    * {@link AuspostPostageGet#weight}
+    * data type: Double
+    * return a double value
+    */
     @XmlElement(required = true)
     public double getWeight() {
         return weight;
@@ -68,6 +128,11 @@ public class AuspostPostageGet {
         this.weight = weight;
     }
 
+    /**
+    * {@link AuspostPostageGet#serviceCode}
+    * data type: String
+    * return a String value
+    */
     @XmlElement(required = true, name = "service_code")
     public String getServiceCode() {
         return serviceCode;

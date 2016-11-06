@@ -1,5 +1,8 @@
 package au.edu.uts.aip.domain.ejb;
 
+/**
+ *The needed libraries
+ */
 import au.edu.uts.aip.domain.auspost.dto.AuspostPostageGet;
 import au.edu.uts.aip.domain.auspost.filter.AuspostAuthFilter;
 import au.edu.uts.aip.domain.response.SerialResponse;
@@ -23,15 +26,36 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+/**
+ * PostalBean is a JavaBean that is used to handle the postage related operations
+ * 
+ * The functions conclude calculating the postage fee, calculating the parcel height and weight,
+ * getting stateName according to postcode and searching suburb details
+ * 
+ * It has 6 methods:
+ * calculatePostageCost(): used to calculate the postage fee
+ * calculateParcelHeight(): used to calculate the height of the parcel
+ * calculateParcelWeight(): used to calculate the weight of the parcel
+ * getStateName(): get the state name based on the postcode
+ * searchPostcodes(): Get possible postcodes for a given suburb name
+ * searchSuburbDetail(): Get possible suburb detail for a given suburb name
+ * 
+ *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ */
 @Stateless
 public class PostalBean {
 
     @PersistenceContext
     private EntityManager em;
 
+    /**
+     *the API info
+     */
     private static final String BASE_URL = "https://digitalapi.auspost.com.au";
     private static final String API_KEY = "***REMOVED***";
-
+    /**
+     * the parcel info
+     */
     private static final int BOOK_LENGTH = 25;
     private static final int BOOK_WIDTH = 20;
     private static final int BOOK_HEIGHT = 3;
