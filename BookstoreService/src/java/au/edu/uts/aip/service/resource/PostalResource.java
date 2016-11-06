@@ -1,6 +1,6 @@
 package au.edu.uts.aip.service.resource;
 
-import au.edu.uts.aip.domain.auspost.dto.AuspostPostageGet;
+import au.edu.uts.aip.domain.auspost.dto.AuspostPostageFeeGet;
 import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.ejb.PostalBean;
 
@@ -31,7 +31,7 @@ public class PostalResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("calculate")
-    public Response calculate(AuspostPostageGet auspostPostageGet) {
+    public Response calculate(AuspostPostageFeeGet auspostPostageGet) {
         JsonObject response = postalBean.calculatePostageCostJson(auspostPostageGet);
         return Response.ok(response, MediaType.APPLICATION_JSON).build();
     }

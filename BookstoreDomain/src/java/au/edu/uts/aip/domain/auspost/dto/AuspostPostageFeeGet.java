@@ -7,16 +7,16 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * AuspostPostageGet class is a DTO class 
- * The class is used to retrieve the postage related information
- *
- * It has properties: fromPostagecode, topPostcode, length, width, height, weight and service code
- * All the attributes are private and need get and set methods to access them
+ * AuspostPostageFeeGet class is a DTO class 
+ The class is used to retrieve the postage related information
+
+ It has properties: fromPostagecode, topPostcode, length, width, height, weight and service code
+ All the attributes are private and need get and set methods to access them
  * 
  * @author team San Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
-public class AuspostPostageGet {
+public class AuspostPostageFeeGet {
 
     /**
      * the postcode
@@ -45,7 +45,7 @@ public class AuspostPostageGet {
     private String serviceCode;
 
     /**
-    * {@link AuspostPostageGet#fromPostcode}
+    * {@link AuspostPostageFeeGet#fromPostcode}
     * data type: String
     * return a String value
     */
@@ -59,7 +59,7 @@ public class AuspostPostageGet {
     }
 
     /**
-    * {@link AuspostPostageGet#toPostcode}
+    * {@link AuspostPostageFeeGet#toPostcode}
     * data type: String
     * return a String value
     */
@@ -73,7 +73,7 @@ public class AuspostPostageGet {
     }
 
     /**
-    * {@link AuspostPostageGet#length}
+    * {@link AuspostPostageFeeGet#length}
     * data type: Integer
     * return an int value
     */
@@ -87,7 +87,7 @@ public class AuspostPostageGet {
     }
 
     /**
-    * {@link AuspostPostageGet#width}
+    * {@link AuspostPostageFeeGet#width}
     * data type: Integer
     * return an int value
     */
@@ -101,7 +101,7 @@ public class AuspostPostageGet {
     }
 
     /**
-    * {@link AuspostPostageGet#height}
+    * {@link AuspostPostageFeeGet#height}
     * data type: Integer
     * return an int value
     */
@@ -115,7 +115,7 @@ public class AuspostPostageGet {
     }
 
     /**
-    * {@link AuspostPostageGet#weight}
+    * {@link AuspostPostageFeeGet#weight}
     * data type: Double
     * return a double value
     */
@@ -129,7 +129,7 @@ public class AuspostPostageGet {
     }
 
     /**
-    * {@link AuspostPostageGet#serviceCode}
+    * {@link AuspostPostageFeeGet#serviceCode}
     * data type: String
     * return a String value
     */

@@ -3,7 +3,7 @@ package au.edu.uts.aip.domain.ejb;
 /**
  *The needed libraries
  */
-import au.edu.uts.aip.domain.auspost.dto.AuspostPostageGet;
+import au.edu.uts.aip.domain.auspost.dto.AuspostPostageFeeGet;
 import au.edu.uts.aip.domain.auspost.filter.AuspostAuthFilter;
 import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.entity.Suburb;
@@ -78,7 +78,7 @@ public class PostalBean {
     private static final JsonObject JSON_SUBURB_NOT_FOUND = Json.createObjectBuilder().add("error", "Suburb not found").build();
 
     @Deprecated
-    public JsonObject calculatePostageCostJson(AuspostPostageGet auspostPostageGet) {
+    public JsonObject calculatePostageCostJson(AuspostPostageFeeGet auspostPostageGet) {
 
         Client client = ClientBuilder.newClient()
                 .register(new AuspostAuthFilter(API_KEY));
