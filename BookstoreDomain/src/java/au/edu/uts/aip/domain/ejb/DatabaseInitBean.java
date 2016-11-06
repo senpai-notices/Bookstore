@@ -1,5 +1,8 @@
 package au.edu.uts.aip.domain.ejb;
 
+/**
+ *The needed libraries
+ */
 import au.edu.uts.aip.domain.entity.Suburb;
 import au.edu.uts.aip.domain.entity.Book;
 import au.edu.uts.aip.domain.entity.BookSales;
@@ -25,6 +28,16 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.ParameterExpression;
 
+/**
+ * DatabaseInitBean is a JavaBean class to initialize the database setting up
+ * It is a controller class
+ * 
+ * It has two methods:
+ * init(): used to initialize the database setting
+ * cleanup(): used to stop the database connection and clean up useless data
+ * 
+ *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ */
 @Singleton
 @Startup
 public class DatabaseInitBean {
@@ -32,6 +45,10 @@ public class DatabaseInitBean {
     @PersistenceContext
     private EntityManager em;
 
+    /**
+    * init function is used to initialize and start the database connection and set it up
+    * return none
+    */
     @PostConstruct
     protected void init() {
         System.out.println("Init database");
@@ -203,6 +220,10 @@ public class DatabaseInitBean {
             System.out.println("Init database...Done");
     }
 
+    /**
+    * cleanup function is used to stop the connection of the database and clean up the data
+    * return none
+    */
     @PreDestroy
     protected void cleanup() {
         System.out.println("Cleaning database");

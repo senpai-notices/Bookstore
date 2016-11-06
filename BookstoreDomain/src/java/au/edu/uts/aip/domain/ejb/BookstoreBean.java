@@ -1,5 +1,8 @@
 package au.edu.uts.aip.domain.ejb;
 
+/**
+ *The needed libraries
+ */
 import au.edu.uts.aip.domain.entity.Book;
 import au.edu.uts.aip.domain.entity.BookSales;
 import au.edu.uts.aip.domain.entity.Role;
@@ -17,15 +20,35 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
+/**
+ * BookstoreBean is a JavaBean class to manage the books and sales on the website
+ * It is a bookstore controller class
+ * 
+ * It has four methods:
+ * getLatestBooks;
+ * getSingleBook;
+ * createBook;
+ * updateSale;
+ * getSales;
+ * 
+ *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ */
 @Stateless
 public class BookstoreBean implements BookstoreRemote {
 
     @PersistenceContext
     private EntityManager em;
 
+    /**
+    * the userBean is used to manage the users 
+    */
     @EJB
     private UserBean userBean;
-
+    
+    /**
+    * getLatestBooks function is used to get the list of books in the order of time
+    * return a list of Book objects
+    */
     @Override
     public List<BookDTO> getLatestBooks(int offset, int limit) {
         TypedQuery<Book> typedQuery = em.createNamedQuery("Book.getLatest", Book.class);
@@ -40,6 +63,10 @@ public class BookstoreBean implements BookstoreRemote {
         return booksDTO;
     }
 
+    /**
+    * getSingleBook function is used to get the information of the a specific book
+    * return BookDTO object
+    */
     @Override
     public BookDTO getSingleBook(String isbn10, String isbn13, String title) {
         TypedQuery<Book> typedQuery = em.createNamedQuery("Book.getSingle", Book.class);
@@ -50,6 +77,10 @@ public class BookstoreBean implements BookstoreRemote {
         return new BookDTO(bookEntity, bookEntity.getSales());
     }
 
+    /**
+    * createBook function is used to create a book record
+    * return a Book object
+    */
     public Book createBook(BookDTO bookDTO) {
         Book bookEntity = new Book();
         bookEntity.setIsbn10(bookDTO.getIsbn10());
@@ -65,6 +96,10 @@ public class BookstoreBean implements BookstoreRemote {
         return bookEntity;
     }
 
+    /**
+    * updateSale is used to update the sale information of the book
+    * return a BookDTO object
+    */
     @Override
     public BookDTO updateSale(String username, BookDTO salesData) {
         User seller = userBean.getUserEntity(username);
@@ -131,6 +166,10 @@ public class BookstoreBean implements BookstoreRemote {
         return new BookDTO(book, book.getSales());
     }
     
+    /**
+    * getSales function is used to get the list of the sales in the order of the time
+    * return a list of BookSaleDTO objects
+    */
     @Override
     public List<BookSaleDTO> getSales(List<Long> saleIds) {
         TypedQuery<BookSales> typedQuery = em.createNamedQuery("BookSales.findSalesByIds", BookSales.class);
