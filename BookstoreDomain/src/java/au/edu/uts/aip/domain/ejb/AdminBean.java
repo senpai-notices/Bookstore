@@ -1,5 +1,8 @@
 package au.edu.uts.aip.domain.ejb;
 
+/**
+ *The needed libraries
+ */
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.remote.AdminRemote;
@@ -8,15 +11,34 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+/**
+ * AdminBean is a JavaBean that is used to verify the user 
+ * and admin the administrator account
+ * 
+ * It has four methods.
+ * banAccount function is used to ban the administrator account
+ * unbanAccount function is used to unban the administrator account
+ * approveVerificationRequest function is used to approve the user's verification request
+ * rejectVerificationRequest function is used to reject the user's verification request
+ * 
+ *  @author team San Dang, Alex Tan, Xiaoyang Liu
+ */
 @Stateless
 public class AdminBean implements AdminRemote {
 
     @PersistenceContext
     private EntityManager em;
 
+    /**
+     * the userBean get user info
+     */
     @EJB
     private UserBean userBean;
 
+    /**
+    * rejectVerificationRequest function is used to reject the user's verification request
+    * return none
+    */
     @Override
     public void rejectVerificationRequest(String username) {
         User user = userBean.getUserEntity(username);
@@ -33,6 +55,10 @@ public class AdminBean implements AdminRemote {
         em.persist(user);
     }
 
+     /**
+     * approveVerificationRequest function is used to approve the user's verification request
+     * return void
+     */
     @Override
     public void approveVerificationRequest(String username) {
         User user = userBean.getUserEntity(username);
@@ -43,6 +69,10 @@ public class AdminBean implements AdminRemote {
         em.persist(user);
     }
 
+    /**
+     * This method is used to admin the administrator account
+     * banAccount function is used to ban the administrator account 
+     */
     @Override
     public void banAccount(String username) {
         User user = userBean.getUserEntity(username);
@@ -57,6 +87,10 @@ public class AdminBean implements AdminRemote {
         em.persist(user);
     }
 
+    /**
+     * This method is used to admin the administrator account
+     * unbanAccount function is used to unban the administrator account
+     */
     @Override
     public void unbanAccount(String username) {
         User user = userBean.getUserEntity(username);
