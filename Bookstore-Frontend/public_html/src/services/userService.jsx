@@ -38,14 +38,9 @@ class UserService {
 			url: config.getServerAddress() + '/user/',
 			method: 'post',
 			headers: {
-				'Content-Type' : 'application/x-www-form-urlencoded'
+				'Content-Type' : 'application/json'
 			},
-			data: {
-				username: account.username,
-				password: account.password,
-				email: account.email,
-				fullname: account.fullname
-			},
+			data: JSON.stringify(account),
 			crossOrigin: true
 		})
 	}
