@@ -27,7 +27,7 @@ import javax.ws.rs.core.SecurityContext;
 
 /**
  * REST endpoint for payments
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("payment")
 public class PaymentResource {

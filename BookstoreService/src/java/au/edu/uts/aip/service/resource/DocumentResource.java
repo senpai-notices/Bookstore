@@ -28,7 +28,7 @@ import javax.ws.rs.core.Response;
 /**
  * REST endpoint for document upload, retrieval and approval system
  *
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("document")
 public class DocumentResource {

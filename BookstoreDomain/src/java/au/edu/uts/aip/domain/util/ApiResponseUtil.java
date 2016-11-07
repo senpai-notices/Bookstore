@@ -7,7 +7,7 @@ import javax.json.JsonReader;
 
 /**
  *
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 public class ApiResponseUtil {
 

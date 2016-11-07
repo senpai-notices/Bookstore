@@ -10,7 +10,7 @@ import javax.json.JsonObjectBuilder;
 
 /**
  *
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 public class ValidationResult {
 

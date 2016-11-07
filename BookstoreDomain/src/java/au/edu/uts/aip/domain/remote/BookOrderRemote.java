@@ -8,7 +8,7 @@ import javax.ejb.Remote;
 /**
  * Contains methods for book orders.
  *
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Remote
 public interface BookOrderRemote {

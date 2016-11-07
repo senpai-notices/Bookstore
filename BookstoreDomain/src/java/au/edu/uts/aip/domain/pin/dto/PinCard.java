@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement(name = "card")
 public class PinCard implements Serializable {
