@@ -18,7 +18,7 @@ import javax.ws.rs.core.SecurityContext;
 
 /**
  * REST endpoint for orders
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("order")
 public class OrderResource {

@@ -7,7 +7,7 @@ import javax.ws.rs.ext.Provider;
 
 /**
  * Maps client error exceptions
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Provider
 public class ClientErrorExceptionMapper implements ExceptionMapper<ClientErrorException> {

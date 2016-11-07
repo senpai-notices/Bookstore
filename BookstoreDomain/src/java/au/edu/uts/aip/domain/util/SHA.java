@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 /**
  * Source: https://gist.github.com/avilches/750151
  *
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 public class SHA {
 

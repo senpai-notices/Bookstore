@@ -4,7 +4,7 @@ import javax.ejb.Remote;
 
 /**
  *
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Remote
 public interface EmailRemote {

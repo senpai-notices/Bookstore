@@ -21,7 +21,7 @@ import javax.ws.rs.core.SecurityContext;
 
 /**
  * REST endpoint for book methods
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("book")
 public class BookResource {

@@ -4,7 +4,7 @@ import javax.ejb.Remote;
 
 /**
  * Composes email bodies, including salutations, signatures and main content
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Remote
 public interface EmailBodyComposerRemote {

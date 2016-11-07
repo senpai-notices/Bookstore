@@ -20,7 +20,7 @@ import javax.ws.rs.core.SecurityContext;
 
 /**
  * REST endpoint for sending emails
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("email")
 public class EmailResource {
