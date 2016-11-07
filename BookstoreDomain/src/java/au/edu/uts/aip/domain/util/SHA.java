@@ -6,6 +6,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * SHA-256 encryption algorithm
+ * 
  * Source: https://gist.github.com/avilches/750151
  *
  * @author Son Dang, Alex Tan, Xiaoyang Liu
@@ -13,7 +15,7 @@ import java.util.logging.Logger;
 public class SHA {
 
     /**
-     *
+     * Encrypt a plaintext string.
      * @param data
      * @return
      */
@@ -29,7 +31,7 @@ public class SHA {
     }
 
     /**
-     *
+     * Convert bytes to a hexadecimal format.
      * @param bytes
      * @return
      */
