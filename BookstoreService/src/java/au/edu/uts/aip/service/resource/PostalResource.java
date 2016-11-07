@@ -17,7 +17,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 /**
- * REST endpoint for postal data access and postal fee calculation
+ * REST endpoint for postal data access and postal fee calculation. Fee calculation uses Auspost fee
+ * API.
+ *
  * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("postal")
@@ -29,6 +31,7 @@ public class PostalResource {
     private PostalDataRemote postalDataBean;
 
     /**
+     * Gets the name of the state that the postcode is in.
      *
      * @param postcodeString
      * @return
@@ -60,17 +63,19 @@ public class PostalResource {
     }
 
     /**
+     * Searches possible postcodes for a given search suburb search string. One suburb may belong to
+     * multiple postcodes.
      *
-     * @param suburb
-     * @return
+     * @param suburbSearchString
+     * @return A list of postcode matches
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("postcode/{suburb}")
-    public Response searchPostcodes(@PathParam("suburb") String suburb) {
+    public Response searchPostcodes(@PathParam("suburb") String suburbSearchString) {
 
-        SerialResponse response = postalDataBean.searchPostcodes(suburb);
+        SerialResponse response = postalDataBean.searchPostcodes(suburbSearchString);
         switch (response.getStatusCode()) {
             case 200:
                 return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
@@ -82,17 +87,17 @@ public class PostalResource {
     }
 
     /**
-     *
-     * @param suburb
-     * @return
+     * Searches possible postcodes for a given search suburb search string.
+     * @param suburbSearchString
+     * @return A list of suburb details that match.
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("suburb/detail/{suburb}")
-    public Response searchSuburbDetail(@PathParam("suburb") String suburb) {
+    public Response searchSuburbDetail(@PathParam("suburb") String suburbSearchString) {
 
-        SerialResponse response = postalDataBean.searchSuburbDetail(suburb);
+        SerialResponse response = postalDataBean.searchSuburbDetail(suburbSearchString);
         switch (response.getStatusCode()) {
             case 200:
                 return Response.ok(response.getBody(), MediaType.APPLICATION_JSON).build();
@@ -104,17 +109,17 @@ public class PostalResource {
     }
 
     /**
-     *
-     * @param quantity
-     * @param from
-     * @param to
-     * @param type
-     * @return
+     * Calculate postal fee.
+     * @param quantity Quantity of books.
+     * @param from Origin postcode.
+     * @param to Destination postcode.
+     * @param type Service type. Either "normal" or "express".
+     * @return The postal fee.
      */
     @POST
     @Path("calculate")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public double calculateShippingCost(@FormParam("quantity") int quantity,
+    public double calculatePostalFee(@FormParam("quantity") int quantity,
             @FormParam("from") int from,
             @FormParam("to") int to,
             @FormParam("type") String type) {

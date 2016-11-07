@@ -20,6 +20,7 @@ import javax.ws.rs.core.SecurityContext;
 
 /**
  * REST endpoint for sending emails
+ *
  * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("email")
@@ -93,6 +94,7 @@ public class EmailResource {
     }
 
     /**
+     * Send email to notify user that verification is rejected. A rejection reason is also included.
      *
      * @param username
      * @param reason
@@ -113,7 +115,7 @@ public class EmailResource {
     }
 
     /**
-     *
+     * Send email to notify user that verification is approved.
      * @param username
      * @return
      */
@@ -130,7 +132,7 @@ public class EmailResource {
     }
 
     /**
-     *
+     * Send email to notify user is banned.
      * @param username
      * @return
      */
@@ -147,7 +149,7 @@ public class EmailResource {
     }
 
     /**
-     *
+     * Send email to notify user is unbanned.
      * @param username
      * @return
      */
@@ -163,8 +165,9 @@ public class EmailResource {
 
     }
 
+    // TODO: the below methods.. use?
     /**
-     *
+     * 
      * @param orderId
      * @param username
      * @return
