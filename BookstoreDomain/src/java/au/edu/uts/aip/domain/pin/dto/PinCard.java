@@ -5,27 +5,61 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
+ * The PinCard class is model class that is used to access the card related information
+ * 
  * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement(name = "card")
 public class PinCard implements Serializable {
+    /**
+     * the number of the card
+     */
     private String number;
+    /**
+     * the expiry month of the card
+     */
     private String expiryMonth;
+    /**
+     * the expiry year of the card
+     */
     private String expiryYear;
+    /**
+     * the cvc of the card
+     */
     private String cvc;
+    /**
+     * the name on the card
+     */
     private String name;
+    /**
+     * the first line of the address
+     */
     private String addressLine1;
+    /**
+     * the second line of the address
+     */
     private String addressLine2;
+    /**
+     * the city of the address
+     */
     private String addressCity;
+    /**
+     * the postcode of the address
+     */
     private String addressPostcode;
+    /**
+     * the state of the address
+     */
     private String addressState;
+    /**
+     * the country of the address
+     */
     private String addressCountry;
 
     /**
-     *
-     * @return
-     */
+    * {@link PinCard#number}
+    * @return number
+    */
     @XmlElement(required = true)
     public String getNumber() {
         return number;
@@ -36,9 +70,9 @@ public class PinCard implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinCard#expiryMonth}
+    * @return expiryMonth
+    */
     @XmlElement(required = true, name = "expiry_month")
     public String getExpiryMonth() {
         return expiryMonth;
@@ -49,9 +83,9 @@ public class PinCard implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinCard#expiryYear}
+    * @return expiryYear
+    */
     @XmlElement(required = true, name = "expiry_year")
     public String getExpiryYear() {
         return expiryYear;
@@ -62,9 +96,9 @@ public class PinCard implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinCard#cvc}
+    * @return cvc
+    */
     @XmlElement(required = true)
     public String getCvc() {
         return cvc;
@@ -75,9 +109,9 @@ public class PinCard implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinCard#name}
+    * @return name
+    */
     @XmlElement(required = true)
     public String getName() {
         return name;
@@ -88,9 +122,9 @@ public class PinCard implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinCard#addressLine1}
+    * @return addressLine1
+    */
     @XmlElement(required = true, name = "address_line1")
     public String getAddressLine1() {
         return addressLine1;
@@ -101,9 +135,9 @@ public class PinCard implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinCard#addressLine2}
+    * @return addressLine2
+    */
     @XmlElement(required = false, name = "address_line2")
     public String getAddressLine2() {
         return addressLine2;
@@ -114,9 +148,9 @@ public class PinCard implements Serializable {
     }
     
     /**
-     *
-     * @return
-     */
+    * {@link PinCard#addressCity}
+    * @return addressCity
+    */
     @XmlElement(required = true, name = "address_city")
     public String getAddressCity() {
         return addressCity;
@@ -127,9 +161,9 @@ public class PinCard implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinCard#addressPostcode}
+    * @return addressPostcode
+    */
     @XmlElement(required = false, name = "address_postcode")
     public String getAddressPostcode() {
         return addressPostcode;
@@ -140,9 +174,9 @@ public class PinCard implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinCard#addressState}
+    * @return addressState
+    */
     @XmlElement(required = false, name = "address_state")
     public String getAddressState() {
         return addressState;
@@ -153,9 +187,9 @@ public class PinCard implements Serializable {
     }
     
     /**
-     *
-     * @return
-     */
+    * {@link PinCard#addressCountry}
+    * @return addressCountry
+    */
     @XmlElement(required = true, name = "address_country")
     public String getAddressCountry() {
         return addressCountry;
