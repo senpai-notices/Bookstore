@@ -78,7 +78,7 @@ public class EmailBodyComposerBean implements EmailBodyComposerRemote {
      */
     @Override
     public String onOrderCompleteBuyer(String name, String orderInfo) {
-        return format(name, format(BODY_ORDER_COMPLETE_BUYER, orderInfo));
+        return format(name, String.format(BODY_ORDER_COMPLETE_BUYER, orderInfo));
     }
 
     /**
@@ -86,7 +86,7 @@ public class EmailBodyComposerBean implements EmailBodyComposerRemote {
      */
     @Override
     public String onOrderCompleteSeller(String name, String orderInfo) {
-        return format(name, format(BODY_ORDER_COMPLETE_SELLER, orderInfo));
+        return format(name, String.format(BODY_ORDER_COMPLETE_SELLER, orderInfo));
     }
 
     /**
