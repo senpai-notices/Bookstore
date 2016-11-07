@@ -31,17 +31,7 @@ import javax.persistence.TypedQuery;
 import javax.validation.Valid;
 
 /**
- * UserBean is a JavaBean that is used to handle the user related operations
- *
- * It has 12 methods: getRole(): used to get the role object getUser(): used to get the user info
- * getUserEntity(): used to get a User Object createUser(): used to create a user getDocumentPath():
- * used to get the path of the document generateActivationToken(): used to generate the activation
- * Token generateResetPasswordToken(): used to get the reset password token resetPassword(): used to
- * reset the password activateAccount(): used to activate the account findUsers(): used to find all
- * the users updateVerificationDocuments(): used to update the verification documents
- * updateAddress(): used to update the address
- *
- * @author Son Dang, Alex Tan, Xiaoyang Liu
+ * @inheritDoc
  */
 @Stateless
 @LocalBean
@@ -51,8 +41,9 @@ public class UserBean implements UserRemote {
     private EntityManager em;
 
     /**
-     * the method is used to get the role object
+     * @inheritDoc
      */
+    @Override
     public Role getRole(String roleName) {
         TypedQuery<Role> typedQuery = em.createNamedQuery("Role.find", Role.class);
         typedQuery.setParameter("name", roleName);
@@ -60,7 +51,7 @@ public class UserBean implements UserRemote {
     }
 
     /**
-     * the method is used to get the information of the user return a UserDTO object
+     * @inheritDoc
      */
     @Override
     public UserDTO getUser(String username) {
@@ -69,8 +60,9 @@ public class UserBean implements UserRemote {
     }
 
     /**
-     * the method is used to get a relevant User object
+     * @inheritDoc
      */
+    @Override
     public User getUserEntity(String username) {
         try {
             TypedQuery<User> typedQuery = em.createNamedQuery("User.find", User.class);
@@ -82,9 +74,7 @@ public class UserBean implements UserRemote {
     }
 
     /**
-     *
-     * @param registraiontionDTO
-     * @return
+     * @inheritDoc
      */
     @Override
     public void createUser(@Valid RegistrationDTO registraiontionDTO) {
@@ -115,7 +105,7 @@ public class UserBean implements UserRemote {
     }
 
     /**
-     * the method is used to get the path of the documents return a DocumentsDTO object
+     * @inheritDoc
      */
     @Override
     public DocumentsDTO getDocumentPath(String username) {
@@ -127,7 +117,7 @@ public class UserBean implements UserRemote {
     }
 
     /**
-     * the method is used to generate the activation Token return a String value
+     * @inheritDoc
      */
     @Override
     public String generateActivationToken(String username) throws TokenGenerationException {
@@ -146,7 +136,7 @@ public class UserBean implements UserRemote {
     }
 
     /**
-     * the method is used to generate the reset password token return a String value
+     * @inheritDoc
      */
     @Override
     public String generateResetPasswordToken(String username, String email) throws TokenGenerationException {
@@ -166,7 +156,7 @@ public class UserBean implements UserRemote {
     }
 
     /**
-     * the method is used to activate a user account return none
+     * @inheritDoc
      */
     @Override
     public void activateAccount(String token, String username) throws ActivationException {
@@ -202,7 +192,7 @@ public class UserBean implements UserRemote {
     }
 
     /**
-     * the method is used to reset the password return none
+     * @inheritDoc
      */
     @Override
     public void resetPassword(@Valid ResetPasswordDTO resetPasswordDTO) {
@@ -235,7 +225,7 @@ public class UserBean implements UserRemote {
     }
 
     /**
-     * the method is used to find all the users
+     * @inheritDoc
      */
     @Override
     public List<UserDTO> findUsers(String[] rolesName, String username, String fullname, String email, int offset, int limit) {
@@ -261,7 +251,7 @@ public class UserBean implements UserRemote {
     }
 
     /**
-     * the method is used to update the verification documents
+     * @inheritDoc
      */
     @Override
     public void updateVerificationDocuments(String username, String documentType, String filePath) {
@@ -287,7 +277,7 @@ public class UserBean implements UserRemote {
     }
 
     /**
-     * the method is used to update the address information return none
+     * @inheritDoc
      */
     @Override
     public void updateAddress(AddressDTO addressDTO, String username) {
@@ -305,6 +295,9 @@ public class UserBean implements UserRemote {
         user.setAddress(addressEntity);
     }
 
+    /**
+     * @inheritDoc
+     */
     @Override
     public void updateRecipientToken(String username, String token) {
         User user = getUserEntity(username);

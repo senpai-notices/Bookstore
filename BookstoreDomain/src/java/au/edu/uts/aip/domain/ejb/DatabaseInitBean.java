@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,19 +23,16 @@ import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.ParameterExpression;
+import javax.persistence.TypedQuery;
 
 /**
- * DatabaseInitBean is a JavaBean class to initialize the database setting up
- * It is a controller class
- * 
- * It has two methods:
- * init(): used to initialize the database setting
- * cleanup(): used to stop the database connection and clean up useless data
- * 
- *  @author Son Dang, Alex Tan, Xiaoyang Liu
+ * DatabaseInitBean is a JavaBean class to initialize the database setting up It is a controller
+ * class
+ *
+ * It has two methods: init(): used to initialize the database setting cleanup(): used to stop the
+ * database connection and clean up useless data
+ *
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Singleton
 @Startup
@@ -44,9 +42,9 @@ public class DatabaseInitBean {
     private EntityManager em;
 
     /**
-    * init function is used to initialize and start the database connection and set it up
-    * return none
-    */
+     * init function is used to initialize and start the database connection and set it up return
+     * none
+     */
     @PostConstruct
     protected void init() {
         System.out.println("Init database");
@@ -55,20 +53,31 @@ public class DatabaseInitBean {
         RoleType[] allRoles = RoleType.class.getEnumConstants();
         HashMap<RoleType, Role> roleMap = new HashMap<>();
         for (RoleType roleType : allRoles) {
-            Role role = new Role();
-            role.setRoleName(roleType.toString());
-            em.persist(role);
-            roleMap.put(roleType, role);
+            TypedQuery<Role> tq = em.createNamedQuery("Role.find", Role.class);
+            tq.setParameter("name", roleType.toString());
+            List<Role> roles = tq.getResultList();
+            if (roles.size() > 0){
+                roleMap.put(roleType, roles.get(0));
+            } else {
+                Role role = new Role();
+                role.setRoleName(roleType.toString());
+                em.persist(role);
+                roleMap.put(roleType, role);
+            }
         }
 
         System.out.println("Setting up roles...Done");
 
         System.out.println("Setting up views");
-        Query q = em.createNativeQuery("create view jdbcrealm_user (username, password) as select username, password from Bookstore_User");
-        q.executeUpdate();
-        q = em.createNativeQuery("create view jdbcrealm_group (username, groupname)"
-                + "as select u.username, r.roleName from Bookstore_User u left join Bookstore_Role r on u.role_id = r.id");
-        q.executeUpdate();
+        try{
+            Query q = em.createNativeQuery("create view jdbcrealm_user (username, password) as select username, password from Bookstore_User");
+            q.executeUpdate();
+            q = em.createNativeQuery("create view jdbcrealm_group (username, groupname)"
+                    + "as select u.username, r.roleName from Bookstore_User u left join Bookstore_Role r on u.role_id = r.id");
+            q.executeUpdate();
+        } catch (Throwable ex){
+            
+        }
         System.out.println("Setting up views...Done");
 
         System.out.println("Creating admin account");
@@ -80,7 +89,7 @@ public class DatabaseInitBean {
         adminUser.setEmail("admin@test.com");
         adminUser.setRole(roleMap.get(RoleType.ADMIN));
         adminUser.setRecipientToken("rp_Y9rAv-gcPzXkeKkNfuBXUQ");
-        
+
         Address adminAddress = new Address();
         adminAddress.setAddressLine1("123 Fake street");
         adminAddress.setAddressPostcode(2192);
@@ -88,14 +97,14 @@ public class DatabaseInitBean {
         adminAddress.setAddressCountry("Australia");
         adminAddress.setAddressCity("Sydney");
         em.persist(adminAddress);
-        
+
         adminUser.setAddress(adminAddress);
-        
+
         em.persist(adminUser);
         System.out.println("Creating admin account...Done");
 
         System.out.println("Creating sample user account");
-        
+
         User myUser = new User();
         myUser.setUsername("sondang2412");
         myUser.setFullname("Dang Cuu Son");
@@ -103,7 +112,7 @@ public class DatabaseInitBean {
         myUser.setPassword(SHA.hash256("qwerty"));
         myUser.setRole(roleMap.get(RoleType.USER));
         myUser.setRecipientToken("rp_PxxcoyvLclg-j9cTwPG9YQ");
-        
+
         Address myAddress = new Address();
         myAddress.setAddressLine1("321 Real Street");
         myAddress.setAddressPostcode(2192);
@@ -111,10 +120,10 @@ public class DatabaseInitBean {
         myAddress.setAddressCountry("Australia");
         myAddress.setAddressCity("Sydney");
         em.persist(myAddress);
-        
+
         myUser.setAddress(myAddress);
         em.persist(myUser);
-        
+
         System.out.println("Creating sample user account...Done");
 
         System.out.println("Importing sample books data");
@@ -150,7 +159,7 @@ public class DatabaseInitBean {
                     adminSales.setPrice(brandNewPrice);
                     adminSales.setCondition("Brand new");
                     adminSales.setQuantity(r.nextInt(20) + 1);
-                    
+
                     em.persist(adminSales);
 
                     book.getSales().add(adminSales);
@@ -168,45 +177,38 @@ public class DatabaseInitBean {
             Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-//        CriteriaBuilder qb = em.getCriteriaBuilder();
-//        CriteriaQuery<Long> cq = qb.createQuery(Long.class);
-//        cq.select(qb.count(cq.from(Suburb.class)));
-//        Long count = em.createQuery(cq).getSingleResult();
-//        if (count != 15418) {
+        System.out.println("Importing suburbs data");
+        String suburbCsvFilePath = this.getClass().getResource("/suburbs-development.csv").getFile();
 
-            System.out.println("Importing suburbs data");
-            String suburbCsvFilePath = this.getClass().getResource("/suburbs-development.csv").getFile();
+        try (BufferedReader br = new BufferedReader(new FileReader(suburbCsvFilePath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
 
-            try (BufferedReader br = new BufferedReader(new FileReader(suburbCsvFilePath))) {
-                String line;
-                while ((line = br.readLine()) != null) {
+                try {
+                    String[] data = line.split(",");
 
-                    try {
-                        String[] data = line.split(",");
+                    Suburb suburb = new Suburb();
+                    suburb.setName(data[0]);
+                    suburb.setStateName(data[1]);
+                    suburb.setPostcode(Integer.parseInt(data[2]));
 
-                        Suburb suburb = new Suburb();
-                        suburb.setName(data[0]);
-                        suburb.setStateName(data[1]);
-                        suburb.setPostcode(Integer.parseInt(data[2]));
+                    em.persist(suburb);
 
-                        em.persist(suburb);
-
-                    } catch (NumberFormatException ex) {
-                        Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-
+                } catch (NumberFormatException ex) {
+                    Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } catch (IOException ex) {
-                Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
+
             }
-//        }
-            System.out.println("Init database...Done");
+        } catch (IOException ex) {
+            Logger.getLogger(DatabaseInitBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.println("Init database...Done");
     }
 
     /**
-    * cleanup function is used to stop the connection of the database and clean up the data
-    * return none
-    */
+     * cleanup function is used to stop the connection of the database and clean up the data return
+     * none
+     */
     @PreDestroy
     protected void cleanup() {
         System.out.println("Cleaning database");
@@ -215,16 +217,8 @@ public class DatabaseInitBean {
         q.executeUpdate();
         q = em.createNativeQuery("drop view jdbcrealm_user");
         q.executeUpdate();
-
-//        CriteriaBuilder qb = em.getCriteriaBuilder();
-//        CriteriaQuery<Long> cq = qb.createQuery(Long.class);
-//        cq.select(qb.count(cq.from(Suburb.class)));
-//        Long count = em.createQuery(cq).getSingleResult();
-//        if (count != 15418) {
-            q = em.createNativeQuery("delete from suburb");
-            q.executeUpdate();
-//        }
-        
+        q = em.createNativeQuery("delete from suburb");
+        q.executeUpdate();
         q = em.createNativeQuery("delete from BookOrderLine");
         q.executeUpdate();
         q = em.createNativeQuery("delete from BookOrder");

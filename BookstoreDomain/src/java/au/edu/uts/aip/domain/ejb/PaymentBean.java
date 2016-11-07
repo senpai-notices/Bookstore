@@ -1,14 +1,5 @@
 package au.edu.uts.aip.domain.ejb;
 
-/**
- * the needed library
- */
-import au.edu.uts.aip.domain.dto.CheckoutDTO;
-import au.edu.uts.aip.domain.dto.CheckoutItemDTO;
-import au.edu.uts.aip.domain.entity.BookOrder;
-import au.edu.uts.aip.domain.entity.BookOrderLine;
-import au.edu.uts.aip.domain.entity.BookSales;
-import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.remote.PaymentRemote;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
@@ -21,19 +12,9 @@ import au.edu.uts.aip.domain.pin.filter.PinResponseLoggingFilter;
 import au.edu.uts.aip.domain.pin.util.PinResponseUtil;
 import au.edu.uts.aip.domain.util.ApiResponseUtil;
 import au.edu.uts.aip.domain.validation.ValidationResult;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.stream.Collectors;
-import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.json.JsonObject;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-import javax.validation.ValidationException;
-import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;

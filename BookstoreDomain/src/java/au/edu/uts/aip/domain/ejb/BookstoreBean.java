@@ -8,9 +8,7 @@ import au.edu.uts.aip.domain.dto.BookDTO;
 import au.edu.uts.aip.domain.dto.BookSaleDTO;
 import au.edu.uts.aip.domain.remote.BookstoreRemote;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -18,17 +16,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 /**
- * BookstoreBean is a JavaBean class to manage the books and sales on the website
- * It is a bookstore controller class
- * 
- * It has four methods:
- * getLatestBooks;
- * getSingleBook;
- * createBook;
- * updateSale;
- * getSales;
- * 
- *  @author Son Dang, Alex Tan, Xiaoyang Liu
+ * @inheritDoc
  */
 @Stateless
 public class BookstoreBean implements BookstoreRemote {
@@ -36,16 +24,12 @@ public class BookstoreBean implements BookstoreRemote {
     @PersistenceContext
     private EntityManager em;
 
-    /**
-    * the userBean is used to manage the users 
-    */
     @EJB
     private UserBean userBean;
-    
+
     /**
-    * getLatestBooks function is used to get the list of books in the order of time
-    * return a list of Book objects
-    */
+     * @inheritDoc
+     */
     @Override
     public List<BookDTO> getLatestBooks(int offset, int limit) {
         TypedQuery<Book> typedQuery = em.createNamedQuery("Book.getLatest", Book.class);
@@ -53,17 +37,16 @@ public class BookstoreBean implements BookstoreRemote {
         typedQuery.setMaxResults(limit);
         List<Book> booksEntity = typedQuery.getResultList();
         List<BookDTO> booksDTO = new ArrayList<>();
-        
-        for(Book bookEntity: booksEntity){
+
+        for (Book bookEntity : booksEntity) {
             booksDTO.add(new BookDTO(bookEntity));
         }
         return booksDTO;
     }
 
     /**
-    * getSingleBook function is used to get the information of the a specific book
-    * return BookDTO object
-    */
+     * @inheritDoc
+     */
     @Override
     public BookDTO getSingleBook(String isbn10, String isbn13, String title) {
         TypedQuery<Book> typedQuery = em.createNamedQuery("Book.getSingle", Book.class);
@@ -75,9 +58,9 @@ public class BookstoreBean implements BookstoreRemote {
     }
 
     /**
-    * createBook function is used to create a book record
-    * return a Book object
-    */
+     * @inheritDoc
+     */
+    @Override
     public Book createBook(BookDTO bookDTO) {
         Book bookEntity = new Book();
         bookEntity.setIsbn10(bookDTO.getIsbn10());
@@ -94,9 +77,8 @@ public class BookstoreBean implements BookstoreRemote {
     }
 
     /**
-    * updateSale is used to update the sale information of the book
-    * return a BookDTO object
-    */
+     * @inheritDoc
+     */
     @Override
     public BookDTO updateSale(String username, BookDTO salesData) {
         User seller = userBean.getUserEntity(username);
@@ -112,16 +94,16 @@ public class BookstoreBean implements BookstoreRemote {
         } else {
             book = em.find(Book.class, salesData.getId());
         }
-        
+
         TypedQuery<BookSales> typedQuery
                 = em.createNamedQuery("BookSales.findSales", BookSales.class);
         typedQuery.setParameter("bookId", book.getId());
         typedQuery.setParameter("sellerId", seller.getUsername());
         List<BookSales> existingSales = typedQuery.getResultList();
-        
+
         // add new sales
-        for (BookSaleDTO saleData: salesData.getSales()){
-            if (saleData.getId() == 0){
+        for (BookSaleDTO saleData : salesData.getSales()) {
+            if (saleData.getId() == 0) {
                 BookSales newSale = new BookSales();
                 newSale.setBook(book);
                 newSale.setSeller(seller);
@@ -134,25 +116,25 @@ public class BookstoreBean implements BookstoreRemote {
                 em.persist(newSale);
             }
         }
-        
+
         // update & remove old sales
-        for(BookSales saleEntity: existingSales){
+        for (BookSales saleEntity : existingSales) {
             BookSaleDTO matched = null;
-            for (BookSaleDTO saleDTO: salesData.getSales()){
-                if (saleEntity.getSalesId() == saleDTO.getId()){
+            for (BookSaleDTO saleDTO : salesData.getSales()) {
+                if (saleEntity.getSalesId() == saleDTO.getId()) {
                     matched = saleDTO;
                     break;
                 }
             }
-            
+
             // update
-            if (matched != null){
+            if (matched != null) {
                 salesData.getSales().remove(matched);
                 saleEntity.setCondition(matched.getBookCondition());
                 saleEntity.setPrice(matched.getPrice());
                 saleEntity.setQuantity(matched.getQuantity());
                 em.persist(saleEntity);
-                
+
             } else { // remove
                 seller.getSellingBooks().remove(saleEntity);
                 book.getSales().remove(saleEntity);
@@ -162,23 +144,22 @@ public class BookstoreBean implements BookstoreRemote {
 
         return new BookDTO(book, book.getSales());
     }
-    
+
     /**
-    * getSales function is used to get the list of the sales in the order of the time
-    * return a list of BookSaleDTO objects
-    */
+     * @inheritDoc
+     */
     @Override
     public List<BookSaleDTO> getSales(List<Long> saleIds) {
         TypedQuery<BookSales> typedQuery = em.createNamedQuery("BookSales.findSalesByIds", BookSales.class);
         typedQuery.setParameter("saleIds", saleIds);
         List<BookSales> bookSalesEntity = typedQuery.getResultList();
-        
+
         List<BookSaleDTO> bookSalesDTO = new ArrayList<>();
         bookSalesEntity.stream().forEach(saleEntity -> {
             saleIds.remove(saleEntity.getSalesId());
             bookSalesDTO.add(new BookSaleDTO(saleEntity));
         });
-        
+
         return bookSalesDTO;
     }
 }

@@ -18,6 +18,10 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
+/**
+ * REST endpoint for sending emails
+ * @author x
+ */
 @Path("email")
 public class EmailResource {
 
@@ -56,10 +60,7 @@ public class EmailResource {
             emailBean.sendEmail(user.getEmail(), "Account activation", body);
 
             return Response.ok().build();
-        } //        catch (MessagingException ex) {
-        //            return Response.status(Response.Status.BAD_REQUEST).entity("Email cannot be sent").build();
-        //        } 
-        catch (TokenGenerationException ex) {
+        } catch (TokenGenerationException ex) {
             return Response.status(Response.Status.BAD_REQUEST).entity(ex.getMessage()).build();
         }
     }
@@ -91,6 +92,12 @@ public class EmailResource {
         }
     }
 
+    /**
+     *
+     * @param username
+     * @param reason
+     * @return
+     */
     @POST
     @RolesAllowed({"ADMIN"})
     @Path("reject")
@@ -105,6 +112,11 @@ public class EmailResource {
 
     }
 
+    /**
+     *
+     * @param username
+     * @return
+     */
     @POST
     @RolesAllowed({"ADMIN"})
     @Path("approve/{username}")
@@ -117,6 +129,11 @@ public class EmailResource {
 
     }
 
+    /**
+     *
+     * @param username
+     * @return
+     */
     @POST
     @RolesAllowed({"ADMIN"})
     @Path("ban/{username}")
@@ -129,6 +146,11 @@ public class EmailResource {
 
     }
 
+    /**
+     *
+     * @param username
+     * @return
+     */
     @POST
     @RolesAllowed({"ADMIN"})
     @Path("unban/{username}")
@@ -141,6 +163,12 @@ public class EmailResource {
 
     }
 
+    /**
+     *
+     * @param orderId
+     * @param username
+     * @return
+     */
     @POST
     @RolesAllowed({"VERIFIED"})
     @Path("order/{order-id}/fail")
@@ -153,6 +181,12 @@ public class EmailResource {
 
     }
 
+    /**
+     *
+     * @param orderId
+     * @param username
+     * @return
+     */
     @POST
     @RolesAllowed({"VERIFIED"})
     @Path("order/{order-id}/pending")
@@ -165,6 +199,11 @@ public class EmailResource {
 
     }
 
+    /**
+     *
+     * @param orderId
+     * @return
+     */
     @POST
     @RolesAllowed({"VERIFIED"})
     @Path("order/{order-id}/complete")

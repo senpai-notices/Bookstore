@@ -14,11 +14,11 @@ import javax.json.JsonObject;
 public class SerialResponse implements Serializable {
 
     /**
-     * the Json object
+     * the Json object of the response body
      */
     private JsonObject body;
     /**
-     * the code of the status
+     * the status code of the response
      */
     private int statusCode;
 

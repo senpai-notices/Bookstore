@@ -9,11 +9,14 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.ext.Provider;
 
 /**
+ * Adds headers to responses.
  *
- * @author Joel Pearson (http://stackoverflow.com/questions/23450494/)
+ * Source: Joel Pearson (http://stackoverflow.com/questions/23450494/)
+ *
+ * @author x
  */
 @Provider
-public class ResponserHeaderFilter implements ContainerResponseFilter {
+public class ResponseHeaderFilter implements ContainerResponseFilter {
 
     @Context
     private ServletContext servletContext;

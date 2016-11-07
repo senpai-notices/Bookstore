@@ -16,6 +16,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+/**
+ * REST endpoint for postal data access and postal fee calculation
+ * @author x
+ */
 @Path("postal")
 public class PostalResource {
 
@@ -24,27 +28,11 @@ public class PostalResource {
     @EJB
     private PostalDataRemote postalDataBean;
 
-    // <editor-fold defaultstate="collapsed" desc="test methods for postal fee API">
-    @Deprecated
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("calculate_reg_test")
-    public Response calculateRegularTest() {
-        postalFeeBean.calculatePostageCost(32, 800, 9999, "AUS_PARCEL_REGULAR");
-        return Response.ok().build();
-    }
-
-    @Deprecated
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("calculate_exp_test")
-    public Response calculateExpressTest() {
-        postalFeeBean.calculatePostageCost(32, 800, 9999, "AUS_PARCEL_EXPRESS");
-        return Response.ok().build();
-    }
-    
-    // </editor-fold>
-
+    /**
+     *
+     * @param postcodeString
+     * @return
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
@@ -71,6 +59,11 @@ public class PostalResource {
         }
     }
 
+    /**
+     *
+     * @param suburb
+     * @return
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
@@ -88,6 +81,11 @@ public class PostalResource {
         }
     }
 
+    /**
+     *
+     * @param suburb
+     * @return
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
@@ -104,29 +102,37 @@ public class PostalResource {
                 return Response.status(500).build();
         }
     }
-    
+
+    /**
+     *
+     * @param quantity
+     * @param from
+     * @param to
+     * @param type
+     * @return
+     */
     @POST
     @Path("calculate")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public double calculateShippingCost(@FormParam("quantity") int quantity,
-                                        @FormParam("from") int from,
-                                        @FormParam("to") int to,
-                                        @FormParam("type") String type) {
+            @FormParam("from") int from,
+            @FormParam("to") int to,
+            @FormParam("type") String type) {
         String serviceCode = "";
-        if (type.equals("normal")){
+        if (type.equals("normal")) {
             serviceCode = "AUS_PARCEL_REGULAR";
-        } else if (type.equals("express")){
+        } else if (type.equals("express")) {
             serviceCode = "AUS_PARCEL_EXPRESS";
         } else {
             throw new RuntimeException("Invalid service code");
         }
-        
+
         double cost = 0;
-        while(quantity > 0){
+        while (quantity > 0) {
             cost += postalFeeBean.calculatePostageCost(Math.max(quantity, 30), from, to, serviceCode);
             quantity -= 30;
         }
-        
+
         return cost;
     }
 }
