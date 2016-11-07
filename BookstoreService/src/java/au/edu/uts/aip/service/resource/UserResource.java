@@ -26,6 +26,10 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
+/**
+ * REST endpoint for user accounts and administration
+ * @author x
+ */
 @Path("user")
 @RequestScoped
 public class UserResource {
@@ -70,6 +74,11 @@ public class UserResource {
         return Response.ok().build();
     }
     
+    /**
+     *
+     * @param addressDTO
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -113,6 +122,11 @@ public class UserResource {
         return Response.ok().build();
     }
     
+    /**
+     *
+     * @param token
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Path("recipientToken")
@@ -123,6 +137,10 @@ public class UserResource {
         return Response.ok().build();
     }
     
+    /**
+     *
+     * @return
+     */
     @GET
     @Path("orders")
     public Response getOrders(){
@@ -158,6 +176,11 @@ public class UserResource {
                 .build();
     }
 
+    /**
+     *
+     * @param username
+     * @return
+     */
     @POST
     @Path("ban/{username}")
     @RolesAllowed({"ADMIN"})
@@ -166,6 +189,11 @@ public class UserResource {
         return Response.ok().build();
     }
 
+    /**
+     *
+     * @param username
+     * @return
+     */
     @POST
     @Path("unban/{username}")
     @RolesAllowed({"ADMIN"})

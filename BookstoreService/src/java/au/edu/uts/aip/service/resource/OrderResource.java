@@ -16,6 +16,10 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
+/**
+ * REST endpoint for orders
+ * @author x
+ */
 @Path("order")
 public class OrderResource {
    
@@ -25,6 +29,11 @@ public class OrderResource {
     @EJB
     private BookOrderRemote bookOrderBean;
     
+    /**
+     *
+     * @param checkoutDTO
+     * @return
+     */
     @POST
     @Path("checkout")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -35,6 +44,10 @@ public class OrderResource {
         return Response.ok().build();
     }
     
+    /**
+     *
+     * @return
+     */
     @GET
     @RolesAllowed({"USER", "VERIFIYING USER", "VERIFIED USER", "ADMIN"})
     @Produces(MediaType.APPLICATION_JSON)

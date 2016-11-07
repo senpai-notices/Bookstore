@@ -25,6 +25,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 
+/**
+ * REST endpoint for document upload, retrieval and approval system
+ *
+ * @author x
+ */
 @Path("document")
 public class DocumentResource {
 
@@ -42,6 +47,11 @@ public class DocumentResource {
 
     private static final Object syncRoot = new Object();
 
+    /**
+     *
+     * @param documentType
+     * @return
+     */
     @POST
     @RolesAllowed({"USER"})
     @Path("{documentType}")
@@ -82,12 +92,18 @@ public class DocumentResource {
         return Response.status(Response.Status.OK).build();
     }
 
+    /**
+     *
+     * @param username
+     * @param documentType
+     * @return
+     */
     @GET
     @RolesAllowed({"ADMIN"})
     @Path("{username}/{documentType}")
     @Produces({"application/pdf", "image/png", "image/jpeg"})
     public Response get(@PathParam("username") String username,
-                        @PathParam("documentType") String documentType) {
+            @PathParam("documentType") String documentType) {
         DocumentsDTO documents = userBean.getDocumentPath(username);
         File returnFile;
         switch (documentType) {
@@ -114,6 +130,11 @@ public class DocumentResource {
         return Response.ok((Object) returnFile, type).build();
     }
 
+    /**
+     *
+     * @param username
+     * @return
+     */
     @POST
     @RolesAllowed({"ADMIN"})
     @Path("reject/{username}")
@@ -121,15 +142,20 @@ public class DocumentResource {
         DocumentsDTO documentsDTO = userBean.getDocumentPath(username);
         File idFile = new File(documentsDTO.getIdVerificationPath());
         File residentialFile = new File(documentsDTO.getResidentialVerificationPath());
-        
+
         adminBean.rejectVerificationRequest(username);
-        
+
         idFile.delete();
         residentialFile.delete();
-        
+
         return Response.ok().build();
     }
 
+    /**
+     *
+     * @param username
+     * @return
+     */
     @POST
     @RolesAllowed({"ADMIN"})
     @Path("approve/{username}")

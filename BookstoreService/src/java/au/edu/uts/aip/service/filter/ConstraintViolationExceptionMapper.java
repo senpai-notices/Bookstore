@@ -11,6 +11,10 @@ import javax.validation.ConstraintViolationException;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 
+/**
+ * Maps constraint violation exceptions
+ * @author x
+ */
 @Provider
 @Priority(Priorities.ENTITY_CODER)
 public class ConstraintViolationExceptionMapper implements ExceptionMapper<ConstraintViolationException> {

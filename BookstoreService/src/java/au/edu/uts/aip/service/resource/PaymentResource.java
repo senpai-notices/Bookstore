@@ -1,6 +1,5 @@
 package au.edu.uts.aip.service.resource;
 
-import au.edu.uts.aip.domain.dto.CheckoutDTO;
 import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.response.SerialResponse;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
@@ -26,6 +25,10 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
+/**
+ * REST endpoint for payments
+ * @author x
+ */
 @Path("payment")
 public class PaymentResource {
 
@@ -38,6 +41,11 @@ public class PaymentResource {
     @Context
     private SecurityContext securityContext;
     
+    /**
+     *
+     * @param pinCustomerPost
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -57,6 +65,11 @@ public class PaymentResource {
         }
     }
 
+    /**
+     *
+     * @param pinChargePost
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -76,6 +89,11 @@ public class PaymentResource {
         }
     }
 
+    /**
+     *
+     * @param pinRecipientPost
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -99,6 +117,11 @@ public class PaymentResource {
         }
     }
 
+    /**
+     *
+     * @param recipientToken
+     * @return
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
@@ -110,6 +133,12 @@ public class PaymentResource {
         return Response.ok(recipient, MediaType.APPLICATION_JSON).build();
     }
 
+    /**
+     *
+     * @param recipientToken
+     * @param pinRecipientPut
+     * @return
+     */
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -131,6 +160,11 @@ public class PaymentResource {
         }
     }
 
+    /**
+     *
+     * @param pinTransferPost
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -149,103 +183,4 @@ public class PaymentResource {
                 return Response.status(400).build();
         }
     }
-
-    // <editor-fold defaultstate="collapsed" desc="unused">
-    /*
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
-    @Path("charge/{charge_token}")
-    public Response fetchChargeDetail(@PathParam("charge_token") String chargeToken) {
-        
-        Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
-               
-        Response response = client.target(BASE_URL + "/charges")
-                .path("{charge_token}")
-                .resolveTemplate("charge_token", chargeToken)
-                .request()
-                .get();               
-    
-        client.close();
-        return response;
-    }
-    
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
-    @Path("customer/{customer_token}")
-    public Response fetchCustomerDetails(@PathParam("customer_token") String customerToken) {
-        
-        Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
-               
-        Response response = client.target(BASE_URL + "/customers")
-                .path("{customer_token}")
-                .resolveTemplate("customer_token", customerToken)
-                .request()
-                .get();               
-    
-        client.close();
-        return response;
-    }
-    
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
-    @Path("customer/{customer_token}/charges")
-    public Response listCharges(@PathParam("customer_token") String customerToken) {
-        
-        Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
-               
-        Response response = client.target(BASE_URL + "/customers")
-                .path("{customer_token}/charges")
-                .resolveTemplate("customer_token", customerToken)
-                .request()
-                .get();               
-    
-        client.close();
-        return response;
-    }
-    
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"USER", "ADMIN"})
-    @Path("customer/{customer_token}/cards")
-    public Response listCards(@PathParam("customer_token") String customerToken) {
-        
-        Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
-               
-        Response response = client.target(BASE_URL + "/customers")
-                .path("{customer_token}/cards")
-                .resolveTemplate("customer_token", customerToken)
-                .request()
-                .get();               
-    
-        client.close();
-        return response;
-    }
-    
-    @DELETE
-    @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed({"ADMIN"})
-    @Path("customer/{customer_token}")
-    public Response removeCustomer(@PathParam("customer_token") String customerToken) {
-        
-        Client client = ClientBuilder.newClient()
-                .register(new BasicAuthFilter(API_KEY_SECRET, PASSWORD));
-               
-        Response response = client.target(BASE_URL + "/customers")
-                .path("{customer_token}")
-                .resolveTemplate("customer_token", customerToken)
-                .request()
-                .delete();               
-    
-        client.close();
-        return response;
-    }
-     */
-    // </editor-fold>
 }
