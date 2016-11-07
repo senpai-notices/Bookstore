@@ -6,29 +6,30 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 /**
+ * The Class is used to register new accounts
  * 
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 public class RegistrationDTO implements Serializable {
 
     /**
-     *
+     * the username of the new account
      */
     private String username;
     /**
-     *
+     * the fullname of the user
      */
     private String fullname;
     /**
-     *
+     * the email of the account
      */
     private String email;
     /**
-     *
+     * the password of the account
      */
     private String password;
     /**
-     *
+     * the password confirmation
      */
     private String confirmPassword;
 
