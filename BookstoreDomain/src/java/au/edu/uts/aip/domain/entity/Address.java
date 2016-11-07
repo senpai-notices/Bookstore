@@ -102,7 +102,9 @@ public class Address implements Serializable {
     }
 
     /**
-     * {@link Address#addressPostcode} the size must be >=800 and <=9999
+     * {@link Address#addressPostcode}
+     *
+     * the size must be >=800 and <=9999
      */
     @Min(value = 800, message = "Please enter a valid postcode")
     @Max(value = 9999, message = "Please enter a valid postcode")

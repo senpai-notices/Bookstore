@@ -38,7 +38,7 @@ public class EmailResource {
 
     @EJB
     private EmailBodyComposerRemote emailBodyComposerBean;
-    
+
     @EJB
     private BookOrderRemote bookOrderBean;
 
@@ -92,6 +92,7 @@ public class EmailResource {
                     user.getFullname(),
                     servletContext.getInitParameter("clientURL") + "/?token=" + token
                     + "&username=" + user.getUsername() + "&action=reset");
+
             emailBean.sendEmail(user.getEmail(), "Password reset", body);
 
             return Response.ok().build();
@@ -123,6 +124,7 @@ public class EmailResource {
 
     /**
      * Send email to notify user that verification is approved.
+     *
      * @param username
      * @return
      */
@@ -140,6 +142,7 @@ public class EmailResource {
 
     /**
      * Send email to notify user is banned.
+     *
      * @param username
      * @return
      */
@@ -157,6 +160,7 @@ public class EmailResource {
 
     /**
      * Send email to notify user is unbanned.
+     *
      * @param username
      * @return
      */
@@ -174,7 +178,7 @@ public class EmailResource {
 
     // TODO: the below methods.. use?
     /**
-     * 
+     *
      * @param orderId
      * @param username
      * @return
@@ -217,10 +221,10 @@ public class EmailResource {
     @POST
     @RolesAllowed({"USER", "VERIFYING USER", "VERIFIED USER"})
     @Path("order/{order-id}/complete")
-    public Response orderComplete(@PathParam("order-id") long orderId/*, String usernameBuyer, String usernameSeller*/) {
+    public Response orderComplete(@PathParam("order-id") long orderId) {
         String usernameBuyer = this.securityContext.getUserPrincipal().getName();
         String usernameSeller = "";
-        
+
         // Email the buyer
         UserDTO buyer = userBean.getUser(usernameBuyer);
         String buyerEmailBody = emailBodyComposerBean.onOrderCompleteBuyer(buyer.getFullname(), orderId + "");
@@ -229,13 +233,13 @@ public class EmailResource {
         List<UserDTO> sellerList = new ArrayList<>();
         BookOrderDTO orderDTO = bookOrderBean.getOrder(orderId);
         orderDTO.getLines().stream().forEach(orderLineDTO -> {
-            if (!sellerList.contains(orderLineDTO.getSeller())){
+            if (!sellerList.contains(orderLineDTO.getSeller())) {
                 sellerList.add(orderLineDTO.getSeller());
             }
         });
-        
+
         // Email the seller
-        sellerList.stream().forEach(seller ->{
+        sellerList.stream().forEach(seller -> {
             String sellerEmailBody = emailBodyComposerBean.onOrderCompleteSeller(seller.getFullname(), orderId + "");
             emailBean.sendEmail(buyer.getEmail(), "Order complete", sellerEmailBody);
         });

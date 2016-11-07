@@ -1,11 +1,23 @@
 package au.edu.uts.aip.domain.exception;
 
+/**
+ * The TokenGenerationException is used to handle token exception 
+ * @author tanman
+ */
 public class TokenGenerationException extends Exception {
-    public TokenGenerationException(){
-        
+
+    /**
+     * the constructor of the class
+     */
+    public TokenGenerationException() {
+
     }
-    
-    public TokenGenerationException(String message){
+
+    /**
+     *
+     * @param message
+     */
+    public TokenGenerationException(String message) {
         super(message);
     }
 }
