@@ -46,7 +46,7 @@ public class Category implements Serializable {
     }
 
     /**
-     * {@link Category#categoryName} data type: String return a String value
+     * {@link Category#categoryName}
      */
     public String getCategoryName() {
         return categoryName;

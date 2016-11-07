@@ -9,7 +9,8 @@ import javax.json.JsonObject;
 import javax.json.JsonObjectBuilder;
 
 /**
- *
+ * Container for form error messages
+ * 
  * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 public class ValidationResult {
@@ -26,7 +27,7 @@ public class ValidationResult {
     }
 
     /**
-     *
+     * Get error messages that apply to the whole form.
      * @return
      */
     public ArrayList<String> getErrorMessages() {
@@ -34,7 +35,7 @@ public class ValidationResult {
     }
 
     /**
-     *
+     * Get error messages that apply to particular fields of a form.
      * @return
      */
     public HashMap<String, String> getFormErrors() {
@@ -42,7 +43,7 @@ public class ValidationResult {
     }
 
     /**
-     *
+     * Add an error for the whole form.
      * @param error
      */
     public void addError(String error) {
@@ -50,7 +51,7 @@ public class ValidationResult {
     }
 
     /**
-     *
+     * Add an error that applies to a certain form field.
      * @param formName
      * @param error
      */
@@ -59,7 +60,7 @@ public class ValidationResult {
     }
 
     /**
-     *
+     * Convert errors and formErrors into a JsonObject.
      * @return
      */
     public JsonObject toJson() {

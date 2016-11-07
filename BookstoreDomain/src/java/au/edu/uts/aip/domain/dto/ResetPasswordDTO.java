@@ -14,26 +14,26 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class ResetPasswordDTO implements Serializable {
 
     /**
-     *
+     * Password reset token
      */
     private String resetToken;
     /**
-     *
+     * Username
      */
     private String username;
     /**
-     *
+     * New password
      */
     private String newPassword;
     /**
-     *
+     * Confirm new password
      */
     private String confirmNewPassword;
 
     /**
      * {@link ResetPasswordDTO#resetToken}
      *
-     * @return
+     * @return resetToken
      */
     @XmlElement
     public String getResetToken() {
@@ -47,7 +47,7 @@ public class ResetPasswordDTO implements Serializable {
     /**
      * {@link ResetPasswordDTO#username}
      *
-     * @return
+     * @return username
      */
     @XmlElement
     public String getUsername() {
@@ -61,7 +61,7 @@ public class ResetPasswordDTO implements Serializable {
     /**
      * {@link ResetPasswordDTO#newPassword}
      *
-     * @return
+     * @return newPassword
      */
     @XmlElement
     @Size(min = 6, message = "Password must be at least 6 characters long")
@@ -76,7 +76,7 @@ public class ResetPasswordDTO implements Serializable {
     /**
      * {@link ResetPasswordDTO#confirmNewPassword}
      *
-     * @return
+     * @return confirmNewPassword
      */
     @XmlElement
     public String getConfirmNewPassword() {
@@ -90,7 +90,7 @@ public class ResetPasswordDTO implements Serializable {
     /**
      * Check if submitted password and its confirmation is the same. True if matches.
      *
-     * @return
+     * @return true if both passwords match.
      */
     @AssertTrue(message = "Password and confirm password do not match")
     public boolean isPasswordMatch() {

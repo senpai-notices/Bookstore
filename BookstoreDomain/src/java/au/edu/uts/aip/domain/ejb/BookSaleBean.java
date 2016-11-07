@@ -6,7 +6,7 @@ import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.dto.BookDTO;
 import au.edu.uts.aip.domain.dto.BookSaleDTO;
-import au.edu.uts.aip.domain.remote.BookstoreRemote;
+import au.edu.uts.aip.domain.remote.BookSaleRemote;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
@@ -19,62 +19,13 @@ import javax.persistence.TypedQuery;
  * @inheritDoc
  */
 @Stateless
-public class BookstoreBean implements BookstoreRemote {
+public class BookSaleBean implements BookSaleRemote {
 
     @PersistenceContext
     private EntityManager em;
 
     @EJB
     private UserBean userBean;
-
-    /**
-     * @inheritDoc
-     */
-    @Override
-    public List<BookDTO> getLatestBooks(int offset, int limit) {
-        TypedQuery<Book> typedQuery = em.createNamedQuery("Book.getLatest", Book.class);
-        typedQuery.setFirstResult(offset);
-        typedQuery.setMaxResults(limit);
-        List<Book> booksEntity = typedQuery.getResultList();
-        List<BookDTO> booksDTO = new ArrayList<>();
-
-        for (Book bookEntity : booksEntity) {
-            booksDTO.add(new BookDTO(bookEntity));
-        }
-        return booksDTO;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    @Override
-    public BookDTO getSingleBook(String isbn10, String isbn13, String title) {
-        TypedQuery<Book> typedQuery = em.createNamedQuery("Book.getSingle", Book.class);
-        typedQuery.setParameter("isbn10", "%" + isbn10 + "%");
-        typedQuery.setParameter("isbn13", "%" + isbn13 + "%");
-        typedQuery.setParameter("title", "%" + title + "%");
-        Book bookEntity = typedQuery.getSingleResult();
-        return new BookDTO(bookEntity, bookEntity.getSales());
-    }
-
-    /**
-     * @inheritDoc
-     */
-    @Override
-    public Book createBook(BookDTO bookDTO) {
-        Book bookEntity = new Book();
-        bookEntity.setIsbn10(bookDTO.getIsbn10());
-        bookEntity.setIsbn13(bookDTO.getIsbn13());
-        bookEntity.setTitle(bookDTO.getTitle());
-        bookEntity.setAuthor(bookDTO.getAuthor());
-        bookEntity.setImgPath(bookDTO.getImgPath());
-        bookEntity.setPublishYear(bookDTO.getPublishYear());
-        bookEntity.setPublisher(bookDTO.getPublisher());
-        bookEntity.setPageCount(bookDTO.getPageCount());
-
-        em.persist(bookEntity);
-        return bookEntity;
-    }
 
     /**
      * @inheritDoc
@@ -161,5 +112,24 @@ public class BookstoreBean implements BookstoreRemote {
         });
 
         return bookSalesDTO;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    @Override
+    public Book createBook(BookDTO bookDTO) {
+        Book bookEntity = new Book();
+        bookEntity.setIsbn10(bookDTO.getIsbn10());
+        bookEntity.setIsbn13(bookDTO.getIsbn13());
+        bookEntity.setTitle(bookDTO.getTitle());
+        bookEntity.setAuthor(bookDTO.getAuthor());
+        bookEntity.setImgPath(bookDTO.getImgPath());
+        bookEntity.setPublishYear(bookDTO.getPublishYear());
+        bookEntity.setPublisher(bookDTO.getPublisher());
+        bookEntity.setPageCount(bookDTO.getPageCount());
+
+        em.persist(bookEntity);
+        return bookEntity;
     }
 }

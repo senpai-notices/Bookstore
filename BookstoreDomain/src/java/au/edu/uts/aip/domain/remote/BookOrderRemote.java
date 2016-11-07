@@ -18,7 +18,7 @@ public interface BookOrderRemote {
      * @param checkoutDTO
      * @param username
      */
-    void checkout(CheckoutDTO checkoutDTO, String username);
+    long checkout(CheckoutDTO checkoutDTO, String username);
 
     /**
      * Gets user's current orders
@@ -26,4 +26,11 @@ public interface BookOrderRemote {
      * @return
      */
     List<BookOrderDTO> getBuyOrder(String username);
+    
+    /**
+     * Get order based on it's id
+     * @param orderId
+     * @return 
+     */
+    BookOrderDTO getOrder(long orderId);
 }

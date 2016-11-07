@@ -69,7 +69,7 @@ public class AddressDTO {
 
     /**
      * {@link AddressDTO#addressCity}
-     * @return addressCity
+     * @return The suburb.
      */
     @XmlElement(name = "address_city")
     public String getAddressCity() {
@@ -82,7 +82,7 @@ public class AddressDTO {
 
     /**
      * {@link AddressDTO#addressCountry}
-     * @return addressCountry
+     * @return The address country.
      */
     @XmlElement(name = "address_country")
     public String getAddressCountry() {
@@ -95,7 +95,7 @@ public class AddressDTO {
 
     /**
      * {@link AddressDTO#addressPostcode}
-     * @return addressPostCode
+     * @return The address postcode.
      */
     @XmlElement(name = "address_postcode")
     public int getAddressPostCode() {
@@ -108,7 +108,7 @@ public class AddressDTO {
 
     /**
      * {@link AddressDTO#addressState}
-     * @return addressState
+     * @return The address state.
      */
     @XmlElement(name = "address_state")
     public String getAddressState() {

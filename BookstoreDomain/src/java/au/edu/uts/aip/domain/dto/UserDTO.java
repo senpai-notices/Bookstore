@@ -65,9 +65,9 @@ public class UserDTO implements Serializable {
     }
 
     /**
-     * {@link UserDTO#username} data type: String return a String value
+     * {@link UserDTO#username}
      *
-     * @return
+     * @return username
      */
     @XmlElement
     public String getUsername() {
@@ -79,9 +79,9 @@ public class UserDTO implements Serializable {
     }
 
     /**
-     * {@link UserDTO#fullname} data type: String return a String value
+     * {@link UserDTO#fullname}
      *
-     * @return
+     * @return fullname
      */
     @XmlElement
     public String getFullname() {
@@ -93,9 +93,9 @@ public class UserDTO implements Serializable {
     }
 
     /**
-     * {@link UserDTO#email} data type: String return a String value
+     * {@link UserDTO#email}
      *
-     * @return
+     * @return email
      */
     @XmlElement
     public String getEmail() {
@@ -107,9 +107,9 @@ public class UserDTO implements Serializable {
     }
 
     /**
-     * {@link UserDTO#role} data type: String return a String value
+     * {@link UserDTO#role}
      *
-     * @return
+     * @return role
      */
     @XmlElement
     public String getRole() {
@@ -121,9 +121,9 @@ public class UserDTO implements Serializable {
     }
 
     /**
-     * {@link UserDTO#address} data type: String return a String value
+     * {@link UserDTO#address}
      *
-     * @return
+     * @return address
      */
     @XmlElement
     public String getAddress() {
@@ -133,6 +133,12 @@ public class UserDTO implements Serializable {
     public void setAddress(String address) {
         this.address = address;
     }
+    
+    /**
+     * {@link UserDTO#postcode}
+     *
+     * @return postcode
+     */
 
     @XmlElement
     public int getPostcode() {

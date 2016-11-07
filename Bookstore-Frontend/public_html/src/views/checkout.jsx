@@ -145,9 +145,11 @@ class CheckoutView extends BaseView {
 		this.state.checkingOut = true
 		this.setState(this.state)
 		this.bookService.checkout(data)
-			.then((resp) => {
+			.then((orderId) => {
 				alert("Checkout successfully")
 				this.props.dispatch.clearCart()
+
+				this.bookService.sendCheckoutCompleteEmail(orderId)
 			})
 			.fail((err) => {
 				console.log(err)

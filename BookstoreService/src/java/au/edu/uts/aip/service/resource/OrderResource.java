@@ -40,8 +40,8 @@ public class OrderResource {
     @RolesAllowed({"USER", "VERIFYING USER", "VERIFIED USER"})
     public Response checkout(CheckoutDTO checkoutDTO){
         String username = securityContext.getUserPrincipal().getName();
-        bookOrderBean.checkout(checkoutDTO, username);
-        return Response.ok().build();
+        long orderId = bookOrderBean.checkout(checkoutDTO, username);
+        return Response.ok(orderId).build();
     }
     
     /**

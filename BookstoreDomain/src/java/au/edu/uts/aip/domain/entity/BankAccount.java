@@ -52,7 +52,7 @@ public class BankAccount implements Serializable {
     }
 
     /**
-     * {@link BankAccount#name} data type: String return a String value
+     * {@link BankAccount#name}
      */
     @Column(name = "name")
     public String getName() {
@@ -64,7 +64,7 @@ public class BankAccount implements Serializable {
     }
 
     /**
-     * {@link BankAccount#bsb} data type: String return a String value
+     * {@link BankAccount#bsb}
      */
     @Column(name = "bsb")
     public String getBsb() {
@@ -76,7 +76,7 @@ public class BankAccount implements Serializable {
     }
 
     /**
-     * {@link BankAccount#number} data type: String return a String value
+     * {@link BankAccount#number}
      */
     @Column(name = "number")
     public String getNumber() {

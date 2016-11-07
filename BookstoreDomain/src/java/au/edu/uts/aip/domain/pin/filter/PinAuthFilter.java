@@ -1,6 +1,3 @@
-/**
- * Source: http://www.adam-bien.com/roller/abien/entry/client_side_http_basic_access
- */
 package au.edu.uts.aip.domain.pin.filter;
 
 import java.io.IOException;
@@ -11,9 +8,11 @@ import javax.ws.rs.client.ClientRequestFilter;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.xml.bind.DatatypeConverter;
 
-
 /**
  * The PinAuthFilter class is used to do the authentication filter
+ *
+ * Source: http://www.adam-bien.com/roller/abien/entry/client_side_http_basic_access
+ *
  * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Priority(value = 1)
@@ -30,9 +29,10 @@ public class PinAuthFilter implements ClientRequestFilter {
     private static final String KEY_PREFIX = "Basic ";
 
     /**
-     * The constructor of the class accepting two paramaters
+     * The constructor of the class accepting two parameters
+     *
      * @param user
-     * @param password 
+     * @param password
      */
     public PinAuthFilter(String user, String password) {
         this.user = user;
@@ -40,9 +40,10 @@ public class PinAuthFilter implements ClientRequestFilter {
     }
 
     /**
-     * the method is used to finish the filter
+     * the method is used to add an authorization header to the request
+     *
      * @param requestContext
-     * @throws IOException 
+     * @throws IOException
      */
     @Override
     public void filter(ClientRequestContext requestContext) throws IOException {
@@ -53,7 +54,8 @@ public class PinAuthFilter implements ClientRequestFilter {
 
     /**
      * the method is used to get the authentication information
-     * @return 
+     *
+     * @return
      */
     private String getBasicAuthentication() {
         String token = this.user + ":" + this.password;

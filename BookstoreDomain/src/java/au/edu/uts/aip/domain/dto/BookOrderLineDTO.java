@@ -6,18 +6,17 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * BookOrderLineDTO is a DTO class that is used to retrieve all the information related to a single book sale record
- * It is a data transfer object
- * It will call related model class to retrieve info
+ * BookOrderLineDTO is a DTO class that is used to retrieve all the information related to a single
+ * book sale record It is a data transfer object It will call related model class to retrieve info
  *
- * It has properties: book: BookDTO object, seller: UserDTO object, unitPrice: double value, quantity: Integer value, totalPrice: double value
- * value 
- * 
+ * It has properties: book: BookDTO object, seller: UserDTO object, unitPrice: double value,
+ * quantity: Integer value, totalPrice: double value value
+ *
  * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class BookOrderLineDTO implements Serializable {
-    
+
     /**
      * the BookDTO object, the book that is selling
      */
@@ -38,19 +37,20 @@ public class BookOrderLineDTO implements Serializable {
      * the total price of the book
      */
     private double totalPrice;
-    
+
     /**
      * The constructor of the BookOrderLineDTO class without parameters
      */
-    public BookOrderLineDTO(){
-        
+    public BookOrderLineDTO() {
+
     }
-    
+
     /**
      * The constructor of the BookOrderLineDTO class with one parameter
+     *
      * @param orderLineEntity
      */
-    public BookOrderLineDTO(BookOrderLine orderLineEntity){
+    public BookOrderLineDTO(BookOrderLine orderLineEntity) {
         this.book = new BookDTO(orderLineEntity.getBook());
         this.seller = new UserDTO(orderLineEntity.getSeller());
         this.unitPrice = orderLineEntity.getUnitPrice();
@@ -59,9 +59,10 @@ public class BookOrderLineDTO implements Serializable {
     }
 
     /**
-    * {@link BookOrderLineDTO#book}
-    * @return book
-    */
+     * {@link BookOrderLineDTO#book}
+     *
+     * @return book
+     */
     @XmlElement
     public BookDTO getBook() {
         return book;
@@ -72,9 +73,10 @@ public class BookOrderLineDTO implements Serializable {
     }
 
     /**
-    * {@link BookOrderLineDTO#seller}
-    * @return seller
-    */
+     * {@link BookOrderLineDTO#seller}
+     *
+     * @return seller
+     */
     @XmlElement
     public UserDTO getSeller() {
         return seller;
@@ -85,9 +87,10 @@ public class BookOrderLineDTO implements Serializable {
     }
 
     /**
-    * {@link BookOrderLineDTO#unitPrice}
-    * @return unitPrice
-    */
+     * {@link BookOrderLineDTO#unitPrice}
+     *
+     * @return unitPrice
+     */
     @XmlElement
     public double getUnitPrice() {
         return unitPrice;
@@ -98,9 +101,10 @@ public class BookOrderLineDTO implements Serializable {
     }
 
     /**
-    * {@link BookOrderLineDTO#quantity}
-    * @return quantity
-    */
+     * {@link BookOrderLineDTO#quantity}
+     *
+     * @return quantity
+     */
     @XmlElement
     public int getQuantity() {
         return quantity;
@@ -111,9 +115,10 @@ public class BookOrderLineDTO implements Serializable {
     }
 
     /**
-    * {@link BookOrderLineDTO#totalPrice}
-    * @return totalPrice
-    */
+     * {@link BookOrderLineDTO#totalPrice}
+     *
+     * @return totalPrice
+     */
     @XmlElement
     public double getTotalPrice() {
         return totalPrice;

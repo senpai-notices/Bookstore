@@ -1,10 +1,14 @@
 package au.edu.uts.aip.service.resource;
 
+import au.edu.uts.aip.domain.dto.BookOrderDTO;
 import au.edu.uts.aip.domain.dto.UserDTO;
 import au.edu.uts.aip.domain.exception.TokenGenerationException;
+import au.edu.uts.aip.domain.remote.BookOrderRemote;
 import au.edu.uts.aip.domain.remote.EmailBodyComposerRemote;
 import au.edu.uts.aip.domain.remote.EmailRemote;
 import au.edu.uts.aip.domain.remote.UserRemote;
+import java.util.ArrayList;
+import java.util.List;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.servlet.ServletContext;
@@ -34,6 +38,9 @@ public class EmailResource {
 
     @EJB
     private EmailBodyComposerRemote emailBodyComposerBean;
+    
+    @EJB
+    private BookOrderRemote bookOrderBean;
 
     @Context
     private SecurityContext securityContext;
@@ -85,7 +92,8 @@ public class EmailResource {
                     user.getFullname(),
                     servletContext.getInitParameter("clientURL") + "/?token=" + token
                     + "&username=" + user.getUsername() + "&action=reset");
-            emailBean.sendEmail(user.getEmail(), "Reset Password", body);
+
+            emailBean.sendEmail(user.getEmail(), "Password reset", body);
 
             return Response.ok().build();
         } catch (TokenGenerationException ex) {
@@ -208,21 +216,30 @@ public class EmailResource {
      * @return
      */
     @POST
-    @RolesAllowed({"VERIFIED"})
+    @RolesAllowed({"USER", "VERIFYING USER", "VERIFIED USER"})
     @Path("order/{order-id}/complete")
-    public Response orderComplete(@PathParam("order-id") String orderId/*, String usernameBuyer, String usernameSeller*/) {
-        String usernameBuyer = "";
+    public Response orderComplete(@PathParam("order-id") long orderId/*, String usernameBuyer, String usernameSeller*/) {
+        String usernameBuyer = this.securityContext.getUserPrincipal().getName();
         String usernameSeller = "";
-
+        
         // Email the buyer
         UserDTO buyer = userBean.getUser(usernameBuyer);
-        String buyerEmailBody = emailBodyComposerBean.onOrderCompleteBuyer(buyer.getFullname(), orderId);
+        String buyerEmailBody = emailBodyComposerBean.onOrderCompleteBuyer(buyer.getFullname(), orderId + "");
         emailBean.sendEmail(buyer.getEmail(), "Order complete", buyerEmailBody);
 
+        List<UserDTO> sellerList = new ArrayList<>();
+        BookOrderDTO orderDTO = bookOrderBean.getOrder(orderId);
+        orderDTO.getLines().stream().forEach(orderLineDTO -> {
+            if (!sellerList.contains(orderLineDTO.getSeller())){
+                sellerList.add(orderLineDTO.getSeller());
+            }
+        });
+        
         // Email the seller
-        UserDTO seller = userBean.getUser(usernameSeller);
-        String sellerEmailBody = emailBodyComposerBean.onOrderCompleteSeller(seller.getFullname(), orderId);
-        emailBean.sendEmail(buyer.getEmail(), "Order complete", sellerEmailBody);
+        sellerList.stream().forEach(seller ->{
+            String sellerEmailBody = emailBodyComposerBean.onOrderCompleteSeller(seller.getFullname(), orderId + "");
+            emailBean.sendEmail(buyer.getEmail(), "Order complete", sellerEmailBody);
+        });
 
         return Response.ok().build();
 
