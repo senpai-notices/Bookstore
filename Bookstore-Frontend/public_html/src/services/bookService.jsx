@@ -155,6 +155,18 @@ class BookService {
 			}
 		})
 	}
+
+	sendCheckoutCompleteEmail(orderId){
+		return reqwest({
+			url: config.getServerAddress() + `/email/order/${orderId}/complete`,
+			method: 'post',
+			crossOrigin: true,
+			withCredentials: true,
+			headers: {
+				'Authorization': config.getAuthHeader()
+			}
+		})
+	}
 }
 
 export default BookService

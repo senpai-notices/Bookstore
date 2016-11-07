@@ -42,7 +42,7 @@ public class BookOrderBean implements BookOrderRemote {
      * @inheritDoc
      */
     @Override
-    public void checkout(CheckoutDTO checkoutDTO, String username) {
+    public long checkout(CheckoutDTO checkoutDTO, String username) {
         User user = userBean.getUserEntity(username);
 
         // create orders
@@ -132,6 +132,8 @@ public class BookOrderBean implements BookOrderRemote {
         if (chargeResponse.getStatusCode() != Response.Status.CREATED.getStatusCode()) {
             throw new ClientErrorException(chargeResponse.getBody().toString(), chargeResponse.getStatusCode());
         }
+        
+        return bookOrder.getId();
     }
 
     /**
@@ -151,5 +153,10 @@ public class BookOrderBean implements BookOrderRemote {
         });
 
         return bookOrdersDTO;
+    }
+    
+    @Override
+    public BookOrderDTO getOrder(long orderId) {
+        return new BookOrderDTO(em.find(BookOrder.class, orderId));
     }
 }
