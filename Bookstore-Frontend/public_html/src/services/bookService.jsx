@@ -143,6 +143,18 @@ class BookService {
 			}
 		})
 	}
+
+	getBuyOrders(){
+		return reqwest({
+			url: config.getServerAddress() + '/order/',
+			method: 'get',
+			crossOrigin: true,
+			withCredentials: true,
+			headers: {
+				'Authorization': config.getAuthHeader()
+			}
+		})
+	}
 }
 
 export default BookService

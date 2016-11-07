@@ -69,6 +69,11 @@ public class BookOrderBean implements BookOrderRemote {
             }
             
             bookSale.setQuantity(bookSale.getQuantity() - matchedItem.getBuyQuantity());
+            if (bookSale.getQuantity() == 0){
+                bookSale.getBook().getSales().remove(bookSale);
+                bookSale.getSeller().getSellingBooks().remove(bookSale);
+                em.remove(bookSale);
+            }
             
             BookOrderLine orderLine = new BookOrderLine();
             orderLine.setBook(bookSale.getBook());

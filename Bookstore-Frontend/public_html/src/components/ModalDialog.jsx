@@ -7,7 +7,7 @@ class ModalDialog extends React.Component {
 
 		let title=""
 		if (props.header){
-			if (props.doNotUserTitle){
+			if (props.doNotUseTitle){
 				title = props.header
 			} else {
 				title = (

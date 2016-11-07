@@ -3,7 +3,7 @@ import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
 import { connect } from 'react-redux'
 import * as bs from 'react-bootstrap'
 import { FormInputText, FormAddressInput } from 'components'
-import { ManageBooksView } from 'views'
+import { ManageBooksView, BuyOrdersView } from 'views'
 
 class UserDashboardView extends BaseView {
 
@@ -35,6 +35,16 @@ class UserDashboardView extends BaseView {
 
 	uploadDocuments(event){
 		event.preventDefault()
+
+		if (isNaN(this.state.address_postcode)){
+			alert("Please enter a valid postcode")
+			return
+		}
+		if (this.state.address_postcode.length != 4){
+			alert("Please enter a valid postcode")
+			return
+		}
+
 		this.state.submitting = true
 		this.setState(this.state)
 
@@ -276,10 +286,17 @@ class UserDashboardView extends BaseView {
 			</bs.Tab>
 		)
 
+		const buyOrdersTab = (
+			<bs.Tab eventKey={3} title="Purchase history">
+				<BuyOrdersView/>
+			</bs.Tab>
+		)
+
 		return(
 			<bs.Tabs id="dashboard-menu">
 				{accountTab}
 				{newSalesTab}
+				{buyOrdersTab}
 			</bs.Tabs>
 		)
 	}
