@@ -6,11 +6,17 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * Source: https://gist.github.com/avilches/750151
  *
- * @author https://gist.github.com/avilches/750151
+ * @author x
  */
 public class SHA {
 
+    /**
+     *
+     * @param data
+     * @return
+     */
     public static String hash256(String data) {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
@@ -22,6 +28,11 @@ public class SHA {
         }
     }
 
+    /**
+     *
+     * @param bytes
+     * @return
+     */
     public static String bytesToHex(byte[] bytes) {
         StringBuffer result = new StringBuffer();
         for (byte byt : bytes) {

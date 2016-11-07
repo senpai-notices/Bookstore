@@ -9,16 +9,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- * AdminBean is a JavaBean that is used to verify the user 
- * and admin the administrator account
- * 
- * It has four methods.
- * banAccount function is used to ban the administrator account
- * unbanAccount function is used to unban the administrator account
- * approveVerificationRequest function is used to approve the user's verification request
- * rejectVerificationRequest function is used to reject the user's verification request
- * 
- *  @author Son Dang, Alex Tan, Xiaoyang Liu
+ * @inheritDoc
  */
 @Stateless
 public class AdminBean implements AdminRemote {
@@ -26,16 +17,12 @@ public class AdminBean implements AdminRemote {
     @PersistenceContext
     private EntityManager em;
 
-    /**
-     * the userBean get user info
-     */
     @EJB
     private UserBean userBean;
 
     /**
-    * rejectVerificationRequest function is used to reject the user's verification request
-    * return none
-    */
+     * @inheritDoc
+     */
     @Override
     public void rejectVerificationRequest(String username) {
         User user = userBean.getUserEntity(username);
@@ -43,7 +30,7 @@ public class AdminBean implements AdminRemote {
         if (!Role.RoleType.VERIFYING.toString().equals(user.getRole().getRoleName())) {
             throw new RuntimeException("The user does not have any verification request");
         }
-        
+
         user.setIdVerificationPath(null);
         user.setResidentialVerificationPath(null);
         Role normalUserRole = userBean.getRole(Role.RoleType.USER.toString());
@@ -52,9 +39,8 @@ public class AdminBean implements AdminRemote {
         em.persist(user);
     }
 
-     /**
-     * approveVerificationRequest function is used to approve the user's verification request
-     * return void
+    /**
+     * @inheritDoc
      */
     @Override
     public void approveVerificationRequest(String username) {
@@ -67,8 +53,7 @@ public class AdminBean implements AdminRemote {
     }
 
     /**
-     * This method is used to admin the administrator account
-     * banAccount function is used to ban the administrator account 
+     * @inheritDoc
      */
     @Override
     public void banAccount(String username) {
@@ -85,8 +70,7 @@ public class AdminBean implements AdminRemote {
     }
 
     /**
-     * This method is used to admin the administrator account
-     * unbanAccount function is used to unban the administrator account
+     * @inheritDoc
      */
     @Override
     public void unbanAccount(String username) {
