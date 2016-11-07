@@ -18,6 +18,7 @@ class CheckoutView extends BaseView {
 
 	componentWillMount(){
 		if (this.props.user.status !== 'loggedIn' 
+			|| this.props.user.role === "ADMIN"
 			|| this.props.shoppingCart.items.length === 0){
 			browserHistory.replace("/")
 		}
@@ -25,6 +26,7 @@ class CheckoutView extends BaseView {
 
 	componentWillReceiveProps(nextProps){
 		if (nextProps.user.status !== 'loggedIn' 
+			|| this.props.user.role === "ADMIN"
 			|| nextProps.shoppingCart.items.length === 0){
 			browserHistory.replace("/")
 		}
