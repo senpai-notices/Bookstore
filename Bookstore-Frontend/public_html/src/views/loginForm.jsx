@@ -43,7 +43,6 @@ class LoginForm extends BaseView{
 
 	render(){
 		const user = this.props.user
-
 		return (
 			<bs.Col xs={12} md={6} mdOffset={3}>
 				<bs.Panel>

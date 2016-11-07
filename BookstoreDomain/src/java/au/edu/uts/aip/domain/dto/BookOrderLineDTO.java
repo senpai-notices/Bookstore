@@ -1,5 +1,7 @@
 package au.edu.uts.aip.domain.dto;
 
+import au.edu.uts.aip.domain.entity.Address;
+import au.edu.uts.aip.domain.entity.BookOrder;
 import au.edu.uts.aip.domain.entity.BookOrderLine;
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
@@ -37,6 +39,10 @@ public class BookOrderLineDTO implements Serializable {
      * the total price of the book
      */
     private double totalPrice;
+    /**
+     * Address that the items in this line need to be shipped to
+     */
+    private String shippingAddress;
 
     /**
      * The constructor of the BookOrderLineDTO class without parameters
@@ -56,6 +62,7 @@ public class BookOrderLineDTO implements Serializable {
         this.unitPrice = orderLineEntity.getUnitPrice();
         this.quantity = orderLineEntity.getQuantity();
         this.totalPrice = unitPrice * quantity;
+        this.shippingAddress = orderLineEntity.getShippingAddress();
     }
 
     /**
@@ -126,5 +133,17 @@ public class BookOrderLineDTO implements Serializable {
 
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    /**
+     * {@link BookOrderLineDTO#shippingAddress}
+     * @return 
+     */
+    public String getShippingAddress() {
+        return shippingAddress;
+    }
+
+    public void setShippingAddress(String buyerAddress) {
+        this.shippingAddress = buyerAddress;
     }
 }

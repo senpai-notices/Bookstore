@@ -28,6 +28,13 @@ class CheckoutView extends BaseView {
 		// 	|| nextProps.shoppingCart.items.length === 0){
 		// 	browserHistory.replace("/")
 		// }
+		let currentShoppingCartJson = JSON.stringify(this.props.shoppingCart)
+		let nextShoppingCartJson = JSON.stringify(nextProps.shoppingCart)
+
+		if (this.props.shoppingCart !== nextProps.shoppingCart){
+			this.state.totalShippingCost = undefined
+			this.setState(this.state)
+		}
 	}
 
 	calculateTotalPrice(){
@@ -167,44 +174,6 @@ class CheckoutView extends BaseView {
 				this.state.checkingOut = false
 				this.setState(this.state)
 			})
-		// this.bookService.getPinToken(data)
-		// 	.then((resp) => {
-		// 		data.customer_token = resp.response.token
-		// 		data.amount = "100"
-		// 		data.description = "Description"
-		// 		this.bookService.chargeMoney(data)
-		// 			.then((resp) => {
-		// 				console.log(resp)
-		// 			})
-		// 			.fail((err) => {
-		// 				const validationResult = JSON.parse(err.response)
-		// 				this.state.formErrors = validationResult.formErrors
-		// 				this.state.errors = validationResult.errors	
-		// 			})
-		// 			.always(() => {
-		// 				this.state.checkingOut = false
-		// 				this.setState(this.state)
-		// 			})
-		// 	})
-		// 	.fail((err) => {
-		// 		const validationResult = JSON.parse(err.response)
-		// 		this.state.formErrors = validationResult.formErrors
-		// 		this.state.errors = validationResult.errors
-		// 	})
-		// 	.always(() => {
-		// 		this.state.checkingOut = false
-		// 		this.setState(this.state)
-		// 	})
-	}
-
-	componentWillReceiveProps(nextProps){
-		let currentShoppingCartJson = JSON.stringify(this.props.shoppingCart)
-		let nextShoppingCartJson = JSON.stringify(nextProps.shoppingCart)
-
-		if (this.props.shoppingCart !== nextProps.shoppingCart){
-			this.state.totalShippingCost = undefined
-			this.setState(this.state)
-		}
 	}
 
 	render(){

@@ -116,20 +116,6 @@ class BookService {
 		})
 	}
 
-	chargeMoney(data){
-		return reqwest({
-			url: config.getServerAddress() + '/payment/charge2',
-			method: 'post',
-			crossOrigin: true,
-			withCredentials: true,
-			data: JSON.stringify(data),
-			headers: {
-				'Authorization': config.getAuthHeader(),
-				'Content-Type': 'application/json'
-			}
-		})
-	}
-
 	checkout(data){
 		return reqwest({
 			url: config.getServerAddress() + '/order/checkout',
@@ -146,7 +132,31 @@ class BookService {
 
 	getBuyOrders(){
 		return reqwest({
-			url: config.getServerAddress() + '/order/',
+			url: config.getServerAddress() + '/order/buy',
+			method: 'get',
+			crossOrigin: true,
+			withCredentials: true,
+			headers: {
+				'Authorization': config.getAuthHeader()
+			}
+		})
+	}
+
+	getSoldBooks(){
+		return reqwest({
+			url: config.getServerAddress() + '/order/sold',
+			method: 'get',
+			crossOrigin: true,
+			withCredentials: true,
+			headers: {
+				'Authorization': config.getAuthHeader()
+			}
+		})
+	}
+
+	getSellingBooks(){
+		return reqwest({
+			url: config.getServerAddress() + '/order/selling',
 			method: 'get',
 			crossOrigin: true,
 			withCredentials: true,

@@ -14,8 +14,12 @@ class BaseView extends React.Component {
 		if (!this.state){
 			this.state = { }
 		}
-		this.state.formErrors = {}
-		this.state.errors = []
+		if (!this.state.formErrors){
+			this.state.formErrors = {}
+		}
+		if (!this.state.errors){
+			this.state.errors = []
+		}
 
 		this.userService = new UserService()
 		this.bookService = new BookService()

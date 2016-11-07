@@ -1,6 +1,8 @@
 package au.edu.uts.aip.domain.remote;
 
 import au.edu.uts.aip.domain.dto.BookOrderDTO;
+import au.edu.uts.aip.domain.dto.BookOrderLineDTO;
+import au.edu.uts.aip.domain.dto.BookSaleDTO;
 import au.edu.uts.aip.domain.dto.CheckoutDTO;
 import java.util.List;
 import javax.ejb.Remote;
@@ -33,4 +35,18 @@ public interface BookOrderRemote {
      * @return 
      */
     BookOrderDTO getOrder(long orderId);
+    
+    /**
+     * Get order lines belong to a seller
+     * @param username the seller account name
+     * @return 
+     */
+    List<BookOrderLineDTO> getSoldBooks(String username);
+    
+    /**
+     * Get a list of book sales belong to a seller
+     * @param username the seller account name
+     * @return 
+     */
+    List<BookSaleDTO> getSellingBooks(String username);
 }

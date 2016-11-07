@@ -1,6 +1,8 @@
 package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.dto.BookOrderDTO;
+import au.edu.uts.aip.domain.dto.BookOrderLineDTO;
+import au.edu.uts.aip.domain.dto.BookSaleDTO;
 import au.edu.uts.aip.domain.dto.CheckoutDTO;
 import au.edu.uts.aip.domain.dto.CheckoutItemDTO;
 import au.edu.uts.aip.domain.entity.BookOrder;
@@ -45,6 +47,15 @@ public class BookOrderBean implements BookOrderRemote {
     public long checkout(CheckoutDTO checkoutDTO, String username) {
         User user = userBean.getUserEntity(username);
 
+        // get shipping address
+        String addressLine2 = checkoutDTO.getCard().getAddressLine2() == null ? "" : checkoutDTO.getCard().getAddressLine2() + ", ";
+        String shippingAddress = checkoutDTO.getCard().getAddressLine1() + ", "
+                    + addressLine2
+                    + checkoutDTO.getCard().getAddressCity() + ", "
+                    + checkoutDTO.getCard().getAddressState() + ", "
+                    + checkoutDTO.getCard().getAddressCountry() + ", "
+                    + checkoutDTO.getCard().getAddressPostcode();
+        
         // create orders
         List<Long> saleIds = checkoutDTO.getItems().stream().map(CheckoutItemDTO::getSaleId).collect(Collectors.toList());
         TypedQuery<BookSales> typedQuery = em.createNamedQuery("BookSales.findSalesByIds", BookSales.class);
@@ -52,6 +63,7 @@ public class BookOrderBean implements BookOrderRemote {
         List<BookSales> bookSales = typedQuery.getResultList();
 
         // generate order line from each bookSale
+        BookOrder bookOrder = new BookOrder();
         List<BookOrderLine> orderLineList = new ArrayList<>();
         for (BookSales bookSale : bookSales) {
             CheckoutItemDTO matchedItem = null;
@@ -84,6 +96,7 @@ public class BookOrderBean implements BookOrderRemote {
             BookOrderLine orderLine = new BookOrderLine();
             orderLine.setBook(bookSale.getBook());
             orderLine.setSeller(bookSale.getSeller());
+            orderLine.setShippingAddress(shippingAddress);
             orderLine.setBookCondition(bookSale.getCondition());
             orderLine.setQuantity(matchedItem.getBuyQuantity());
             orderLine.setUnitPrice(bookSale.getPrice());
@@ -93,7 +106,6 @@ public class BookOrderBean implements BookOrderRemote {
         }
 
         // add order lines to order
-        BookOrder bookOrder = new BookOrder();
         bookOrder.setOrderLines(orderLineList);
         bookOrder.setOrderTimestamp(new Date());
         bookOrder.setPostageCost(checkoutDTO.getShippingCost());
@@ -158,5 +170,33 @@ public class BookOrderBean implements BookOrderRemote {
     @Override
     public BookOrderDTO getOrder(long orderId) {
         return new BookOrderDTO(em.find(BookOrder.class, orderId));
+    }
+    
+    @Override
+    public List<BookOrderLineDTO> getSoldBooks(String username){
+        User seller = userBean.getUserEntity(username);
+        
+        TypedQuery<BookOrderLine> typedQuery = em.createNamedQuery("BookOrderLine.findBySeller", BookOrderLine.class);
+        typedQuery.setParameter("seller", seller);
+        
+        List<BookOrderLine> orderLinesEntity = typedQuery.getResultList();
+        List<BookOrderLineDTO> orderLinesDTO = new ArrayList<>();
+        orderLinesEntity.stream().forEach(orderLineEntity -> {
+            orderLinesDTO.add(new BookOrderLineDTO(orderLineEntity));
+        });
+        
+        return orderLinesDTO;
+    }
+    
+    @Override
+    public List<BookSaleDTO> getSellingBooks(String username){
+        User seller = userBean.getUserEntity(username);
+        List<BookSaleDTO> salesDTO = new ArrayList<>();
+        
+        seller.getSellingBooks().stream().forEach(saleEntity -> {
+            salesDTO.add(new BookSaleDTO(saleEntity));
+        });
+        
+        return salesDTO;
     }
 }

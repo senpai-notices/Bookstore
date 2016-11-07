@@ -1,12 +1,11 @@
 package au.edu.uts.aip.domain.entity;
 
 import java.io.Serializable;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.NamedQuery;
 
 /**
  * A Data model class related to the BookOrderLine table in the database. BookOrderLine entity
@@ -17,6 +16,8 @@ import javax.persistence.OneToOne;
  * @author
  */
 @Entity
+@NamedQuery(name = "BookOrderLine.findBySeller", query = "SELECT bol from BookOrderLine bol "
+        + "where bol.seller=:seller")
 public class BookOrderLine implements Serializable {
 
     /**
@@ -30,6 +31,7 @@ public class BookOrderLine implements Serializable {
     private Book book;
     private User seller;
     private String bookCondition;
+    private String shippingAddress;
     private int quantity;
     private double unitPrice;
 
@@ -100,4 +102,12 @@ public class BookOrderLine implements Serializable {
     public void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
     }   
+
+    public String getShippingAddress() {
+        return shippingAddress;
+    }
+
+    public void setShippingAddress(String buyerAddress) {
+        this.shippingAddress = buyerAddress;
+    }
 }

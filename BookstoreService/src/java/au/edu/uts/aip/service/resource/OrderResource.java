@@ -1,6 +1,8 @@
 package au.edu.uts.aip.service.resource;
 
 import au.edu.uts.aip.domain.dto.BookOrderDTO;
+import au.edu.uts.aip.domain.dto.BookOrderLineDTO;
+import au.edu.uts.aip.domain.dto.BookSaleDTO;
 import au.edu.uts.aip.domain.dto.CheckoutDTO;
 import au.edu.uts.aip.domain.remote.BookOrderRemote;
 import java.util.List;
@@ -49,11 +51,34 @@ public class OrderResource {
      * @return
      */
     @GET
+    @Path("buy")
     @RolesAllowed({"USER", "VERIFIYING USER", "VERIFIED USER"})
     @Produces(MediaType.APPLICATION_JSON)
     public Response getBuyOrders(){
         String username = securityContext.getUserPrincipal().getName();
         List<BookOrderDTO> result = bookOrderBean.getBuyOrder(username);
         return Response.ok(result.toArray(new BookOrderDTO[0])).build();
+    }
+    
+    @GET
+    @Path("sold")
+    @RolesAllowed({"VERIFIED USER", "ADMIN"})
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getSellOrderLines(){
+        String username = securityContext.getUserPrincipal().getName();
+        List<BookOrderLineDTO> result = bookOrderBean.getSoldBooks(username);
+        
+        return Response.ok(result.toArray(new BookOrderLineDTO[0])).build();
+    }
+    
+    @GET
+    @Path("selling")
+    @RolesAllowed({"VERIFIED USER", "ADMIN"})
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getSellingBooks(){
+        String username = securityContext.getUserPrincipal().getName();
+        List<BookSaleDTO> result = bookOrderBean.getSellingBooks(username);
+        
+        return Response.ok(result.toArray(new BookSaleDTO[0])).build();
     }
 }

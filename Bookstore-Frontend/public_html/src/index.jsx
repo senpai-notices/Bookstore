@@ -55,7 +55,7 @@ const rootElement = (
 				</Route>
 				<Route path="admin" onEnter={checkAdmin} onLogout={redirectToHome}>
 					<Route path="users" component={views.ManageUsersView}/>
-					<Route path="books" component={views.ManageBooksView}/>
+					<Route path="books" component={views.AdminDashboardView}/>
 				</Route>
 				<Route path="reset" component={views.ResetPasswordView}/>
 			</Route>

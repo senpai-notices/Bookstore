@@ -3,7 +3,7 @@ import BaseView, { mapStateToProps, mapDispatchToProps } from 'views/baseView'
 import { connect } from 'react-redux'
 import * as bs from 'react-bootstrap'
 import { FormInputText, FormAddressInput } from 'components'
-import { ManageBooksView, BuyOrdersView } from 'views'
+import { ManageBooksView, BuyOrdersView, SaleStatusView } from 'views'
 
 class UserDashboardView extends BaseView {
 
@@ -280,23 +280,30 @@ class UserDashboardView extends BaseView {
 			</bs.Tab>
 		)
 
+		const buyOrdersTab = (
+			<bs.Tab eventKey={2} title="Purchase history">
+				<BuyOrdersView/>
+			</bs.Tab>
+		)
+
 		const newSalesTab = (
-			<bs.Tab eventKey={2} title="Book selling" disabled={user.role !== "VERIFIED USER"}>
+			<bs.Tab eventKey={3} title="Book selling" disabled={user.role !== "VERIFIED USER"}>
 				<ManageBooksView/>
 			</bs.Tab>
 		)
 
-		const buyOrdersTab = (
-			<bs.Tab eventKey={3} title="Purchase history">
-				<BuyOrdersView/>
+		const saleStatusTab = (
+			<bs.Tab eventKey={4} title="Sale status" disabled={user.role !== "VERIFIED USER"}>
+				<SaleStatusView />
 			</bs.Tab>
 		)
 
 		return(
 			<bs.Tabs id="dashboard-menu">
 				{accountTab}
-				{newSalesTab}
 				{buyOrdersTab}
+				{newSalesTab}
+				{saleStatusTab}
 			</bs.Tabs>
 		)
 	}
