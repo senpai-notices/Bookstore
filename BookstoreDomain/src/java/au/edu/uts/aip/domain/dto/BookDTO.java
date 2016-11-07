@@ -23,28 +23,33 @@ public class BookDTO implements Serializable {
      */
     private long id;
     /**
-     * the title of the book
+     * The title of the book
      */
     private String title;
     /**
-     * the author of the book
+     * The author of the book
      */
     private String author;
     /**
-     * the publishing year of the book
+     * The publishing year of the book
      */
     private int publishYear;
     /**
-     * the publisher of the book
+     * The publisher of the book
      */
     private String publisher;
     /**
      * The storage image location on the internet.
      */
     private String imgPath;
+    /**
+     * The book's ISBN10.
+     */
     private String isbn10;
+    /**
+     * The book's ISBN13.
+     */
     private String isbn13;
-
     /**
      * The page count of the book.
      */
@@ -97,7 +102,8 @@ public class BookDTO implements Serializable {
 
     /**
      * {@link BookDTO#id}
-     * @return 
+     *
+     * @return
      */
     @XmlElement
     public long getId() {
@@ -110,6 +116,7 @@ public class BookDTO implements Serializable {
 
     /**
      * {@link BookDTO#title}
+     *
      * @return title
      */
     @XmlElement
@@ -123,6 +130,7 @@ public class BookDTO implements Serializable {
 
     /**
      * {@link BookDTO#author}
+     *
      * @return author
      */
     @XmlElement
@@ -136,6 +144,7 @@ public class BookDTO implements Serializable {
 
     /**
      * {@link BookDTO#publishYear}
+     *
      * @return publishYear
      */
     @XmlElement
@@ -149,6 +158,7 @@ public class BookDTO implements Serializable {
 
     /**
      * {@link BookDTO#publisher}
+     *
      * @return publisher
      */
     @XmlElement
@@ -162,6 +172,7 @@ public class BookDTO implements Serializable {
 
     /**
      * {@link BookDTO#imgPath}
+     *
      * @return imgPath
      */
     @XmlElement
@@ -175,6 +186,7 @@ public class BookDTO implements Serializable {
 
     /**
      * {@link BookDTO#isbn10}
+     *
      * @return isbn10
      */
     @XmlElement
@@ -188,6 +200,7 @@ public class BookDTO implements Serializable {
 
     /**
      * {@link BookDTO#isbn13}
+     *
      * @return isbn13
      */
     @XmlElement
@@ -201,6 +214,7 @@ public class BookDTO implements Serializable {
 
     /**
      * {@link BookDTO#pageCount}
+     *
      * @return pageCount
      */
     @XmlElement
@@ -214,6 +228,7 @@ public class BookDTO implements Serializable {
 
     /**
      * {@link BookDTO#sales}
+     *
      * @return sales
      */
     @XmlElement

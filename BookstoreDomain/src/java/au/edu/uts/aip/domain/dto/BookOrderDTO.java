@@ -9,18 +9,17 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * BookOrderDTO is a DTO class that is used to retrieve all the information related to the order of books
- * It is a data transfer object
- * It will call related model class to retrieve info
+ * BookOrderDTO is a DTO class that is used to retrieve all the information related to the order of
+ * books It is a data transfer object It will call related model class to retrieve info
  *
- * It has properties: id: long value lines:  a list of BookOrderLineDTO postageCost: double value orderTimestamp: String
- * value 
- * 
+ * It has properties: id: long value lines: a list of BookOrderLineDTO postageCost: double value
+ * orderTimestamp: String value
+ *
  * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class BookOrderDTO {
-    
+
     /**
      * the id of the book order
      */
@@ -37,19 +36,20 @@ public class BookOrderDTO {
      * the time of the order
      */
     private String orderTimestamp;
-    
+
     /**
      * The constructor of the BookOrderDTO class without parameters
      */
-    public BookOrderDTO(){
-        
+    public BookOrderDTO() {
+
     }
-    
+
     /**
      * The constructor of the BookOrderDTO class with one parameter
+     *
      * @param orderEntity
      */
-    public BookOrderDTO(BookOrder orderEntity){
+    public BookOrderDTO(BookOrder orderEntity) {
         this.id = orderEntity.getId();
         this.postageCost = orderEntity.getPostageCost();
         DateFormat df = new SimpleDateFormat("dd-mm-yyyy hh:mm:ss");
@@ -61,9 +61,10 @@ public class BookOrderDTO {
     }
 
     /**
-    * {@link BookOrderDTO#id}
-    * @return id
-    */
+     * {@link BookOrderDTO#id}
+     *
+     * @return id
+     */
     @XmlElement
     public long getId() {
         return id;
@@ -74,9 +75,10 @@ public class BookOrderDTO {
     }
 
     /**
-    * {@link BookOrderDTO#lines}
-    * @return lines
-    */
+     * {@link BookOrderDTO#lines}
+     *
+     * @return lines
+     */
     @XmlElement
     public List<BookOrderLineDTO> getLines() {
         return lines;
@@ -87,9 +89,10 @@ public class BookOrderDTO {
     }
 
     /**
-    * {@link BookOrderDTO#postageCost}
-    * @return postageCost
-    */
+     * {@link BookOrderDTO#postageCost}
+     *
+     * @return postageCost
+     */
     @XmlElement
     public double getPostageCost() {
         return postageCost;
@@ -100,9 +103,10 @@ public class BookOrderDTO {
     }
 
     /**
-    * {@link BookOrderDTO#orderTimestamp}
-    * @return orderTimestamp
-    */
+     * {@link BookOrderDTO#orderTimestamp}
+     *
+     * @return orderTimestamp
+     */
     @XmlElement
     public String getOrderTimestamp() {
         return orderTimestamp;

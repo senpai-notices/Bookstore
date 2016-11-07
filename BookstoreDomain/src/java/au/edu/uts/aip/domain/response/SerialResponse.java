@@ -35,6 +35,7 @@ public class SerialResponse implements Serializable {
 
     /**
      * {@link SerialResponse#body} data type: JsonObject
+     * @return body
      */
     public JsonObject getBody() {
         return body;
@@ -46,6 +47,7 @@ public class SerialResponse implements Serializable {
 
     /**
      * {@link SerialResponse#statusCode} data type: Integer return an int Value
+     * @return statusCode
      */
     public int getStatusCode() {
         return statusCode;

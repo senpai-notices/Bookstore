@@ -30,7 +30,7 @@ public class OrderResource {
     private BookOrderRemote bookOrderBean;
     
     /**
-     *
+     * Perform checkout sequence.
      * @param checkoutDTO
      * @return
      */
@@ -45,7 +45,7 @@ public class OrderResource {
     }
     
     /**
-     *
+     * Gets a list of current book orders of user
      * @return
      */
     @GET

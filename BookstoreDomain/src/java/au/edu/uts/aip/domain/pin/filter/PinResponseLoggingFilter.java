@@ -1,6 +1,3 @@
-/**
- * Source: https://nacho4d-nacho4d.blogspot.com.au/2016/04/registering-client-filters-for-jax-rs.html
- */
 package au.edu.uts.aip.domain.pin.filter;
 
 import java.io.IOException;
@@ -13,11 +10,29 @@ import javax.ws.rs.client.ClientResponseContext;
 import javax.ws.rs.client.ClientResponseFilter;
 import javax.ws.rs.core.Response;
 
+/**
+ * The PinResponseLoggingFilter class is used to log the response
+ *
+ * Source:
+ * https://nacho4d-nacho4d.blogspot.com.au/2016/04/registering-client-filters-for-jax-rs.html
+ *
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
+ */
 @Priority(value = 2)
 public class PinResponseLoggingFilter implements ClientResponseFilter {
 
+    /**
+     * the logger object
+     */
     private static final Logger LOG = Logger.getLogger(PinResponseLoggingFilter.class.getName());
 
+    /**
+     * the method is used to finish the filter
+     *
+     * @param requestContext
+     * @param responseContext
+     * @throws IOException
+     */
     @Override
     public void filter(ClientRequestContext requestContext,
             ClientResponseContext responseContext) throws IOException {

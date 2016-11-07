@@ -5,21 +5,33 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
+ * The PinTransferPost class is used to transfer the money 
  * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class PinTransferPost implements Serializable {
 
+    /**
+    * the description of the transfer
+    */
     private String description;
+    /**
+    * the amount of the transfer
+    */
     private String amount;
+    /**
+    * the currency of the transfer
+    */
     private String currency;
+    /**
+    * the recipient of the transfer
+    */
     private String recipient;
 
     /**
-     *
-     * @return
-     */
+    * {@link PinTransferPost#description}
+    * @return description
+    */
     @XmlElement(required = true)
     public String getDescription() {
         return description;
@@ -30,9 +42,9 @@ public class PinTransferPost implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinTransferPost#amount}
+    * @return amount
+    */
     @XmlElement(required = true)
     public String getAmount() {
         return amount;
@@ -43,9 +55,9 @@ public class PinTransferPost implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinTransferPost#currency}
+    * @return currency
+    */
     @XmlElement(required = true)
     public String getCurrency() {
         return currency;
@@ -56,9 +68,9 @@ public class PinTransferPost implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinTransferPost#recipient}
+    * @return recipient
+    */
     @XmlElement(required = true)
     public String getRecipient() {
         return recipient;

@@ -78,7 +78,7 @@ public class BookSaleDTO implements Serializable {
     /**
      * {@link BookSaleDTO#id} data type: long return a long value
      *
-     * @return
+     * @return id
      */
     public long getId() {
         return id;
@@ -89,9 +89,9 @@ public class BookSaleDTO implements Serializable {
     }
 
     /**
-     * {@link BookSaleDTO#sellerId} data type: String return a String value
+     * {@link BookSaleDTO#sellerId}
      *
-     * @return
+     * @return sellerId
      */
     @XmlElement
     public String getSellerId() {
@@ -105,7 +105,7 @@ public class BookSaleDTO implements Serializable {
     /**
      * {@link BookSaleDTO#bookId} data type: long return a long value
      *
-     * @return
+     * @return bookId
      */
     @XmlElement
     public long getBookId() {
@@ -117,9 +117,9 @@ public class BookSaleDTO implements Serializable {
     }
 
     /**
-     * {@link BookSaleDTO#bookCondition} data type: String return a String value
+     * {@link BookSaleDTO#bookCondition}
      *
-     * @return
+     * @return bookCondition
      */
     @XmlElement
     public String getBookCondition() {
@@ -133,7 +133,7 @@ public class BookSaleDTO implements Serializable {
     /**
      * {@link BookSaleDTO#price} data type: double return a double value
      *
-     * @return
+     * @return price
      */
     @XmlElement
     public double getPrice() {
@@ -147,7 +147,7 @@ public class BookSaleDTO implements Serializable {
     /**
      * {@link BookSaleDTO#quantity} data type: Integer return an int value
      *
-     * @return
+     * @return quantity
      */
     @XmlElement
     public int getQuantity() {
@@ -161,7 +161,7 @@ public class BookSaleDTO implements Serializable {
     /**
      * {@link BookSaleDTO#book} data type: BookDTO return a BookDTO object
      *
-     * @return
+     * @return book
      */
     @XmlElement
     public BookDTO getBook() {
@@ -175,7 +175,7 @@ public class BookSaleDTO implements Serializable {
     /**
      * {@link BookSaleDTO#seller} data type: UserDTO return a UserDTO object
      *
-     * @return
+     * @return seller
      */
     @XmlElement
     public UserDTO getSeller() {

@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
 
 /**
  * The Class is used to register new accounts
- * 
+ *
  * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 public class RegistrationDTO implements Serializable {
@@ -36,7 +36,7 @@ public class RegistrationDTO implements Serializable {
     /**
      * {@link RegistrationDTO#username}
      *
-     * @return
+     * @return username
      */
     @Size(min = 6, max = 32)
     @Pattern(regexp = "^([a-zA-Z0-9_])+$", message = "Username contains invalid character. "
@@ -53,7 +53,7 @@ public class RegistrationDTO implements Serializable {
     /**
      * {@link RegistrationDTO#fullname}
      *
-     * @return
+     * @return fullname
      */
     @Size(max = 255)
     @Pattern(regexp = "^([a-zA-Z]+)( [a-zA-Z]+)+$",
@@ -66,10 +66,10 @@ public class RegistrationDTO implements Serializable {
         this.fullname = fullname;
     }
 
-        /**
+    /**
      * {@link RegistrationDTO#email}
      *
-     * @return
+     * @return email
      */
     @Pattern(regexp = "^[^ ]+@[^ ]+\\.[^ ]+$", message = "Email address is not valid")
     public String getEmail() {
@@ -80,10 +80,10 @@ public class RegistrationDTO implements Serializable {
         this.email = email;
     }
 
-        /**
+    /**
      * {@link RegistrationDTO#password}
      *
-     * @return
+     * @return password
      */
     @Size(min = 6, message = "Password must be at least 6 characters long")
     public String getPassword() {
@@ -93,10 +93,11 @@ public class RegistrationDTO implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
     /**
      * {@link RegistrationDTO#confirmPassword}
      *
-     * @return
+     * @return confirmPassword
      */
     public String getConfirmPassword() {
         return confirmPassword;
@@ -105,10 +106,10 @@ public class RegistrationDTO implements Serializable {
     public void setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
     }
+
     /**
-     * Check if submitted password and its confirmation is the same.
-     * True if matches.
-     * @return
+     * Check if submitted password and its confirmation is the same. True if matches.
+     * @return true if both passwords match.
      */
     @AssertTrue(message = "Password and confirm password do not match")
     public boolean isPasswordMatch() {
