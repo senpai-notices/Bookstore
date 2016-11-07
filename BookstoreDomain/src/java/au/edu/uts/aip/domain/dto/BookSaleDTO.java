@@ -89,7 +89,7 @@ public class BookSaleDTO implements Serializable {
     }
 
     /**
-     * {@link BookSaleDTO#sellerId} data type: String return a String value
+     * {@link BookSaleDTO#sellerId}
      *
      * @return sellerId
      */
@@ -117,7 +117,7 @@ public class BookSaleDTO implements Serializable {
     }
 
     /**
-     * {@link BookSaleDTO#bookCondition} data type: String return a String value
+     * {@link BookSaleDTO#bookCondition}
      *
      * @return bookCondition
      */

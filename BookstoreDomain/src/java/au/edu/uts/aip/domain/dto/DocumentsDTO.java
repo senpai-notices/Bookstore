@@ -24,7 +24,7 @@ public class DocumentsDTO implements Serializable {
     private String residentialVerificationPath;
 
     /**
-     * {@link DocumentsDTO#idVerificationPath} data type: String return a String value
+     * {@link DocumentsDTO#idVerificationPath}
      *
      * @return idVerificationPath
      */
@@ -38,7 +38,7 @@ public class DocumentsDTO implements Serializable {
     }
 
     /**
-     * {@link DocumentsDTO#residentialVerificationPath} data type: String return a String value
+     * {@link DocumentsDTO#residentialVerificationPath}
      *
      * @return residentialVerificationPath
      */
