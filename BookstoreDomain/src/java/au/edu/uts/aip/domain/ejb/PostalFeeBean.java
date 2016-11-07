@@ -26,7 +26,6 @@ public class PostalFeeBean implements PostalFeeRemote {
     @Override
     public double calculatePostageCost(int quantity, int fromPostcode, int toPostcode, String serviceCode) {
 
-        // Qty cannot exceed 30
         int parcelHeight = calculateParcelHeight(quantity);
         double parcelWeight = calculateParcelWeight(quantity);
 

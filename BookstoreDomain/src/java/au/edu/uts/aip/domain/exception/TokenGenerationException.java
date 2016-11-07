@@ -14,7 +14,7 @@ public class TokenGenerationException extends Exception {
     }
 
     /**
-     *
+     * Constructor
      * @param message
      */
     public TokenGenerationException(String message) {

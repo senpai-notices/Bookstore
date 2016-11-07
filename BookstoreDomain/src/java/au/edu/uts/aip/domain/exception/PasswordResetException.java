@@ -14,7 +14,7 @@ public class PasswordResetException extends Exception {
     }
 
     /**
-     *
+     * Constructor
      * @param message
      */
     public PasswordResetException(String message) {

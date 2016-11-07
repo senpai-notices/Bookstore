@@ -14,7 +14,7 @@ public class ActivationException extends Exception {
     }
 
     /**
-     * activate the exception
+     * Constructor
      * @param message
      */
     public ActivationException(String message) {
