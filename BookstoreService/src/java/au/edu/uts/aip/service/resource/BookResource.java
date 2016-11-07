@@ -33,7 +33,7 @@ public class BookResource {
     private SecurityContext securityContext;
 
     /**
-     *
+     * Get latest books
      * @param offset
      * @param limit
      * @return
@@ -49,7 +49,7 @@ public class BookResource {
     }
 
     /**
-     *
+     * Get books by ISBN10, ISBN13 and/or title
      * @param isbn10
      * @param isbn13
      * @param title
@@ -66,7 +66,7 @@ public class BookResource {
     }
 
     /**
-     *
+     * Update a sale with its newer object
      * @param salesData
      * @return
      */
@@ -81,7 +81,7 @@ public class BookResource {
     }
 
     /**
-     *
+     * Get particular sales of books by its ID/s
      * @param saleIds
      * @return
      */
