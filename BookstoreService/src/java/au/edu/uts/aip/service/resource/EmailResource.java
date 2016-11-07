@@ -85,7 +85,7 @@ public class EmailResource {
                     user.getFullname(),
                     servletContext.getInitParameter("clientURL") + "/?token=" + token
                     + "&username=" + user.getUsername() + "&action=reset");
-            emailBean.sendEmail(user.getEmail(), "Account activation", body);
+            emailBean.sendEmail(user.getEmail(), "Reset Password", body);
 
             return Response.ok().build();
         } catch (TokenGenerationException ex) {
