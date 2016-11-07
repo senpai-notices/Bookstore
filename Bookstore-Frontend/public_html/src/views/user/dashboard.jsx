@@ -88,7 +88,7 @@ class UserDashboardView extends BaseView {
 				}).then((resp) => {
 					this.props.dispatch.login(resp)
 
-					alert("Your documents have been upladed successfully")
+					alert("Your documents have been uploaded successfully")
 					this.state.submitting = false
 					this.setState(this.state)
 				}).catch((err) => {
