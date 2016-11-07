@@ -86,7 +86,7 @@ public class DatabaseInitBean {
         adminUser.setFullname("Administrator");
         adminUser.setUsername("admin1");
         adminUser.setPassword(SHA.hash256("qwerty"));
-        adminUser.setEmail("admin@test.com");
+        adminUser.setEmail("sondang2412@gmail.com");
         adminUser.setRole(roleMap.get(RoleType.ADMIN));
         adminUser.setRecipientToken("rp_Y9rAv-gcPzXkeKkNfuBXUQ");
 
