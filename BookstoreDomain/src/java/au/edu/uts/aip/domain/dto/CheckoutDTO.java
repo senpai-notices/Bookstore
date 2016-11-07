@@ -6,15 +6,17 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * CheckoutDTO is a DTO class that is used to retrieve all the information needed for checkout of the purchase
+ * CheckoutDTO is a DTO class that is used to retrieve all the information needed for checkout of
+ * the purchase
  *
- * It has properties: items: a list of the CheckoutItemDTO, card: PinCard object, shippingCost: double value 
- * 
+ * It has properties: items: a list of the CheckoutItemDTO, card: PinCard object, shippingCost:
+ * double value
+ *
  * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class CheckoutDTO {
-    
+
     /**
      * the list of the checkout items
      */
@@ -28,10 +30,11 @@ public class CheckoutDTO {
      */
     private double shippingCost;
 
-   /**
-    * {@link CheckoutDTO#items}
-    * @return items
-    */
+    /**
+     * {@link CheckoutDTO#items}
+     *
+     * @return items
+     */
     @XmlElement
     public List<CheckoutItemDTO> getItems() {
         return items;
@@ -42,9 +45,10 @@ public class CheckoutDTO {
     }
 
     /**
-    * {@link CheckoutDTO#card}
-    * @return card
-    */
+     * {@link CheckoutDTO#card}
+     *
+     * @return card
+     */
     @XmlElement
     public PinCard getCard() {
         return card;
@@ -55,9 +59,10 @@ public class CheckoutDTO {
     }
 
     /**
-    * {@link CheckoutDTO#shippingCost}
-    * @return shippingCost
-    */
+     * {@link CheckoutDTO#shippingCost}
+     *
+     * @return shippingCost
+     */
     public double getShippingCost() {
         return shippingCost;
     }

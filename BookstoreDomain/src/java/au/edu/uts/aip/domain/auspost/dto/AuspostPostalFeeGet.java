@@ -49,7 +49,7 @@ public class AuspostPostalFeeGet {
     /**
      * {@link AuspostPostalFeeGet#fromPostcode}
      *
-     * @return fromPostcode
+     * @return The origin postcode.
      */
     @XmlElement(required = true, name = "from_postcode")
     public String getFromPostcode() {
@@ -61,9 +61,9 @@ public class AuspostPostalFeeGet {
     }
 
     /**
-     * {@link AuspostPostalFeeGet#toPostcode} * @return String
+     * {@link AuspostPostalFeeGet#toPostcode}
      *
-     * @return toPostcode
+     * @return The destination postcode.
      */
     @XmlElement(required = true, name = "to_postcode")
     public String getToPostcode() {
@@ -77,7 +77,7 @@ public class AuspostPostalFeeGet {
     /**
      * {@link AuspostPostalFeeGet#length}
      *
-     * @return length
+     * @return The length of the parcel in centimetres.
      */
     @XmlElement(required = true)
     public int getLength() {
@@ -91,7 +91,7 @@ public class AuspostPostalFeeGet {
     /**
      * {@link AuspostPostalFeeGet#width}
      *
-     * @return width
+     * @return The width of the parcel in centimetres.
      */
     @XmlElement(required = true)
     public int getWidth() {
@@ -105,7 +105,7 @@ public class AuspostPostalFeeGet {
     /**
      * {@link AuspostPostalFeeGet#height}
      *
-     * @return height
+     * @return The height of the parcel in centimetres.
      */
     @XmlElement(required = true)
     public int getHeight() {
@@ -119,7 +119,7 @@ public class AuspostPostalFeeGet {
     /**
      * {@link AuspostPostalFeeGet#weight}
      *
-     * @return weight
+     * @return The weight of the parcel in kilograms.
      */
     @XmlElement(required = true)
     public double getWeight() {
@@ -133,7 +133,7 @@ public class AuspostPostalFeeGet {
     /**
      * {@link AuspostPostalFeeGet#serviceCode}
      *
-     * @return serviceCode
+     * @return The serviceCode of either regular or express postage service.
      */
     @XmlElement(required = true, name = "service_code")
     public String getServiceCode() {

@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class DocumentsDTO implements Serializable {
 
     /**
-     * the path for id verification
+     * the directory path for id verification
      */
     private String idVerificationPath;
     /**
@@ -26,7 +26,7 @@ public class DocumentsDTO implements Serializable {
     /**
      * {@link DocumentsDTO#idVerificationPath} data type: String return a String value
      *
-     * @return
+     * @return idVerificationPath
      */
     @XmlElement
     public String getIdVerificationPath() {
@@ -40,7 +40,7 @@ public class DocumentsDTO implements Serializable {
     /**
      * {@link DocumentsDTO#residentialVerificationPath} data type: String return a String value
      *
-     * @return
+     * @return residentialVerificationPath
      */
     @XmlElement
     public String getResidentialVerificationPath() {

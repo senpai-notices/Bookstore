@@ -7,12 +7,12 @@ import javax.xml.bind.annotation.XmlRootElement;
  * CheckoutItemDTO is a DTO class that is used to retrieve info for a item on checkout
  *
  * It has properties: saleId: long value, buyQuantity: Integer value
- * 
+ *
  * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class CheckoutItemDTO {
-    
+
     /**
      * the id of the book sale
      */
@@ -23,22 +23,24 @@ public class CheckoutItemDTO {
     private int buyQuantity;
 
     /**
-    * {@link CheckoutItemDTO#saleId}
-    * @return saleId
-    */
+     * {@link CheckoutItemDTO#saleId}
+     *
+     * @return saleId
+     */
     @XmlElement
     public long getSaleId() {
         return saleId;
     }
-    
+
     public void setSaleId(long saleId) {
         this.saleId = saleId;
     }
 
     /**
-    * {@link CheckoutItemDTO#buyQuantity}
-    * @return buyQuantity
-    */
+     * {@link CheckoutItemDTO#buyQuantity}
+     *
+     * @return buyQuantity
+     */
     @XmlElement
     public int getBuyQuantity() {
         return buyQuantity;
