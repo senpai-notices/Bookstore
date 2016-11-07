@@ -12,7 +12,7 @@ import javax.ws.rs.core.MultivaluedMap;
 /**
  * Add authorisation header to Auspost API requests.
  * 
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Priority(value = 1)
 public class AuspostAuthFilter implements ClientRequestFilter {

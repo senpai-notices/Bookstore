@@ -18,7 +18,7 @@ import javax.ws.rs.core.Response;
 
 /**
  * REST endpoint for postal data access and postal fee calculation
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("postal")
 public class PostalResource {

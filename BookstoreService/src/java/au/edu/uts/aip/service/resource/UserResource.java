@@ -28,7 +28,7 @@ import javax.ws.rs.core.SecurityContext;
 
 /**
  * REST endpoint for user accounts and administration
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("user")
 @RequestScoped
