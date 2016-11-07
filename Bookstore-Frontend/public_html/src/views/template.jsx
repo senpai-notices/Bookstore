@@ -1,6 +1,6 @@
 import { Nav, Navbar, NavDropdown, MenuItem, 
 		Form, FormGroup, FormControl, InputGroup, 
-		Button, Glyphicon, Badge, Collapse, Alert } from 'react-bootstrap'
+		Button, Glyphicon, Badge, Collapse, Alert, Panel } from 'react-bootstrap'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { browserHistory, Link } from 'react-router'
@@ -193,9 +193,10 @@ class Template extends BaseView{
 				{shoppingCartView}
 				{header}
 				<div className="container" style={{marginTop: "70px"}}>
-					{notification}
-					{this.props.children}
-					
+					<Panel>
+						{notification}
+						{this.props.children}
+					</Panel>
 				</div>
 			</div>
 		)
