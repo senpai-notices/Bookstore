@@ -23,18 +23,33 @@ import javax.persistence.TypedQuery;
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.core.Response;
 
+/**
+ *The BookOrderBean class is a Java Bean class that is used to handle the order of the book and the payment 
+ *@author Son Dang, Alex Tan, Xiaoyang Liu
+ */
 @Stateless
 public class BookOrderBean implements BookOrderRemote {
     
+    /**
+     * the payment Java Bean object
+     */
     @EJB
     private PaymentBean paymentBean;
-    
+    /**
+     * the Java Bean object used to get user info
+     */
     @EJB
     private UserBean userBean;
     
     @PersistenceContext
     private EntityManager em;
     
+    /**
+     * the method is used to handle the checkout of the purchase
+     * 
+     * @param checkoutDTO
+     * @param username 
+     */
     @Override
     public void checkout(CheckoutDTO checkoutDTO, String username){
         User user = userBean.getUserEntity(username);
@@ -123,6 +138,12 @@ public class BookOrderBean implements BookOrderRemote {
         }
     }
     
+    /**
+     * the method is used to get the order of the user's
+     * 
+     * @param username
+     * @return 
+     */
     @Override
     public List<BookOrderDTO> getBuyOrder(String username) {
         User user = userBean.getUserEntity(username);

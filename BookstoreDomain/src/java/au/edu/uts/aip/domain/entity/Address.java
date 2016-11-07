@@ -17,7 +17,7 @@ import javax.validation.constraints.Min;
  * addressState and addressCountry. All the attributes of this model class are private attributes
  * and all of them have relative get and set functions in order to access the attributes
  *
- * @author
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Entity
 @Table(name = "address")

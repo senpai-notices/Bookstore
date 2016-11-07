@@ -1,8 +1,5 @@
 package au.edu.uts.aip.domain.ejb;
 
-/**
- * the needed library
- */
 import au.edu.uts.aip.domain.dto.CheckoutDTO;
 import au.edu.uts.aip.domain.dto.CheckoutItemDTO;
 import au.edu.uts.aip.domain.entity.BookOrder;

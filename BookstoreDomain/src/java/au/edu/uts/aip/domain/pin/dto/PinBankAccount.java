@@ -5,20 +5,29 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
- * @author x
+ * The class is used to access bank account info in bank_account table in the database
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement(name = "bank_account")
 public class PinBankAccount implements Serializable {
 
+    /**
+     * the name of the bank account holder
+     */
     private String name;
+    /**
+     * the bsb number of the bank account
+     */
     private String bsb;
+    /**
+     * the account number
+     */
     private String number;
 
     /**
-     *
-     * @return
-     */
+    * {@link PinBankAccount#name}
+    * @return name
+    */
     @XmlElement(required = true)
     public String getName() {
         return name;
@@ -29,9 +38,9 @@ public class PinBankAccount implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinBankAccount#bsb}
+    * @return bsb
+    */
     @XmlElement(required = true)
     public String getBsb() {
         return bsb;
@@ -41,10 +50,10 @@ public class PinBankAccount implements Serializable {
         this.bsb = bsb;
     }
 
-    /**
-     *
-     * @return
-     */
+   /**
+    * {@link PinBankAccount#number}
+    * @return number
+    */
     @XmlElement(required = true)
     public String getNumber() {
         return number;
