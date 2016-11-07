@@ -105,6 +105,9 @@ public class Book implements Serializable {
         this.title = title;
     }
 
+    /**
+     * Sales of the book
+     */
     @OneToMany(mappedBy = "book")
     @JoinColumn(name = "book")
     public List<BookSale> getSales() {
@@ -115,6 +118,9 @@ public class Book implements Serializable {
         this.sales = sales;
     }
 
+    /**
+     * Year published e.g. 2015
+     */
     public int getPublishYear() {
         return publishYear;
     }
@@ -123,6 +129,9 @@ public class Book implements Serializable {
         this.publishYear = publishYear;
     }
 
+    /**
+     * Path of image file
+     */
     public String getImgPath() {
         return imgPath;
     }
@@ -131,6 +140,9 @@ public class Book implements Serializable {
         this.imgPath = imgPath;
     }
 
+    /**
+     * ISBN10
+     */
     public String getIsbn10() {
         return isbn10;
     }
@@ -139,6 +151,10 @@ public class Book implements Serializable {
         this.isbn10 = isbn10;
     }
 
+
+    /**
+     * ISBN13
+     */
     public String getIsbn13() {
         return isbn13;
     }
@@ -147,7 +163,9 @@ public class Book implements Serializable {
         this.isbn13 = isbn13;
     }
 
-    public int getPageCount() {
+    /**
+     * Number of pages
+     */public int getPageCount() {
         return pageCount;
     }
 

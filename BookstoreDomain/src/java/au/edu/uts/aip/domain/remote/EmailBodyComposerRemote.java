@@ -40,27 +40,60 @@ public interface EmailBodyComposerRemote {
             = "You've just made a sale on " + BRAND_NAME + "! Please keep in mind that bank "
             + "transfers can take up to seven days to appear in your bank statements.\n\n"
             + "Below is your order information:\n\n%1$s";
-
+    
+    /**
+     * Main formatter that combines name, info, opening and closing.
+     */
     String format(String name, String info);
-
+    
+    /**
+     * Generate email body for account activation
+     */
     String onAccountActivation(String name, String activationUrl);
 
+    /**
+     * Generate email body for account ban
+     */
     String onAccountBan(String name);
 
+    /**
+     * Generate email body for account unban
+     */
     String onAccountUnban(String name);
 
+    /**
+     * Generate email body for order complete for the buyer
+     */
     String onOrderCompleteBuyer(String name, String orderInfo);
 
+    /**
+     * Generate email body for order complete for the seller
+     */
     String onOrderCompleteSeller(String name, String orderInfo);
 
+    /**
+     * Generate email body for when order fails
+     */
     String onOrderFail(String name, String orderInfo);
 
+    /**
+     * Generate email body for a pending order
+     */
     String onOrderPending(String name, String orderInfo);
 
+    /**
+     * Generate email body for password resets
+     */
     String onPasswordReset(String name, String resetUrl);
 
-    String onVerificationApprove(String name);
-
-    String onVerificationReject(String name, String reason);
+    /**
+     * Generate email body for approval of verification
+     */
+     String onVerificationApprove(String name);
+     
+     /**
+     * Generate email body for rejection of verfication
+     */
+     String onVerificationReject(String name, String reason);
 
 }

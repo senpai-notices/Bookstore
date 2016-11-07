@@ -157,6 +157,9 @@ public class User implements Serializable {
         this.email = email;
     }
 
+    /**
+     * Books that the user is currently selling
+     */
     @OneToMany(mappedBy = "seller")
     public List<BookSale> getSellingBooks() {
         return sellingBooks;
@@ -166,6 +169,9 @@ public class User implements Serializable {
         this.sellingBooks = sellingBooks;
     }
 
+    /**
+     * Path of ID verification image, if any
+     */
     public String getIdVerificationPath() {
         return idVerificationPath;
     }
@@ -174,6 +180,9 @@ public class User implements Serializable {
         this.idVerificationPath = idVerificationPath;
     }
 
+    /**
+     * Path of residential verification image, if any
+     */
     public String getResidentialVerificationPath() {
         return residentialVerificationPath;
     }
@@ -182,6 +191,9 @@ public class User implements Serializable {
         this.residentialVerificationPath = residentialVerificationPath;
     }
 
+    /**
+     * Address of user
+     */
     @OneToOne
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     public Address getAddress() {
@@ -192,6 +204,9 @@ public class User implements Serializable {
         this.address = address;
     }
 
+    /**
+     * Bank account of user
+     */
     @OneToOne
     @JoinColumn(name = "bank_account_id", referencedColumnName = "id")
     public BankAccount getBankAccount() {
@@ -202,6 +217,9 @@ public class User implements Serializable {
         this.bankAccount = bankAccount;
     }
 
+    /**
+     * Recipient token of user. Represents bank account in token, for Pin API
+     */
     @Column(name = "recipient_token")
     public String getRecipientToken() {
         return recipientToken;
@@ -211,6 +229,9 @@ public class User implements Serializable {
         this.recipientToken = recipientToken;
     }
 
+    /**
+     * Token for account activation. Encoded in 64-bit
+     */
     public String getActivationToken() {
         return activationToken;
     }
@@ -219,6 +240,9 @@ public class User implements Serializable {
         this.activationToken = activationToken;
     }
 
+    /**
+     * Token for password resets
+     */
     public String getResetPasswordToken() {
         return resetPasswordToken;
     }

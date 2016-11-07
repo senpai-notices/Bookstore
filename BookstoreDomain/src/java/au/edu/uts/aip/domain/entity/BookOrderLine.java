@@ -78,6 +78,9 @@ public class BookOrderLine implements Serializable {
         this.quantity = quantity;
     }
 
+    /**
+     * Get seller
+     */
     @ManyToOne
     public User getSeller() {
         return seller;
@@ -87,6 +90,9 @@ public class BookOrderLine implements Serializable {
         this.seller = seller;
     }
 
+    /**
+     * Get condition of the book. e.g. "New", "Used"
+     */
     public String getBookCondition() {
         return bookCondition;
     }
@@ -95,6 +101,9 @@ public class BookOrderLine implements Serializable {
         this.bookCondition = bookCondition;
     }
 
+    /**
+     * Get the price of a single book
+     */
     public double getUnitPrice() {
         return unitPrice;
     }
@@ -103,6 +112,9 @@ public class BookOrderLine implements Serializable {
         this.unitPrice = unitPrice;
     }   
 
+    /**
+     * Get shipping address
+     */
     public String getShippingAddress() {
         return shippingAddress;
     }
