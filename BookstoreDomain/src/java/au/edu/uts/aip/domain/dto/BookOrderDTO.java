@@ -1,6 +1,5 @@
 package au.edu.uts.aip.domain.dto;
 
-/*the needed libraries*/
 import au.edu.uts.aip.domain.entity.BookOrder;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
