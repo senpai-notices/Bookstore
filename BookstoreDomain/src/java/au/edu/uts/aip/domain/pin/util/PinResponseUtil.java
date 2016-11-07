@@ -4,8 +4,17 @@ import au.edu.uts.aip.domain.validation.ValidationResult;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
 
+/**
+ * Util class for Pin Responses
+ */
 public class PinResponseUtil {
 
+    /**
+     * Validates response from the Pin API
+     * @param statusCode
+     * @param response
+     * @return
+     */
     public static ValidationResult validate(int statusCode, JsonObject response) {
         ValidationResult validationResult = new ValidationResult();
 
