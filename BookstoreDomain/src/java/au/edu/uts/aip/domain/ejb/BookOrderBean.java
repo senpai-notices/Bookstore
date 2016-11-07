@@ -7,7 +7,7 @@ import au.edu.uts.aip.domain.dto.CheckoutDTO;
 import au.edu.uts.aip.domain.dto.CheckoutItemDTO;
 import au.edu.uts.aip.domain.entity.BookOrder;
 import au.edu.uts.aip.domain.entity.BookOrderLine;
-import au.edu.uts.aip.domain.entity.BookSales;
+import au.edu.uts.aip.domain.entity.BookSale;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.pin.dto.PinChargePost;
 import au.edu.uts.aip.domain.pin.dto.PinCustomerPost;
@@ -58,14 +58,14 @@ public class BookOrderBean implements BookOrderRemote {
         
         // create orders
         List<Long> saleIds = checkoutDTO.getItems().stream().map(CheckoutItemDTO::getSaleId).collect(Collectors.toList());
-        TypedQuery<BookSales> typedQuery = em.createNamedQuery("BookSales.findSalesByIds", BookSales.class);
+        TypedQuery<BookSale> typedQuery = em.createNamedQuery("BookSale.findSalesByIds", BookSale.class);
         typedQuery.setParameter("saleIds", saleIds);
-        List<BookSales> bookSales = typedQuery.getResultList();
+        List<BookSale> bookSales = typedQuery.getResultList();
 
         // generate order line from each bookSale
         BookOrder bookOrder = new BookOrder();
         List<BookOrderLine> orderLineList = new ArrayList<>();
-        for (BookSales bookSale : bookSales) {
+        for (BookSale bookSale : bookSales) {
             CheckoutItemDTO matchedItem = null;
             for (CheckoutItemDTO item : checkoutDTO.getItems()) {
                 if (bookSale.getSalesId() == item.getSaleId()) {

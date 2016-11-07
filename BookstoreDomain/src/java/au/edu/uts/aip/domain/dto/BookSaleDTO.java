@@ -1,6 +1,6 @@
 package au.edu.uts.aip.domain.dto;
 
-import au.edu.uts.aip.domain.entity.BookSales;
+import au.edu.uts.aip.domain.entity.BookSale;
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -60,11 +60,11 @@ public class BookSaleDTO implements Serializable {
 
     /**
      * constructor of the BookSaleDTO class with parameters the parameter passed to the constructor
-     * is a BookSales object
+ is a BookSale object
      *
      * @param bookSaleEntity
      */
-    public BookSaleDTO(BookSales bookSaleEntity) {
+    public BookSaleDTO(BookSale bookSaleEntity) {
         this.id = bookSaleEntity.getSalesId();
         this.sellerId = bookSaleEntity.getSeller().getUsername();
         this.seller = new UserDTO(bookSaleEntity.getSeller());

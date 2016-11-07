@@ -45,7 +45,7 @@ public class Book implements Serializable {
     private Long id;
     private String author;
     private String title;
-    private List<BookSales> sales = new ArrayList<>();
+    private List<BookSale> sales = new ArrayList<>();
     private String isbn10;
     private String isbn13;
     private int publishYear;
@@ -107,11 +107,11 @@ public class Book implements Serializable {
 
     @OneToMany(mappedBy = "book")
     @JoinColumn(name = "book")
-    public List<BookSales> getSales() {
+    public List<BookSale> getSales() {
         return sales;
     }
 
-    public void setSales(List<BookSales> sales) {
+    public void setSales(List<BookSale> sales) {
         this.sales = sales;
     }
 

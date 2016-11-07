@@ -1,7 +1,7 @@
 package au.edu.uts.aip.domain.dto;
 
 import au.edu.uts.aip.domain.entity.Book;
-import au.edu.uts.aip.domain.entity.BookSales;
+import au.edu.uts.aip.domain.entity.BookSale;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -91,11 +91,11 @@ public class BookDTO implements Serializable {
      * @param bookEntity
      * @param salesEntity
      */
-    public BookDTO(Book bookEntity, List<BookSales> salesEntity) {
+    public BookDTO(Book bookEntity, List<BookSale> salesEntity) {
         this(bookEntity);
 
         this.sales = new ArrayList<>();
-        for (BookSales saleEntity : salesEntity) {
+        for (BookSale saleEntity : salesEntity) {
             this.sales.add(new BookSaleDTO(saleEntity));
         }
     }

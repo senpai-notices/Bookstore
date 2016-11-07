@@ -62,7 +62,7 @@ public class User implements Serializable {
     @Pattern(regexp = "^[^ ]+@[^ ]+\\.[^ ]+$")
     private String email;
 
-    private List<BookSales> sellingBooks = new ArrayList<>();
+    private List<BookSale> sellingBooks = new ArrayList<>();
 
     private Role role;
 
@@ -158,11 +158,11 @@ public class User implements Serializable {
     }
 
     @OneToMany(mappedBy = "seller")
-    public List<BookSales> getSellingBooks() {
+    public List<BookSale> getSellingBooks() {
         return sellingBooks;
     }
 
-    public void setSellingBooks(List<BookSales> sellingBooks) {
+    public void setSellingBooks(List<BookSale> sellingBooks) {
         this.sellingBooks = sellingBooks;
     }
 

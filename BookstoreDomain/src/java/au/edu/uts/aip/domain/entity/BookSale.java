@@ -14,26 +14,26 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- * A Data model class to access data in the Book_sales table. A BookSales object describes the
- * information of the sale of the book(including the book and the seller info)
- *
- * BookSales entity has properties salesId, book, seller, price, quantity and condition. All the
- * attributes of this model class are private attributes and all of them have relative get and set
- * functions in order to access the attributes
+ * A Data model class to access data in the Book_sales table. A BookSale object describes the
+ information of the sale of the book(including the book and the seller info)
+
+ BookSale entity has properties salesId, book, seller, price, quantity and condition. All the
+ attributes of this model class are private attributes and all of them have relative get and set
+ functions in order to access the attributes
  *
  * @author
  */
 @Entity
 @Table(name = "Book_sales")
 @NamedQueries({
-    @NamedQuery(name = "BookSales.findSales", query = "SELECT bs FROM BookSales bs where bs.book.id=:bookId AND bs.seller.username=:sellerId")
+    @NamedQuery(name = "BookSale.findSales", query = "SELECT bs FROM BookSale bs where bs.book.id=:bookId AND bs.seller.username=:sellerId")
     ,
-    @NamedQuery(name = "BookSales.findSalesByIds", query = "SELECT bs FROM BookSales bs where bs.salesId IN :saleIds")
+    @NamedQuery(name = "BookSale.findSalesByIds", query = "SELECT bs FROM BookSale bs where bs.salesId IN :saleIds")
 })
-public class BookSales implements Serializable {
+public class BookSale implements Serializable {
 
     /**
-     * The definition of the attributes of BookSales class all Private attributes. Need the get and
+     * The definition of the attributes of BookSale class all Private attributes. Need the get and
      * set functions to access - increasing the security of the data book is an object of the Book
      * entity seller is an object of the User entity price the the price of the book quantity is the
      * number of the books that is selling condition is the condition of the book All attributes are

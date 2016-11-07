@@ -3,7 +3,7 @@ package au.edu.uts.aip.domain.ejb;
 import au.edu.uts.aip.domain.entity.Address;
 import au.edu.uts.aip.domain.entity.Suburb;
 import au.edu.uts.aip.domain.entity.Book;
-import au.edu.uts.aip.domain.entity.BookSales;
+import au.edu.uts.aip.domain.entity.BookSale;
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.Role.RoleType;
 import au.edu.uts.aip.domain.entity.User;
@@ -152,7 +152,7 @@ public class DatabaseInitBean {
                     book.setImgPath(data[7]);
                     em.persist(book);
 
-                    BookSales adminSales = new BookSales();
+                    BookSale adminSales = new BookSale();
                     adminSales.setBook(book);
                     adminSales.setSeller(adminUser);
                     double brandNewPrice = (int) (Math.random() * 200);

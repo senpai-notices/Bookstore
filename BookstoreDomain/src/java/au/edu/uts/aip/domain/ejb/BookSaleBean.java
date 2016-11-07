@@ -1,7 +1,7 @@
 package au.edu.uts.aip.domain.ejb;
 
 import au.edu.uts.aip.domain.entity.Book;
-import au.edu.uts.aip.domain.entity.BookSales;
+import au.edu.uts.aip.domain.entity.BookSale;
 import au.edu.uts.aip.domain.entity.Role;
 import au.edu.uts.aip.domain.entity.User;
 import au.edu.uts.aip.domain.dto.BookDTO;
@@ -46,16 +46,16 @@ public class BookSaleBean implements BookSaleRemote {
             book = em.find(Book.class, salesData.getId());
         }
 
-        TypedQuery<BookSales> typedQuery
-                = em.createNamedQuery("BookSales.findSales", BookSales.class);
+        TypedQuery<BookSale> typedQuery
+                = em.createNamedQuery("BookSale.findSales", BookSale.class);
         typedQuery.setParameter("bookId", book.getId());
         typedQuery.setParameter("sellerId", seller.getUsername());
-        List<BookSales> existingSales = typedQuery.getResultList();
+        List<BookSale> existingSales = typedQuery.getResultList();
 
         // add new sales
         for (BookSaleDTO saleData : salesData.getSales()) {
             if (saleData.getId() == 0) {
-                BookSales newSale = new BookSales();
+                BookSale newSale = new BookSale();
                 newSale.setBook(book);
                 newSale.setSeller(seller);
                 newSale.setCondition(saleData.getBookCondition());
@@ -69,7 +69,7 @@ public class BookSaleBean implements BookSaleRemote {
         }
 
         // update & remove old sales
-        for (BookSales saleEntity : existingSales) {
+        for (BookSale saleEntity : existingSales) {
             BookSaleDTO matched = null;
             for (BookSaleDTO saleDTO : salesData.getSales()) {
                 if (saleEntity.getSalesId() == saleDTO.getId()) {
@@ -101,9 +101,9 @@ public class BookSaleBean implements BookSaleRemote {
      */
     @Override
     public List<BookSaleDTO> getSales(List<Long> saleIds) {
-        TypedQuery<BookSales> typedQuery = em.createNamedQuery("BookSales.findSalesByIds", BookSales.class);
+        TypedQuery<BookSale> typedQuery = em.createNamedQuery("BookSale.findSalesByIds", BookSale.class);
         typedQuery.setParameter("saleIds", saleIds);
-        List<BookSales> bookSalesEntity = typedQuery.getResultList();
+        List<BookSale> bookSalesEntity = typedQuery.getResultList();
 
         List<BookSaleDTO> bookSalesDTO = new ArrayList<>();
         bookSalesEntity.stream().forEach(saleEntity -> {
