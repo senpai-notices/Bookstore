@@ -5,21 +5,34 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
+ * The PinChargePost class is used to post the charge to the user
+ * 
  * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class PinChargePost implements Serializable {
 
+    /**
+     * the email of the user
+     */
     private String email;
+    /**
+     * the description on email
+     */
     private String description;
+    /**
+     * the token of the customer
+     */
     private String customerToken;
+    /**
+     * the amount of the charge
+     */
     private String amount;
 
     /**
-     *
-     * @return
-     */
+    * {@link PinChargePost#email}
+    * @return email
+    */
     @XmlElement(required = true)
     public String getEmail() {
         return email;
@@ -30,9 +43,9 @@ public class PinChargePost implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinChargePost#description}
+    * @return description
+    */
     @XmlElement(required = true)
     public String getDescription() {
         return description;
@@ -43,9 +56,9 @@ public class PinChargePost implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinChargePost#customerToken}
+    * @return customerToken
+    */
     @XmlElement(required = true, name = "customer_token")
     public String getCustomerToken() {
         return customerToken;
@@ -56,9 +69,9 @@ public class PinChargePost implements Serializable {
     }
 
     /**
-     *
-     * @return
-     */
+    * {@link PinChargePost#amount}
+    * @return amount
+    */
     @XmlElement(required = true)
     public String getAmount() {
         return amount;

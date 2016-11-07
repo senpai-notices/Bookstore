@@ -37,7 +37,7 @@ public class OrderResource {
     @POST
     @Path("checkout")
     @Consumes(MediaType.APPLICATION_JSON)
-    @RolesAllowed({"USER", "VERIFYING USER", "VERIFIED USER", "ADMIN"})
+    @RolesAllowed({"USER", "VERIFYING USER", "VERIFIED USER"})
     public Response checkout(CheckoutDTO checkoutDTO){
         String username = securityContext.getUserPrincipal().getName();
         bookOrderBean.checkout(checkoutDTO, username);
@@ -49,7 +49,7 @@ public class OrderResource {
      * @return
      */
     @GET
-    @RolesAllowed({"USER", "VERIFIYING USER", "VERIFIED USER", "ADMIN"})
+    @RolesAllowed({"USER", "VERIFIYING USER", "VERIFIED USER"})
     @Produces(MediaType.APPLICATION_JSON)
     public Response getBuyOrders(){
         String username = securityContext.getUserPrincipal().getName();

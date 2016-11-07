@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,6 +23,7 @@ import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 /**
  * DatabaseInitBean is a JavaBean class to initialize the database setting up It is a controller
@@ -51,20 +53,31 @@ public class DatabaseInitBean {
         RoleType[] allRoles = RoleType.class.getEnumConstants();
         HashMap<RoleType, Role> roleMap = new HashMap<>();
         for (RoleType roleType : allRoles) {
-            Role role = new Role();
-            role.setRoleName(roleType.toString());
-            em.persist(role);
-            roleMap.put(roleType, role);
+            TypedQuery<Role> tq = em.createNamedQuery("Role.find", Role.class);
+            tq.setParameter("name", roleType.toString());
+            List<Role> roles = tq.getResultList();
+            if (roles.size() > 0){
+                roleMap.put(roleType, roles.get(0));
+            } else {
+                Role role = new Role();
+                role.setRoleName(roleType.toString());
+                em.persist(role);
+                roleMap.put(roleType, role);
+            }
         }
 
         System.out.println("Setting up roles...Done");
 
         System.out.println("Setting up views");
-        Query q = em.createNativeQuery("create view jdbcrealm_user (username, password) as select username, password from Bookstore_User");
-        q.executeUpdate();
-        q = em.createNativeQuery("create view jdbcrealm_group (username, groupname)"
-                + "as select u.username, r.roleName from Bookstore_User u left join Bookstore_Role r on u.role_id = r.id");
-        q.executeUpdate();
+        try{
+            Query q = em.createNativeQuery("create view jdbcrealm_user (username, password) as select username, password from Bookstore_User");
+            q.executeUpdate();
+            q = em.createNativeQuery("create view jdbcrealm_group (username, groupname)"
+                    + "as select u.username, r.roleName from Bookstore_User u left join Bookstore_Role r on u.role_id = r.id");
+            q.executeUpdate();
+        } catch (Throwable ex){
+            
+        }
         System.out.println("Setting up views...Done");
 
         System.out.println("Creating admin account");
