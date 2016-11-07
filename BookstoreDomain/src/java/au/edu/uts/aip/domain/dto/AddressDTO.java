@@ -1,5 +1,8 @@
 package au.edu.uts.aip.domain.dto;
 
+import javax.persistence.Column;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -97,6 +100,9 @@ public class AddressDTO {
      * {@link AddressDTO#addressPostcode}
      * @return The address postcode.
      */
+    @Min(value = 800, message = "Please enter a valid postcode")
+    @Max(value = 9999, message = "Please enter a valid postcode")
+    @Column(name = "address_postcode")
     @XmlElement(name = "address_postcode")
     public int getAddressPostCode() {
         return addressPostCode;

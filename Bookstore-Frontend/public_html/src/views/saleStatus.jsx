@@ -22,6 +22,9 @@ class SaleStatusView extends BaseView {
 	}
 
 	getSellingBooks(){
+		if (this.props.user.role !== "ADMIN" && this.props.user.role !== "VERIFIED USER"){
+			return
+		}
 		this.bookService.getSellingBooks()
 			.then((resp) => {
 				this.state.sellingBooks = resp
@@ -32,6 +35,9 @@ class SaleStatusView extends BaseView {
 	}
 
 	getSoldBooks(){
+		if (this.props.user.role !== "ADMIN" && this.props.user.role !== "VERIFIED USER"){
+			return
+		}
 		this.bookService.getSoldBooks()
 			.then((resp) => {
 				console.log(resp)

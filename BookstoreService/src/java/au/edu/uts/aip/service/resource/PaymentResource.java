@@ -99,7 +99,7 @@ public class PaymentResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    @RolesAllowed({"USER", "VERIFIED USER", "ADMIN"})
+    @RolesAllowed({"USER", "VERIFIED USER", "VERIFYING USER", "ADMIN"})
     @Path("recipient/create2")
     public Response createRecipient(PinRecipientPost pinRecipientPost) {
 

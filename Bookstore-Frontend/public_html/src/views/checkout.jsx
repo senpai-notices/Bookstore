@@ -17,17 +17,17 @@ class CheckoutView extends BaseView {
 	}
 
 	componentWillMount(){
-		// if (nextProps.user.status !== 'loggedIn' 
-		// 	|| nextProps.shoppingCart.items.length === 0){
-		// 	browserHistory.replace("/")
-		// }
+		if (this.props.user.status !== 'loggedIn' 
+			|| this.props.shoppingCart.items.length === 0){
+			browserHistory.replace("/")
+		}
 	}
 
 	componentWillReceiveProps(nextProps){
-		// if (nextProps.user.status !== 'loggedIn' 
-		// 	|| nextProps.shoppingCart.items.length === 0){
-		// 	browserHistory.replace("/")
-		// }
+		if (nextProps.user.status !== 'loggedIn' 
+			|| nextProps.shoppingCart.items.length === 0){
+			browserHistory.replace("/")
+		}
 		let currentShoppingCartJson = JSON.stringify(this.props.shoppingCart)
 		let nextShoppingCartJson = JSON.stringify(nextProps.shoppingCart)
 

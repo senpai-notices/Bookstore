@@ -53,7 +53,7 @@ public class DocumentResource {
      * @return
      */
     @POST
-    @RolesAllowed({"USER"})
+    @RolesAllowed({"USER", "VERIFYING USER"})
     @Path("{documentType}")
     @Consumes({"application/pdf", "image/jpeg", "image/png"})
     public Response post(@PathParam("documentType") String documentType) {

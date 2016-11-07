@@ -40,7 +40,7 @@ class UserDashboardView extends BaseView {
 			alert("Please enter a valid postcode")
 			return
 		}
-		if (this.state.address_postcode.length != 4){
+		if (this.state.address_postcode < 800 || this.state.address_postcode > 9999){
 			alert("Please enter a valid postcode")
 			return
 		}

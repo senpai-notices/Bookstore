@@ -84,7 +84,7 @@ public class UserResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("address")
-    @RolesAllowed({"USER", "VERIFYING USER"})
+    @RolesAllowed({"USER", "VERIFYING USER", "VERIFIED USER"})
     public Response updateAddress(AddressDTO addressDTO) {
         String username = securityContext.getUserPrincipal().getName();
         userBean.updateAddress(addressDTO, username);
@@ -134,7 +134,7 @@ public class UserResource {
     @POST
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Path("recipientToken")
-    @RolesAllowed({"USER", "VERIFIED USER", "ADMIN"})
+    @RolesAllowed({"USER", "VERIFIED USER", "VERIFYING USER"})
     public Response setRecipientToken(@FormParam("token") String token) {
         String username = securityContext.getUserPrincipal().getName();
         userBean.updateRecipientToken(username, token);

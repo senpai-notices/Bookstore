@@ -184,7 +184,7 @@ public class EmailResource {
      * @return
      */
     @POST
-    @RolesAllowed({"VERIFIED"})
+    @RolesAllowed({"VERIFIED USER"})
     @Path("order/{order-id}/fail")
     public Response orderFail(@PathParam("order-id") String orderId, String username) {
 
@@ -202,7 +202,7 @@ public class EmailResource {
      * @return
      */
     @POST
-    @RolesAllowed({"VERIFIED"})
+    @RolesAllowed({"VERIFIED USER"})
     @Path("order/{order-id}/pending")
     public Response orderPending(@PathParam("order-id") String orderId, String username) {
 

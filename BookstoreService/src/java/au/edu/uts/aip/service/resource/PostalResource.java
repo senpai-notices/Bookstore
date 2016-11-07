@@ -134,7 +134,11 @@ public class PostalResource {
 
         double cost = 0;
         while (quantity > 0) {
-            cost += postalFeeBean.calculatePostageCost(Math.max(quantity, 30), from, to, serviceCode);
+            double nextCost = postalFeeBean.calculatePostageCost(Math.max(quantity, 30), from, to, serviceCode);
+            if (nextCost < 0){
+                throw new RuntimeException("Invalid postcode");
+            }
+            cost += nextCost;
             quantity -= 30;
         }
 

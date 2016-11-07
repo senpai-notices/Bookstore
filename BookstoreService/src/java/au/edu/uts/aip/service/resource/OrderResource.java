@@ -52,7 +52,7 @@ public class OrderResource {
      */
     @GET
     @Path("buy")
-    @RolesAllowed({"USER", "VERIFIYING USER", "VERIFIED USER"})
+    @RolesAllowed({"USER", "VERIFYING USER", "VERIFIED USER"})
     @Produces(MediaType.APPLICATION_JSON)
     public Response getBuyOrders(){
         String username = securityContext.getUserPrincipal().getName();
