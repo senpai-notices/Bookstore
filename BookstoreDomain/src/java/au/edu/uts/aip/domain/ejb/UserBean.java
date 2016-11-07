@@ -30,19 +30,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.validation.Valid;
 
-/**
- * UserBean is a JavaBean that is used to handle the user related operations
- *
- * It has 12 methods: getRole(): used to get the role object getUser(): used to get the user info
- * getUserEntity(): used to get a User Object createUser(): used to create a user getDocumentPath():
- * used to get the path of the document generateActivationToken(): used to generate the activation
- * Token generateResetPasswordToken(): used to get the reset password token resetPassword(): used to
- * reset the password activateAccount(): used to activate the account findUsers(): used to find all
- * the users updateVerificationDocuments(): used to update the verification documents
- * updateAddress(): used to update the address
- *
- * @author Son Dang, Alex Tan, Xiaoyang Liu
- */
+
 @Stateless
 @LocalBean
 public class UserBean implements UserRemote {
