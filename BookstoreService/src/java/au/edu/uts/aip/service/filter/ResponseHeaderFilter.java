@@ -13,7 +13,7 @@ import javax.ws.rs.ext.Provider;
  *
  * Source: Joel Pearson (http://stackoverflow.com/questions/23450494/)
  *
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Provider
 public class ResponseHeaderFilter implements ContainerResponseFilter {

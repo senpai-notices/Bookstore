@@ -7,7 +7,7 @@ import javax.ws.rs.ext.Provider;
 
 /**
  * Maps runtime exceptions
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Provider
 public class RuntimeExceptionMapper implements ExceptionMapper<RuntimeException> {

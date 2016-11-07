@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @XmlRootElement
 public class PinTransferPost implements Serializable {

@@ -28,7 +28,8 @@ import javax.ws.rs.core.SecurityContext;
 
 /**
  * REST endpoint for user accounts and administration
- * @author x
+ *
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("user")
 @RequestScoped
@@ -39,10 +40,10 @@ public class UserResource {
 
     @EJB
     private AdminRemote adminBean;
-    
+
     @Context
     private HttpServletRequest request;
-    
+
     @Context
     private SecurityContext securityContext;
 
@@ -73,7 +74,7 @@ public class UserResource {
         userBean.createUser(registrationDTO);
         return Response.ok().build();
     }
-    
+
     /**
      *
      * @param addressDTO
@@ -84,7 +85,7 @@ public class UserResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("address")
     @RolesAllowed({"USER", "VERIFYING USER"})
-    public Response updateAddress(AddressDTO addressDTO){
+    public Response updateAddress(AddressDTO addressDTO) {
         String username = securityContext.getUserPrincipal().getName();
         userBean.updateAddress(addressDTO, username);
         return Response.ok().build();
@@ -99,8 +100,8 @@ public class UserResource {
      */
     @POST
     @Path("activate")
-    public Response activateAccount(@FormParam("token") String token, 
-                                    @FormParam("username") String username) {
+    public Response activateAccount(@FormParam("token") String token,
+            @FormParam("username") String username) {
         try {
             userBean.activateAccount(token, username);
             return Response.ok().build();
@@ -108,21 +109,24 @@ public class UserResource {
             return Response.status(Response.Status.BAD_REQUEST).entity(ex.getMessage()).build();
         }
     }
-    
+
     /**
      * Reset user's password
+     *
      * @param resetPasswordDTO
-     * @return 
+     * @return
      */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("reset")
-    public Response resetPassword(@Valid ResetPasswordDTO resetPasswordDTO){
+    public Response resetPassword(@Valid ResetPasswordDTO resetPasswordDTO) {
         userBean.resetPassword(resetPasswordDTO);
         return Response.ok().build();
     }
-    
+
     /**
+     * Assign a Pin recipient token to a user. The token uniquely identifies the user's bank account
+     * details.
      *
      * @param token
      * @return
@@ -131,25 +135,25 @@ public class UserResource {
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Path("recipientToken")
     @RolesAllowed({"USER", "VERIFIED USER", "ADMIN"})
-    public Response setRecipientToken(@FormParam("token") String token){
+    public Response setRecipientToken(@FormParam("token") String token) {
         String username = securityContext.getUserPrincipal().getName();
         userBean.updateRecipientToken(username, token);
         return Response.ok().build();
     }
-    
+
     /**
      *
      * @return
      */
     @GET
     @Path("orders")
-    public Response getOrders(){
-        
+    public Response getOrders() {
+
         return Response.ok().build();
     }
 
     /**
-     * Retrieve a list of user accounts with filter Only administrators can access this resource
+     * Retrieve a list of user accounts with filter Only administrators can access this resource.
      *
      * @param roles
      * @param username
@@ -164,11 +168,11 @@ public class UserResource {
     @RolesAllowed({"ADMIN"})
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAccounts(@QueryParam("roles") String roles,
-                                @QueryParam("username") String username,
-                                @QueryParam("fullname") String fullname,
-                                @QueryParam("email") String email,
-                                @QueryParam("offset") int offset,
-                                @QueryParam("limit") int limit) {
+            @QueryParam("username") String username,
+            @QueryParam("fullname") String fullname,
+            @QueryParam("email") String email,
+            @QueryParam("offset") int offset,
+            @QueryParam("limit") int limit) {
         String[] rolesName = roles.split(",");
         List<UserDTO> usersDTO = userBean.findUsers(rolesName, username, fullname, email, offset, limit);
 
@@ -177,7 +181,7 @@ public class UserResource {
     }
 
     /**
-     *
+     * Ban a user account. Banned accounts cannot log in.
      * @param username
      * @return
      */
@@ -190,7 +194,7 @@ public class UserResource {
     }
 
     /**
-     *
+     * Unban a user account.
      * @param username
      * @return
      */

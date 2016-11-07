@@ -28,7 +28,7 @@ import javax.ws.rs.core.Response;
 /**
  * REST endpoint for document upload, retrieval and approval system
  *
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("document")
 public class DocumentResource {
@@ -48,8 +48,8 @@ public class DocumentResource {
     private static final Object syncRoot = new Object();
 
     /**
-     *
-     * @param documentType
+     * Upload verification documents. Only for normal users.
+     * @param documentType Either official ID or proof of address
      * @return
      */
     @POST
@@ -93,7 +93,7 @@ public class DocumentResource {
     }
 
     /**
-     *
+     * Gets documents that were uploaded in either PDF, PNG or JPG formats.
      * @param username
      * @param documentType
      * @return
@@ -131,7 +131,7 @@ public class DocumentResource {
     }
 
     /**
-     *
+     * Reject a document submission
      * @param username
      * @return
      */
@@ -152,7 +152,7 @@ public class DocumentResource {
     }
 
     /**
-     *
+     * Approve a document submission
      * @param username
      * @return
      */

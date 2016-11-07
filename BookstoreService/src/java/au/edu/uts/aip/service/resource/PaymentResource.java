@@ -26,8 +26,9 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
 /**
- * REST endpoint for payments
- * @author x
+ * REST endpoint for payments. Uses the Pin Payments API
+ *
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("payment")
 public class PaymentResource {
@@ -37,12 +38,13 @@ public class PaymentResource {
 
     @EJB
     private UserRemote userBean;
-    
+
     @Context
     private SecurityContext securityContext;
-    
+
+    // TODO: remove '2' from methods
     /**
-     *
+     * Creates a new Pin customer and returns its details.
      * @param pinCustomerPost
      * @return
      */
@@ -51,7 +53,7 @@ public class PaymentResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("customer/create2")
-    public Response createCustomer2(PinCustomerPost pinCustomerPost) {
+    public Response createCustomer(PinCustomerPost pinCustomerPost) {
 
         SerialResponse response = paymentBean.createCustomer(pinCustomerPost);
 
@@ -66,7 +68,7 @@ public class PaymentResource {
     }
 
     /**
-     *
+     * Creates a new charge and returns its details. This may be a long-running request.
      * @param pinChargePost
      * @return
      */
@@ -75,7 +77,7 @@ public class PaymentResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("charge2")
-    public Response charge2(PinChargePost pinChargePost) {
+    public Response charge(PinChargePost pinChargePost) {
 
         SerialResponse response = paymentBean.charge(pinChargePost);
 
@@ -90,7 +92,7 @@ public class PaymentResource {
     }
 
     /**
-     *
+     * Creates a new Pin recipient and returns its details.
      * @param pinRecipientPost
      * @return
      */
@@ -99,7 +101,7 @@ public class PaymentResource {
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed({"USER", "VERIFIED USER", "ADMIN"})
     @Path("recipient/create2")
-    public Response createRecipient2(PinRecipientPost pinRecipientPost) {
+    public Response createRecipient(PinRecipientPost pinRecipientPost) {
 
         String username = securityContext.getUserPrincipal().getName();
         UserDTO userDTO = userBean.getUser(username);
@@ -118,7 +120,7 @@ public class PaymentResource {
     }
 
     /**
-     *
+     * Returns the details of a Pin recipient.
      * @param recipientToken
      * @return
      */
@@ -134,7 +136,7 @@ public class PaymentResource {
     }
 
     /**
-     *
+     * Updates the given details of a Pin recipient and returns its details.
      * @param recipientToken
      * @param pinRecipientPut
      * @return
@@ -144,7 +146,7 @@ public class PaymentResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("recipient2/{recipient-token}")
-    public Response editRecipient2(@PathParam("recipient-token") String recipientToken,
+    public Response editRecipient(@PathParam("recipient-token") String recipientToken,
             PinRecipientPut pinRecipientPut) {
 
         SerialResponse response
@@ -161,7 +163,7 @@ public class PaymentResource {
     }
 
     /**
-     *
+     * Creates a new Pin transfer and returns its details.
      * @param pinTransferPost
      * @return
      */
@@ -170,7 +172,7 @@ public class PaymentResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed({"USER", "ADMIN"})
     @Path("transfer2")
-    public Response transfer2(PinTransferPost pinTransferPost) {
+    public Response transfer(PinTransferPost pinTransferPost) {
 
         SerialResponse response = paymentBean.transfer(pinTransferPost);
 

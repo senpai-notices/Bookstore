@@ -13,7 +13,7 @@ import javax.ws.rs.ext.ExceptionMapper;
 
 /**
  * Maps constraint violation exceptions
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Provider
 @Priority(Priorities.ENTITY_CODER)

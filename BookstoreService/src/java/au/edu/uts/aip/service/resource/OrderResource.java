@@ -18,7 +18,7 @@ import javax.ws.rs.core.SecurityContext;
 
 /**
  * REST endpoint for orders
- * @author x
+ * @author Son Dang, Alex Tan, Xiaoyang Liu
  */
 @Path("order")
 public class OrderResource {
@@ -30,7 +30,7 @@ public class OrderResource {
     private BookOrderRemote bookOrderBean;
     
     /**
-     *
+     * Perform checkout sequence.
      * @param checkoutDTO
      * @return
      */
@@ -45,7 +45,7 @@ public class OrderResource {
     }
     
     /**
-     *
+     * Gets a list of current book orders of user
      * @return
      */
     @GET
